@@ -279,7 +279,7 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 ///
 ///  @returns void
 ///
--(NSURLSessionTask*) ezsignsignatureGetObjectGetChildrenV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+-(NSURLSessionTask*) ezsignsignatureGetChildrenV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
     completionHandler: (void (^)(NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == nil) {

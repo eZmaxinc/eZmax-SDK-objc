@@ -14,35 +14,16 @@
 */
 
 
-#import "EZAttemptResponse.h"
-#import "EZCommonWebhook.h"
-#import "EZUserResponse.h"
-#import "EZWebhookResponse.h"
-#import "EZWebhookUserUserCreatedAllOf.h"
-@protocol EZAttemptResponse;
-@class EZAttemptResponse;
-@protocol EZCommonWebhook;
-@class EZCommonWebhook;
-@protocol EZUserResponse;
-@class EZUserResponse;
-@protocol EZWebhookResponse;
-@class EZWebhookResponse;
-@protocol EZWebhookUserUserCreatedAllOf;
-@class EZWebhookUserUserCreatedAllOf;
 
 
 
-@protocol EZWebhookUserUserCreated
+@protocol EZGlobalCustomerGetEndpointV1Response
 @end
 
-@interface EZWebhookUserUserCreated : EZObject
+@interface EZGlobalCustomerGetEndpointV1Response : EZObject
 
-
-@property(nonatomic) EZUserResponse* objUser;
-
-@property(nonatomic) EZWebhookResponse* objWebhook;
-/* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
+/* The endpoint's URL 
  */
-@property(nonatomic) NSArray<EZAttemptResponse>* aObjAttempt;
+@property(nonatomic) NSString* sEndpointURL;
 
 @end

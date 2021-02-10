@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
-[**ezsignsignatureGetObjectGetChildrenV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectgetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
+[**ezsignsignatureGetChildrenV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**ezsignsignatureGetObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -182,9 +182,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureGetObjectGetChildrenV1**
+# **ezsignsignatureGetChildrenV1**
 ```objc
--(NSURLSessionTask*) ezsignsignatureGetObjectGetChildrenV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+-(NSURLSessionTask*) ezsignsignatureGetChildrenV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
         completionHandler: (void (^)(NSError* error)) handler;
 ```
 
@@ -205,10 +205,10 @@ NSNumber* pkiEzsignsignatureID = @56; // The unique ID of the Ezsignsignature
 EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
 
 // Retrieve an existing Ezsignsignature's children IDs
-[apiInstance ezsignsignatureGetObjectGetChildrenV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
+[apiInstance ezsignsignatureGetChildrenV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
           completionHandler: ^(NSError* error) {
                         if (error) {
-                            NSLog(@"Error calling EZObjectEzsignsignatureApi->ezsignsignatureGetObjectGetChildrenV1: %@", error);
+                            NSLog(@"Error calling EZObjectEzsignsignatureApi->ezsignsignatureGetChildrenV1: %@", error);
                         }
                     }];
 ```

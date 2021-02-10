@@ -1,6 +1,8 @@
 .gitignore
 .openapi-generator-ignore
 EzmaxApi.podspec
+EzmaxApi/Api/EZGlobalCustomerApi.h
+EzmaxApi/Api/EZGlobalCustomerApi.m
 EzmaxApi/Api/EZModuleUserApi.h
 EzmaxApi/Api/EZModuleUserApi.m
 EzmaxApi/Api/EZObjectActivesessionApi.h
@@ -225,6 +227,8 @@ EzmaxApi/Model/EZFranchisereferalincomeRequest.h
 EzmaxApi/Model/EZFranchisereferalincomeRequest.m
 EzmaxApi/Model/EZFranchisereferalincomeRequestCompound.h
 EzmaxApi/Model/EZFranchisereferalincomeRequestCompound.m
+EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.h
+EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.m
 EzmaxApi/Model/EZMultilingualApikeyDescription.h
 EzmaxApi/Model/EZMultilingualApikeyDescription.m
 EzmaxApi/Model/EZPhoneRequest.h
@@ -346,6 +350,8 @@ docs/EZFranchisereferalincomeCreateObjectV1Response.md
 docs/EZFranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/EZFranchisereferalincomeRequest.md
 docs/EZFranchisereferalincomeRequestCompound.md
+docs/EZGlobalCustomerApi.md
+docs/EZGlobalCustomerGetEndpointV1Response.md
 docs/EZModuleUserApi.md
 docs/EZMultilingualApikeyDescription.md
 docs/EZObjectActivesessionApi.md

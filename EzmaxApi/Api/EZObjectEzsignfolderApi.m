@@ -281,7 +281,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @returns void
 ///
--(NSURLSessionTask*) ezsignfolderGetObjectGetChildrenV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+-(NSURLSessionTask*) ezsignfolderGetChildrenV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {

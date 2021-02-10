@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderEditObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
-[**ezsignfolderGetObjectGetChildrenV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectgetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetChildrenV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
 [**ezsignfolderGetObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -183,9 +183,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignfolderGetObjectGetChildrenV1**
+# **ezsignfolderGetChildrenV1**
 ```objc
--(NSURLSessionTask*) ezsignfolderGetObjectGetChildrenV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+-(NSURLSessionTask*) ezsignfolderGetChildrenV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
         completionHandler: (void (^)(NSError* error)) handler;
 ```
 
@@ -206,10 +206,10 @@ NSNumber* pkiEzsignfolderID = @56; // The unique ID of the Ezsignfolder
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 // Retrieve an existing Ezsignfolder's children IDs
-[apiInstance ezsignfolderGetObjectGetChildrenV1WithPkiEzsignfolderID:pkiEzsignfolderID
+[apiInstance ezsignfolderGetChildrenV1WithPkiEzsignfolderID:pkiEzsignfolderID
           completionHandler: ^(NSError* error) {
                         if (error) {
-                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetObjectGetChildrenV1: %@", error);
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetChildrenV1: %@", error);
                         }
                     }];
 ```
