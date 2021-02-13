@@ -3,6 +3,8 @@
 EzmaxApi.podspec
 EzmaxApi/Api/EZGlobalCustomerApi.h
 EzmaxApi/Api/EZGlobalCustomerApi.m
+EzmaxApi/Api/EZModuleSsprApi.h
+EzmaxApi/Api/EZModuleSsprApi.m
 EzmaxApi/Api/EZModuleUserApi.h
 EzmaxApi/Api/EZModuleUserApi.m
 EzmaxApi/Api/EZObjectActivesessionApi.h
@@ -352,6 +354,7 @@ docs/EZFranchisereferalincomeRequest.md
 docs/EZFranchisereferalincomeRequestCompound.md
 docs/EZGlobalCustomerApi.md
 docs/EZGlobalCustomerGetEndpointV1Response.md
+docs/EZModuleSsprApi.md
 docs/EZModuleUserApi.md
 docs/EZMultilingualApikeyDescription.md
 docs/EZObjectActivesessionApi.md
