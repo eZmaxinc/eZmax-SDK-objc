@@ -9,11 +9,11 @@
 
 Pod::Spec.new do |s|
     s.name             = "EzmaxApi"
-    s.version          = "1.0.30"
+    s.version          = "1.0.31"
 
     s.summary          = "eZmax API Definition"
     s.description      = <<-DESC
-                         This API expose all the functionnalities for the eZmax and eZsign application.
+                         This API expose all the functionnalities for the eZmax and eZsign applications.
                          DESC
 
     s.platform     = :ios, '7.0'

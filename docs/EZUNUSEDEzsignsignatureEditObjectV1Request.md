@@ -1,9 +1,9 @@
-# EZEzsignfolderEditObjectV1Request
+# EZUNUSEDEzsignsignatureEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EZEzsignfolderRequest***](EZEzsignfolderRequest.md) |  | [optional] 
+**objEzsignsignature** | [**EZEzsignsignatureRequest***](EZEzsignsignatureRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

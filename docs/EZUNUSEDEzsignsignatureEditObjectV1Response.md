@@ -1,4 +1,4 @@
-# EZEzsigndocumentEditObjectV1Response
+# EZUNUSEDEzsignsignatureEditObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes

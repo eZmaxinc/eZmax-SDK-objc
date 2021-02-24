@@ -5,8 +5,6 @@
 #import "EZEzsignsignatureCreateObjectV1Request.h"
 #import "EZEzsignsignatureCreateObjectV1Response.h"
 #import "EZEzsignsignatureDeleteObjectV1Response.h"
-#import "EZEzsignsignatureEditObjectV1Request.h"
-#import "EZEzsignsignatureEditObjectV1Response.h"
 #import "EZEzsignsignatureGetObjectV1Response.h"
 
 
@@ -185,89 +183,6 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignsignatureDeleteObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Modify an existing Ezsignsignature
-/// 
-///  @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
-///
-///  @param ezsignsignatureEditObjectV1Request  
-///
-///  @returns EZEzsignsignatureEditObjectV1Response*
-///
--(NSURLSessionTask*) ezsignsignatureEditObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV1Request: (EZEzsignsignatureEditObjectV1Request*) ezsignsignatureEditObjectV1Request
-    completionHandler: (void (^)(EZEzsignsignatureEditObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignsignatureID' is set
-    if (pkiEzsignsignatureID == nil) {
-        NSParameterAssert(pkiEzsignsignatureID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignsignatureID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsignsignatureApiErrorDomain code:kEZObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
-    if (ezsignsignatureEditObjectV1Request == nil) {
-        NSParameterAssert(ezsignsignatureEditObjectV1Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignsignatureEditObjectV1Request"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsignsignatureApiErrorDomain code:kEZObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignsignature/{pkiEzsignsignatureID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignsignatureID != nil) {
-        pathParams[@"pkiEzsignsignatureID"] = pkiEzsignsignatureID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignsignatureEditObjectV1Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"PUT"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZEzsignsignatureEditObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZEzsignsignatureEditObjectV1Response*)data, error);
                                 }
                             }];
 }

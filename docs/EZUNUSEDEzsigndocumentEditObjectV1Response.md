@@ -1,4 +1,4 @@
-# EZEzsignfolderEditObjectV1Response
+# EZUNUSEDEzsigndocumentEditObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes

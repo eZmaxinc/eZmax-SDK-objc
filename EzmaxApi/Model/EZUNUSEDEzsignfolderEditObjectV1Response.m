@@ -1,6 +1,6 @@
-#import "EZEzsigndocumentEditObjectV1Response.h"
+#import "EZUNUSEDEzsignfolderEditObjectV1Response.h"
 
-@implementation EZEzsigndocumentEditObjectV1Response
+@implementation EZUNUSEDEzsignfolderEditObjectV1Response
 
 - (instancetype)init {
   self = [super init];
