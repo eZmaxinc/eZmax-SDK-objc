@@ -203,6 +203,8 @@ EzmaxApi/Model/EZFieldEPhoneType.h
 EzmaxApi/Model/EZFieldEPhoneType.m
 EzmaxApi/Model/EZFieldEUserType.h
 EzmaxApi/Model/EZFieldEUserType.m
+EzmaxApi/Model/EZFieldEUserTypeSSPR.h
+EzmaxApi/Model/EZFieldEUserTypeSSPR.m
 EzmaxApi/Model/EZFranchisereferalincomeCreateObjectV1Request.h
 EzmaxApi/Model/EZFranchisereferalincomeCreateObjectV1Request.m
 EzmaxApi/Model/EZFranchisereferalincomeCreateObjectV1Response.h
@@ -219,6 +221,16 @@ EzmaxApi/Model/EZMultilingualApikeyDescription.h
 EzmaxApi/Model/EZMultilingualApikeyDescription.m
 EzmaxApi/Model/EZPhoneRequest.h
 EzmaxApi/Model/EZPhoneRequest.m
+EzmaxApi/Model/EZSsprResetPasswordRequestV1Request.h
+EzmaxApi/Model/EZSsprResetPasswordRequestV1Request.m
+EzmaxApi/Model/EZSsprResetPasswordV1Request.h
+EzmaxApi/Model/EZSsprResetPasswordV1Request.m
+EzmaxApi/Model/EZSsprSendUsernamesV1Request.h
+EzmaxApi/Model/EZSsprSendUsernamesV1Request.m
+EzmaxApi/Model/EZSsprUnlockAccountRequestV1Request.h
+EzmaxApi/Model/EZSsprUnlockAccountRequestV1Request.m
+EzmaxApi/Model/EZSsprUnlockAccountV1Request.h
+EzmaxApi/Model/EZSsprUnlockAccountV1Request.m
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Request.h
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Request.m
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Response.h
@@ -339,6 +351,7 @@ docs/EZFieldEEzsignfolderSendreminderfrequency.md
 docs/EZFieldEEzsignfolderStep.md
 docs/EZFieldEPhoneType.md
 docs/EZFieldEUserType.md
+docs/EZFieldEUserTypeSSPR.md
 docs/EZFranchisereferalincomeCreateObjectV1Request.md
 docs/EZFranchisereferalincomeCreateObjectV1Response.md
 docs/EZFranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -360,6 +373,11 @@ docs/EZObjectFranchiseofficeApi.md
 docs/EZObjectFranchisereferalincomeApi.md
 docs/EZObjectPeriodApi.md
 docs/EZPhoneRequest.md
+docs/EZSsprResetPasswordRequestV1Request.md
+docs/EZSsprResetPasswordV1Request.md
+docs/EZSsprSendUsernamesV1Request.md
+docs/EZSsprUnlockAccountRequestV1Request.md
+docs/EZSsprUnlockAccountV1Request.md
 docs/EZUNUSEDEzsigndocumentEditObjectV1Request.md
 docs/EZUNUSEDEzsigndocumentEditObjectV1Response.md
 docs/EZUNUSEDEzsignfolderEditObjectV1Request.md

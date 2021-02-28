@@ -2,6 +2,11 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
+#import "EZSsprResetPasswordRequestV1Request.h"
+#import "EZSsprResetPasswordV1Request.h"
+#import "EZSsprSendUsernamesV1Request.h"
+#import "EZSsprUnlockAccountRequestV1Request.h"
+#import "EZSsprUnlockAccountV1Request.h"
 
 
 @interface EZModuleSsprApi ()
@@ -50,13 +55,26 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
-/// Remind of forgotten username(s)
-/// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+/// Reset Password Request
+/// This endpoint sends an email with a link to reset the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+///  @param ssprResetPasswordRequestV1Request  
+///
 ///  @returns void
 ///
--(NSURLSessionTask*) ssprRemindUsernamesV1WithCompletionHandler: 
-    (void (^)(NSError* error)) handler {
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/remindUsernames"];
+-(NSURLSessionTask*) ssprResetPasswordRequestV1WithSsprResetPasswordRequestV1Request: (EZSsprResetPasswordRequestV1Request*) ssprResetPasswordRequestV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprResetPasswordRequestV1Request' is set
+    if (ssprResetPasswordRequestV1Request == nil) {
+        NSParameterAssert(ssprResetPasswordRequestV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprResetPasswordRequestV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/resetPasswordRequest/"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 
@@ -73,7 +91,7 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
     NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
 
     // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
 
     // Authentication setting
     NSArray *authSettings = @[@"Authorization"];
@@ -81,6 +99,271 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprResetPasswordRequestV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: nil
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler(error);
+                                }
+                            }];
+}
+
+///
+/// Reset Password
+/// This endpoint resets the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+///  @param ssprResetPasswordV1Request  
+///
+///  @returns void
+///
+-(NSURLSessionTask*) ssprResetPasswordV1WithSsprResetPasswordV1Request: (EZSsprResetPasswordV1Request*) ssprResetPasswordV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprResetPasswordV1Request' is set
+    if (ssprResetPasswordV1Request == nil) {
+        NSParameterAssert(ssprResetPasswordV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprResetPasswordV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/resetPassword"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprResetPasswordV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: nil
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler(error);
+                                }
+                            }];
+}
+
+///
+/// Send username(s)
+/// This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+///  @param ssprSendUsernamesV1Request  
+///
+///  @returns void
+///
+-(NSURLSessionTask*) ssprSendUsernamesV1WithSsprSendUsernamesV1Request: (EZSsprSendUsernamesV1Request*) ssprSendUsernamesV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprSendUsernamesV1Request' is set
+    if (ssprSendUsernamesV1Request == nil) {
+        NSParameterAssert(ssprSendUsernamesV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprSendUsernamesV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/sendUsernames"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprSendUsernamesV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: nil
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler(error);
+                                }
+                            }];
+}
+
+///
+/// Unlock Account Request
+/// This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+///  @param ssprUnlockAccountRequestV1Request  
+///
+///  @returns void
+///
+-(NSURLSessionTask*) ssprUnlockAccountRequestV1WithSsprUnlockAccountRequestV1Request: (EZSsprUnlockAccountRequestV1Request*) ssprUnlockAccountRequestV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprUnlockAccountRequestV1Request' is set
+    if (ssprUnlockAccountRequestV1Request == nil) {
+        NSParameterAssert(ssprUnlockAccountRequestV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprUnlockAccountRequestV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/unlockAccountRequest"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprUnlockAccountRequestV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: nil
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler(error);
+                                }
+                            }];
+}
+
+///
+/// Unlock Account
+/// This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+///  @param ssprUnlockAccountV1Request  
+///
+///  @returns void
+///
+-(NSURLSessionTask*) ssprUnlockAccountV1WithSsprUnlockAccountV1Request: (EZSsprUnlockAccountV1Request*) ssprUnlockAccountV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprUnlockAccountV1Request' is set
+    if (ssprUnlockAccountV1Request == nil) {
+        NSParameterAssert(ssprUnlockAccountV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprUnlockAccountV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/unlockAccount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprUnlockAccountV1Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"

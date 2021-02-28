@@ -119,6 +119,7 @@ Import the following:
 #import <EzmaxApi/EZFieldEEzsignfolderStep.h>
 #import <EzmaxApi/EZFieldEPhoneType.h>
 #import <EzmaxApi/EZFieldEUserType.h>
+#import <EzmaxApi/EZFieldEUserTypeSSPR.h>
 #import <EzmaxApi/EZFranchisereferalincomeCreateObjectV1Request.h>
 #import <EzmaxApi/EZFranchisereferalincomeCreateObjectV1Response.h>
 #import <EzmaxApi/EZFranchisereferalincomeCreateObjectV1ResponseMPayload.h>
@@ -127,6 +128,11 @@ Import the following:
 #import <EzmaxApi/EZGlobalCustomerGetEndpointV1Response.h>
 #import <EzmaxApi/EZMultilingualApikeyDescription.h>
 #import <EzmaxApi/EZPhoneRequest.h>
+#import <EzmaxApi/EZSsprResetPasswordRequestV1Request.h>
+#import <EzmaxApi/EZSsprResetPasswordV1Request.h>
+#import <EzmaxApi/EZSsprSendUsernamesV1Request.h>
+#import <EzmaxApi/EZSsprUnlockAccountRequestV1Request.h>
+#import <EzmaxApi/EZSsprUnlockAccountV1Request.h>
 #import <EzmaxApi/EZUNUSEDEzsigndocumentEditObjectV1Request.h>
 #import <EzmaxApi/EZUNUSEDEzsigndocumentEditObjectV1Response.h>
 #import <EzmaxApi/EZUNUSEDEzsignfolderEditObjectV1Request.h>
@@ -209,7 +215,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EZGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/EZGlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*EZModuleSsprApi* | [**ssprRemindUsernamesV1**](docs/EZModuleSsprApi.md#ssprremindusernamesv1) | **POST** /1/module/sspr/remindUsernames | Remind of forgotten username(s)
+*EZModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/EZModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest/ | Reset Password Request
+*EZModuleSsprApi* | [**ssprResetPasswordV1**](docs/EZModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
+*EZModuleSsprApi* | [**ssprSendUsernamesV1**](docs/EZModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
+*EZModuleSsprApi* | [**ssprUnlockAccountRequestV1**](docs/EZModuleSsprApi.md#ssprunlockaccountrequestv1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
+*EZModuleSsprApi* | [**ssprUnlockAccountV1**](docs/EZModuleSsprApi.md#ssprunlockaccountv1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
 *EZModuleUserApi* | [**userCreateEzsignuserV1**](docs/EZModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *EZObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/EZObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *EZObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/EZObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
@@ -318,6 +328,7 @@ Class | Method | HTTP request | Description
  - [EZFieldEEzsignfolderStep](docs/EZFieldEEzsignfolderStep.md)
  - [EZFieldEPhoneType](docs/EZFieldEPhoneType.md)
  - [EZFieldEUserType](docs/EZFieldEUserType.md)
+ - [EZFieldEUserTypeSSPR](docs/EZFieldEUserTypeSSPR.md)
  - [EZFranchisereferalincomeCreateObjectV1Request](docs/EZFranchisereferalincomeCreateObjectV1Request.md)
  - [EZFranchisereferalincomeCreateObjectV1Response](docs/EZFranchisereferalincomeCreateObjectV1Response.md)
  - [EZFranchisereferalincomeCreateObjectV1ResponseMPayload](docs/EZFranchisereferalincomeCreateObjectV1ResponseMPayload.md)
@@ -326,6 +337,11 @@ Class | Method | HTTP request | Description
  - [EZGlobalCustomerGetEndpointV1Response](docs/EZGlobalCustomerGetEndpointV1Response.md)
  - [EZMultilingualApikeyDescription](docs/EZMultilingualApikeyDescription.md)
  - [EZPhoneRequest](docs/EZPhoneRequest.md)
+ - [EZSsprResetPasswordRequestV1Request](docs/EZSsprResetPasswordRequestV1Request.md)
+ - [EZSsprResetPasswordV1Request](docs/EZSsprResetPasswordV1Request.md)
+ - [EZSsprSendUsernamesV1Request](docs/EZSsprSendUsernamesV1Request.md)
+ - [EZSsprUnlockAccountRequestV1Request](docs/EZSsprUnlockAccountRequestV1Request.md)
+ - [EZSsprUnlockAccountV1Request](docs/EZSsprUnlockAccountV1Request.md)
  - [EZUNUSEDEzsigndocumentEditObjectV1Request](docs/EZUNUSEDEzsigndocumentEditObjectV1Request.md)
  - [EZUNUSEDEzsigndocumentEditObjectV1Response](docs/EZUNUSEDEzsigndocumentEditObjectV1Response.md)
  - [EZUNUSEDEzsignfolderEditObjectV1Request](docs/EZUNUSEDEzsignfolderEditObjectV1Request.md)
