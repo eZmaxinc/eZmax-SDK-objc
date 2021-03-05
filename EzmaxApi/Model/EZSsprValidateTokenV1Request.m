@@ -1,6 +1,6 @@
-#import "EZEzsigndocumentRequest.h"
+#import "EZSsprValidateTokenV1Request.h"
 
-@implementation EZEzsigndocumentRequest
+@implementation EZSsprValidateTokenV1Request
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pksCustomerCode": @"pksCustomerCode", @"fkiLanguageID": @"fkiLanguageID", @"eUserTypeSSPR": @"eUserTypeSSPR", @"sEmailAddress": @"sEmailAddress", @"sUserLoginname": @"sUserLoginname", @"binUserSSPRtoken": @"binUserSSPRtoken" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEzsigndocumentBase64", ];
+  NSArray *optionalProperties = @[@"sEmailAddress", @"sUserLoginname", ];
   return [optionalProperties containsObject:propertyName];
 }
 

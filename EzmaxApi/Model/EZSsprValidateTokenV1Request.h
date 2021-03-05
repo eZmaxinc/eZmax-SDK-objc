@@ -20,10 +20,10 @@
 
 
 
-@protocol EZSsprResetPasswordRequestV1Request
+@protocol EZSsprValidateTokenV1Request
 @end
 
-@interface EZSsprResetPasswordRequestV1Request : EZObject
+@interface EZSsprValidateTokenV1Request : EZObject
 
 /* The customer code assigned to your account 
  */
@@ -39,5 +39,8 @@
 /* The Login name of the User. [optional]
  */
 @property(nonatomic) NSString* sUserLoginname;
+/* Hex Encoded Secret SSPR token 
+ */
+@property(nonatomic) NSString* binUserSSPRtoken;
 
 @end

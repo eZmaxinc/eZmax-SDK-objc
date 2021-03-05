@@ -231,6 +231,8 @@ EzmaxApi/Model/EZSsprUnlockAccountRequestV1Request.h
 EzmaxApi/Model/EZSsprUnlockAccountRequestV1Request.m
 EzmaxApi/Model/EZSsprUnlockAccountV1Request.h
 EzmaxApi/Model/EZSsprUnlockAccountV1Request.m
+EzmaxApi/Model/EZSsprValidateTokenV1Request.h
+EzmaxApi/Model/EZSsprValidateTokenV1Request.m
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Request.h
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Request.m
 EzmaxApi/Model/EZUNUSEDEzsigndocumentEditObjectV1Response.h
@@ -378,6 +380,7 @@ docs/EZSsprResetPasswordV1Request.md
 docs/EZSsprSendUsernamesV1Request.md
 docs/EZSsprUnlockAccountRequestV1Request.md
 docs/EZSsprUnlockAccountV1Request.md
+docs/EZSsprValidateTokenV1Request.md
 docs/EZUNUSEDEzsigndocumentEditObjectV1Request.md
 docs/EZUNUSEDEzsigndocumentEditObjectV1Response.md
 docs/EZUNUSEDEzsignfolderEditObjectV1Request.md

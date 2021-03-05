@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sCustomerCode": @"sCustomerCode", @"eActivesessionSessiontype": @"eActivesessionSessiontype", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"aRegisteredModules": @"a_RegisteredModules", @"aPermissions": @"a_Permissions" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sCustomerCode": @"sCustomerCode", @"eActivesessionSessiontype": @"eActivesessionSessiontype", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"aRegisteredModules": @"a_RegisteredModules", @"aPermissions": @"a_Permissions", @"fkiUserID": @"fkiUserID", @"fkiApikeyID": @"fkiApikeyID" }];
 }
 
 /**

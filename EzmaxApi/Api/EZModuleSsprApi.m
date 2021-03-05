@@ -7,6 +7,7 @@
 #import "EZSsprSendUsernamesV1Request.h"
 #import "EZSsprUnlockAccountRequestV1Request.h"
 #import "EZSsprUnlockAccountV1Request.h"
+#import "EZSsprValidateTokenV1Request.h"
 
 
 @interface EZModuleSsprApi ()
@@ -364,6 +365,72 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
     bodyParam = ssprUnlockAccountV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: nil
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler(error);
+                                }
+                            }];
+}
+
+///
+/// Validate Token
+/// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+///  @param ssprValidateTokenV1Request  
+///
+///  @returns void
+///
+-(NSURLSessionTask*) ssprValidateTokenV1WithSsprValidateTokenV1Request: (EZSsprValidateTokenV1Request*) ssprValidateTokenV1Request
+    completionHandler: (void (^)(NSError* error)) handler {
+    // verify the required parameter 'ssprValidateTokenV1Request' is set
+    if (ssprValidateTokenV1Request == nil) {
+        NSParameterAssert(ssprValidateTokenV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ssprValidateTokenV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleSsprApiErrorDomain code:kEZModuleSsprApiMissingParamErrorCode userInfo:userInfo];
+            handler(error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/validateToken"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ssprValidateTokenV1Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"

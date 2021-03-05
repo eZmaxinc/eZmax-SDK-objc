@@ -1,4 +1,4 @@
-# EZSsprResetPasswordV1Request
+# EZSsprValidateTokenV1Request
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **sEmailAddress** | **NSString*** | The email address. | [optional] 
 **sUserLoginname** | **NSString*** | The Login name of the User. | [optional] 
 **binUserSSPRtoken** | **NSString*** | Hex Encoded Secret SSPR token | 
-**sPassword** | **NSString*** | A Password.  Must meet complexity requirements | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

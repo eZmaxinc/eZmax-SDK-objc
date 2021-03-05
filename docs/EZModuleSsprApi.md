@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ssprSendUsernamesV1**](EZModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
 [**ssprUnlockAccountRequestV1**](EZModuleSsprApi.md#ssprunlockaccountrequestv1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
 [**ssprUnlockAccountV1**](EZModuleSsprApi.md#ssprunlockaccountv1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
+[**ssprValidateTokenV1**](EZModuleSsprApi.md#ssprvalidatetokenv1) | **POST** /1/module/sspr/validateToken | Validate Token
 
 
 # **ssprResetPasswordRequestV1**
@@ -265,6 +266,60 @@ EZModuleSsprApi*apiInstance = [[EZModuleSsprApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ssprUnlockAccountV1Request** | [**EZSsprUnlockAccountV1Request***](EZSsprUnlockAccountV1Request.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ssprValidateTokenV1**
+```objc
+-(NSURLSessionTask*) ssprValidateTokenV1WithSsprValidateTokenV1Request: (EZSsprValidateTokenV1Request*) ssprValidateTokenV1Request
+        completionHandler: (void (^)(NSError* error)) handler;
+```
+
+Validate Token
+
+This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+
+### Example 
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EZSsprValidateTokenV1Request* ssprValidateTokenV1Request = [[EZSsprValidateTokenV1Request alloc] init]; // 
+
+EZModuleSsprApi*apiInstance = [[EZModuleSsprApi alloc] init];
+
+// Validate Token
+[apiInstance ssprValidateTokenV1WithSsprValidateTokenV1Request:ssprValidateTokenV1Request
+          completionHandler: ^(NSError* error) {
+                        if (error) {
+                            NSLog(@"Error calling EZModuleSsprApi->ssprValidateTokenV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ssprValidateTokenV1Request** | [**EZSsprValidateTokenV1Request***](EZSsprValidateTokenV1Request.md)|  | 
 
 ### Return type
 
