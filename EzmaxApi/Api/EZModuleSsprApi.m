@@ -75,7 +75,7 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/resetPasswordRequest/"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/sspr/resetPasswordRequest"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 
@@ -387,7 +387,7 @@ NSInteger kEZModuleSsprApiMissingParamErrorCode = 234513;
 
 ///
 /// Validate Token
-/// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+/// This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 ///  @param ssprValidateTokenV1Request  
 ///
 ///  @returns void
