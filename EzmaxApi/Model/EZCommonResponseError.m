@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sErrorMessage": @"sErrorMessage" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sErrorMessage": @"sErrorMessage", @"eErrorCode": @"eErrorCode" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"eErrorCode"];
   return [optionalProperties containsObject:propertyName];
 }
 

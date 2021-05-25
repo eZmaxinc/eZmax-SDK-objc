@@ -3,6 +3,8 @@
 EzmaxApi.podspec
 EzmaxApi/Api/EZGlobalCustomerApi.h
 EzmaxApi/Api/EZGlobalCustomerApi.m
+EzmaxApi/Api/EZModuleAuthenticateApi.h
+EzmaxApi/Api/EZModuleAuthenticateApi.m
 EzmaxApi/Api/EZModuleSsprApi.h
 EzmaxApi/Api/EZModuleSsprApi.m
 EzmaxApi/Api/EZModuleUserApi.h
@@ -69,6 +71,12 @@ EzmaxApi/Model/EZApikeyResponse.h
 EzmaxApi/Model/EZApikeyResponse.m
 EzmaxApi/Model/EZAttemptResponse.h
 EzmaxApi/Model/EZAttemptResponse.m
+EzmaxApi/Model/EZAuthenticateAuthenticateV2Request.h
+EzmaxApi/Model/EZAuthenticateAuthenticateV2Request.m
+EzmaxApi/Model/EZAuthenticateAuthenticateV2Response.h
+EzmaxApi/Model/EZAuthenticateAuthenticateV2Response.m
+EzmaxApi/Model/EZAuthenticateAuthenticateV2ResponseMPayload.h
+EzmaxApi/Model/EZAuthenticateAuthenticateV2ResponseMPayload.m
 EzmaxApi/Model/EZCommonAudit.h
 EzmaxApi/Model/EZCommonAudit.m
 EzmaxApi/Model/EZCommonGetAutocompleteV1Response.h
@@ -286,6 +294,9 @@ docs/EZApikeyRequest.md
 docs/EZApikeyRequestCompound.md
 docs/EZApikeyResponse.md
 docs/EZAttemptResponse.md
+docs/EZAuthenticateAuthenticateV2Request.md
+docs/EZAuthenticateAuthenticateV2Response.md
+docs/EZAuthenticateAuthenticateV2ResponseMPayload.md
 docs/EZCommonAudit.md
 docs/EZCommonGetAutocompleteV1Response.md
 docs/EZCommonGetAutocompleteV1ResponseMPayload.md
@@ -361,6 +372,7 @@ docs/EZFranchisereferalincomeRequest.md
 docs/EZFranchisereferalincomeRequestCompound.md
 docs/EZGlobalCustomerApi.md
 docs/EZGlobalCustomerGetEndpointV1Response.md
+docs/EZModuleAuthenticateApi.md
 docs/EZModuleSsprApi.md
 docs/EZModuleUserApi.md
 docs/EZMultilingualApikeyDescription.md
