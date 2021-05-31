@@ -1,6 +1,6 @@
-#import "EZAuthenticateAuthenticateV2Request.h"
+#import "EZFieldEEzsignsignatureType.h"
 
-@implementation EZAuthenticateAuthenticateV2Request
+@implementation EZFieldEEzsignsignatureType
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pksCustomerCode": @"pksCustomerCode", @"sEmailAddress": @"sEmailAddress", @"sUserLoginname": @"sUserLoginname", @"sPassword": @"sPassword", @"sPasswordEncrypted": @"sPasswordEncrypted" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEmailAddress", @"sUserLoginname", @"sPassword", @"sPasswordEncrypted"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

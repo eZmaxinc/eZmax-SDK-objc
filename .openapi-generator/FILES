@@ -207,6 +207,8 @@ EzmaxApi/Model/EZFieldEEzsignfolderSendreminderfrequency.h
 EzmaxApi/Model/EZFieldEEzsignfolderSendreminderfrequency.m
 EzmaxApi/Model/EZFieldEEzsignfolderStep.h
 EzmaxApi/Model/EZFieldEEzsignfolderStep.m
+EzmaxApi/Model/EZFieldEEzsignsignatureType.h
+EzmaxApi/Model/EZFieldEEzsignsignatureType.m
 EzmaxApi/Model/EZFieldEPhoneType.h
 EzmaxApi/Model/EZFieldEPhoneType.m
 EzmaxApi/Model/EZFieldEUserType.h
@@ -362,6 +364,7 @@ docs/EZEzsignsignerRequestCompoundContact.md
 docs/EZFieldEEzsigndocumentStep.md
 docs/EZFieldEEzsignfolderSendreminderfrequency.md
 docs/EZFieldEEzsignfolderStep.md
+docs/EZFieldEEzsignsignatureType.md
 docs/EZFieldEPhoneType.md
 docs/EZFieldEUserType.md
 docs/EZFieldEUserTypeSSPR.md
