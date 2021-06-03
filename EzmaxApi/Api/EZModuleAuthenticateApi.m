@@ -85,7 +85,7 @@ NSInteger kEZModuleAuthenticateApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/module/authenticate/authenticate/ezsignuser/{eSessionType}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/module/authenticate/authenticate/{eSessionType}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (eSessionType != nil) {
