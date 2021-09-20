@@ -18,7 +18,7 @@ Retrieve Franchiseoffices and IDs
 
 Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

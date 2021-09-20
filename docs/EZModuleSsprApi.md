@@ -22,7 +22,7 @@ Reset Password Request
 
 This endpoint sends an email with a link to reset the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -76,7 +76,7 @@ Reset Password
 
 This endpoint resets the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -130,7 +130,7 @@ Send username(s)
 
 This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -184,7 +184,7 @@ Unlock Account Request
 
 This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -238,7 +238,7 @@ Unlock Account
 
 This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -292,7 +292,7 @@ Validate Token
 
 This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

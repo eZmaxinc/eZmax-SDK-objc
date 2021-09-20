@@ -18,7 +18,7 @@ Get customer endpoint
 
 Retrieve the customer's specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer's data is stored.
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

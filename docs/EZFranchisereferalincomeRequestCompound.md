@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objAddress** | [**EZAddressRequest***](EZAddressRequest.md) |  | [optional] 
+**objAddress** | [**EZAddressRequest***](EZAddressRequest.md) |  | 
 **aObjContact** | [**NSArray&lt;EZContactRequestCompound&gt;***](EZContactRequestCompound.md) |  | 
 **fkiFranchisebrokerID** | **NSNumber*** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **NSNumber*** | The unique ID of the Franchisereferalincomeprogram | 

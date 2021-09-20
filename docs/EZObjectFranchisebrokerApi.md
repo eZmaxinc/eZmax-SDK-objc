@@ -18,7 +18,7 @@ Retrieve Franchisebrokers and IDs
 
 Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

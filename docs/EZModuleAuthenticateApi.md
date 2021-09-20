@@ -18,7 +18,7 @@ Authenticate a user
 
 This endpoint authenticates a user.
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

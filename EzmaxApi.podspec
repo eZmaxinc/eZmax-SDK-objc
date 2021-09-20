@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "EzmaxApi"
-    s.version          = "1.0.46"
+    s.version          = "1.0.47"
 
     s.summary          = "eZmax API Definition"
     s.description      = <<-DESC
@@ -34,4 +34,3 @@ Pod::Spec.new do |s|
     s.dependency 'JSONModel', '~> 1.2'
     s.dependency 'ISO8601', '~> 0.6'
 end
-

@@ -20,7 +20,7 @@ Create a new Ezsignsignature
 
 The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignsignature
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -130,7 +130,9 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignsignature's children IDs
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
@@ -182,7 +184,9 @@ void (empty response body)
 
 Retrieve an existing Ezsignsignature
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

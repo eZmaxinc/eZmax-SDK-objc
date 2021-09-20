@@ -17,7 +17,7 @@ Get Current Activesession
 
 Retrieve the details about the current activesession
 
-### Example 
+### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 

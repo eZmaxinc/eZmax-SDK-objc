@@ -191,7 +191,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve an existing Ezsignfolder's children IDs
-/// 
+/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///  @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
 ///
 ///  @returns void
@@ -259,7 +259,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve an existing Ezsignfolder
-/// 
+/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///  @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
 ///
 ///  @returns EZEzsignfolderGetObjectV1Response*
