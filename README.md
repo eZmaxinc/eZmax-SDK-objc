@@ -85,6 +85,9 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetObjectV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetObjectV1ResponseMPayload.h>
@@ -95,7 +98,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentRequest.h>
 #import <EzmaxApi/EZEzsigndocumentRequestCompound.h>
 #import <EzmaxApi/EZEzsigndocumentResponse.h>
-#import <EzmaxApi/EZEzsigndocumentResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentResponseCompound.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Request.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Response.h>
@@ -124,6 +126,7 @@ Import the following:
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequest.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompound.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompoundAllOf.h>
+#import <EzmaxApi/EZEzsignpageResponse.h>
 #import <EzmaxApi/EZEzsignsignatureCreateObjectV1Request.h>
 #import <EzmaxApi/EZEzsignsignatureCreateObjectV1Response.h>
 #import <EzmaxApi/EZEzsignsignatureCreateObjectV1ResponseAllOf.h>
@@ -218,7 +221,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSString* *pksCustomerCode = @"pksCustomerCode_example"; // The customer code assigned to your account
+NSString* *pksCustomerCode = @"pksCustomerCode_example"; // 
 NSString* *sInfrastructureproductCode = @"sInfrastructureproductCode_example"; // The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional)
 
 EZGlobalCustomerApi *apiInstance = [[EZGlobalCustomerApi alloc] init];
@@ -259,12 +262,14 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetChildrenV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignpagesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *EZObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetChildrenV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderSendV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
@@ -327,6 +332,9 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentGetDownloadUrlV1Response](docs/EZEzsigndocumentGetDownloadUrlV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseMPayload](docs/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.md)
+ - [EZEzsigndocumentGetEzsignpagesV1Response](docs/EZEzsigndocumentGetEzsignpagesV1Response.md)
+ - [EZEzsigndocumentGetEzsignpagesV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.md)
+ - [EZEzsigndocumentGetEzsignpagesV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.md)
  - [EZEzsigndocumentGetObjectV1Response](docs/EZEzsigndocumentGetObjectV1Response.md)
  - [EZEzsigndocumentGetObjectV1ResponseAllOf](docs/EZEzsigndocumentGetObjectV1ResponseAllOf.md)
  - [EZEzsigndocumentGetObjectV1ResponseMPayload](docs/EZEzsigndocumentGetObjectV1ResponseMPayload.md)
@@ -337,7 +345,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentRequest](docs/EZEzsigndocumentRequest.md)
  - [EZEzsigndocumentRequestCompound](docs/EZEzsigndocumentRequestCompound.md)
  - [EZEzsigndocumentResponse](docs/EZEzsigndocumentResponse.md)
- - [EZEzsigndocumentResponseAllOf](docs/EZEzsigndocumentResponseAllOf.md)
  - [EZEzsigndocumentResponseCompound](docs/EZEzsigndocumentResponseCompound.md)
  - [EZEzsignfolderCreateObjectV1Request](docs/EZEzsignfolderCreateObjectV1Request.md)
  - [EZEzsignfolderCreateObjectV1Response](docs/EZEzsignfolderCreateObjectV1Response.md)
@@ -366,6 +373,7 @@ Class | Method | HTTP request | Description
  - [EZEzsignfoldersignerassociationRequest](docs/EZEzsignfoldersignerassociationRequest.md)
  - [EZEzsignfoldersignerassociationRequestCompound](docs/EZEzsignfoldersignerassociationRequestCompound.md)
  - [EZEzsignfoldersignerassociationRequestCompoundAllOf](docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md)
+ - [EZEzsignpageResponse](docs/EZEzsignpageResponse.md)
  - [EZEzsignsignatureCreateObjectV1Request](docs/EZEzsignsignatureCreateObjectV1Request.md)
  - [EZEzsignsignatureCreateObjectV1Response](docs/EZEzsignsignatureCreateObjectV1Response.md)
  - [EZEzsignsignatureCreateObjectV1ResponseAllOf](docs/EZEzsignsignatureCreateObjectV1ResponseAllOf.md)

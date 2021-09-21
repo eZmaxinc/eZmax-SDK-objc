@@ -15,12 +15,9 @@
 
 
 #import "EZCommonAudit.h"
-#import "EZEzsigndocumentResponseAllOf.h"
 #import "EZFieldEEzsigndocumentStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
-@protocol EZEzsigndocumentResponseAllOf;
-@class EZEzsigndocumentResponseAllOf;
 @protocol EZFieldEEzsigndocumentStep;
 @class EZFieldEEzsigndocumentStep;
 
@@ -43,7 +40,7 @@
 /* The name of the document that will be presented to Ezsignfoldersignerassociations 
  */
 @property(nonatomic) NSString* sEzsigndocumentName;
-/* The unique ID of the Ezsigntemplate 
+/* The unique ID of the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* pkiEzsigndocumentID;
 

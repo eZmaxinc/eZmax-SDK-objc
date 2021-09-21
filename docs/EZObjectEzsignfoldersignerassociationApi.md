@@ -86,7 +86,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfoldersignerassociationID = @56; // The unique ID of the Ezsignfoldersignerassociation
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
 
 EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersignerassociationApi alloc] init];
 
@@ -106,7 +106,7 @@ EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersig
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **NSNumber***| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -143,7 +143,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfoldersignerassociationID = @56; // The unique ID of the Ezsignfoldersignerassociation
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
 
 EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersignerassociationApi alloc] init];
 
@@ -160,7 +160,7 @@ EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersig
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **NSNumber***| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -197,7 +197,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfoldersignerassociationID = @56; // The unique ID of the Ezsignfoldersignerassociation
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
 
 EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersignerassociationApi alloc] init];
 
@@ -217,7 +217,7 @@ EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersig
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **NSNumber***| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -254,7 +254,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfoldersignerassociationID = @56; // The unique ID of the Ezsignfoldersignerassociation
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
 
 EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersignerassociationApi alloc] init];
 
@@ -274,7 +274,7 @@ EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersig
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **NSNumber***| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
 
 ### Return type
 

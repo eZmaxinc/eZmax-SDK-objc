@@ -31,7 +31,7 @@
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;
-/* The page number in the document where to apply the signature 
+/* The page number in the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* iEzsignpagePagenumber;
 /* The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate. 
@@ -45,7 +45,7 @@
 @property(nonatomic) NSNumber* iEzsignsignatureStep;
 
 @property(nonatomic) EZFieldEEzsignsignatureType* eEzsignsignatureType;
-/* The unique ID of the Ezsigntemplate 
+/* The unique ID of the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* fkiEzsigndocumentID;
 

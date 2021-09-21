@@ -42,7 +42,7 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
 /// Delete an existing Ezsignsignature
 /// 
 ///
-/// @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+/// @param pkiEzsignsignatureID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -56,7 +56,7 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
 /// Retrieve an existing Ezsignsignature's children IDs
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+/// @param pkiEzsignsignatureID 
 /// 
 ///  code:404 message:"The element you are trying to work on does not exist"
 ///
@@ -68,7 +68,7 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
 /// Retrieve an existing Ezsignsignature
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+/// @param pkiEzsignsignatureID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist"

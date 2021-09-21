@@ -122,7 +122,7 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 ///
 /// Delete an existing Ezsignsignature
 /// 
-///  @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+///  @param pkiEzsignsignatureID  
 ///
 ///  @returns EZEzsignsignatureDeleteObjectV1Response*
 ///
@@ -190,7 +190,7 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Ezsignsignature's children IDs
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+///  @param pkiEzsignsignatureID  
 ///
 ///  @returns void
 ///
@@ -258,7 +258,7 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Ezsignsignature
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+///  @param pkiEzsignsignatureID  
 ///
 ///  @returns EZEzsignsignatureGetObjectV1Response*
 ///

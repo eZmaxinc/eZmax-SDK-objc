@@ -43,7 +43,7 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// Delete an existing Ezsignfoldersignerassociation
 /// 
 ///
-/// @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+/// @param pkiEzsignfoldersignerassociationID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -57,7 +57,7 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+/// @param pkiEzsignfoldersignerassociationID 
 /// 
 ///  code:404 message:"The element you are trying to work on does not exist"
 ///
@@ -69,7 +69,7 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// Retrieve a Login Url to allow In-Person signing
 /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
 ///
-/// @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+/// @param pkiEzsignfoldersignerassociationID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -83,7 +83,7 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// Retrieve an existing Ezsignfoldersignerassociation
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+/// @param pkiEzsignfoldersignerassociationID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist"

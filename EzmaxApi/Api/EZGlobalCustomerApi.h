@@ -27,7 +27,7 @@ extern NSInteger kEZGlobalCustomerApiMissingParamErrorCode;
 /// Get customer endpoint
 /// Retrieve the customer's specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer's data is stored.
 ///
-/// @param pksCustomerCode The customer code assigned to your account
+/// @param pksCustomerCode 
 /// @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
 /// 
 ///  code:200 message:"Successful response",

@@ -28,7 +28,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSString* pksCustomerCode = @"pksCustomerCode_example"; // The customer code assigned to your account
+NSString* pksCustomerCode = @"pksCustomerCode_example"; // 
 NSString* sInfrastructureproductCode = @"sInfrastructureproductCode_example"; // The infrastructure product Code  If undefined, \"appcluster01\" is assumed (optional)
 
 EZGlobalCustomerApi*apiInstance = [[EZGlobalCustomerApi alloc] init];
@@ -50,7 +50,7 @@ EZGlobalCustomerApi*apiInstance = [[EZGlobalCustomerApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **NSString***| The customer code assigned to your account | 
+ **pksCustomerCode** | **NSString***|  | 
  **sInfrastructureproductCode** | **NSString***| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] 
 
 ### Return type

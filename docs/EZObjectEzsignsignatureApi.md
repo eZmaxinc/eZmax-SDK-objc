@@ -85,7 +85,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignsignatureID = @56; // The unique ID of the Ezsignsignature
+NSNumber* pkiEzsignsignatureID = @56; // 
 
 EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
 
@@ -105,7 +105,7 @@ EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] ini
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -142,7 +142,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignsignatureID = @56; // The unique ID of the Ezsignsignature
+NSNumber* pkiEzsignsignatureID = @56; // 
 
 EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
 
@@ -159,7 +159,7 @@ EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] ini
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -196,7 +196,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignsignatureID = @56; // The unique ID of the Ezsignsignature
+NSNumber* pkiEzsignsignatureID = @56; // 
 
 EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
 
@@ -216,7 +216,7 @@ EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] ini
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **NSNumber***|  | 
 
 ### Return type
 

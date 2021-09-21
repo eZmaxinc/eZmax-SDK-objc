@@ -43,7 +43,7 @@
 /* The name of the document that will be presented to Ezsignfoldersignerassociations 
  */
 @property(nonatomic) NSString* sEzsigndocumentName;
-/* The unique ID of the Ezsigntemplate 
+/* The unique ID of the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* pkiEzsigndocumentID;
 

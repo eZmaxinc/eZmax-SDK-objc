@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **dtEzsigndocumentDuedate** | **NSString*** | The maximum date and time at which the document can be signed. | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sEzsigndocumentName** | **NSString*** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
-**pkiEzsigndocumentID** | **NSNumber*** | The unique ID of the Ezsigntemplate | 
+**pkiEzsigndocumentID** | **NSNumber*** | The unique ID of the Ezsigndocument | 
 **eEzsigndocumentStep** | [**EZFieldEEzsigndocumentStep***](EZFieldEEzsigndocumentStep.md) |  | 
 **dtEzsigndocumentFirstsend** | **NSString*** | The date and time when the Ezsigndocument was first sent. | 
 **dtEzsigndocumentLastsend** | **NSString*** | The date and time when the Ezsigndocument was sent the last time. | 

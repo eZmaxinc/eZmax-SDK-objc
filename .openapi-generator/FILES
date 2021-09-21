@@ -137,6 +137,12 @@ EzmaxApi/Model/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h
 EzmaxApi/Model/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.m
 EzmaxApi/Model/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.h
 EzmaxApi/Model/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.m
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1Response.h
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1Response.m
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.m
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.h
+EzmaxApi/Model/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsigndocumentGetObjectV1Response.h
 EzmaxApi/Model/EZEzsigndocumentGetObjectV1Response.m
 EzmaxApi/Model/EZEzsigndocumentGetObjectV1ResponseAllOf.h
@@ -157,8 +163,6 @@ EzmaxApi/Model/EZEzsigndocumentRequestCompound.h
 EzmaxApi/Model/EZEzsigndocumentRequestCompound.m
 EzmaxApi/Model/EZEzsigndocumentResponse.h
 EzmaxApi/Model/EZEzsigndocumentResponse.m
-EzmaxApi/Model/EZEzsigndocumentResponseAllOf.h
-EzmaxApi/Model/EZEzsigndocumentResponseAllOf.m
 EzmaxApi/Model/EZEzsigndocumentResponseCompound.h
 EzmaxApi/Model/EZEzsigndocumentResponseCompound.m
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Request.h
@@ -215,6 +219,8 @@ EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompound.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompound.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompoundAllOf.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompoundAllOf.m
+EzmaxApi/Model/EZEzsignpageResponse.h
+EzmaxApi/Model/EZEzsignpageResponse.m
 EzmaxApi/Model/EZEzsignsignatureCreateObjectV1Request.h
 EzmaxApi/Model/EZEzsignsignatureCreateObjectV1Request.m
 EzmaxApi/Model/EZEzsignsignatureCreateObjectV1Response.h
@@ -375,6 +381,9 @@ docs/EZEzsigndocumentDeleteObjectV1Response.md
 docs/EZEzsigndocumentGetDownloadUrlV1Response.md
 docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.md
+docs/EZEzsigndocumentGetEzsignpagesV1Response.md
+docs/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.md
+docs/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.md
 docs/EZEzsigndocumentGetObjectV1Response.md
 docs/EZEzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EZEzsigndocumentGetObjectV1ResponseMPayload.md
@@ -385,7 +394,6 @@ docs/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EZEzsigndocumentRequest.md
 docs/EZEzsigndocumentRequestCompound.md
 docs/EZEzsigndocumentResponse.md
-docs/EZEzsigndocumentResponseAllOf.md
 docs/EZEzsigndocumentResponseCompound.md
 docs/EZEzsignfolderCreateObjectV1Request.md
 docs/EZEzsignfolderCreateObjectV1Response.md
@@ -414,6 +422,7 @@ docs/EZEzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EZEzsignfoldersignerassociationRequest.md
 docs/EZEzsignfoldersignerassociationRequestCompound.md
 docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EZEzsignpageResponse.md
 docs/EZEzsignsignatureCreateObjectV1Request.md
 docs/EZEzsignsignatureCreateObjectV1Response.md
 docs/EZEzsignsignatureCreateObjectV1ResponseAllOf.md

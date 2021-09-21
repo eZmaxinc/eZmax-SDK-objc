@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderGetChildrenV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetFormsDataV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -86,7 +87,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfolderID = @56; // The unique ID of the Ezsignfolder
+NSNumber* pkiEzsignfolderID = @56; // 
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
@@ -106,7 +107,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **NSNumber***| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -143,7 +144,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfolderID = @56; // The unique ID of the Ezsignfolder
+NSNumber* pkiEzsignfolderID = @56; // 
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
@@ -160,7 +161,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **NSNumber***| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -174,6 +175,63 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetFormsDataV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetFormsDataV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's forms data
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's forms data
+[apiInstance ezsignfolderGetFormsDataV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetFormsDataV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/zip, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -197,7 +255,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfolderID = @56; // The unique ID of the Ezsignfolder
+NSNumber* pkiEzsignfolderID = @56; // 
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
@@ -217,7 +275,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **NSNumber***| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -253,7 +311,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignfolderID = @56; // The unique ID of the Ezsignfolder
+NSNumber* pkiEzsignfolderID = @56; // 
 EZEzsignfolderSendV1Request* ezsignfolderSendV1Request = [[EZEzsignfolderSendV1Request alloc] init]; // 
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
@@ -275,7 +333,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **NSNumber***| The unique ID of the Ezsignfolder | 
+ **pkiEzsignfolderID** | **NSNumber***|  | 
  **ezsignfolderSendV1Request** | [**EZEzsignfolderSendV1Request***](EZEzsignfolderSendV1Request.md)|  | 
 
 ### Return type

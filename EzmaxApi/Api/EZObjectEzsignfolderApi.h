@@ -44,7 +44,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// Delete an existing Ezsignfolder
 /// 
 ///
-/// @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+/// @param pkiEzsignfolderID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -58,7 +58,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// Retrieve an existing Ezsignfolder's children IDs
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+/// @param pkiEzsignfolderID 
 /// 
 ///  code:404 message:"The element you are trying to work on does not exist"
 ///
@@ -67,10 +67,24 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsignfolder's forms data
+/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) ezsignfolderGetFormsDataV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignfolder
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///
-/// @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+/// @param pkiEzsignfolderID 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist"
@@ -83,7 +97,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// Send the Ezsignfolder to the signatories for signature
 /// 
 ///
-/// @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+/// @param pkiEzsignfolderID 
 /// @param ezsignfolderSendV1Request 
 /// 
 ///  code:200 message:"Successful response",

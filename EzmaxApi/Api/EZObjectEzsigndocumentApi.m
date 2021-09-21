@@ -8,6 +8,7 @@
 #import "EZEzsigndocumentCreateObjectV1Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
+#import "EZEzsigndocumentGetEzsignpagesV1Response.h"
 #import "EZEzsigndocumentGetObjectV1Response.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Request.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
@@ -61,7 +62,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Apply an Ezsign Template to the Ezsigndocument.
 /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @param ezsigndocumentApplyEzsigntemplateV1Request  
 ///
@@ -210,7 +211,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Delete an existing Ezsigndocument
 /// 
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @returns EZEzsigndocumentDeleteObjectV1Response*
 ///
@@ -278,7 +279,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Ezsigndocument's children IDs
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @returns void
 ///
@@ -346,7 +347,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve a URL to download documents.
 /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  
 ///
@@ -429,9 +430,77 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Retrieve an existing Ezsigndocument's Ezsignpages
+/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+///  @param pkiEzsigndocumentID  
+///
+///  @returns EZEzsigndocumentGetEzsignpagesV1Response*
+///
+-(NSURLSessionTask*) ezsigndocumentGetEzsignpagesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetEzsignpagesV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == nil) {
+        NSParameterAssert(pkiEzsigndocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigndocumentID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigndocumentApiErrorDomain code:kEZObjectEzsigndocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigndocumentID != nil) {
+        pathParams[@"pkiEzsigndocumentID"] = pkiEzsigndocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsigndocumentGetEzsignpagesV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsigndocumentGetEzsignpagesV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve an existing Ezsigndocument's Form Data
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @returns NSURL*
 ///
@@ -499,7 +568,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Ezsigndocument
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @returns EZEzsigndocumentGetObjectV1Response*
 ///
@@ -567,7 +636,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve positions X,Y of given words from a Ezsigndocument
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-///  @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+///  @param pkiEzsigndocumentID  
 ///
 ///  @param ezsigndocumentGetWordsPositionsV1Request  
 ///
