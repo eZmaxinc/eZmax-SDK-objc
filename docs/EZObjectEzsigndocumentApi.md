@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigndocumentApplyEzsigntemplateV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
+[**ezsigndocumentApplyEzsigntemplateV2**](EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
@@ -24,7 +25,7 @@ Method | HTTP request | Description
 
 Apply an Ezsign Template to the Ezsigndocument.
 
-This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 
 ### Example
 ```objc
@@ -64,6 +65,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigndocumentApplyEzsigntemplateV1Response***](EZEzsigndocumentApplyEzsigntemplateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentApplyEzsigntemplateV2**
+```objc
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateV2Request: (EZEzsigndocumentApplyEzsigntemplateV2Request*) ezsigndocumentApplyEzsigntemplateV2Request
+        completionHandler: (void (^)(EZEzsigndocumentApplyEzsigntemplateV2Response* output, NSError* error)) handler;
+```
+
+Apply an Ezsign Template to the Ezsigndocument.
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EZEzsigndocumentApplyEzsigntemplateV2Request* ezsigndocumentApplyEzsigntemplateV2Request = [[EZEzsigndocumentApplyEzsigntemplateV2Request alloc] init]; // 
+
+EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init];
+
+// Apply an Ezsign Template to the Ezsigndocument.
+[apiInstance ezsigndocumentApplyEzsigntemplateV2WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentApplyEzsigntemplateV2Request:ezsigndocumentApplyEzsigntemplateV2Request
+          completionHandler: ^(EZEzsigndocumentApplyEzsigntemplateV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigndocumentApi->ezsigndocumentApplyEzsigntemplateV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentApplyEzsigntemplateV2Request** | [**EZEzsigndocumentApplyEzsigntemplateV2Request***](EZEzsigndocumentApplyEzsigntemplateV2Request.md)|  | 
+
+### Return type
+
+[**EZEzsigndocumentApplyEzsigntemplateV2Response***](EZEzsigndocumentApplyEzsigntemplateV2Response.md)
 
 ### Authorization
 
@@ -311,8 +373,6 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsigndocument's Ezsignpages
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -363,7 +423,7 @@ Name | Type | Description  | Notes
 # **ezsigndocumentGetFormDataV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentGetFormDataV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+        completionHandler: (void (^)(EZEzsigndocumentGetFormDataV1Response* output, NSError* error)) handler;
 ```
 
 Retrieve an existing Ezsigndocument's Form Data
@@ -386,7 +446,7 @@ EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init]
 
 // Retrieve an existing Ezsigndocument's Form Data
 [apiInstance ezsigndocumentGetFormDataV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
-          completionHandler: ^(NSURL* output, NSError* error) {
+          completionHandler: ^(EZEzsigndocumentGetFormDataV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -404,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**NSURL***
+[**EZEzsigndocumentGetFormDataV1Response***](EZEzsigndocumentGetFormDataV1Response.md)
 
 ### Authorization
 
@@ -413,7 +473,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/zip, application/json
+ - **Accept**: application/json, application/zip, text/csv
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

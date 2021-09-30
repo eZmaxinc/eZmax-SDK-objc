@@ -5,6 +5,7 @@
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
+#import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
 #import "EZEzsignfolderSendV1Request.h"
 #import "EZEzsignfolderSendV1Response.h"
@@ -262,10 +263,10 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 ///  @param pkiEzsignfolderID  
 ///
-///  @returns NSURL*
+///  @returns EZEzsignfolderGetFormsDataV1Response*
 ///
 -(NSURLSessionTask*) ezsignfolderGetFormsDataV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(EZEzsignfolderGetFormsDataV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -288,7 +289,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"application/json"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/zip"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -317,10 +318,10 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"EZEzsignfolderGetFormsDataV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((EZEzsignfolderGetFormsDataV1Response*)data, error);
                                 }
                             }];
 }

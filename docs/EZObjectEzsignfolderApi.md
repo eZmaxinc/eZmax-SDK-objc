@@ -181,7 +181,7 @@ void (empty response body)
 # **ezsignfolderGetFormsDataV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderGetFormsDataV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+        completionHandler: (void (^)(EZEzsignfolderGetFormsDataV1Response* output, NSError* error)) handler;
 ```
 
 Retrieve an existing Ezsignfolder's forms data
@@ -204,7 +204,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
 // Retrieve an existing Ezsignfolder's forms data
 [apiInstance ezsignfolderGetFormsDataV1WithPkiEzsignfolderID:pkiEzsignfolderID
-          completionHandler: ^(NSURL* output, NSError* error) {
+          completionHandler: ^(EZEzsignfolderGetFormsDataV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**NSURL***
+[**EZEzsignfolderGetFormsDataV1Response***](EZEzsignfolderGetFormsDataV1Response.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/zip, application/json
+ - **Accept**: application/json, application/zip
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

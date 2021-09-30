@@ -1,4 +1,4 @@
-# EZWordPositionResponse
+# EZCustomWordPositionResponse
 
 ## Properties
 Name | Type | Description | Notes
