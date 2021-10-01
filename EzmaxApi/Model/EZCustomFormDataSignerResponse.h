@@ -37,8 +37,7 @@
 /* The Last name of the contact 
  */
 @property(nonatomic) NSString* sContactLastname;
-/* This array contains the labels or each Form fields in the form but WITHOUT the values 
- */
+
 @property(nonatomic) NSArray<EZEzsignformfieldgroupResponseCompound>* aObjEzsignformfieldgroupCompound;
 
 @end

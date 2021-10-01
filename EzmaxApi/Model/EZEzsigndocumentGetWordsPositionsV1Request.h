@@ -22,7 +22,11 @@
 
 @interface EZEzsigndocumentGetWordsPositionsV1Request : EZObject
 
-
-@property(nonatomic) NSArray<NSString*>* aSWords;
+/* Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*. [optional]
+ */
+@property(nonatomic) NSString* eGet;
+/* Array of words to find in the document [optional]
+ */
+@property(nonatomic) NSArray<NSString*>* aSWord;
 
 @end
