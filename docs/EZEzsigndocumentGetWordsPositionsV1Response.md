@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EZEzsigndocumentGetWordsPositionsV1ResponseMPayload***](EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.md) |  | 
+**mPayload** | [**NSArray&lt;EZCustomWordPositionWordResponse&gt;***](EZCustomWordPositionWordResponse.md) | Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

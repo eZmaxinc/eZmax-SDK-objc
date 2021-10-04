@@ -17,18 +17,18 @@
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZCustomWordPositionWordResponse.h"
 #import "EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.h"
-#import "EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZCustomWordPositionWordResponse;
+@class EZCustomWordPositionWordResponse;
 @protocol EZEzsigndocumentGetWordsPositionsV1ResponseAllOf;
 @class EZEzsigndocumentGetWordsPositionsV1ResponseAllOf;
-@protocol EZEzsigndocumentGetWordsPositionsV1ResponseMPayload;
-@class EZEzsigndocumentGetWordsPositionsV1ResponseMPayload;
 
 
 
@@ -37,8 +37,9 @@
 
 @interface EZEzsigndocumentGetWordsPositionsV1Response : EZObject
 
-
-@property(nonatomic) EZEzsigndocumentGetWordsPositionsV1ResponseMPayload* mPayload;
+/* Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request 
+ */
+@property(nonatomic) NSArray<EZCustomWordPositionWordResponse>* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 

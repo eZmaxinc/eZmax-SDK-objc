@@ -77,7 +77,8 @@ Import the following:
 #import <EzmaxApi/EZCustomFormDataDocumentResponse.h>
 #import <EzmaxApi/EZCustomFormDataFolderResponse.h>
 #import <EzmaxApi/EZCustomFormDataSignerResponse.h>
-#import <EzmaxApi/EZCustomWordPositionResponse.h>
+#import <EzmaxApi/EZCustomWordPositionOccurenceResponse.h>
+#import <EzmaxApi/EZCustomWordPositionWordResponse.h>
 #import <EzmaxApi/EZEmailRequest.h>
 #import <EzmaxApi/EZEzsigndocumentApplyEzsigntemplateV1Request.h>
 #import <EzmaxApi/EZEzsigndocumentApplyEzsigntemplateV1Response.h>
@@ -103,7 +104,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1Request.h>
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentRequest.h>
 #import <EzmaxApi/EZEzsigndocumentRequestCompound.h>
 #import <EzmaxApi/EZEzsigndocumentResponse.h>
@@ -341,7 +341,8 @@ Class | Method | HTTP request | Description
  - [EZCustomFormDataDocumentResponse](docs/EZCustomFormDataDocumentResponse.md)
  - [EZCustomFormDataFolderResponse](docs/EZCustomFormDataFolderResponse.md)
  - [EZCustomFormDataSignerResponse](docs/EZCustomFormDataSignerResponse.md)
- - [EZCustomWordPositionResponse](docs/EZCustomWordPositionResponse.md)
+ - [EZCustomWordPositionOccurenceResponse](docs/EZCustomWordPositionOccurenceResponse.md)
+ - [EZCustomWordPositionWordResponse](docs/EZCustomWordPositionWordResponse.md)
  - [EZEmailRequest](docs/EZEmailRequest.md)
  - [EZEzsigndocumentApplyEzsigntemplateV1Request](docs/EZEzsigndocumentApplyEzsigntemplateV1Request.md)
  - [EZEzsigndocumentApplyEzsigntemplateV1Response](docs/EZEzsigndocumentApplyEzsigntemplateV1Response.md)
@@ -367,7 +368,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentGetWordsPositionsV1Request](docs/EZEzsigndocumentGetWordsPositionsV1Request.md)
  - [EZEzsigndocumentGetWordsPositionsV1Response](docs/EZEzsigndocumentGetWordsPositionsV1Response.md)
  - [EZEzsigndocumentGetWordsPositionsV1ResponseAllOf](docs/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.md)
- - [EZEzsigndocumentGetWordsPositionsV1ResponseMPayload](docs/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.md)
  - [EZEzsigndocumentRequest](docs/EZEzsigndocumentRequest.md)
  - [EZEzsigndocumentRequestCompound](docs/EZEzsigndocumentRequestCompound.md)
  - [EZEzsigndocumentResponse](docs/EZEzsigndocumentResponse.md)

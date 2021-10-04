@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.h"
-@protocol EZEzsigndocumentGetWordsPositionsV1ResponseMPayload;
-@class EZEzsigndocumentGetWordsPositionsV1ResponseMPayload;
+#import "EZCustomWordPositionWordResponse.h"
+@protocol EZCustomWordPositionWordResponse;
+@class EZCustomWordPositionWordResponse;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface EZEzsigndocumentGetWordsPositionsV1ResponseAllOf : EZObject
 
-
-@property(nonatomic) EZEzsigndocumentGetWordsPositionsV1ResponseMPayload* mPayload;
+/* Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request 
+ */
+@property(nonatomic) NSArray<EZCustomWordPositionWordResponse>* mPayload;
 
 @end

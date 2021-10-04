@@ -1,6 +1,6 @@
-#import "EZCustomWordPositionResponse.h"
+#import "EZCustomWordPositionWordResponse.h"
 
-@implementation EZCustomWordPositionResponse
+@implementation EZCustomWordPositionWordResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iPage": @"iPage", @"iX": @"iX", @"iY": @"iY" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sWord": @"sWord", @"objWordPositionOccurence": @"objWordPositionOccurence" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"iPage", @"iX", @"iY"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

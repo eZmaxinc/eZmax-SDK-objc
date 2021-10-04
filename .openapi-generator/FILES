@@ -121,8 +121,10 @@ EzmaxApi/Model/EZCustomFormDataFolderResponse.h
 EzmaxApi/Model/EZCustomFormDataFolderResponse.m
 EzmaxApi/Model/EZCustomFormDataSignerResponse.h
 EzmaxApi/Model/EZCustomFormDataSignerResponse.m
-EzmaxApi/Model/EZCustomWordPositionResponse.h
-EzmaxApi/Model/EZCustomWordPositionResponse.m
+EzmaxApi/Model/EZCustomWordPositionOccurenceResponse.h
+EzmaxApi/Model/EZCustomWordPositionOccurenceResponse.m
+EzmaxApi/Model/EZCustomWordPositionWordResponse.h
+EzmaxApi/Model/EZCustomWordPositionWordResponse.m
 EzmaxApi/Model/EZEmailRequest.h
 EzmaxApi/Model/EZEmailRequest.m
 EzmaxApi/Model/EZEzsigndocumentApplyEzsigntemplateV1Request.h
@@ -173,8 +175,6 @@ EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1Response.h
 EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1Response.m
 EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.h
 EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.m
-EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.h
-EzmaxApi/Model/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsigndocumentRequest.h
 EzmaxApi/Model/EZEzsigndocumentRequest.m
 EzmaxApi/Model/EZEzsigndocumentRequestCompound.h
@@ -405,7 +405,8 @@ docs/EZContactinformationsRequestCompoundAllOf.md
 docs/EZCustomFormDataDocumentResponse.md
 docs/EZCustomFormDataFolderResponse.md
 docs/EZCustomFormDataSignerResponse.md
-docs/EZCustomWordPositionResponse.md
+docs/EZCustomWordPositionOccurenceResponse.md
+docs/EZCustomWordPositionWordResponse.md
 docs/EZEmailRequest.md
 docs/EZEzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EZEzsigndocumentApplyEzsigntemplateV1Response.md
@@ -431,7 +432,6 @@ docs/EZEzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EZEzsigndocumentGetWordsPositionsV1Request.md
 docs/EZEzsigndocumentGetWordsPositionsV1Response.md
 docs/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-docs/EZEzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EZEzsigndocumentRequest.md
 docs/EZEzsigndocumentRequestCompound.md
 docs/EZEzsigndocumentResponse.md

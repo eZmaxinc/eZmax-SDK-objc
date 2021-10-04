@@ -17,10 +17,10 @@
 
 
 
-@protocol EZCustomWordPositionResponse
+@protocol EZCustomWordPositionOccurenceResponse
 @end
 
-@interface EZCustomWordPositionResponse : EZObject
+@interface EZCustomWordPositionOccurenceResponse : EZObject
 
 /* The page where the word occurence was found [optional]
  */
