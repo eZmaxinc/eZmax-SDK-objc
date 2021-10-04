@@ -30,6 +30,6 @@
 @property(nonatomic) NSString* sWord;
 /* The found occurences for the seached word 
  */
-@property(nonatomic) NSArray<EZCustomWordPositionOccurenceResponse>* objWordPositionOccurence;
+@property(nonatomic) NSArray<EZCustomWordPositionOccurenceResponse>* aObjWordPositionOccurence;
 
 @end
