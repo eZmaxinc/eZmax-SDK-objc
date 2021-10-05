@@ -19,6 +19,8 @@ EzmaxApi/Api/EZObjectEzsignfolderApi.h
 EzmaxApi/Api/EZObjectEzsignfolderApi.m
 EzmaxApi/Api/EZObjectEzsignfoldersignerassociationApi.h
 EzmaxApi/Api/EZObjectEzsignfoldersignerassociationApi.m
+EzmaxApi/Api/EZObjectEzsignfoldertypeApi.h
+EzmaxApi/Api/EZObjectEzsignfoldertypeApi.m
 EzmaxApi/Api/EZObjectEzsignsignatureApi.h
 EzmaxApi/Api/EZObjectEzsignsignatureApi.m
 EzmaxApi/Api/EZObjectFranchisebrokerApi.h
@@ -91,6 +93,8 @@ EzmaxApi/Model/EZCommonGetAutocompleteV1ResponseAllOf.h
 EzmaxApi/Model/EZCommonGetAutocompleteV1ResponseAllOf.m
 EzmaxApi/Model/EZCommonGetAutocompleteV1ResponseMPayload.h
 EzmaxApi/Model/EZCommonGetAutocompleteV1ResponseMPayload.m
+EzmaxApi/Model/EZCommonGetListV1ResponseMPayload.h
+EzmaxApi/Model/EZCommonGetListV1ResponseMPayload.m
 EzmaxApi/Model/EZCommonResponse.h
 EzmaxApi/Model/EZCommonResponse.m
 EzmaxApi/Model/EZCommonResponseError.h
@@ -243,6 +247,16 @@ EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompound.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompound.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompoundAllOf.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationRequestCompoundAllOf.m
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1Response.h
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1Response.m
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseAllOf.m
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseMPayload.h
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseMPayload.m
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.h
+EzmaxApi/Model/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.m
+EzmaxApi/Model/EZEzsignfoldertypeListElement.h
+EzmaxApi/Model/EZEzsignfoldertypeListElement.m
 EzmaxApi/Model/EZEzsignformfieldResponse.h
 EzmaxApi/Model/EZEzsignformfieldResponse.m
 EzmaxApi/Model/EZEzsignformfieldResponseCompound.h
@@ -390,6 +404,7 @@ docs/EZCommonAudit.md
 docs/EZCommonGetAutocompleteV1Response.md
 docs/EZCommonGetAutocompleteV1ResponseAllOf.md
 docs/EZCommonGetAutocompleteV1ResponseMPayload.md
+docs/EZCommonGetListV1ResponseMPayload.md
 docs/EZCommonResponse.md
 docs/EZCommonResponseError.md
 docs/EZCommonResponseObjDebug.md
@@ -466,6 +481,11 @@ docs/EZEzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EZEzsignfoldersignerassociationRequest.md
 docs/EZEzsignfoldersignerassociationRequestCompound.md
 docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EZEzsignfoldertypeGetListV1Response.md
+docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md
+docs/EZEzsignfoldertypeGetListV1ResponseMPayload.md
+docs/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+docs/EZEzsignfoldertypeListElement.md
 docs/EZEzsignformfieldResponse.md
 docs/EZEzsignformfieldResponseCompound.md
 docs/EZEzsignformfieldgroupResponse.md
@@ -510,6 +530,7 @@ docs/EZObjectApikeyApi.md
 docs/EZObjectEzsigndocumentApi.md
 docs/EZObjectEzsignfolderApi.md
 docs/EZObjectEzsignfoldersignerassociationApi.md
+docs/EZObjectEzsignfoldertypeApi.md
 docs/EZObjectEzsignsignatureApi.md
 docs/EZObjectFranchisebrokerApi.md
 docs/EZObjectFranchiseofficeApi.md

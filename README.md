@@ -62,6 +62,7 @@ Import the following:
 #import <EzmaxApi/EZCommonGetAutocompleteV1Response.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1ResponseAllOf.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1ResponseMPayload.h>
+#import <EzmaxApi/EZCommonGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZCommonResponse.h>
 #import <EzmaxApi/EZCommonResponseError.h>
 #import <EzmaxApi/EZCommonResponseObjDebug.h>
@@ -138,6 +139,11 @@ Import the following:
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequest.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompound.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompoundAllOf.h>
+#import <EzmaxApi/EZEzsignfoldertypeGetListV1Response.h>
+#import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZEzsignfoldertypeListElement.h>
 #import <EzmaxApi/EZEzsignformfieldResponse.h>
 #import <EzmaxApi/EZEzsignformfieldResponseCompound.h>
 #import <EzmaxApi/EZEzsignformfieldgroupResponse.h>
@@ -211,6 +217,7 @@ Import the following:
 #import <EzmaxApi/EZObjectEzsigndocumentApi.h>
 #import <EzmaxApi/EZObjectEzsignfolderApi.h>
 #import <EzmaxApi/EZObjectEzsignfoldersignerassociationApi.h>
+#import <EzmaxApi/EZObjectEzsignfoldertypeApi.h>
 #import <EzmaxApi/EZObjectEzsignsignatureApi.h>
 #import <EzmaxApi/EZObjectFranchisebrokerApi.h>
 #import <EzmaxApi/EZObjectFranchiseofficeApi.h>
@@ -294,6 +301,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetChildrenV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetchildrenv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureGetChildrenV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
@@ -326,6 +334,7 @@ Class | Method | HTTP request | Description
  - [EZCommonGetAutocompleteV1Response](docs/EZCommonGetAutocompleteV1Response.md)
  - [EZCommonGetAutocompleteV1ResponseAllOf](docs/EZCommonGetAutocompleteV1ResponseAllOf.md)
  - [EZCommonGetAutocompleteV1ResponseMPayload](docs/EZCommonGetAutocompleteV1ResponseMPayload.md)
+ - [EZCommonGetListV1ResponseMPayload](docs/EZCommonGetListV1ResponseMPayload.md)
  - [EZCommonResponse](docs/EZCommonResponse.md)
  - [EZCommonResponseError](docs/EZCommonResponseError.md)
  - [EZCommonResponseObjDebug](docs/EZCommonResponseObjDebug.md)
@@ -402,6 +411,11 @@ Class | Method | HTTP request | Description
  - [EZEzsignfoldersignerassociationRequest](docs/EZEzsignfoldersignerassociationRequest.md)
  - [EZEzsignfoldersignerassociationRequestCompound](docs/EZEzsignfoldersignerassociationRequestCompound.md)
  - [EZEzsignfoldersignerassociationRequestCompoundAllOf](docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md)
+ - [EZEzsignfoldertypeGetListV1Response](docs/EZEzsignfoldertypeGetListV1Response.md)
+ - [EZEzsignfoldertypeGetListV1ResponseAllOf](docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md)
+ - [EZEzsignfoldertypeGetListV1ResponseMPayload](docs/EZEzsignfoldertypeGetListV1ResponseMPayload.md)
+ - [EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf](docs/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.md)
+ - [EZEzsignfoldertypeListElement](docs/EZEzsignfoldertypeListElement.md)
  - [EZEzsignformfieldResponse](docs/EZEzsignformfieldResponse.md)
  - [EZEzsignformfieldResponseCompound](docs/EZEzsignformfieldResponseCompound.md)
  - [EZEzsignformfieldgroupResponse](docs/EZEzsignformfieldgroupResponse.md)

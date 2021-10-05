@@ -1,6 +1,6 @@
-#import "EZEzsigndocumentGetWordsPositionsV1Request.h"
+#import "EZEzsignfoldertypeGetListV1Response.h"
 
-@implementation EZEzsigndocumentGetWordsPositionsV1Request
+@implementation EZEzsignfoldertypeGetListV1Response
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eGet": @"eGet", @"bWordCaseSensitive": @"bWordCaseSensitive", @"aSWord": @"a_sWord" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"mPayload": @"mPayload", @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aSWord"];
+  NSArray *optionalProperties = @[@"objDebugPayload", @"objDebug"];
   return [optionalProperties containsObject:propertyName];
 }
 
