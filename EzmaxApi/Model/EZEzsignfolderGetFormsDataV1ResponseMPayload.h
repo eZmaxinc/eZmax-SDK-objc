@@ -15,11 +15,11 @@
 
 
 #import "EZCustomFormDataDocumentResponse.h"
-#import "EZCustomFormDataFolderResponse.h"
+#import "EZCustomFormsDataFolderResponse.h"
 @protocol EZCustomFormDataDocumentResponse;
 @class EZCustomFormDataDocumentResponse;
-@protocol EZCustomFormDataFolderResponse;
-@class EZCustomFormDataFolderResponse;
+@protocol EZCustomFormsDataFolderResponse;
+@class EZCustomFormsDataFolderResponse;
 
 
 

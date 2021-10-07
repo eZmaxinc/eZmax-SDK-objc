@@ -1,4 +1,4 @@
-# EZCustomFormDataFolderResponse
+# EZCustomFormsDataFolderResponse
 
 ## Properties
 Name | Type | Description | Notes

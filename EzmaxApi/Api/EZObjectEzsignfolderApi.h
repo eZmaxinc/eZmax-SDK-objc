@@ -75,7 +75,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
-///  code:406 message:"Accept header is not defined or invalid.",
+///  code:406 message:"One of the accept header is not defined or invalid.",
 ///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
 ///
 /// @return EZEzsignfolderGetFormsDataV1Response*

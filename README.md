@@ -76,8 +76,8 @@ Import the following:
 #import <EzmaxApi/EZContactinformationsRequestCompound.h>
 #import <EzmaxApi/EZContactinformationsRequestCompoundAllOf.h>
 #import <EzmaxApi/EZCustomFormDataDocumentResponse.h>
-#import <EzmaxApi/EZCustomFormDataFolderResponse.h>
 #import <EzmaxApi/EZCustomFormDataSignerResponse.h>
+#import <EzmaxApi/EZCustomFormsDataFolderResponse.h>
 #import <EzmaxApi/EZCustomWordPositionOccurenceResponse.h>
 #import <EzmaxApi/EZCustomWordPositionWordResponse.h>
 #import <EzmaxApi/EZEmailRequest.h>
@@ -178,6 +178,7 @@ Import the following:
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompound.h>
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompoundAllOf.h>
 #import <EzmaxApi/EZGlobalCustomerGetEndpointV1Response.h>
+#import <EzmaxApi/EZHeaderAcceptLanguage.h>
 #import <EzmaxApi/EZMultilingualApikeyDescription.h>
 #import <EzmaxApi/EZPhoneRequest.h>
 #import <EzmaxApi/EZSsprResetPasswordRequestV1Request.h>
@@ -348,8 +349,8 @@ Class | Method | HTTP request | Description
  - [EZContactinformationsRequestCompound](docs/EZContactinformationsRequestCompound.md)
  - [EZContactinformationsRequestCompoundAllOf](docs/EZContactinformationsRequestCompoundAllOf.md)
  - [EZCustomFormDataDocumentResponse](docs/EZCustomFormDataDocumentResponse.md)
- - [EZCustomFormDataFolderResponse](docs/EZCustomFormDataFolderResponse.md)
  - [EZCustomFormDataSignerResponse](docs/EZCustomFormDataSignerResponse.md)
+ - [EZCustomFormsDataFolderResponse](docs/EZCustomFormsDataFolderResponse.md)
  - [EZCustomWordPositionOccurenceResponse](docs/EZCustomWordPositionOccurenceResponse.md)
  - [EZCustomWordPositionWordResponse](docs/EZCustomWordPositionWordResponse.md)
  - [EZEmailRequest](docs/EZEmailRequest.md)
@@ -450,6 +451,7 @@ Class | Method | HTTP request | Description
  - [EZFranchisereferalincomeRequestCompound](docs/EZFranchisereferalincomeRequestCompound.md)
  - [EZFranchisereferalincomeRequestCompoundAllOf](docs/EZFranchisereferalincomeRequestCompoundAllOf.md)
  - [EZGlobalCustomerGetEndpointV1Response](docs/EZGlobalCustomerGetEndpointV1Response.md)
+ - [EZHeaderAcceptLanguage](docs/EZHeaderAcceptLanguage.md)
  - [EZMultilingualApikeyDescription](docs/EZMultilingualApikeyDescription.md)
  - [EZPhoneRequest](docs/EZPhoneRequest.md)
  - [EZSsprResetPasswordRequestV1Request](docs/EZSsprResetPasswordRequestV1Request.md)

@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
+#import "EZCommonResponseError.h"
 #import "EZEzsignfoldertypeGetListV1Response.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
@@ -24,14 +26,24 @@ extern NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode;
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
 /// Retrieve Ezsignfoldertype list
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 ///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
 /// 
-///  code:200 message:"Successful response"
+///  code:200 message:"Successful response",
+///  code:406 message:"One of the accept header is not defined or invalid."
 ///
 /// @return EZEzsignfoldertypeGetListV1Response*
--(NSURLSessionTask*) ezsignfoldertypeGetListV1WithCompletionHandler: 
-    (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignfoldertypeGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler;
 
 
 

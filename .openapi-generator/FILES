@@ -121,10 +121,10 @@ EzmaxApi/Model/EZContactinformationsRequestCompoundAllOf.h
 EzmaxApi/Model/EZContactinformationsRequestCompoundAllOf.m
 EzmaxApi/Model/EZCustomFormDataDocumentResponse.h
 EzmaxApi/Model/EZCustomFormDataDocumentResponse.m
-EzmaxApi/Model/EZCustomFormDataFolderResponse.h
-EzmaxApi/Model/EZCustomFormDataFolderResponse.m
 EzmaxApi/Model/EZCustomFormDataSignerResponse.h
 EzmaxApi/Model/EZCustomFormDataSignerResponse.m
+EzmaxApi/Model/EZCustomFormsDataFolderResponse.h
+EzmaxApi/Model/EZCustomFormsDataFolderResponse.m
 EzmaxApi/Model/EZCustomWordPositionOccurenceResponse.h
 EzmaxApi/Model/EZCustomWordPositionOccurenceResponse.m
 EzmaxApi/Model/EZCustomWordPositionWordResponse.h
@@ -325,6 +325,8 @@ EzmaxApi/Model/EZFranchisereferalincomeRequestCompoundAllOf.h
 EzmaxApi/Model/EZFranchisereferalincomeRequestCompoundAllOf.m
 EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.h
 EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.m
+EzmaxApi/Model/EZHeaderAcceptLanguage.h
+EzmaxApi/Model/EZHeaderAcceptLanguage.m
 EzmaxApi/Model/EZMultilingualApikeyDescription.h
 EzmaxApi/Model/EZMultilingualApikeyDescription.m
 EzmaxApi/Model/EZPhoneRequest.h
@@ -418,8 +420,8 @@ docs/EZContactinformationsRequest.md
 docs/EZContactinformationsRequestCompound.md
 docs/EZContactinformationsRequestCompoundAllOf.md
 docs/EZCustomFormDataDocumentResponse.md
-docs/EZCustomFormDataFolderResponse.md
 docs/EZCustomFormDataSignerResponse.md
+docs/EZCustomFormsDataFolderResponse.md
 docs/EZCustomWordPositionOccurenceResponse.md
 docs/EZCustomWordPositionWordResponse.md
 docs/EZEmailRequest.md
@@ -521,6 +523,7 @@ docs/EZFranchisereferalincomeRequestCompound.md
 docs/EZFranchisereferalincomeRequestCompoundAllOf.md
 docs/EZGlobalCustomerApi.md
 docs/EZGlobalCustomerGetEndpointV1Response.md
+docs/EZHeaderAcceptLanguage.md
 docs/EZModuleAuthenticateApi.md
 docs/EZModuleSsprApi.md
 docs/EZModuleUserApi.md

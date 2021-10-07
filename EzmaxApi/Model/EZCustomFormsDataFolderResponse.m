@@ -1,6 +1,6 @@
-#import "EZCustomFormDataFolderResponse.h"
+#import "EZCustomFormsDataFolderResponse.h"
 
-@implementation EZCustomFormDataFolderResponse
+@implementation EZCustomFormsDataFolderResponse
 
 - (instancetype)init {
   self = [super init];

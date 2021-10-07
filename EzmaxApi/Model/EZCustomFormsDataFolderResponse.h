@@ -20,10 +20,10 @@
 
 
 
-@protocol EZCustomFormDataFolderResponse
+@protocol EZCustomFormsDataFolderResponse
 @end
 
-@interface EZCustomFormDataFolderResponse : EZObject
+@interface EZCustomFormsDataFolderResponse : EZObject
 
 /* The unique ID of the Ezsignfolder 
  */

@@ -9,13 +9,17 @@ Method | HTTP request | Description
 
 # **ezsignfoldertypeGetListV1**
 ```objc
--(NSURLSessionTask*) ezsignfoldertypeGetListV1WithCompletionHandler: 
-        (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignfoldertypeGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sFilter: (NSString*) sFilter
+        completionHandler: (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler;
 ```
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 
 ### Example
 ```objc
@@ -27,12 +31,21 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
+NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
+NSNumber* iRowMax = @56; //  (optional)
+NSNumber* iRowOffset = @56; //  (optional)
+EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+NSString* sFilter = @"sFilter_example"; //  (optional)
 
 EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] init];
 
 // Retrieve Ezsignfoldertype list
-[apiInstance ezsignfoldertypeGetListV1WithCompletionHandler: 
-          ^(EZEzsignfoldertypeGetListV1Response* output, NSError* error) {
+[apiInstance ezsignfoldertypeGetListV1WithEOrderBy:eOrderBy
+              iRowMax:iRowMax
+              iRowOffset:iRowOffset
+              acceptLanguage:acceptLanguage
+              sFilter:sFilter
+          completionHandler: ^(EZEzsignfoldertypeGetListV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -43,7 +56,14 @@ EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] i
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **NSNumber***|  | [optional] 
+ **iRowOffset** | **NSNumber***|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **sFilter** | **NSString***|  | [optional] 
 
 ### Return type
 
@@ -56,7 +76,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
