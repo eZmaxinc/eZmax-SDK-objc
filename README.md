@@ -111,6 +111,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentResponseCompound.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Request.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Response.h>
+#import <EzmaxApi/EZEzsignfolderCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfolderDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1Response.h>
@@ -384,6 +385,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentResponseCompound](docs/EZEzsigndocumentResponseCompound.md)
  - [EZEzsignfolderCreateObjectV1Request](docs/EZEzsignfolderCreateObjectV1Request.md)
  - [EZEzsignfolderCreateObjectV1Response](docs/EZEzsignfolderCreateObjectV1Response.md)
+ - [EZEzsignfolderCreateObjectV1ResponseAllOf](docs/EZEzsignfolderCreateObjectV1ResponseAllOf.md)
  - [EZEzsignfolderCreateObjectV1ResponseMPayload](docs/EZEzsignfolderCreateObjectV1ResponseMPayload.md)
  - [EZEzsignfolderDeleteObjectV1Response](docs/EZEzsignfolderDeleteObjectV1Response.md)
  - [EZEzsignfolderGetFormsDataV1Response](docs/EZEzsignfolderGetFormsDataV1Response.md)

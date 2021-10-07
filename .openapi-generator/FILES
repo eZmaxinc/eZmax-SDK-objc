@@ -191,6 +191,8 @@ EzmaxApi/Model/EZEzsignfolderCreateObjectV1Request.h
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Request.m
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Response.h
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Response.m
+EzmaxApi/Model/EZEzsignfolderCreateObjectV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsignfolderCreateObjectV1ResponseAllOf.m
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsignfolderDeleteObjectV1Response.h
@@ -455,6 +457,7 @@ docs/EZEzsigndocumentResponse.md
 docs/EZEzsigndocumentResponseCompound.md
 docs/EZEzsignfolderCreateObjectV1Request.md
 docs/EZEzsignfolderCreateObjectV1Response.md
+docs/EZEzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EZEzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EZEzsignfolderDeleteObjectV1Response.md
 docs/EZEzsignfolderGetFormsDataV1Response.md

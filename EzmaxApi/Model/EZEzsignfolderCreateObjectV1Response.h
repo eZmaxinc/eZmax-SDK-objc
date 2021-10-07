@@ -17,6 +17,7 @@
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZEzsignfolderCreateObjectV1ResponseAllOf.h"
 #import "EZEzsignfolderCreateObjectV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
@@ -24,6 +25,8 @@
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZEzsignfolderCreateObjectV1ResponseAllOf;
+@class EZEzsignfolderCreateObjectV1ResponseAllOf;
 @protocol EZEzsignfolderCreateObjectV1ResponseMPayload;
 @class EZEzsignfolderCreateObjectV1ResponseMPayload;
 
