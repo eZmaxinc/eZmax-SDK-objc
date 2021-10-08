@@ -1,9 +1,8 @@
-# EZEzsignfoldertypeGetListV1Response
+# EZCommonResponseGetList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EZEzsignfoldertypeGetListV1ResponseMPayload***](EZEzsignfoldertypeGetListV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayloadGetList***](EZCommonResponseObjDebugPayloadGetList.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iVersionMin": @"iVersionMin", @"iVersionMax": @"iVersionMax", @"aRequiredPermissions": @"a_RequiredPermissions" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iVersionMin": @"iVersionMin", @"iVersionMax": @"iVersionMax", @"aRequiredPermission": @"a_RequiredPermission" }];
 }
 
 /**

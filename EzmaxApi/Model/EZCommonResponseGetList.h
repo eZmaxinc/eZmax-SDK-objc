@@ -14,31 +14,20 @@
 */
 
 
-#import "EZCommonResponseGetList.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayloadGetList.h"
-#import "EZEzsignfoldertypeGetListV1ResponseAllOf.h"
-#import "EZEzsignfoldertypeGetListV1ResponseMPayload.h"
-@protocol EZCommonResponseGetList;
-@class EZCommonResponseGetList;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayloadGetList;
 @class EZCommonResponseObjDebugPayloadGetList;
-@protocol EZEzsignfoldertypeGetListV1ResponseAllOf;
-@class EZEzsignfoldertypeGetListV1ResponseAllOf;
-@protocol EZEzsignfoldertypeGetListV1ResponseMPayload;
-@class EZEzsignfoldertypeGetListV1ResponseMPayload;
 
 
 
-@protocol EZEzsignfoldertypeGetListV1Response
+@protocol EZCommonResponseGetList
 @end
 
-@interface EZEzsignfoldertypeGetListV1Response : EZObject
+@interface EZCommonResponseGetList : EZObject
 
-
-@property(nonatomic) EZEzsignfoldertypeGetListV1ResponseMPayload* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayloadGetList* objDebugPayload;
 

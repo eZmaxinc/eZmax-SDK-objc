@@ -1,6 +1,6 @@
-#import "EZEzsignfoldertypeListElement.h"
+#import "EZCommonResponseObjDebugPayloadGetListAllOf.h"
 
-@implementation EZEzsignfoldertypeListElement
+@implementation EZCommonResponseObjDebugPayloadGetListAllOf
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfoldertypeID": @"pkiEzsignfoldertypeID", @"eEzsignfoldertypePrivacylevel": @"eEzsignfoldertypePrivacylevel", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsignfoldertypeIsactive": @"bEzsignfoldertypeIsactive" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aFilter": @"a_Filter", @"aOrderBy": @"a_OrderBy" }];
 }
 
 /**

@@ -14,6 +14,9 @@
 */
 
 
+#import "EZFieldEEzsignfoldertypePrivacylevel.h"
+@protocol EZFieldEEzsignfoldertypePrivacylevel;
+@class EZFieldEEzsignfoldertypePrivacylevel;
 
 
 
@@ -25,8 +28,13 @@
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* pkiEzsignfoldertypeID;
+
+@property(nonatomic) EZFieldEEzsignfoldertypePrivacylevel* eEzsignfoldertypePrivacylevel;
 /* The name of the Ezsignfoldertype in the language of the requester 
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
+/* Whether the Ezsignfoldertype is active or not 
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeIsactive;
 
 @end

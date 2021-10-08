@@ -65,8 +65,12 @@ Import the following:
 #import <EzmaxApi/EZCommonGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZCommonResponse.h>
 #import <EzmaxApi/EZCommonResponseError.h>
+#import <EzmaxApi/EZCommonResponseFilter.h>
+#import <EzmaxApi/EZCommonResponseGetList.h>
 #import <EzmaxApi/EZCommonResponseObjDebug.h>
 #import <EzmaxApi/EZCommonResponseObjDebugPayload.h>
+#import <EzmaxApi/EZCommonResponseObjDebugPayloadGetList.h>
+#import <EzmaxApi/EZCommonResponseObjDebugPayloadGetListAllOf.h>
 #import <EzmaxApi/EZCommonResponseObjSQLQuery.h>
 #import <EzmaxApi/EZCommonWebhook.h>
 #import <EzmaxApi/EZContactRequest.h>
@@ -167,6 +171,7 @@ Import the following:
 #import <EzmaxApi/EZFieldEEzsigndocumentStep.h>
 #import <EzmaxApi/EZFieldEEzsignfolderSendreminderfrequency.h>
 #import <EzmaxApi/EZFieldEEzsignfolderStep.h>
+#import <EzmaxApi/EZFieldEEzsignfoldertypePrivacylevel.h>
 #import <EzmaxApi/EZFieldEEzsignsignatureType.h>
 #import <EzmaxApi/EZFieldEPhoneType.h>
 #import <EzmaxApi/EZFieldEUserType.h>
@@ -339,8 +344,12 @@ Class | Method | HTTP request | Description
  - [EZCommonGetListV1ResponseMPayload](docs/EZCommonGetListV1ResponseMPayload.md)
  - [EZCommonResponse](docs/EZCommonResponse.md)
  - [EZCommonResponseError](docs/EZCommonResponseError.md)
+ - [EZCommonResponseFilter](docs/EZCommonResponseFilter.md)
+ - [EZCommonResponseGetList](docs/EZCommonResponseGetList.md)
  - [EZCommonResponseObjDebug](docs/EZCommonResponseObjDebug.md)
  - [EZCommonResponseObjDebugPayload](docs/EZCommonResponseObjDebugPayload.md)
+ - [EZCommonResponseObjDebugPayloadGetList](docs/EZCommonResponseObjDebugPayloadGetList.md)
+ - [EZCommonResponseObjDebugPayloadGetListAllOf](docs/EZCommonResponseObjDebugPayloadGetListAllOf.md)
  - [EZCommonResponseObjSQLQuery](docs/EZCommonResponseObjSQLQuery.md)
  - [EZCommonWebhook](docs/EZCommonWebhook.md)
  - [EZContactRequest](docs/EZContactRequest.md)
@@ -441,6 +450,7 @@ Class | Method | HTTP request | Description
  - [EZFieldEEzsigndocumentStep](docs/EZFieldEEzsigndocumentStep.md)
  - [EZFieldEEzsignfolderSendreminderfrequency](docs/EZFieldEEzsignfolderSendreminderfrequency.md)
  - [EZFieldEEzsignfolderStep](docs/EZFieldEEzsignfolderStep.md)
+ - [EZFieldEEzsignfoldertypePrivacylevel](docs/EZFieldEEzsignfoldertypePrivacylevel.md)
  - [EZFieldEEzsignsignatureType](docs/EZFieldEEzsignsignatureType.md)
  - [EZFieldEPhoneType](docs/EZFieldEPhoneType.md)
  - [EZFieldEUserType](docs/EZFieldEUserType.md)
