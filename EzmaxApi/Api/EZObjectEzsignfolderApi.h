@@ -4,9 +4,11 @@
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
+#import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
 #import "EZEzsignfolderSendV1Request.h"
 #import "EZEzsignfolderSendV1Response.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
@@ -69,7 +71,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve an existing Ezsignfolder's forms data
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///
 /// @param pkiEzsignfolderID 
 /// 
@@ -81,6 +83,27 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderGetFormsDataV1Response*
 -(NSURLSessionTask*) ezsignfolderGetFormsDataV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZEzsignfolderGetFormsDataV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Ezsignfolder list
+/// 
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"One of the accept header is not defined or invalid."
+///
+/// @return EZEzsignfolderGetListV1Response*
+-(NSURLSessionTask*) ezsignfolderGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZEzsignfolderGetListV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfolder

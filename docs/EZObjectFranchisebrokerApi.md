@@ -29,7 +29,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The type of Franchisebrokers to return
-NSString* sQuery = @"sQuery_example"; // Allow to filter on the option value (optional)
+NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 
 EZObjectFranchisebrokerApi*apiInstance = [[EZObjectFranchisebrokerApi alloc] init];
 
@@ -51,7 +51,7 @@ EZObjectFranchisebrokerApi*apiInstance = [[EZObjectFranchisebrokerApi alloc] ini
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Franchisebrokers to return | 
- **sQuery** | **NSString***| Allow to filter on the option value | [optional] 
+ **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
 
 ### Return type
 

@@ -14,22 +14,18 @@
 */
 
 
+#import "EZEzsignfolderListElement.h"
+@protocol EZEzsignfolderListElement;
+@class EZEzsignfolderListElement;
 
 
 
-@protocol EZCommonGetAutocompleteV1ResponseMPayload
+@protocol EZEzsignfolderGetListV1ResponseMPayloadAllOf
 @end
 
-@interface EZCommonGetAutocompleteV1ResponseMPayload : EZObject
+@interface EZEzsignfolderGetListV1ResponseMPayloadAllOf : EZObject
 
-/* The Category (ie group) for the dropdown or an empty string if not categorized 
- */
-@property(nonatomic) NSString* group;
-/* The Unique ID of the element 
- */
-@property(nonatomic) NSString* _id;
-/* The Description of the element 
- */
-@property(nonatomic) NSString* option;
+
+@property(nonatomic) NSArray<EZEzsignfolderListElement>* aObjEzsignfolder;
 
 @end

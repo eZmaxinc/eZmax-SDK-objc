@@ -54,7 +54,7 @@ NSInteger kEZObjectPeriodApiMissingParamErrorCode = 234513;
 /// Get the list of Periods to be used in a dropdown or autocomplete control.
 ///  @param sSelector The types of Periods to return 
 ///
-///  @param sQuery Allow to filter on the option value (optional)
+///  @param sQuery Allow to filter the returned results (optional)
 ///
 ///  @returns EZCommonGetAutocompleteV1Response*
 ///

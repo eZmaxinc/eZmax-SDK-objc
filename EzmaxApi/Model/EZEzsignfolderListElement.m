@@ -1,6 +1,6 @@
-#import "EZCommonGetAutocompleteV1ResponseMPayload.h"
+#import "EZEzsignfolderListElement.h"
 
-@implementation EZCommonGetAutocompleteV1ResponseMPayload
+@implementation EZEzsignfolderListElement
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"group": @"group", @"_id": @"id", @"option": @"option" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"sEzsignfolderDescription": @"sEzsignfolderDescription" }];
 }
 
 /**

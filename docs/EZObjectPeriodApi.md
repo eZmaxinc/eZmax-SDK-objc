@@ -29,7 +29,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The types of Periods to return
-NSString* sQuery = @"sQuery_example"; // Allow to filter on the option value (optional)
+NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 
 EZObjectPeriodApi*apiInstance = [[EZObjectPeriodApi alloc] init];
 
@@ -51,7 +51,7 @@ EZObjectPeriodApi*apiInstance = [[EZObjectPeriodApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The types of Periods to return | 
- **sQuery** | **NSString***| Allow to filter on the option value | [optional] 
+ **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
 
 ### Return type
 

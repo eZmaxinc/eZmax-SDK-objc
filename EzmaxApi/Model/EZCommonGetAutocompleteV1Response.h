@@ -15,20 +15,20 @@
 
 
 #import "EZCommonGetAutocompleteV1ResponseAllOf.h"
-#import "EZCommonGetAutocompleteV1ResponseMPayload.h"
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZCustomAutocompleteElementResponse.h"
 @protocol EZCommonGetAutocompleteV1ResponseAllOf;
 @class EZCommonGetAutocompleteV1ResponseAllOf;
-@protocol EZCommonGetAutocompleteV1ResponseMPayload;
-@class EZCommonGetAutocompleteV1ResponseMPayload;
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZCustomAutocompleteElementResponse;
+@class EZCustomAutocompleteElementResponse;
 
 
 
@@ -37,8 +37,9 @@
 
 @interface EZCommonGetAutocompleteV1Response : EZObject
 
-
-@property(nonatomic) NSArray<EZCommonGetAutocompleteV1ResponseMPayload>* mPayload;
+/* Generic Autocomplete Response 
+ */
+@property(nonatomic) NSArray<EZCustomAutocompleteElementResponse>* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 

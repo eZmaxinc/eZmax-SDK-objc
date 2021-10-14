@@ -14,19 +14,19 @@
 */
 
 
-#import "EZCustomAutocompleteElementResponse.h"
-@protocol EZCustomAutocompleteElementResponse;
-@class EZCustomAutocompleteElementResponse;
 
 
 
-@protocol EZCommonGetAutocompleteV1ResponseAllOf
+@protocol EZEzsignfolderListElement
 @end
 
-@interface EZCommonGetAutocompleteV1ResponseAllOf : EZObject
+@interface EZEzsignfolderListElement : EZObject
 
-/* Generic Autocomplete Response 
+/* The unique ID of the Ezsignfolder 
  */
-@property(nonatomic) NSArray<EZCustomAutocompleteElementResponse>* mPayload;
+@property(nonatomic) NSNumber* pkiEzsignfolderID;
+/* The description of the Ezsign Folder 
+ */
+@property(nonatomic) NSString* sEzsignfolderDescription;
 
 @end

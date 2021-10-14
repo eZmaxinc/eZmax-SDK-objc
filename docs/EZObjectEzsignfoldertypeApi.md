@@ -4,8 +4,74 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignfoldertypeGetAutocompleteV1**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/ | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 
+
+# **ezsignfoldertypeGetAutocompleteV1**
+```objc
+-(NSURLSessionTask*) ezsignfoldertypeGetAutocompleteV1WithSSelector: (NSString*) sSelector
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sQuery: (NSString*) sQuery
+        completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Ezsignfoldertypes and IDs
+
+Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* sSelector = @"sSelector_example"; // The type of Ezsignfoldertypes to return
+EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
+
+EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] init];
+
+// Retrieve Ezsignfoldertypes and IDs
+[apiInstance ezsignfoldertypeGetAutocompleteV1WithSSelector:sSelector
+              acceptLanguage:acceptLanguage
+              sQuery:sQuery
+          completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfoldertypeApi->ezsignfoldertypeGetAutocompleteV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **NSString***| The type of Ezsignfoldertypes to return | 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
+
+### Return type
+
+[**EZCommonGetAutocompleteV1Response***](EZCommonGetAutocompleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsignfoldertypeGetListV1**
 ```objc
@@ -19,7 +85,7 @@ Method | HTTP request | Description
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 
 ### Example
 ```objc

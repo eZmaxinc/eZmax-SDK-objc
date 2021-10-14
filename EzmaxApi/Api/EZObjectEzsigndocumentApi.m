@@ -585,7 +585,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve an existing Ezsigndocument's Form Data
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///  @param pkiEzsigndocumentID  
 ///
 ///  @returns EZEzsigndocumentGetFormDataV1Response*
@@ -721,7 +721,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve positions X,Y of given words from a Ezsigndocument
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///  @param pkiEzsigndocumentID  
 ///
 ///  @param ezsigndocumentGetWordsPositionsV1Request  

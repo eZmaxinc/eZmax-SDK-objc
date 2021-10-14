@@ -54,7 +54,7 @@ NSInteger kEZObjectFranchiseofficeApiMissingParamErrorCode = 234513;
 /// Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
 ///  @param sSelector The type of Franchiseoffices to return 
 ///
-///  @param sQuery Allow to filter on the option value (optional)
+///  @param sQuery Allow to filter the returned results (optional)
 ///
 ///  @returns EZCommonGetAutocompleteV1Response*
 ///

@@ -61,7 +61,6 @@ Import the following:
 #import <EzmaxApi/EZCommonAudit.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1Response.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1ResponseAllOf.h>
-#import <EzmaxApi/EZCommonGetAutocompleteV1ResponseMPayload.h>
 #import <EzmaxApi/EZCommonGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZCommonResponse.h>
 #import <EzmaxApi/EZCommonResponseError.h>
@@ -79,6 +78,7 @@ Import the following:
 #import <EzmaxApi/EZContactinformationsRequest.h>
 #import <EzmaxApi/EZContactinformationsRequestCompound.h>
 #import <EzmaxApi/EZContactinformationsRequestCompoundAllOf.h>
+#import <EzmaxApi/EZCustomAutocompleteElementResponse.h>
 #import <EzmaxApi/EZCustomFormDataDocumentResponse.h>
 #import <EzmaxApi/EZCustomFormDataSignerResponse.h>
 #import <EzmaxApi/EZCustomFormsDataFolderResponse.h>
@@ -121,9 +121,14 @@ Import the following:
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetListV1Response.h>
+#import <EzmaxApi/EZEzsignfolderGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfolderGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetListV1ResponseMPayloadAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetObjectV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetObjectV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderListElement.h>
 #import <EzmaxApi/EZEzsignfolderRequest.h>
 #import <EzmaxApi/EZEzsignfolderRequestCompound.h>
 #import <EzmaxApi/EZEzsignfolderRequestCompoundAllOf.h>
@@ -301,6 +306,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetChildrenV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderSendV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
@@ -308,6 +314,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetChildrenV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetchildrenv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *EZObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](docs/EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/ | Retrieve Ezsignfoldertypes and IDs
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
@@ -340,7 +347,6 @@ Class | Method | HTTP request | Description
  - [EZCommonAudit](docs/EZCommonAudit.md)
  - [EZCommonGetAutocompleteV1Response](docs/EZCommonGetAutocompleteV1Response.md)
  - [EZCommonGetAutocompleteV1ResponseAllOf](docs/EZCommonGetAutocompleteV1ResponseAllOf.md)
- - [EZCommonGetAutocompleteV1ResponseMPayload](docs/EZCommonGetAutocompleteV1ResponseMPayload.md)
  - [EZCommonGetListV1ResponseMPayload](docs/EZCommonGetListV1ResponseMPayload.md)
  - [EZCommonResponse](docs/EZCommonResponse.md)
  - [EZCommonResponseError](docs/EZCommonResponseError.md)
@@ -358,6 +364,7 @@ Class | Method | HTTP request | Description
  - [EZContactinformationsRequest](docs/EZContactinformationsRequest.md)
  - [EZContactinformationsRequestCompound](docs/EZContactinformationsRequestCompound.md)
  - [EZContactinformationsRequestCompoundAllOf](docs/EZContactinformationsRequestCompoundAllOf.md)
+ - [EZCustomAutocompleteElementResponse](docs/EZCustomAutocompleteElementResponse.md)
  - [EZCustomFormDataDocumentResponse](docs/EZCustomFormDataDocumentResponse.md)
  - [EZCustomFormDataSignerResponse](docs/EZCustomFormDataSignerResponse.md)
  - [EZCustomFormsDataFolderResponse](docs/EZCustomFormsDataFolderResponse.md)
@@ -400,9 +407,14 @@ Class | Method | HTTP request | Description
  - [EZEzsignfolderGetFormsDataV1Response](docs/EZEzsignfolderGetFormsDataV1Response.md)
  - [EZEzsignfolderGetFormsDataV1ResponseAllOf](docs/EZEzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [EZEzsignfolderGetFormsDataV1ResponseMPayload](docs/EZEzsignfolderGetFormsDataV1ResponseMPayload.md)
+ - [EZEzsignfolderGetListV1Response](docs/EZEzsignfolderGetListV1Response.md)
+ - [EZEzsignfolderGetListV1ResponseAllOf](docs/EZEzsignfolderGetListV1ResponseAllOf.md)
+ - [EZEzsignfolderGetListV1ResponseMPayload](docs/EZEzsignfolderGetListV1ResponseMPayload.md)
+ - [EZEzsignfolderGetListV1ResponseMPayloadAllOf](docs/EZEzsignfolderGetListV1ResponseMPayloadAllOf.md)
  - [EZEzsignfolderGetObjectV1Response](docs/EZEzsignfolderGetObjectV1Response.md)
  - [EZEzsignfolderGetObjectV1ResponseAllOf](docs/EZEzsignfolderGetObjectV1ResponseAllOf.md)
  - [EZEzsignfolderGetObjectV1ResponseMPayload](docs/EZEzsignfolderGetObjectV1ResponseMPayload.md)
+ - [EZEzsignfolderListElement](docs/EZEzsignfolderListElement.md)
  - [EZEzsignfolderRequest](docs/EZEzsignfolderRequest.md)
  - [EZEzsignfolderRequestCompound](docs/EZEzsignfolderRequestCompound.md)
  - [EZEzsignfolderRequestCompoundAllOf](docs/EZEzsignfolderRequestCompoundAllOf.md)

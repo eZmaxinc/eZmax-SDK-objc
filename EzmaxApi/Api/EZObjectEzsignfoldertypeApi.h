@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "EZCommonGetAutocompleteV1Response.h"
 #import "EZCommonResponseError.h"
 #import "EZEzsignfoldertypeGetListV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
@@ -25,8 +26,24 @@ extern NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Ezsignfoldertypes and IDs
+/// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+///
+/// @param sSelector The type of Ezsignfoldertypes to return
+/// @param acceptLanguage  (optional)
+/// @param sQuery Allow to filter the returned results (optional)
+/// 
+///  code:200 message:"Successful response"
+///
+/// @return EZCommonGetAutocompleteV1Response*
+-(NSURLSessionTask*) ezsignfoldertypeGetAutocompleteV1WithSSelector: (NSString*) sSelector
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sQuery: (NSString*) sQuery
+    completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Ezsignfoldertype list
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)

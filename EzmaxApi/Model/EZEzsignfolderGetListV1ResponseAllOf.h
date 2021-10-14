@@ -14,19 +14,18 @@
 */
 
 
-#import "EZCustomAutocompleteElementResponse.h"
-@protocol EZCustomAutocompleteElementResponse;
-@class EZCustomAutocompleteElementResponse;
+#import "EZEzsignfolderGetListV1ResponseMPayload.h"
+@protocol EZEzsignfolderGetListV1ResponseMPayload;
+@class EZEzsignfolderGetListV1ResponseMPayload;
 
 
 
-@protocol EZCommonGetAutocompleteV1ResponseAllOf
+@protocol EZEzsignfolderGetListV1ResponseAllOf
 @end
 
-@interface EZCommonGetAutocompleteV1ResponseAllOf : EZObject
+@interface EZEzsignfolderGetListV1ResponseAllOf : EZObject
 
-/* Generic Autocomplete Response 
- */
-@property(nonatomic) NSArray<EZCustomAutocompleteElementResponse>* mPayload;
+
+@property(nonatomic) EZEzsignfolderGetListV1ResponseMPayload* mPayload;
 
 @end

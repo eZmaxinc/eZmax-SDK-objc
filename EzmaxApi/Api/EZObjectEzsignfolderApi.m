@@ -6,9 +6,11 @@
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
+#import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
 #import "EZEzsignfolderSendV1Request.h"
 #import "EZEzsignfolderSendV1Response.h"
+#import "EZHeaderAcceptLanguage.h"
 
 
 @interface EZObjectEzsignfolderApi ()
@@ -260,7 +262,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve an existing Ezsignfolder's forms data
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///  @param pkiEzsignfolderID  
 ///
 ///  @returns EZEzsignfolderGetFormsDataV1Response*
@@ -322,6 +324,87 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignfolderGetFormsDataV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Ezsignfolder list
+/// 
+///  @param eOrderBy Specify how you want the results to be sorted (optional)
+///
+///  @param iRowMax  (optional)
+///
+///  @param iRowOffset  (optional)
+///
+///  @param acceptLanguage  (optional)
+///
+///  @param sFilter  (optional)
+///
+///  @returns EZEzsignfolderGetListV1Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZEzsignfolderGetListV1Response* output, NSError* error)) handler {
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/getList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eOrderBy != nil) {
+        queryParams[@"eOrderBy"] = eOrderBy;
+    }
+    if (iRowMax != nil) {
+        queryParams[@"iRowMax"] = iRowMax;
+    }
+    if (iRowOffset != nil) {
+        queryParams[@"iRowOffset"] = iRowOffset;
+    }
+    if (sFilter != nil) {
+        queryParams[@"sFilter"] = sFilter;
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (acceptLanguage != nil) {
+        headerParams[@"Accept-Language"] = acceptLanguage;
+    }
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderGetListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderGetListV1Response*)data, error);
                                 }
                             }];
 }

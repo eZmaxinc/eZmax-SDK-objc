@@ -27,7 +27,7 @@ extern NSInteger kEZObjectFranchisebrokerApiMissingParamErrorCode;
 /// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
 ///
 /// @param sSelector The type of Franchisebrokers to return
-/// @param sQuery Allow to filter on the option value (optional)
+/// @param sQuery Allow to filter the returned results (optional)
 /// 
 ///  code:200 message:"Successful response"
 ///
