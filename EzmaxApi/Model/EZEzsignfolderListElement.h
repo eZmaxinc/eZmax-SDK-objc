@@ -14,6 +14,12 @@
 */
 
 
+#import "EZFieldEEzsignfolderStep.h"
+#import "EZOneOfStringNull.h"
+@protocol EZFieldEEzsignfolderStep;
+@class EZFieldEEzsignfolderStep;
+@protocol EZOneOfStringNull;
+@class EZOneOfStringNull;
 
 
 
@@ -25,8 +31,36 @@
 /* The unique ID of the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* pkiEzsignfolderID;
+/* The unique ID of the Ezsignfoldertype. 
+ */
+@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The name of the Ezsignfoldertype in the language of the requester 
+ */
+@property(nonatomic) NSString* sEzsignfoldertypeNameX;
 /* The description of the Ezsign Folder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;
+
+@property(nonatomic) EZFieldEEzsignfolderStep* eEzsignfolderStep;
+/* The date and time at which the object was created 
+ */
+@property(nonatomic) NSString* dtCreatedDate;
+
+@property(nonatomic) EZOneOfStringNull* dtEzsignfolderSentdate;
+/* The date at which no more signature will be accepted on the folder 
+ */
+@property(nonatomic) EZOneOfStringNull* dtDueDate;
+/* The total number of Ezsigndocument in the folder 
+ */
+@property(nonatomic) NSNumber* iTotalDocument;
+/* The total number of Ezsigndocument in the folder that were saved in the edm system 
+ */
+@property(nonatomic) NSNumber* iTotalDocumentEdm;
+/* The total number of signature blocks in all Ezsigndocuments in the folder 
+ */
+@property(nonatomic) NSNumber* iTotalSignature;
+/* The total number of already signed signature blocks in all Ezsigndocuments in the folder 
+ */
+@property(nonatomic) NSNumber* iTotalSignatureSigned;
 
 @end

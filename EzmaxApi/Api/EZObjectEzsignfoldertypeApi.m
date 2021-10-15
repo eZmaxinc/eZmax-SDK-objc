@@ -78,7 +78,7 @@ NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfoldertype/getAutocomplete/{sSelector}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (sSelector != nil) {
