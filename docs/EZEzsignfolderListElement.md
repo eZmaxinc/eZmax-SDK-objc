@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsign Folder | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
 **dtCreatedDate** | **NSString*** | The date and time at which the object was created | 
-**dtEzsignfolderSentdate** | [**EZOneOfStringNull***](EZOneOfStringNull.md) |  | 
-**dtDueDate** | [**EZOneOfStringNull***](EZOneOfStringNull.md) | The date at which no more signature will be accepted on the folder | 
+**dtEzsignfolderSentdate** | [**EZOneOfStringObject***](EZOneOfStringObject.md) |  | 
+**dtDueDate** | [**EZOneOfStringObject***](EZOneOfStringObject.md) | The date at which no more signature will be accepted on the folder | 
 **iTotalDocument** | **NSNumber*** | The total number of Ezsigndocument in the folder | 
 **iTotalDocumentEdm** | **NSNumber*** | The total number of Ezsigndocument in the folder that were saved in the edm system | 
 **iTotalSignature** | **NSNumber*** | The total number of signature blocks in all Ezsigndocuments in the folder | 

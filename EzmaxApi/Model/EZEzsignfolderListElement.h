@@ -15,11 +15,11 @@
 
 
 #import "EZFieldEEzsignfolderStep.h"
-#import "EZOneOfStringNull.h"
+#import "EZOneOfStringObject.h"
 @protocol EZFieldEEzsignfolderStep;
 @class EZFieldEEzsignfolderStep;
-@protocol EZOneOfStringNull;
-@class EZOneOfStringNull;
+@protocol EZOneOfStringObject;
+@class EZOneOfStringObject;
 
 
 
@@ -46,10 +46,10 @@
  */
 @property(nonatomic) NSString* dtCreatedDate;
 
-@property(nonatomic) EZOneOfStringNull* dtEzsignfolderSentdate;
+@property(nonatomic) EZOneOfStringObject* dtEzsignfolderSentdate;
 /* The date at which no more signature will be accepted on the folder 
  */
-@property(nonatomic) EZOneOfStringNull* dtDueDate;
+@property(nonatomic) EZOneOfStringObject* dtDueDate;
 /* The total number of Ezsigndocument in the folder 
  */
 @property(nonatomic) NSNumber* iTotalDocument;

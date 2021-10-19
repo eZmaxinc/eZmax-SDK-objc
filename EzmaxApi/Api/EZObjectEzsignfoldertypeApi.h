@@ -30,15 +30,15 @@ extern NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
 ///
 /// @param sSelector The type of Ezsignfoldertypes to return
-/// @param acceptLanguage  (optional)
 /// @param sQuery Allow to filter the returned results (optional)
+/// @param acceptLanguage  (optional)
 /// 
 ///  code:200 message:"Successful response"
 ///
 /// @return EZCommonGetAutocompleteV1Response*
 -(NSURLSessionTask*) ezsignfoldertypeGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
 
 

@@ -11,8 +11,8 @@ Method | HTTP request | Description
 # **ezsignfoldertypeGetAutocompleteV1**
 ```objc
 -(NSURLSessionTask*) ezsignfoldertypeGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
 ```
 
@@ -31,15 +31,15 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The type of Ezsignfoldertypes to return
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
+EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
 EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] init];
 
 // Retrieve Ezsignfoldertypes and IDs
 [apiInstance ezsignfoldertypeGetAutocompleteV1WithSSelector:sSelector
-              acceptLanguage:acceptLanguage
               sQuery:sQuery
+              acceptLanguage:acceptLanguage
           completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
@@ -55,8 +55,8 @@ EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Ezsignfoldertypes to return | 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
 
 ### Return type
 
