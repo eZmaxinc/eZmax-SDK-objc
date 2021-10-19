@@ -86,7 +86,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve Ezsignfolder list
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)
