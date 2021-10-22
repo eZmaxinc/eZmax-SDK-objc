@@ -14,18 +14,18 @@
 */
 
 
-#import "EZListSaveListpresentationV1ResponseMPayload.h"
-@protocol EZListSaveListpresentationV1ResponseMPayload;
-@class EZListSaveListpresentationV1ResponseMPayload;
+#import "EZListGetListpresentationV1ResponseMPayload.h"
+@protocol EZListGetListpresentationV1ResponseMPayload;
+@class EZListGetListpresentationV1ResponseMPayload;
 
 
 
-@protocol EZListSaveListpresentationV1ResponseAllOf
+@protocol EZListGetListpresentationV1ResponseAllOf
 @end
 
-@interface EZListSaveListpresentationV1ResponseAllOf : EZObject
+@interface EZListGetListpresentationV1ResponseAllOf : EZObject
 
 
-@property(nonatomic) EZListSaveListpresentationV1ResponseMPayload* mPayload;
+@property(nonatomic) EZListGetListpresentationV1ResponseMPayload* mPayload;
 
 @end

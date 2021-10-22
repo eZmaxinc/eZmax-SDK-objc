@@ -1,9 +1,9 @@
-# EZListSaveListpresentationV1ResponseMPayload
+# EZListGetListpresentationV1ResponseAllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjListpresentation** | [**NSArray&lt;EZListpresentationRequest&gt;***](EZListpresentationRequest.md) |  | 
+**mPayload** | [**EZListGetListpresentationV1ResponseMPayload***](EZListGetListpresentationV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

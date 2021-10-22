@@ -1,8 +1,9 @@
-# EZListSaveListpresentationV1Response
+# EZListGetListpresentationV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**EZListGetListpresentationV1ResponseMPayload***](EZListGetListpresentationV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

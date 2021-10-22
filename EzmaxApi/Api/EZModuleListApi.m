@@ -2,6 +2,7 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
+#import "EZListGetListpresentationV1Response.h"
 #import "EZListSaveListpresentationV1Request.h"
 #import "EZListSaveListpresentationV1Response.h"
 
@@ -52,6 +53,74 @@ NSInteger kEZModuleListApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
+/// Get all Listpresentation for a specific list
+/// Retrive previously saved Listpresentation
+///  @param sListName The list Name 
+///
+///  @returns EZListGetListpresentationV1Response*
+///
+-(NSURLSessionTask*) listGetListpresentationV1WithSListName: (NSString*) sListName
+    completionHandler: (void (^)(EZListGetListpresentationV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'sListName' is set
+    if (sListName == nil) {
+        NSParameterAssert(sListName);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"sListName"] };
+            NSError* error = [NSError errorWithDomain:kEZModuleListApiErrorDomain code:kEZModuleListApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/module/list/listpresentation/{sListName}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (sListName != nil) {
+        pathParams[@"sListName"] = sListName;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZListGetListpresentationV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZListGetListpresentationV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Save all Listpresentation for a specific list
 /// Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
 ///  @param sListName The list Name 
@@ -60,7 +129,7 @@ NSInteger kEZModuleListApiMissingParamErrorCode = 234513;
 ///
 ///  @returns EZListSaveListpresentationV1Response*
 ///
--(NSURLSessionTask*) listListpresentationV1WithSListName: (NSString*) sListName
+-(NSURLSessionTask*) listSaveListpresentationV1WithSListName: (NSString*) sListName
     listSaveListpresentationV1Request: (EZListSaveListpresentationV1Request*) listSaveListpresentationV1Request
     completionHandler: (void (^)(EZListSaveListpresentationV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sListName' is set

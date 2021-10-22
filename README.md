@@ -191,10 +191,11 @@ Import the following:
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompoundAllOf.h>
 #import <EzmaxApi/EZGlobalCustomerGetEndpointV1Response.h>
 #import <EzmaxApi/EZHeaderAcceptLanguage.h>
+#import <EzmaxApi/EZListGetListpresentationV1Response.h>
+#import <EzmaxApi/EZListGetListpresentationV1ResponseAllOf.h>
+#import <EzmaxApi/EZListGetListpresentationV1ResponseMPayload.h>
 #import <EzmaxApi/EZListSaveListpresentationV1Request.h>
 #import <EzmaxApi/EZListSaveListpresentationV1Response.h>
-#import <EzmaxApi/EZListSaveListpresentationV1ResponseAllOf.h>
-#import <EzmaxApi/EZListSaveListpresentationV1ResponseMPayload.h>
 #import <EzmaxApi/EZListpresentationRequest.h>
 #import <EzmaxApi/EZMultilingualApikeyDescription.h>
 #import <EzmaxApi/EZPhoneRequest.h>
@@ -290,7 +291,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EZGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/EZGlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *EZModuleAuthenticateApi* | [**authenticateAuthenticateV2**](docs/EZModuleAuthenticateApi.md#authenticateauthenticatev2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
-*EZModuleListApi* | [**listListpresentationV1**](docs/EZModuleListApi.md#listlistpresentationv1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
+*EZModuleListApi* | [**listGetListpresentationV1**](docs/EZModuleListApi.md#listgetlistpresentationv1) | **GET** /1/module/list/listpresentation/{sListName} | Get all Listpresentation for a specific list
+*EZModuleListApi* | [**listSaveListpresentationV1**](docs/EZModuleListApi.md#listsavelistpresentationv1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
 *EZModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/EZModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *EZModuleSsprApi* | [**ssprResetPasswordV1**](docs/EZModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *EZModuleSsprApi* | [**ssprSendUsernamesV1**](docs/EZModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
@@ -486,10 +488,11 @@ Class | Method | HTTP request | Description
  - [EZFranchisereferalincomeRequestCompoundAllOf](docs/EZFranchisereferalincomeRequestCompoundAllOf.md)
  - [EZGlobalCustomerGetEndpointV1Response](docs/EZGlobalCustomerGetEndpointV1Response.md)
  - [EZHeaderAcceptLanguage](docs/EZHeaderAcceptLanguage.md)
+ - [EZListGetListpresentationV1Response](docs/EZListGetListpresentationV1Response.md)
+ - [EZListGetListpresentationV1ResponseAllOf](docs/EZListGetListpresentationV1ResponseAllOf.md)
+ - [EZListGetListpresentationV1ResponseMPayload](docs/EZListGetListpresentationV1ResponseMPayload.md)
  - [EZListSaveListpresentationV1Request](docs/EZListSaveListpresentationV1Request.md)
  - [EZListSaveListpresentationV1Response](docs/EZListSaveListpresentationV1Response.md)
- - [EZListSaveListpresentationV1ResponseAllOf](docs/EZListSaveListpresentationV1ResponseAllOf.md)
- - [EZListSaveListpresentationV1ResponseMPayload](docs/EZListSaveListpresentationV1ResponseMPayload.md)
  - [EZListpresentationRequest](docs/EZListpresentationRequest.md)
  - [EZMultilingualApikeyDescription](docs/EZMultilingualApikeyDescription.md)
  - [EZPhoneRequest](docs/EZPhoneRequest.md)

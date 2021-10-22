@@ -20,10 +20,10 @@
 
 
 
-@protocol EZListSaveListpresentationV1ResponseMPayload
+@protocol EZListGetListpresentationV1ResponseMPayload
 @end
 
-@interface EZListSaveListpresentationV1ResponseMPayload : EZObject
+@interface EZListGetListpresentationV1ResponseMPayload : EZObject
 
 
 @property(nonatomic) NSArray<EZListpresentationRequest>* aObjListpresentation;

@@ -17,20 +17,28 @@
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZListGetListpresentationV1ResponseAllOf.h"
+#import "EZListGetListpresentationV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZListGetListpresentationV1ResponseAllOf;
+@class EZListGetListpresentationV1ResponseAllOf;
+@protocol EZListGetListpresentationV1ResponseMPayload;
+@class EZListGetListpresentationV1ResponseMPayload;
 
 
 
-@protocol EZListSaveListpresentationV1Response
+@protocol EZListGetListpresentationV1Response
 @end
 
-@interface EZListSaveListpresentationV1Response : EZObject
+@interface EZListGetListpresentationV1Response : EZObject
 
+
+@property(nonatomic) EZListGetListpresentationV1ResponseMPayload* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 

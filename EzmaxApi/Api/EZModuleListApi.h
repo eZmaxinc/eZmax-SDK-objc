@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZListGetListpresentationV1Response.h"
 #import "EZListSaveListpresentationV1Request.h"
 #import "EZListSaveListpresentationV1Response.h"
 #import "EZApi.h"
@@ -25,6 +26,19 @@ extern NSInteger kEZModuleListApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Get all Listpresentation for a specific list
+/// Retrive previously saved Listpresentation
+///
+/// @param sListName The list Name
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist"
+///
+/// @return EZListGetListpresentationV1Response*
+-(NSURLSessionTask*) listGetListpresentationV1WithSListName: (NSString*) sListName
+    completionHandler: (void (^)(EZListGetListpresentationV1Response* output, NSError* error)) handler;
+
+
 /// Save all Listpresentation for a specific list
 /// Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
 ///
@@ -35,7 +49,7 @@ extern NSInteger kEZModuleListApiMissingParamErrorCode;
 ///  code:404 message:"The element you are trying to work on does not exist"
 ///
 /// @return EZListSaveListpresentationV1Response*
--(NSURLSessionTask*) listListpresentationV1WithSListName: (NSString*) sListName
+-(NSURLSessionTask*) listSaveListpresentationV1WithSListName: (NSString*) sListName
     listSaveListpresentationV1Request: (EZListSaveListpresentationV1Request*) listSaveListpresentationV1Request
     completionHandler: (void (^)(EZListSaveListpresentationV1Response* output, NSError* error)) handler;
 

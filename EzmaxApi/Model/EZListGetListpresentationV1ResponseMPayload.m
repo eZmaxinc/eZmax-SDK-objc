@@ -1,6 +1,6 @@
-#import "EZListSaveListpresentationV1ResponseAllOf.h"
+#import "EZListGetListpresentationV1ResponseMPayload.h"
 
-@implementation EZListSaveListpresentationV1ResponseAllOf
+@implementation EZListGetListpresentationV1ResponseMPayload
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"mPayload": @"mPayload" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjListpresentation": @"a_objListpresentation" }];
 }
 
 /**
