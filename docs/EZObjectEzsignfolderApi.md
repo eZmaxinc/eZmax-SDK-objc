@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetListV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderUnsendV1**](EZObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
 # **ezsignfolderCreateObjectV1**
@@ -411,6 +412,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignfolderSendV1Response***](EZEzsignfolderSendV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderUnsendV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    body: (NSString*) body
+        completionHandler: (void (^)(EZEzsignfolderUnsendV1Response* output, NSError* error)) handler;
+```
+
+Unsend the Ezsignfolder
+
+Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+NSString* body = @"body_example"; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Unsend the Ezsignfolder
+[apiInstance ezsignfolderUnsendV1WithPkiEzsignfolderID:pkiEzsignfolderID
+              body:body
+          completionHandler: ^(EZEzsignfolderUnsendV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderUnsendV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **body** | **NSString***|  | 
+
+### Return type
+
+[**EZEzsignfolderUnsendV1Response***](EZEzsignfolderUnsendV1Response.md)
 
 ### Authorization
 

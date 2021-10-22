@@ -5,6 +5,8 @@ EzmaxApi/Api/EZGlobalCustomerApi.h
 EzmaxApi/Api/EZGlobalCustomerApi.m
 EzmaxApi/Api/EZModuleAuthenticateApi.h
 EzmaxApi/Api/EZModuleAuthenticateApi.m
+EzmaxApi/Api/EZModuleListApi.h
+EzmaxApi/Api/EZModuleListApi.m
 EzmaxApi/Api/EZModuleSsprApi.h
 EzmaxApi/Api/EZModuleSsprApi.m
 EzmaxApi/Api/EZModuleUserApi.h
@@ -241,6 +243,8 @@ EzmaxApi/Model/EZEzsignfolderSendV1Request.h
 EzmaxApi/Model/EZEzsignfolderSendV1Request.m
 EzmaxApi/Model/EZEzsignfolderSendV1Response.h
 EzmaxApi/Model/EZEzsignfolderSendV1Response.m
+EzmaxApi/Model/EZEzsignfolderUnsendV1Response.h
+EzmaxApi/Model/EZEzsignfolderUnsendV1Response.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationCreateObjectV1Request.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationCreateObjectV1Request.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationCreateObjectV1Response.h
@@ -349,6 +353,16 @@ EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.h
 EzmaxApi/Model/EZGlobalCustomerGetEndpointV1Response.m
 EzmaxApi/Model/EZHeaderAcceptLanguage.h
 EzmaxApi/Model/EZHeaderAcceptLanguage.m
+EzmaxApi/Model/EZListSaveListpresentationV1Request.h
+EzmaxApi/Model/EZListSaveListpresentationV1Request.m
+EzmaxApi/Model/EZListSaveListpresentationV1Response.h
+EzmaxApi/Model/EZListSaveListpresentationV1Response.m
+EzmaxApi/Model/EZListSaveListpresentationV1ResponseAllOf.h
+EzmaxApi/Model/EZListSaveListpresentationV1ResponseAllOf.m
+EzmaxApi/Model/EZListSaveListpresentationV1ResponseMPayload.h
+EzmaxApi/Model/EZListSaveListpresentationV1ResponseMPayload.m
+EzmaxApi/Model/EZListpresentationRequest.h
+EzmaxApi/Model/EZListpresentationRequest.m
 EzmaxApi/Model/EZMultilingualApikeyDescription.h
 EzmaxApi/Model/EZMultilingualApikeyDescription.m
 EzmaxApi/Model/EZPhoneRequest.h
@@ -502,6 +516,7 @@ docs/EZEzsignfolderResponse.md
 docs/EZEzsignfolderResponseCompound.md
 docs/EZEzsignfolderSendV1Request.md
 docs/EZEzsignfolderSendV1Response.md
+docs/EZEzsignfolderUnsendV1Response.md
 docs/EZEzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EZEzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EZEzsignfoldersignerassociationCreateObjectV1ResponseAllOf.md
@@ -557,7 +572,13 @@ docs/EZFranchisereferalincomeRequestCompoundAllOf.md
 docs/EZGlobalCustomerApi.md
 docs/EZGlobalCustomerGetEndpointV1Response.md
 docs/EZHeaderAcceptLanguage.md
+docs/EZListSaveListpresentationV1Request.md
+docs/EZListSaveListpresentationV1Response.md
+docs/EZListSaveListpresentationV1ResponseAllOf.md
+docs/EZListSaveListpresentationV1ResponseMPayload.md
+docs/EZListpresentationRequest.md
 docs/EZModuleAuthenticateApi.md
+docs/EZModuleListApi.md
 docs/EZModuleSsprApi.md
 docs/EZModuleUserApi.md
 docs/EZMultilingualApikeyDescription.md
