@@ -40,5 +40,8 @@
 /* The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, 
  */
 @property(nonatomic) NSNumber* iListpresentationRowOffset;
+/* Set to true if the user chose this Listpresentation as the default one. A single element should be set to true 
+ */
+@property(nonatomic) NSNumber* bListpresentationDefault;
 
 @end
