@@ -2,6 +2,7 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
+#import "EZCommonResponseErrorSTemporaryFileUrl.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV1Request.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV2Request.h"

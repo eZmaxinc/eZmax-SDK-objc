@@ -99,6 +99,10 @@ EzmaxApi/Model/EZCommonResponse.h
 EzmaxApi/Model/EZCommonResponse.m
 EzmaxApi/Model/EZCommonResponseError.h
 EzmaxApi/Model/EZCommonResponseError.m
+EzmaxApi/Model/EZCommonResponseErrorSTemporaryFileUrl.h
+EzmaxApi/Model/EZCommonResponseErrorSTemporaryFileUrl.m
+EzmaxApi/Model/EZCommonResponseErrorSTemporaryFileUrlAllOf.h
+EzmaxApi/Model/EZCommonResponseErrorSTemporaryFileUrlAllOf.m
 EzmaxApi/Model/EZCommonResponseFilter.h
 EzmaxApi/Model/EZCommonResponseFilter.m
 EzmaxApi/Model/EZCommonResponseGetList.h
@@ -446,6 +450,8 @@ docs/EZCommonGetAutocompleteV1ResponseAllOf.md
 docs/EZCommonGetListV1ResponseMPayload.md
 docs/EZCommonResponse.md
 docs/EZCommonResponseError.md
+docs/EZCommonResponseErrorSTemporaryFileUrl.md
+docs/EZCommonResponseErrorSTemporaryFileUrlAllOf.md
 docs/EZCommonResponseFilter.md
 docs/EZCommonResponseGetList.md
 docs/EZCommonResponseObjDebug.md

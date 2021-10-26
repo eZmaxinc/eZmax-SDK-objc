@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZCommonResponseErrorSTemporaryFileUrl.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV1Request.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EZEzsigndocumentApplyEzsigntemplateV2Request.h"
@@ -75,7 +76,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// 
 ///  code:201 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
-///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
 ///
 /// @return EZEzsigndocumentCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentCreateObjectV1WithEzsigndocumentCreateObjectV1Request: (NSArray<EZEzsigndocumentCreateObjectV1Request>*) ezsigndocumentCreateObjectV1Request

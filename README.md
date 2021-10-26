@@ -64,6 +64,8 @@ Import the following:
 #import <EzmaxApi/EZCommonGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZCommonResponse.h>
 #import <EzmaxApi/EZCommonResponseError.h>
+#import <EzmaxApi/EZCommonResponseErrorSTemporaryFileUrl.h>
+#import <EzmaxApi/EZCommonResponseErrorSTemporaryFileUrlAllOf.h>
 #import <EzmaxApi/EZCommonResponseFilter.h>
 #import <EzmaxApi/EZCommonResponseGetList.h>
 #import <EzmaxApi/EZCommonResponseObjDebug.h>
@@ -361,6 +363,8 @@ Class | Method | HTTP request | Description
  - [EZCommonGetListV1ResponseMPayload](docs/EZCommonGetListV1ResponseMPayload.md)
  - [EZCommonResponse](docs/EZCommonResponse.md)
  - [EZCommonResponseError](docs/EZCommonResponseError.md)
+ - [EZCommonResponseErrorSTemporaryFileUrl](docs/EZCommonResponseErrorSTemporaryFileUrl.md)
+ - [EZCommonResponseErrorSTemporaryFileUrlAllOf](docs/EZCommonResponseErrorSTemporaryFileUrlAllOf.md)
  - [EZCommonResponseFilter](docs/EZCommonResponseFilter.md)
  - [EZCommonResponseGetList](docs/EZCommonResponseGetList.md)
  - [EZCommonResponseObjDebug](docs/EZCommonResponseObjDebug.md)
