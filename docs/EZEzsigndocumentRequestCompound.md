@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **eEzsigndocumentSource** | **NSString*** | Indicates where to look for the document binary content. | 
 **eEzsigndocumentFormat** | **NSString*** | Indicates the format of the document. | 
 **sEzsigndocumentBase64** | **NSData*** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. | [optional] 
+**sEzsigndocumentUrl** | **NSString*** | The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url. | [optional] 
+**bEzsigndocumentForcerepair** | **NSNumber*** | Try to repair the document or flatten it if it cannot be used for electronic signature.  | [optional] [default to @(YES)]
 **sEzsigndocumentPassword** | **NSString*** | If the source document is password protected, the password to open/modify it. | [optional] [default to @""]
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **dtEzsigndocumentDuedate** | **NSString*** | The maximum date and time at which the document can be signed. | 

@@ -331,7 +331,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve Ezsignfolder list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived | | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
 ///
 ///  @param iRowMax  (optional)

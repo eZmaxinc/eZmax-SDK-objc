@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | 
+**eEzsignfoldertypePrivacylevel** | [**EZFieldEEzsignfoldertypePrivacylevel***](EZFieldEEzsignfoldertypePrivacylevel.md) |  | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsign Folder | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 

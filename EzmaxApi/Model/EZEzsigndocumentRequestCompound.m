@@ -6,6 +6,7 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
+    self.bEzsigndocumentForcerepair = @(YES);
     self.sEzsigndocumentPassword = @"";
     
   }
@@ -18,7 +19,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentUrl": @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair": @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
 }
 
 /**
@@ -28,7 +29,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEzsigndocumentBase64", @"sEzsigndocumentPassword", ];
+  NSArray *optionalProperties = @[@"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", ];
   return [optionalProperties containsObject:propertyName];
 }
 
