@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"eEzsignfoldertypePrivacylevel": @"eEzsignfoldertypePrivacylevel", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"eEzsignfolderStep": @"eEzsignfolderStep", @"dtCreatedDate": @"dtCreatedDate", @"dtEzsignfolderSentdate": @"dtEzsignfolderSentdate", @"dtDueDate": @"dtDueDate", @"iTotalDocument": @"iTotalDocument", @"iTotalDocumentEdm": @"iTotalDocumentEdm", @"iTotalSignature": @"iTotalSignature", @"iTotalSignatureSigned": @"iTotalSignatureSigned" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"eEzsignfoldertypePrivacylevel": @"eEzsignfoldertypePrivacylevel", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"eEzsignfolderStep": @"eEzsignfolderStep", @"dtCreatedDate": @"dtCreatedDate", @"dtEzsignfolderSentdate": @"dtEzsignfolderSentdate", @"dtDueDate": @"dtDueDate", @"iEzsigndocument": @"iEzsigndocument", @"iEzsigndocumentEdm": @"iEzsigndocumentEdm", @"iEzsignsignature": @"iEzsignsignature", @"iEzsignsignatureSigned": @"iEzsignsignatureSigned" }];
 }
 
 /**

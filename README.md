@@ -87,6 +87,11 @@ Import the following:
 #import <EzmaxApi/EZCustomWordPositionOccurenceResponse.h>
 #import <EzmaxApi/EZCustomWordPositionWordResponse.h>
 #import <EzmaxApi/EZEmailRequest.h>
+#import <EzmaxApi/EZEzsignbulksendGetListV1Response.h>
+#import <EzmaxApi/EZEzsignbulksendGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignbulksendGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZEzsignbulksendListElement.h>
 #import <EzmaxApi/EZEzsigndocumentApplyEzsigntemplateV1Request.h>
 #import <EzmaxApi/EZEzsigndocumentApplyEzsigntemplateV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentApplyEzsigntemplateV2Request.h>
@@ -236,6 +241,7 @@ Import the following:
 #import <EzmaxApi/EZModuleUserApi.h>
 #import <EzmaxApi/EZObjectActivesessionApi.h>
 #import <EzmaxApi/EZObjectApikeyApi.h>
+#import <EzmaxApi/EZObjectEzsignbulksendApi.h>
 #import <EzmaxApi/EZObjectEzsigndocumentApi.h>
 #import <EzmaxApi/EZObjectEzsignfolderApi.h>
 #import <EzmaxApi/EZObjectEzsignfoldersignerassociationApi.h>
@@ -304,6 +310,7 @@ Class | Method | HTTP request | Description
 *EZModuleUserApi* | [**userCreateEzsignuserV1**](docs/EZModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *EZObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/EZObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *EZObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/EZObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
+*EZObjectEzsignbulksendApi* | [**ezsignbulksendGetListV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
@@ -386,6 +393,11 @@ Class | Method | HTTP request | Description
  - [EZCustomWordPositionOccurenceResponse](docs/EZCustomWordPositionOccurenceResponse.md)
  - [EZCustomWordPositionWordResponse](docs/EZCustomWordPositionWordResponse.md)
  - [EZEmailRequest](docs/EZEmailRequest.md)
+ - [EZEzsignbulksendGetListV1Response](docs/EZEzsignbulksendGetListV1Response.md)
+ - [EZEzsignbulksendGetListV1ResponseAllOf](docs/EZEzsignbulksendGetListV1ResponseAllOf.md)
+ - [EZEzsignbulksendGetListV1ResponseMPayload](docs/EZEzsignbulksendGetListV1ResponseMPayload.md)
+ - [EZEzsignbulksendGetListV1ResponseMPayloadAllOf](docs/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.md)
+ - [EZEzsignbulksendListElement](docs/EZEzsignbulksendListElement.md)
  - [EZEzsigndocumentApplyEzsigntemplateV1Request](docs/EZEzsigndocumentApplyEzsigntemplateV1Request.md)
  - [EZEzsigndocumentApplyEzsigntemplateV1Response](docs/EZEzsigndocumentApplyEzsigntemplateV1Response.md)
  - [EZEzsigndocumentApplyEzsigntemplateV2Request](docs/EZEzsigndocumentApplyEzsigntemplateV2Request.md)

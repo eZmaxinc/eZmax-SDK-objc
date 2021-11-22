@@ -28,7 +28,7 @@
 /* The unique ID of the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* pkiEzsignfolderID;
-/* The description of the Ezsign Folder 
+/* The description of the Ezsignfolder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;
 

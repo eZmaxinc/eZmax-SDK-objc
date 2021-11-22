@@ -15,6 +15,8 @@ EzmaxApi/Api/EZObjectActivesessionApi.h
 EzmaxApi/Api/EZObjectActivesessionApi.m
 EzmaxApi/Api/EZObjectApikeyApi.h
 EzmaxApi/Api/EZObjectApikeyApi.m
+EzmaxApi/Api/EZObjectEzsignbulksendApi.h
+EzmaxApi/Api/EZObjectEzsignbulksendApi.m
 EzmaxApi/Api/EZObjectEzsigndocumentApi.h
 EzmaxApi/Api/EZObjectEzsigndocumentApi.m
 EzmaxApi/Api/EZObjectEzsignfolderApi.h
@@ -145,6 +147,16 @@ EzmaxApi/Model/EZCustomWordPositionWordResponse.h
 EzmaxApi/Model/EZCustomWordPositionWordResponse.m
 EzmaxApi/Model/EZEmailRequest.h
 EzmaxApi/Model/EZEmailRequest.m
+EzmaxApi/Model/EZEzsignbulksendGetListV1Response.h
+EzmaxApi/Model/EZEzsignbulksendGetListV1Response.m
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseAllOf.m
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseMPayload.h
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseMPayload.m
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.h
+EzmaxApi/Model/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.m
+EzmaxApi/Model/EZEzsignbulksendListElement.h
+EzmaxApi/Model/EZEzsignbulksendListElement.m
 EzmaxApi/Model/EZEzsigndocumentApplyEzsigntemplateV1Request.h
 EzmaxApi/Model/EZEzsigndocumentApplyEzsigntemplateV1Request.m
 EzmaxApi/Model/EZEzsigndocumentApplyEzsigntemplateV1Response.h
@@ -473,6 +485,11 @@ docs/EZCustomFormsDataFolderResponse.md
 docs/EZCustomWordPositionOccurenceResponse.md
 docs/EZCustomWordPositionWordResponse.md
 docs/EZEmailRequest.md
+docs/EZEzsignbulksendGetListV1Response.md
+docs/EZEzsignbulksendGetListV1ResponseAllOf.md
+docs/EZEzsignbulksendGetListV1ResponseMPayload.md
+docs/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EZEzsignbulksendListElement.md
 docs/EZEzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EZEzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EZEzsigndocumentApplyEzsigntemplateV2Request.md
@@ -593,6 +610,7 @@ docs/EZModuleUserApi.md
 docs/EZMultilingualApikeyDescription.md
 docs/EZObjectActivesessionApi.md
 docs/EZObjectApikeyApi.md
+docs/EZObjectEzsignbulksendApi.md
 docs/EZObjectEzsigndocumentApi.md
 docs/EZObjectEzsignfolderApi.md
 docs/EZObjectEzsignfoldersignerassociationApi.md

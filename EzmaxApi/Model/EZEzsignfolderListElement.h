@@ -42,7 +42,7 @@
 /* The name of the Ezsignfoldertype in the language of the requester 
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
-/* The description of the Ezsign Folder 
+/* The description of the Ezsignfolder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;
 
@@ -57,15 +57,15 @@
 @property(nonatomic) EZOneOfStringObject* dtDueDate;
 /* The total number of Ezsigndocument in the folder 
  */
-@property(nonatomic) NSNumber* iTotalDocument;
+@property(nonatomic) NSNumber* iEzsigndocument;
 /* The total number of Ezsigndocument in the folder that were saved in the edm system 
  */
-@property(nonatomic) NSNumber* iTotalDocumentEdm;
+@property(nonatomic) NSNumber* iEzsigndocumentEdm;
 /* The total number of signature blocks in all Ezsigndocuments in the folder 
  */
-@property(nonatomic) NSNumber* iTotalSignature;
+@property(nonatomic) NSNumber* iEzsignsignature;
 /* The total number of already signed signature blocks in all Ezsigndocuments in the folder 
  */
-@property(nonatomic) NSNumber* iTotalSignatureSigned;
+@property(nonatomic) NSNumber* iEzsignsignatureSigned;
 
 @end
