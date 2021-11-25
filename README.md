@@ -181,11 +181,17 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignerRequestCompound.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompoundContact.h>
+#import <EzmaxApi/EZEzsigntemplatepackageGetListV1Response.h>
+#import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZEzsigntemplatepackageListElement.h>
 #import <EzmaxApi/EZFieldEEzsigndocumentStep.h>
 #import <EzmaxApi/EZFieldEEzsignfolderSendreminderfrequency.h>
 #import <EzmaxApi/EZFieldEEzsignfolderStep.h>
 #import <EzmaxApi/EZFieldEEzsignfoldertypePrivacylevel.h>
 #import <EzmaxApi/EZFieldEEzsignsignatureType.h>
+#import <EzmaxApi/EZFieldEEzsigntemplatepackageType.h>
 #import <EzmaxApi/EZFieldEPhoneType.h>
 #import <EzmaxApi/EZFieldEUserType.h>
 #import <EzmaxApi/EZFieldEUserTypeSSPR.h>
@@ -247,6 +253,7 @@ Import the following:
 #import <EzmaxApi/EZObjectEzsignfoldersignerassociationApi.h>
 #import <EzmaxApi/EZObjectEzsignfoldertypeApi.h>
 #import <EzmaxApi/EZObjectEzsignsignatureApi.h>
+#import <EzmaxApi/EZObjectEzsigntemplatepackageApi.h>
 #import <EzmaxApi/EZObjectFranchisebrokerApi.h>
 #import <EzmaxApi/EZObjectFranchiseofficeApi.h>
 #import <EzmaxApi/EZObjectFranchisereferalincomeApi.h>
@@ -340,6 +347,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureGetChildrenV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+*EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *EZObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/EZObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *EZObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](docs/EZObjectFranchiseofficeApi.md#franchiseofficegetautocompletev1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *EZObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/EZObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
@@ -487,11 +495,17 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignerRequestCompound](docs/EZEzsignsignerRequestCompound.md)
  - [EZEzsignsignerRequestCompoundAllOf](docs/EZEzsignsignerRequestCompoundAllOf.md)
  - [EZEzsignsignerRequestCompoundContact](docs/EZEzsignsignerRequestCompoundContact.md)
+ - [EZEzsigntemplatepackageGetListV1Response](docs/EZEzsigntemplatepackageGetListV1Response.md)
+ - [EZEzsigntemplatepackageGetListV1ResponseAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md)
+ - [EZEzsigntemplatepackageGetListV1ResponseMPayload](docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md)
+ - [EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
+ - [EZEzsigntemplatepackageListElement](docs/EZEzsigntemplatepackageListElement.md)
  - [EZFieldEEzsigndocumentStep](docs/EZFieldEEzsigndocumentStep.md)
  - [EZFieldEEzsignfolderSendreminderfrequency](docs/EZFieldEEzsignfolderSendreminderfrequency.md)
  - [EZFieldEEzsignfolderStep](docs/EZFieldEEzsignfolderStep.md)
  - [EZFieldEEzsignfoldertypePrivacylevel](docs/EZFieldEEzsignfoldertypePrivacylevel.md)
  - [EZFieldEEzsignsignatureType](docs/EZFieldEEzsignsignatureType.md)
+ - [EZFieldEEzsigntemplatepackageType](docs/EZFieldEEzsigntemplatepackageType.md)
  - [EZFieldEPhoneType](docs/EZFieldEPhoneType.md)
  - [EZFieldEUserType](docs/EZFieldEUserType.md)
  - [EZFieldEUserTypeSSPR](docs/EZFieldEUserTypeSSPR.md)
