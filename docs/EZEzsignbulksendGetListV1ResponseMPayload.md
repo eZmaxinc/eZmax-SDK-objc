@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**NSArray&lt;EZEzsignbulksendListElement&gt;***](EZEzsignbulksendListElement.md) |  | [optional] 
+**aObjEzsignbulksend** | [**NSArray&lt;EZEzsignbulksendListElement&gt;***](EZEzsignbulksendListElement.md) |  | 
 **iRowReturned** | **NSNumber*** | The number of rows returned | 
 **iRowFiltered** | **NSNumber*** | The number of rows matching your filters (if any) or the total number of rows | 
 

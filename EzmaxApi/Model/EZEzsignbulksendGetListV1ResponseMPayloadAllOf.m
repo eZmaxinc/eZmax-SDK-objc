@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignfolder": @"a_objEzsignfolder" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignbulksend": @"a_objEzsignbulksend" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aObjEzsignfolder"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

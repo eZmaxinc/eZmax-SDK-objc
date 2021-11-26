@@ -32,7 +32,7 @@
 @interface EZEzsignbulksendGetListV1ResponseMPayload : EZObject
 
 
-@property(nonatomic) NSArray<EZEzsignbulksendListElement>* aObjEzsignfolder;
+@property(nonatomic) NSArray<EZEzsignbulksendListElement>* aObjEzsignbulksend;
 /* The number of rows returned 
  */
 @property(nonatomic) NSNumber* iRowReturned;

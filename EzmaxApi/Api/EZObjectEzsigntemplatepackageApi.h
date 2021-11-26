@@ -26,7 +26,7 @@ extern NSInteger kEZObjectEzsigntemplatepackageApiMissingParamErrorCode;
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
 /// Retrieve Ezsigntemplatepackage list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | ezsigntemplatepackage | Company<br>Department<br>Team<br>User<br>Usergroup |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company<br>Department<br>Team<br>User<br>Usergroup |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)
