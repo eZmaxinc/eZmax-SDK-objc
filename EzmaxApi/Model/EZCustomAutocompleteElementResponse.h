@@ -14,9 +14,6 @@
 */
 
 
-#import "EZOneOfIntegerString.h"
-@protocol EZOneOfIntegerString;
-@class EZOneOfIntegerString;
 
 
 
@@ -33,6 +30,6 @@
 @property(nonatomic) NSString* sLabel;
 /* The Unique ID of the element 
  */
-@property(nonatomic) EZOneOfIntegerString* mValue;
+@property(nonatomic) NSString* mValue;
 
 @end

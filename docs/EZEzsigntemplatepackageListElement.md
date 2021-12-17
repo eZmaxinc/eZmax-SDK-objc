@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsigntemplatepackageID** | **NSNumber*** | The unique ID of the Ezsigntemplatepackage | 
-**fkiDepartmentID** | [**EZOneOfIntegerObject***](EZOneOfIntegerObject.md) |  | 
-**fkiTeamID** | [**EZOneOfIntegerObject***](EZOneOfIntegerObject.md) |  | 
-**fkiEzsignfoldertypeID** | [**EZOneOfIntegerObject***](EZOneOfIntegerObject.md) |  | 
+**fkiDepartmentID** | **NSNumber*** | The unique ID of the Department. | 
+**fkiTeamID** | **NSNumber*** | The unique ID of the Team | 
+**fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **eEzsigntemplatepackageType** | [**EZFieldEEzsigntemplatepackageType***](EZFieldEEzsigntemplatepackageType.md) |  | 
 **sEzsigntemplatepackageDescription** | **NSString*** | The description of the Ezsigntemplatepackage | 

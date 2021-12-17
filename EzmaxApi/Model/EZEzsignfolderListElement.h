@@ -16,13 +16,10 @@
 
 #import "EZFieldEEzsignfolderStep.h"
 #import "EZFieldEEzsignfoldertypePrivacylevel.h"
-#import "EZOneOfStringObject.h"
 @protocol EZFieldEEzsignfolderStep;
 @class EZFieldEEzsignfolderStep;
 @protocol EZFieldEEzsignfoldertypePrivacylevel;
 @class EZFieldEEzsignfoldertypePrivacylevel;
-@protocol EZOneOfStringObject;
-@class EZOneOfStringObject;
 
 
 
@@ -50,11 +47,12 @@
 /* The date and time at which the object was created 
  */
 @property(nonatomic) NSString* dtCreatedDate;
-
-@property(nonatomic) EZOneOfStringObject* dtEzsignfolderSentdate;
-/* The date at which no more signature will be accepted on the folder 
+/* The date and time at which the Ezsign folder was sent the last time. 
  */
-@property(nonatomic) EZOneOfStringObject* dtDueDate;
+@property(nonatomic) NSString* dtEzsignfolderSentdate;
+/* Represent a Date Time. The timezone is the one configured in the User's profile. 
+ */
+@property(nonatomic) NSString* dtDueDate;
 /* The total number of Ezsigndocument in the folder 
  */
 @property(nonatomic) NSNumber* iEzsigndocument;

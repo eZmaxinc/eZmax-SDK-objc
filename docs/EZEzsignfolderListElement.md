@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
 **dtCreatedDate** | **NSString*** | The date and time at which the object was created | 
-**dtEzsignfolderSentdate** | [**EZOneOfStringObject***](EZOneOfStringObject.md) |  | 
-**dtDueDate** | [**EZOneOfStringObject***](EZOneOfStringObject.md) | The date at which no more signature will be accepted on the folder | 
+**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | 
+**dtDueDate** | **NSString*** | Represent a Date Time. The timezone is the one configured in the User&#39;s profile. | 
 **iEzsigndocument** | **NSNumber*** | The total number of Ezsigndocument in the folder | 
 **iEzsigndocumentEdm** | **NSNumber*** | The total number of Ezsigndocument in the folder that were saved in the edm system | 
 **iEzsignsignature** | **NSNumber*** | The total number of signature blocks in all Ezsigndocuments in the folder | 

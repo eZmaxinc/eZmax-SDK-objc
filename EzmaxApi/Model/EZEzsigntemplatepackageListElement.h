@@ -15,11 +15,8 @@
 
 
 #import "EZFieldEEzsigntemplatepackageType.h"
-#import "EZOneOfIntegerObject.h"
 @protocol EZFieldEEzsigntemplatepackageType;
 @class EZFieldEEzsigntemplatepackageType;
-@protocol EZOneOfIntegerObject;
-@class EZOneOfIntegerObject;
 
 
 
@@ -31,12 +28,15 @@
 /* The unique ID of the Ezsigntemplatepackage 
  */
 @property(nonatomic) NSNumber* pkiEzsigntemplatepackageID;
-
-@property(nonatomic) EZOneOfIntegerObject* fkiDepartmentID;
-
-@property(nonatomic) EZOneOfIntegerObject* fkiTeamID;
-
-@property(nonatomic) EZOneOfIntegerObject* fkiEzsignfoldertypeID;
+/* The unique ID of the Department. 
+ */
+@property(nonatomic) NSNumber* fkiDepartmentID;
+/* The unique ID of the Team 
+ */
+@property(nonatomic) NSNumber* fkiTeamID;
+/* The unique ID of the Ezsignfoldertype. 
+ */
+@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;
