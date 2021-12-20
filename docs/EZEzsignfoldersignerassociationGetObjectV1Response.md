@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**NSObject***](.md) | Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request | 
+**mPayload** | [**EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload***](EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

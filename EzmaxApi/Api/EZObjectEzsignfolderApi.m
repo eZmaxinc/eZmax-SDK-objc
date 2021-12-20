@@ -5,6 +5,7 @@
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
+#import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
@@ -194,26 +195,26 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 }
 
 ///
-/// Retrieve an existing Ezsignfolder's children IDs
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// Retrieve an existing Ezsignfolder's Ezsigndocuments
+/// 
 ///  @param pkiEzsignfolderID  
 ///
-///  @returns void
+///  @returns EZEzsignfolderGetEzsigndocumentsV1Response*
 ///
--(NSURLSessionTask*) ezsignfolderGetChildrenV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    completionHandler: (void (^)(NSError* error)) handler {
+-(NSURLSessionTask*) ezsignfolderGetEzsigndocumentsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetEzsigndocumentsV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
         if(handler) {
             NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
             NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
-            handler(error);
+            handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignfolderID != nil) {
@@ -253,10 +254,10 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: nil
+                              responseType: @"EZEzsignfolderGetEzsigndocumentsV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler(error);
+                                    handler((EZEzsignfolderGetEzsigndocumentsV1Response*)data, error);
                                 }
                             }];
 }
@@ -412,7 +413,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve an existing Ezsignfolder
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///  @param pkiEzsignfolderID  
 ///
 ///  @returns EZEzsignfolderGetObjectV1Response*

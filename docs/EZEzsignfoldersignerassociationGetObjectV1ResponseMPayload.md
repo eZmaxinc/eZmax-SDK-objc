@@ -1,0 +1,14 @@
+# EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiEzsignfoldersignerassociationID** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | 
+**fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
+**fkiEzsignsignerID** | **NSNumber*** | The unique ID of the Ezsignsigner | 
+**fkiUserID** | **NSNumber*** | The unique ID of the User | 
+**bEzsignfoldersignerassociationReceivecopy** | **NSNumber*** | If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
