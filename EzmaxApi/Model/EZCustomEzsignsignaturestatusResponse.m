@@ -1,6 +1,6 @@
-#import "EZEzsignfolderRequestCompound.h"
+#import "EZCustomEzsignsignaturestatusResponse.h"
 
-@implementation EZEzsignfolderRequestCompound
+@implementation EZCustomEzsignsignaturestatusResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsignsignaturestatusSteptype": @"eEzsignsignaturestatusSteptype", @"iEzsignsignaturestatusStep": @"iEzsignsignaturestatusStep", @"iEzsignsignaturestatusTotal": @"iEzsignsignaturestatusTotal", @"iEzsignsignaturestatusSigned": @"iEzsignsignaturestatusSigned" }];
 }
 
 /**

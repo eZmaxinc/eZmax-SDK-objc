@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **eEzsignfolderSendreminderfrequency** | [**EZFieldEEzsignfolderSendreminderfrequency***](EZFieldEEzsignfolderSendreminderfrequency.md) |  | 
 **dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | 
 **dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | 
+**dtEzsignfolderScheduledarchive** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be archived. | 
+**dtEzsignfolderScheduleddestruction** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be Destroyed. | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
 **dtEzsignfolderClose** | **NSString*** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 

@@ -14,18 +14,18 @@
 */
 
 
-#import "EZEzsigndocumentResponseCompound.h"
-@protocol EZEzsigndocumentResponseCompound;
-@class EZEzsigndocumentResponseCompound;
+#import "EZEzsignsignerResponseCompoundContact.h"
+@protocol EZEzsignsignerResponseCompoundContact;
+@class EZEzsignsignerResponseCompoundContact;
 
 
 
-@protocol EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload
+@protocol EZEzsignsignerResponseCompoundAllOf
 @end
 
-@interface EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload : EZObject
+@interface EZEzsignsignerResponseCompoundAllOf : EZObject
 
 
-@property(nonatomic) NSArray<EZEzsigndocumentResponseCompound>* aObjEzsigndocument;
+@property(nonatomic) EZEzsignsignerResponseCompoundContact* objContact;
 
 @end

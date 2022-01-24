@@ -15,10 +15,13 @@
 
 
 #import "EZCommonAudit.h"
+#import "EZCustomEzsignfoldersignerassociationstatusResponse.h"
 #import "EZEzsigndocumentResponse.h"
 #import "EZFieldEEzsigndocumentStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
+@protocol EZCustomEzsignfoldersignerassociationstatusResponse;
+@class EZCustomEzsignfoldersignerassociationstatusResponse;
 @protocol EZEzsigndocumentResponse;
 @class EZEzsigndocumentResponse;
 @protocol EZFieldEEzsigndocumentStep;
@@ -31,6 +34,20 @@
 
 @interface EZEzsigndocumentResponseCompound : EZObject
 
+/* The total number of steps in the form filling phase 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentStepformtotal;
+/* The current step in the form filling phase 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentStepformcurrent;
+/* The total number of steps in the signature filling phase 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentStepsignaturetotal;
+/* The current step in the signature phase 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentStepsignatureCurrent;
+
+@property(nonatomic) NSArray<EZCustomEzsignfoldersignerassociationstatusResponse>* aObjEzsignfoldersignerassociationstatus;
 /* The unique ID of the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* fkiEzsignfolderID;

@@ -137,6 +137,10 @@ EzmaxApi/Model/EZContactinformationsRequestCompoundAllOf.h
 EzmaxApi/Model/EZContactinformationsRequestCompoundAllOf.m
 EzmaxApi/Model/EZCustomAutocompleteElementResponse.h
 EzmaxApi/Model/EZCustomAutocompleteElementResponse.m
+EzmaxApi/Model/EZCustomEzsignfoldersignerassociationstatusResponse.h
+EzmaxApi/Model/EZCustomEzsignfoldersignerassociationstatusResponse.m
+EzmaxApi/Model/EZCustomEzsignsignaturestatusResponse.h
+EzmaxApi/Model/EZCustomEzsignsignaturestatusResponse.m
 EzmaxApi/Model/EZCustomFormDataDocumentResponse.h
 EzmaxApi/Model/EZCustomFormDataDocumentResponse.m
 EzmaxApi/Model/EZCustomFormDataSignerResponse.h
@@ -231,6 +235,12 @@ EzmaxApi/Model/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.h
 EzmaxApi/Model/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.m
 EzmaxApi/Model/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.h
 EzmaxApi/Model/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.m
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.m
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.m
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.h
+EzmaxApi/Model/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsignfolderGetFormsDataV1Response.h
 EzmaxApi/Model/EZEzsignfolderGetFormsDataV1Response.m
 EzmaxApi/Model/EZEzsignfolderGetFormsDataV1ResponseAllOf.h
@@ -257,8 +267,6 @@ EzmaxApi/Model/EZEzsignfolderRequest.h
 EzmaxApi/Model/EZEzsignfolderRequest.m
 EzmaxApi/Model/EZEzsignfolderRequestCompound.h
 EzmaxApi/Model/EZEzsignfolderRequestCompound.m
-EzmaxApi/Model/EZEzsignfolderRequestCompoundAllOf.h
-EzmaxApi/Model/EZEzsignfolderRequestCompoundAllOf.m
 EzmaxApi/Model/EZEzsignfolderResponse.h
 EzmaxApi/Model/EZEzsignfolderResponse.m
 EzmaxApi/Model/EZEzsignfolderResponseCompound.h
@@ -349,6 +357,14 @@ EzmaxApi/Model/EZEzsignsignerRequestCompoundAllOf.h
 EzmaxApi/Model/EZEzsignsignerRequestCompoundAllOf.m
 EzmaxApi/Model/EZEzsignsignerRequestCompoundContact.h
 EzmaxApi/Model/EZEzsignsignerRequestCompoundContact.m
+EzmaxApi/Model/EZEzsignsignerResponse.h
+EzmaxApi/Model/EZEzsignsignerResponse.m
+EzmaxApi/Model/EZEzsignsignerResponseCompound.h
+EzmaxApi/Model/EZEzsignsignerResponseCompound.m
+EzmaxApi/Model/EZEzsignsignerResponseCompoundAllOf.h
+EzmaxApi/Model/EZEzsignsignerResponseCompoundAllOf.m
+EzmaxApi/Model/EZEzsignsignerResponseCompoundContact.h
+EzmaxApi/Model/EZEzsignsignerResponseCompoundContact.m
 EzmaxApi/Model/EZEzsigntemplatepackageGetListV1Response.h
 EzmaxApi/Model/EZEzsigntemplatepackageGetListV1Response.m
 EzmaxApi/Model/EZEzsigntemplatepackageGetListV1ResponseAllOf.h
@@ -505,6 +521,8 @@ docs/EZContactinformationsRequest.md
 docs/EZContactinformationsRequestCompound.md
 docs/EZContactinformationsRequestCompoundAllOf.md
 docs/EZCustomAutocompleteElementResponse.md
+docs/EZCustomEzsignfoldersignerassociationstatusResponse.md
+docs/EZCustomEzsignsignaturestatusResponse.md
 docs/EZCustomFormDataDocumentResponse.md
 docs/EZCustomFormDataSignerResponse.md
 docs/EZCustomFormsDataFolderResponse.md
@@ -552,6 +570,9 @@ docs/EZEzsignfolderDeleteObjectV1Response.md
 docs/EZEzsignfolderGetEzsigndocumentsV1Response.md
 docs/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
+docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.md
+docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md
+docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md
 docs/EZEzsignfolderGetFormsDataV1Response.md
 docs/EZEzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EZEzsignfolderGetFormsDataV1ResponseMPayload.md
@@ -565,7 +586,6 @@ docs/EZEzsignfolderGetObjectV1ResponseMPayload.md
 docs/EZEzsignfolderListElement.md
 docs/EZEzsignfolderRequest.md
 docs/EZEzsignfolderRequestCompound.md
-docs/EZEzsignfolderRequestCompoundAllOf.md
 docs/EZEzsignfolderResponse.md
 docs/EZEzsignfolderResponseCompound.md
 docs/EZEzsignfolderSendV1Request.md
@@ -611,6 +631,10 @@ docs/EZEzsignsignerRequest.md
 docs/EZEzsignsignerRequestCompound.md
 docs/EZEzsignsignerRequestCompoundAllOf.md
 docs/EZEzsignsignerRequestCompoundContact.md
+docs/EZEzsignsignerResponse.md
+docs/EZEzsignsignerResponseCompound.md
+docs/EZEzsignsignerResponseCompoundAllOf.md
+docs/EZEzsignsignerResponseCompoundContact.md
 docs/EZEzsigntemplatepackageGetListV1Response.md
 docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md

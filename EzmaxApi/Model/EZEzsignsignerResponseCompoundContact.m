@@ -1,6 +1,6 @@
-#import "EZEzsignfolderRequestCompound.h"
+#import "EZEzsignsignerResponseCompoundContact.h"
 
-@implementation EZEzsignfolderRequestCompound
+@implementation EZEzsignsignerResponseCompoundContact
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sContactFirstname": @"sContactFirstname", @"sContactLastname": @"sContactLastname", @"fkiLanguageID": @"fkiLanguageID", @"sEmailAddress": @"sEmailAddress", @"sPhoneNumber": @"sPhoneNumber", @"sPhoneNumberCell": @"sPhoneNumberCell" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"sEmailAddress", @"sPhoneNumber", @"sPhoneNumberCell"];
   return [optionalProperties containsObject:propertyName];
 }
 

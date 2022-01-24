@@ -15,12 +15,12 @@
 
 
 #import "EZCommonAudit.h"
-#import "EZEzsigndocumentResponse.h"
+#import "EZEzsigndocumentResponseCompound.h"
 #import "EZFieldEEzsigndocumentStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
-@protocol EZEzsigndocumentResponse;
-@class EZEzsigndocumentResponse;
+@protocol EZEzsigndocumentResponseCompound;
+@class EZEzsigndocumentResponseCompound;
 @protocol EZFieldEEzsigndocumentStep;
 @class EZFieldEEzsigndocumentStep;
 

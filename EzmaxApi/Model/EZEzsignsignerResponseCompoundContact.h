@@ -17,10 +17,10 @@
 
 
 
-@protocol EZEzsignsignerRequestCompoundContact
+@protocol EZEzsignsignerResponseCompoundContact
 @end
 
-@interface EZEzsignsignerRequestCompoundContact : EZObject
+@interface EZEzsignsignerResponseCompoundContact : EZObject
 
 /* The First name of the contact 
  */

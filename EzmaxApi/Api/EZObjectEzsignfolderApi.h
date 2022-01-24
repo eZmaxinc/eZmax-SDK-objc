@@ -4,6 +4,7 @@
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
+#import "EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
@@ -71,6 +72,19 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderGetEzsigndocumentsV1Response*
 -(NSURLSessionTask*) ezsignfolderGetEzsigndocumentsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZEzsignfolderGetEzsigndocumentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist"
+///
+/// @return EZEzsignfolderGetEzsignfoldersignerassociationsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetEzsignfoldersignerassociationsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetEzsignfoldersignerassociationsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfolder's forms data

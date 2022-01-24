@@ -1,4 +1,4 @@
-# EZEzsignsignerRequestCompoundContact
+# EZEzsignsignerResponseCompoundContact
 
 ## Properties
 Name | Type | Description | Notes

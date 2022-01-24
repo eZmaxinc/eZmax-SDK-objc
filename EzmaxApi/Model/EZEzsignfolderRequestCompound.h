@@ -15,15 +15,9 @@
 
 
 #import "EZEzsignfolderRequest.h"
-#import "EZEzsignfolderRequestCompoundAllOf.h"
-#import "EZEzsignfoldersignerassociationRequest.h"
 #import "EZFieldEEzsignfolderSendreminderfrequency.h"
 @protocol EZEzsignfolderRequest;
 @class EZEzsignfolderRequest;
-@protocol EZEzsignfolderRequestCompoundAllOf;
-@class EZEzsignfolderRequestCompoundAllOf;
-@protocol EZEzsignfoldersignerassociationRequest;
-@class EZEzsignfoldersignerassociationRequest;
 @protocol EZFieldEEzsignfolderSendreminderfrequency;
 @class EZFieldEEzsignfolderSendreminderfrequency;
 
@@ -34,9 +28,6 @@
 
 @interface EZEzsignfolderRequestCompound : EZObject
 
-/* An array of signers that will be invited to sign the Ezsigndocuments 
- */
-@property(nonatomic) NSArray<EZEzsignfoldersignerassociationRequest>* aEzsignfoldersignerassociation;
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;

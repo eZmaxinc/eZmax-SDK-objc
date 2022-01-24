@@ -1,6 +1,6 @@
-#import "EZEzsignfolderRequestCompound.h"
+#import "EZEzsignsignerResponse.h"
 
-@implementation EZEzsignfolderRequestCompound
+@implementation EZEzsignsignerResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiTaxassignmentID": @"fkiTaxassignmentID", @"fkiSecretquestionID": @"fkiSecretquestionID", @"eEzsignsignerLogintype": @"eEzsignsignerLogintype", @"sEzsignsignerSecretanswer": @"sEzsignsignerSecretanswer" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"fkiSecretquestionID", @"sEzsignsignerSecretanswer"];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -81,6 +81,8 @@ Import the following:
 #import <EzmaxApi/EZContactinformationsRequestCompound.h>
 #import <EzmaxApi/EZContactinformationsRequestCompoundAllOf.h>
 #import <EzmaxApi/EZCustomAutocompleteElementResponse.h>
+#import <EzmaxApi/EZCustomEzsignfoldersignerassociationstatusResponse.h>
+#import <EzmaxApi/EZCustomEzsignsignaturestatusResponse.h>
 #import <EzmaxApi/EZCustomFormDataDocumentResponse.h>
 #import <EzmaxApi/EZCustomFormDataSignerResponse.h>
 #import <EzmaxApi/EZCustomFormsDataFolderResponse.h>
@@ -128,6 +130,9 @@ Import the following:
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseMPayload.h>
@@ -141,7 +146,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignfolderListElement.h>
 #import <EzmaxApi/EZEzsignfolderRequest.h>
 #import <EzmaxApi/EZEzsignfolderRequestCompound.h>
-#import <EzmaxApi/EZEzsignfolderRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignfolderResponse.h>
 #import <EzmaxApi/EZEzsignfolderResponseCompound.h>
 #import <EzmaxApi/EZEzsignfolderSendV1Request.h>
@@ -187,6 +191,10 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignerRequestCompound.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompoundContact.h>
+#import <EzmaxApi/EZEzsignsignerResponse.h>
+#import <EzmaxApi/EZEzsignsignerResponseCompound.h>
+#import <EzmaxApi/EZEzsignsignerResponseCompoundAllOf.h>
+#import <EzmaxApi/EZEzsignsignerResponseCompoundContact.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayload.h>
@@ -336,6 +344,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -398,6 +407,8 @@ Class | Method | HTTP request | Description
  - [EZContactinformationsRequestCompound](docs/EZContactinformationsRequestCompound.md)
  - [EZContactinformationsRequestCompoundAllOf](docs/EZContactinformationsRequestCompoundAllOf.md)
  - [EZCustomAutocompleteElementResponse](docs/EZCustomAutocompleteElementResponse.md)
+ - [EZCustomEzsignfoldersignerassociationstatusResponse](docs/EZCustomEzsignfoldersignerassociationstatusResponse.md)
+ - [EZCustomEzsignsignaturestatusResponse](docs/EZCustomEzsignsignaturestatusResponse.md)
  - [EZCustomFormDataDocumentResponse](docs/EZCustomFormDataDocumentResponse.md)
  - [EZCustomFormDataSignerResponse](docs/EZCustomFormDataSignerResponse.md)
  - [EZCustomFormsDataFolderResponse](docs/EZCustomFormsDataFolderResponse.md)
@@ -445,6 +456,9 @@ Class | Method | HTTP request | Description
  - [EZEzsignfolderGetEzsigndocumentsV1Response](docs/EZEzsignfolderGetEzsigndocumentsV1Response.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)
+ - [EZEzsignfolderGetEzsignfoldersignerassociationsV1Response](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+ - [EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md)
+ - [EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md)
  - [EZEzsignfolderGetFormsDataV1Response](docs/EZEzsignfolderGetFormsDataV1Response.md)
  - [EZEzsignfolderGetFormsDataV1ResponseAllOf](docs/EZEzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [EZEzsignfolderGetFormsDataV1ResponseMPayload](docs/EZEzsignfolderGetFormsDataV1ResponseMPayload.md)
@@ -458,7 +472,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignfolderListElement](docs/EZEzsignfolderListElement.md)
  - [EZEzsignfolderRequest](docs/EZEzsignfolderRequest.md)
  - [EZEzsignfolderRequestCompound](docs/EZEzsignfolderRequestCompound.md)
- - [EZEzsignfolderRequestCompoundAllOf](docs/EZEzsignfolderRequestCompoundAllOf.md)
  - [EZEzsignfolderResponse](docs/EZEzsignfolderResponse.md)
  - [EZEzsignfolderResponseCompound](docs/EZEzsignfolderResponseCompound.md)
  - [EZEzsignfolderSendV1Request](docs/EZEzsignfolderSendV1Request.md)
@@ -504,6 +517,10 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignerRequestCompound](docs/EZEzsignsignerRequestCompound.md)
  - [EZEzsignsignerRequestCompoundAllOf](docs/EZEzsignsignerRequestCompoundAllOf.md)
  - [EZEzsignsignerRequestCompoundContact](docs/EZEzsignsignerRequestCompoundContact.md)
+ - [EZEzsignsignerResponse](docs/EZEzsignsignerResponse.md)
+ - [EZEzsignsignerResponseCompound](docs/EZEzsignsignerResponseCompound.md)
+ - [EZEzsignsignerResponseCompoundAllOf](docs/EZEzsignsignerResponseCompoundAllOf.md)
+ - [EZEzsignsignerResponseCompoundContact](docs/EZEzsignsignerResponseCompoundContact.md)
  - [EZEzsigntemplatepackageGetListV1Response](docs/EZEzsigntemplatepackageGetListV1Response.md)
  - [EZEzsigntemplatepackageGetListV1ResponseAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md)
  - [EZEzsigntemplatepackageGetListV1ResponseMPayload](docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md)

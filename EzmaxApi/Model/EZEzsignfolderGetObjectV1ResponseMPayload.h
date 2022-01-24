@@ -69,6 +69,12 @@
 /* The date and time at which the Ezsign folder was sent the last time. 
  */
 @property(nonatomic) NSString* dtEzsignfolderSentdate;
+/* The scheduled date and time at which the Ezsignfolder should be archived. 
+ */
+@property(nonatomic) NSString* dtEzsignfolderScheduledarchive;
+/* The scheduled date and time at which the Ezsignfolder should be Destroyed. 
+ */
+@property(nonatomic) NSString* dtEzsignfolderScheduleddestruction;
 
 @property(nonatomic) EZFieldEEzsignfolderStep* eEzsignfolderStep;
 /* The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. 
