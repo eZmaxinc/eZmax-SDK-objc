@@ -15,13 +15,13 @@
 
 
 #import "EZCommonAudit.h"
-#import "EZEzsignfolderResponse.h"
+#import "EZEzsignfolderResponseCompound.h"
 #import "EZFieldEEzsignfolderSendreminderfrequency.h"
 #import "EZFieldEEzsignfolderStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
-@protocol EZEzsignfolderResponse;
-@class EZEzsignfolderResponse;
+@protocol EZEzsignfolderResponseCompound;
+@class EZEzsignfolderResponseCompound;
 @protocol EZFieldEEzsignfolderSendreminderfrequency;
 @class EZFieldEEzsignfolderSendreminderfrequency;
 @protocol EZFieldEEzsignfolderStep;
