@@ -15,9 +15,12 @@
 
 
 #import "EZEzsignsignatureRequest.h"
+#import "EZEzsignsignaturecustomdateRequest.h"
 #import "EZFieldEEzsignsignatureType.h"
 @protocol EZEzsignsignatureRequest;
 @class EZEzsignsignatureRequest;
+@protocol EZEzsignsignaturecustomdateRequest;
+@class EZEzsignsignaturecustomdateRequest;
 @protocol EZFieldEEzsignsignatureType;
 @class EZFieldEEzsignsignatureType;
 
@@ -28,6 +31,12 @@
 
 @interface EZEzsignsignatureRequestCompound : EZObject
 
+/* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\") [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignsignatureCustomdate;
+/* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
+ */
+@property(nonatomic) NSArray<EZEzsignsignaturecustomdateRequest>* aObjEzsignsignaturecustomdate;
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;

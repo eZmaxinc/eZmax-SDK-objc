@@ -187,6 +187,7 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignatureGetObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignsignatureRequest.h>
 #import <EzmaxApi/EZEzsignsignatureRequestCompound.h>
+#import <EzmaxApi/EZEzsignsignaturecustomdateRequest.h>
 #import <EzmaxApi/EZEzsignsignerRequest.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompound.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompoundAllOf.h>
@@ -513,6 +514,7 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignatureGetObjectV1ResponseAllOf](docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md)
  - [EZEzsignsignatureRequest](docs/EZEzsignsignatureRequest.md)
  - [EZEzsignsignatureRequestCompound](docs/EZEzsignsignatureRequestCompound.md)
+ - [EZEzsignsignaturecustomdateRequest](docs/EZEzsignsignaturecustomdateRequest.md)
  - [EZEzsignsignerRequest](docs/EZEzsignsignerRequest.md)
  - [EZEzsignsignerRequestCompound](docs/EZEzsignsignerRequestCompound.md)
  - [EZEzsignsignerRequestCompoundAllOf](docs/EZEzsignsignerRequestCompoundAllOf.md)

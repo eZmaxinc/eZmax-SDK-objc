@@ -349,6 +349,8 @@ EzmaxApi/Model/EZEzsignsignatureRequest.h
 EzmaxApi/Model/EZEzsignsignatureRequest.m
 EzmaxApi/Model/EZEzsignsignatureRequestCompound.h
 EzmaxApi/Model/EZEzsignsignatureRequestCompound.m
+EzmaxApi/Model/EZEzsignsignaturecustomdateRequest.h
+EzmaxApi/Model/EZEzsignsignaturecustomdateRequest.m
 EzmaxApi/Model/EZEzsignsignerRequest.h
 EzmaxApi/Model/EZEzsignsignerRequest.m
 EzmaxApi/Model/EZEzsignsignerRequestCompound.h
@@ -627,6 +629,7 @@ docs/EZEzsignsignatureGetObjectV1Response.md
 docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EZEzsignsignatureRequest.md
 docs/EZEzsignsignatureRequestCompound.md
+docs/EZEzsignsignaturecustomdateRequest.md
 docs/EZEzsignsignerRequest.md
 docs/EZEzsignsignerRequestCompound.md
 docs/EZEzsignsignerRequestCompoundAllOf.md
