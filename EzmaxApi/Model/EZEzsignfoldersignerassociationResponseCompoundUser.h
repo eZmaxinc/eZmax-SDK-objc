@@ -17,28 +17,25 @@
 
 
 
-@protocol EZEzsignsignerResponseCompoundContact
+@protocol EZEzsignfoldersignerassociationResponseCompoundUser
 @end
 
-@interface EZEzsignsignerResponseCompoundContact : EZObject
+@interface EZEzsignfoldersignerassociationResponseCompoundUser : EZObject
 
-/* The First name of the contact 
+/* The unique ID of the User 
  */
-@property(nonatomic) NSString* sContactFirstname;
-/* The Last name of the contact 
- */
-@property(nonatomic) NSString* sContactLastname;
+@property(nonatomic) NSNumber* pkiUserID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;
-/* The email address. [optional]
+/* The First name of the user 
+ */
+@property(nonatomic) NSString* sUserFirstname;
+/* The Last name of the user 
+ */
+@property(nonatomic) NSString* sUserLastname;
+/* The email address. 
  */
 @property(nonatomic) NSString* sEmailAddress;
-/* A phone number in E.164 Format [optional]
- */
-@property(nonatomic) NSString* sPhoneE164;
-/* A phone number in E.164 Format [optional]
- */
-@property(nonatomic) NSString* sPhoneE164Cell;
 
 @end

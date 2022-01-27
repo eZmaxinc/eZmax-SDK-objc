@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsignfoldersignerassociationResponse.h"
-@protocol EZEzsignfoldersignerassociationResponse;
-@class EZEzsignfoldersignerassociationResponse;
+#import "EZEzsignfoldersignerassociationResponseCompound.h"
+@protocol EZEzsignfoldersignerassociationResponseCompound;
+@class EZEzsignfoldersignerassociationResponseCompound;
 
 
 
@@ -26,6 +26,6 @@
 @interface EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload : EZObject
 
 
-@property(nonatomic) NSArray<EZEzsignfoldersignerassociationResponse>* aObjEzsignfoldersignerassociation;
+@property(nonatomic) NSArray<EZEzsignfoldersignerassociationResponseCompound>* aObjEzsignfoldersignerassociation;
 
 @end

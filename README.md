@@ -167,6 +167,7 @@ Import the following:
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationResponse.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationResponseCompound.h>
+#import <EzmaxApi/EZEzsignfoldersignerassociationResponseCompoundUser.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1Response.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseMPayload.h>
@@ -494,6 +495,7 @@ Class | Method | HTTP request | Description
  - [EZEzsignfoldersignerassociationRequestCompoundAllOf](docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [EZEzsignfoldersignerassociationResponse](docs/EZEzsignfoldersignerassociationResponse.md)
  - [EZEzsignfoldersignerassociationResponseCompound](docs/EZEzsignfoldersignerassociationResponseCompound.md)
+ - [EZEzsignfoldersignerassociationResponseCompoundUser](docs/EZEzsignfoldersignerassociationResponseCompoundUser.md)
  - [EZEzsignfoldertypeGetListV1Response](docs/EZEzsignfoldertypeGetListV1Response.md)
  - [EZEzsignfoldertypeGetListV1ResponseAllOf](docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md)
  - [EZEzsignfoldertypeGetListV1ResponseMPayload](docs/EZEzsignfoldertypeGetListV1ResponseMPayload.md)
