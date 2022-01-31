@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiContactID** | **NSNumber*** | The unique ID of the Contact | 
 **sContactFirstname** | **NSString*** | The First name of the contact | 
 **sContactLastname** | **NSString*** | The Last name of the contact | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

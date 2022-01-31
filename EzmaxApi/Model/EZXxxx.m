@@ -1,6 +1,6 @@
-#import "EZEzsignsignerResponseCompoundContact.h"
+#import "EZXxxx.h"
 
-@implementation EZEzsignsignerResponseCompoundContact
+@implementation EZXxxx
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiContactID": @"pkiContactID", @"sContactFirstname": @"sContactFirstname", @"sContactLastname": @"sContactLastname", @"fkiLanguageID": @"fkiLanguageID", @"sEmailAddress": @"sEmailAddress", @"sPhoneE164": @"sPhoneE164", @"sPhoneE164Cell": @"sPhoneE164Cell" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"foo": @"foo", @"bar": @"bar" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEmailAddress", @"sPhoneE164", @"sPhoneE164Cell"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -255,6 +255,7 @@ Import the following:
 #import <EzmaxApi/EZWebhookUserUserCreated.h>
 #import <EzmaxApi/EZWebhookUserUserCreatedAllOf.h>
 #import <EzmaxApi/EZWebsiteRequest.h>
+#import <EzmaxApi/EZXxxx.h>
 // load API classes for accessing endpoints
 #import <EzmaxApi/EZGlobalCustomerApi.h>
 #import <EzmaxApi/EZModuleAuthenticateApi.h>
@@ -583,6 +584,7 @@ Class | Method | HTTP request | Description
  - [EZWebhookUserUserCreated](docs/EZWebhookUserUserCreated.md)
  - [EZWebhookUserUserCreatedAllOf](docs/EZWebhookUserUserCreatedAllOf.md)
  - [EZWebsiteRequest](docs/EZWebsiteRequest.md)
+ - [EZXxxx](docs/EZXxxx.md)
 
 
 ## Documentation For Authorization

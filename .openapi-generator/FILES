@@ -485,6 +485,8 @@ EzmaxApi/Model/EZWebhookUserUserCreatedAllOf.h
 EzmaxApi/Model/EZWebhookUserUserCreatedAllOf.m
 EzmaxApi/Model/EZWebsiteRequest.h
 EzmaxApi/Model/EZWebsiteRequest.m
+EzmaxApi/Model/EZXxxx.h
+EzmaxApi/Model/EZXxxx.m
 README.md
 docs/EZActivesessionGetCurrentV1Response.md
 docs/EZActivesessionGetCurrentV1ResponseAllOf.md
@@ -717,4 +719,5 @@ docs/EZWebhookResponse.md
 docs/EZWebhookUserUserCreated.md
 docs/EZWebhookUserUserCreatedAllOf.md
 docs/EZWebsiteRequest.md
+docs/EZXxxx.md
 git_push.sh

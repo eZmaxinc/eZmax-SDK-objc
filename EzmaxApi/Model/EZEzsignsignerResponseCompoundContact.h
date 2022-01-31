@@ -22,6 +22,9 @@
 
 @interface EZEzsignsignerResponseCompoundContact : EZObject
 
+/* The unique ID of the Contact 
+ */
+@property(nonatomic) NSNumber* pkiContactID;
 /* The First name of the contact 
  */
 @property(nonatomic) NSString* sContactFirstname;
