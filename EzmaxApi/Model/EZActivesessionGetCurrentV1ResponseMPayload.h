@@ -14,6 +14,9 @@
 */
 
 
+#import "EZFieldEActivesessionWeekdaystart.h"
+@protocol EZFieldEActivesessionWeekdaystart;
+@class EZFieldEActivesessionWeekdaystart;
 
 
 
@@ -28,6 +31,8 @@
 /* The type of session used for the API request call 
  */
 @property(nonatomic) NSString* eActivesessionSessiontype;
+
+@property(nonatomic) EZFieldEActivesessionWeekdaystart* eActivesessionWeekdaystart;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;

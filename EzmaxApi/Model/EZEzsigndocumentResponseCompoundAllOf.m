@@ -1,6 +1,6 @@
-#import "EZActivesessionGetCurrentV1ResponseMPayload.h"
+#import "EZEzsigndocumentResponseCompoundAllOf.h"
 
-@implementation EZActivesessionGetCurrentV1ResponseMPayload
+@implementation EZEzsigndocumentResponseCompoundAllOf
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sCustomerCode": @"sCustomerCode", @"eActivesessionSessiontype": @"eActivesessionSessiontype", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"aRegisteredModules": @"a_RegisteredModules", @"aPermissions": @"a_Permissions", @"fkiUserID": @"fkiUserID", @"fkiApikeyID": @"fkiApikeyID" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iEzsigndocumentStepformtotal": @"iEzsigndocumentStepformtotal", @"iEzsigndocumentStepformcurrent": @"iEzsigndocumentStepformcurrent", @"iEzsigndocumentStepsignaturetotal": @"iEzsigndocumentStepsignaturetotal", @"iEzsigndocumentStepsignatureCurrent": @"iEzsigndocumentStepsignatureCurrent", @"aObjEzsignfoldersignerassociationstatus": @"a_objEzsignfoldersignerassociationstatus" }];
 }
 
 /**

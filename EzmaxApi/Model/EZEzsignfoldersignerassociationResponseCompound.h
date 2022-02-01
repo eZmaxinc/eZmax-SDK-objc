@@ -15,10 +15,13 @@
 
 
 #import "EZEzsignfoldersignerassociationResponse.h"
+#import "EZEzsignfoldersignerassociationResponseCompoundAllOf.h"
 #import "EZEzsignfoldersignerassociationResponseCompoundUser.h"
 #import "EZEzsignsignerResponseCompound.h"
 @protocol EZEzsignfoldersignerassociationResponse;
 @class EZEzsignfoldersignerassociationResponse;
+@protocol EZEzsignfoldersignerassociationResponseCompoundAllOf;
+@class EZEzsignfoldersignerassociationResponseCompoundAllOf;
 @protocol EZEzsignfoldersignerassociationResponseCompoundUser;
 @class EZEzsignfoldersignerassociationResponseCompoundUser;
 @protocol EZEzsignsignerResponseCompound;

@@ -17,6 +17,7 @@
 #import "EZCommonAudit.h"
 #import "EZCustomEzsignfoldersignerassociationstatusResponse.h"
 #import "EZEzsigndocumentResponse.h"
+#import "EZEzsigndocumentResponseCompoundAllOf.h"
 #import "EZFieldEEzsigndocumentStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
@@ -24,6 +25,8 @@
 @class EZCustomEzsignfoldersignerassociationstatusResponse;
 @protocol EZEzsigndocumentResponse;
 @class EZEzsigndocumentResponse;
+@protocol EZEzsigndocumentResponseCompoundAllOf;
+@class EZEzsigndocumentResponseCompoundAllOf;
 @protocol EZFieldEEzsigndocumentStep;
 @class EZFieldEEzsigndocumentStep;
 

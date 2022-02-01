@@ -3,6 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**iEzsigndocumentStepformtotal** | **NSNumber*** | The total number of steps in the form filling phase | 
+**iEzsigndocumentStepformcurrent** | **NSNumber*** | The current step in the form filling phase | 
+**iEzsigndocumentStepsignaturetotal** | **NSNumber*** | The total number of steps in the signature filling phase | 
+**iEzsigndocumentStepsignatureCurrent** | **NSNumber*** | The current step in the signature phase | 
+**aObjEzsignfoldersignerassociationstatus** | [**NSArray&lt;EZCustomEzsignfoldersignerassociationstatusResponse&gt;***](EZCustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **dtEzsigndocumentDuedate** | **NSString*** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

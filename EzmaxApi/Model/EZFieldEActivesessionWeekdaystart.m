@@ -1,6 +1,6 @@
-#import "EZActivesessionGetCurrentV1ResponseMPayload.h"
+#import "EZFieldEActivesessionWeekdaystart.h"
 
-@implementation EZActivesessionGetCurrentV1ResponseMPayload
+@implementation EZFieldEActivesessionWeekdaystart
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sCustomerCode": @"sCustomerCode", @"eActivesessionSessiontype": @"eActivesessionSessiontype", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"aRegisteredModules": @"a_RegisteredModules", @"aPermissions": @"a_Permissions", @"fkiUserID": @"fkiUserID", @"fkiApikeyID": @"fkiApikeyID" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
 }
 
 /**

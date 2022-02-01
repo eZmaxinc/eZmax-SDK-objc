@@ -1,6 +1,6 @@
-#import "EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload.h"
+#import "EZEzsignsignatureRequestCompoundAllOf.h"
 
-@implementation EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload
+@implementation EZEzsignsignatureRequestCompoundAllOf
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objUser": @"objUser", @"objEzsignsigner": @"objEzsignsigner", @"pkiEzsignfoldersignerassociationID": @"pkiEzsignfoldersignerassociationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"bEzsignfoldersignerassociationReceivecopy": @"bEzsignfoldersignerassociationReceivecopy" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"bEzsignsignatureCustomdate": @"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate": @"a_objEzsignsignaturecustomdate" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objUser", @"objEzsignsigner", ];
+  NSArray *optionalProperties = @[@"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate"];
   return [optionalProperties containsObject:propertyName];
 }
 

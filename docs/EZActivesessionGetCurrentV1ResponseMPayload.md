@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sCustomerCode** | **NSString*** | The customer code specific to the client in which the API request is being made | 
 **eActivesessionSessiontype** | **NSString*** | The type of session used for the API request call | 
+**eActivesessionWeekdaystart** | [**EZFieldEActivesessionWeekdaystart***](EZFieldEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **NSString*** | The name of the active Company in the current language | 
 **sDepartmentNameX** | **NSString*** | The name of the active Department in the current language | 

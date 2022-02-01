@@ -15,10 +15,13 @@
 
 
 #import "EZEzsignsignatureRequest.h"
+#import "EZEzsignsignatureRequestCompoundAllOf.h"
 #import "EZEzsignsignaturecustomdateRequest.h"
 #import "EZFieldEEzsignsignatureType.h"
 @protocol EZEzsignsignatureRequest;
 @class EZEzsignsignatureRequest;
+@protocol EZEzsignsignatureRequestCompoundAllOf;
+@class EZEzsignsignatureRequestCompoundAllOf;
 @protocol EZEzsignsignaturecustomdateRequest;
 @class EZEzsignsignaturecustomdateRequest;
 @protocol EZFieldEEzsignsignatureType;

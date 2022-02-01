@@ -14,11 +14,8 @@
 */
 
 
-#import "EZEzsignfoldersignerassociationResponseCompound.h"
 #import "EZEzsignfoldersignerassociationResponseCompoundUser.h"
 #import "EZEzsignsignerResponseCompound.h"
-@protocol EZEzsignfoldersignerassociationResponseCompound;
-@class EZEzsignfoldersignerassociationResponseCompound;
 @protocol EZEzsignfoldersignerassociationResponseCompoundUser;
 @class EZEzsignfoldersignerassociationResponseCompoundUser;
 @protocol EZEzsignsignerResponseCompound;
@@ -26,23 +23,14 @@
 
 
 
-@protocol EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload
+@protocol EZEzsignfoldersignerassociationResponseCompoundAllOf
 @end
 
-@interface EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload : EZObject
+@interface EZEzsignfoldersignerassociationResponseCompoundAllOf : EZObject
 
 
 @property(nonatomic) EZEzsignfoldersignerassociationResponseCompoundUser* objUser;
 
 @property(nonatomic) EZEzsignsignerResponseCompound* objEzsignsigner;
-/* The unique ID of the Ezsignfoldersignerassociation 
- */
-@property(nonatomic) NSNumber* pkiEzsignfoldersignerassociationID;
-/* The unique ID of the Ezsignfolder 
- */
-@property(nonatomic) NSNumber* fkiEzsignfolderID;
-/* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. 
- */
-@property(nonatomic) NSNumber* bEzsignfoldersignerassociationReceivecopy;
 
 @end

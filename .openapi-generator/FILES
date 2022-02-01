@@ -219,6 +219,8 @@ EzmaxApi/Model/EZEzsigndocumentResponse.h
 EzmaxApi/Model/EZEzsigndocumentResponse.m
 EzmaxApi/Model/EZEzsigndocumentResponseCompound.h
 EzmaxApi/Model/EZEzsigndocumentResponseCompound.m
+EzmaxApi/Model/EZEzsigndocumentResponseCompoundAllOf.h
+EzmaxApi/Model/EZEzsigndocumentResponseCompoundAllOf.m
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Request.h
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Request.m
 EzmaxApi/Model/EZEzsignfolderCreateObjectV1Response.h
@@ -309,6 +311,8 @@ EzmaxApi/Model/EZEzsignfoldersignerassociationResponse.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationResponse.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompound.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompound.m
+EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompoundAllOf.h
+EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompoundAllOf.m
 EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompoundUser.h
 EzmaxApi/Model/EZEzsignfoldersignerassociationResponseCompoundUser.m
 EzmaxApi/Model/EZEzsignfoldertypeGetListV1Response.h
@@ -351,6 +355,8 @@ EzmaxApi/Model/EZEzsignsignatureRequest.h
 EzmaxApi/Model/EZEzsignsignatureRequest.m
 EzmaxApi/Model/EZEzsignsignatureRequestCompound.h
 EzmaxApi/Model/EZEzsignsignatureRequestCompound.m
+EzmaxApi/Model/EZEzsignsignatureRequestCompoundAllOf.h
+EzmaxApi/Model/EZEzsignsignatureRequestCompoundAllOf.m
 EzmaxApi/Model/EZEzsignsignaturecustomdateRequest.h
 EzmaxApi/Model/EZEzsignsignaturecustomdateRequest.m
 EzmaxApi/Model/EZEzsignsignerRequest.h
@@ -379,6 +385,8 @@ EzmaxApi/Model/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h
 EzmaxApi/Model/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.m
 EzmaxApi/Model/EZEzsigntemplatepackageListElement.h
 EzmaxApi/Model/EZEzsigntemplatepackageListElement.m
+EzmaxApi/Model/EZFieldEActivesessionWeekdaystart.h
+EzmaxApi/Model/EZFieldEActivesessionWeekdaystart.m
 EzmaxApi/Model/EZFieldEEzsigndocumentStep.h
 EzmaxApi/Model/EZFieldEEzsigndocumentStep.m
 EzmaxApi/Model/EZFieldEEzsignfolderSendreminderfrequency.h
@@ -568,6 +576,7 @@ docs/EZEzsigndocumentRequest.md
 docs/EZEzsigndocumentRequestCompound.md
 docs/EZEzsigndocumentResponse.md
 docs/EZEzsigndocumentResponseCompound.md
+docs/EZEzsigndocumentResponseCompoundAllOf.md
 docs/EZEzsignfolderCreateObjectV1Request.md
 docs/EZEzsignfolderCreateObjectV1Response.md
 docs/EZEzsignfolderCreateObjectV1ResponseAllOf.md
@@ -613,6 +622,7 @@ docs/EZEzsignfoldersignerassociationRequestCompound.md
 docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EZEzsignfoldersignerassociationResponse.md
 docs/EZEzsignfoldersignerassociationResponseCompound.md
+docs/EZEzsignfoldersignerassociationResponseCompoundAllOf.md
 docs/EZEzsignfoldersignerassociationResponseCompoundUser.md
 docs/EZEzsignfoldertypeGetListV1Response.md
 docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md
@@ -634,6 +644,7 @@ docs/EZEzsignsignatureGetObjectV1Response.md
 docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EZEzsignsignatureRequest.md
 docs/EZEzsignsignatureRequestCompound.md
+docs/EZEzsignsignatureRequestCompoundAllOf.md
 docs/EZEzsignsignaturecustomdateRequest.md
 docs/EZEzsignsignerRequest.md
 docs/EZEzsignsignerRequestCompound.md
@@ -648,6 +659,7 @@ docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EZEzsigntemplatepackageListElement.md
+docs/EZFieldEActivesessionWeekdaystart.md
 docs/EZFieldEEzsigndocumentStep.md
 docs/EZFieldEEzsignfolderSendreminderfrequency.md
 docs/EZFieldEEzsignfolderStep.md

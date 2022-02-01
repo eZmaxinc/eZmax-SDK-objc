@@ -122,6 +122,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentRequestCompound.h>
 #import <EzmaxApi/EZEzsigndocumentResponse.h>
 #import <EzmaxApi/EZEzsigndocumentResponseCompound.h>
+#import <EzmaxApi/EZEzsigndocumentResponseCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Request.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1Response.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1ResponseAllOf.h>
@@ -167,6 +168,7 @@ Import the following:
 #import <EzmaxApi/EZEzsignfoldersignerassociationRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationResponse.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationResponseCompound.h>
+#import <EzmaxApi/EZEzsignfoldersignerassociationResponseCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignfoldersignerassociationResponseCompoundUser.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1Response.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseAllOf.h>
@@ -188,6 +190,7 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignatureGetObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignsignatureRequest.h>
 #import <EzmaxApi/EZEzsignsignatureRequestCompound.h>
+#import <EzmaxApi/EZEzsignsignatureRequestCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignsignaturecustomdateRequest.h>
 #import <EzmaxApi/EZEzsignsignerRequest.h>
 #import <EzmaxApi/EZEzsignsignerRequestCompound.h>
@@ -202,6 +205,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackageListElement.h>
+#import <EzmaxApi/EZFieldEActivesessionWeekdaystart.h>
 #import <EzmaxApi/EZFieldEEzsigndocumentStep.h>
 #import <EzmaxApi/EZFieldEEzsignfolderSendreminderfrequency.h>
 #import <EzmaxApi/EZFieldEEzsignfolderStep.h>
@@ -451,6 +455,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentRequestCompound](docs/EZEzsigndocumentRequestCompound.md)
  - [EZEzsigndocumentResponse](docs/EZEzsigndocumentResponse.md)
  - [EZEzsigndocumentResponseCompound](docs/EZEzsigndocumentResponseCompound.md)
+ - [EZEzsigndocumentResponseCompoundAllOf](docs/EZEzsigndocumentResponseCompoundAllOf.md)
  - [EZEzsignfolderCreateObjectV1Request](docs/EZEzsignfolderCreateObjectV1Request.md)
  - [EZEzsignfolderCreateObjectV1Response](docs/EZEzsignfolderCreateObjectV1Response.md)
  - [EZEzsignfolderCreateObjectV1ResponseAllOf](docs/EZEzsignfolderCreateObjectV1ResponseAllOf.md)
@@ -496,6 +501,7 @@ Class | Method | HTTP request | Description
  - [EZEzsignfoldersignerassociationRequestCompoundAllOf](docs/EZEzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [EZEzsignfoldersignerassociationResponse](docs/EZEzsignfoldersignerassociationResponse.md)
  - [EZEzsignfoldersignerassociationResponseCompound](docs/EZEzsignfoldersignerassociationResponseCompound.md)
+ - [EZEzsignfoldersignerassociationResponseCompoundAllOf](docs/EZEzsignfoldersignerassociationResponseCompoundAllOf.md)
  - [EZEzsignfoldersignerassociationResponseCompoundUser](docs/EZEzsignfoldersignerassociationResponseCompoundUser.md)
  - [EZEzsignfoldertypeGetListV1Response](docs/EZEzsignfoldertypeGetListV1Response.md)
  - [EZEzsignfoldertypeGetListV1ResponseAllOf](docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md)
@@ -517,6 +523,7 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignatureGetObjectV1ResponseAllOf](docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md)
  - [EZEzsignsignatureRequest](docs/EZEzsignsignatureRequest.md)
  - [EZEzsignsignatureRequestCompound](docs/EZEzsignsignatureRequestCompound.md)
+ - [EZEzsignsignatureRequestCompoundAllOf](docs/EZEzsignsignatureRequestCompoundAllOf.md)
  - [EZEzsignsignaturecustomdateRequest](docs/EZEzsignsignaturecustomdateRequest.md)
  - [EZEzsignsignerRequest](docs/EZEzsignsignerRequest.md)
  - [EZEzsignsignerRequestCompound](docs/EZEzsignsignerRequestCompound.md)
@@ -531,6 +538,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackageGetListV1ResponseMPayload](docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md)
  - [EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
  - [EZEzsigntemplatepackageListElement](docs/EZEzsigntemplatepackageListElement.md)
+ - [EZFieldEActivesessionWeekdaystart](docs/EZFieldEActivesessionWeekdaystart.md)
  - [EZFieldEEzsigndocumentStep](docs/EZFieldEEzsigndocumentStep.md)
  - [EZFieldEEzsignfolderSendreminderfrequency](docs/EZFieldEEzsignfolderSendreminderfrequency.md)
  - [EZFieldEEzsignfolderStep](docs/EZFieldEEzsignfolderStep.md)
