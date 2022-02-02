@@ -1,6 +1,6 @@
-#import "EZXxxx.h"
+#import "EZActivesessionResponse.h"
 
-@implementation EZXxxx
+@implementation EZActivesessionResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"foo": @"foo", @"bar": @"bar" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eActivesessionSessiontype": @"eActivesessionSessiontype", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"bActivesessionDebug": @"bActivesessionDebug", @"pksCustomerCode": @"pksCustomerCode" }];
 }
 
 /**

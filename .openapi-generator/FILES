@@ -65,6 +65,16 @@ EzmaxApi/Model/EZActivesessionGetCurrentV1ResponseAllOf.h
 EzmaxApi/Model/EZActivesessionGetCurrentV1ResponseAllOf.m
 EzmaxApi/Model/EZActivesessionGetCurrentV1ResponseMPayload.h
 EzmaxApi/Model/EZActivesessionGetCurrentV1ResponseMPayload.m
+EzmaxApi/Model/EZActivesessionResponse.h
+EzmaxApi/Model/EZActivesessionResponse.m
+EzmaxApi/Model/EZActivesessionResponseCompound.h
+EzmaxApi/Model/EZActivesessionResponseCompound.m
+EzmaxApi/Model/EZActivesessionResponseCompoundAllOf.h
+EzmaxApi/Model/EZActivesessionResponseCompoundAllOf.m
+EzmaxApi/Model/EZActivesessionResponseCompoundApikey.h
+EzmaxApi/Model/EZActivesessionResponseCompoundApikey.m
+EzmaxApi/Model/EZActivesessionResponseCompoundUser.h
+EzmaxApi/Model/EZActivesessionResponseCompoundUser.m
 EzmaxApi/Model/EZAddressRequest.h
 EzmaxApi/Model/EZAddressRequest.m
 EzmaxApi/Model/EZApikeyCreateObjectV1Request.h
@@ -385,6 +395,8 @@ EzmaxApi/Model/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h
 EzmaxApi/Model/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.m
 EzmaxApi/Model/EZEzsigntemplatepackageListElement.h
 EzmaxApi/Model/EZEzsigntemplatepackageListElement.m
+EzmaxApi/Model/EZFieldEActivesessionSessiontype.h
+EzmaxApi/Model/EZFieldEActivesessionSessiontype.m
 EzmaxApi/Model/EZFieldEActivesessionWeekdaystart.h
 EzmaxApi/Model/EZFieldEActivesessionWeekdaystart.m
 EzmaxApi/Model/EZFieldEEzsigndocumentStep.h
@@ -493,12 +505,15 @@ EzmaxApi/Model/EZWebhookUserUserCreatedAllOf.h
 EzmaxApi/Model/EZWebhookUserUserCreatedAllOf.m
 EzmaxApi/Model/EZWebsiteRequest.h
 EzmaxApi/Model/EZWebsiteRequest.m
-EzmaxApi/Model/EZXxxx.h
-EzmaxApi/Model/EZXxxx.m
 README.md
 docs/EZActivesessionGetCurrentV1Response.md
 docs/EZActivesessionGetCurrentV1ResponseAllOf.md
 docs/EZActivesessionGetCurrentV1ResponseMPayload.md
+docs/EZActivesessionResponse.md
+docs/EZActivesessionResponseCompound.md
+docs/EZActivesessionResponseCompoundAllOf.md
+docs/EZActivesessionResponseCompoundApikey.md
+docs/EZActivesessionResponseCompoundUser.md
 docs/EZAddressRequest.md
 docs/EZApikeyCreateObjectV1Request.md
 docs/EZApikeyCreateObjectV1Response.md
@@ -659,6 +674,7 @@ docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EZEzsigntemplatepackageListElement.md
+docs/EZFieldEActivesessionSessiontype.md
 docs/EZFieldEActivesessionWeekdaystart.md
 docs/EZFieldEEzsigndocumentStep.md
 docs/EZFieldEEzsignfolderSendreminderfrequency.md
@@ -731,5 +747,4 @@ docs/EZWebhookResponse.md
 docs/EZWebhookUserUserCreated.md
 docs/EZWebhookUserUserCreatedAllOf.md
 docs/EZWebsiteRequest.md
-docs/EZXxxx.md
 git_push.sh

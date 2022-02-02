@@ -14,13 +14,16 @@
 */
 
 
-#import "EZActivesessionResponseCompound.h"
+#import "EZActivesessionResponse.h"
+#import "EZActivesessionResponseCompoundAllOf.h"
 #import "EZActivesessionResponseCompoundApikey.h"
 #import "EZActivesessionResponseCompoundUser.h"
 #import "EZFieldEActivesessionSessiontype.h"
 #import "EZFieldEActivesessionWeekdaystart.h"
-@protocol EZActivesessionResponseCompound;
-@class EZActivesessionResponseCompound;
+@protocol EZActivesessionResponse;
+@class EZActivesessionResponse;
+@protocol EZActivesessionResponseCompoundAllOf;
+@class EZActivesessionResponseCompoundAllOf;
 @protocol EZActivesessionResponseCompoundApikey;
 @class EZActivesessionResponseCompoundApikey;
 @protocol EZActivesessionResponseCompoundUser;
@@ -32,10 +35,10 @@
 
 
 
-@protocol EZActivesessionGetCurrentV1ResponseMPayload
+@protocol EZActivesessionResponseCompound
 @end
 
-@interface EZActivesessionGetCurrentV1ResponseMPayload : EZObject
+@interface EZActivesessionResponseCompound : EZObject
 
 /* An array of permissions granted to the user or api key 
  */

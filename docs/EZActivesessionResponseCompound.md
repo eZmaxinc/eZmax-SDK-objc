@@ -1,4 +1,4 @@
-# EZActivesessionGetCurrentV1ResponseMPayload
+# EZActivesessionResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

@@ -14,17 +14,8 @@
 */
 
 
-#import "EZActivesessionResponseCompound.h"
-#import "EZActivesessionResponseCompoundApikey.h"
-#import "EZActivesessionResponseCompoundUser.h"
 #import "EZFieldEActivesessionSessiontype.h"
 #import "EZFieldEActivesessionWeekdaystart.h"
-@protocol EZActivesessionResponseCompound;
-@class EZActivesessionResponseCompound;
-@protocol EZActivesessionResponseCompoundApikey;
-@class EZActivesessionResponseCompoundApikey;
-@protocol EZActivesessionResponseCompoundUser;
-@class EZActivesessionResponseCompoundUser;
 @protocol EZFieldEActivesessionSessiontype;
 @class EZFieldEActivesessionSessiontype;
 @protocol EZFieldEActivesessionWeekdaystart;
@@ -32,23 +23,11 @@
 
 
 
-@protocol EZActivesessionGetCurrentV1ResponseMPayload
+@protocol EZActivesessionResponse
 @end
 
-@interface EZActivesessionGetCurrentV1ResponseMPayload : EZObject
+@interface EZActivesessionResponse : EZObject
 
-/* An array of permissions granted to the user or api key 
- */
-@property(nonatomic) NSArray<NSNumber*>* aPkiPermissionID;
-
-@property(nonatomic) EZActivesessionResponseCompoundUser* objUserReal;
-
-@property(nonatomic) EZActivesessionResponseCompoundUser* objUserCloned;
-
-@property(nonatomic) EZActivesessionResponseCompoundApikey* objApikey;
-/* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. 
- */
-@property(nonatomic) NSArray<NSString*>* aEModuleInternalname;
 
 @property(nonatomic) EZFieldEActivesessionSessiontype* eActivesessionSessiontype;
 

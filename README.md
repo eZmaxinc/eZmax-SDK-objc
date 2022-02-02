@@ -45,6 +45,11 @@ Import the following:
 #import <EzmaxApi/EZActivesessionGetCurrentV1Response.h>
 #import <EzmaxApi/EZActivesessionGetCurrentV1ResponseAllOf.h>
 #import <EzmaxApi/EZActivesessionGetCurrentV1ResponseMPayload.h>
+#import <EzmaxApi/EZActivesessionResponse.h>
+#import <EzmaxApi/EZActivesessionResponseCompound.h>
+#import <EzmaxApi/EZActivesessionResponseCompoundAllOf.h>
+#import <EzmaxApi/EZActivesessionResponseCompoundApikey.h>
+#import <EzmaxApi/EZActivesessionResponseCompoundUser.h>
 #import <EzmaxApi/EZAddressRequest.h>
 #import <EzmaxApi/EZApikeyCreateObjectV1Request.h>
 #import <EzmaxApi/EZApikeyCreateObjectV1Response.h>
@@ -205,6 +210,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackageListElement.h>
+#import <EzmaxApi/EZFieldEActivesessionSessiontype.h>
 #import <EzmaxApi/EZFieldEActivesessionWeekdaystart.h>
 #import <EzmaxApi/EZFieldEEzsigndocumentStep.h>
 #import <EzmaxApi/EZFieldEEzsignfolderSendreminderfrequency.h>
@@ -259,7 +265,6 @@ Import the following:
 #import <EzmaxApi/EZWebhookUserUserCreated.h>
 #import <EzmaxApi/EZWebhookUserUserCreatedAllOf.h>
 #import <EzmaxApi/EZWebsiteRequest.h>
-#import <EzmaxApi/EZXxxx.h>
 // load API classes for accessing endpoints
 #import <EzmaxApi/EZGlobalCustomerApi.h>
 #import <EzmaxApi/EZModuleAuthenticateApi.h>
@@ -378,6 +383,11 @@ Class | Method | HTTP request | Description
  - [EZActivesessionGetCurrentV1Response](docs/EZActivesessionGetCurrentV1Response.md)
  - [EZActivesessionGetCurrentV1ResponseAllOf](docs/EZActivesessionGetCurrentV1ResponseAllOf.md)
  - [EZActivesessionGetCurrentV1ResponseMPayload](docs/EZActivesessionGetCurrentV1ResponseMPayload.md)
+ - [EZActivesessionResponse](docs/EZActivesessionResponse.md)
+ - [EZActivesessionResponseCompound](docs/EZActivesessionResponseCompound.md)
+ - [EZActivesessionResponseCompoundAllOf](docs/EZActivesessionResponseCompoundAllOf.md)
+ - [EZActivesessionResponseCompoundApikey](docs/EZActivesessionResponseCompoundApikey.md)
+ - [EZActivesessionResponseCompoundUser](docs/EZActivesessionResponseCompoundUser.md)
  - [EZAddressRequest](docs/EZAddressRequest.md)
  - [EZApikeyCreateObjectV1Request](docs/EZApikeyCreateObjectV1Request.md)
  - [EZApikeyCreateObjectV1Response](docs/EZApikeyCreateObjectV1Response.md)
@@ -538,6 +548,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackageGetListV1ResponseMPayload](docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md)
  - [EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
  - [EZEzsigntemplatepackageListElement](docs/EZEzsigntemplatepackageListElement.md)
+ - [EZFieldEActivesessionSessiontype](docs/EZFieldEActivesessionSessiontype.md)
  - [EZFieldEActivesessionWeekdaystart](docs/EZFieldEActivesessionWeekdaystart.md)
  - [EZFieldEEzsigndocumentStep](docs/EZFieldEEzsigndocumentStep.md)
  - [EZFieldEEzsignfolderSendreminderfrequency](docs/EZFieldEEzsignfolderSendreminderfrequency.md)
@@ -592,7 +603,6 @@ Class | Method | HTTP request | Description
  - [EZWebhookUserUserCreated](docs/EZWebhookUserUserCreated.md)
  - [EZWebhookUserUserCreatedAllOf](docs/EZWebhookUserUserCreatedAllOf.md)
  - [EZWebsiteRequest](docs/EZWebsiteRequest.md)
- - [EZXxxx](docs/EZXxxx.md)
 
 
 ## Documentation For Authorization

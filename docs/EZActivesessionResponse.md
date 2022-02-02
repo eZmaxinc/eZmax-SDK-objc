@@ -1,13 +1,8 @@
-# EZActivesessionGetCurrentV1ResponseMPayload
+# EZActivesessionResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aPkiPermissionID** | **NSArray&lt;NSNumber*&gt;*** | An array of permissions granted to the user or api key | 
-**objUserReal** | [**EZActivesessionResponseCompoundUser***](EZActivesessionResponseCompoundUser.md) |  | 
-**objUserCloned** | [**EZActivesessionResponseCompoundUser***](EZActivesessionResponseCompoundUser.md) |  | [optional] 
-**objApikey** | [**EZActivesessionResponseCompoundApikey***](EZActivesessionResponseCompoundApikey.md) |  | [optional] 
-**aEModuleInternalname** | **NSArray&lt;NSString*&gt;*** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 **eActivesessionSessiontype** | [**EZFieldEActivesessionSessiontype***](EZFieldEActivesessionSessiontype.md) |  | 
 **eActivesessionWeekdaystart** | [**EZFieldEActivesessionWeekdaystart***](EZFieldEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

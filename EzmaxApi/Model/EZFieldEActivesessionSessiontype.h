@@ -17,14 +17,10 @@
 
 
 
-@protocol EZXxxx
+@protocol EZFieldEActivesessionSessiontype
 @end
 
-@interface EZXxxx : EZObject
+@interface EZFieldEActivesessionSessiontype : EZObject
 
-
-@property(nonatomic) NSNumber* foo;
-
-@property(nonatomic) NSNumber* bar;
 
 @end

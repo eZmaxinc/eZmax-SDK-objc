@@ -1,6 +1,6 @@
-#import "EZActivesessionGetCurrentV1ResponseMPayload.h"
+#import "EZActivesessionResponseCompound.h"
 
-@implementation EZActivesessionGetCurrentV1ResponseMPayload
+@implementation EZActivesessionResponseCompound
 
 - (instancetype)init {
   self = [super init];
