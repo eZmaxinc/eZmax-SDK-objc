@@ -19,7 +19,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentUrl": @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair": @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigndocumentID": @"pkiEzsigndocumentID", @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentUrl": @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair": @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
 }
 
 /**
@@ -29,7 +29,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", ];
+  NSArray *optionalProperties = @[@"pkiEzsigndocumentID", @"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", ];
   return [optionalProperties containsObject:propertyName];
 }
 

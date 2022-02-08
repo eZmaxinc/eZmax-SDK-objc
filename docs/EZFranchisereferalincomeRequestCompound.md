@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objAddress** | [**EZAddressRequest***](EZAddressRequest.md) |  | 
 **aObjContact** | [**NSArray&lt;EZContactRequestCompound&gt;***](EZContactRequestCompound.md) |  | 
+**pkiFranchisereferalincomeID** | **NSNumber*** | The unique ID of the Franchisereferalincome | [optional] 
 **fkiFranchisebrokerID** | **NSNumber*** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **NSNumber*** | The unique ID of the Franchisereferalincomeprogram | 
 **fkiPeriodID** | **NSNumber*** | The unique ID of the Period | 

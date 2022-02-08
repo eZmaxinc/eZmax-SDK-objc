@@ -28,6 +28,9 @@
 
 @interface EZEzsignfolderRequestCompound : EZObject
 
+/* The unique ID of the Ezsignfolder [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignfolderID;
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;

@@ -38,6 +38,9 @@
 @property(nonatomic) EZAddressRequest* objAddress;
 
 @property(nonatomic) NSArray<EZContactRequestCompound>* aObjContact;
+/* The unique ID of the Franchisereferalincome [optional]
+ */
+@property(nonatomic) NSNumber* pkiFranchisereferalincomeID;
 /* The unique ID of the Franchisebroker 
  */
 @property(nonatomic) NSNumber* fkiFranchisebrokerID;

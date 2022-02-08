@@ -1,6 +1,6 @@
-#import "EZApikeyRequest.h"
+#import "EZEzsignfolderEditObjectV1Request.h"
 
-@implementation EZApikeyRequest
+@implementation EZEzsignfolderEditObjectV1Request
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiApikeyID": @"pkiApikeyID", @"fkiUserID": @"fkiUserID", @"objApikeyDescription": @"objApikeyDescription" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objEzsignfolder": @"objEzsignfolder" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiApikeyID", ];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

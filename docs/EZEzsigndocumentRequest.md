@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiEzsigndocumentID** | **NSNumber*** | The unique ID of the Ezsigndocument | [optional] 
 **eEzsigndocumentSource** | **NSString*** | Indicates where to look for the document binary content. | 
 **eEzsigndocumentFormat** | **NSString*** | Indicates the format of the document. | 
 **sEzsigndocumentBase64** | **NSData*** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. | [optional] 

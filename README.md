@@ -133,6 +133,8 @@ Import the following:
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfolderDeleteObjectV1Response.h>
+#import <EzmaxApi/EZEzsignfolderEditObjectV1Request.h>
+#import <EzmaxApi/EZEzsignfolderEditObjectV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.h>
@@ -355,6 +357,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *EZObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
+*EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
@@ -471,6 +474,8 @@ Class | Method | HTTP request | Description
  - [EZEzsignfolderCreateObjectV1ResponseAllOf](docs/EZEzsignfolderCreateObjectV1ResponseAllOf.md)
  - [EZEzsignfolderCreateObjectV1ResponseMPayload](docs/EZEzsignfolderCreateObjectV1ResponseMPayload.md)
  - [EZEzsignfolderDeleteObjectV1Response](docs/EZEzsignfolderDeleteObjectV1Response.md)
+ - [EZEzsignfolderEditObjectV1Request](docs/EZEzsignfolderEditObjectV1Request.md)
+ - [EZEzsignfolderEditObjectV1Response](docs/EZEzsignfolderEditObjectV1Response.md)
  - [EZEzsignfolderGetEzsigndocumentsV1Response](docs/EZEzsignfolderGetEzsigndocumentsV1Response.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)

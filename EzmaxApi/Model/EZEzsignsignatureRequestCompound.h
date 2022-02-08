@@ -40,6 +40,9 @@
 /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
  */
 @property(nonatomic) NSArray<EZEzsignsignaturecustomdateRequest>* aObjEzsignsignaturecustomdate;
+/* The unique ID of the Ezsignsignature [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignsignatureID;
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;

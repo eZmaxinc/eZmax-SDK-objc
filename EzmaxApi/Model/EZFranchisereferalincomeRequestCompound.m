@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objAddress": @"objAddress", @"aObjContact": @"a_objContact", @"fkiFranchisebrokerID": @"fkiFranchisebrokerID", @"fkiFranchisereferalincomeprogramID": @"fkiFranchisereferalincomeprogramID", @"fkiPeriodID": @"fkiPeriodID", @"dFranchisereferalincomeLoan": @"dFranchisereferalincomeLoan", @"dFranchisereferalincomeFranchiseamount": @"dFranchisereferalincomeFranchiseamount", @"dFranchisereferalincomeFranchisoramount": @"dFranchisereferalincomeFranchisoramount", @"dFranchisereferalincomeAgentamount": @"dFranchisereferalincomeAgentamount", @"dtFranchisereferalincomeDisbursed": @"dtFranchisereferalincomeDisbursed", @"tFranchisereferalincomeComment": @"tFranchisereferalincomeComment", @"fkiFranchiseofficeID": @"fkiFranchiseofficeID", @"sFranchisereferalincomeRemoteid": @"sFranchisereferalincomeRemoteid" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objAddress": @"objAddress", @"aObjContact": @"a_objContact", @"pkiFranchisereferalincomeID": @"pkiFranchisereferalincomeID", @"fkiFranchisebrokerID": @"fkiFranchisebrokerID", @"fkiFranchisereferalincomeprogramID": @"fkiFranchisereferalincomeprogramID", @"fkiPeriodID": @"fkiPeriodID", @"dFranchisereferalincomeLoan": @"dFranchisereferalincomeLoan", @"dFranchisereferalincomeFranchiseamount": @"dFranchisereferalincomeFranchiseamount", @"dFranchisereferalincomeFranchisoramount": @"dFranchisereferalincomeFranchisoramount", @"dFranchisereferalincomeAgentamount": @"dFranchisereferalincomeAgentamount", @"dtFranchisereferalincomeDisbursed": @"dtFranchisereferalincomeDisbursed", @"tFranchisereferalincomeComment": @"tFranchisereferalincomeComment", @"fkiFranchiseofficeID": @"fkiFranchiseofficeID", @"sFranchisereferalincomeRemoteid": @"sFranchisereferalincomeRemoteid" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiFranchisereferalincomeID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

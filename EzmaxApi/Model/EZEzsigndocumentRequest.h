@@ -22,6 +22,9 @@
 
 @interface EZEzsigndocumentRequest : EZObject
 
+/* The unique ID of the Ezsigndocument [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsigndocumentID;
 /* Indicates where to look for the document binary content. 
  */
 @property(nonatomic) NSString* eEzsigndocumentSource;

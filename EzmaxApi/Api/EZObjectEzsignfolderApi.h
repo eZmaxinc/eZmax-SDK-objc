@@ -3,6 +3,8 @@
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
+#import "EZEzsignfolderEditObjectV1Request.h"
+#import "EZEzsignfolderEditObjectV1Response.h"
 #import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
@@ -59,6 +61,21 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignfolderDeleteObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZEzsignfolderDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit an Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderEditObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist"
+///
+/// @return EZEzsignfolderEditObjectV1Response*
+-(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderEditObjectV1Request: (EZEzsignfolderEditObjectV1Request*) ezsignfolderEditObjectV1Request
+    completionHandler: (void (^)(EZEzsignfolderEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfolder's Ezsigndocuments

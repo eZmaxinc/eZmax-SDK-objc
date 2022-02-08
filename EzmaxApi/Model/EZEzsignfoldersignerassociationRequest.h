@@ -22,6 +22,9 @@
 
 @interface EZEzsignfoldersignerassociationRequest : EZObject
 
+/* The unique ID of the Ezsignfoldersignerassociation [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignfoldersignerassociationID;
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiApikeyID** | **NSNumber*** | The unique ID of the Apikey | [optional] 
 **fkiUserID** | **NSNumber*** | The unique ID of the User | 
 **objApikeyDescription** | [**EZMultilingualApikeyDescription***](EZMultilingualApikeyDescription.md) |  | 
 

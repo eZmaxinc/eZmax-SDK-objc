@@ -28,6 +28,9 @@
 
 @interface EZApikeyRequestCompound : EZObject
 
+/* The unique ID of the Apikey [optional]
+ */
+@property(nonatomic) NSNumber* pkiApikeyID;
 /* The unique ID of the User 
  */
 @property(nonatomic) NSNumber* fkiUserID;

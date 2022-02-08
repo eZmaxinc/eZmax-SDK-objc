@@ -33,6 +33,9 @@
 
 
 @property(nonatomic) EZEzsignsignerRequestCompound* objEzsignsigner;
+/* The unique ID of the Ezsignfoldersignerassociation [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignfoldersignerassociationID;
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
