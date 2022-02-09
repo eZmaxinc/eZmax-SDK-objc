@@ -14,6 +14,8 @@
 #import "EZEzsigndocumentGetObjectV1Response.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Request.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
+#import "EZEzsigndocumentPatchObjectV1Request.h"
+#import "EZEzsigndocumentPatchObjectV1Response.h"
 #import "EZApi.h"
 
 /**
@@ -169,6 +171,22 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentGetWordsPositionsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentGetWordsPositionsV1Request: (EZEzsigndocumentGetWordsPositionsV1Request*) ezsigndocumentGetWordsPositionsV1Request
     completionHandler: (void (^)(EZEzsigndocumentGetWordsPositionsV1Response* output, NSError* error)) handler;
+
+
+/// Patch an existing Ezsigndocument
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentPatchObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentPatchObjectV1Response*
+-(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentPatchObjectV1Request: (EZEzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
+    completionHandler: (void (^)(EZEzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
 
 
 

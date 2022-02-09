@@ -123,8 +123,11 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1Request.h>
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigndocumentPatchObjectV1Request.h>
+#import <EzmaxApi/EZEzsigndocumentPatchObjectV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentRequest.h>
 #import <EzmaxApi/EZEzsigndocumentRequestCompound.h>
+#import <EzmaxApi/EZEzsigndocumentRequestPatch.h>
 #import <EzmaxApi/EZEzsigndocumentResponse.h>
 #import <EzmaxApi/EZEzsigndocumentResponseCompound.h>
 #import <EzmaxApi/EZEzsigndocumentResponseCompoundAllOf.h>
@@ -355,9 +358,10 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 *EZObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-*EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an Ezsignfolder
+*EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
@@ -464,8 +468,11 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentGetWordsPositionsV1Request](docs/EZEzsigndocumentGetWordsPositionsV1Request.md)
  - [EZEzsigndocumentGetWordsPositionsV1Response](docs/EZEzsigndocumentGetWordsPositionsV1Response.md)
  - [EZEzsigndocumentGetWordsPositionsV1ResponseAllOf](docs/EZEzsigndocumentGetWordsPositionsV1ResponseAllOf.md)
+ - [EZEzsigndocumentPatchObjectV1Request](docs/EZEzsigndocumentPatchObjectV1Request.md)
+ - [EZEzsigndocumentPatchObjectV1Response](docs/EZEzsigndocumentPatchObjectV1Response.md)
  - [EZEzsigndocumentRequest](docs/EZEzsigndocumentRequest.md)
  - [EZEzsigndocumentRequestCompound](docs/EZEzsigndocumentRequestCompound.md)
+ - [EZEzsigndocumentRequestPatch](docs/EZEzsigndocumentRequestPatch.md)
  - [EZEzsigndocumentResponse](docs/EZEzsigndocumentResponse.md)
  - [EZEzsigndocumentResponseCompound](docs/EZEzsigndocumentResponseCompound.md)
  - [EZEzsigndocumentResponseCompoundAllOf](docs/EZEzsigndocumentResponseCompoundAllOf.md)

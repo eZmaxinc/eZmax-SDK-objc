@@ -63,14 +63,15 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsignfolderDeleteObjectV1Response* output, NSError* error)) handler;
 
 
-/// Edit an Ezsignfolder
+/// Modify an existing Ezsignfolder
 /// 
 ///
 /// @param pkiEzsignfolderID 
 /// @param ezsignfolderEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The element you are trying to work on does not exist"
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
 ///
 /// @return EZEzsignfolderEditObjectV1Response*
 -(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID

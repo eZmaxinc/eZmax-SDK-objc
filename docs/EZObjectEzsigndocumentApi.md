@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**ezsigndocumentGetFormDataV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**ezsigndocumentGetWordsPositionsV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
+[**ezsigndocumentPatchObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 
 
 # **ezsigndocumentApplyEzsigntemplateV1**
@@ -524,6 +525,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigndocumentGetWordsPositionsV1Response***](EZEzsigndocumentGetWordsPositionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentPatchObjectV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentPatchObjectV1Request: (EZEzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
+        completionHandler: (void (^)(EZEzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
+```
+
+Patch an existing Ezsigndocument
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EZEzsigndocumentPatchObjectV1Request* ezsigndocumentPatchObjectV1Request = [[EZEzsigndocumentPatchObjectV1Request alloc] init]; // 
+
+EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init];
+
+// Patch an existing Ezsigndocument
+[apiInstance ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentPatchObjectV1Request:ezsigndocumentPatchObjectV1Request
+          completionHandler: ^(EZEzsigndocumentPatchObjectV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigndocumentApi->ezsigndocumentPatchObjectV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentPatchObjectV1Request** | [**EZEzsigndocumentPatchObjectV1Request***](EZEzsigndocumentPatchObjectV1Request.md)|  | 
+
+### Return type
+
+[**EZEzsigndocumentPatchObjectV1Response***](EZEzsigndocumentPatchObjectV1Response.md)
 
 ### Authorization
 
