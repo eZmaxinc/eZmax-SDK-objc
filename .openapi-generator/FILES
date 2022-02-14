@@ -367,6 +367,10 @@ EzmaxApi/Model/EZEzsignsignatureCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZEzsignsignatureCreateObjectV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsignsignatureDeleteObjectV1Response.h
 EzmaxApi/Model/EZEzsignsignatureDeleteObjectV1Response.m
+EzmaxApi/Model/EZEzsignsignatureEditObjectV1Request.h
+EzmaxApi/Model/EZEzsignsignatureEditObjectV1Request.m
+EzmaxApi/Model/EZEzsignsignatureEditObjectV1Response.h
+EzmaxApi/Model/EZEzsignsignatureEditObjectV1Response.m
 EzmaxApi/Model/EZEzsignsignatureGetObjectV1Response.h
 EzmaxApi/Model/EZEzsignsignatureGetObjectV1Response.m
 EzmaxApi/Model/EZEzsignsignatureGetObjectV1ResponseAllOf.h
@@ -670,6 +674,8 @@ docs/EZEzsignsignatureCreateObjectV1Response.md
 docs/EZEzsignsignatureCreateObjectV1ResponseAllOf.md
 docs/EZEzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EZEzsignsignatureDeleteObjectV1Response.md
+docs/EZEzsignsignatureEditObjectV1Request.md
+docs/EZEzsignsignatureEditObjectV1Response.md
 docs/EZEzsignsignatureGetObjectV1Response.md
 docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EZEzsignsignatureRequest.md

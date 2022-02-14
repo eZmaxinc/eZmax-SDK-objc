@@ -196,6 +196,8 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignatureCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignsignatureCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignsignatureDeleteObjectV1Response.h>
+#import <EzmaxApi/EZEzsignsignatureEditObjectV1Request.h>
+#import <EzmaxApi/EZEzsignsignatureEditObjectV1Response.h>
 #import <EzmaxApi/EZEzsignsignatureGetObjectV1Response.h>
 #import <EzmaxApi/EZEzsignsignatureGetObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignsignatureRequest.h>
@@ -377,6 +379,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
+*EZObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *EZObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/EZObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
@@ -541,6 +544,8 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignatureCreateObjectV1ResponseAllOf](docs/EZEzsignsignatureCreateObjectV1ResponseAllOf.md)
  - [EZEzsignsignatureCreateObjectV1ResponseMPayload](docs/EZEzsignsignatureCreateObjectV1ResponseMPayload.md)
  - [EZEzsignsignatureDeleteObjectV1Response](docs/EZEzsignsignatureDeleteObjectV1Response.md)
+ - [EZEzsignsignatureEditObjectV1Request](docs/EZEzsignsignatureEditObjectV1Request.md)
+ - [EZEzsignsignatureEditObjectV1Response](docs/EZEzsignsignatureEditObjectV1Response.md)
  - [EZEzsignsignatureGetObjectV1Response](docs/EZEzsignsignatureGetObjectV1Response.md)
  - [EZEzsignsignatureGetObjectV1ResponseAllOf](docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md)
  - [EZEzsignsignatureRequest](docs/EZEzsignsignatureRequest.md)

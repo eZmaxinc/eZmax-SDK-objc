@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignsignatureCreateObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
+[**ezsignsignatureEditObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -117,6 +118,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignsignatureEditObjectV1**
+```objc
+-(NSURLSessionTask*) ezsignsignatureEditObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    ezsignsignatureEditObjectV1Request: (EZEzsignsignatureEditObjectV1Request*) ezsignsignatureEditObjectV1Request
+        completionHandler: (void (^)(EZEzsignsignatureEditObjectV1Response* output, NSError* error)) handler;
+```
+
+Edit an existing Ezsignsignature
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignsignatureID = @56; // 
+EZEzsignsignatureEditObjectV1Request* ezsignsignatureEditObjectV1Request = [[EZEzsignsignatureEditObjectV1Request alloc] init]; // 
+
+EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
+
+// Edit an existing Ezsignsignature
+[apiInstance ezsignsignatureEditObjectV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
+              ezsignsignatureEditObjectV1Request:ezsignsignatureEditObjectV1Request
+          completionHandler: ^(EZEzsignsignatureEditObjectV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignsignatureApi->ezsignsignatureEditObjectV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignsignatureID** | **NSNumber***|  | 
+ **ezsignsignatureEditObjectV1Request** | [**EZEzsignsignatureEditObjectV1Request***](EZEzsignsignatureEditObjectV1Request.md)|  | 
+
+### Return type
+
+[**EZEzsignsignatureEditObjectV1Response***](EZEzsignsignatureEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
