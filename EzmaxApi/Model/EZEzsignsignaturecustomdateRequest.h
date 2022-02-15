@@ -22,6 +22,9 @@
 
 @interface EZEzsignsignaturecustomdateRequest : EZObject
 
+/* The unique ID of the Ezsignsignaturecustomdate [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignsignaturecustomdateID;
 /* The X coordinate (Horizontal) where to put the custom date block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the custom date block 2 inches from the left border of the page, you would use \"200\" for the X coordinate. 
  */
 @property(nonatomic) NSNumber* iEzsignsignaturecustomdateX;
