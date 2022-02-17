@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 # **ezsigndocumentEditEzsignsignaturesV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-    ezsignsignatureRequestCompound: (NSArray<EZEzsignsignatureRequestCompound>*) ezsignsignatureRequestCompound
+    ezsigndocumentEditEzsignsignaturesV1Request: (EZEzsigndocumentEditEzsignsignaturesV1Request*) ezsigndocumentEditEzsignsignaturesV1Request
         completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
 ```
 
@@ -273,13 +273,13 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsigndocumentID = @56; // 
-NSArray<EZEzsignsignatureRequestCompound>* ezsignsignatureRequestCompound = @[[[EZEzsignsignatureRequestCompound alloc] init]]; // 
+EZEzsigndocumentEditEzsignsignaturesV1Request* ezsigndocumentEditEzsignsignaturesV1Request = [[EZEzsigndocumentEditEzsignsignaturesV1Request alloc] init]; // 
 
 EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init];
 
 // Edit multiple ezsignsignatures
 [apiInstance ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
-              ezsignsignatureRequestCompound:ezsignsignatureRequestCompound
+              ezsigndocumentEditEzsignsignaturesV1Request:ezsigndocumentEditEzsignsignaturesV1Request
           completionHandler: ^(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
@@ -295,7 +295,7 @@ EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init]
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigndocumentID** | **NSNumber***|  | 
- **ezsignsignatureRequestCompound** | [**NSArray&lt;EZEzsignsignatureRequestCompound&gt;***](EZEzsignsignatureRequestCompound.md)|  | 
+ **ezsigndocumentEditEzsignsignaturesV1Request** | [**EZEzsigndocumentEditEzsignsignaturesV1Request***](EZEzsigndocumentEditEzsignsignaturesV1Request.md)|  | 
 
 ### Return type
 

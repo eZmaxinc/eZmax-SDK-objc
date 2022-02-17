@@ -8,6 +8,7 @@
 #import "EZEzsigndocumentCreateObjectV1Request.h"
 #import "EZEzsigndocumentCreateObjectV1Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
+#import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
@@ -17,7 +18,6 @@
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
 #import "EZEzsigndocumentPatchObjectV1Request.h"
 #import "EZEzsigndocumentPatchObjectV1Response.h"
-#import "EZEzsignsignatureRequestCompound.h"
 #import "EZApi.h"
 
 /**
@@ -104,7 +104,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// Using this endpoint, you can edit multiple ezsignsignatures at the same time.
 ///
 /// @param pkiEzsigndocumentID 
-/// @param ezsignsignatureRequestCompound 
+/// @param ezsigndocumentEditEzsignsignaturesV1Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -112,7 +112,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 ///
 /// @return EZEzsigndocumentEditEzsignsignaturesV1Response*
 -(NSURLSessionTask*) ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-    ezsignsignatureRequestCompound: (NSArray<EZEzsignsignatureRequestCompound>*) ezsignsignatureRequestCompound
+    ezsigndocumentEditEzsignsignaturesV1Request: (EZEzsigndocumentEditEzsignsignaturesV1Request*) ezsigndocumentEditEzsignsignaturesV1Request
     completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 

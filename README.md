@@ -108,6 +108,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentDeleteObjectV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentEditEzsignsignaturesV1Request.h>
 #import <EzmaxApi/EZEzsigndocumentEditEzsignsignaturesV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h>
@@ -458,6 +459,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentCreateObjectV1ResponseAllOf](docs/EZEzsigndocumentCreateObjectV1ResponseAllOf.md)
  - [EZEzsigndocumentCreateObjectV1ResponseMPayload](docs/EZEzsigndocumentCreateObjectV1ResponseMPayload.md)
  - [EZEzsigndocumentDeleteObjectV1Response](docs/EZEzsigndocumentDeleteObjectV1Response.md)
+ - [EZEzsigndocumentEditEzsignsignaturesV1Request](docs/EZEzsigndocumentEditEzsignsignaturesV1Request.md)
  - [EZEzsigndocumentEditEzsignsignaturesV1Response](docs/EZEzsigndocumentEditEzsignsignaturesV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1Response](docs/EZEzsigndocumentGetDownloadUrlV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md)

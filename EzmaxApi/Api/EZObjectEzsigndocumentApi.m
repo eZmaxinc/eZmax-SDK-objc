@@ -10,6 +10,7 @@
 #import "EZEzsigndocumentCreateObjectV1Request.h"
 #import "EZEzsigndocumentCreateObjectV1Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
+#import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
@@ -19,7 +20,6 @@
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
 #import "EZEzsigndocumentPatchObjectV1Request.h"
 #import "EZEzsigndocumentPatchObjectV1Response.h"
-#import "EZEzsignsignatureRequestCompound.h"
 
 
 @interface EZObjectEzsigndocumentApi ()
@@ -372,12 +372,12 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 /// Using this endpoint, you can edit multiple ezsignsignatures at the same time.
 ///  @param pkiEzsigndocumentID  
 ///
-///  @param ezsignsignatureRequestCompound  
+///  @param ezsigndocumentEditEzsignsignaturesV1Request  
 ///
 ///  @returns EZEzsigndocumentEditEzsignsignaturesV1Response*
 ///
 -(NSURLSessionTask*) ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-    ezsignsignatureRequestCompound: (NSArray<EZEzsignsignatureRequestCompound>*) ezsignsignatureRequestCompound
+    ezsigndocumentEditEzsignsignaturesV1Request: (EZEzsigndocumentEditEzsignsignaturesV1Request*) ezsigndocumentEditEzsignsignaturesV1Request
     completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
@@ -390,11 +390,11 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'ezsignsignatureRequestCompound' is set
-    if (ezsignsignatureRequestCompound == nil) {
-        NSParameterAssert(ezsignsignatureRequestCompound);
+    // verify the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' is set
+    if (ezsigndocumentEditEzsignsignaturesV1Request == nil) {
+        NSParameterAssert(ezsigndocumentEditEzsignsignaturesV1Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignsignatureRequestCompound"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigndocumentEditEzsignsignaturesV1Request"] };
             NSError* error = [NSError errorWithDomain:kEZObjectEzsigndocumentApiErrorDomain code:kEZObjectEzsigndocumentApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
@@ -429,7 +429,7 @@ NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignsignatureRequestCompound;
+    bodyParam = ezsigndocumentEditEzsignsignaturesV1Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
