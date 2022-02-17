@@ -198,7 +198,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 }
 
 ///
-/// Modify an existing Ezsignfolder
+/// Edit an existing Ezsignfolder
 /// 
 ///  @param pkiEzsignfolderID  
 ///

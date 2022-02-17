@@ -63,7 +63,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsignfolderDeleteObjectV1Response* output, NSError* error)) handler;
 
 
-/// Modify an existing Ezsignfolder
+/// Edit an existing Ezsignfolder
 /// 
 ///
 /// @param pkiEzsignfolderID 

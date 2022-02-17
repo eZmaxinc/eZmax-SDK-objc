@@ -108,6 +108,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentDeleteObjectV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentEditEzsignsignaturesV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.h>
@@ -355,6 +356,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignsignaturesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumenteditezsignsignaturesv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple ezsignsignatures
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignpagesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
@@ -363,7 +365,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 *EZObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-*EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
+*EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
@@ -456,6 +458,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentCreateObjectV1ResponseAllOf](docs/EZEzsigndocumentCreateObjectV1ResponseAllOf.md)
  - [EZEzsigndocumentCreateObjectV1ResponseMPayload](docs/EZEzsigndocumentCreateObjectV1ResponseMPayload.md)
  - [EZEzsigndocumentDeleteObjectV1Response](docs/EZEzsigndocumentDeleteObjectV1Response.md)
+ - [EZEzsigndocumentEditEzsignsignaturesV1Response](docs/EZEzsigndocumentEditEzsignsignaturesV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1Response](docs/EZEzsigndocumentGetDownloadUrlV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseMPayload](docs/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.md)

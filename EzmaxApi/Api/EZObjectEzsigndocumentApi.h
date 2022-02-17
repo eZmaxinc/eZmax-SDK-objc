@@ -8,6 +8,7 @@
 #import "EZEzsigndocumentCreateObjectV1Request.h"
 #import "EZEzsigndocumentCreateObjectV1Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
+#import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
 #import "EZEzsigndocumentGetFormDataV1Response.h"
@@ -16,6 +17,7 @@
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
 #import "EZEzsigndocumentPatchObjectV1Request.h"
 #import "EZEzsigndocumentPatchObjectV1Response.h"
+#import "EZEzsignsignatureRequestCompound.h"
 #import "EZApi.h"
 
 /**
@@ -77,7 +79,6 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @param ezsigndocumentCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:404 message:"The element you are trying to work on does not exist",
 ///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
 ///
 /// @return EZEzsigndocumentCreateObjectV1Response*
@@ -97,6 +98,22 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EZEzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit multiple ezsignsignatures
+/// Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsignsignatureRequestCompound 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentEditEzsignsignaturesV1Response*
+-(NSURLSessionTask*) ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsignsignatureRequestCompound: (NSArray<EZEzsignsignatureRequestCompound>*) ezsignsignatureRequestCompound
+    completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve a URL to download documents.

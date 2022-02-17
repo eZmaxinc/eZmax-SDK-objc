@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV2**](EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
+[**ezsigndocumentEditEzsignsignaturesV1**](EZObjectEzsigndocumentApi.md#ezsigndocumenteditezsignsignaturesv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple ezsignsignatures
 [**ezsigndocumentGetDownloadUrlV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetEzsignpagesV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 [**ezsigndocumentGetFormDataV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
@@ -246,6 +247,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentEditEzsignsignaturesV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsignsignatureRequestCompound: (NSArray<EZEzsignsignatureRequestCompound>*) ezsignsignatureRequestCompound
+        completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
+```
+
+Edit multiple ezsignsignatures
+
+Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+NSArray<EZEzsignsignatureRequestCompound>* ezsignsignatureRequestCompound = @[[[EZEzsignsignatureRequestCompound alloc] init]]; // 
+
+EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init];
+
+// Edit multiple ezsignsignatures
+[apiInstance ezsigndocumentEditEzsignsignaturesV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsignsignatureRequestCompound:ezsignsignatureRequestCompound
+          completionHandler: ^(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigndocumentApi->ezsigndocumentEditEzsignsignaturesV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsignsignatureRequestCompound** | [**NSArray&lt;EZEzsignsignatureRequestCompound&gt;***](EZEzsignsignatureRequestCompound.md)|  | 
+
+### Return type
+
+[**EZEzsigndocumentEditEzsignsignaturesV1Response***](EZEzsigndocumentEditEzsignsignaturesV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

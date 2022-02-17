@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**ezsignfolderEditObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
+[**ezsignfolderEditObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderGetEzsigndocumentsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 [**ezsignfolderGetFormsDataV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
         completionHandler: (void (^)(EZEzsignfolderEditObjectV1Response* output, NSError* error)) handler;
 ```
 
-Modify an existing Ezsignfolder
+Edit an existing Ezsignfolder
 
 ### Example
 ```objc
@@ -152,7 +152,7 @@ EZEzsignfolderEditObjectV1Request* ezsignfolderEditObjectV1Request = [[EZEzsignf
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
-// Modify an existing Ezsignfolder
+// Edit an existing Ezsignfolder
 [apiInstance ezsignfolderEditObjectV1WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderEditObjectV1Request:ezsignfolderEditObjectV1Request
           completionHandler: ^(EZEzsignfolderEditObjectV1Response* output, NSError* error) {
