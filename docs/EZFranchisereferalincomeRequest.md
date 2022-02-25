@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **dFranchisereferalincomeFranchisoramount** | **NSString*** | The amount that will be kept by the franchisor | 
 **dFranchisereferalincomeAgentamount** | **NSString*** | The amount that will be given to the agent | 
 **dtFranchisereferalincomeDisbursed** | **NSString*** | The date the amounts were disbursed | 
-**tFranchisereferalincomeComment** | **NSString*** | A comment about the transaction | 
+**tFranchisereferalincomeComment** | **NSString*** | Comment about the transaction | 
 **fkiFranchiseofficeID** | **NSNumber*** | The unique ID of the Franchisereoffice | 
 **sFranchisereferalincomeRemoteid** | **NSString*** |  | 
 

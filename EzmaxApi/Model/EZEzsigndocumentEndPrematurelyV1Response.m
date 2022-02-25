@@ -1,6 +1,6 @@
-#import "EZUNUSEDEzsignsignatureEditObjectV1Response.h"
+#import "EZEzsigndocumentEndPrematurelyV1Response.h"
 
-@implementation EZUNUSEDEzsignsignatureEditObjectV1Response
+@implementation EZEzsigndocumentEndPrematurelyV1Response
 
 - (instancetype)init {
   self = [super init];

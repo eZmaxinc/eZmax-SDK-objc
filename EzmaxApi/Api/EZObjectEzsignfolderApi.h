@@ -182,7 +182,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 ///
 /// @return EZEzsignfolderUnsendV1Response*
 -(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    body: (NSString*) body
+    body: (NSObject*) body
     completionHandler: (void (^)(EZEzsignfolderUnsendV1Response* output, NSError* error)) handler;
 
 

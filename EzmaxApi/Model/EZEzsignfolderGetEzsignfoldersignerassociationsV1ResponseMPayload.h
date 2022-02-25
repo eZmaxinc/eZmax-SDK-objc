@@ -25,7 +25,8 @@
 
 @interface EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignfoldersignerassociationResponseCompound>* aObjEzsignfoldersignerassociation;
 
 @end

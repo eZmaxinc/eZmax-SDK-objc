@@ -1,6 +1,6 @@
-#import "EZUNUSEDEzsignfolderEditObjectV1Request.h"
+#import "EZEzsignbulksendResponseCompound.h"
 
-@implementation EZUNUSEDEzsignfolderEditObjectV1Request
+@implementation EZEzsignbulksendResponseCompound
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objEzsignfolder": @"objEzsignfolder" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignbulksendID": @"pkiEzsignbulksendID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sEzsignbulksendDescription": @"sEzsignbulksendDescription", @"tEzsignbulksendNote": @"tEzsignbulksendNote", @"bEzsignbulksendIsactive": @"bEzsignbulksendIsactive", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objEzsignfolder"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

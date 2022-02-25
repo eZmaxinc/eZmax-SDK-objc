@@ -30,7 +30,8 @@
 
 
 @property(nonatomic) EZAddressRequest* objAddress;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZContactRequestCompound>* aObjContact;
 
 @end

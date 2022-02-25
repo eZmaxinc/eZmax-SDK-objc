@@ -25,7 +25,8 @@
 
 @interface EZListGetListpresentationV1ResponseMPayload : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZListpresentationRequest>* aObjListpresentation;
 
 @end

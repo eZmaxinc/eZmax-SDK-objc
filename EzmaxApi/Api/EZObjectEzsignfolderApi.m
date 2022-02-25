@@ -726,7 +726,7 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///  @returns EZEzsignfolderUnsendV1Response*
 ///
 -(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    body: (NSString*) body
+    body: (NSObject*) body
     completionHandler: (void (^)(EZEzsignfolderUnsendV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {

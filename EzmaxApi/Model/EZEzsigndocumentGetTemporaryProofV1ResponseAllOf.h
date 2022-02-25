@@ -14,18 +14,18 @@
 */
 
 
-#import "EZEzsignfolderRequest.h"
-@protocol EZEzsignfolderRequest;
-@class EZEzsignfolderRequest;
+#import "EZEzsigndocumentGetTemporaryProofV1ResponseMPayload.h"
+@protocol EZEzsigndocumentGetTemporaryProofV1ResponseMPayload;
+@class EZEzsigndocumentGetTemporaryProofV1ResponseMPayload;
 
 
 
-@protocol EZUNUSEDEzsignfolderEditObjectV1Request
+@protocol EZEzsigndocumentGetTemporaryProofV1ResponseAllOf
 @end
 
-@interface EZUNUSEDEzsignfolderEditObjectV1Request : EZObject
+@interface EZEzsigndocumentGetTemporaryProofV1ResponseAllOf : EZObject
 
 
-@property(nonatomic) EZEzsignfolderRequest* objEzsignfolder;
+@property(nonatomic) EZEzsigndocumentGetTemporaryProofV1ResponseMPayload* mPayload;
 
 @end

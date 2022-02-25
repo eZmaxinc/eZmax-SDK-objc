@@ -25,7 +25,8 @@
 
 @interface EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsigntemplatepackageListElement>* aObjEzsigntemplatepackage;
 
 @end

@@ -26,10 +26,10 @@
 
 
 
-@protocol EZUNUSEDEzsigndocumentEditObjectV1Response
+@protocol EZEzsigndocumentEndPrematurelyV1Response
 @end
 
-@interface EZUNUSEDEzsigndocumentEditObjectV1Response : EZObject
+@interface EZEzsigndocumentEndPrematurelyV1Response : EZObject
 
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;

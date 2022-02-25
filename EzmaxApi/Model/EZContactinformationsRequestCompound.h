@@ -40,13 +40,17 @@
 
 @interface EZContactinformationsRequestCompound : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZAddressRequest>* aObjAddress;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZPhoneRequest>* aObjPhone;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEmailRequest>* aObjEmail;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZWebsiteRequest>* aObjWebsite;
 /* The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. 
  */

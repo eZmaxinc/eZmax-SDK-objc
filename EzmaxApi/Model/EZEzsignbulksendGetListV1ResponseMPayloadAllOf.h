@@ -25,7 +25,8 @@
 
 @interface EZEzsignbulksendGetListV1ResponseMPayloadAllOf : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignbulksendListElement>* aObjEzsignbulksend;
 
 @end

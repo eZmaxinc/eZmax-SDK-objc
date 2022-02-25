@@ -1,8 +1,9 @@
-# EZUNUSEDEzsigndocumentEditObjectV1Response
+# EZEzsignbulksendGetObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**EZEzsignbulksendGetObjectV1ResponseMPayload***](EZEzsignbulksendGetObjectV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

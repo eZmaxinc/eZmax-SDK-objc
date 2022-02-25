@@ -34,7 +34,8 @@
 /* The Label for the Ezsignformfieldgroup 
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupLabel;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignformfieldResponse>* aObjEzsignformfield;
 
 @end

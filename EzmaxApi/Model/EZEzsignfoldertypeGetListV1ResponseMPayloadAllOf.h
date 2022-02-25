@@ -25,7 +25,8 @@
 
 @interface EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignfoldertypeListElement>* aObjEzsignfoldertype;
 
 @end

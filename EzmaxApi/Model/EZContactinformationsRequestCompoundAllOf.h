@@ -34,13 +34,17 @@
 
 @interface EZContactinformationsRequestCompoundAllOf : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZAddressRequest>* aObjAddress;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZPhoneRequest>* aObjPhone;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEmailRequest>* aObjEmail;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZWebsiteRequest>* aObjWebsite;
 
 @end

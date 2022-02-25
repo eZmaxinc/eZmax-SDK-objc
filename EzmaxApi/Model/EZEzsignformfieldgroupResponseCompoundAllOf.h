@@ -25,7 +25,8 @@
 
 @interface EZEzsignformfieldgroupResponseCompoundAllOf : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignformfieldResponse>* aObjEzsignformfield;
 
 @end

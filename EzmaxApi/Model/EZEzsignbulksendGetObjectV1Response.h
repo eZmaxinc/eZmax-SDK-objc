@@ -17,20 +17,28 @@
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZEzsignbulksendGetObjectV1ResponseAllOf.h"
+#import "EZEzsignbulksendGetObjectV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZEzsignbulksendGetObjectV1ResponseAllOf;
+@class EZEzsignbulksendGetObjectV1ResponseAllOf;
+@protocol EZEzsignbulksendGetObjectV1ResponseMPayload;
+@class EZEzsignbulksendGetObjectV1ResponseMPayload;
 
 
 
-@protocol EZUNUSEDEzsignsignatureEditObjectV1Response
+@protocol EZEzsignbulksendGetObjectV1Response
 @end
 
-@interface EZUNUSEDEzsignsignatureEditObjectV1Response : EZObject
+@interface EZEzsignbulksendGetObjectV1Response : EZObject
 
+
+@property(nonatomic) EZEzsignbulksendGetObjectV1ResponseMPayload* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 

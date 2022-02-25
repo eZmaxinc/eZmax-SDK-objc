@@ -36,7 +36,8 @@
 
 
 @property(nonatomic) EZAddressRequest* objAddress;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZContactRequestCompound>* aObjContact;
 /* The unique ID of the Franchisereferalincome [optional]
  */
@@ -65,13 +66,14 @@
 /* The date the amounts were disbursed 
  */
 @property(nonatomic) NSString* dtFranchisereferalincomeDisbursed;
-/* A comment about the transaction 
+/* Comment about the transaction 
  */
 @property(nonatomic) NSString* tFranchisereferalincomeComment;
 /* The unique ID of the Franchisereoffice 
  */
 @property(nonatomic) NSNumber* fkiFranchiseofficeID;
-
+/*  
+ */
 @property(nonatomic) NSString* sFranchisereferalincomeRemoteid;
 
 @end

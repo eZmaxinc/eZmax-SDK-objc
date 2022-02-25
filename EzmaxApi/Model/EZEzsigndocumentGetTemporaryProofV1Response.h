@@ -17,20 +17,28 @@
 #import "EZCommonResponse.h"
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
+#import "EZEzsigndocumentGetTemporaryProofV1ResponseAllOf.h"
+#import "EZEzsigndocumentGetTemporaryProofV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
 @protocol EZCommonResponseObjDebugPayload;
 @class EZCommonResponseObjDebugPayload;
+@protocol EZEzsigndocumentGetTemporaryProofV1ResponseAllOf;
+@class EZEzsigndocumentGetTemporaryProofV1ResponseAllOf;
+@protocol EZEzsigndocumentGetTemporaryProofV1ResponseMPayload;
+@class EZEzsigndocumentGetTemporaryProofV1ResponseMPayload;
 
 
 
-@protocol EZUNUSEDEzsignfolderEditObjectV1Response
+@protocol EZEzsigndocumentGetTemporaryProofV1Response
 @end
 
-@interface EZUNUSEDEzsignfolderEditObjectV1Response : EZObject
+@interface EZEzsigndocumentGetTemporaryProofV1Response : EZObject
 
+
+@property(nonatomic) EZEzsigndocumentGetTemporaryProofV1ResponseMPayload* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 

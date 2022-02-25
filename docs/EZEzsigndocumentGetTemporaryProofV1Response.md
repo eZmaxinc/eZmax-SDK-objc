@@ -1,8 +1,9 @@
-# EZUNUSEDEzsignfolderEditObjectV1Response
+# EZEzsigndocumentGetTemporaryProofV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**EZEzsigndocumentGetTemporaryProofV1ResponseMPayload***](EZEzsigndocumentGetTemporaryProofV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

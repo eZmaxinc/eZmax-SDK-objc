@@ -75,6 +75,8 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignsignature
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -130,6 +132,8 @@ Name | Type | Description  | Notes
 ```
 
 Edit an existing Ezsignsignature
+
+
 
 ### Example
 ```objc

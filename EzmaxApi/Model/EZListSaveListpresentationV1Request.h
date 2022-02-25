@@ -25,7 +25,8 @@
 
 @interface EZListSaveListpresentationV1Request : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZListpresentationRequest>* aObjListpresentation;
 
 @end

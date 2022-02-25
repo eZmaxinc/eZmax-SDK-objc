@@ -81,6 +81,8 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignfolder
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -136,6 +138,8 @@ Name | Type | Description  | Notes
 ```
 
 Edit an existing Ezsignfolder
+
+
 
 ### Example
 ```objc
@@ -195,6 +199,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder's Ezsigndocuments
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -250,6 +256,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -304,6 +312,8 @@ Name | Type | Description  | Notes
 ```
 
 Retrieve an existing Ezsignfolder's forms data
+
+
 
 ### Example
 ```objc
@@ -433,6 +443,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -489,6 +501,8 @@ Name | Type | Description  | Notes
 
 Send the Ezsignfolder to the signatories for signature
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -542,7 +556,7 @@ Name | Type | Description  | Notes
 # **ezsignfolderUnsendV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    body: (NSString*) body
+    body: (NSObject*) body
         completionHandler: (void (^)(EZEzsignfolderUnsendV1Response* output, NSError* error)) handler;
 ```
 
@@ -561,7 +575,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsignfolderID = @56; // 
-NSString* body = @"body_example"; // 
+NSObject* body = NULL; // 
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 
@@ -583,7 +597,7 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **NSNumber***|  | 
- **body** | **NSString***|  | 
+ **body** | **NSObject***|  | 
 
 ### Return type
 

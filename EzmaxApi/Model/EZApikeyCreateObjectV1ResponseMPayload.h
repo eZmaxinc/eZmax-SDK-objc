@@ -25,7 +25,8 @@
 
 @interface EZApikeyCreateObjectV1ResponseMPayload : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZApikeyResponse>* aObjApikey;
 
 @end

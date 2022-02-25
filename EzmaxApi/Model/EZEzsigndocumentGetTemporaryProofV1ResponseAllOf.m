@@ -1,6 +1,6 @@
-#import "EZUNUSEDEzsignfoldersignerassociationEditObjectV1Response.h"
+#import "EZEzsigndocumentGetTemporaryProofV1ResponseAllOf.h"
 
-@implementation EZUNUSEDEzsignfoldersignerassociationEditObjectV1Response
+@implementation EZEzsigndocumentGetTemporaryProofV1ResponseAllOf
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"mPayload": @"mPayload" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objDebugPayload", @"objDebug"];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

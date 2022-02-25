@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignsigner** | [**EZEzsignsignerRequestCompound***](EZEzsignsignerRequestCompound.md) |  | [optional] 
+**objEzsignsigner** | [**EZEzsignsignerRequestCompound***](EZEzsignsignerRequestCompound.md) |  | 
 **pkiEzsignfoldersignerassociationID** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | [optional] 
 **fkiUserID** | **NSNumber*** | The unique ID of the User | [optional] 
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 

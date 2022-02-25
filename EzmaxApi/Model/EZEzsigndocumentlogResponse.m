@@ -1,6 +1,6 @@
-#import "EZEzsignfoldersignerassociationRequestCompoundAllOf.h"
+#import "EZEzsigndocumentlogResponse.h"
 
-@implementation EZEzsignfoldersignerassociationRequestCompoundAllOf
+@implementation EZEzsigndocumentlogResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objEzsignsigner": @"objEzsignsigner" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiUserID": @"fkiUserID", @"fkiEzsignsignerID": @"fkiEzsignsignerID", @"dtEzsigndocumentlogDatetime": @"dtEzsigndocumentlogDatetime", @"eEzsigndocumentlogType": @"eEzsigndocumentlogType", @"sEzsigndocumentlogDetail": @"sEzsigndocumentlogDetail", @"sEzsigndocumentlogLastname": @"sEzsigndocumentlogLastname", @"sEzsigndocumentlogFirstname": @"sEzsigndocumentlogFirstname", @"sEzsigndocumentlogIP": @"sEzsigndocumentlogIP" }];
 }
 
 /**

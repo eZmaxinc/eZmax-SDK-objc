@@ -1,6 +1,6 @@
-#import "EZUNUSEDEzsigndocumentEditObjectV1Response.h"
+#import "EZEzsigndocumentGetTemporaryProofV1Response.h"
 
-@implementation EZUNUSEDEzsigndocumentEditObjectV1Response
+@implementation EZEzsigndocumentGetTemporaryProofV1Response
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"mPayload": @"mPayload", @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug" }];
 }
 
 /**

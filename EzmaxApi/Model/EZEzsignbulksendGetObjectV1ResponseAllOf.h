@@ -14,18 +14,18 @@
 */
 
 
-#import "EZEzsignsignatureRequest.h"
-@protocol EZEzsignsignatureRequest;
-@class EZEzsignsignatureRequest;
+#import "EZEzsignbulksendGetObjectV1ResponseMPayload.h"
+@protocol EZEzsignbulksendGetObjectV1ResponseMPayload;
+@class EZEzsignbulksendGetObjectV1ResponseMPayload;
 
 
 
-@protocol EZUNUSEDEzsignsignatureEditObjectV1Request
+@protocol EZEzsignbulksendGetObjectV1ResponseAllOf
 @end
 
-@interface EZUNUSEDEzsignsignatureEditObjectV1Request : EZObject
+@interface EZEzsignbulksendGetObjectV1ResponseAllOf : EZObject
 
 
-@property(nonatomic) EZEzsignsignatureRequest* objEzsignsignature;
+@property(nonatomic) EZEzsignbulksendGetObjectV1ResponseMPayload* mPayload;
 
 @end

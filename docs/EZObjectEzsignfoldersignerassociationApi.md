@@ -75,6 +75,8 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignfoldersignerassociation
 
+
+
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
@@ -186,6 +188,8 @@ Name | Type | Description  | Notes
 ```
 
 Retrieve an existing Ezsignfoldersignerassociation
+
+
 
 ### Example
 ```objc

@@ -10,10 +10,12 @@
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
+#import "EZEzsigndocumentEndPrematurelyV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
 #import "EZEzsigndocumentGetFormDataV1Response.h"
 #import "EZEzsigndocumentGetObjectV1Response.h"
+#import "EZEzsigndocumentGetTemporaryProofV1Response.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Request.h"
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
 #import "EZEzsigndocumentPatchObjectV1Request.h"
@@ -116,6 +118,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 
+/// End prematurely
+/// End prematurely an Ezsigndocument when some signatures are still required
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentEndPrematurelyV1Response*
+-(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve a URL to download documents.
 /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
 ///
@@ -162,7 +178,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 
 
 /// Retrieve an existing Ezsigndocument
-/// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+/// 
 ///
 /// @param pkiEzsigndocumentID 
 /// 
@@ -172,6 +188,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentGetObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EZEzsigndocumentGetObjectV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve the temporary proof
+/// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentGetTemporaryProofV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetTemporaryProofV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetTemporaryProofV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve positions X,Y of given words from a Ezsigndocument

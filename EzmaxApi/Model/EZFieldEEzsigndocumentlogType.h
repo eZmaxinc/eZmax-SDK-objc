@@ -14,18 +14,13 @@
 */
 
 
-#import "EZEzsigndocumentRequest.h"
-@protocol EZEzsigndocumentRequest;
-@class EZEzsigndocumentRequest;
 
 
 
-@protocol EZUNUSEDEzsigndocumentEditObjectV1Request
+@protocol EZFieldEEzsigndocumentlogType
 @end
 
-@interface EZUNUSEDEzsigndocumentEditObjectV1Request : EZObject
+@interface EZFieldEEzsigndocumentlogType : EZObject
 
-
-@property(nonatomic) EZEzsigndocumentRequest* objEzsigndocument;
 
 @end

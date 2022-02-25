@@ -25,7 +25,8 @@
 
 @interface EZEzsigndocumentGetEzsignpagesV1ResponseMPayload : EZObject
 
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignpageResponse>* aObjEzsignpage;
 
 @end

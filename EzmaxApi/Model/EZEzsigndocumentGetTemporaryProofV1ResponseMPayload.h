@@ -14,18 +14,18 @@
 */
 
 
-#import "EZEzsignfoldersignerassociationRequest.h"
-@protocol EZEzsignfoldersignerassociationRequest;
-@class EZEzsignfoldersignerassociationRequest;
+#import "EZEzsigndocumentlogResponse.h"
+@protocol EZEzsigndocumentlogResponse;
+@class EZEzsigndocumentlogResponse;
 
 
 
-@protocol EZUNUSEDEzsignfoldersignerassociationEditObjectV1Request
+@protocol EZEzsigndocumentGetTemporaryProofV1ResponseMPayload
 @end
 
-@interface EZUNUSEDEzsignfoldersignerassociationEditObjectV1Request : EZObject
+@interface EZEzsigndocumentGetTemporaryProofV1ResponseMPayload : EZObject
 
 
-@property(nonatomic) EZEzsignfoldersignerassociationRequest* objEzsignfoldersignerassociation;
+@property(nonatomic) EZEzsigndocumentlogResponse* aObjEzsigndocumentlog;
 
 @end

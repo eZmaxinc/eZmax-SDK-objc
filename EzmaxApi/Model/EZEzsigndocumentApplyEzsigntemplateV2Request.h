@@ -25,7 +25,8 @@
 /* The unique ID of the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* fkiEzsigntemplateID;
-
+/*  
+ */
 @property(nonatomic) NSArray<NSString*>* aSEzsigntemplatesigner;
 
 @property(nonatomic) NSArray<NSNumber*>* aPkiEzsignfoldersignerassociationID;

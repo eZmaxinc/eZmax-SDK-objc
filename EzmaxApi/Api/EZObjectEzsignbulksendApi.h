@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
 #import "EZEzsignbulksendGetListV1Response.h"
+#import "EZEzsignbulksendGetObjectV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
@@ -44,6 +45,19 @@ extern NSInteger kEZObjectEzsignbulksendApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsignbulksendGetListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsignbulksend
+/// 
+///
+/// @param pkiEzsignbulksendID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist"
+///
+/// @return EZEzsignbulksendGetObjectV1Response*
+-(NSURLSessionTask*) ezsignbulksendGetObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    completionHandler: (void (^)(EZEzsignbulksendGetObjectV1Response* output, NSError* error)) handler;
 
 
 

@@ -1,6 +1,6 @@
-#import "EZEzsignfoldersignerassociationRequestCompoundAllOf.h"
+#import "EZEzsigndocumentGetTemporaryProofV1ResponseMPayload.h"
 
-@implementation EZEzsignfoldersignerassociationRequestCompoundAllOf
+@implementation EZEzsigndocumentGetTemporaryProofV1ResponseMPayload
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objEzsignsigner": @"objEzsignsigner" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsigndocumentlog": @"a_objEzsigndocumentlog" }];
 }
 
 /**

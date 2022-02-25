@@ -37,7 +37,8 @@
 /* The Last name of the contact 
  */
 @property(nonatomic) NSString* sContactLastname;
-
+/*  
+ */
 @property(nonatomic) NSArray<EZEzsignformfieldgroupResponseCompound>* aObjEzsignformfieldgroupCompound;
 
 @end
