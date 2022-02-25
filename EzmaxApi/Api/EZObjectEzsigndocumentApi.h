@@ -7,6 +7,8 @@
 #import "EZEzsigndocumentApplyEzsigntemplateV2Response.h"
 #import "EZEzsigndocumentCreateObjectV1Request.h"
 #import "EZEzsigndocumentCreateObjectV1Response.h"
+#import "EZEzsigndocumentCreateObjectV2Request.h"
+#import "EZEzsigndocumentCreateObjectV2Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
@@ -86,6 +88,19 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentCreateObjectV1WithEzsigndocumentCreateObjectV1Request: (NSArray<EZEzsigndocumentCreateObjectV1Request>*) ezsigndocumentCreateObjectV1Request
     completionHandler: (void (^)(EZEzsigndocumentCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Ezsigndocument
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsigndocumentCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
+///
+/// @return EZEzsigndocumentCreateObjectV2Response*
+-(NSURLSessionTask*) ezsigndocumentCreateObjectV2WithEzsigndocumentCreateObjectV2Request: (EZEzsigndocumentCreateObjectV2Request*) ezsigndocumentCreateObjectV2Request
+    completionHandler: (void (^)(EZEzsigndocumentCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsigndocument

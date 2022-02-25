@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "EZApikeyCreateObjectV1Request.h"
 #import "EZApikeyCreateObjectV1Response.h"
+#import "EZApikeyCreateObjectV2Request.h"
+#import "EZApikeyCreateObjectV2Response.h"
 #import "EZApi.h"
 
 /**
@@ -34,6 +36,18 @@ extern NSInteger kEZObjectApikeyApiMissingParamErrorCode;
 /// @return EZApikeyCreateObjectV1Response*
 -(NSURLSessionTask*) apikeyCreateObjectV1WithApikeyCreateObjectV1Request: (NSArray<EZApikeyCreateObjectV1Request>*) apikeyCreateObjectV1Request
     completionHandler: (void (^)(EZApikeyCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Apikey
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param apikeyCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EZApikeyCreateObjectV2Response*
+-(NSURLSessionTask*) apikeyCreateObjectV2WithApikeyCreateObjectV2Request: (EZApikeyCreateObjectV2Request*) apikeyCreateObjectV2Request
+    completionHandler: (void (^)(EZApikeyCreateObjectV2Response* output, NSError* error)) handler;
 
 
 

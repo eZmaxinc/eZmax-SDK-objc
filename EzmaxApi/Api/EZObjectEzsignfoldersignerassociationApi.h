@@ -2,6 +2,8 @@
 #import "EZCommonResponseError.h"
 #import "EZEzsignfoldersignerassociationCreateObjectV1Request.h"
 #import "EZEzsignfoldersignerassociationCreateObjectV1Response.h"
+#import "EZEzsignfoldersignerassociationCreateObjectV2Request.h"
+#import "EZEzsignfoldersignerassociationCreateObjectV2Response.h"
 #import "EZEzsignfoldersignerassociationDeleteObjectV1Response.h"
 #import "EZEzsignfoldersignerassociationGetInPersonLoginUrlV1Response.h"
 #import "EZEzsignfoldersignerassociationGetObjectV1Response.h"
@@ -38,6 +40,18 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// @return EZEzsignfoldersignerassociationCreateObjectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationCreateObjectV1WithEzsignfoldersignerassociationCreateObjectV1Request: (NSArray<EZEzsignfoldersignerassociationCreateObjectV1Request>*) ezsignfoldersignerassociationCreateObjectV1Request
     completionHandler: (void (^)(EZEzsignfoldersignerassociationCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Ezsignfoldersignerassociation
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsignfoldersignerassociationCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EZEzsignfoldersignerassociationCreateObjectV2Response*
+-(NSURLSessionTask*) ezsignfoldersignerassociationCreateObjectV2WithEzsignfoldersignerassociationCreateObjectV2Request: (EZEzsignfoldersignerassociationCreateObjectV2Request*) ezsignfoldersignerassociationCreateObjectV2Request
+    completionHandler: (void (^)(EZEzsignfoldersignerassociationCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsignfoldersignerassociation

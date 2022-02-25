@@ -3,6 +3,8 @@
 #import "EZApiClient.h"
 #import "EZFranchisereferalincomeCreateObjectV1Request.h"
 #import "EZFranchisereferalincomeCreateObjectV1Response.h"
+#import "EZFranchisereferalincomeCreateObjectV2Request.h"
+#import "EZFranchisereferalincomeCreateObjectV2Response.h"
 
 
 @interface EZObjectFranchisereferalincomeApi ()
@@ -112,6 +114,72 @@ NSInteger kEZObjectFranchisereferalincomeApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZFranchisereferalincomeCreateObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Create a new Franchisereferalincome
+/// The endpoint allows to create one or many elements at once.
+///  @param franchisereferalincomeCreateObjectV2Request  
+///
+///  @returns EZFranchisereferalincomeCreateObjectV2Response*
+///
+-(NSURLSessionTask*) franchisereferalincomeCreateObjectV2WithFranchisereferalincomeCreateObjectV2Request: (EZFranchisereferalincomeCreateObjectV2Request*) franchisereferalincomeCreateObjectV2Request
+    completionHandler: (void (^)(EZFranchisereferalincomeCreateObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'franchisereferalincomeCreateObjectV2Request' is set
+    if (franchisereferalincomeCreateObjectV2Request == nil) {
+        NSParameterAssert(franchisereferalincomeCreateObjectV2Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"franchisereferalincomeCreateObjectV2Request"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectFranchisereferalincomeApiErrorDomain code:kEZObjectFranchisereferalincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/franchisereferalincome"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = franchisereferalincomeCreateObjectV2Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZFranchisereferalincomeCreateObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZFranchisereferalincomeCreateObjectV2Response*)data, error);
                                 }
                             }];
 }

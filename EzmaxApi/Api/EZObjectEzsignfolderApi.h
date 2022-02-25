@@ -2,6 +2,8 @@
 #import "EZCommonResponseError.h"
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
+#import "EZEzsignfolderCreateObjectV2Request.h"
+#import "EZEzsignfolderCreateObjectV2Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderEditObjectV1Request.h"
 #import "EZEzsignfolderEditObjectV1Response.h"
@@ -47,6 +49,18 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderCreateObjectV1Response*
 -(NSURLSessionTask*) ezsignfolderCreateObjectV1WithEzsignfolderCreateObjectV1Request: (NSArray<EZEzsignfolderCreateObjectV1Request>*) ezsignfolderCreateObjectV1Request
     completionHandler: (void (^)(EZEzsignfolderCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Ezsignfolder
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsignfolderCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EZEzsignfolderCreateObjectV2Response*
+-(NSURLSessionTask*) ezsignfolderCreateObjectV2WithEzsignfolderCreateObjectV2Request: (EZEzsignfolderCreateObjectV2Request*) ezsignfolderCreateObjectV2Request
+    completionHandler: (void (^)(EZEzsignfolderCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsignfolder

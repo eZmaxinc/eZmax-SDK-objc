@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "EZFranchisereferalincomeCreateObjectV1Request.h"
 #import "EZFranchisereferalincomeCreateObjectV1Response.h"
+#import "EZFranchisereferalincomeCreateObjectV2Request.h"
+#import "EZFranchisereferalincomeCreateObjectV2Response.h"
 #import "EZApi.h"
 
 /**
@@ -34,6 +36,18 @@ extern NSInteger kEZObjectFranchisereferalincomeApiMissingParamErrorCode;
 /// @return EZFranchisereferalincomeCreateObjectV1Response*
 -(NSURLSessionTask*) franchisereferalincomeCreateObjectV1WithFranchisereferalincomeCreateObjectV1Request: (NSArray<EZFranchisereferalincomeCreateObjectV1Request>*) franchisereferalincomeCreateObjectV1Request
     completionHandler: (void (^)(EZFranchisereferalincomeCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Franchisereferalincome
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param franchisereferalincomeCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EZFranchisereferalincomeCreateObjectV2Response*
+-(NSURLSessionTask*) franchisereferalincomeCreateObjectV2WithFranchisereferalincomeCreateObjectV2Request: (EZFranchisereferalincomeCreateObjectV2Request*) franchisereferalincomeCreateObjectV2Request
+    completionHandler: (void (^)(EZFranchisereferalincomeCreateObjectV2Response* output, NSError* error)) handler;
 
 
 

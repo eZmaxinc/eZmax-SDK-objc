@@ -4,6 +4,8 @@
 #import "EZCommonResponseError.h"
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
+#import "EZEzsignfolderCreateObjectV2Request.h"
+#import "EZEzsignfolderCreateObjectV2Response.h"
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderEditObjectV1Request.h"
 #import "EZEzsignfolderEditObjectV1Response.h"
@@ -125,6 +127,72 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignfolderCreateObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Create a new Ezsignfolder
+/// The endpoint allows to create one or many elements at once.
+///  @param ezsignfolderCreateObjectV2Request  
+///
+///  @returns EZEzsignfolderCreateObjectV2Response*
+///
+-(NSURLSessionTask*) ezsignfolderCreateObjectV2WithEzsignfolderCreateObjectV2Request: (EZEzsignfolderCreateObjectV2Request*) ezsignfolderCreateObjectV2Request
+    completionHandler: (void (^)(EZEzsignfolderCreateObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezsignfolderCreateObjectV2Request' is set
+    if (ezsignfolderCreateObjectV2Request == nil) {
+        NSParameterAssert(ezsignfolderCreateObjectV2Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfolderCreateObjectV2Request"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignfolder"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignfolderCreateObjectV2Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderCreateObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderCreateObjectV2Response*)data, error);
                                 }
                             }];
 }

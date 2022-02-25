@@ -2,6 +2,8 @@
 #import "EZCommonResponseError.h"
 #import "EZEzsignsignatureCreateObjectV1Request.h"
 #import "EZEzsignsignatureCreateObjectV1Response.h"
+#import "EZEzsignsignatureCreateObjectV2Request.h"
+#import "EZEzsignsignatureCreateObjectV2Response.h"
 #import "EZEzsignsignatureDeleteObjectV1Response.h"
 #import "EZEzsignsignatureEditObjectV1Request.h"
 #import "EZEzsignsignatureEditObjectV1Response.h"
@@ -39,6 +41,18 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
 /// @return EZEzsignsignatureCreateObjectV1Response*
 -(NSURLSessionTask*) ezsignsignatureCreateObjectV1WithEzsignsignatureCreateObjectV1Request: (NSArray<EZEzsignsignatureCreateObjectV1Request>*) ezsignsignatureCreateObjectV1Request
     completionHandler: (void (^)(EZEzsignsignatureCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Ezsignsignature
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsignsignatureCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EZEzsignsignatureCreateObjectV2Response*
+-(NSURLSessionTask*) ezsignsignatureCreateObjectV2WithEzsignsignatureCreateObjectV2Request: (EZEzsignsignatureCreateObjectV2Request*) ezsignsignatureCreateObjectV2Request
+    completionHandler: (void (^)(EZEzsignsignatureCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsignsignature
