@@ -37,18 +37,6 @@
 
 @interface EZActivesessionGetCurrentV1ResponseMPayload : EZObject
 
-/* An array of permissions granted to the user or api key 
- */
-@property(nonatomic) NSArray<NSNumber*>* aPkiPermissionID;
-
-@property(nonatomic) EZActivesessionResponseCompoundUser* objUserReal;
-
-@property(nonatomic) EZActivesessionResponseCompoundUser* objUserCloned;
-
-@property(nonatomic) EZActivesessionResponseCompoundApikey* objApikey;
-/* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. 
- */
-@property(nonatomic) NSArray<NSString*>* aEModuleInternalname;
 
 @property(nonatomic) EZFieldEActivesessionSessiontype* eActivesessionSessiontype;
 
@@ -68,5 +56,17 @@
 /* The customer code assigned to your account 
  */
 @property(nonatomic) NSString* pksCustomerCode;
+/* An array of permissions granted to the user or api key 
+ */
+@property(nonatomic) NSArray<NSNumber*>* aPkiPermissionID;
+
+@property(nonatomic) EZActivesessionResponseCompoundUser* objUserReal;
+
+@property(nonatomic) EZActivesessionResponseCompoundUser* objUserCloned;
+
+@property(nonatomic) EZActivesessionResponseCompoundApikey* objApikey;
+/* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. 
+ */
+@property(nonatomic) NSArray<NSString*>* aEModuleInternalname;
 
 @end

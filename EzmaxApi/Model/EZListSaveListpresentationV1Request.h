@@ -14,9 +14,9 @@
 */
 
 
-#import "EZListpresentationRequest.h"
-@protocol EZListpresentationRequest;
-@class EZListpresentationRequest;
+#import "EZListpresentationRequestCompound.h"
+@protocol EZListpresentationRequestCompound;
+@class EZListpresentationRequestCompound;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface EZListSaveListpresentationV1Request : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZListpresentationRequest>* aObjListpresentation;
+
+@property(nonatomic) NSArray<EZListpresentationRequestCompound>* aObjListpresentation;
 
 @end

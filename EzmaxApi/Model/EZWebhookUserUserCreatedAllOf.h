@@ -14,9 +14,9 @@
 */
 
 
-#import "EZUserResponse.h"
-@protocol EZUserResponse;
-@class EZUserResponse;
+#import "EZUserResponseCompound.h"
+@protocol EZUserResponseCompound;
+@class EZUserResponseCompound;
 
 
 
@@ -26,6 +26,6 @@
 @interface EZWebhookUserUserCreatedAllOf : EZObject
 
 
-@property(nonatomic) EZUserResponse* objUser;
+@property(nonatomic) EZUserResponseCompound* objUser;
 
 @end

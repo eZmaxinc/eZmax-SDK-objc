@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsignformfieldgroupResponseCompound.h"
-@protocol EZEzsignformfieldgroupResponseCompound;
-@class EZEzsignformfieldgroupResponseCompound;
+#import "EZCustomFormDataEzsignformfieldgroupResponse.h"
+@protocol EZCustomFormDataEzsignformfieldgroupResponse;
+@class EZCustomFormDataEzsignformfieldgroupResponse;
 
 
 
@@ -37,8 +37,7 @@
 /* The Last name of the contact 
  */
 @property(nonatomic) NSString* sContactLastname;
-/*  
- */
-@property(nonatomic) NSArray<EZEzsignformfieldgroupResponseCompound>* aObjEzsignformfieldgroupCompound;
+
+@property(nonatomic) NSArray<EZCustomFormDataEzsignformfieldgroupResponse>* aObjEzsignformfieldgroup;
 
 @end

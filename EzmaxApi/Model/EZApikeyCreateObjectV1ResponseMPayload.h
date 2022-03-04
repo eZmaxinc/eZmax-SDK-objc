@@ -14,9 +14,9 @@
 */
 
 
-#import "EZApikeyResponse.h"
-@protocol EZApikeyResponse;
-@class EZApikeyResponse;
+#import "EZApikeyResponseCompound.h"
+@protocol EZApikeyResponseCompound;
+@class EZApikeyResponseCompound;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface EZApikeyCreateObjectV1ResponseMPayload : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZApikeyResponse>* aObjApikey;
+
+@property(nonatomic) NSArray<EZApikeyResponseCompound>* aObjApikey;
 
 @end

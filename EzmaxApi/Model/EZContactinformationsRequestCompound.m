@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjAddress": @"a_objAddress", @"aObjPhone": @"a_objPhone", @"aObjEmail": @"a_objEmail", @"aObjWebsite": @"a_objWebsite", @"iAddressDefault": @"iAddressDefault", @"iPhoneDefault": @"iPhoneDefault", @"iEmailDefault": @"iEmailDefault", @"iWebsiteDefault": @"iWebsiteDefault" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iAddressDefault": @"iAddressDefault", @"iPhoneDefault": @"iPhoneDefault", @"iEmailDefault": @"iEmailDefault", @"iWebsiteDefault": @"iWebsiteDefault", @"aObjAddress": @"a_objAddress", @"aObjPhone": @"a_objPhone", @"aObjEmail": @"a_objEmail", @"aObjWebsite": @"a_objWebsite" }];
 }
 
 /**

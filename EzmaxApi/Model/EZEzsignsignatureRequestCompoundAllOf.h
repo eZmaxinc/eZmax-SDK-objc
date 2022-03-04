@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsignsignaturecustomdateRequest.h"
-@protocol EZEzsignsignaturecustomdateRequest;
-@class EZEzsignsignaturecustomdateRequest;
+#import "EZEzsignsignaturecustomdateRequestCompound.h"
+@protocol EZEzsignsignaturecustomdateRequestCompound;
+@class EZEzsignsignaturecustomdateRequestCompound;
 
 
 
@@ -30,6 +30,6 @@
 @property(nonatomic) NSNumber* bEzsignsignatureCustomdate;
 /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
  */
-@property(nonatomic) NSArray<EZEzsignsignaturecustomdateRequest>* aObjEzsignsignaturecustomdate;
+@property(nonatomic) NSArray<EZEzsignsignaturecustomdateRequestCompound>* aObjEzsignsignaturecustomdate;
 
 @end

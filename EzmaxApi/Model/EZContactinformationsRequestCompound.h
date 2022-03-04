@@ -14,24 +14,24 @@
 */
 
 
-#import "EZAddressRequest.h"
+#import "EZAddressRequestCompound.h"
 #import "EZContactinformationsRequest.h"
 #import "EZContactinformationsRequestCompoundAllOf.h"
-#import "EZEmailRequest.h"
-#import "EZPhoneRequest.h"
-#import "EZWebsiteRequest.h"
-@protocol EZAddressRequest;
-@class EZAddressRequest;
+#import "EZEmailRequestCompound.h"
+#import "EZPhoneRequestCompound.h"
+#import "EZWebsiteRequestCompound.h"
+@protocol EZAddressRequestCompound;
+@class EZAddressRequestCompound;
 @protocol EZContactinformationsRequest;
 @class EZContactinformationsRequest;
 @protocol EZContactinformationsRequestCompoundAllOf;
 @class EZContactinformationsRequestCompoundAllOf;
-@protocol EZEmailRequest;
-@class EZEmailRequest;
-@protocol EZPhoneRequest;
-@class EZPhoneRequest;
-@protocol EZWebsiteRequest;
-@class EZWebsiteRequest;
+@protocol EZEmailRequestCompound;
+@class EZEmailRequestCompound;
+@protocol EZPhoneRequestCompound;
+@class EZPhoneRequestCompound;
+@protocol EZWebsiteRequestCompound;
+@class EZWebsiteRequestCompound;
 
 
 
@@ -40,18 +40,6 @@
 
 @interface EZContactinformationsRequestCompound : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZAddressRequest>* aObjAddress;
-/*  
- */
-@property(nonatomic) NSArray<EZPhoneRequest>* aObjPhone;
-/*  
- */
-@property(nonatomic) NSArray<EZEmailRequest>* aObjEmail;
-/*  
- */
-@property(nonatomic) NSArray<EZWebsiteRequest>* aObjWebsite;
 /* The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. 
  */
 @property(nonatomic) NSNumber* iAddressDefault;
@@ -64,5 +52,13 @@
 /* The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. 
  */
 @property(nonatomic) NSNumber* iWebsiteDefault;
+
+@property(nonatomic) NSArray<EZAddressRequestCompound>* aObjAddress;
+
+@property(nonatomic) NSArray<EZPhoneRequestCompound>* aObjPhone;
+
+@property(nonatomic) NSArray<EZEmailRequestCompound>* aObjEmail;
+
+@property(nonatomic) NSArray<EZWebsiteRequestCompound>* aObjWebsite;
 
 @end

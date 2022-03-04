@@ -14,9 +14,15 @@
 */
 
 
-#import "EZEzsignformfieldResponse.h"
-@protocol EZEzsignformfieldResponse;
-@class EZEzsignformfieldResponse;
+#import "EZCustomDropdownElementResponseCompound.h"
+#import "EZEzsignformfieldResponseCompound.h"
+#import "EZEzsignformfieldgroupsignerResponseCompound.h"
+@protocol EZCustomDropdownElementResponseCompound;
+@class EZCustomDropdownElementResponseCompound;
+@protocol EZEzsignformfieldResponseCompound;
+@class EZEzsignformfieldResponseCompound;
+@protocol EZEzsignformfieldgroupsignerResponseCompound;
+@class EZEzsignformfieldgroupsignerResponseCompound;
 
 
 
@@ -25,8 +31,11 @@
 
 @interface EZEzsignformfieldgroupResponseCompoundAllOf : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZEzsignformfieldResponse>* aObjEzsignformfield;
+
+@property(nonatomic) NSArray<EZEzsignformfieldResponseCompound>* aObjEzsignformfield;
+
+@property(nonatomic) NSArray<EZCustomDropdownElementResponseCompound>* aObjDropdownElement;
+
+@property(nonatomic) EZEzsignformfieldgroupsignerResponseCompound* aObjEzsignformfieldgroupsigner;
 
 @end

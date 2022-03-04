@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
 #import "EZEzsignbulksendGetListV1Response.h"
 #import "EZEzsignbulksendGetObjectV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
@@ -25,6 +26,19 @@ extern NSString* kEZObjectEzsignbulksendApiErrorDomain;
 extern NSInteger kEZObjectEzsignbulksendApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Retrieve an existing Ezsignbulksend's Ezsignbulksendtransmissions
+/// 
+///
+/// @param pkiEzsignbulksendID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist"
+///
+/// @return EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response*
+-(NSURLSessionTask*) ezsignbulksendGetEzsignbulksendtransmissionsV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    completionHandler: (void (^)(EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Ezsignbulksend list
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |

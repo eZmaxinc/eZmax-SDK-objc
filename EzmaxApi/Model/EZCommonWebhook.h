@@ -14,10 +14,10 @@
 */
 
 
-#import "EZAttemptResponse.h"
+#import "EZAttemptResponseCompound.h"
 #import "EZWebhookResponse.h"
-@protocol EZAttemptResponse;
-@class EZAttemptResponse;
+@protocol EZAttemptResponseCompound;
+@class EZAttemptResponseCompound;
 @protocol EZWebhookResponse;
 @class EZWebhookResponse;
 
@@ -32,6 +32,6 @@
 @property(nonatomic) EZWebhookResponse* objWebhook;
 /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
  */
-@property(nonatomic) NSArray<EZAttemptResponse>* aObjAttempt;
+@property(nonatomic) NSArray<EZAttemptResponseCompound>* aObjAttempt;
 
 @end

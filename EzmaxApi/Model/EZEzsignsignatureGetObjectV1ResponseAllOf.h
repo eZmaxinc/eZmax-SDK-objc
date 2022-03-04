@@ -14,6 +14,9 @@
 */
 
 
+#import "EZEzsignsignatureGetObjectV1ResponseMPayload.h"
+@protocol EZEzsignsignatureGetObjectV1ResponseMPayload;
+@class EZEzsignsignatureGetObjectV1ResponseMPayload;
 
 
 
@@ -22,8 +25,7 @@
 
 @interface EZEzsignsignatureGetObjectV1ResponseAllOf : EZObject
 
-/* Payload for the /1/object/ezsignsignature/getObject API Request 
- */
-@property(nonatomic) NSObject* mPayload;
+
+@property(nonatomic) EZEzsignsignatureGetObjectV1ResponseMPayload* mPayload;
 
 @end

@@ -31,10 +31,6 @@
 
 @interface EZEzsignfoldersignerassociationGetObjectV1ResponseMPayload : EZObject
 
-
-@property(nonatomic) EZEzsignfoldersignerassociationResponseCompoundUser* objUser;
-
-@property(nonatomic) EZEzsignsignerResponseCompound* objEzsignsigner;
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* pkiEzsignfoldersignerassociationID;
@@ -44,5 +40,9 @@
 /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. 
  */
 @property(nonatomic) NSNumber* bEzsignfoldersignerassociationReceivecopy;
+
+@property(nonatomic) EZEzsignfoldersignerassociationResponseCompoundUser* objUser;
+
+@property(nonatomic) EZEzsignsignerResponseCompound* objEzsignsigner;
 
 @end

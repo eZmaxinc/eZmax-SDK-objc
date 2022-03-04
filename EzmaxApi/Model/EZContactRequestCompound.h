@@ -31,8 +31,6 @@
 
 @interface EZContactRequestCompound : EZObject
 
-
-@property(nonatomic) EZContactinformationsRequestCompound* objContactinformations;
 /* The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| 
  */
 @property(nonatomic) NSNumber* fkiContacttitleID;
@@ -51,5 +49,7 @@
 /* The Birth Date of the contact [optional]
  */
 @property(nonatomic) NSString* dtContactBirthdate;
+
+@property(nonatomic) EZContactinformationsRequestCompound* objContactinformations;
 
 @end

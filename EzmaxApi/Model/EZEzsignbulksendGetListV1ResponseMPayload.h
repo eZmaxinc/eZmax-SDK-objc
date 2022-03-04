@@ -31,8 +31,7 @@
 
 @interface EZEzsignbulksendGetListV1ResponseMPayload : EZObject
 
-/*  
- */
+
 @property(nonatomic) NSArray<EZEzsignbulksendListElement>* aObjEzsignbulksend;
 /* The number of rows returned 
  */

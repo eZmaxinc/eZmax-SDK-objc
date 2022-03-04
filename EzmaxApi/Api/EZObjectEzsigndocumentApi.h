@@ -10,11 +10,15 @@
 #import "EZEzsigndocumentCreateObjectV2Request.h"
 #import "EZEzsigndocumentCreateObjectV2Response.h"
 #import "EZEzsigndocumentDeleteObjectV1Response.h"
+#import "EZEzsigndocumentEditEzsignformfieldgroupsV1Request.h"
+#import "EZEzsigndocumentEditEzsignformfieldgroupsV1Response.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentEndPrematurelyV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
+#import "EZEzsigndocumentGetEzsignformfieldgroupsV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
+#import "EZEzsigndocumentGetEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentGetFormDataV1Response.h"
 #import "EZEzsigndocumentGetObjectV1Response.h"
 #import "EZEzsigndocumentGetTemporaryProofV1Response.h"
@@ -117,8 +121,24 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler;
 
 
-/// Edit multiple ezsignsignatures
-/// Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+/// Edit multiple Ezsignformfieldgroups
+/// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentEditEzsignformfieldgroupsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentEditEzsignformfieldgroupsV1Response*
+-(NSURLSessionTask*) ezsigndocumentEditEzsignformfieldgroupsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditEzsignformfieldgroupsV1Request: (EZEzsigndocumentEditEzsignformfieldgroupsV1Request*) ezsigndocumentEditEzsignformfieldgroupsV1Request
+    completionHandler: (void (^)(EZEzsigndocumentEditEzsignformfieldgroupsV1Response* output, NSError* error)) handler;
+
+
+/// Edit multiple Ezsignsignatures
+/// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
 ///
 /// @param pkiEzsigndocumentID 
 /// @param ezsigndocumentEditEzsignsignaturesV1Request 
@@ -137,6 +157,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// End prematurely an Ezsigndocument when some signatures are still required
 ///
 /// @param pkiEzsigndocumentID 
+/// @param body 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The element you are trying to work on does not exist",
@@ -144,6 +165,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 ///
 /// @return EZEzsigndocumentEndPrematurelyV1Response*
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    body: (NSObject*) body
     completionHandler: (void (^)(EZEzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
 
 
@@ -163,6 +185,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentGetDownloadUrlV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentGetEzsignformfieldgroupsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetEzsignformfieldgroupsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetEzsignformfieldgroupsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsigndocument's Ezsignpages
 /// 
 ///
@@ -175,6 +211,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentGetEzsignpagesV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetEzsignpagesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EZEzsigndocumentGetEzsignpagesV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigndocument's Ezsignsignatures
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentGetEzsignsignaturesV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetEzsignsignaturesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigndocument's Form Data

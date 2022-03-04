@@ -34,8 +34,7 @@
 /* The description of the Ezsignfolder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;
-/*  
- */
+
 @property(nonatomic) NSArray<EZCustomFormDataDocumentResponse>* aObjFormDataDocument;
 
 @end

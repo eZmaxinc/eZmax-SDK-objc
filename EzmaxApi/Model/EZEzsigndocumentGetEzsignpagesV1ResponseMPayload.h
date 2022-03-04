@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsignpageResponse.h"
-@protocol EZEzsignpageResponse;
-@class EZEzsignpageResponse;
+#import "EZEzsignpageResponseCompound.h"
+@protocol EZEzsignpageResponseCompound;
+@class EZEzsignpageResponseCompound;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface EZEzsigndocumentGetEzsignpagesV1ResponseMPayload : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZEzsignpageResponse>* aObjEzsignpage;
+
+@property(nonatomic) NSArray<EZEzsignpageResponseCompound>* aObjEzsignpage;
 
 @end

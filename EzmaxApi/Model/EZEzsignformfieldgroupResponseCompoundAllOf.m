@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignformfield": @"a_objEzsignformfield" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignformfield": @"a_objEzsignformfield", @"aObjDropdownElement": @"a_objDropdownElement", @"aObjEzsignformfieldgroupsigner": @"a_objEzsignformfieldgroupsigner" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"aObjDropdownElement", ];
   return [optionalProperties containsObject:propertyName];
 }
 

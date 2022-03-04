@@ -14,18 +14,18 @@
 */
 
 
-#import "EZAddressRequest.h"
-#import "EZEmailRequest.h"
-#import "EZPhoneRequest.h"
-#import "EZWebsiteRequest.h"
-@protocol EZAddressRequest;
-@class EZAddressRequest;
-@protocol EZEmailRequest;
-@class EZEmailRequest;
-@protocol EZPhoneRequest;
-@class EZPhoneRequest;
-@protocol EZWebsiteRequest;
-@class EZWebsiteRequest;
+#import "EZAddressRequestCompound.h"
+#import "EZEmailRequestCompound.h"
+#import "EZPhoneRequestCompound.h"
+#import "EZWebsiteRequestCompound.h"
+@protocol EZAddressRequestCompound;
+@class EZAddressRequestCompound;
+@protocol EZEmailRequestCompound;
+@class EZEmailRequestCompound;
+@protocol EZPhoneRequestCompound;
+@class EZPhoneRequestCompound;
+@protocol EZWebsiteRequestCompound;
+@class EZWebsiteRequestCompound;
 
 
 
@@ -34,17 +34,13 @@
 
 @interface EZContactinformationsRequestCompoundAllOf : EZObject
 
-/*  
- */
-@property(nonatomic) NSArray<EZAddressRequest>* aObjAddress;
-/*  
- */
-@property(nonatomic) NSArray<EZPhoneRequest>* aObjPhone;
-/*  
- */
-@property(nonatomic) NSArray<EZEmailRequest>* aObjEmail;
-/*  
- */
-@property(nonatomic) NSArray<EZWebsiteRequest>* aObjWebsite;
+
+@property(nonatomic) NSArray<EZAddressRequestCompound>* aObjAddress;
+
+@property(nonatomic) NSArray<EZPhoneRequestCompound>* aObjPhone;
+
+@property(nonatomic) NSArray<EZEmailRequestCompound>* aObjEmail;
+
+@property(nonatomic) NSArray<EZWebsiteRequestCompound>* aObjWebsite;
 
 @end

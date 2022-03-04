@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**NSObject***](.md) | Payload for the /1/object/ezsignsignature/getObject API Request | 
+**mPayload** | [**EZEzsignsignatureGetObjectV1ResponseMPayload***](EZEzsignsignatureGetObjectV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

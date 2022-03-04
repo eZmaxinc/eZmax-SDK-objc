@@ -31,8 +31,7 @@
 
 @interface EZEzsigntemplatepackageGetListV1ResponseMPayload : EZObject
 
-/*  
- */
+
 @property(nonatomic) NSArray<EZEzsigntemplatepackageListElement>* aObjEzsigntemplatepackage;
 /* The number of rows returned 
  */

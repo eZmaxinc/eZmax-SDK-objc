@@ -14,9 +14,9 @@
 */
 
 
-#import "EZEzsigndocumentlogResponse.h"
-@protocol EZEzsigndocumentlogResponse;
-@class EZEzsigndocumentlogResponse;
+#import "EZEzsigndocumentlogResponseCompound.h"
+@protocol EZEzsigndocumentlogResponseCompound;
+@class EZEzsigndocumentlogResponseCompound;
 
 
 
@@ -26,6 +26,6 @@
 @interface EZEzsigndocumentGetTemporaryProofV1ResponseMPayload : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentlogResponse* aObjEzsigndocumentlog;
+@property(nonatomic) EZEzsigndocumentlogResponseCompound* aObjEzsigndocumentlog;
 
 @end

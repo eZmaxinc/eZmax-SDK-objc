@@ -14,6 +14,9 @@
 */
 
 
+#import "EZCommonAuditdetail.h"
+@protocol EZCommonAuditdetail;
+@class EZCommonAuditdetail;
 
 
 
@@ -22,23 +25,9 @@
 
 @interface EZCommonAudit : EZObject
 
-/* The unique ID of the User 
- */
-@property(nonatomic) NSNumber* fkiUserIDCreated;
-/* The unique ID of the User 
- */
-@property(nonatomic) NSNumber* fkiUserIDModified;
-/* The unique ID of the Apikey [optional]
- */
-@property(nonatomic) NSNumber* fkiApikeyIDCreated;
-/* The unique ID of the Apikey [optional]
- */
-@property(nonatomic) NSNumber* fkiApikeyIDModified;
-/* Represent a Date Time. The timezone is the one configured in the User's profile. 
- */
-@property(nonatomic) NSString* dtCreatedDate;
-/* Represent a Date Time. The timezone is the one configured in the User's profile. 
- */
-@property(nonatomic) NSString* dtModifiedDate;
+
+@property(nonatomic) EZCommonAuditdetail* objAuditdetailCreated;
+
+@property(nonatomic) EZCommonAuditdetail* objAuditdetailModified;
 
 @end

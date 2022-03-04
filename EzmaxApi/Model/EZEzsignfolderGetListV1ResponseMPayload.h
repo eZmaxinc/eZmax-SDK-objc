@@ -31,8 +31,7 @@
 
 @interface EZEzsignfolderGetListV1ResponseMPayload : EZObject
 
-/*  
- */
+
 @property(nonatomic) NSArray<EZEzsignfolderListElement>* aObjEzsignfolder;
 /* The number of rows returned 
  */

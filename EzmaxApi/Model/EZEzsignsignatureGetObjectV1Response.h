@@ -18,6 +18,7 @@
 #import "EZCommonResponseObjDebug.h"
 #import "EZCommonResponseObjDebugPayload.h"
 #import "EZEzsignsignatureGetObjectV1ResponseAllOf.h"
+#import "EZEzsignsignatureGetObjectV1ResponseMPayload.h"
 @protocol EZCommonResponse;
 @class EZCommonResponse;
 @protocol EZCommonResponseObjDebug;
@@ -26,6 +27,8 @@
 @class EZCommonResponseObjDebugPayload;
 @protocol EZEzsignsignatureGetObjectV1ResponseAllOf;
 @class EZEzsignsignatureGetObjectV1ResponseAllOf;
+@protocol EZEzsignsignatureGetObjectV1ResponseMPayload;
+@class EZEzsignsignatureGetObjectV1ResponseMPayload;
 
 
 
@@ -34,9 +37,8 @@
 
 @interface EZEzsignsignatureGetObjectV1Response : EZObject
 
-/* Payload for the /1/object/ezsignsignature/getObject API Request 
- */
-@property(nonatomic) NSObject* mPayload;
+
+@property(nonatomic) EZEzsignsignatureGetObjectV1ResponseMPayload* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
