@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -47,12 +47,12 @@
 /* The date and time at which the object was created 
  */
 @property(nonatomic) NSString* dtCreatedDate;
-/* The date and time at which the Ezsign folder was sent the last time. 
+/* The date and time at which the Ezsign folder was sent the last time. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderSentdate;
-/* Represent a Date Time. The timezone is the one configured in the User's profile. 
+/* The maximum date and time at which the Ezsignfolder can be signed. [optional]
  */
-@property(nonatomic) NSString* dtDueDate;
+@property(nonatomic) NSString* dtEzsignfolderDuedate;
 /* The total number of Ezsigndocument in the folder 
  */
 @property(nonatomic) NSNumber* iEzsigndocument;

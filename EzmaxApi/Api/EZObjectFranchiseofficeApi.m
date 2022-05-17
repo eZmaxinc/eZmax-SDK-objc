@@ -2,6 +2,7 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonGetAutocompleteV1Response.h"
+#import "EZHeaderAcceptLanguage.h"
 
 
 @interface EZObjectFranchiseofficeApi ()
@@ -56,10 +57,13 @@ NSInteger kEZObjectFranchiseofficeApiMissingParamErrorCode = 234513;
 ///
 ///  @param sQuery Allow to filter the returned results (optional)
 ///
+///  @param acceptLanguage  (optional)
+///
 ///  @returns EZCommonGetAutocompleteV1Response*
 ///
 -(NSURLSessionTask*) franchiseofficeGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
@@ -85,6 +89,9 @@ NSInteger kEZObjectFranchiseofficeApiMissingParamErrorCode = 234513;
     }
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (acceptLanguage != nil) {
+        headerParams[@"Accept-Language"] = acceptLanguage;
+    }
     // HTTP header `Accept`
     NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
     if(acceptHeader.length > 0) {

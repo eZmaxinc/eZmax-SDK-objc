@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -69,6 +69,9 @@
 /* MD5 Hash of the final PDF Document after all signatures were applied to it. 
  */
 @property(nonatomic) NSString* sEzsigndocumentMD5signed;
+/* If the Ezsigndocument contains an Ezsignform or not 
+ */
+@property(nonatomic) NSNumber* bEzsigndocumentEzsignform;
 
 @property(nonatomic) EZCommonAudit* objAudit;
 

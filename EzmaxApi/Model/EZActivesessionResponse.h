@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -14,10 +14,10 @@
 */
 
 
-#import "EZFieldEActivesessionSessiontype.h"
+#import "EZFieldEActivesessionUsertype.h"
 #import "EZFieldEActivesessionWeekdaystart.h"
-@protocol EZFieldEActivesessionSessiontype;
-@class EZFieldEActivesessionSessiontype;
+@protocol EZFieldEActivesessionUsertype;
+@class EZFieldEActivesessionUsertype;
 @protocol EZFieldEActivesessionWeekdaystart;
 @class EZFieldEActivesessionWeekdaystart;
 
@@ -29,7 +29,7 @@
 @interface EZActivesessionResponse : EZObject
 
 
-@property(nonatomic) EZFieldEActivesessionSessiontype* eActivesessionSessiontype;
+@property(nonatomic) EZFieldEActivesessionUsertype* eActivesessionUsertype;
 
 @property(nonatomic) EZFieldEActivesessionWeekdaystart* eActivesessionWeekdaystart;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 

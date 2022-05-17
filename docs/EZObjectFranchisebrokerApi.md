@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) franchisebrokerGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
 ```
 
@@ -30,12 +31,14 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 NSString* sSelector = @"sSelector_example"; // The type of Franchisebrokers to return
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
+EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
 EZObjectFranchisebrokerApi*apiInstance = [[EZObjectFranchisebrokerApi alloc] init];
 
 // Retrieve Franchisebrokers and IDs
 [apiInstance franchisebrokerGetAutocompleteV1WithSSelector:sSelector
               sQuery:sQuery
+              acceptLanguage:acceptLanguage
           completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
@@ -52,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Franchisebrokers to return | 
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
 
 ### Return type
 

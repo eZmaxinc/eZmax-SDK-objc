@@ -8,10 +8,12 @@
 #import "EZEzsignsignatureEditObjectV1Request.h"
 #import "EZEzsignsignatureEditObjectV1Response.h"
 #import "EZEzsignsignatureGetObjectV1Response.h"
+#import "EZEzsignsignatureSignV1Request.h"
+#import "EZEzsignsignatureSignV1Response.h"
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -96,6 +98,22 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
 /// @return EZEzsignsignatureGetObjectV1Response*
 -(NSURLSessionTask*) ezsignsignatureGetObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
     completionHandler: (void (^)(EZEzsignsignatureGetObjectV1Response* output, NSError* error)) handler;
+
+
+/// Sign the Ezsignsignature
+/// 
+///
+/// @param pkiEzsignsignatureID 
+/// @param ezsignsignatureSignV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignsignatureSignV1Response*
+-(NSURLSessionTask*) ezsignsignatureSignV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    ezsignsignatureSignV1Request: (EZEzsignsignatureSignV1Request*) ezsignsignatureSignV1Request
+    completionHandler: (void (^)(EZEzsignsignatureSignV1Response* output, NSError* error)) handler;
 
 
 

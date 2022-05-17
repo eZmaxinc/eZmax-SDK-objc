@@ -1,10 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZEzsignbulksendtransmissionGetFormsDataV1Response.h"
 #import "EZEzsignbulksendtransmissionGetObjectV1Response.h"
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -23,6 +24,36 @@ extern NSString* kEZObjectEzsignbulksendtransmissionApiErrorDomain;
 extern NSInteger kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
+/// 
+///
+/// @param pkiEzsignbulksendtransmissionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:406 message:"One of the accept header is not defined or invalid.",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return NSString*
+-(NSURLSessionTask*) ezsignbulksendtransmissionGetCsvErrorsV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
+    completionHandler: (void (^)(NSString* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsignbulksendtransmission's forms data
+/// 
+///
+/// @param pkiEzsignbulksendtransmissionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:406 message:"One of the accept header is not defined or invalid.",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignbulksendtransmissionGetFormsDataV1Response*
+-(NSURLSessionTask*) ezsignbulksendtransmissionGetFormsDataV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
+    completionHandler: (void (^)(EZEzsignbulksendtransmissionGetFormsDataV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve an existing Ezsignbulksendtransmission
 /// 

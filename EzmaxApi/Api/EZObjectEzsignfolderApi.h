@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZEzsignfolderArchiveV1Response.h"
+#import "EZEzsignfolderBatchDownloadV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Request.h"
 #import "EZEzsignfolderCreateObjectV1Response.h"
 #import "EZEzsignfolderCreateObjectV2Request.h"
@@ -7,11 +9,16 @@
 #import "EZEzsignfolderDeleteObjectV1Response.h"
 #import "EZEzsignfolderEditObjectV1Request.h"
 #import "EZEzsignfolderEditObjectV1Response.h"
+#import "EZEzsignfolderGetActionableElementsV1Response.h"
 #import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
+#import "EZEzsignfolderImportEzsigntemplatepackageV1Request.h"
+#import "EZEzsignfolderImportEzsigntemplatepackageV1Response.h"
+#import "EZEzsignfolderReorderV1Request.h"
+#import "EZEzsignfolderReorderV1Response.h"
 #import "EZEzsignfolderSendV1Request.h"
 #import "EZEzsignfolderSendV1Response.h"
 #import "EZEzsignfolderUnsendV1Response.h"
@@ -19,7 +26,7 @@
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -38,6 +45,39 @@ extern NSString* kEZObjectEzsignfolderApiErrorDomain;
 extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Archive the Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignfolderArchiveV1Response*
+-(NSURLSessionTask*) ezsignfolderArchiveV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZEzsignfolderArchiveV1Response* output, NSError* error)) handler;
+
+
+/// Download multiples files from an Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:406 message:"One of the accept header is not defined or invalid.",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) ezsignfolderBatchDownloadV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderBatchDownloadV1Request: (EZEzsignfolderBatchDownloadV1Request*) ezsignfolderBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
 
 /// Create a new Ezsignfolder
 /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
@@ -93,6 +133,20 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsignfolderEditObjectV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve actionable elements for the Ezsignfolder
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignfolderGetActionableElementsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetActionableElementsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetActionableElementsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignfolder's Ezsigndocuments
 /// 
 ///
@@ -135,7 +189,7 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve Ezsignfolder list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived | | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)
@@ -166,6 +220,38 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderGetObjectV1Response*
 -(NSURLSessionTask*) ezsignfolderGetObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZEzsignfolderGetObjectV1Response* output, NSError* error)) handler;
+
+
+/// Import an Ezsigntemplatepackage in the Ezsignfolder.
+/// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderImportEzsigntemplatepackageV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignfolderImportEzsigntemplatepackageV1Response*
+-(NSURLSessionTask*) ezsignfolderImportEzsigntemplatepackageV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderImportEzsigntemplatepackageV1Request: (EZEzsignfolderImportEzsigntemplatepackageV1Request*) ezsignfolderImportEzsigntemplatepackageV1Request
+    completionHandler: (void (^)(EZEzsignfolderImportEzsigntemplatepackageV1Response* output, NSError* error)) handler;
+
+
+/// Reorder Ezsigndocuments in the Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderReorderV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignfolderReorderV1Response*
+-(NSURLSessionTask*) ezsignfolderReorderV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderReorderV1Request: (EZEzsignfolderReorderV1Request*) ezsignfolderReorderV1Request
+    completionHandler: (void (^)(EZEzsignfolderReorderV1Response* output, NSError* error)) handler;
 
 
 /// Send the Ezsignfolder to the signatories for signature

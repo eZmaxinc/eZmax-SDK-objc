@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **sEzsignbulksendtransmissionDescription** | **NSString*** | The description of the Ezsignbulksendtransmission | 
 **iEzsignbulksendtransmissionErrors** | **NSNumber*** | The number of errors during the Ezsignbulksendtransmission | 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 
+**aObjEzsignfoldertransmission** | [**NSArray&lt;EZCustomEzsignfoldertransmissionResponse&gt;***](EZCustomEzsignfoldertransmissionResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

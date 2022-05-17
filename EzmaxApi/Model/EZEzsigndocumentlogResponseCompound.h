@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -28,10 +28,10 @@
 
 @interface EZEzsigndocumentlogResponseCompound : EZObject
 
-/* The unique ID of the User 
+/* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Ezsignsigner 
+/* The unique ID of the Ezsignsigner [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignsignerID;
 /* The date and time at which the event was logged 

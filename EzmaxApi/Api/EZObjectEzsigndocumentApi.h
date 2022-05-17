@@ -15,6 +15,7 @@
 #import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentEndPrematurelyV1Response.h"
+#import "EZEzsigndocumentGetActionableElementsV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignformfieldgroupsV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
@@ -26,10 +27,11 @@
 #import "EZEzsigndocumentGetWordsPositionsV1Response.h"
 #import "EZEzsigndocumentPatchObjectV1Request.h"
 #import "EZEzsigndocumentPatchObjectV1Response.h"
+#import "EZEzsigndocumentUnsendV1Response.h"
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -49,7 +51,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Apply an Ezsign Template to the Ezsigndocument.
+/// Apply an Ezsigntemplate to the Ezsigndocument.
 /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 ///
 /// @param pkiEzsigndocumentID 
@@ -65,7 +67,7 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentApplyEzsigntemplateV1Response* output, NSError* error)) handler;
 
 
-/// Apply an Ezsign Template to the Ezsigndocument.
+/// Apply an Ezsigntemplate to the Ezsigndocument.
 /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 ///
 /// @param pkiEzsigndocumentID 
@@ -167,6 +169,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
     completionHandler: (void (^)(EZEzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve actionable elements for the Ezsigndocument
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentGetActionableElementsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetActionableElementsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetActionableElementsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve a URL to download documents.
@@ -299,6 +315,22 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentPatchObjectV1Request: (EZEzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
     completionHandler: (void (^)(EZEzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
+
+
+/// Unsend the Ezsigndocument
+/// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+///
+/// @param pkiEzsigndocumentID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsigndocumentUnsendV1Response*
+-(NSURLSessionTask*) ezsigndocumentUnsendV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZEzsigndocumentUnsendV1Response* output, NSError* error)) handler;
 
 
 

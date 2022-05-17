@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -34,11 +34,18 @@
 /* The email address. [optional]
  */
 @property(nonatomic) NSString* sEmailAddress;
-/* The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany. [optional]
+/* A phone number in E.164 Format [optional]
  */
+@property(nonatomic) NSString* sPhoneE164;
+/* The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers [optional]
+ */
+@property(nonatomic) NSString* sPhoneExtension;
+/* A phone number in E.164 Format [optional]
+ */
+@property(nonatomic) NSString* sPhoneE164Cell;
+
 @property(nonatomic) NSString* sPhoneNumber;
-/* The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany. [optional]
- */
+
 @property(nonatomic) NSString* sPhoneNumberCell;
 
 @end

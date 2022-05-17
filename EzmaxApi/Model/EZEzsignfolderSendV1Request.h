@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -22,7 +22,7 @@
 
 @interface EZEzsignfolderSendV1Request : EZObject
 
-/* A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent. 
+/* A custom text message that will be added to the email sent. 
  */
 @property(nonatomic) NSString* tExtraMessage;
 

@@ -5,12 +5,14 @@
 #import "EZEzsignfoldersignerassociationCreateObjectV2Request.h"
 #import "EZEzsignfoldersignerassociationCreateObjectV2Response.h"
 #import "EZEzsignfoldersignerassociationDeleteObjectV1Response.h"
+#import "EZEzsignfoldersignerassociationEditObjectV1Request.h"
+#import "EZEzsignfoldersignerassociationEditObjectV1Response.h"
 #import "EZEzsignfoldersignerassociationGetInPersonLoginUrlV1Response.h"
 #import "EZEzsignfoldersignerassociationGetObjectV1Response.h"
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -66,6 +68,22 @@ extern NSInteger kEZObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 /// @return EZEzsignfoldersignerassociationDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationDeleteObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     completionHandler: (void (^)(EZEzsignfoldersignerassociationDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit an existing Ezsignfoldersignerassociation
+/// 
+///
+/// @param pkiEzsignfoldersignerassociationID 
+/// @param ezsignfoldersignerassociationEditObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The element you are trying to work on does not exist",
+///  code:422 message:"The syntax of the request is valid but the request cannot be completed. Look for detail in body."
+///
+/// @return EZEzsignfoldersignerassociationEditObjectV1Response*
+-(NSURLSessionTask*) ezsignfoldersignerassociationEditObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationEditObjectV1Request: (EZEzsignfoldersignerassociationEditObjectV1Request*) ezsignfoldersignerassociationEditObjectV1Request
+    completionHandler: (void (^)(EZEzsignfoldersignerassociationEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve a Login Url to allow In-Person signing

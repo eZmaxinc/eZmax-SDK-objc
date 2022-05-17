@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -15,9 +15,12 @@
 
 
 #import "EZCommonAudit.h"
+#import "EZCustomEzsignfoldertransmissionResponse.h"
 #import "EZEzsignbulksendtransmissionResponseCompound.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
+@protocol EZCustomEzsignfoldertransmissionResponse;
+@class EZCustomEzsignfoldertransmissionResponse;
 @protocol EZEzsignbulksendtransmissionResponseCompound;
 @class EZEzsignbulksendtransmissionResponseCompound;
 
@@ -42,5 +45,7 @@
 @property(nonatomic) NSNumber* iEzsignbulksendtransmissionErrors;
 
 @property(nonatomic) EZCommonAudit* objAudit;
+
+@property(nonatomic) NSArray<EZCustomEzsignfoldertransmissionResponse>* aObjEzsignfoldertransmission;
 
 @end

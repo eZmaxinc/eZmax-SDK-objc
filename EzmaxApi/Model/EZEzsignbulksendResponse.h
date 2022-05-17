@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -34,12 +34,21 @@
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;
+/* The Name of the Language in the language of the requester 
+ */
+@property(nonatomic) NSString* sLanguageNameX;
+/* The name of the Ezsignfoldertype in the language of the requester 
+ */
+@property(nonatomic) NSString* sEzsignfoldertypeNameX;
 /* The description of the Ezsignbulksend 
  */
 @property(nonatomic) NSString* sEzsignbulksendDescription;
 /* Note about the Ezsignbulksend 
  */
 @property(nonatomic) NSString* tEzsignbulksendNote;
+/* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation 
+ */
+@property(nonatomic) NSNumber* bEzsignbulksendNeedvalidation;
 /* Whether the Ezsignbulksend is active or not 
  */
 @property(nonatomic) NSNumber* bEzsignbulksendIsactive;

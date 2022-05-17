@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignbulksendtransmissionID": @"pkiEzsignbulksendtransmissionID", @"fkiEzsignbulksendID": @"fkiEzsignbulksendID", @"sEzsignbulksendtransmissionDescription": @"sEzsignbulksendtransmissionDescription", @"iEzsignbulksendtransmissionErrors": @"iEzsignbulksendtransmissionErrors", @"objAudit": @"objAudit" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignbulksendtransmissionID": @"pkiEzsignbulksendtransmissionID", @"fkiEzsignbulksendID": @"fkiEzsignbulksendID", @"sEzsignbulksendtransmissionDescription": @"sEzsignbulksendtransmissionDescription", @"iEzsignbulksendtransmissionErrors": @"iEzsignbulksendtransmissionErrors", @"objAudit": @"objAudit", @"aObjEzsignfoldertransmission": @"a_objEzsignfoldertransmission" }];
 }
 
 /**

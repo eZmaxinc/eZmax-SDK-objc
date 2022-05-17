@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fkiUserID** | **NSNumber*** | The unique ID of the User | 
-**fkiEzsignsignerID** | **NSNumber*** | The unique ID of the Ezsignsigner | 
+**fkiUserID** | **NSNumber*** | The unique ID of the User | [optional] 
+**fkiEzsignsignerID** | **NSNumber*** | The unique ID of the Ezsignsigner | [optional] 
 **dtEzsigndocumentlogDatetime** | **NSString*** | The date and time at which the event was logged | 
 **eEzsigndocumentlogType** | [**EZFieldEEzsigndocumentlogType***](EZFieldEEzsigndocumentlogType.md) |  | 
 **sEzsigndocumentlogDetail** | **NSString*** | The detail of the Ezsigndocumentlog | 

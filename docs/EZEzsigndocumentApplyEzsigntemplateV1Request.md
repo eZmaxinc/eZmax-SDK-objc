@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fkiEzsigntemplateID** | **NSNumber*** | The unique ID of the Ezsigndocument | 
+**fkiEzsigntemplateID** | **NSNumber*** | The unique ID of the Ezsigntemplate | 
 **aSEzsigntemplatesigner** | **NSArray&lt;NSString*&gt;*** |  | 
 **aPkiEzsignfoldersignerassociationID** | **NSArray&lt;NSNumber*&gt;*** |  | 
 

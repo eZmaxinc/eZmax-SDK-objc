@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonGetAutocompleteV1Response.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -28,12 +29,14 @@ extern NSInteger kEZObjectPeriodApiMissingParamErrorCode;
 ///
 /// @param sSelector The types of Periods to return
 /// @param sQuery Allow to filter the returned results (optional)
+/// @param acceptLanguage  (optional)
 /// 
 ///  code:200 message:"Successful response"
 ///
 /// @return EZCommonGetAutocompleteV1Response*
 -(NSURLSessionTask*) periodGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
 
 

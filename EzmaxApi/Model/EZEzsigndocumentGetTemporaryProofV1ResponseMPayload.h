@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -26,6 +26,6 @@
 @interface EZEzsigndocumentGetTemporaryProofV1ResponseMPayload : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentlogResponseCompound* aObjEzsigndocumentlog;
+@property(nonatomic) NSArray<EZEzsigndocumentlogResponseCompound>* aObjEzsigndocumentlog;
 
 @end

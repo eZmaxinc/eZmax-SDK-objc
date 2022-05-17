@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -15,11 +15,8 @@
 
 
 #import "EZCustomFormDataDocumentResponse.h"
-#import "EZCustomFormDataSignerResponse.h"
 @protocol EZCustomFormDataDocumentResponse;
 @class EZCustomFormDataDocumentResponse;
-@protocol EZCustomFormDataSignerResponse;
-@class EZCustomFormDataSignerResponse;
 
 
 
@@ -28,19 +25,7 @@
 
 @interface EZEzsigndocumentGetFormDataV1ResponseMPayload : EZObject
 
-/* The unique ID of the Ezsigndocument 
- */
-@property(nonatomic) NSNumber* pkiEzsigndocumentID;
-/* The unique ID of the Ezsignfolder 
- */
-@property(nonatomic) NSNumber* fkiEzsignfolderID;
-/* The name of the document that will be presented to Ezsignfoldersignerassociations 
- */
-@property(nonatomic) NSString* sEzsigndocumentName;
-/* The date and time at which the object was last modified 
- */
-@property(nonatomic) NSString* dtModifiedDate;
 
-@property(nonatomic) NSArray<EZCustomFormDataSignerResponse>* aObjFormDataSigner;
+@property(nonatomic) EZCustomFormDataDocumentResponse* objFormDataDocument;
 
 @end

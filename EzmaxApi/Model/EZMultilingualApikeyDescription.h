@@ -2,7 +2,7 @@
 #import "EZObject.h"
 
 /**
-* eZmax API Definition
+* eZmax API Definition (Full)
 * This API expose all the functionnalities for the eZmax and eZsign applications.
 *
 * The version of the OpenAPI document: 1.1.7
@@ -22,10 +22,10 @@
 
 @interface EZMultilingualApikeyDescription : EZObject
 
-/* Value in French [optional]
+/* The description of the Apikey in French [optional]
  */
 @property(nonatomic) NSString* sApikeyDescription1;
-/* Value in English [optional]
+/* The description of the Apikey in English [optional]
  */
 @property(nonatomic) NSString* sApikeyDescription2;
 

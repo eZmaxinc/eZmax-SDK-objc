@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiWebhookID": @"pkiWebhookID", @"eWebhookModule": @"eWebhookModule", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"pksCustomerCode": @"pksCustomerCode", @"sWebhookUrl": @"sWebhookUrl", @"sWebhookEmailfailed": @"sWebhookEmailfailed", @"eWebhookManagementevent": @"eWebhookManagementevent" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pksCustomerCode": @"pksCustomerCode", @"pkiWebhookID": @"pkiWebhookID", @"eWebhookModule": @"eWebhookModule", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"eWebhookManagementevent": @"eWebhookManagementevent", @"sWebhookUrl": @"sWebhookUrl", @"bWebhookTest": @"bWebhookTest", @"bWebhookSkipsslvalidation": @"bWebhookSkipsslvalidation", @"sWebhookEmailfailed": @"sWebhookEmailfailed" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"eWebhookEzsignevent", @"eWebhookManagementevent"];
+  NSArray *optionalProperties = @[@"eWebhookEzsignevent", @"eWebhookManagementevent", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **tEzsignfolderNote** | **NSString*** | Note about the Ezsignfolder | 
 **eEzsignfolderSendreminderfrequency** | [**EZFieldEEzsignfolderSendreminderfrequency***](EZFieldEEzsignfolderSendreminderfrequency.md) |  | 
-**dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | 
-**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | 
+**dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
+**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | [optional] 
 **dtEzsignfolderScheduledarchive** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be archived. | 
 **dtEzsignfolderScheduleddestruction** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be Destroyed. | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 

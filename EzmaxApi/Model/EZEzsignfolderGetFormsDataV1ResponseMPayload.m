@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"aObjFormDataDocument": @"a_objFormDataDocument" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objFormsDataFolder": @"objFormsDataFolder" }];
 }
 
 /**
