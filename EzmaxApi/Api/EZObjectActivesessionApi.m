@@ -2,6 +2,7 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZActivesessionGetCurrentV1Response.h"
+#import "EZCommonResponseRedirectSSecretquestionTextX.h"
 
 
 @interface EZObjectActivesessionApi ()

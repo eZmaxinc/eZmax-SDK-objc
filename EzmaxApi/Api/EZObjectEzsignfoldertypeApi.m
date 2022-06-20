@@ -65,7 +65,7 @@ NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 ///
 -(NSURLSessionTask*) ezsignfoldertypeGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
@@ -150,7 +150,7 @@ NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 -(NSURLSessionTask*) ezsignfoldertypeGetListV1WithEOrderBy: (NSString*) eOrderBy
     iRowMax: (NSNumber*) iRowMax
     iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfoldertype/getList"];

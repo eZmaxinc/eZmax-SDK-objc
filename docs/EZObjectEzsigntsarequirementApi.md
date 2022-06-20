@@ -12,7 +12,7 @@ Method | HTTP request | Description
 -(NSURLSessionTask*) ezsigntsarequirementGetAutocompleteV1WithSSelector: (NSString*) sSelector
     fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler;
 ```
 
@@ -33,7 +33,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 NSString* sSelector = @"sSelector_example"; // The type of Ezsigntsarequirements to return
 NSNumber* fkiEzsignfoldertypeID = @56; //  (optional)
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
 EZObjectEzsigntsarequirementApi*apiInstance = [[EZObjectEzsigntsarequirementApi alloc] init];
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
  **sSelector** | **NSString***| The type of Ezsigntsarequirements to return | 
  **fkiEzsignfoldertypeID** | **NSNumber***|  | [optional] 
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
 
 ### Return type
 

@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderCreateObjectV2**](EZObjectEzsignfolderApi.md#ezsignfoldercreateobjectv2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](EZObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
+[**ezsignfolderDisposeEzsignfoldersV1**](EZObjectEzsignfolderApi.md#ezsignfolderdisposeezsignfoldersv1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
+[**ezsignfolderDisposeV1**](EZObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 [**ezsignfolderEditObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderGetActionableElementsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetEzsigndocumentsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
@@ -311,6 +313,124 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderDisposeEzsignfoldersV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderDisposeEzsignfoldersV1WithEzsignfolderDisposeEzsignfoldersV1Request: (EZEzsignfolderDisposeEzsignfoldersV1Request*) ezsignfolderDisposeEzsignfoldersV1Request
+        completionHandler: (void (^)(EZEzsignfolderDisposeEzsignfoldersV1Response* output, NSError* error)) handler;
+```
+
+Dispose Ezsignfolders
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EZEzsignfolderDisposeEzsignfoldersV1Request* ezsignfolderDisposeEzsignfoldersV1Request = [[EZEzsignfolderDisposeEzsignfoldersV1Request alloc] init]; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Dispose Ezsignfolders
+[apiInstance ezsignfolderDisposeEzsignfoldersV1WithEzsignfolderDisposeEzsignfoldersV1Request:ezsignfolderDisposeEzsignfoldersV1Request
+          completionHandler: ^(EZEzsignfolderDisposeEzsignfoldersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderDisposeEzsignfoldersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderDisposeEzsignfoldersV1Request** | [**EZEzsignfolderDisposeEzsignfoldersV1Request***](EZEzsignfolderDisposeEzsignfoldersV1Request.md)|  | 
+
+### Return type
+
+[**EZEzsignfolderDisposeEzsignfoldersV1Response***](EZEzsignfolderDisposeEzsignfoldersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderDisposeV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderDisposeV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    body: (NSObject*) body
+        completionHandler: (void (^)(EZEzsignfolderDisposeV1Response* output, NSError* error)) handler;
+```
+
+Dispose the Ezsignfolder
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+NSObject* body = NULL; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Dispose the Ezsignfolder
+[apiInstance ezsignfolderDisposeV1WithPkiEzsignfolderID:pkiEzsignfolderID
+              body:body
+          completionHandler: ^(EZEzsignfolderDisposeV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderDisposeV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **body** | **NSObject***|  | 
+
+### Return type
+
+[**EZEzsignfolderDisposeV1Response***](EZEzsignfolderDisposeV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderEditObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -605,7 +725,7 @@ Name | Type | Description  | Notes
 -(NSURLSessionTask*) ezsignfolderGetListV1WithEOrderBy: (NSString*) eOrderBy
     iRowMax: (NSNumber*) iRowMax
     iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
         completionHandler: (void (^)(EZEzsignfolderGetListV1Response* output, NSError* error)) handler;
 ```
@@ -627,7 +747,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
 NSNumber* iRowMax = @56; //  (optional)
 NSNumber* iRowOffset = @56; //  (optional)
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sFilter = @"sFilter_example"; //  (optional)
 
 EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
@@ -655,7 +775,7 @@ Name | Type | Description  | Notes
  **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
  **iRowMax** | **NSNumber***|  | [optional] 
  **iRowOffset** | **NSNumber***|  | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **NSString***|  | [optional] 
 
 ### Return type

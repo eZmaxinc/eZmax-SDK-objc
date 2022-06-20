@@ -288,7 +288,7 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 ///
 -(NSURLSessionTask*) ezsigntemplateGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
@@ -373,7 +373,7 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 -(NSURLSessionTask*) ezsigntemplateGetListV1WithEOrderBy: (NSString*) eOrderBy
     iRowMax: (NSNumber*) iRowMax
     iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsigntemplateGetListV1Response* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplate/getList"];

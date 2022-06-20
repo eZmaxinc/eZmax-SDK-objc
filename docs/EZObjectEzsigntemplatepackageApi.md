@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepackageGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler;
 ```
 
@@ -273,7 +273,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 NSString* sSelector = @"sSelector_example"; // The type of Ezsigntemplatepackages to return
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
 EZObjectEzsigntemplatepackageApi*apiInstance = [[EZObjectEzsigntemplatepackageApi alloc] init];
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Ezsigntemplatepackages to return | 
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
 
 ### Return type
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 -(NSURLSessionTask*) ezsigntemplatepackageGetListV1WithEOrderBy: (NSString*) eOrderBy
     iRowMax: (NSNumber*) iRowMax
     iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
         completionHandler: (void (^)(EZEzsigntemplatepackageGetListV1Response* output, NSError* error)) handler;
 ```
@@ -341,7 +341,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
 NSNumber* iRowMax = @56; //  (optional)
 NSNumber* iRowOffset = @56; //  (optional)
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sFilter = @"sFilter_example"; //  (optional)
 
 EZObjectEzsigntemplatepackageApi*apiInstance = [[EZObjectEzsigntemplatepackageApi alloc] init];
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
  **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
  **iRowMax** | **NSNumber***|  | [optional] 
  **iRowOffset** | **NSNumber***|  | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **NSString***|  | [optional] 
 
 ### Return type

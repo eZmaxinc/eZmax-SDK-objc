@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sTemporaryFileUrl", @"eErrorCode"];
+  NSArray *optionalProperties = @[@"sTemporaryFileUrl", ];
   return [optionalProperties containsObject:propertyName];
 }
 

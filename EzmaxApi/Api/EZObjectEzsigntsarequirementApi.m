@@ -67,7 +67,7 @@ NSInteger kEZObjectEzsigntsarequirementApiMissingParamErrorCode = 234513;
 -(NSURLSessionTask*) ezsigntsarequirementGetAutocompleteV1WithSSelector: (NSString*) sSelector
     fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {

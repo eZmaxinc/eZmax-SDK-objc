@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 -(NSURLSessionTask*) ezsignbulksendGetListV1WithEOrderBy: (NSString*) eOrderBy
     iRowMax: (NSNumber*) iRowMax
     iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
         completionHandler: (void (^)(EZEzsignbulksendGetListV1Response* output, NSError* error)) handler;
 ```
@@ -452,7 +452,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
 NSNumber* iRowMax = @56; //  (optional)
 NSNumber* iRowOffset = @56; //  (optional)
-EZHeaderAcceptLanguage* acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sFilter = @"sFilter_example"; //  (optional)
 
 EZObjectEzsignbulksendApi*apiInstance = [[EZObjectEzsignbulksendApi alloc] init];
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
  **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
  **iRowMax** | **NSNumber***|  | [optional] 
  **iRowOffset** | **NSNumber***|  | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage***](.md)|  | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **NSString***|  | [optional] 
 
 ### Return type

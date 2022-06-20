@@ -63,7 +63,7 @@ NSInteger kEZObjectPeriodApiMissingParamErrorCode = 234513;
 ///
 -(NSURLSessionTask*) periodGetAutocompleteV1WithSSelector: (NSString*) sSelector
     sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage*) acceptLanguage
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
