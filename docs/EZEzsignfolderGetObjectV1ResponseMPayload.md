@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **dtEzsignfolderScheduledarchive** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be archived. | [optional] 
 **dtEzsignfolderScheduleddispose** | **NSString*** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
-**dtEzsignfolderClose** | **NSString*** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | 
+**dtEzsignfolderClose** | **NSString*** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

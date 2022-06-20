@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **sEzsigndocumentName** | **NSString*** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **pkiEzsigndocumentID** | **NSNumber*** | The unique ID of the Ezsigndocument | 
 **eEzsigndocumentStep** | [**EZFieldEEzsigndocumentStep***](EZFieldEEzsigndocumentStep.md) |  | 
-**dtEzsigndocumentFirstsend** | **NSString*** | The date and time when the Ezsigndocument was first sent. | 
-**dtEzsigndocumentLastsend** | **NSString*** | The date and time when the Ezsigndocument was sent the last time. | 
+**dtEzsigndocumentFirstsend** | **NSString*** | The date and time when the Ezsigndocument was first sent. | [optional] 
+**dtEzsigndocumentLastsend** | **NSString*** | The date and time when the Ezsigndocument was sent the last time. | [optional] 
 **iEzsigndocumentOrder** | **NSNumber*** | The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. | 
 **iEzsigndocumentPagetotal** | **NSNumber*** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **NSNumber*** | The number of signatures that were signed in the document. | 
