@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"iEzsigntemplatepackagemembership": @"iEzsigntemplatepackagemembership", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"iEzsigntemplatepackagemembership": @"iEzsigntemplatepackagemembership", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive" }];
 }
 
 /**

@@ -18,9 +18,11 @@ Method | HTTP request | Description
 [**ezsignfolderGetFormsDataV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+[**ezsignfolderImportEzsignfoldersignerassociationsV1**](EZObjectEzsignfolderApi.md#ezsignfolderimportezsignfoldersignerassociationsv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV1**](EZObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
 [**ezsignfolderReorderV1**](EZObjectEzsignfolderApi.md#ezsignfolderreorderv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](EZObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderSendV2**](EZObjectEzsignfolderApi.md#ezsignfoldersendv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](EZObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
@@ -848,6 +850,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderImportEzsignfoldersignerassociationsV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderImportEzsignfoldersignerassociationsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderImportEzsignfoldersignerassociationsV1Request: (EZEzsignfolderImportEzsignfoldersignerassociationsV1Request*) ezsignfolderImportEzsignfoldersignerassociationsV1Request
+        completionHandler: (void (^)(EZEzsignfolderImportEzsignfoldersignerassociationsV1Response* output, NSError* error)) handler;
+```
+
+Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+EZEzsignfolderImportEzsignfoldersignerassociationsV1Request* ezsignfolderImportEzsignfoldersignerassociationsV1Request = [[EZEzsignfolderImportEzsignfoldersignerassociationsV1Request alloc] init]; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+[apiInstance ezsignfolderImportEzsignfoldersignerassociationsV1WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderImportEzsignfoldersignerassociationsV1Request:ezsignfolderImportEzsignfoldersignerassociationsV1Request
+          completionHandler: ^(EZEzsignfolderImportEzsignfoldersignerassociationsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderImportEzsignfoldersignerassociationsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **ezsignfolderImportEzsignfoldersignerassociationsV1Request** | [**EZEzsignfolderImportEzsignfoldersignerassociationsV1Request***](EZEzsignfolderImportEzsignfoldersignerassociationsV1Request.md)|  | 
+
+### Return type
+
+[**EZEzsignfolderImportEzsignfoldersignerassociationsV1Response***](EZEzsignfolderImportEzsignfoldersignerassociationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderImportEzsigntemplatepackageV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderImportEzsigntemplatepackageV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -1017,6 +1080,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignfolderSendV1Response***](EZEzsignfolderSendV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderSendV2**
+```objc
+-(NSURLSessionTask*) ezsignfolderSendV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderSendV2Request: (EZEzsignfolderSendV2Request*) ezsignfolderSendV2Request
+        completionHandler: (void (^)(EZEzsignfolderSendV2Response* output, NSError* error)) handler;
+```
+
+Send the Ezsignfolder to the signatories for signature
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+EZEzsignfolderSendV2Request* ezsignfolderSendV2Request = [[EZEzsignfolderSendV2Request alloc] init]; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Send the Ezsignfolder to the signatories for signature
+[apiInstance ezsignfolderSendV2WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderSendV2Request:ezsignfolderSendV2Request
+          completionHandler: ^(EZEzsignfolderSendV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderSendV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **ezsignfolderSendV2Request** | [**EZEzsignfolderSendV2Request***](EZEzsignfolderSendV2Request.md)|  | 
+
+### Return type
+
+[**EZEzsignfolderSendV2Response***](EZEzsignfolderSendV2Response.md)
 
 ### Authorization
 

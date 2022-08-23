@@ -190,6 +190,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplateGetAutocompleteV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplateGetAutocompleteV1WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
@@ -210,6 +211,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The type of Ezsigntemplate to return
+NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
@@ -217,6 +219,7 @@ EZObjectEzsigntemplateApi*apiInstance = [[EZObjectEzsigntemplateApi alloc] init]
 
 // Retrieve Ezsigntemplate and IDs
 [apiInstance ezsigntemplateGetAutocompleteV1WithSSelector:sSelector
+              eFilterActive:eFilterActive
               sQuery:sQuery
               acceptLanguage:acceptLanguage
           completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
@@ -234,6 +237,7 @@ EZObjectEzsigntemplateApi*apiInstance = [[EZObjectEzsigntemplateApi alloc] init]
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Ezsigntemplate to return | 
+ **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
 

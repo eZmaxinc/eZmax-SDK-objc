@@ -280,6 +280,8 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 /// Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
 ///  @param sSelector The type of Ezsigntemplate to return 
 ///
+///  @param eFilterActive Specify which results we want to display. (optional, default to @"Active")
+///
 ///  @param sQuery Allow to filter the returned results (optional)
 ///
 ///  @param acceptLanguage  (optional)
@@ -287,6 +289,7 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 ///  @returns EZCommonGetAutocompleteV1Response*
 ///
 -(NSURLSessionTask*) ezsigntemplateGetAutocompleteV1WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler {
@@ -309,6 +312,9 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
     }
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eFilterActive != nil) {
+        queryParams[@"eFilterActive"] = eFilterActive;
+    }
     if (sQuery != nil) {
         queryParams[@"sQuery"] = sQuery;
     }

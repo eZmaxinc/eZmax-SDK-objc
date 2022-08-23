@@ -58,6 +58,8 @@ NSInteger kEZObjectEzsigntsarequirementApiMissingParamErrorCode = 234513;
 ///
 ///  @param fkiEzsignfoldertypeID  (optional)
 ///
+///  @param eFilterActive Specify which results we want to display. (optional, default to @"Active")
+///
 ///  @param sQuery Allow to filter the returned results (optional)
 ///
 ///  @param acceptLanguage  (optional)
@@ -66,6 +68,7 @@ NSInteger kEZObjectEzsigntsarequirementApiMissingParamErrorCode = 234513;
 ///
 -(NSURLSessionTask*) ezsigntsarequirementGetAutocompleteV1WithSSelector: (NSString*) sSelector
     fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
+    eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler {
@@ -90,6 +93,9 @@ NSInteger kEZObjectEzsigntsarequirementApiMissingParamErrorCode = 234513;
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
     if (fkiEzsignfoldertypeID != nil) {
         queryParams[@"fkiEzsignfoldertypeID"] = fkiEzsignfoldertypeID;
+    }
+    if (eFilterActive != nil) {
+        queryParams[@"eFilterActive"] = eFilterActive;
     }
     if (sQuery != nil) {
         queryParams[@"sQuery"] = sQuery;

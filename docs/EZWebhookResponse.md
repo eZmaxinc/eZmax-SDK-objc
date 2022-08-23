@@ -3,15 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
-**pkiWebhookID** | **NSNumber*** | The Webhook ID. This value is visible in the admin interface. | 
-**eWebhookModule** | **NSString*** | The Module generating the Event. | 
-**eWebhookEzsignevent** | **NSString*** | This Ezsign Event. This property will be set only if the Module is \&quot;Ezsign\&quot;. | [optional] 
-**eWebhookManagementevent** | **NSString*** | This Management Event. This property will be set only if the Module is \&quot;Management\&quot;. | [optional] 
-**sWebhookUrl** | **NSString*** | The url being called | 
-**bWebhookTest** | **NSNumber*** | Wheter the webhook received is a manual test or a real event | 
-**bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use. | 
-**sWebhookEmailfailed** | **NSString*** | The email that will receive the webhook in case all attempts fail. | 
+**pkiWebhookID** | **NSNumber*** | The unique ID of the Webhook | 
+**sWebhookDescription** | **NSString*** | The description of the Webhook | 
+**fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
+**sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
+**eWebhookModule** | [**EZFieldEWebhookModule***](EZFieldEWebhookModule.md) |  | 
+**eWebhookEzsignevent** | [**EZFieldEWebhookEzsignevent***](EZFieldEWebhookEzsignevent.md) |  | [optional] 
+**eWebhookManagementevent** | [**EZFieldEWebhookManagementevent***](EZFieldEWebhookManagementevent.md) |  | [optional] 
+**sWebhookUrl** | **NSString*** | The URL of the Webhook callback | 
+**sWebhookEmailfailed** | **NSString*** | The email that will receive the Webhook in case all attempts fail | 
+**bWebhookIsactive** | **NSNumber*** | Whether the Webhook is active or not | [optional] 
+**bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

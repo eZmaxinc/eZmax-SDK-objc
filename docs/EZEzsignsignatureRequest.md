@@ -14,6 +14,11 @@ Name | Type | Description | Notes
 **tEzsignsignatureTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature | [optional] 
 **eEzsignsignatureTooltipposition** | [**EZFieldEEzsignsignatureTooltipposition***](EZFieldEEzsignsignatureTooltipposition.md) |  | [optional] 
 **eEzsignsignatureFont** | [**EZFieldEEzsignsignatureFont***](EZFieldEEzsignsignatureFont.md) |  | [optional] 
+**fkiUserID** | **NSNumber*** | The unique ID of the User | [optional] 
+**bEzsignsignatureRequired** | **NSNumber*** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. | [optional] 
+**eEzsignsignatureAttachmentnamesource** | [**EZFieldEEzsignsignatureAttachmentnamesource***](EZFieldEEzsignsignatureAttachmentnamesource.md) |  | [optional] 
+**sEzsignsignatureAttachmentdescription** | **NSString*** | The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments | [optional] 
+**iEzsignsignatureValidationstep** | **NSNumber*** | The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

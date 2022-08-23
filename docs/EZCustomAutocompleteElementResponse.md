@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **sLabel** | **NSString*** | The Description of the element | 
 **sValue** | **NSString*** | The Unique ID of the element | 
 **mValue** | **NSString*** | The Unique ID of the element | [optional] 
+**bActive** | **NSNumber*** | Indicates if the element is active | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

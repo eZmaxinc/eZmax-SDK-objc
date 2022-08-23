@@ -10,6 +10,7 @@ Method | HTTP request | Description
 # **franchiseofficeGetAutocompleteV1**
 ```objc
 -(NSURLSessionTask*) franchiseofficeGetAutocompleteV1WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
         completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
@@ -30,6 +31,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The type of Franchiseoffices to return
+NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 
@@ -37,6 +39,7 @@ EZObjectFranchiseofficeApi*apiInstance = [[EZObjectFranchiseofficeApi alloc] ini
 
 // Retrieve Franchiseoffices and IDs
 [apiInstance franchiseofficeGetAutocompleteV1WithSSelector:sSelector
+              eFilterActive:eFilterActive
               sQuery:sQuery
               acceptLanguage:acceptLanguage
           completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
@@ -54,6 +57,7 @@ EZObjectFranchiseofficeApi*apiInstance = [[EZObjectFranchiseofficeApi alloc] ini
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Franchiseoffices to return | 
+ **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
 

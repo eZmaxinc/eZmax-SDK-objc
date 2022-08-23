@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignbulksendID": @"pkiEzsignbulksendID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"sEzsignbulksendDescription": @"sEzsignbulksendDescription", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsignbulksendNeedvalidation": @"bEzsignbulksendNeedvalidation", @"bEzsignbulksendIsactive": @"bEzsignbulksendIsactive", @"iEzsignbulksendtransmission": @"iEzsignbulksendtransmission", @"iEzsignfolder": @"iEzsignfolder", @"iEzsigndocument": @"iEzsigndocument", @"iEzsignsignature": @"iEzsignsignature", @"iEzsignsignatureSigned": @"iEzsignsignatureSigned" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignbulksendID": @"pkiEzsignbulksendID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"sEzsignbulksendDescription": @"sEzsignbulksendDescription", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsignbulksendNeedvalidation": @"bEzsignbulksendNeedvalidation", @"iEzsignbulksendtransmission": @"iEzsignbulksendtransmission", @"iEzsignfolder": @"iEzsignfolder", @"iEzsigndocument": @"iEzsigndocument", @"iEzsignsignature": @"iEzsignsignature", @"iEzsignsignatureSigned": @"iEzsignsignatureSigned", @"bEzsignbulksendIsactive": @"bEzsignbulksendIsactive" }];
 }
 
 /**
