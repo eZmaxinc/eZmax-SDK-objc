@@ -2,6 +2,7 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
+#import "EZCommonResponseErrorTooManyRequests.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZWebhookCreateObjectV1Request.h"
 #import "EZWebhookCreateObjectV1Response.h"
@@ -515,15 +516,29 @@ NSInteger kEZObjectWebhookApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiWebhookID  
 ///
+///  @param body  
+///
 ///  @returns EZWebhookTestV1Response*
 ///
--(NSURLSessionTask*) webhookTestUrlV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+-(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    body: (NSObject*) body
     completionHandler: (void (^)(EZWebhookTestV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == nil) {
         NSParameterAssert(pkiWebhookID);
         if(handler) {
             NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiWebhookID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectWebhookApiErrorDomain code:kEZObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'body' is set
+    if (body == nil) {
+        NSParameterAssert(body);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"body"] };
             NSError* error = [NSError errorWithDomain:kEZObjectWebhookApiErrorDomain code:kEZObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
@@ -550,7 +565,7 @@ NSInteger kEZObjectWebhookApiMissingParamErrorCode = 234513;
     NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
 
     // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
 
     // Authentication setting
     NSArray *authSettings = @[@"Authorization"];
@@ -558,6 +573,7 @@ NSInteger kEZObjectWebhookApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = body;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"

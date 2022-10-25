@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **eEzsignformfieldgroupSignerrequirement** | [**EZFieldEEzsignformfieldgroupSignerrequirement***](EZFieldEEzsignformfieldgroupSignerrequirement.md) |  | 
 **sEzsignformfieldgroupLabel** | **NSString*** | The Label for the Ezsignformfieldgroup | 
 **iEzsignformfieldgroupStep** | **NSNumber*** | The step when the Ezsignsigner will be invited to fill the form fields | 
-**sEzsignformfieldgroupDefaultvalue** | **NSString*** | The default value for the Ezsignformfieldgroup | 
+**sEzsignformfieldgroupDefaultvalue** | **NSString*** | The default value for the Ezsignformfieldgroup | [optional] 
 **iEzsignformfieldgroupFilledmin** | **NSNumber*** | The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup | 
 **iEzsignformfieldgroupFilledmax** | **NSNumber*** | The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup | 
 **bEzsignformfieldgroupReadonly** | **NSNumber*** | Whether the Ezsignformfieldgroup is read only or not. | 

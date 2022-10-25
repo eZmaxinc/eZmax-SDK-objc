@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 [**ezsigntemplatepackageEditObjectV1**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageGetAutocompleteV1**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
+[**ezsigntemplatepackageGetAutocompleteV2**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**ezsigntemplatepackageGetListV1**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 [**ezsigntemplatepackageGetObjectV1**](EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
@@ -306,6 +307,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZCommonGetAutocompleteDisabledV1Response***](EZCommonGetAutocompleteDisabledV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatepackageGetAutocompleteV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplatepackageGetAutocompleteV2WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
+    sQuery: (NSString*) sQuery
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+        completionHandler: (void (^)(EZEzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error)) handler;
+```
+
+Retrieve Ezsigntemplatepackages and IDs
+
+Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* sSelector = @"sSelector_example"; // The type of Ezsigntemplatepackages to return
+NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
+NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+
+EZObjectEzsigntemplatepackageApi*apiInstance = [[EZObjectEzsigntemplatepackageApi alloc] init];
+
+// Retrieve Ezsigntemplatepackages and IDs
+[apiInstance ezsigntemplatepackageGetAutocompleteV2WithSSelector:sSelector
+              eFilterActive:eFilterActive
+              sQuery:sQuery
+              acceptLanguage:acceptLanguage
+          completionHandler: ^(EZEzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigntemplatepackageApi->ezsigntemplatepackageGetAutocompleteV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **NSString***| The type of Ezsigntemplatepackages to return | 
+ **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
+ **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
+
+### Return type
+
+[**EZEzsigntemplatepackageGetAutocompleteV2Response***](EZEzsigntemplatepackageGetAutocompleteV2Response.md)
 
 ### Authorization
 

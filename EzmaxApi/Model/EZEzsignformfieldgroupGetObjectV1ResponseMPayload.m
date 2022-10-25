@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp", @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition", @"aObjDropdownElement", ];
+  NSArray *optionalProperties = @[@"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp", @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition", @"aObjDropdownElement", ];
   return [optionalProperties containsObject:propertyName];
 }
 

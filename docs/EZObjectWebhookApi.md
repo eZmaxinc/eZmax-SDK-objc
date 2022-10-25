@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](EZObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](EZObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](EZObjectWebhookApi.md#webhookgetobjectv1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**webhookTestUrlV1**](EZObjectWebhookApi.md#webhooktesturlv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+[**webhookTestV1**](EZObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 # **webhookCreateObjectV1**
@@ -379,9 +379,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **webhookTestUrlV1**
+# **webhookTestV1**
 ```objc
--(NSURLSessionTask*) webhookTestUrlV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+-(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    body: (NSObject*) body
         completionHandler: (void (^)(EZWebhookTestV1Response* output, NSError* error)) handler;
 ```
 
@@ -400,17 +401,19 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiWebhookID = @56; // 
+NSObject* body = NULL; // 
 
 EZObjectWebhookApi*apiInstance = [[EZObjectWebhookApi alloc] init];
 
 // Test the Webhook by calling the Url
-[apiInstance webhookTestUrlV1WithPkiWebhookID:pkiWebhookID
+[apiInstance webhookTestV1WithPkiWebhookID:pkiWebhookID
+              body:body
           completionHandler: ^(EZWebhookTestV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling EZObjectWebhookApi->webhookTestUrlV1: %@", error);
+                            NSLog(@"Error calling EZObjectWebhookApi->webhookTestV1: %@", error);
                         }
                     }];
 ```
@@ -420,6 +423,7 @@ EZObjectWebhookApi*apiInstance = [[EZObjectWebhookApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **NSNumber***|  | 
+ **body** | **NSObject***|  | 
 
 ### Return type
 
@@ -431,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

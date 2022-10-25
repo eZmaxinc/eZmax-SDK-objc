@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeSendsummarytofullgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytolimitedgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytocolleague** | **NSNumber*** | Whether we send the summary to the colleagues | 
+**bEzsignfoldertypeIncludeproofsigner** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | 
+**bEzsignfoldertypeIncludeproofuser** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for users | 
 **bEzsignfoldertypeIsactive** | **NSNumber*** | Whether the Ezsignfoldertype is active or not | 
 **aFkiUserIDSigned** | **NSArray&lt;NSNumber*&gt;*** |  | [optional] 
 **aFkiUserIDSummary** | **NSArray&lt;NSNumber*&gt;*** |  | [optional] 

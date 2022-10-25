@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignpageID": @"pkiEzsignpageID", @"iEzsignpageWidthimage": @"iEzsignpageWidthimage", @"iEzsignpageHeightimage": @"iEzsignpageHeightimage", @"iEzsignpageWidthpdf": @"iEzsignpageWidthpdf", @"iEzsignpageHeightpdf": @"iEzsignpageHeightpdf", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"sImageUrl": @"sImageUrl" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignpageID": @"pkiEzsignpageID", @"iEzsignpageWidthimage": @"iEzsignpageWidthimage", @"iEzsignpageHeightimage": @"iEzsignpageHeightimage", @"iEzsignpageWidthpdf": @"iEzsignpageWidthpdf", @"iEzsignpageHeightpdf": @"iEzsignpageHeightpdf", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"sComputedImageurl": @"sComputedImageurl" }];
 }
 
 /**

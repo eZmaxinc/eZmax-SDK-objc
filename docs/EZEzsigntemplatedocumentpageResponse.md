@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **iEzsigntemplatedocumentpageWidthpdf** | **NSNumber*** | The Width of the page in points calculated at 72 DPI | 
 **iEzsigntemplatedocumentpageHeightpdf** | **NSNumber*** | The Height of the page in points calculated at 72 DPI | 
 **iEzsigntemplatedocumentpagePagenumber** | **NSNumber*** | The page number in the Ezsigntemplatedocument | 
-**sImageUrl** | **NSString*** | The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. | 
+**sComputedImageurl** | **NSString*** | The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"bEzsignformfieldSelected", @"sEzsignformfieldEnteredvalue"];
+  NSArray *optionalProperties = @[@"sEzsignformfieldValue", @"bEzsignformfieldSelected", @"sEzsignformfieldEnteredvalue"];
   return [optionalProperties containsObject:propertyName];
 }
 

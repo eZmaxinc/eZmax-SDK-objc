@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **sDepartmentNameX** | **NSString*** | The Name of the Department in the language of the requester | 
 **bActivesessionDebug** | **NSNumber*** | Whether the active session is in debug or not | 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
+**fkiSystemconfigurationtypeID** | **NSNumber*** | The unique ID of the Systemconfigurationtype | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
