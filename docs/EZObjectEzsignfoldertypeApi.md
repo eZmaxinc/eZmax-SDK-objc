@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**ezsignfoldertypeGetAutocompleteV2**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV1**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
+[**ezsignfoldertypeGetObjectV2**](EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
 
 # **ezsignfoldertypeCreateObjectV1**
@@ -386,6 +387,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignfoldertypeGetObjectV1Response***](EZEzsignfoldertypeGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldertypeGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignfoldertypeGetObjectV2WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+        completionHandler: (void (^)(EZEzsignfoldertypeGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfoldertype
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfoldertypeID = @56; // 
+
+EZObjectEzsignfoldertypeApi*apiInstance = [[EZObjectEzsignfoldertypeApi alloc] init];
+
+// Retrieve an existing Ezsignfoldertype
+[apiInstance ezsignfoldertypeGetObjectV2WithPkiEzsignfoldertypeID:pkiEzsignfoldertypeID
+          completionHandler: ^(EZEzsignfoldertypeGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfoldertypeApi->ezsignfoldertypeGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldertypeID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignfoldertypeGetObjectV2Response***](EZEzsignfoldertypeGetObjectV2Response.md)
 
 ### Authorization
 

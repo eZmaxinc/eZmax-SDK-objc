@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignbulksenddocumentmappingCreateObjectV1**](EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingcreateobjectv1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingDeleteObjectV1**](EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingdeleteobjectv1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingGetObjectV1**](EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv1) | **GET** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
+[**ezsignbulksenddocumentmappingGetObjectV2**](EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 
 
 # **ezsignbulksenddocumentmappingCreateObjectV1**
@@ -168,6 +169,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignbulksenddocumentmappingGetObjectV1Response***](EZEzsignbulksenddocumentmappingGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksenddocumentmappingGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignbulksenddocumentmappingGetObjectV2WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
+        completionHandler: (void (^)(EZEzsignbulksenddocumentmappingGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignbulksenddocumentmapping
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksenddocumentmappingID = @56; // 
+
+EZObjectEzsignbulksenddocumentmappingApi*apiInstance = [[EZObjectEzsignbulksenddocumentmappingApi alloc] init];
+
+// Retrieve an existing Ezsignbulksenddocumentmapping
+[apiInstance ezsignbulksenddocumentmappingGetObjectV2WithPkiEzsignbulksenddocumentmappingID:pkiEzsignbulksenddocumentmappingID
+          completionHandler: ^(EZEzsignbulksenddocumentmappingGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignbulksenddocumentmappingApi->ezsignbulksenddocumentmappingGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksenddocumentmappingID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignbulksenddocumentmappingGetObjectV2Response***](EZEzsignbulksenddocumentmappingGetObjectV2Response.md)
 
 ### Authorization
 

@@ -5,6 +5,7 @@
 #import "EZCommonResponseError.h"
 #import "EZEzmaxinvoicingGetAutocompleteV2Response.h"
 #import "EZEzmaxinvoicingGetObjectV1Response.h"
+#import "EZEzmaxinvoicingGetObjectV2Response.h"
 #import "EZEzmaxinvoicingGetProvisionalV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
 
@@ -290,6 +291,74 @@ NSInteger kEZObjectEzmaxinvoicingApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzmaxinvoicingGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezmaxinvoicing
+/// 
+///  @param pkiEzmaxinvoicingID  
+///
+///  @returns EZEzmaxinvoicingGetObjectV2Response*
+///
+-(NSURLSessionTask*) ezmaxinvoicingGetObjectV2WithPkiEzmaxinvoicingID: (NSNumber*) pkiEzmaxinvoicingID
+    completionHandler: (void (^)(EZEzmaxinvoicingGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzmaxinvoicingID' is set
+    if (pkiEzmaxinvoicingID == nil) {
+        NSParameterAssert(pkiEzmaxinvoicingID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzmaxinvoicingID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzmaxinvoicingApiErrorDomain code:kEZObjectEzmaxinvoicingApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzmaxinvoicingID != nil) {
+        pathParams[@"pkiEzmaxinvoicingID"] = pkiEzmaxinvoicingID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzmaxinvoicingGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzmaxinvoicingGetObjectV2Response*)data, error);
                                 }
                             }];
 }

@@ -8,6 +8,7 @@
 #import "EZEzsigntemplateformfieldgroupEditObjectV1Request.h"
 #import "EZEzsigntemplateformfieldgroupEditObjectV1Response.h"
 #import "EZEzsigntemplateformfieldgroupGetObjectV1Response.h"
+#import "EZEzsigntemplateformfieldgroupGetObjectV2Response.h"
 
 
 @interface EZObjectEzsigntemplateformfieldgroupApi ()
@@ -336,6 +337,74 @@ NSInteger kEZObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode = 234513
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsigntemplateformfieldgroupGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsigntemplateformfieldgroup
+/// 
+///  @param pkiEzsigntemplateformfieldgroupID  
+///
+///  @returns EZEzsigntemplateformfieldgroupGetObjectV2Response*
+///
+-(NSURLSessionTask*) ezsigntemplateformfieldgroupGetObjectV2WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
+    completionHandler: (void (^)(EZEzsigntemplateformfieldgroupGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplateformfieldgroupID' is set
+    if (pkiEzsigntemplateformfieldgroupID == nil) {
+        NSParameterAssert(pkiEzsigntemplateformfieldgroupID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplateformfieldgroupID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplateformfieldgroupApiErrorDomain code:kEZObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplateformfieldgroupID != nil) {
+        pathParams[@"pkiEzsigntemplateformfieldgroupID"] = pkiEzsigntemplateformfieldgroupID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsigntemplateformfieldgroupGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsigntemplateformfieldgroupGetObjectV2Response*)data, error);
                                 }
                             }];
 }

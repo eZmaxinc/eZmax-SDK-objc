@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetAutocompleteV2**](EZObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV2**](EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 # **ezsigntemplateCreateObjectV1**
@@ -444,6 +445,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigntemplateGetObjectV1Response***](EZEzsigntemplateGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplateGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplateGetObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+        completionHandler: (void (^)(EZEzsigntemplateGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplateID = @56; // 
+
+EZObjectEzsigntemplateApi*apiInstance = [[EZObjectEzsigntemplateApi alloc] init];
+
+// Retrieve an existing Ezsigntemplate
+[apiInstance ezsigntemplateGetObjectV2WithPkiEzsigntemplateID:pkiEzsigntemplateID
+          completionHandler: ^(EZEzsigntemplateGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigntemplateApi->ezsigntemplateGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsigntemplateGetObjectV2Response***](EZEzsigntemplateGetObjectV2Response.md)
 
 ### Authorization
 

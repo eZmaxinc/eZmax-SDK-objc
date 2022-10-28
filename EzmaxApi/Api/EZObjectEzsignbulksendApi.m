@@ -13,6 +13,7 @@
 #import "EZEzsignbulksendGetFormsDataV1Response.h"
 #import "EZEzsignbulksendGetListV1Response.h"
 #import "EZEzsignbulksendGetObjectV1Response.h"
+#import "EZEzsignbulksendGetObjectV2Response.h"
 #import "EZEzsignbulksendReorderV1Request.h"
 #import "EZEzsignbulksendReorderV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
@@ -729,6 +730,74 @@ NSInteger kEZObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignbulksendGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsignbulksend
+/// 
+///  @param pkiEzsignbulksendID  
+///
+///  @returns EZEzsignbulksendGetObjectV2Response*
+///
+-(NSURLSessionTask*) ezsignbulksendGetObjectV2WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    completionHandler: (void (^)(EZEzsignbulksendGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignbulksendID' is set
+    if (pkiEzsignbulksendID == nil) {
+        NSParameterAssert(pkiEzsignbulksendID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignbulksendID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignbulksendApiErrorDomain code:kEZObjectEzsignbulksendApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignbulksend/{pkiEzsignbulksendID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignbulksendID != nil) {
+        pathParams[@"pkiEzsignbulksendID"] = pkiEzsignbulksendID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignbulksendGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignbulksendGetObjectV2Response*)data, error);
                                 }
                             }];
 }

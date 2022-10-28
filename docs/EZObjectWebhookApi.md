@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](EZObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](EZObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](EZObjectWebhookApi.md#webhookgetobjectv1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
+[**webhookGetObjectV2**](EZObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 [**webhookTestV1**](EZObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -367,6 +368,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZWebhookGetObjectV1Response***](EZWebhookGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **webhookGetObjectV2**
+```objc
+-(NSURLSessionTask*) webhookGetObjectV2WithPkiWebhookID: (NSNumber*) pkiWebhookID
+        completionHandler: (void (^)(EZWebhookGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Webhook
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiWebhookID = @56; // 
+
+EZObjectWebhookApi*apiInstance = [[EZObjectWebhookApi alloc] init];
+
+// Retrieve an existing Webhook
+[apiInstance webhookGetObjectV2WithPkiWebhookID:pkiWebhookID
+          completionHandler: ^(EZWebhookGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectWebhookApi->webhookGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiWebhookID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZWebhookGetObjectV2Response***](EZWebhookGetObjectV2Response.md)
 
 ### Authorization
 

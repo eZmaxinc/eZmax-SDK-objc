@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigntemplateformfieldgroupDeleteObjectV1**](EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupdeleteobjectv1) | **DELETE** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Delete an existing Ezsigntemplateformfieldgroup
 [**ezsigntemplateformfieldgroupEditObjectV1**](EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupeditobjectv1) | **PUT** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Edit an existing Ezsigntemplateformfieldgroup
 [**ezsigntemplateformfieldgroupGetObjectV1**](EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv1) | **GET** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
+[**ezsigntemplateformfieldgroupGetObjectV2**](EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv2) | **GET** /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 
 
 # **ezsigntemplateformfieldgroupCreateObjectV1**
@@ -230,6 +231,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigntemplateformfieldgroupGetObjectV1Response***](EZEzsigntemplateformfieldgroupGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplateformfieldgroupGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplateformfieldgroupGetObjectV2WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
+        completionHandler: (void (^)(EZEzsigntemplateformfieldgroupGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsigntemplateformfieldgroup
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplateformfieldgroupID = @56; // 
+
+EZObjectEzsigntemplateformfieldgroupApi*apiInstance = [[EZObjectEzsigntemplateformfieldgroupApi alloc] init];
+
+// Retrieve an existing Ezsigntemplateformfieldgroup
+[apiInstance ezsigntemplateformfieldgroupGetObjectV2WithPkiEzsigntemplateformfieldgroupID:pkiEzsigntemplateformfieldgroupID
+          completionHandler: ^(EZEzsigntemplateformfieldgroupGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigntemplateformfieldgroupApi->ezsigntemplateformfieldgroupGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateformfieldgroupID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsigntemplateformfieldgroupGetObjectV2Response***](EZEzsigntemplateformfieldgroupGetObjectV2Response.md)
 
 ### Authorization
 

@@ -6,6 +6,7 @@
 #import "EZEzsigntemplatepackagesignermembershipCreateObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignermembershipGetObjectV1Response.h"
+#import "EZEzsigntemplatepackagesignermembershipGetObjectV2Response.h"
 
 
 @interface EZObjectEzsigntemplatepackagesignermembershipApi ()
@@ -251,6 +252,74 @@ NSInteger kEZObjectEzsigntemplatepackagesignermembershipApiMissingParamErrorCode
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsigntemplatepackagesignermembershipGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsigntemplatepackagesignermembership
+/// 
+///  @param pkiEzsigntemplatepackagesignermembershipID  
+///
+///  @returns EZEzsigntemplatepackagesignermembershipGetObjectV2Response*
+///
+-(NSURLSessionTask*) ezsigntemplatepackagesignermembershipGetObjectV2WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID
+    completionHandler: (void (^)(EZEzsigntemplatepackagesignermembershipGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplatepackagesignermembershipID' is set
+    if (pkiEzsigntemplatepackagesignermembershipID == nil) {
+        NSParameterAssert(pkiEzsigntemplatepackagesignermembershipID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatepackagesignermembershipID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplatepackagesignermembershipApiErrorDomain code:kEZObjectEzsigntemplatepackagesignermembershipApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplatepackagesignermembershipID != nil) {
+        pathParams[@"pkiEzsigntemplatepackagesignermembershipID"] = pkiEzsigntemplatepackagesignermembershipID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsigntemplatepackagesignermembershipGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsigntemplatepackagesignermembershipGetObjectV2Response*)data, error);
                                 }
                             }];
 }

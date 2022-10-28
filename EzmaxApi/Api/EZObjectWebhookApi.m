@@ -12,6 +12,7 @@
 #import "EZWebhookGetHistoryV1Response.h"
 #import "EZWebhookGetListV1Response.h"
 #import "EZWebhookGetObjectV1Response.h"
+#import "EZWebhookGetObjectV2Response.h"
 #import "EZWebhookTestV1Response.h"
 
 
@@ -507,6 +508,74 @@ NSInteger kEZObjectWebhookApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZWebhookGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Webhook
+/// 
+///  @param pkiWebhookID  
+///
+///  @returns EZWebhookGetObjectV2Response*
+///
+-(NSURLSessionTask*) webhookGetObjectV2WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    completionHandler: (void (^)(EZWebhookGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiWebhookID' is set
+    if (pkiWebhookID == nil) {
+        NSParameterAssert(pkiWebhookID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiWebhookID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectWebhookApiErrorDomain code:kEZObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/webhook/{pkiWebhookID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiWebhookID != nil) {
+        pathParams[@"pkiWebhookID"] = pkiWebhookID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZWebhookGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZWebhookGetObjectV2Response*)data, error);
                                 }
                             }];
 }

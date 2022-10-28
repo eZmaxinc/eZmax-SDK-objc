@@ -10,6 +10,7 @@
 #import "EZEzsignsignatureEditObjectV1Request.h"
 #import "EZEzsignsignatureEditObjectV1Response.h"
 #import "EZEzsignsignatureGetObjectV1Response.h"
+#import "EZEzsignsignatureGetObjectV2Response.h"
 #import "EZEzsignsignatureSignV1Request.h"
 #import "EZEzsignsignatureSignV1Response.h"
 
@@ -406,6 +407,74 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignsignatureGetObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsignsignature
+/// 
+///  @param pkiEzsignsignatureID  
+///
+///  @returns EZEzsignsignatureGetObjectV2Response*
+///
+-(NSURLSessionTask*) ezsignsignatureGetObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    completionHandler: (void (^)(EZEzsignsignatureGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignsignatureID' is set
+    if (pkiEzsignsignatureID == nil) {
+        NSParameterAssert(pkiEzsignsignatureID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignsignatureID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignsignatureApiErrorDomain code:kEZObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignsignature/{pkiEzsignsignatureID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignsignatureID != nil) {
+        pathParams[@"pkiEzsignsignatureID"] = pkiEzsignsignatureID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignsignatureGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignsignatureGetObjectV2Response*)data, error);
                                 }
                             }];
 }

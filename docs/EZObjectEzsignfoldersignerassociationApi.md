@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsignfoldersignerassociationForceDisconnectV1**](EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationforcedisconnectv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect | Disconnects the Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 [**ezsignfoldersignerassociationGetObjectV1**](EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationGetObjectV2**](EZObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 
 
 # **ezsignfoldersignerassociationCreateObjectV1**
@@ -408,6 +409,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignfoldersignerassociationGetObjectV1Response***](EZEzsignfoldersignerassociationGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldersignerassociationGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignfoldersignerassociationGetObjectV2WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+        completionHandler: (void (^)(EZEzsignfoldersignerassociationGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfoldersignerassociation
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
+
+EZObjectEzsignfoldersignerassociationApi*apiInstance = [[EZObjectEzsignfoldersignerassociationApi alloc] init];
+
+// Retrieve an existing Ezsignfoldersignerassociation
+[apiInstance ezsignfoldersignerassociationGetObjectV2WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
+          completionHandler: ^(EZEzsignfoldersignerassociationGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignfoldersignerassociationGetObjectV2Response***](EZEzsignfoldersignerassociationGetObjectV2Response.md)
 
 ### Authorization
 

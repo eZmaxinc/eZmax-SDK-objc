@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**brandingGetAutocompleteV2**](EZObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](EZObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 [**brandingGetObjectV1**](EZObjectBrandingApi.md#brandinggetobjectv1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+[**brandingGetObjectV2**](EZObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
 # **brandingCreateObjectV1**
@@ -386,6 +387,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZBrandingGetObjectV1Response***](EZBrandingGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brandingGetObjectV2**
+```objc
+-(NSURLSessionTask*) brandingGetObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
+        completionHandler: (void (^)(EZBrandingGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Branding
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBrandingID = @56; // 
+
+EZObjectBrandingApi*apiInstance = [[EZObjectBrandingApi alloc] init];
+
+// Retrieve an existing Branding
+[apiInstance brandingGetObjectV2WithPkiBrandingID:pkiBrandingID
+          completionHandler: ^(EZBrandingGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectBrandingApi->brandingGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrandingID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZBrandingGetObjectV2Response***](EZBrandingGetObjectV2Response.md)
 
 ### Authorization
 

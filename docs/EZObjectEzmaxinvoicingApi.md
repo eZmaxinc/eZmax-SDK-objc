@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezmaxinvoicingGetAutocompleteV1**](EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetAutocompleteV2**](EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetObjectV1**](EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
+[**ezmaxinvoicingGetObjectV2**](EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetProvisionalV1**](EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetprovisionalv1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 
 
@@ -193,6 +194,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzmaxinvoicingGetObjectV1Response***](EZEzmaxinvoicingGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezmaxinvoicingGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezmaxinvoicingGetObjectV2WithPkiEzmaxinvoicingID: (NSNumber*) pkiEzmaxinvoicingID
+        completionHandler: (void (^)(EZEzmaxinvoicingGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezmaxinvoicing
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzmaxinvoicingID = @56; // 
+
+EZObjectEzmaxinvoicingApi*apiInstance = [[EZObjectEzmaxinvoicingApi alloc] init];
+
+// Retrieve an existing Ezmaxinvoicing
+[apiInstance ezmaxinvoicingGetObjectV2WithPkiEzmaxinvoicingID:pkiEzmaxinvoicingID
+          completionHandler: ^(EZEzmaxinvoicingGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzmaxinvoicingApi->ezmaxinvoicingGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzmaxinvoicingID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzmaxinvoicingGetObjectV2Response***](EZEzmaxinvoicingGetObjectV2Response.md)
 
 ### Authorization
 

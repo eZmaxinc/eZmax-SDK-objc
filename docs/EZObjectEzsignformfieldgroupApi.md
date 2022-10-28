@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsignformfieldgroupDeleteObjectV1**](EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupdeleteobjectv1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupEditObjectV1**](EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupeditobjectv1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupGetObjectV1**](EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupgetobjectv1) | **GET** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+[**ezsignformfieldgroupGetObjectV2**](EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupgetobjectv2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 
 
 # **ezsignformfieldgroupCreateObjectV1**
@@ -228,6 +229,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignformfieldgroupGetObjectV1Response***](EZEzsignformfieldgroupGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignformfieldgroupGetObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignformfieldgroupGetObjectV2WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
+        completionHandler: (void (^)(EZEzsignformfieldgroupGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignformfieldgroup
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignformfieldgroupID = @56; // 
+
+EZObjectEzsignformfieldgroupApi*apiInstance = [[EZObjectEzsignformfieldgroupApi alloc] init];
+
+// Retrieve an existing Ezsignformfieldgroup
+[apiInstance ezsignformfieldgroupGetObjectV2WithPkiEzsignformfieldgroupID:pkiEzsignformfieldgroupID
+          completionHandler: ^(EZEzsignformfieldgroupGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignformfieldgroupApi->ezsignformfieldgroupGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignformfieldgroupID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignformfieldgroupGetObjectV2Response***](EZEzsignformfieldgroupGetObjectV2Response.md)
 
 ### Authorization
 
