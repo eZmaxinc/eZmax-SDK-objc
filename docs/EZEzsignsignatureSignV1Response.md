@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**NSObject***](.md) | Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | 
 **objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 

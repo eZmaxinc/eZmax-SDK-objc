@@ -1,6 +1,6 @@
-#import "EZEzsignsignatureSignV1ResponseAllOf.h"
+#import "EZFranchisebrokerAutocompleteElementResponse.h"
 
-@implementation EZEzsignsignatureSignV1ResponseAllOf
+@implementation EZFranchisebrokerAutocompleteElementResponse
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"mPayload": @"mPayload" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sFranchisebrokerName": @"sFranchisebrokerName", @"pkiFranchisebrokerID": @"pkiFranchisebrokerID", @"bFranchisebrokerIsactive": @"bFranchisebrokerIsactive" }];
 }
 
 /**

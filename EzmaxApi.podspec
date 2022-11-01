@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "EzmaxApi"
-    s.version          = "1.1.13"
+    s.version          = "1.1.14"
 
     s.summary          = "eZmax API Definition (Full)"
     s.description      = <<-DESC
