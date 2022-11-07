@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
 **dtCreatedDate** | **NSString*** | The date and time at which the object was created | 
-**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | [optional] 
+**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 
 **dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
 **iEzsigndocument** | **NSNumber*** | The total number of Ezsigndocument in the folder | 
 **iEzsigndocumentEdm** | **NSNumber*** | The total number of Ezsigndocument in the folder that were saved in the edm system | 

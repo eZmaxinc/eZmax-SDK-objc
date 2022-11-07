@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfoldersignerassociationID": @"pkiEzsignfoldersignerassociationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"bEzsignfoldersignerassociationReceivecopy": @"bEzsignfoldersignerassociationReceivecopy", @"tEzsignfoldersignerassociationMessage": @"tEzsignfoldersignerassociationMessage", @"objUser": @"objUser", @"objEzsignsigner": @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsCurrent": @"bEzsignfoldersignerassociationHasactionableelementsCurrent", @"bEzsignfoldersignerassociationHasactionableelementsFuture": @"bEzsignfoldersignerassociationHasactionableelementsFuture" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfoldersignerassociationID": @"pkiEzsignfoldersignerassociationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"bEzsignfoldersignerassociationDelayedsend": @"bEzsignfoldersignerassociationDelayedsend", @"bEzsignfoldersignerassociationReceivecopy": @"bEzsignfoldersignerassociationReceivecopy", @"tEzsignfoldersignerassociationMessage": @"tEzsignfoldersignerassociationMessage", @"objUser": @"objUser", @"objEzsignsigner": @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsCurrent": @"bEzsignfoldersignerassociationHasactionableelementsCurrent", @"bEzsignfoldersignerassociationHasactionableelementsFuture": @"bEzsignfoldersignerassociationHasactionableelementsFuture" }];
 }
 
 /**

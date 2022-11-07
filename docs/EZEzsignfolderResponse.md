@@ -14,12 +14,13 @@ Name | Type | Description | Notes
 **tEzsignfolderNote** | **NSString*** | Note about the Ezsignfolder | 
 **bEzsignfolderIsdisposable** | **NSNumber*** | If the Ezsigndocument can be disposed | 
 **eEzsignfolderSendreminderfrequency** | [**EZFieldEEzsignfolderSendreminderfrequency***](EZFieldEEzsignfolderSendreminderfrequency.md) |  | 
+**dtEzsignfolderDelayedsenddate** | **NSString*** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
-**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsign folder was sent the last time. | [optional] 
+**dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 
 **dtEzsignfolderScheduledarchive** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be archived. | [optional] 
 **dtEzsignfolderScheduleddispose** | **NSString*** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
-**dtEzsignfolderClose** | **NSString*** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
+**dtEzsignfolderClose** | **NSString*** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
 **tEzsignfolderMessage** | **NSString*** | A custom text message that will be added to the email sent. | 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 
 

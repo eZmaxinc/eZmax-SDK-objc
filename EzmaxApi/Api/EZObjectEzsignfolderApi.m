@@ -31,6 +31,8 @@
 #import "EZEzsignfolderSendV1Response.h"
 #import "EZEzsignfolderSendV2Request.h"
 #import "EZEzsignfolderSendV2Response.h"
+#import "EZEzsignfolderSendV3Request.h"
+#import "EZEzsignfolderSendV3Response.h"
 #import "EZEzsignfolderUnsendV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
 
@@ -1578,6 +1580,89 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignfolderSendV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Send the Ezsignfolder to the signatories for signature
+/// 
+///  @param pkiEzsignfolderID  
+///
+///  @param ezsignfolderSendV3Request  
+///
+///  @returns EZEzsignfolderSendV3Response*
+///
+-(NSURLSessionTask*) ezsignfolderSendV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderSendV3Request: (EZEzsignfolderSendV3Request*) ezsignfolderSendV3Request
+    completionHandler: (void (^)(EZEzsignfolderSendV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsignfolderSendV3Request' is set
+    if (ezsignfolderSendV3Request == nil) {
+        NSParameterAssert(ezsignfolderSendV3Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfolderSendV3Request"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfolder/{pkiEzsignfolderID}/send"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignfolderSendV3Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderSendV3Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderSendV3Response*)data, error);
                                 }
                             }];
 }
