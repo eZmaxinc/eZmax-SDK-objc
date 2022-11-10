@@ -1103,6 +1103,14 @@ EzmaxApi/Model/EZEzsignsignerResponseCompoundContact.h
 EzmaxApi/Model/EZEzsignsignerResponseCompoundContact.m
 EzmaxApi/Model/EZEzsigntemplateAutocompleteElementResponse.h
 EzmaxApi/Model/EZEzsigntemplateAutocompleteElementResponse.m
+EzmaxApi/Model/EZEzsigntemplateCopyV1Request.h
+EzmaxApi/Model/EZEzsigntemplateCopyV1Request.m
+EzmaxApi/Model/EZEzsigntemplateCopyV1Response.h
+EzmaxApi/Model/EZEzsigntemplateCopyV1Response.m
+EzmaxApi/Model/EZEzsigntemplateCopyV1ResponseAllOf.h
+EzmaxApi/Model/EZEzsigntemplateCopyV1ResponseAllOf.m
+EzmaxApi/Model/EZEzsigntemplateCopyV1ResponseMPayload.h
+EzmaxApi/Model/EZEzsigntemplateCopyV1ResponseMPayload.m
 EzmaxApi/Model/EZEzsigntemplateCreateObjectV1Request.h
 EzmaxApi/Model/EZEzsigntemplateCreateObjectV1Request.m
 EzmaxApi/Model/EZEzsigntemplateCreateObjectV1Response.h
@@ -2340,6 +2348,10 @@ docs/EZEzsignsignerResponseCompound.md
 docs/EZEzsignsignerResponseCompoundAllOf.md
 docs/EZEzsignsignerResponseCompoundContact.md
 docs/EZEzsigntemplateAutocompleteElementResponse.md
+docs/EZEzsigntemplateCopyV1Request.md
+docs/EZEzsigntemplateCopyV1Response.md
+docs/EZEzsigntemplateCopyV1ResponseAllOf.md
+docs/EZEzsigntemplateCopyV1ResponseMPayload.md
 docs/EZEzsigntemplateCreateObjectV1Request.md
 docs/EZEzsigntemplateCreateObjectV1Response.md
 docs/EZEzsigntemplateCreateObjectV1ResponseAllOf.md

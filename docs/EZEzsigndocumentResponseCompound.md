@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
+**fkiEzsignfoldersignerassociationIDDeclinedtosign** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | [optional] 
 **dtEzsigndocumentDuedate** | **NSString*** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **dtEzsignformCompleted** | **NSString*** | The date and time at which the Ezsignform has been completed. | [optional] 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentSignaturesigned** | **NSNumber*** | The number of signatures that were signed in the document. | 
 **iEzsigndocumentSignaturetotal** | **NSNumber*** | The number of total signatures that were requested in the Ezsigndocument. | 
 **sEzsigndocumentMD5initial** | **NSString*** | MD5 Hash of the initial PDF Document before signatures were applied to it. | 
+**tEzsigndocumentDeclinedtosignreason** | **NSString*** | A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign | [optional] 
 **sEzsigndocumentMD5signed** | **NSString*** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
 **bEzsigndocumentEzsignform** | **NSNumber*** | If the Ezsigndocument contains an Ezsignform or not | 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 

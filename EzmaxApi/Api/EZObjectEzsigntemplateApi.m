@@ -3,6 +3,8 @@
 #import "EZApiClient.h"
 #import "EZCommonGetAutocompleteV1Response.h"
 #import "EZCommonResponseError.h"
+#import "EZEzsigntemplateCopyV1Request.h"
+#import "EZEzsigntemplateCopyV1Response.h"
 #import "EZEzsigntemplateCreateObjectV1Request.h"
 #import "EZEzsigntemplateCreateObjectV1Response.h"
 #import "EZEzsigntemplateDeleteObjectV1Response.h"
@@ -59,6 +61,89 @@ NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Copy the Ezsigntemplate
+/// 
+///  @param pkiEzsigntemplateID  
+///
+///  @param ezsigntemplateCopyV1Request  
+///
+///  @returns EZEzsigntemplateCopyV1Response*
+///
+-(NSURLSessionTask*) ezsigntemplateCopyV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateCopyV1Request: (EZEzsigntemplateCopyV1Request*) ezsigntemplateCopyV1Request
+    completionHandler: (void (^)(EZEzsigntemplateCopyV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplateID' is set
+    if (pkiEzsigntemplateID == nil) {
+        NSParameterAssert(pkiEzsigntemplateID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplateID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplateApiErrorDomain code:kEZObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsigntemplateCopyV1Request' is set
+    if (ezsigntemplateCopyV1Request == nil) {
+        NSParameterAssert(ezsigntemplateCopyV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateCopyV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplateApiErrorDomain code:kEZObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplateID != nil) {
+        pathParams[@"pkiEzsigntemplateID"] = pkiEzsigntemplateID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsigntemplateCopyV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsigntemplateCopyV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsigntemplateCopyV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Create a new Ezsigntemplate

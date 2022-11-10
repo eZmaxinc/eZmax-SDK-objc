@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxpricingID": @"pkiEzmaxpricingID", @"dtEzmaxpricingStart": @"dtEzmaxpricingStart", @"dtEzmaxpricingEnd": @"dtEzmaxpricingEnd" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxpricingID": @"pkiEzmaxpricingID", @"dEzmaxpricingRebateezsignallagents": @"dEzmaxpricingRebateezsignallagents", @"dtEzmaxpricingStart": @"dtEzmaxpricingStart", @"dtEzmaxpricingEnd": @"dtEzmaxpricingEnd" }];
 }
 
 /**

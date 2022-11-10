@@ -4,6 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsigntemplateCopyV1**](EZObjectEzsigntemplateApi.md#ezsigntemplatecopyv1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 [**ezsigntemplateCreateObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
@@ -13,6 +14,67 @@ Method | HTTP request | Description
 [**ezsigntemplateGetObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 [**ezsigntemplateGetObjectV2**](EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
+
+# **ezsigntemplateCopyV1**
+```objc
+-(NSURLSessionTask*) ezsigntemplateCopyV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateCopyV1Request: (EZEzsigntemplateCopyV1Request*) ezsigntemplateCopyV1Request
+        completionHandler: (void (^)(EZEzsigntemplateCopyV1Response* output, NSError* error)) handler;
+```
+
+Copy the Ezsigntemplate
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplateID = @56; // 
+EZEzsigntemplateCopyV1Request* ezsigntemplateCopyV1Request = [[EZEzsigntemplateCopyV1Request alloc] init]; // 
+
+EZObjectEzsigntemplateApi*apiInstance = [[EZObjectEzsigntemplateApi alloc] init];
+
+// Copy the Ezsigntemplate
+[apiInstance ezsigntemplateCopyV1WithPkiEzsigntemplateID:pkiEzsigntemplateID
+              ezsigntemplateCopyV1Request:ezsigntemplateCopyV1Request
+          completionHandler: ^(EZEzsigntemplateCopyV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigntemplateApi->ezsigntemplateCopyV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **NSNumber***|  | 
+ **ezsigntemplateCopyV1Request** | [**EZEzsigntemplateCopyV1Request***](EZEzsigntemplateCopyV1Request.md)|  | 
+
+### Return type
+
+[**EZEzsigntemplateCopyV1Response***](EZEzsigntemplateCopyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsigntemplateCreateObjectV1**
 ```objc
