@@ -49,5 +49,8 @@
 /* Whether it's an adjustment 
  */
 @property(nonatomic) NSNumber* bEzmaxinvoicingsummaryexternaldetailAdjustment;
+/* The help message of the Ezmaxproduct in the language of the requester 
+ */
+@property(nonatomic) NSString* tEzmaxproductHelpX;
 
 @end

@@ -14,13 +14,13 @@
 */
 
 
-#import "EZCustomContactNameResponse.h"
-#import "EZFieldECommunicationEmailimportance.h"
+#import "EZComputedECommunicationDirection.h"
+#import "EZFieldECommunicationImportance.h"
 #import "EZFieldECommunicationType.h"
-@protocol EZCustomContactNameResponse;
-@class EZCustomContactNameResponse;
-@protocol EZFieldECommunicationEmailimportance;
-@class EZFieldECommunicationEmailimportance;
+@protocol EZComputedECommunicationDirection;
+@class EZComputedECommunicationDirection;
+@protocol EZFieldECommunicationImportance;
+@class EZFieldECommunicationImportance;
 @protocol EZFieldECommunicationType;
 @class EZFieldECommunicationType;
 
@@ -34,17 +34,35 @@
 /* The unique ID of the Communication. 
  */
 @property(nonatomic) NSNumber* pkiCommunicationID;
+/* The unique ID of the Ezsignfolder [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignfolderID;
+/* The unique ID of the Inscription. [optional]
+ */
+@property(nonatomic) NSNumber* fkiInscriptionID;
+/* The unique ID of the Inscriptionnotauthenticated. [optional]
+ */
+@property(nonatomic) NSNumber* fkiInscriptionnotauthenticatedID;
+/* The date and time at which the object was created 
+ */
+@property(nonatomic) NSString* dtCreatedDate;
 
-@property(nonatomic) EZFieldECommunicationEmailimportance* eCommunicationEmailimportance;
+@property(nonatomic) EZComputedECommunicationDirection* eCommunicationDirection;
+
+@property(nonatomic) EZFieldECommunicationImportance* eCommunicationImportance;
 
 @property(nonatomic) EZFieldECommunicationType* eCommunicationType;
-/* The Subject of the Communication 
+/* The count of Communicationrecipient 
+ */
+@property(nonatomic) NSNumber* iCommunicationrecipientCount;
+/* The subject of the Communication 
  */
 @property(nonatomic) NSString* sCommunicationSubject;
-/* The send date and time at which the Communication was sent. 
+/* The sender name of the Communication 
  */
-@property(nonatomic) NSString* dtCommunicationSentdate;
-
-@property(nonatomic) EZCustomContactNameResponse* objContactFrom;
+@property(nonatomic) NSString* sCommunicationSender;
+/* The recipients' name of the Communication 
+ */
+@property(nonatomic) NSString* sCommunicationRecipient;
 
 @end

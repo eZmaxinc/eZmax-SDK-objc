@@ -33,7 +33,8 @@
 /* The name of the document that will be presented to Ezsignfoldersignerassociations 
  */
 @property(nonatomic) NSString* sEzsigndocumentName;
-
+/* Whether you have access to the Ezsignfolder or not 
+ */
 @property(nonatomic) NSNumber* bEzsignfolderAllowed;
 
 @end

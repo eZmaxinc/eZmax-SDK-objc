@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjCommunicationattachment": @"a_objCommunicationattachment", @"aObjCommunicationrecipient": @"a_objCommunicationrecipient", @"aObjCommunicationexternalrecipient": @"a_objCommunicationexternalrecipient", @"aObjCommunicationimage": @"a_objCommunicationimage", @"aObjCommunicationexternalimage": @"a_objCommunicationexternalimage" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjCommunicationattachment": @"a_objCommunicationattachment", @"aObjCommunicationrecipient": @"a_objCommunicationrecipient", @"aObjCommunicationexternalrecipient": @"a_objCommunicationexternalrecipient" }];
 }
 
 /**

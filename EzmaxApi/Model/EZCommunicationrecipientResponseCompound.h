@@ -14,12 +14,21 @@
 */
 
 
+#import "EZDescriptionstaticResponseCompound.h"
+#import "EZEmailstaticResponseCompound.h"
+#import "EZFieldECommunicationrecipientObjecttype.h"
 #import "EZFieldECommunicationrecipientType.h"
-#import "EZPhoneResponseCompound.h"
+#import "EZPhonestaticResponseCompound.h"
+@protocol EZDescriptionstaticResponseCompound;
+@class EZDescriptionstaticResponseCompound;
+@protocol EZEmailstaticResponseCompound;
+@class EZEmailstaticResponseCompound;
+@protocol EZFieldECommunicationrecipientObjecttype;
+@class EZFieldECommunicationrecipientObjecttype;
 @protocol EZFieldECommunicationrecipientType;
 @class EZFieldECommunicationrecipientType;
-@protocol EZPhoneResponseCompound;
-@class EZPhoneResponseCompound;
+@protocol EZPhonestaticResponseCompound;
+@class EZPhonestaticResponseCompound;
 
 
 
@@ -31,6 +40,8 @@
 /* The unique ID of the Communicationrecipient. 
  */
 @property(nonatomic) NSNumber* pkiCommunicationrecipientID;
+
+@property(nonatomic) EZFieldECommunicationrecipientObjecttype* eCommunicationrecipientObjecttype;
 /* The unique ID of the Agent. [optional]
  */
 @property(nonatomic) NSNumber* fkiAgentID;
@@ -55,11 +66,6 @@
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The email address. [optional]
- */
-@property(nonatomic) NSString* sEmailAddress;
-
-@property(nonatomic) EZFieldECommunicationrecipientType* eCommunicationrecipientType;
 /* The unique ID of the Agentincorporation. [optional]
  */
 @property(nonatomic) NSNumber* fkiAgentincorporationID;
@@ -82,6 +88,12 @@
  */
 @property(nonatomic) NSNumber* fkiSupplierID;
 
-@property(nonatomic) EZPhoneResponseCompound* objPhoneSms;
+@property(nonatomic) EZFieldECommunicationrecipientType* eCommunicationrecipientType;
+
+@property(nonatomic) EZDescriptionstaticResponseCompound* objDescriptionstatic;
+
+@property(nonatomic) EZEmailstaticResponseCompound* objEmailstatic;
+
+@property(nonatomic) EZPhonestaticResponseCompound* objPhonestatic;
 
 @end

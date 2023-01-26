@@ -14,28 +14,28 @@
 */
 
 
+#import "EZCommonAudit.h"
 #import "EZCommunicationattachmentResponseCompound.h"
-#import "EZCommunicationexternalimageResponseCompound.h"
 #import "EZCommunicationexternalrecipientResponseCompound.h"
-#import "EZCommunicationimageResponseCompound.h"
 #import "EZCommunicationrecipientResponseCompound.h"
+#import "EZComputedECommunicationDirection.h"
 #import "EZCustomContactNameResponse.h"
-#import "EZFieldECommunicationEmailimportance.h"
+#import "EZFieldECommunicationImportance.h"
 #import "EZFieldECommunicationType.h"
+@protocol EZCommonAudit;
+@class EZCommonAudit;
 @protocol EZCommunicationattachmentResponseCompound;
 @class EZCommunicationattachmentResponseCompound;
-@protocol EZCommunicationexternalimageResponseCompound;
-@class EZCommunicationexternalimageResponseCompound;
 @protocol EZCommunicationexternalrecipientResponseCompound;
 @class EZCommunicationexternalrecipientResponseCompound;
-@protocol EZCommunicationimageResponseCompound;
-@class EZCommunicationimageResponseCompound;
 @protocol EZCommunicationrecipientResponseCompound;
 @class EZCommunicationrecipientResponseCompound;
+@protocol EZComputedECommunicationDirection;
+@class EZComputedECommunicationDirection;
 @protocol EZCustomContactNameResponse;
 @class EZCustomContactNameResponse;
-@protocol EZFieldECommunicationEmailimportance;
-@class EZFieldECommunicationEmailimportance;
+@protocol EZFieldECommunicationImportance;
+@class EZFieldECommunicationImportance;
 @protocol EZFieldECommunicationType;
 @class EZFieldECommunicationType;
 
@@ -50,26 +50,26 @@
  */
 @property(nonatomic) NSNumber* pkiCommunicationID;
 
-@property(nonatomic) EZFieldECommunicationEmailimportance* eCommunicationEmailimportance;
+@property(nonatomic) EZFieldECommunicationImportance* eCommunicationImportance;
 
 @property(nonatomic) EZFieldECommunicationType* eCommunicationType;
-/* The Subject of the Communication 
+/* The subject of the Communication 
  */
 @property(nonatomic) NSString* sCommunicationSubject;
-/* The send date and time at which the Communication was sent. 
+
+@property(nonatomic) EZComputedECommunicationDirection* eCommunicationDirection;
+/* The count of Communicationrecipient 
  */
-@property(nonatomic) NSString* dtCommunicationSentdate;
+@property(nonatomic) NSNumber* iCommunicationrecipientCount;
 
 @property(nonatomic) EZCustomContactNameResponse* objContactFrom;
+
+@property(nonatomic) EZCommonAudit* objAudit;
 
 @property(nonatomic) NSArray<EZCommunicationattachmentResponseCompound>* aObjCommunicationattachment;
 
 @property(nonatomic) NSArray<EZCommunicationrecipientResponseCompound>* aObjCommunicationrecipient;
 
 @property(nonatomic) NSArray<EZCommunicationexternalrecipientResponseCompound>* aObjCommunicationexternalrecipient;
-
-@property(nonatomic) NSArray<EZCommunicationimageResponseCompound>* aObjCommunicationimage;
-
-@property(nonatomic) NSArray<EZCommunicationexternalimageResponseCompound>* aObjCommunicationexternalimage;
 
 @end

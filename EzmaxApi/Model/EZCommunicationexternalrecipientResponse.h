@@ -14,12 +14,18 @@
 */
 
 
+#import "EZDescriptionstaticResponseCompound.h"
+#import "EZEmailstaticResponseCompound.h"
 #import "EZFieldECommunicationexternalrecipientType.h"
-#import "EZPhoneResponseCompound.h"
+#import "EZPhonestaticResponseCompound.h"
+@protocol EZDescriptionstaticResponseCompound;
+@class EZDescriptionstaticResponseCompound;
+@protocol EZEmailstaticResponseCompound;
+@class EZEmailstaticResponseCompound;
 @protocol EZFieldECommunicationexternalrecipientType;
 @class EZFieldECommunicationexternalrecipientType;
-@protocol EZPhoneResponseCompound;
-@class EZPhoneResponseCompound;
+@protocol EZPhonestaticResponseCompound;
+@class EZPhonestaticResponseCompound;
 
 
 
@@ -31,15 +37,13 @@
 /* The unique ID of the Communicationexternalrecipient 
  */
 @property(nonatomic) NSNumber* pkiCommunicationexternalrecipientID;
-/* The email address. [optional]
- */
-@property(nonatomic) NSString* sEmailAddress;
-
-@property(nonatomic) EZPhoneResponseCompound* objPhoneSms;
 
 @property(nonatomic) EZFieldECommunicationexternalrecipientType* eCommunicationexternalrecipientType;
-/* The Name of the Communicationexternalrecipient 
- */
-@property(nonatomic) NSString* sCommunicationexternalrecipientName;
+
+@property(nonatomic) EZDescriptionstaticResponseCompound* objDescriptionstatic;
+
+@property(nonatomic) EZEmailstaticResponseCompound* objEmailstatic;
+
+@property(nonatomic) EZPhonestaticResponseCompound* objPhonestatic;
 
 @end

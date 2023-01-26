@@ -46,10 +46,10 @@
 /* The number of days for the Ezmaxinvoicingsummaryglobal 
  */
 @property(nonatomic) NSNumber* iEzmaxinvoicingsummaryglobalDays;
-/* The The count item calculated 
+/* The count item calculated 
  */
 @property(nonatomic) NSString* dEzmaxinvoicingsummaryglobalCountreal;
-/* The The count item billed 
+/* The count item billed 
  */
 @property(nonatomic) NSString* dEzmaxinvoicingsummaryglobalCountbilled;
 /* The Ezmaxinvoicingsummaryglobal subtotal 
@@ -79,6 +79,9 @@
 /* Whether it is adjustment for the Ezmaxinvoicingsummaryglobal 
  */
 @property(nonatomic) NSNumber* bEzmaxinvoicingsummaryglobalAdjustment;
+/* The help message of the Ezmaxproduct in the language of the requester 
+ */
+@property(nonatomic) NSString* tEzmaxproductHelpX;
 
 @property(nonatomic) NSArray<EZEzmaxinvoicingcommissionResponseCompound>* aObjEzmaxinvoicingcommission;
 

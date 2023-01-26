@@ -37,7 +37,8 @@
 /* Whether there was a signature is of type payment 
  */
 @property(nonatomic) NSNumber* bEzsignfolderPaymentused;
-
+/* Whether you have access to the Ezsignfolder or not 
+ */
 @property(nonatomic) NSNumber* bEzsignfolderAllowed;
 
 @end

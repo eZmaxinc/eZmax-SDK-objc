@@ -15,12 +15,12 @@
 
 
 #import "EZCommonResponseObjDebug.h"
-#import "EZCommonResponseObjDebugPayload.h"
+#import "EZCommonResponseObjDebugPayloadGetList.h"
 #import "EZCommunicationGetListV1ResponseMPayload.h"
 @protocol EZCommonResponseObjDebug;
 @class EZCommonResponseObjDebug;
-@protocol EZCommonResponseObjDebugPayload;
-@class EZCommonResponseObjDebugPayload;
+@protocol EZCommonResponseObjDebugPayloadGetList;
+@class EZCommonResponseObjDebugPayloadGetList;
 @protocol EZCommunicationGetListV1ResponseMPayload;
 @class EZCommunicationGetListV1ResponseMPayload;
 
@@ -34,7 +34,7 @@
 
 @property(nonatomic) EZCommunicationGetListV1ResponseMPayload* mPayload;
 
-@property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
+@property(nonatomic) EZCommonResponseObjDebugPayloadGetList* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
 

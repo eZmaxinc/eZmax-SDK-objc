@@ -22,7 +22,7 @@
 
 @interface EZPeriodAutocompleteElementResponse : EZObject
 
-/* The period YYYYMM 
+/* The YYYYMM of the Period 
  */
 @property(nonatomic) NSString* sPeriodYYYYMM;
 /* The unique ID of the Period 

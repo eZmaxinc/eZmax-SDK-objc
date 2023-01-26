@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
 #import "EZCommunicationGetCountV1Response.h"
-#import "EZCommunicationGetListV1Response.h"
 #import "EZApi.h"
 
 /**
@@ -25,34 +24,19 @@ extern NSInteger kEZModuleCommunicationApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Get the number of communication
-/// Get the number of communication in specified module
+/// Retrieve Communication count
+/// 
 ///
-/// @param eCommunicationModule Specify the requested module
+/// @param eCommunicationObjecttype The object type for the Communication
 /// @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
 /// @return EZCommunicationGetCountV1Response*
--(NSURLSessionTask*) communicationGetCommunicationCountV1WithECommunicationModule: (NSString*) eCommunicationModule
+-(NSURLSessionTask*) communicationGetCommunicationCountV1WithECommunicationObjecttype: (NSString*) eCommunicationObjecttype
     pkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZCommunicationGetCountV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve communication list
-/// Retrieve communication list
-///
-/// @param eCommunicationModule Specify the requested module
-/// @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZCommunicationGetListV1Response*
--(NSURLSessionTask*) communicationGetCommunicationListV1WithECommunicationModule: (NSString*) eCommunicationModule
-    pkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    completionHandler: (void (^)(EZCommunicationGetListV1Response* output, NSError* error)) handler;
 
 
 

@@ -22,7 +22,7 @@
 
 @interface EZCommunicationGetCountV1ResponseMPayload : EZObject
 
-/* The number of total signatures in the Ezsigntemplate. 
+/* The count of Communication. 
  */
 @property(nonatomic) NSNumber* iCommunicationCount;
 

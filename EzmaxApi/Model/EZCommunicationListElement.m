@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationID": @"pkiCommunicationID", @"eCommunicationEmailimportance": @"eCommunicationEmailimportance", @"eCommunicationType": @"eCommunicationType", @"sCommunicationSubject": @"sCommunicationSubject", @"dtCommunicationSentdate": @"dtCommunicationSentdate", @"objContactFrom": @"objContactFrom" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationID": @"pkiCommunicationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiInscriptionID": @"fkiInscriptionID", @"fkiInscriptionnotauthenticatedID": @"fkiInscriptionnotauthenticatedID", @"dtCreatedDate": @"dtCreatedDate", @"eCommunicationDirection": @"eCommunicationDirection", @"eCommunicationImportance": @"eCommunicationImportance", @"eCommunicationType": @"eCommunicationType", @"iCommunicationrecipientCount": @"iCommunicationrecipientCount", @"sCommunicationSubject": @"sCommunicationSubject", @"sCommunicationSender": @"sCommunicationSender", @"sCommunicationRecipient": @"sCommunicationRecipient" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"eCommunicationEmailimportance", ];
+  NSArray *optionalProperties = @[@"fkiEzsignfolderID", @"fkiInscriptionID", @"fkiInscriptionnotauthenticatedID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

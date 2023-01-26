@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZCommunicationGetListV1Response.h"
 #import "EZCommunicationGetObjectV2Response.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
@@ -23,6 +25,27 @@ extern NSString* kEZObjectCommunicationApiErrorDomain;
 extern NSInteger kEZObjectCommunicationApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Retrieve Communication list
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eCommunicationImportance | High<br>Normal<br>Low | | eCommunicationType | Email<br>Fax<br>Sms | | eCommunicationDirection | Inbound<br>Outbound |
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
+///
+/// @return EZCommunicationGetListV1Response*
+-(NSURLSessionTask*) communicationGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZCommunicationGetListV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve an existing Communication
 /// 

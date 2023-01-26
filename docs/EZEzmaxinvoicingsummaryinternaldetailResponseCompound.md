@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **dEzmaxinvoicingsummaryinternaldetailRebate** | **NSString*** | The rebate for the product | 
 **dEzmaxinvoicingsummaryinternaldetailTotal** | **NSString*** | The total invoiced for the product | 
 **bEzmaxinvoicingsummaryinternaldetailAdjustment** | **NSNumber*** | Whether if it&#39;s an adjustment | 
+**tEzmaxproductHelpX** | **NSString*** | The help message of the Ezmaxproduct in the language of the requester | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

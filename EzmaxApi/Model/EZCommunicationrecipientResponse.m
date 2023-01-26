@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationrecipientID": @"pkiCommunicationrecipientID", @"fkiAgentID": @"fkiAgentID", @"fkiBrokerID": @"fkiBrokerID", @"fkiContactID": @"fkiContactID", @"fkiCustomerID": @"fkiCustomerID", @"fkiEmployeeID": @"fkiEmployeeID", @"fkiEzsignsignerID": @"fkiEzsignsignerID", @"fkiFranchiseofficeID": @"fkiFranchiseofficeID", @"fkiUserID": @"fkiUserID", @"sEmailAddress": @"sEmailAddress", @"eCommunicationrecipientType": @"eCommunicationrecipientType", @"fkiAgentincorporationID": @"fkiAgentincorporationID", @"fkiAssistantID": @"fkiAssistantID", @"fkiExternalbrokerID": @"fkiExternalbrokerID", @"fkiEzcomagentID": @"fkiEzcomagentID", @"fkiNotaryID": @"fkiNotaryID", @"fkiRewardmemberID": @"fkiRewardmemberID", @"fkiSupplierID": @"fkiSupplierID", @"objPhoneSms": @"objPhoneSms" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationrecipientID": @"pkiCommunicationrecipientID", @"eCommunicationrecipientObjecttype": @"eCommunicationrecipientObjecttype", @"fkiAgentID": @"fkiAgentID", @"fkiBrokerID": @"fkiBrokerID", @"fkiContactID": @"fkiContactID", @"fkiCustomerID": @"fkiCustomerID", @"fkiEmployeeID": @"fkiEmployeeID", @"fkiEzsignsignerID": @"fkiEzsignsignerID", @"fkiFranchiseofficeID": @"fkiFranchiseofficeID", @"fkiUserID": @"fkiUserID", @"fkiAgentincorporationID": @"fkiAgentincorporationID", @"fkiAssistantID": @"fkiAssistantID", @"fkiExternalbrokerID": @"fkiExternalbrokerID", @"fkiEzcomagentID": @"fkiEzcomagentID", @"fkiNotaryID": @"fkiNotaryID", @"fkiRewardmemberID": @"fkiRewardmemberID", @"fkiSupplierID": @"fkiSupplierID", @"eCommunicationrecipientType": @"eCommunicationrecipientType", @"objDescriptionstatic": @"objDescriptionstatic", @"objEmailstatic": @"objEmailstatic", @"objPhonestatic": @"objPhonestatic" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiAgentID", @"fkiBrokerID", @"fkiContactID", @"fkiCustomerID", @"fkiEmployeeID", @"fkiEzsignsignerID", @"fkiFranchiseofficeID", @"fkiUserID", @"sEmailAddress", @"eCommunicationrecipientType", @"fkiAgentincorporationID", @"fkiAssistantID", @"fkiExternalbrokerID", @"fkiEzcomagentID", @"fkiNotaryID", @"fkiRewardmemberID", @"fkiSupplierID", @"objPhoneSms"];
+  NSArray *optionalProperties = @[@"eCommunicationrecipientObjecttype", @"fkiAgentID", @"fkiBrokerID", @"fkiContactID", @"fkiCustomerID", @"fkiEmployeeID", @"fkiEzsignsignerID", @"fkiFranchiseofficeID", @"fkiUserID", @"fkiAgentincorporationID", @"fkiAssistantID", @"fkiExternalbrokerID", @"fkiEzcomagentID", @"fkiNotaryID", @"fkiRewardmemberID", @"fkiSupplierID", @"objEmailstatic", @"objPhonestatic"];
   return [optionalProperties containsObject:propertyName];
 }
 

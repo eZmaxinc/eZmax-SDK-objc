@@ -15,18 +15,12 @@
 
 
 #import "EZCommunicationattachmentResponseCompound.h"
-#import "EZCommunicationexternalimageResponseCompound.h"
 #import "EZCommunicationexternalrecipientResponseCompound.h"
-#import "EZCommunicationimageResponseCompound.h"
 #import "EZCommunicationrecipientResponseCompound.h"
 @protocol EZCommunicationattachmentResponseCompound;
 @class EZCommunicationattachmentResponseCompound;
-@protocol EZCommunicationexternalimageResponseCompound;
-@class EZCommunicationexternalimageResponseCompound;
 @protocol EZCommunicationexternalrecipientResponseCompound;
 @class EZCommunicationexternalrecipientResponseCompound;
-@protocol EZCommunicationimageResponseCompound;
-@class EZCommunicationimageResponseCompound;
 @protocol EZCommunicationrecipientResponseCompound;
 @class EZCommunicationrecipientResponseCompound;
 
@@ -43,9 +37,5 @@
 @property(nonatomic) NSArray<EZCommunicationrecipientResponseCompound>* aObjCommunicationrecipient;
 
 @property(nonatomic) NSArray<EZCommunicationexternalrecipientResponseCompound>* aObjCommunicationexternalrecipient;
-
-@property(nonatomic) NSArray<EZCommunicationimageResponseCompound>* aObjCommunicationimage;
-
-@property(nonatomic) NSArray<EZCommunicationexternalimageResponseCompound>* aObjCommunicationexternalimage;
 
 @end
