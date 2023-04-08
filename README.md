@@ -45,6 +45,11 @@ Import the following:
 #import <EzmaxApi/EZActivesessionGetCurrentV1Response.h>
 #import <EzmaxApi/EZActivesessionGetCurrentV1ResponseAllOf.h>
 #import <EzmaxApi/EZActivesessionGetCurrentV1ResponseMPayload.h>
+#import <EzmaxApi/EZActivesessionGetListV1Response.h>
+#import <EzmaxApi/EZActivesessionGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZActivesessionGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZActivesessionGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZActivesessionListElement.h>
 #import <EzmaxApi/EZActivesessionResponse.h>
 #import <EzmaxApi/EZActivesessionResponseCompound.h>
 #import <EzmaxApi/EZActivesessionResponseCompoundAllOf.h>
@@ -52,10 +57,6 @@ Import the following:
 #import <EzmaxApi/EZActivesessionResponseCompoundUser.h>
 #import <EzmaxApi/EZAddressRequest.h>
 #import <EzmaxApi/EZAddressRequestCompound.h>
-#import <EzmaxApi/EZApikeyCreateObjectV1Request.h>
-#import <EzmaxApi/EZApikeyCreateObjectV1Response.h>
-#import <EzmaxApi/EZApikeyCreateObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZApikeyCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZApikeyCreateObjectV2Request.h>
 #import <EzmaxApi/EZApikeyCreateObjectV2Response.h>
 #import <EzmaxApi/EZApikeyCreateObjectV2ResponseAllOf.h>
@@ -66,10 +67,33 @@ Import the following:
 #import <EzmaxApi/EZApikeyResponseCompound.h>
 #import <EzmaxApi/EZAttemptResponse.h>
 #import <EzmaxApi/EZAttemptResponseCompound.h>
+#import <EzmaxApi/EZBillingentityexternalAutocompleteElementResponse.h>
+#import <EzmaxApi/EZBillingentityexternalGetAutocompleteV2Response.h>
+#import <EzmaxApi/EZBillingentityexternalGetAutocompleteV2ResponseAllOf.h>
+#import <EzmaxApi/EZBillingentityexternalGetAutocompleteV2ResponseMPayload.h>
 #import <EzmaxApi/EZBillingentityinternalAutocompleteElementResponse.h>
+#import <EzmaxApi/EZBillingentityinternalCreateObjectV1Request.h>
+#import <EzmaxApi/EZBillingentityinternalCreateObjectV1Response.h>
+#import <EzmaxApi/EZBillingentityinternalCreateObjectV1ResponseAllOf.h>
+#import <EzmaxApi/EZBillingentityinternalCreateObjectV1ResponseMPayload.h>
+#import <EzmaxApi/EZBillingentityinternalDeleteObjectV1Response.h>
+#import <EzmaxApi/EZBillingentityinternalEditObjectV1Request.h>
+#import <EzmaxApi/EZBillingentityinternalEditObjectV1Response.h>
 #import <EzmaxApi/EZBillingentityinternalGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZBillingentityinternalGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZBillingentityinternalGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZBillingentityinternalGetListV1Response.h>
+#import <EzmaxApi/EZBillingentityinternalGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZBillingentityinternalGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZBillingentityinternalGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZBillingentityinternalGetObjectV2Response.h>
+#import <EzmaxApi/EZBillingentityinternalGetObjectV2ResponseAllOf.h>
+#import <EzmaxApi/EZBillingentityinternalGetObjectV2ResponseMPayload.h>
+#import <EzmaxApi/EZBillingentityinternalListElement.h>
+#import <EzmaxApi/EZBillingentityinternalRequest.h>
+#import <EzmaxApi/EZBillingentityinternalRequestCompound.h>
+#import <EzmaxApi/EZBillingentityinternalResponse.h>
+#import <EzmaxApi/EZBillingentityinternalResponseCompound.h>
 #import <EzmaxApi/EZBrandingAutocompleteElementResponse.h>
 #import <EzmaxApi/EZBrandingCreateObjectV1Request.h>
 #import <EzmaxApi/EZBrandingCreateObjectV1Response.h>
@@ -84,9 +108,6 @@ Import the following:
 #import <EzmaxApi/EZBrandingGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZBrandingGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZBrandingGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZBrandingGetObjectV1Response.h>
-#import <EzmaxApi/EZBrandingGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZBrandingGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZBrandingGetObjectV2Response.h>
 #import <EzmaxApi/EZBrandingGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZBrandingGetObjectV2ResponseMPayload.h>
@@ -98,8 +119,6 @@ Import the following:
 #import <EzmaxApi/EZBrandingResponseCompoundAllOf.h>
 #import <EzmaxApi/EZCommonAudit.h>
 #import <EzmaxApi/EZCommonAuditdetail.h>
-#import <EzmaxApi/EZCommonGetAutocompleteDisabledV1Response.h>
-#import <EzmaxApi/EZCommonGetAutocompleteDisabledV1ResponseAllOf.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1Response.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1ResponseAllOf.h>
 #import <EzmaxApi/EZCommonGetListV1ResponseMPayload.h>
@@ -118,17 +137,9 @@ Import the following:
 #import <EzmaxApi/EZCommonResponseRedirectSSecretquestionTextX.h>
 #import <EzmaxApi/EZCommonResponseWarning.h>
 #import <EzmaxApi/EZCommonWebhook.h>
-#import <EzmaxApi/EZCommunicationGetCountV1Response.h>
-#import <EzmaxApi/EZCommunicationGetCountV1ResponseAllOf.h>
-#import <EzmaxApi/EZCommunicationGetCountV1ResponseMPayload.h>
-#import <EzmaxApi/EZCommunicationGetListV1Response.h>
-#import <EzmaxApi/EZCommunicationGetListV1ResponseAllOf.h>
-#import <EzmaxApi/EZCommunicationGetListV1ResponseMPayload.h>
-#import <EzmaxApi/EZCommunicationGetListV1ResponseMPayloadAllOf.h>
 #import <EzmaxApi/EZCommunicationGetObjectV2Response.h>
 #import <EzmaxApi/EZCommunicationGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZCommunicationGetObjectV2ResponseMPayload.h>
-#import <EzmaxApi/EZCommunicationListElement.h>
 #import <EzmaxApi/EZCommunicationResponse.h>
 #import <EzmaxApi/EZCommunicationResponseCompound.h>
 #import <EzmaxApi/EZCommunicationResponseCompoundAllOf.h>
@@ -145,9 +156,8 @@ Import the following:
 #import <EzmaxApi/EZContactinformationsRequest.h>
 #import <EzmaxApi/EZContactinformationsRequestCompound.h>
 #import <EzmaxApi/EZContactinformationsRequestCompoundAllOf.h>
-#import <EzmaxApi/EZCustomAutocompleteElementDisabledResponse.h>
-#import <EzmaxApi/EZCustomAutocompleteElementDisabledResponseAllOf.h>
 #import <EzmaxApi/EZCustomAutocompleteElementResponse.h>
+#import <EzmaxApi/EZCustomCommunicationListElementResponse.h>
 #import <EzmaxApi/EZCustomContactNameResponse.h>
 #import <EzmaxApi/EZCustomDropdownElementRequest.h>
 #import <EzmaxApi/EZCustomDropdownElementRequestCompound.h>
@@ -158,12 +168,15 @@ Import the following:
 #import <EzmaxApi/EZCustomEzmaxinvoicingEzsignfolderResponse.h>
 #import <EzmaxApi/EZCustomEzmaxinvoicingEzsignfolderResponseAllOf.h>
 #import <EzmaxApi/EZCustomEzmaxpricingResponse.h>
+#import <EzmaxApi/EZCustomEzsigndocumentEzsignsignaturesAutomaticResponse.h>
+#import <EzmaxApi/EZCustomEzsignfolderEzsignsignaturesAutomaticResponse.h>
 #import <EzmaxApi/EZCustomEzsignfoldersignerassociationActionableElementResponse.h>
 #import <EzmaxApi/EZCustomEzsignfoldersignerassociationActionableElementResponseAllOf.h>
 #import <EzmaxApi/EZCustomEzsignfoldersignerassociationmessageRequest.h>
 #import <EzmaxApi/EZCustomEzsignfoldersignerassociationstatusResponse.h>
 #import <EzmaxApi/EZCustomEzsignfoldertransmissionResponse.h>
 #import <EzmaxApi/EZCustomEzsignfoldertransmissionSignerResponse.h>
+#import <EzmaxApi/EZCustomEzsignsignatureEzsignsignaturesAutomaticResponse.h>
 #import <EzmaxApi/EZCustomEzsignsignaturestatusResponse.h>
 #import <EzmaxApi/EZCustomFormDataDocumentResponse.h>
 #import <EzmaxApi/EZCustomFormDataEzsignformfieldResponse.h>
@@ -195,13 +208,12 @@ Import the following:
 #import <EzmaxApi/EZEmailRequestCompound.h>
 #import <EzmaxApi/EZEmailstaticResponse.h>
 #import <EzmaxApi/EZEmailstaticResponseCompound.h>
+#import <EzmaxApi/EZEnumHorizontalalignment.h>
+#import <EzmaxApi/EZEnumVerticalalignment.h>
 #import <EzmaxApi/EZEzmaxinvoicingAutocompleteElementResponse.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetAutocompleteV2ResponseMPayload.h>
-#import <EzmaxApi/EZEzmaxinvoicingGetObjectV1Response.h>
-#import <EzmaxApi/EZEzmaxinvoicingGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzmaxinvoicingGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetObjectV2Response.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzmaxinvoicingGetObjectV2ResponseMPayload.h>
@@ -234,12 +246,19 @@ Import the following:
 #import <EzmaxApi/EZEzmaxinvoicingsummaryinternaldetailResponseCompound.h>
 #import <EzmaxApi/EZEzmaxinvoicinguserResponse.h>
 #import <EzmaxApi/EZEzmaxinvoicinguserResponseCompound.h>
+#import <EzmaxApi/EZEzmaxproductAutocompleteElementResponse.h>
+#import <EzmaxApi/EZEzmaxproductGetAutocompleteV2Response.h>
+#import <EzmaxApi/EZEzmaxproductGetAutocompleteV2ResponseAllOf.h>
+#import <EzmaxApi/EZEzmaxproductGetAutocompleteV2ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignSuggestSignersV1Response.h>
 #import <EzmaxApi/EZEzsignSuggestSignersV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignSuggestSignersV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignSuggestTemplatesV1Response.h>
 #import <EzmaxApi/EZEzsignSuggestTemplatesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignSuggestTemplatesV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignannotationResponse.h>
+#import <EzmaxApi/EZEzsignannotationResponseCompound.h>
+#import <EzmaxApi/EZEzsignannotationResponseCompoundAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendCreateEzsignbulksendtransmissionV1Request.h>
 #import <EzmaxApi/EZEzsignbulksendCreateEzsignbulksendtransmissionV1Response.h>
 #import <EzmaxApi/EZEzsignbulksendCreateEzsignbulksendtransmissionV1ResponseAllOf.h>
@@ -254,6 +273,9 @@ Import the following:
 #import <EzmaxApi/EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response.h>
 #import <EzmaxApi/EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response.h>
+#import <EzmaxApi/EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendGetFormsDataV1Response.h>
 #import <EzmaxApi/EZEzsignbulksendGetFormsDataV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendGetFormsDataV1ResponseMPayload.h>
@@ -261,9 +283,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignbulksendGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZEzsignbulksendGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksendGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignbulksendGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignbulksendGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendGetObjectV2ResponseMPayload.h>
@@ -280,9 +299,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingDeleteObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.h>
@@ -296,9 +312,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignbulksendsignermappingCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingDeleteObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingGetObjectV2ResponseMPayload.h>
@@ -306,12 +319,12 @@ Import the following:
 #import <EzmaxApi/EZEzsignbulksendsignermappingRequestCompound.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingResponse.h>
 #import <EzmaxApi/EZEzsignbulksendsignermappingResponseCompound.h>
+#import <EzmaxApi/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.h>
+#import <EzmaxApi/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetFormsDataV1Response.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetFormsDataV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.h>
-#import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignbulksendtransmissionGetObjectV2ResponseMPayload.h>
@@ -340,18 +353,25 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentEditEzsignsignaturesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentEditEzsignsignaturesV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentEndPrematurelyV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentFlattenV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignannotationsV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignannotationsV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignannotationsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignformfieldgroupsV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetEzsignsignaturesV1ResponseMPayload.h>
@@ -400,12 +420,22 @@ Import the following:
 #import <EzmaxApi/EZEzsignfolderGetActionableElementsV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetActionableElementsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetActionableElementsV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationCountV1Response.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationCountV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationCountV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationListV1Response.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationListV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationListV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetCommunicationListV1ResponseMPayloadAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignsignaturesAutomaticV1Response.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1Response.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfolderGetFormsDataV1ResponseMPayload.h>
@@ -486,9 +516,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZEzsignfoldertypeGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignfoldertypeGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignfoldertypeGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignfoldertypeGetObjectV2ResponseMPayload.h>
@@ -509,9 +536,6 @@ Import the following:
 #import <EzmaxApi/EZEzsignformfieldgroupDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsignformfieldgroupEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsignformfieldgroupEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsignformfieldgroupGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignformfieldgroupGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignformfieldgroupGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignformfieldgroupGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignformfieldgroupGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignformfieldgroupGetObjectV2ResponseMPayload.h>
@@ -538,9 +562,9 @@ Import the following:
 #import <EzmaxApi/EZEzsignsignatureDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsignsignatureEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsignsignatureEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsignsignatureGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsignsignatureGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsignsignatureGetObjectV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response.h>
+#import <EzmaxApi/EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsignsignatureGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsignsignatureGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsignsignatureGetObjectV2ResponseMPayload.h>
@@ -610,6 +634,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatedocumentEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentEditObjectV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentEditObjectV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigntemplatedocumentFlattenV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.h>
@@ -619,9 +644,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload.h>
-#import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatedocumentGetObjectV2ResponseMPayload.h>
@@ -648,9 +670,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.h>
@@ -683,9 +702,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatepackageGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackageGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatepackageGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackageGetObjectV2ResponseMPayload.h>
@@ -700,9 +716,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipDeleteObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.h>
@@ -720,9 +733,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignerEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignerEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignerGetObjectV2ResponseMPayload.h>
@@ -737,9 +747,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.h>
@@ -754,9 +761,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatesignatureDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatesignatureEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsigntemplatesignatureEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatesignatureGetObjectV2ResponseMPayload.h>
@@ -777,9 +781,6 @@ Import the following:
 #import <EzmaxApi/EZEzsigntemplatesignerDeleteObjectV1Response.h>
 #import <EzmaxApi/EZEzsigntemplatesignerEditObjectV1Request.h>
 #import <EzmaxApi/EZEzsigntemplatesignerEditObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatesignerGetObjectV1Response.h>
-#import <EzmaxApi/EZEzsigntemplatesignerGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZEzsigntemplatesignerGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigntemplatesignerGetObjectV2Response.h>
 #import <EzmaxApi/EZEzsigntemplatesignerGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntemplatesignerGetObjectV2ResponseMPayload.h>
@@ -804,6 +805,7 @@ Import the following:
 #import <EzmaxApi/EZFieldEEzmaxinvoicingagentVariationezsign.h>
 #import <EzmaxApi/EZFieldEEzmaxinvoicingcontractPaymenttype.h>
 #import <EzmaxApi/EZFieldEEzmaxinvoicinguserVariationezsign.h>
+#import <EzmaxApi/EZFieldEEzsignannotationType.h>
 #import <EzmaxApi/EZFieldEEzsigndocumentStep.h>
 #import <EzmaxApi/EZFieldEEzsigndocumentlogType.h>
 #import <EzmaxApi/EZFieldEEzsignfolderSendreminderfrequency.h>
@@ -826,14 +828,21 @@ Import the following:
 #import <EzmaxApi/EZFieldEEzsigntemplatesignatureTooltipposition.h>
 #import <EzmaxApi/EZFieldEEzsigntemplatesignatureType.h>
 #import <EzmaxApi/EZFieldENotificationpreferenceStatus.h>
+#import <EzmaxApi/EZFieldEPaymenttermType.h>
 #import <EzmaxApi/EZFieldEPhoneType.h>
 #import <EzmaxApi/EZFieldEUserEzsignsendreminderfrequency.h>
 #import <EzmaxApi/EZFieldEUserType.h>
+#import <EzmaxApi/EZFieldEVariableexpenseTaxable.h>
 #import <EzmaxApi/EZFieldEVersionhistoryType.h>
 #import <EzmaxApi/EZFieldEVersionhistoryUsertype.h>
 #import <EzmaxApi/EZFieldEWebhookEzsignevent.h>
 #import <EzmaxApi/EZFieldEWebhookManagementevent.h>
 #import <EzmaxApi/EZFieldEWebhookModule.h>
+#import <EzmaxApi/EZFieldPksEzmaxclientOs.h>
+#import <EzmaxApi/EZFontAutocompleteElementResponse.h>
+#import <EzmaxApi/EZFontGetAutocompleteV2Response.h>
+#import <EzmaxApi/EZFontGetAutocompleteV2ResponseAllOf.h>
+#import <EzmaxApi/EZFontGetAutocompleteV2ResponseMPayload.h>
 #import <EzmaxApi/EZFranchisebrokerAutocompleteElementResponse.h>
 #import <EzmaxApi/EZFranchisebrokerGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZFranchisebrokerGetAutocompleteV2ResponseAllOf.h>
@@ -854,14 +863,18 @@ Import the following:
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompound.h>
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompoundAllOf.h>
 #import <EzmaxApi/EZGlobalCustomerGetEndpointV1Response.h>
+#import <EzmaxApi/EZGlobalEzmaxclientVersionV1Response.h>
 #import <EzmaxApi/EZHeaderAcceptLanguage.h>
 #import <EzmaxApi/EZMultilingualApikeyDescription.h>
+#import <EzmaxApi/EZMultilingualBillingentityinternalDescription.h>
 #import <EzmaxApi/EZMultilingualBrandingDescription.h>
 #import <EzmaxApi/EZMultilingualEzmaxinvoicingsummaryinternalDescription.h>
 #import <EzmaxApi/EZMultilingualEzsignfoldertypeName.h>
 #import <EzmaxApi/EZMultilingualNotificationsubsectionName.h>
 #import <EzmaxApi/EZMultilingualNotificationtestName.h>
 #import <EzmaxApi/EZMultilingualPaymenttermDescription.h>
+#import <EzmaxApi/EZMultilingualUsergroupName.h>
+#import <EzmaxApi/EZMultilingualVariableexpenseDescription.h>
 #import <EzmaxApi/EZMultilingualVersionhistoryDetail.h>
 #import <EzmaxApi/EZNotificationsectionGetNotificationtestsV1Response.h>
 #import <EzmaxApi/EZNotificationsectionGetNotificationtestsV1ResponseAllOf.h>
@@ -910,6 +923,8 @@ Import the following:
 #import <EzmaxApi/EZTaxassignmentGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZTaxassignmentGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZTaxassignmentGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZTextstylestaticResponse.h>
+#import <EzmaxApi/EZTextstylestaticResponseCompound.h>
 #import <EzmaxApi/EZTimezoneAutocompleteElementResponse.h>
 #import <EzmaxApi/EZTimezoneGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZTimezoneGetAutocompleteV2ResponseAllOf.h>
@@ -925,9 +940,54 @@ Import the following:
 #import <EzmaxApi/EZUserResponse.h>
 #import <EzmaxApi/EZUserResponseCompound.h>
 #import <EzmaxApi/EZUsergroupAutocompleteElementResponse.h>
+#import <EzmaxApi/EZUsergroupCreateObjectV1Request.h>
+#import <EzmaxApi/EZUsergroupCreateObjectV1Response.h>
+#import <EzmaxApi/EZUsergroupCreateObjectV1ResponseAllOf.h>
+#import <EzmaxApi/EZUsergroupCreateObjectV1ResponseMPayload.h>
+#import <EzmaxApi/EZUsergroupDeleteObjectV1Response.h>
+#import <EzmaxApi/EZUsergroupEditObjectV1Request.h>
+#import <EzmaxApi/EZUsergroupEditObjectV1Response.h>
 #import <EzmaxApi/EZUsergroupGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZUsergroupGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZUsergroupGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZUsergroupGetListV1Response.h>
+#import <EzmaxApi/EZUsergroupGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZUsergroupGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZUsergroupGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZUsergroupGetMembersV1Response.h>
+#import <EzmaxApi/EZUsergroupGetMembersV1ResponseAllOf.h>
+#import <EzmaxApi/EZUsergroupGetMembersV1ResponseMPayload.h>
+#import <EzmaxApi/EZUsergroupGetObjectV2Response.h>
+#import <EzmaxApi/EZUsergroupGetObjectV2ResponseAllOf.h>
+#import <EzmaxApi/EZUsergroupGetObjectV2ResponseMPayload.h>
+#import <EzmaxApi/EZUsergroupListElement.h>
+#import <EzmaxApi/EZUsergroupRequest.h>
+#import <EzmaxApi/EZUsergroupRequestCompound.h>
+#import <EzmaxApi/EZUsergroupResponse.h>
+#import <EzmaxApi/EZUsergroupResponseCompound.h>
+#import <EzmaxApi/EZVariableexpenseAutocompleteElementResponse.h>
+#import <EzmaxApi/EZVariableexpenseCreateObjectV1Request.h>
+#import <EzmaxApi/EZVariableexpenseCreateObjectV1Response.h>
+#import <EzmaxApi/EZVariableexpenseCreateObjectV1ResponseAllOf.h>
+#import <EzmaxApi/EZVariableexpenseCreateObjectV1ResponseMPayload.h>
+#import <EzmaxApi/EZVariableexpenseDeleteObjectV1Response.h>
+#import <EzmaxApi/EZVariableexpenseEditObjectV1Request.h>
+#import <EzmaxApi/EZVariableexpenseEditObjectV1Response.h>
+#import <EzmaxApi/EZVariableexpenseGetAutocompleteV2Response.h>
+#import <EzmaxApi/EZVariableexpenseGetAutocompleteV2ResponseAllOf.h>
+#import <EzmaxApi/EZVariableexpenseGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZVariableexpenseGetListV1Response.h>
+#import <EzmaxApi/EZVariableexpenseGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZVariableexpenseGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZVariableexpenseGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZVariableexpenseGetObjectV2Response.h>
+#import <EzmaxApi/EZVariableexpenseGetObjectV2ResponseAllOf.h>
+#import <EzmaxApi/EZVariableexpenseGetObjectV2ResponseMPayload.h>
+#import <EzmaxApi/EZVariableexpenseListElement.h>
+#import <EzmaxApi/EZVariableexpenseRequest.h>
+#import <EzmaxApi/EZVariableexpenseRequestCompound.h>
+#import <EzmaxApi/EZVariableexpenseResponse.h>
+#import <EzmaxApi/EZVariableexpenseResponseCompound.h>
 #import <EzmaxApi/EZVersionhistoryGetObjectV2Response.h>
 #import <EzmaxApi/EZVersionhistoryGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZVersionhistoryGetObjectV2ResponseMPayload.h>
@@ -952,9 +1012,6 @@ Import the following:
 #import <EzmaxApi/EZWebhookGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZWebhookGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZWebhookGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZWebhookGetObjectV1Response.h>
-#import <EzmaxApi/EZWebhookGetObjectV1ResponseAllOf.h>
-#import <EzmaxApi/EZWebhookGetObjectV1ResponseMPayload.h>
 #import <EzmaxApi/EZWebhookGetObjectV2Response.h>
 #import <EzmaxApi/EZWebhookGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZWebhookGetObjectV2ResponseMPayload.h>
@@ -971,16 +1028,18 @@ Import the following:
 #import <EzmaxApi/EZWebsiteRequestCompound.h>
 // load API classes for accessing endpoints
 #import <EzmaxApi/EZGlobalCustomerApi.h>
-#import <EzmaxApi/EZModuleCommunicationApi.h>
+#import <EzmaxApi/EZGlobalEzmaxclientApi.h>
 #import <EzmaxApi/EZModuleEzsignApi.h>
 #import <EzmaxApi/EZModuleUserApi.h>
 #import <EzmaxApi/EZObjectActivesessionApi.h>
 #import <EzmaxApi/EZObjectApikeyApi.h>
+#import <EzmaxApi/EZObjectBillingentityexternalApi.h>
 #import <EzmaxApi/EZObjectBillingentityinternalApi.h>
 #import <EzmaxApi/EZObjectBrandingApi.h>
 #import <EzmaxApi/EZObjectCommunicationApi.h>
 #import <EzmaxApi/EZObjectDepartmentApi.h>
 #import <EzmaxApi/EZObjectEzmaxinvoicingApi.h>
+#import <EzmaxApi/EZObjectEzmaxproductApi.h>
 #import <EzmaxApi/EZObjectEzsignbulksendApi.h>
 #import <EzmaxApi/EZObjectEzsignbulksenddocumentmappingApi.h>
 #import <EzmaxApi/EZObjectEzsignbulksendsignermappingApi.h>
@@ -1001,6 +1060,7 @@ Import the following:
 #import <EzmaxApi/EZObjectEzsigntemplatesignatureApi.h>
 #import <EzmaxApi/EZObjectEzsigntemplatesignerApi.h>
 #import <EzmaxApi/EZObjectEzsigntsarequirementApi.h>
+#import <EzmaxApi/EZObjectFontApi.h>
 #import <EzmaxApi/EZObjectFranchisebrokerApi.h>
 #import <EzmaxApi/EZObjectFranchiseofficeApi.h>
 #import <EzmaxApi/EZObjectFranchisereferalincomeApi.h>
@@ -1013,6 +1073,7 @@ Import the following:
 #import <EzmaxApi/EZObjectTimezoneApi.h>
 #import <EzmaxApi/EZObjectUserApi.h>
 #import <EzmaxApi/EZObjectUsergroupApi.h>
+#import <EzmaxApi/EZObjectVariableexpenseApi.h>
 #import <EzmaxApi/EZObjectVersionhistoryApi.h>
 #import <EzmaxApi/EZObjectWebhookApi.h>
 
@@ -1062,54 +1123,53 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EZGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/EZGlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*EZModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](docs/EZModuleCommunicationApi.md#communicationgetcommunicationcountv1) | **GET** /1/module/communication/getCount | Retrieve Communication count
+*EZGlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/EZGlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *EZModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/EZModuleEzsignApi.md#ezsignsuggestsignersv1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *EZModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/EZModuleEzsignApi.md#ezsignsuggesttemplatesv1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *EZModuleUserApi* | [**userCreateEzsignuserV1**](docs/EZModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *EZObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/EZObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
-*EZObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/EZObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
+*EZObjectActivesessionApi* | [**activesessionGetListV1**](docs/EZObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 *EZObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/EZObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
-*EZObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetautocompletev1) | **GET** /1/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
+*EZObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/EZObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
+*EZObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalcreateobjectv1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
+*EZObjectBillingentityinternalApi* | [**billingentityinternalDeleteObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternaldeleteobjectv1) | **DELETE** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Delete an existing Billingentityinternal
+*EZObjectBillingentityinternalApi* | [**billingentityinternalEditObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternaleditobjectv1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
 *EZObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV2**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetautocompletev2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
+*EZObjectBillingentityinternalApi* | [**billingentityinternalGetListV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetlistv1) | **GET** /1/object/billingentityinternal/getList | Retrieve Billingentityinternal list
+*EZObjectBillingentityinternalApi* | [**billingentityinternalGetObjectV2**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetobjectv2) | **GET** /2/object/billingentityinternal/{pkiBillingentityinternalID} | Retrieve an existing Billingentityinternal
 *EZObjectBrandingApi* | [**brandingCreateObjectV1**](docs/EZObjectBrandingApi.md#brandingcreateobjectv1) | **POST** /1/object/branding | Create a new Branding
 *EZObjectBrandingApi* | [**brandingEditObjectV1**](docs/EZObjectBrandingApi.md#brandingeditobjectv1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
-*EZObjectBrandingApi* | [**brandingGetAutocompleteV1**](docs/EZObjectBrandingApi.md#brandinggetautocompletev1) | **GET** /1/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *EZObjectBrandingApi* | [**brandingGetAutocompleteV2**](docs/EZObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *EZObjectBrandingApi* | [**brandingGetListV1**](docs/EZObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
-*EZObjectBrandingApi* | [**brandingGetObjectV1**](docs/EZObjectBrandingApi.md#brandinggetobjectv1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *EZObjectBrandingApi* | [**brandingGetObjectV2**](docs/EZObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
-*EZObjectCommunicationApi* | [**communicationGetListV1**](docs/EZObjectCommunicationApi.md#communicationgetlistv1) | **GET** /1/object/communication/getList | Retrieve Communication list
 *EZObjectCommunicationApi* | [**communicationGetObjectV2**](docs/EZObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
-*EZObjectDepartmentApi* | [**departmentGetAutocompleteV1**](docs/EZObjectDepartmentApi.md#departmentgetautocompletev1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *EZObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/EZObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *EZObjectDepartmentApi* | [**departmentGetMembersV1**](docs/EZObjectDepartmentApi.md#departmentgetmembersv1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
-*EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV1**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetProvisionalV1**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetprovisionalv1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
+*EZObjectEzmaxproductApi* | [**ezmaxproductGetAutocompleteV2**](docs/EZObjectEzmaxproductApi.md#ezmaxproductgetautocompletev2) | **GET** /2/object/ezmaxproduct/getAutocomplete/{sSelector} | Retrieve Ezmaxproducts and IDs
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendCreateEzsignbulksendtransmissionV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendCreateObjectV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendDeleteObjectV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksenddeleteobjectv1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendEditObjectV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendGetCsvTemplateV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetcsvtemplatev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend&#39;s empty Csv template
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetezsignbulksendtransmissionsv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+*EZObjectEzsignbulksendApi* | [**ezsignbulksendGetEzsignsignaturesAutomaticV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendGetFormsDataV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetformsdatav1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendGetListV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
-*EZObjectEzsignbulksendApi* | [**ezsignbulksendGetObjectV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendGetObjectV2**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 *EZObjectEzsignbulksendApi* | [**ezsignbulksendReorderV1**](docs/EZObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 *EZObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingCreateObjectV1**](docs/EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingcreateobjectv1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping
 *EZObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingDeleteObjectV1**](docs/EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingdeleteobjectv1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping
-*EZObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingGetObjectV1**](docs/EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv1) | **GET** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 *EZObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingGetObjectV2**](docs/EZObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 *EZObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingCreateObjectV1**](docs/EZObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingcreateobjectv1) | **POST** /1/object/ezsignbulksendsignermapping | Create a new Ezsignbulksendsignermapping
 *EZObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingDeleteObjectV1**](docs/EZObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingdeleteobjectv1) | **DELETE** /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Delete an existing Ezsignbulksendsignermapping
-*EZObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingGetObjectV1**](docs/EZObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappinggetobjectv1) | **GET** /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Retrieve an existing Ezsignbulksendsignermapping
 *EZObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingGetObjectV2**](docs/EZObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappinggetobjectv2) | **GET** /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Retrieve an existing Ezsignbulksendsignermapping
 *EZObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetCsvErrorsV1**](docs/EZObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetcsverrorsv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
+*EZObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](docs/EZObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
 *EZObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetFormsDataV1**](docs/EZObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetformsdatav1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
-*EZObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetObjectV1**](docs/EZObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetobjectv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 *EZObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetObjectV2**](docs/EZObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetobjectv2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
@@ -1119,10 +1179,13 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignformfieldgroupsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumenteditezsignformfieldgroupsv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignsignaturesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumenteditezsignsignaturesv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignannotationsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignformfieldgroupsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignpagesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignsignaturesAutomaticV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsigndocument&#39;s automatic Ezsignsignatures
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignsignaturesV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignsignaturesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures | Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
@@ -1140,8 +1203,11 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfolderApi* | [**ezsignfolderDisposeV1**](docs/EZObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetCommunicationCountV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetcommunicationcountv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetCommunicationListV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+*EZObjectEzsignfolderApi* | [**ezsignfolderGetEzsignsignaturesAutomaticV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *EZObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -1167,25 +1233,22 @@ Class | Method | HTTP request | Description
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV2**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
-*EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetObjectV1**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 *EZObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetObjectV2**](docs/EZObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 *EZObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupCreateObjectV1**](docs/EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupcreateobjectv1) | **POST** /1/object/ezsignformfieldgroup | Create a new Ezsignformfieldgroup
 *EZObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupDeleteObjectV1**](docs/EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupdeleteobjectv1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 *EZObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupEditObjectV1**](docs/EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupeditobjectv1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
-*EZObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV1**](docs/EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupgetobjectv1) | **GET** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 *EZObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV2**](docs/EZObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupgetobjectv2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV2**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-*EZObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+*EZObjectEzsignsignatureApi* | [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV2**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *EZObjectEzsignsignatureApi* | [**ezsignsignatureSignV1**](docs/EZObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateCopyV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplatecopyv1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateCreateObjectV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateDeleteObjectV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateEditObjectV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-*EZObjectEzsigntemplateApi* | [**ezsigntemplateGetAutocompleteV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev1) | **GET** /1/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplate and IDs
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateGetAutocompleteV2**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateGetListV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 *EZObjectEzsigntemplateApi* | [**ezsigntemplateGetObjectV1**](docs/EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
@@ -1194,55 +1257,46 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplateformfieldgroupsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups | Edit multiple Ezsigntemplateformfieldgroups
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentEditEzsigntemplatesignaturesV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatesignaturesv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentEditObjectV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditobjectv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Edit an existing Ezsigntemplatedocument
+*EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentFlattenV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentflattenv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten | Flatten
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatedocumentpagesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplateformfieldgroupsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetEzsigntemplatesignaturesV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatesignaturesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
-*EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetObjectV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetobjectv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetObjectV2**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetobjectv2) | **GET** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetWordsPositionsV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetwordspositionsv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 *EZObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentPatchObjectV1**](docs/EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentpatchobjectv1) | **PATCH** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Patch an existing Ezsigntemplatedocument
 *EZObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupCreateObjectV1**](docs/EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupcreateobjectv1) | **POST** /1/object/ezsigntemplateformfieldgroup | Create a new Ezsigntemplateformfieldgroup
 *EZObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupDeleteObjectV1**](docs/EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupdeleteobjectv1) | **DELETE** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Delete an existing Ezsigntemplateformfieldgroup
 *EZObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupEditObjectV1**](docs/EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupeditobjectv1) | **PUT** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Edit an existing Ezsigntemplateformfieldgroup
-*EZObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupGetObjectV1**](docs/EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv1) | **GET** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 *EZObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupGetObjectV2**](docs/EZObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupgetobjectv2) | **GET** /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageCreateObjectV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagecreateobjectv1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageDeleteObjectV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageEditObjectV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
-*EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetAutocompleteV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetAutocompleteV2**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
-*EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetObjectV1**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 *EZObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetObjectV2**](docs/EZObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 *EZObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipCreateObjectV1**](docs/EZObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipcreateobjectv1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership
 *EZObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipDeleteObjectV1**](docs/EZObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Delete an existing Ezsigntemplatepackagemembership
-*EZObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipGetObjectV1**](docs/EZObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipgetobjectv1) | **GET** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 *EZObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipGetObjectV2**](docs/EZObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipgetobjectv2) | **GET** /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 *EZObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerCreateObjectV1**](docs/EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignercreateobjectv1) | **POST** /1/object/ezsigntemplatepackagesigner | Create a new Ezsigntemplatepackagesigner
 *EZObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerDeleteObjectV1**](docs/EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Delete an existing Ezsigntemplatepackagesigner
 *EZObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerEditObjectV1**](docs/EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignereditobjectv1) | **PUT** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Edit an existing Ezsigntemplatepackagesigner
-*EZObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerGetObjectV1**](docs/EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignergetobjectv1) | **GET** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 *EZObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerGetObjectV2**](docs/EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignergetobjectv2) | **GET** /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 *EZObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipCreateObjectV1**](docs/EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipcreateobjectv1) | **POST** /1/object/ezsigntemplatepackagesignermembership | Create a new Ezsigntemplatepackagesignermembership
 *EZObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipDeleteObjectV1**](docs/EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Delete an existing Ezsigntemplatepackagesignermembership
-*EZObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipGetObjectV1**](docs/EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipgetobjectv1) | **GET** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 *EZObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipGetObjectV2**](docs/EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipgetobjectv2) | **GET** /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 *EZObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureCreateObjectV1**](docs/EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturecreateobjectv1) | **POST** /1/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
 *EZObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureDeleteObjectV1**](docs/EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Delete an existing Ezsigntemplatesignature
 *EZObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureEditObjectV1**](docs/EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureeditobjectv1) | **PUT** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
-*EZObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureGetObjectV1**](docs/EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv1) | **GET** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 *EZObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureGetObjectV2**](docs/EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv2) | **GET** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 *EZObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerCreateObjectV1**](docs/EZObjectEzsigntemplatesignerApi.md#ezsigntemplatesignercreateobjectv1) | **POST** /1/object/ezsigntemplatesigner | Create a new Ezsigntemplatesigner
 *EZObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerDeleteObjectV1**](docs/EZObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Delete an existing Ezsigntemplatesigner
 *EZObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerEditObjectV1**](docs/EZObjectEzsigntemplatesignerApi.md#ezsigntemplatesignereditobjectv1) | **PUT** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Edit an existing Ezsigntemplatesigner
-*EZObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerGetObjectV1**](docs/EZObjectEzsigntemplatesignerApi.md#ezsigntemplatesignergetobjectv1) | **GET** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
 *EZObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerGetObjectV2**](docs/EZObjectEzsigntemplatesignerApi.md#ezsigntemplatesignergetobjectv2) | **GET** /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
-*EZObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV1**](docs/EZObjectEzsigntsarequirementApi.md#ezsigntsarequirementgetautocompletev1) | **GET** /1/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *EZObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](docs/EZObjectEzsigntsarequirementApi.md#ezsigntsarequirementgetautocompletev2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
+*EZObjectFontApi* | [**fontGetAutocompleteV2**](docs/EZObjectFontApi.md#fontgetautocompletev2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs
 *EZObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/EZObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *EZObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](docs/EZObjectFranchisebrokerApi.md#franchisebrokergetautocompletev2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
-*EZObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](docs/EZObjectFranchiseofficeApi.md#franchiseofficegetautocompletev1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *EZObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/EZObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *EZObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/EZObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *EZObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/EZObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
@@ -1256,23 +1310,29 @@ Class | Method | HTTP request | Description
 *EZObjectPaymenttermApi* | [**paymenttermGetObjectV2**](docs/EZObjectPaymenttermApi.md#paymenttermgetobjectv2) | **GET** /2/object/paymentterm/{pkiPaymenttermID} | Retrieve an existing Paymentterm
 *EZObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/EZObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *EZObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/EZObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
-*EZObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](docs/EZObjectSecretquestionApi.md#secretquestiongetautocompletev1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *EZObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/EZObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
-*EZObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV1**](docs/EZObjectTaxassignmentApi.md#taxassignmentgetautocompletev1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *EZObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](docs/EZObjectTaxassignmentApi.md#taxassignmentgetautocompletev2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
-*EZObjectTimezoneApi* | [**timezoneGetAutocompleteV1**](docs/EZObjectTimezoneApi.md#timezonegetautocompletev1) | **GET** /1/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *EZObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/EZObjectTimezoneApi.md#timezonegetautocompletev2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
-*EZObjectUserApi* | [**userGetAutocompleteV1**](docs/EZObjectUserApi.md#usergetautocompletev1) | **GET** /1/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 *EZObjectUserApi* | [**userGetAutocompleteV2**](docs/EZObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
-*EZObjectUsergroupApi* | [**usergroupGetAutocompleteV1**](docs/EZObjectUsergroupApi.md#usergroupgetautocompletev1) | **GET** /1/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
+*EZObjectUsergroupApi* | [**usergroupCreateObjectV1**](docs/EZObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
+*EZObjectUsergroupApi* | [**usergroupDeleteObjectV1**](docs/EZObjectUsergroupApi.md#usergroupdeleteobjectv1) | **DELETE** /1/object/usergroup/{pkiUsergroupID} | Delete an existing Usergroup
+*EZObjectUsergroupApi* | [**usergroupEditObjectV1**](docs/EZObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
 *EZObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/EZObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
+*EZObjectUsergroupApi* | [**usergroupGetListV1**](docs/EZObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
+*EZObjectUsergroupApi* | [**usergroupGetMembersV1**](docs/EZObjectUsergroupApi.md#usergroupgetmembersv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getMembers | Retrieve an existing Usergroup&#39;s members
+*EZObjectUsergroupApi* | [**usergroupGetObjectV2**](docs/EZObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*EZObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpensecreateobjectv1) | **POST** /1/object/variableexpense | Create a new Variableexpense
+*EZObjectVariableexpenseApi* | [**variableexpenseDeleteObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpensedeleteobjectv1) | **DELETE** /1/object/variableexpense/{pkiVariableexpenseID} | Delete an existing Variableexpense
+*EZObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpenseeditobjectv1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
+*EZObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](docs/EZObjectVariableexpenseApi.md#variableexpensegetautocompletev2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
+*EZObjectVariableexpenseApi* | [**variableexpenseGetListV1**](docs/EZObjectVariableexpenseApi.md#variableexpensegetlistv1) | **GET** /1/object/variableexpense/getList | Retrieve Variableexpense list
+*EZObjectVariableexpenseApi* | [**variableexpenseGetObjectV2**](docs/EZObjectVariableexpenseApi.md#variableexpensegetobjectv2) | **GET** /2/object/variableexpense/{pkiVariableexpenseID} | Retrieve an existing Variableexpense
 *EZObjectVersionhistoryApi* | [**versionhistoryGetObjectV2**](docs/EZObjectVersionhistoryApi.md#versionhistorygetobjectv2) | **GET** /2/object/versionhistory/{pkiVersionhistoryID} | Retrieve an existing Versionhistory
 *EZObjectWebhookApi* | [**webhookCreateObjectV1**](docs/EZObjectWebhookApi.md#webhookcreateobjectv1) | **POST** /1/object/webhook | Create a new Webhook
 *EZObjectWebhookApi* | [**webhookDeleteObjectV1**](docs/EZObjectWebhookApi.md#webhookdeleteobjectv1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 *EZObjectWebhookApi* | [**webhookEditObjectV1**](docs/EZObjectWebhookApi.md#webhookeditobjectv1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
 *EZObjectWebhookApi* | [**webhookGetHistoryV1**](docs/EZObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 *EZObjectWebhookApi* | [**webhookGetListV1**](docs/EZObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
-*EZObjectWebhookApi* | [**webhookGetObjectV1**](docs/EZObjectWebhookApi.md#webhookgetobjectv1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 *EZObjectWebhookApi* | [**webhookGetObjectV2**](docs/EZObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 *EZObjectWebhookApi* | [**webhookTestV1**](docs/EZObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
@@ -1282,6 +1342,11 @@ Class | Method | HTTP request | Description
  - [EZActivesessionGetCurrentV1Response](docs/EZActivesessionGetCurrentV1Response.md)
  - [EZActivesessionGetCurrentV1ResponseAllOf](docs/EZActivesessionGetCurrentV1ResponseAllOf.md)
  - [EZActivesessionGetCurrentV1ResponseMPayload](docs/EZActivesessionGetCurrentV1ResponseMPayload.md)
+ - [EZActivesessionGetListV1Response](docs/EZActivesessionGetListV1Response.md)
+ - [EZActivesessionGetListV1ResponseAllOf](docs/EZActivesessionGetListV1ResponseAllOf.md)
+ - [EZActivesessionGetListV1ResponseMPayload](docs/EZActivesessionGetListV1ResponseMPayload.md)
+ - [EZActivesessionGetListV1ResponseMPayloadAllOf](docs/EZActivesessionGetListV1ResponseMPayloadAllOf.md)
+ - [EZActivesessionListElement](docs/EZActivesessionListElement.md)
  - [EZActivesessionResponse](docs/EZActivesessionResponse.md)
  - [EZActivesessionResponseCompound](docs/EZActivesessionResponseCompound.md)
  - [EZActivesessionResponseCompoundAllOf](docs/EZActivesessionResponseCompoundAllOf.md)
@@ -1289,10 +1354,6 @@ Class | Method | HTTP request | Description
  - [EZActivesessionResponseCompoundUser](docs/EZActivesessionResponseCompoundUser.md)
  - [EZAddressRequest](docs/EZAddressRequest.md)
  - [EZAddressRequestCompound](docs/EZAddressRequestCompound.md)
- - [EZApikeyCreateObjectV1Request](docs/EZApikeyCreateObjectV1Request.md)
- - [EZApikeyCreateObjectV1Response](docs/EZApikeyCreateObjectV1Response.md)
- - [EZApikeyCreateObjectV1ResponseAllOf](docs/EZApikeyCreateObjectV1ResponseAllOf.md)
- - [EZApikeyCreateObjectV1ResponseMPayload](docs/EZApikeyCreateObjectV1ResponseMPayload.md)
  - [EZApikeyCreateObjectV2Request](docs/EZApikeyCreateObjectV2Request.md)
  - [EZApikeyCreateObjectV2Response](docs/EZApikeyCreateObjectV2Response.md)
  - [EZApikeyCreateObjectV2ResponseAllOf](docs/EZApikeyCreateObjectV2ResponseAllOf.md)
@@ -1303,10 +1364,33 @@ Class | Method | HTTP request | Description
  - [EZApikeyResponseCompound](docs/EZApikeyResponseCompound.md)
  - [EZAttemptResponse](docs/EZAttemptResponse.md)
  - [EZAttemptResponseCompound](docs/EZAttemptResponseCompound.md)
+ - [EZBillingentityexternalAutocompleteElementResponse](docs/EZBillingentityexternalAutocompleteElementResponse.md)
+ - [EZBillingentityexternalGetAutocompleteV2Response](docs/EZBillingentityexternalGetAutocompleteV2Response.md)
+ - [EZBillingentityexternalGetAutocompleteV2ResponseAllOf](docs/EZBillingentityexternalGetAutocompleteV2ResponseAllOf.md)
+ - [EZBillingentityexternalGetAutocompleteV2ResponseMPayload](docs/EZBillingentityexternalGetAutocompleteV2ResponseMPayload.md)
  - [EZBillingentityinternalAutocompleteElementResponse](docs/EZBillingentityinternalAutocompleteElementResponse.md)
+ - [EZBillingentityinternalCreateObjectV1Request](docs/EZBillingentityinternalCreateObjectV1Request.md)
+ - [EZBillingentityinternalCreateObjectV1Response](docs/EZBillingentityinternalCreateObjectV1Response.md)
+ - [EZBillingentityinternalCreateObjectV1ResponseAllOf](docs/EZBillingentityinternalCreateObjectV1ResponseAllOf.md)
+ - [EZBillingentityinternalCreateObjectV1ResponseMPayload](docs/EZBillingentityinternalCreateObjectV1ResponseMPayload.md)
+ - [EZBillingentityinternalDeleteObjectV1Response](docs/EZBillingentityinternalDeleteObjectV1Response.md)
+ - [EZBillingentityinternalEditObjectV1Request](docs/EZBillingentityinternalEditObjectV1Request.md)
+ - [EZBillingentityinternalEditObjectV1Response](docs/EZBillingentityinternalEditObjectV1Response.md)
  - [EZBillingentityinternalGetAutocompleteV2Response](docs/EZBillingentityinternalGetAutocompleteV2Response.md)
  - [EZBillingentityinternalGetAutocompleteV2ResponseAllOf](docs/EZBillingentityinternalGetAutocompleteV2ResponseAllOf.md)
  - [EZBillingentityinternalGetAutocompleteV2ResponseMPayload](docs/EZBillingentityinternalGetAutocompleteV2ResponseMPayload.md)
+ - [EZBillingentityinternalGetListV1Response](docs/EZBillingentityinternalGetListV1Response.md)
+ - [EZBillingentityinternalGetListV1ResponseAllOf](docs/EZBillingentityinternalGetListV1ResponseAllOf.md)
+ - [EZBillingentityinternalGetListV1ResponseMPayload](docs/EZBillingentityinternalGetListV1ResponseMPayload.md)
+ - [EZBillingentityinternalGetListV1ResponseMPayloadAllOf](docs/EZBillingentityinternalGetListV1ResponseMPayloadAllOf.md)
+ - [EZBillingentityinternalGetObjectV2Response](docs/EZBillingentityinternalGetObjectV2Response.md)
+ - [EZBillingentityinternalGetObjectV2ResponseAllOf](docs/EZBillingentityinternalGetObjectV2ResponseAllOf.md)
+ - [EZBillingentityinternalGetObjectV2ResponseMPayload](docs/EZBillingentityinternalGetObjectV2ResponseMPayload.md)
+ - [EZBillingentityinternalListElement](docs/EZBillingentityinternalListElement.md)
+ - [EZBillingentityinternalRequest](docs/EZBillingentityinternalRequest.md)
+ - [EZBillingentityinternalRequestCompound](docs/EZBillingentityinternalRequestCompound.md)
+ - [EZBillingentityinternalResponse](docs/EZBillingentityinternalResponse.md)
+ - [EZBillingentityinternalResponseCompound](docs/EZBillingentityinternalResponseCompound.md)
  - [EZBrandingAutocompleteElementResponse](docs/EZBrandingAutocompleteElementResponse.md)
  - [EZBrandingCreateObjectV1Request](docs/EZBrandingCreateObjectV1Request.md)
  - [EZBrandingCreateObjectV1Response](docs/EZBrandingCreateObjectV1Response.md)
@@ -1321,9 +1405,6 @@ Class | Method | HTTP request | Description
  - [EZBrandingGetListV1ResponseAllOf](docs/EZBrandingGetListV1ResponseAllOf.md)
  - [EZBrandingGetListV1ResponseMPayload](docs/EZBrandingGetListV1ResponseMPayload.md)
  - [EZBrandingGetListV1ResponseMPayloadAllOf](docs/EZBrandingGetListV1ResponseMPayloadAllOf.md)
- - [EZBrandingGetObjectV1Response](docs/EZBrandingGetObjectV1Response.md)
- - [EZBrandingGetObjectV1ResponseAllOf](docs/EZBrandingGetObjectV1ResponseAllOf.md)
- - [EZBrandingGetObjectV1ResponseMPayload](docs/EZBrandingGetObjectV1ResponseMPayload.md)
  - [EZBrandingGetObjectV2Response](docs/EZBrandingGetObjectV2Response.md)
  - [EZBrandingGetObjectV2ResponseAllOf](docs/EZBrandingGetObjectV2ResponseAllOf.md)
  - [EZBrandingGetObjectV2ResponseMPayload](docs/EZBrandingGetObjectV2ResponseMPayload.md)
@@ -1335,8 +1416,6 @@ Class | Method | HTTP request | Description
  - [EZBrandingResponseCompoundAllOf](docs/EZBrandingResponseCompoundAllOf.md)
  - [EZCommonAudit](docs/EZCommonAudit.md)
  - [EZCommonAuditdetail](docs/EZCommonAuditdetail.md)
- - [EZCommonGetAutocompleteDisabledV1Response](docs/EZCommonGetAutocompleteDisabledV1Response.md)
- - [EZCommonGetAutocompleteDisabledV1ResponseAllOf](docs/EZCommonGetAutocompleteDisabledV1ResponseAllOf.md)
  - [EZCommonGetAutocompleteV1Response](docs/EZCommonGetAutocompleteV1Response.md)
  - [EZCommonGetAutocompleteV1ResponseAllOf](docs/EZCommonGetAutocompleteV1ResponseAllOf.md)
  - [EZCommonGetListV1ResponseMPayload](docs/EZCommonGetListV1ResponseMPayload.md)
@@ -1355,17 +1434,9 @@ Class | Method | HTTP request | Description
  - [EZCommonResponseRedirectSSecretquestionTextX](docs/EZCommonResponseRedirectSSecretquestionTextX.md)
  - [EZCommonResponseWarning](docs/EZCommonResponseWarning.md)
  - [EZCommonWebhook](docs/EZCommonWebhook.md)
- - [EZCommunicationGetCountV1Response](docs/EZCommunicationGetCountV1Response.md)
- - [EZCommunicationGetCountV1ResponseAllOf](docs/EZCommunicationGetCountV1ResponseAllOf.md)
- - [EZCommunicationGetCountV1ResponseMPayload](docs/EZCommunicationGetCountV1ResponseMPayload.md)
- - [EZCommunicationGetListV1Response](docs/EZCommunicationGetListV1Response.md)
- - [EZCommunicationGetListV1ResponseAllOf](docs/EZCommunicationGetListV1ResponseAllOf.md)
- - [EZCommunicationGetListV1ResponseMPayload](docs/EZCommunicationGetListV1ResponseMPayload.md)
- - [EZCommunicationGetListV1ResponseMPayloadAllOf](docs/EZCommunicationGetListV1ResponseMPayloadAllOf.md)
  - [EZCommunicationGetObjectV2Response](docs/EZCommunicationGetObjectV2Response.md)
  - [EZCommunicationGetObjectV2ResponseAllOf](docs/EZCommunicationGetObjectV2ResponseAllOf.md)
  - [EZCommunicationGetObjectV2ResponseMPayload](docs/EZCommunicationGetObjectV2ResponseMPayload.md)
- - [EZCommunicationListElement](docs/EZCommunicationListElement.md)
  - [EZCommunicationResponse](docs/EZCommunicationResponse.md)
  - [EZCommunicationResponseCompound](docs/EZCommunicationResponseCompound.md)
  - [EZCommunicationResponseCompoundAllOf](docs/EZCommunicationResponseCompoundAllOf.md)
@@ -1382,9 +1453,8 @@ Class | Method | HTTP request | Description
  - [EZContactinformationsRequest](docs/EZContactinformationsRequest.md)
  - [EZContactinformationsRequestCompound](docs/EZContactinformationsRequestCompound.md)
  - [EZContactinformationsRequestCompoundAllOf](docs/EZContactinformationsRequestCompoundAllOf.md)
- - [EZCustomAutocompleteElementDisabledResponse](docs/EZCustomAutocompleteElementDisabledResponse.md)
- - [EZCustomAutocompleteElementDisabledResponseAllOf](docs/EZCustomAutocompleteElementDisabledResponseAllOf.md)
  - [EZCustomAutocompleteElementResponse](docs/EZCustomAutocompleteElementResponse.md)
+ - [EZCustomCommunicationListElementResponse](docs/EZCustomCommunicationListElementResponse.md)
  - [EZCustomContactNameResponse](docs/EZCustomContactNameResponse.md)
  - [EZCustomDropdownElementRequest](docs/EZCustomDropdownElementRequest.md)
  - [EZCustomDropdownElementRequestCompound](docs/EZCustomDropdownElementRequestCompound.md)
@@ -1395,12 +1465,15 @@ Class | Method | HTTP request | Description
  - [EZCustomEzmaxinvoicingEzsignfolderResponse](docs/EZCustomEzmaxinvoicingEzsignfolderResponse.md)
  - [EZCustomEzmaxinvoicingEzsignfolderResponseAllOf](docs/EZCustomEzmaxinvoicingEzsignfolderResponseAllOf.md)
  - [EZCustomEzmaxpricingResponse](docs/EZCustomEzmaxpricingResponse.md)
+ - [EZCustomEzsigndocumentEzsignsignaturesAutomaticResponse](docs/EZCustomEzsigndocumentEzsignsignaturesAutomaticResponse.md)
+ - [EZCustomEzsignfolderEzsignsignaturesAutomaticResponse](docs/EZCustomEzsignfolderEzsignsignaturesAutomaticResponse.md)
  - [EZCustomEzsignfoldersignerassociationActionableElementResponse](docs/EZCustomEzsignfoldersignerassociationActionableElementResponse.md)
  - [EZCustomEzsignfoldersignerassociationActionableElementResponseAllOf](docs/EZCustomEzsignfoldersignerassociationActionableElementResponseAllOf.md)
  - [EZCustomEzsignfoldersignerassociationmessageRequest](docs/EZCustomEzsignfoldersignerassociationmessageRequest.md)
  - [EZCustomEzsignfoldersignerassociationstatusResponse](docs/EZCustomEzsignfoldersignerassociationstatusResponse.md)
  - [EZCustomEzsignfoldertransmissionResponse](docs/EZCustomEzsignfoldertransmissionResponse.md)
  - [EZCustomEzsignfoldertransmissionSignerResponse](docs/EZCustomEzsignfoldertransmissionSignerResponse.md)
+ - [EZCustomEzsignsignatureEzsignsignaturesAutomaticResponse](docs/EZCustomEzsignsignatureEzsignsignaturesAutomaticResponse.md)
  - [EZCustomEzsignsignaturestatusResponse](docs/EZCustomEzsignsignaturestatusResponse.md)
  - [EZCustomFormDataDocumentResponse](docs/EZCustomFormDataDocumentResponse.md)
  - [EZCustomFormDataEzsignformfieldResponse](docs/EZCustomFormDataEzsignformfieldResponse.md)
@@ -1432,13 +1505,12 @@ Class | Method | HTTP request | Description
  - [EZEmailRequestCompound](docs/EZEmailRequestCompound.md)
  - [EZEmailstaticResponse](docs/EZEmailstaticResponse.md)
  - [EZEmailstaticResponseCompound](docs/EZEmailstaticResponseCompound.md)
+ - [EZEnumHorizontalalignment](docs/EZEnumHorizontalalignment.md)
+ - [EZEnumVerticalalignment](docs/EZEnumVerticalalignment.md)
  - [EZEzmaxinvoicingAutocompleteElementResponse](docs/EZEzmaxinvoicingAutocompleteElementResponse.md)
  - [EZEzmaxinvoicingGetAutocompleteV2Response](docs/EZEzmaxinvoicingGetAutocompleteV2Response.md)
  - [EZEzmaxinvoicingGetAutocompleteV2ResponseAllOf](docs/EZEzmaxinvoicingGetAutocompleteV2ResponseAllOf.md)
  - [EZEzmaxinvoicingGetAutocompleteV2ResponseMPayload](docs/EZEzmaxinvoicingGetAutocompleteV2ResponseMPayload.md)
- - [EZEzmaxinvoicingGetObjectV1Response](docs/EZEzmaxinvoicingGetObjectV1Response.md)
- - [EZEzmaxinvoicingGetObjectV1ResponseAllOf](docs/EZEzmaxinvoicingGetObjectV1ResponseAllOf.md)
- - [EZEzmaxinvoicingGetObjectV1ResponseMPayload](docs/EZEzmaxinvoicingGetObjectV1ResponseMPayload.md)
  - [EZEzmaxinvoicingGetObjectV2Response](docs/EZEzmaxinvoicingGetObjectV2Response.md)
  - [EZEzmaxinvoicingGetObjectV2ResponseAllOf](docs/EZEzmaxinvoicingGetObjectV2ResponseAllOf.md)
  - [EZEzmaxinvoicingGetObjectV2ResponseMPayload](docs/EZEzmaxinvoicingGetObjectV2ResponseMPayload.md)
@@ -1471,12 +1543,19 @@ Class | Method | HTTP request | Description
  - [EZEzmaxinvoicingsummaryinternaldetailResponseCompound](docs/EZEzmaxinvoicingsummaryinternaldetailResponseCompound.md)
  - [EZEzmaxinvoicinguserResponse](docs/EZEzmaxinvoicinguserResponse.md)
  - [EZEzmaxinvoicinguserResponseCompound](docs/EZEzmaxinvoicinguserResponseCompound.md)
+ - [EZEzmaxproductAutocompleteElementResponse](docs/EZEzmaxproductAutocompleteElementResponse.md)
+ - [EZEzmaxproductGetAutocompleteV2Response](docs/EZEzmaxproductGetAutocompleteV2Response.md)
+ - [EZEzmaxproductGetAutocompleteV2ResponseAllOf](docs/EZEzmaxproductGetAutocompleteV2ResponseAllOf.md)
+ - [EZEzmaxproductGetAutocompleteV2ResponseMPayload](docs/EZEzmaxproductGetAutocompleteV2ResponseMPayload.md)
  - [EZEzsignSuggestSignersV1Response](docs/EZEzsignSuggestSignersV1Response.md)
  - [EZEzsignSuggestSignersV1ResponseAllOf](docs/EZEzsignSuggestSignersV1ResponseAllOf.md)
  - [EZEzsignSuggestSignersV1ResponseMPayload](docs/EZEzsignSuggestSignersV1ResponseMPayload.md)
  - [EZEzsignSuggestTemplatesV1Response](docs/EZEzsignSuggestTemplatesV1Response.md)
  - [EZEzsignSuggestTemplatesV1ResponseAllOf](docs/EZEzsignSuggestTemplatesV1ResponseAllOf.md)
  - [EZEzsignSuggestTemplatesV1ResponseMPayload](docs/EZEzsignSuggestTemplatesV1ResponseMPayload.md)
+ - [EZEzsignannotationResponse](docs/EZEzsignannotationResponse.md)
+ - [EZEzsignannotationResponseCompound](docs/EZEzsignannotationResponseCompound.md)
+ - [EZEzsignannotationResponseCompoundAllOf](docs/EZEzsignannotationResponseCompoundAllOf.md)
  - [EZEzsignbulksendCreateEzsignbulksendtransmissionV1Request](docs/EZEzsignbulksendCreateEzsignbulksendtransmissionV1Request.md)
  - [EZEzsignbulksendCreateEzsignbulksendtransmissionV1Response](docs/EZEzsignbulksendCreateEzsignbulksendtransmissionV1Response.md)
  - [EZEzsignbulksendCreateEzsignbulksendtransmissionV1ResponseAllOf](docs/EZEzsignbulksendCreateEzsignbulksendtransmissionV1ResponseAllOf.md)
@@ -1491,6 +1570,9 @@ Class | Method | HTTP request | Description
  - [EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response](docs/EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response.md)
  - [EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf](docs/EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf.md)
  - [EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload](docs/EZEzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload.md)
+ - [EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response](docs/EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response.md)
+ - [EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
+ - [EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EZEzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
  - [EZEzsignbulksendGetFormsDataV1Response](docs/EZEzsignbulksendGetFormsDataV1Response.md)
  - [EZEzsignbulksendGetFormsDataV1ResponseAllOf](docs/EZEzsignbulksendGetFormsDataV1ResponseAllOf.md)
  - [EZEzsignbulksendGetFormsDataV1ResponseMPayload](docs/EZEzsignbulksendGetFormsDataV1ResponseMPayload.md)
@@ -1498,9 +1580,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignbulksendGetListV1ResponseAllOf](docs/EZEzsignbulksendGetListV1ResponseAllOf.md)
  - [EZEzsignbulksendGetListV1ResponseMPayload](docs/EZEzsignbulksendGetListV1ResponseMPayload.md)
  - [EZEzsignbulksendGetListV1ResponseMPayloadAllOf](docs/EZEzsignbulksendGetListV1ResponseMPayloadAllOf.md)
- - [EZEzsignbulksendGetObjectV1Response](docs/EZEzsignbulksendGetObjectV1Response.md)
- - [EZEzsignbulksendGetObjectV1ResponseAllOf](docs/EZEzsignbulksendGetObjectV1ResponseAllOf.md)
- - [EZEzsignbulksendGetObjectV1ResponseMPayload](docs/EZEzsignbulksendGetObjectV1ResponseMPayload.md)
  - [EZEzsignbulksendGetObjectV2Response](docs/EZEzsignbulksendGetObjectV2Response.md)
  - [EZEzsignbulksendGetObjectV2ResponseAllOf](docs/EZEzsignbulksendGetObjectV2ResponseAllOf.md)
  - [EZEzsignbulksendGetObjectV2ResponseMPayload](docs/EZEzsignbulksendGetObjectV2ResponseMPayload.md)
@@ -1517,9 +1596,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignbulksenddocumentmappingCreateObjectV1ResponseAllOf](docs/EZEzsignbulksenddocumentmappingCreateObjectV1ResponseAllOf.md)
  - [EZEzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload](docs/EZEzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload.md)
  - [EZEzsignbulksenddocumentmappingDeleteObjectV1Response](docs/EZEzsignbulksenddocumentmappingDeleteObjectV1Response.md)
- - [EZEzsignbulksenddocumentmappingGetObjectV1Response](docs/EZEzsignbulksenddocumentmappingGetObjectV1Response.md)
- - [EZEzsignbulksenddocumentmappingGetObjectV1ResponseAllOf](docs/EZEzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.md)
- - [EZEzsignbulksenddocumentmappingGetObjectV1ResponseMPayload](docs/EZEzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.md)
  - [EZEzsignbulksenddocumentmappingGetObjectV2Response](docs/EZEzsignbulksenddocumentmappingGetObjectV2Response.md)
  - [EZEzsignbulksenddocumentmappingGetObjectV2ResponseAllOf](docs/EZEzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.md)
  - [EZEzsignbulksenddocumentmappingGetObjectV2ResponseMPayload](docs/EZEzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md)
@@ -1533,9 +1609,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignbulksendsignermappingCreateObjectV1ResponseAllOf](docs/EZEzsignbulksendsignermappingCreateObjectV1ResponseAllOf.md)
  - [EZEzsignbulksendsignermappingCreateObjectV1ResponseMPayload](docs/EZEzsignbulksendsignermappingCreateObjectV1ResponseMPayload.md)
  - [EZEzsignbulksendsignermappingDeleteObjectV1Response](docs/EZEzsignbulksendsignermappingDeleteObjectV1Response.md)
- - [EZEzsignbulksendsignermappingGetObjectV1Response](docs/EZEzsignbulksendsignermappingGetObjectV1Response.md)
- - [EZEzsignbulksendsignermappingGetObjectV1ResponseAllOf](docs/EZEzsignbulksendsignermappingGetObjectV1ResponseAllOf.md)
- - [EZEzsignbulksendsignermappingGetObjectV1ResponseMPayload](docs/EZEzsignbulksendsignermappingGetObjectV1ResponseMPayload.md)
  - [EZEzsignbulksendsignermappingGetObjectV2Response](docs/EZEzsignbulksendsignermappingGetObjectV2Response.md)
  - [EZEzsignbulksendsignermappingGetObjectV2ResponseAllOf](docs/EZEzsignbulksendsignermappingGetObjectV2ResponseAllOf.md)
  - [EZEzsignbulksendsignermappingGetObjectV2ResponseMPayload](docs/EZEzsignbulksendsignermappingGetObjectV2ResponseMPayload.md)
@@ -1543,12 +1616,12 @@ Class | Method | HTTP request | Description
  - [EZEzsignbulksendsignermappingRequestCompound](docs/EZEzsignbulksendsignermappingRequestCompound.md)
  - [EZEzsignbulksendsignermappingResponse](docs/EZEzsignbulksendsignermappingResponse.md)
  - [EZEzsignbulksendsignermappingResponseCompound](docs/EZEzsignbulksendsignermappingResponseCompound.md)
+ - [EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response](docs/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.md)
+ - [EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
+ - [EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
  - [EZEzsignbulksendtransmissionGetFormsDataV1Response](docs/EZEzsignbulksendtransmissionGetFormsDataV1Response.md)
  - [EZEzsignbulksendtransmissionGetFormsDataV1ResponseAllOf](docs/EZEzsignbulksendtransmissionGetFormsDataV1ResponseAllOf.md)
  - [EZEzsignbulksendtransmissionGetFormsDataV1ResponseMPayload](docs/EZEzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.md)
- - [EZEzsignbulksendtransmissionGetObjectV1Response](docs/EZEzsignbulksendtransmissionGetObjectV1Response.md)
- - [EZEzsignbulksendtransmissionGetObjectV1ResponseAllOf](docs/EZEzsignbulksendtransmissionGetObjectV1ResponseAllOf.md)
- - [EZEzsignbulksendtransmissionGetObjectV1ResponseMPayload](docs/EZEzsignbulksendtransmissionGetObjectV1ResponseMPayload.md)
  - [EZEzsignbulksendtransmissionGetObjectV2Response](docs/EZEzsignbulksendtransmissionGetObjectV2Response.md)
  - [EZEzsignbulksendtransmissionGetObjectV2ResponseAllOf](docs/EZEzsignbulksendtransmissionGetObjectV2ResponseAllOf.md)
  - [EZEzsignbulksendtransmissionGetObjectV2ResponseMPayload](docs/EZEzsignbulksendtransmissionGetObjectV2ResponseMPayload.md)
@@ -1577,18 +1650,25 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentEditEzsignsignaturesV1ResponseAllOf](docs/EZEzsigndocumentEditEzsignsignaturesV1ResponseAllOf.md)
  - [EZEzsigndocumentEditEzsignsignaturesV1ResponseMPayload](docs/EZEzsigndocumentEditEzsignsignaturesV1ResponseMPayload.md)
  - [EZEzsigndocumentEndPrematurelyV1Response](docs/EZEzsigndocumentEndPrematurelyV1Response.md)
+ - [EZEzsigndocumentFlattenV1Response](docs/EZEzsigndocumentFlattenV1Response.md)
  - [EZEzsigndocumentGetActionableElementsV1Response](docs/EZEzsigndocumentGetActionableElementsV1Response.md)
  - [EZEzsigndocumentGetActionableElementsV1ResponseAllOf](docs/EZEzsigndocumentGetActionableElementsV1ResponseAllOf.md)
  - [EZEzsigndocumentGetActionableElementsV1ResponseMPayload](docs/EZEzsigndocumentGetActionableElementsV1ResponseMPayload.md)
  - [EZEzsigndocumentGetDownloadUrlV1Response](docs/EZEzsigndocumentGetDownloadUrlV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseMPayload](docs/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.md)
+ - [EZEzsigndocumentGetEzsignannotationsV1Response](docs/EZEzsigndocumentGetEzsignannotationsV1Response.md)
+ - [EZEzsigndocumentGetEzsignannotationsV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignannotationsV1ResponseAllOf.md)
+ - [EZEzsigndocumentGetEzsignannotationsV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignannotationsV1ResponseMPayload.md)
  - [EZEzsigndocumentGetEzsignformfieldgroupsV1Response](docs/EZEzsigndocumentGetEzsignformfieldgroupsV1Response.md)
  - [EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf.md)
  - [EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md)
  - [EZEzsigndocumentGetEzsignpagesV1Response](docs/EZEzsigndocumentGetEzsignpagesV1Response.md)
  - [EZEzsigndocumentGetEzsignpagesV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignpagesV1ResponseAllOf.md)
  - [EZEzsigndocumentGetEzsignpagesV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignpagesV1ResponseMPayload.md)
+ - [EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response](docs/EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response.md)
+ - [EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
+ - [EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
  - [EZEzsigndocumentGetEzsignsignaturesV1Response](docs/EZEzsigndocumentGetEzsignsignaturesV1Response.md)
  - [EZEzsigndocumentGetEzsignsignaturesV1ResponseAllOf](docs/EZEzsigndocumentGetEzsignsignaturesV1ResponseAllOf.md)
  - [EZEzsigndocumentGetEzsignsignaturesV1ResponseMPayload](docs/EZEzsigndocumentGetEzsignsignaturesV1ResponseMPayload.md)
@@ -1637,12 +1717,22 @@ Class | Method | HTTP request | Description
  - [EZEzsignfolderGetActionableElementsV1Response](docs/EZEzsignfolderGetActionableElementsV1Response.md)
  - [EZEzsignfolderGetActionableElementsV1ResponseAllOf](docs/EZEzsignfolderGetActionableElementsV1ResponseAllOf.md)
  - [EZEzsignfolderGetActionableElementsV1ResponseMPayload](docs/EZEzsignfolderGetActionableElementsV1ResponseMPayload.md)
+ - [EZEzsignfolderGetCommunicationCountV1Response](docs/EZEzsignfolderGetCommunicationCountV1Response.md)
+ - [EZEzsignfolderGetCommunicationCountV1ResponseAllOf](docs/EZEzsignfolderGetCommunicationCountV1ResponseAllOf.md)
+ - [EZEzsignfolderGetCommunicationCountV1ResponseMPayload](docs/EZEzsignfolderGetCommunicationCountV1ResponseMPayload.md)
+ - [EZEzsignfolderGetCommunicationListV1Response](docs/EZEzsignfolderGetCommunicationListV1Response.md)
+ - [EZEzsignfolderGetCommunicationListV1ResponseAllOf](docs/EZEzsignfolderGetCommunicationListV1ResponseAllOf.md)
+ - [EZEzsignfolderGetCommunicationListV1ResponseMPayload](docs/EZEzsignfolderGetCommunicationListV1ResponseMPayload.md)
+ - [EZEzsignfolderGetCommunicationListV1ResponseMPayloadAllOf](docs/EZEzsignfolderGetCommunicationListV1ResponseMPayloadAllOf.md)
  - [EZEzsignfolderGetEzsigndocumentsV1Response](docs/EZEzsignfolderGetEzsigndocumentsV1Response.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EZEzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)
  - [EZEzsignfolderGetEzsignfoldersignerassociationsV1Response](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
  - [EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md)
  - [EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload](docs/EZEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md)
+ - [EZEzsignfolderGetEzsignsignaturesAutomaticV1Response](docs/EZEzsignfolderGetEzsignsignaturesAutomaticV1Response.md)
+ - [EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
+ - [EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EZEzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
  - [EZEzsignfolderGetFormsDataV1Response](docs/EZEzsignfolderGetFormsDataV1Response.md)
  - [EZEzsignfolderGetFormsDataV1ResponseAllOf](docs/EZEzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [EZEzsignfolderGetFormsDataV1ResponseMPayload](docs/EZEzsignfolderGetFormsDataV1ResponseMPayload.md)
@@ -1723,9 +1813,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignfoldertypeGetListV1ResponseAllOf](docs/EZEzsignfoldertypeGetListV1ResponseAllOf.md)
  - [EZEzsignfoldertypeGetListV1ResponseMPayload](docs/EZEzsignfoldertypeGetListV1ResponseMPayload.md)
  - [EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf](docs/EZEzsignfoldertypeGetListV1ResponseMPayloadAllOf.md)
- - [EZEzsignfoldertypeGetObjectV1Response](docs/EZEzsignfoldertypeGetObjectV1Response.md)
- - [EZEzsignfoldertypeGetObjectV1ResponseAllOf](docs/EZEzsignfoldertypeGetObjectV1ResponseAllOf.md)
- - [EZEzsignfoldertypeGetObjectV1ResponseMPayload](docs/EZEzsignfoldertypeGetObjectV1ResponseMPayload.md)
  - [EZEzsignfoldertypeGetObjectV2Response](docs/EZEzsignfoldertypeGetObjectV2Response.md)
  - [EZEzsignfoldertypeGetObjectV2ResponseAllOf](docs/EZEzsignfoldertypeGetObjectV2ResponseAllOf.md)
  - [EZEzsignfoldertypeGetObjectV2ResponseMPayload](docs/EZEzsignfoldertypeGetObjectV2ResponseMPayload.md)
@@ -1746,9 +1833,6 @@ Class | Method | HTTP request | Description
  - [EZEzsignformfieldgroupDeleteObjectV1Response](docs/EZEzsignformfieldgroupDeleteObjectV1Response.md)
  - [EZEzsignformfieldgroupEditObjectV1Request](docs/EZEzsignformfieldgroupEditObjectV1Request.md)
  - [EZEzsignformfieldgroupEditObjectV1Response](docs/EZEzsignformfieldgroupEditObjectV1Response.md)
- - [EZEzsignformfieldgroupGetObjectV1Response](docs/EZEzsignformfieldgroupGetObjectV1Response.md)
- - [EZEzsignformfieldgroupGetObjectV1ResponseAllOf](docs/EZEzsignformfieldgroupGetObjectV1ResponseAllOf.md)
- - [EZEzsignformfieldgroupGetObjectV1ResponseMPayload](docs/EZEzsignformfieldgroupGetObjectV1ResponseMPayload.md)
  - [EZEzsignformfieldgroupGetObjectV2Response](docs/EZEzsignformfieldgroupGetObjectV2Response.md)
  - [EZEzsignformfieldgroupGetObjectV2ResponseAllOf](docs/EZEzsignformfieldgroupGetObjectV2ResponseAllOf.md)
  - [EZEzsignformfieldgroupGetObjectV2ResponseMPayload](docs/EZEzsignformfieldgroupGetObjectV2ResponseMPayload.md)
@@ -1775,9 +1859,9 @@ Class | Method | HTTP request | Description
  - [EZEzsignsignatureDeleteObjectV1Response](docs/EZEzsignsignatureDeleteObjectV1Response.md)
  - [EZEzsignsignatureEditObjectV1Request](docs/EZEzsignsignatureEditObjectV1Request.md)
  - [EZEzsignsignatureEditObjectV1Response](docs/EZEzsignsignatureEditObjectV1Response.md)
- - [EZEzsignsignatureGetObjectV1Response](docs/EZEzsignsignatureGetObjectV1Response.md)
- - [EZEzsignsignatureGetObjectV1ResponseAllOf](docs/EZEzsignsignatureGetObjectV1ResponseAllOf.md)
- - [EZEzsignsignatureGetObjectV1ResponseMPayload](docs/EZEzsignsignatureGetObjectV1ResponseMPayload.md)
+ - [EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response](docs/EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
+ - [EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseAllOf](docs/EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseAllOf.md)
+ - [EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload](docs/EZEzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload.md)
  - [EZEzsignsignatureGetObjectV2Response](docs/EZEzsignsignatureGetObjectV2Response.md)
  - [EZEzsignsignatureGetObjectV2ResponseAllOf](docs/EZEzsignsignatureGetObjectV2ResponseAllOf.md)
  - [EZEzsignsignatureGetObjectV2ResponseMPayload](docs/EZEzsignsignatureGetObjectV2ResponseMPayload.md)
@@ -1847,6 +1931,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatedocumentEditObjectV1Request](docs/EZEzsigntemplatedocumentEditObjectV1Request.md)
  - [EZEzsigntemplatedocumentEditObjectV1Response](docs/EZEzsigntemplatedocumentEditObjectV1Response.md)
  - [EZEzsigntemplatedocumentEditObjectV1ResponseAllOf](docs/EZEzsigntemplatedocumentEditObjectV1ResponseAllOf.md)
+ - [EZEzsigntemplatedocumentFlattenV1Response](docs/EZEzsigntemplatedocumentFlattenV1Response.md)
  - [EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response](docs/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.md)
  - [EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf](docs/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.md)
  - [EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload](docs/EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.md)
@@ -1856,9 +1941,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response](docs/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.md)
  - [EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseAllOf](docs/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseAllOf.md)
  - [EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload](docs/EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload.md)
- - [EZEzsigntemplatedocumentGetObjectV1Response](docs/EZEzsigntemplatedocumentGetObjectV1Response.md)
- - [EZEzsigntemplatedocumentGetObjectV1ResponseAllOf](docs/EZEzsigntemplatedocumentGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatedocumentGetObjectV1ResponseMPayload](docs/EZEzsigntemplatedocumentGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatedocumentGetObjectV2Response](docs/EZEzsigntemplatedocumentGetObjectV2Response.md)
  - [EZEzsigntemplatedocumentGetObjectV2ResponseAllOf](docs/EZEzsigntemplatedocumentGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatedocumentGetObjectV2ResponseMPayload](docs/EZEzsigntemplatedocumentGetObjectV2ResponseMPayload.md)
@@ -1885,9 +1967,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplateformfieldgroupDeleteObjectV1Response](docs/EZEzsigntemplateformfieldgroupDeleteObjectV1Response.md)
  - [EZEzsigntemplateformfieldgroupEditObjectV1Request](docs/EZEzsigntemplateformfieldgroupEditObjectV1Request.md)
  - [EZEzsigntemplateformfieldgroupEditObjectV1Response](docs/EZEzsigntemplateformfieldgroupEditObjectV1Response.md)
- - [EZEzsigntemplateformfieldgroupGetObjectV1Response](docs/EZEzsigntemplateformfieldgroupGetObjectV1Response.md)
- - [EZEzsigntemplateformfieldgroupGetObjectV1ResponseAllOf](docs/EZEzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplateformfieldgroupGetObjectV1ResponseMPayload](docs/EZEzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplateformfieldgroupGetObjectV2Response](docs/EZEzsigntemplateformfieldgroupGetObjectV2Response.md)
  - [EZEzsigntemplateformfieldgroupGetObjectV2ResponseAllOf](docs/EZEzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplateformfieldgroupGetObjectV2ResponseMPayload](docs/EZEzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.md)
@@ -1920,9 +1999,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackageGetListV1ResponseAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseAllOf.md)
  - [EZEzsigntemplatepackageGetListV1ResponseMPayload](docs/EZEzsigntemplatepackageGetListV1ResponseMPayload.md)
  - [EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf](docs/EZEzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
- - [EZEzsigntemplatepackageGetObjectV1Response](docs/EZEzsigntemplatepackageGetObjectV1Response.md)
- - [EZEzsigntemplatepackageGetObjectV1ResponseAllOf](docs/EZEzsigntemplatepackageGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatepackageGetObjectV1ResponseMPayload](docs/EZEzsigntemplatepackageGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackageGetObjectV2Response](docs/EZEzsigntemplatepackageGetObjectV2Response.md)
  - [EZEzsigntemplatepackageGetObjectV2ResponseAllOf](docs/EZEzsigntemplatepackageGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatepackageGetObjectV2ResponseMPayload](docs/EZEzsigntemplatepackageGetObjectV2ResponseMPayload.md)
@@ -1937,9 +2013,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf](docs/EZEzsigntemplatepackagemembershipCreateObjectV1ResponseAllOf.md)
  - [EZEzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackagemembershipDeleteObjectV1Response](docs/EZEzsigntemplatepackagemembershipDeleteObjectV1Response.md)
- - [EZEzsigntemplatepackagemembershipGetObjectV1Response](docs/EZEzsigntemplatepackagemembershipGetObjectV1Response.md)
- - [EZEzsigntemplatepackagemembershipGetObjectV1ResponseAllOf](docs/EZEzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatepackagemembershipGetObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackagemembershipGetObjectV2Response](docs/EZEzsigntemplatepackagemembershipGetObjectV2Response.md)
  - [EZEzsigntemplatepackagemembershipGetObjectV2ResponseAllOf](docs/EZEzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatepackagemembershipGetObjectV2ResponseMPayload](docs/EZEzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.md)
@@ -1957,9 +2030,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackagesignerEditObjectV1Request](docs/EZEzsigntemplatepackagesignerEditObjectV1Request.md)
  - [EZEzsigntemplatepackagesignerEditObjectV1Response](docs/EZEzsigntemplatepackagesignerEditObjectV1Response.md)
- - [EZEzsigntemplatepackagesignerGetObjectV1Response](docs/EZEzsigntemplatepackagesignerGetObjectV1Response.md)
- - [EZEzsigntemplatepackagesignerGetObjectV1ResponseAllOf](docs/EZEzsigntemplatepackagesignerGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatepackagesignerGetObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagesignerGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackagesignerGetObjectV2Response](docs/EZEzsigntemplatepackagesignerGetObjectV2Response.md)
  - [EZEzsigntemplatepackagesignerGetObjectV2ResponseAllOf](docs/EZEzsigntemplatepackagesignerGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatepackagesignerGetObjectV2ResponseMPayload](docs/EZEzsigntemplatepackagesignerGetObjectV2ResponseMPayload.md)
@@ -1974,9 +2044,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response](docs/EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response.md)
  - [EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf](docs/EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf.md)
  - [EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload.md)
- - [EZEzsigntemplatepackagesignermembershipGetObjectV1Response](docs/EZEzsigntemplatepackagesignermembershipGetObjectV1Response.md)
- - [EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf](docs/EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload](docs/EZEzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatepackagesignermembershipGetObjectV2Response](docs/EZEzsigntemplatepackagesignermembershipGetObjectV2Response.md)
  - [EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf](docs/EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload](docs/EZEzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.md)
@@ -1991,9 +2058,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatesignatureDeleteObjectV1Response](docs/EZEzsigntemplatesignatureDeleteObjectV1Response.md)
  - [EZEzsigntemplatesignatureEditObjectV1Request](docs/EZEzsigntemplatesignatureEditObjectV1Request.md)
  - [EZEzsigntemplatesignatureEditObjectV1Response](docs/EZEzsigntemplatesignatureEditObjectV1Response.md)
- - [EZEzsigntemplatesignatureGetObjectV1Response](docs/EZEzsigntemplatesignatureGetObjectV1Response.md)
- - [EZEzsigntemplatesignatureGetObjectV1ResponseAllOf](docs/EZEzsigntemplatesignatureGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatesignatureGetObjectV1ResponseMPayload](docs/EZEzsigntemplatesignatureGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatesignatureGetObjectV2Response](docs/EZEzsigntemplatesignatureGetObjectV2Response.md)
  - [EZEzsigntemplatesignatureGetObjectV2ResponseAllOf](docs/EZEzsigntemplatesignatureGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatesignatureGetObjectV2ResponseMPayload](docs/EZEzsigntemplatesignatureGetObjectV2ResponseMPayload.md)
@@ -2014,9 +2078,6 @@ Class | Method | HTTP request | Description
  - [EZEzsigntemplatesignerDeleteObjectV1Response](docs/EZEzsigntemplatesignerDeleteObjectV1Response.md)
  - [EZEzsigntemplatesignerEditObjectV1Request](docs/EZEzsigntemplatesignerEditObjectV1Request.md)
  - [EZEzsigntemplatesignerEditObjectV1Response](docs/EZEzsigntemplatesignerEditObjectV1Response.md)
- - [EZEzsigntemplatesignerGetObjectV1Response](docs/EZEzsigntemplatesignerGetObjectV1Response.md)
- - [EZEzsigntemplatesignerGetObjectV1ResponseAllOf](docs/EZEzsigntemplatesignerGetObjectV1ResponseAllOf.md)
- - [EZEzsigntemplatesignerGetObjectV1ResponseMPayload](docs/EZEzsigntemplatesignerGetObjectV1ResponseMPayload.md)
  - [EZEzsigntemplatesignerGetObjectV2Response](docs/EZEzsigntemplatesignerGetObjectV2Response.md)
  - [EZEzsigntemplatesignerGetObjectV2ResponseAllOf](docs/EZEzsigntemplatesignerGetObjectV2ResponseAllOf.md)
  - [EZEzsigntemplatesignerGetObjectV2ResponseMPayload](docs/EZEzsigntemplatesignerGetObjectV2ResponseMPayload.md)
@@ -2041,6 +2102,7 @@ Class | Method | HTTP request | Description
  - [EZFieldEEzmaxinvoicingagentVariationezsign](docs/EZFieldEEzmaxinvoicingagentVariationezsign.md)
  - [EZFieldEEzmaxinvoicingcontractPaymenttype](docs/EZFieldEEzmaxinvoicingcontractPaymenttype.md)
  - [EZFieldEEzmaxinvoicinguserVariationezsign](docs/EZFieldEEzmaxinvoicinguserVariationezsign.md)
+ - [EZFieldEEzsignannotationType](docs/EZFieldEEzsignannotationType.md)
  - [EZFieldEEzsigndocumentStep](docs/EZFieldEEzsigndocumentStep.md)
  - [EZFieldEEzsigndocumentlogType](docs/EZFieldEEzsigndocumentlogType.md)
  - [EZFieldEEzsignfolderSendreminderfrequency](docs/EZFieldEEzsignfolderSendreminderfrequency.md)
@@ -2063,14 +2125,21 @@ Class | Method | HTTP request | Description
  - [EZFieldEEzsigntemplatesignatureTooltipposition](docs/EZFieldEEzsigntemplatesignatureTooltipposition.md)
  - [EZFieldEEzsigntemplatesignatureType](docs/EZFieldEEzsigntemplatesignatureType.md)
  - [EZFieldENotificationpreferenceStatus](docs/EZFieldENotificationpreferenceStatus.md)
+ - [EZFieldEPaymenttermType](docs/EZFieldEPaymenttermType.md)
  - [EZFieldEPhoneType](docs/EZFieldEPhoneType.md)
  - [EZFieldEUserEzsignsendreminderfrequency](docs/EZFieldEUserEzsignsendreminderfrequency.md)
  - [EZFieldEUserType](docs/EZFieldEUserType.md)
+ - [EZFieldEVariableexpenseTaxable](docs/EZFieldEVariableexpenseTaxable.md)
  - [EZFieldEVersionhistoryType](docs/EZFieldEVersionhistoryType.md)
  - [EZFieldEVersionhistoryUsertype](docs/EZFieldEVersionhistoryUsertype.md)
  - [EZFieldEWebhookEzsignevent](docs/EZFieldEWebhookEzsignevent.md)
  - [EZFieldEWebhookManagementevent](docs/EZFieldEWebhookManagementevent.md)
  - [EZFieldEWebhookModule](docs/EZFieldEWebhookModule.md)
+ - [EZFieldPksEzmaxclientOs](docs/EZFieldPksEzmaxclientOs.md)
+ - [EZFontAutocompleteElementResponse](docs/EZFontAutocompleteElementResponse.md)
+ - [EZFontGetAutocompleteV2Response](docs/EZFontGetAutocompleteV2Response.md)
+ - [EZFontGetAutocompleteV2ResponseAllOf](docs/EZFontGetAutocompleteV2ResponseAllOf.md)
+ - [EZFontGetAutocompleteV2ResponseMPayload](docs/EZFontGetAutocompleteV2ResponseMPayload.md)
  - [EZFranchisebrokerAutocompleteElementResponse](docs/EZFranchisebrokerAutocompleteElementResponse.md)
  - [EZFranchisebrokerGetAutocompleteV2Response](docs/EZFranchisebrokerGetAutocompleteV2Response.md)
  - [EZFranchisebrokerGetAutocompleteV2ResponseAllOf](docs/EZFranchisebrokerGetAutocompleteV2ResponseAllOf.md)
@@ -2091,14 +2160,18 @@ Class | Method | HTTP request | Description
  - [EZFranchisereferalincomeRequestCompound](docs/EZFranchisereferalincomeRequestCompound.md)
  - [EZFranchisereferalincomeRequestCompoundAllOf](docs/EZFranchisereferalincomeRequestCompoundAllOf.md)
  - [EZGlobalCustomerGetEndpointV1Response](docs/EZGlobalCustomerGetEndpointV1Response.md)
+ - [EZGlobalEzmaxclientVersionV1Response](docs/EZGlobalEzmaxclientVersionV1Response.md)
  - [EZHeaderAcceptLanguage](docs/EZHeaderAcceptLanguage.md)
  - [EZMultilingualApikeyDescription](docs/EZMultilingualApikeyDescription.md)
+ - [EZMultilingualBillingentityinternalDescription](docs/EZMultilingualBillingentityinternalDescription.md)
  - [EZMultilingualBrandingDescription](docs/EZMultilingualBrandingDescription.md)
  - [EZMultilingualEzmaxinvoicingsummaryinternalDescription](docs/EZMultilingualEzmaxinvoicingsummaryinternalDescription.md)
  - [EZMultilingualEzsignfoldertypeName](docs/EZMultilingualEzsignfoldertypeName.md)
  - [EZMultilingualNotificationsubsectionName](docs/EZMultilingualNotificationsubsectionName.md)
  - [EZMultilingualNotificationtestName](docs/EZMultilingualNotificationtestName.md)
  - [EZMultilingualPaymenttermDescription](docs/EZMultilingualPaymenttermDescription.md)
+ - [EZMultilingualUsergroupName](docs/EZMultilingualUsergroupName.md)
+ - [EZMultilingualVariableexpenseDescription](docs/EZMultilingualVariableexpenseDescription.md)
  - [EZMultilingualVersionhistoryDetail](docs/EZMultilingualVersionhistoryDetail.md)
  - [EZNotificationsectionGetNotificationtestsV1Response](docs/EZNotificationsectionGetNotificationtestsV1Response.md)
  - [EZNotificationsectionGetNotificationtestsV1ResponseAllOf](docs/EZNotificationsectionGetNotificationtestsV1ResponseAllOf.md)
@@ -2147,6 +2220,8 @@ Class | Method | HTTP request | Description
  - [EZTaxassignmentGetAutocompleteV2Response](docs/EZTaxassignmentGetAutocompleteV2Response.md)
  - [EZTaxassignmentGetAutocompleteV2ResponseAllOf](docs/EZTaxassignmentGetAutocompleteV2ResponseAllOf.md)
  - [EZTaxassignmentGetAutocompleteV2ResponseMPayload](docs/EZTaxassignmentGetAutocompleteV2ResponseMPayload.md)
+ - [EZTextstylestaticResponse](docs/EZTextstylestaticResponse.md)
+ - [EZTextstylestaticResponseCompound](docs/EZTextstylestaticResponseCompound.md)
  - [EZTimezoneAutocompleteElementResponse](docs/EZTimezoneAutocompleteElementResponse.md)
  - [EZTimezoneGetAutocompleteV2Response](docs/EZTimezoneGetAutocompleteV2Response.md)
  - [EZTimezoneGetAutocompleteV2ResponseAllOf](docs/EZTimezoneGetAutocompleteV2ResponseAllOf.md)
@@ -2162,9 +2237,54 @@ Class | Method | HTTP request | Description
  - [EZUserResponse](docs/EZUserResponse.md)
  - [EZUserResponseCompound](docs/EZUserResponseCompound.md)
  - [EZUsergroupAutocompleteElementResponse](docs/EZUsergroupAutocompleteElementResponse.md)
+ - [EZUsergroupCreateObjectV1Request](docs/EZUsergroupCreateObjectV1Request.md)
+ - [EZUsergroupCreateObjectV1Response](docs/EZUsergroupCreateObjectV1Response.md)
+ - [EZUsergroupCreateObjectV1ResponseAllOf](docs/EZUsergroupCreateObjectV1ResponseAllOf.md)
+ - [EZUsergroupCreateObjectV1ResponseMPayload](docs/EZUsergroupCreateObjectV1ResponseMPayload.md)
+ - [EZUsergroupDeleteObjectV1Response](docs/EZUsergroupDeleteObjectV1Response.md)
+ - [EZUsergroupEditObjectV1Request](docs/EZUsergroupEditObjectV1Request.md)
+ - [EZUsergroupEditObjectV1Response](docs/EZUsergroupEditObjectV1Response.md)
  - [EZUsergroupGetAutocompleteV2Response](docs/EZUsergroupGetAutocompleteV2Response.md)
  - [EZUsergroupGetAutocompleteV2ResponseAllOf](docs/EZUsergroupGetAutocompleteV2ResponseAllOf.md)
  - [EZUsergroupGetAutocompleteV2ResponseMPayload](docs/EZUsergroupGetAutocompleteV2ResponseMPayload.md)
+ - [EZUsergroupGetListV1Response](docs/EZUsergroupGetListV1Response.md)
+ - [EZUsergroupGetListV1ResponseAllOf](docs/EZUsergroupGetListV1ResponseAllOf.md)
+ - [EZUsergroupGetListV1ResponseMPayload](docs/EZUsergroupGetListV1ResponseMPayload.md)
+ - [EZUsergroupGetListV1ResponseMPayloadAllOf](docs/EZUsergroupGetListV1ResponseMPayloadAllOf.md)
+ - [EZUsergroupGetMembersV1Response](docs/EZUsergroupGetMembersV1Response.md)
+ - [EZUsergroupGetMembersV1ResponseAllOf](docs/EZUsergroupGetMembersV1ResponseAllOf.md)
+ - [EZUsergroupGetMembersV1ResponseMPayload](docs/EZUsergroupGetMembersV1ResponseMPayload.md)
+ - [EZUsergroupGetObjectV2Response](docs/EZUsergroupGetObjectV2Response.md)
+ - [EZUsergroupGetObjectV2ResponseAllOf](docs/EZUsergroupGetObjectV2ResponseAllOf.md)
+ - [EZUsergroupGetObjectV2ResponseMPayload](docs/EZUsergroupGetObjectV2ResponseMPayload.md)
+ - [EZUsergroupListElement](docs/EZUsergroupListElement.md)
+ - [EZUsergroupRequest](docs/EZUsergroupRequest.md)
+ - [EZUsergroupRequestCompound](docs/EZUsergroupRequestCompound.md)
+ - [EZUsergroupResponse](docs/EZUsergroupResponse.md)
+ - [EZUsergroupResponseCompound](docs/EZUsergroupResponseCompound.md)
+ - [EZVariableexpenseAutocompleteElementResponse](docs/EZVariableexpenseAutocompleteElementResponse.md)
+ - [EZVariableexpenseCreateObjectV1Request](docs/EZVariableexpenseCreateObjectV1Request.md)
+ - [EZVariableexpenseCreateObjectV1Response](docs/EZVariableexpenseCreateObjectV1Response.md)
+ - [EZVariableexpenseCreateObjectV1ResponseAllOf](docs/EZVariableexpenseCreateObjectV1ResponseAllOf.md)
+ - [EZVariableexpenseCreateObjectV1ResponseMPayload](docs/EZVariableexpenseCreateObjectV1ResponseMPayload.md)
+ - [EZVariableexpenseDeleteObjectV1Response](docs/EZVariableexpenseDeleteObjectV1Response.md)
+ - [EZVariableexpenseEditObjectV1Request](docs/EZVariableexpenseEditObjectV1Request.md)
+ - [EZVariableexpenseEditObjectV1Response](docs/EZVariableexpenseEditObjectV1Response.md)
+ - [EZVariableexpenseGetAutocompleteV2Response](docs/EZVariableexpenseGetAutocompleteV2Response.md)
+ - [EZVariableexpenseGetAutocompleteV2ResponseAllOf](docs/EZVariableexpenseGetAutocompleteV2ResponseAllOf.md)
+ - [EZVariableexpenseGetAutocompleteV2ResponseMPayload](docs/EZVariableexpenseGetAutocompleteV2ResponseMPayload.md)
+ - [EZVariableexpenseGetListV1Response](docs/EZVariableexpenseGetListV1Response.md)
+ - [EZVariableexpenseGetListV1ResponseAllOf](docs/EZVariableexpenseGetListV1ResponseAllOf.md)
+ - [EZVariableexpenseGetListV1ResponseMPayload](docs/EZVariableexpenseGetListV1ResponseMPayload.md)
+ - [EZVariableexpenseGetListV1ResponseMPayloadAllOf](docs/EZVariableexpenseGetListV1ResponseMPayloadAllOf.md)
+ - [EZVariableexpenseGetObjectV2Response](docs/EZVariableexpenseGetObjectV2Response.md)
+ - [EZVariableexpenseGetObjectV2ResponseAllOf](docs/EZVariableexpenseGetObjectV2ResponseAllOf.md)
+ - [EZVariableexpenseGetObjectV2ResponseMPayload](docs/EZVariableexpenseGetObjectV2ResponseMPayload.md)
+ - [EZVariableexpenseListElement](docs/EZVariableexpenseListElement.md)
+ - [EZVariableexpenseRequest](docs/EZVariableexpenseRequest.md)
+ - [EZVariableexpenseRequestCompound](docs/EZVariableexpenseRequestCompound.md)
+ - [EZVariableexpenseResponse](docs/EZVariableexpenseResponse.md)
+ - [EZVariableexpenseResponseCompound](docs/EZVariableexpenseResponseCompound.md)
  - [EZVersionhistoryGetObjectV2Response](docs/EZVersionhistoryGetObjectV2Response.md)
  - [EZVersionhistoryGetObjectV2ResponseAllOf](docs/EZVersionhistoryGetObjectV2ResponseAllOf.md)
  - [EZVersionhistoryGetObjectV2ResponseMPayload](docs/EZVersionhistoryGetObjectV2ResponseMPayload.md)
@@ -2189,9 +2309,6 @@ Class | Method | HTTP request | Description
  - [EZWebhookGetListV1ResponseAllOf](docs/EZWebhookGetListV1ResponseAllOf.md)
  - [EZWebhookGetListV1ResponseMPayload](docs/EZWebhookGetListV1ResponseMPayload.md)
  - [EZWebhookGetListV1ResponseMPayloadAllOf](docs/EZWebhookGetListV1ResponseMPayloadAllOf.md)
- - [EZWebhookGetObjectV1Response](docs/EZWebhookGetObjectV1Response.md)
- - [EZWebhookGetObjectV1ResponseAllOf](docs/EZWebhookGetObjectV1ResponseAllOf.md)
- - [EZWebhookGetObjectV1ResponseMPayload](docs/EZWebhookGetObjectV1ResponseMPayload.md)
  - [EZWebhookGetObjectV2Response](docs/EZWebhookGetObjectV2Response.md)
  - [EZWebhookGetObjectV2ResponseAllOf](docs/EZWebhookGetObjectV2ResponseAllOf.md)
  - [EZWebhookGetObjectV2ResponseMPayload](docs/EZWebhookGetObjectV2ResponseMPayload.md)

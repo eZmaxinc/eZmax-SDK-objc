@@ -1,6 +1,13 @@
 #import <Foundation/Foundation.h>
+#import "EZBillingentityinternalCreateObjectV1Request.h"
+#import "EZBillingentityinternalCreateObjectV1Response.h"
+#import "EZBillingentityinternalDeleteObjectV1Response.h"
+#import "EZBillingentityinternalEditObjectV1Request.h"
+#import "EZBillingentityinternalEditObjectV1Response.h"
 #import "EZBillingentityinternalGetAutocompleteV2Response.h"
-#import "EZCommonGetAutocompleteV1Response.h"
+#import "EZBillingentityinternalGetListV1Response.h"
+#import "EZBillingentityinternalGetObjectV2Response.h"
+#import "EZCommonResponseError.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
@@ -25,22 +32,45 @@ extern NSInteger kEZObjectBillingentityinternalApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Retrieve Billingentityinternals and IDs
-/// Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+/// Create a new Billingentityinternal
+/// The endpoint allows to create one or many elements at once.
 ///
-/// @param sSelector The type of Billingentityinternals to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
+/// @param billingentityinternalCreateObjectV1Request 
 /// 
-///  code:200 message:"Successful response"
+///  code:201 message:"Successful response"
 ///
-/// @return EZCommonGetAutocompleteV1Response*
--(NSURLSessionTask*) billingentityinternalGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
+/// @return EZBillingentityinternalCreateObjectV1Response*
+-(NSURLSessionTask*) billingentityinternalCreateObjectV1WithBillingentityinternalCreateObjectV1Request: (EZBillingentityinternalCreateObjectV1Request*) billingentityinternalCreateObjectV1Request
+    completionHandler: (void (^)(EZBillingentityinternalCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Delete an existing Billingentityinternal
+/// 
+///
+/// @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZBillingentityinternalDeleteObjectV1Response*
+-(NSURLSessionTask*) billingentityinternalDeleteObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
+    completionHandler: (void (^)(EZBillingentityinternalDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit an existing Billingentityinternal
+/// 
+///
+/// @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+/// @param billingentityinternalEditObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZBillingentityinternalEditObjectV1Response*
+-(NSURLSessionTask*) billingentityinternalEditObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
+    billingentityinternalEditObjectV1Request: (EZBillingentityinternalEditObjectV1Request*) billingentityinternalEditObjectV1Request
+    completionHandler: (void (^)(EZBillingentityinternalEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Billingentityinternals and IDs
@@ -59,6 +89,40 @@ extern NSInteger kEZObjectBillingentityinternalApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZBillingentityinternalGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Billingentityinternal list
+/// 
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
+///
+/// @return EZBillingentityinternalGetListV1Response*
+-(NSURLSessionTask*) billingentityinternalGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZBillingentityinternalGetListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Billingentityinternal
+/// 
+///
+/// @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZBillingentityinternalGetObjectV2Response*
+-(NSURLSessionTask*) billingentityinternalGetObjectV2WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
+    completionHandler: (void (^)(EZBillingentityinternalGetObjectV2Response* output, NSError* error)) handler;
 
 
 

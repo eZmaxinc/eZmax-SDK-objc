@@ -11,10 +11,10 @@
 #import "EZEzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response.h"
 #import "EZEzsigntemplatedocumentEditObjectV1Request.h"
 #import "EZEzsigntemplatedocumentEditObjectV1Response.h"
+#import "EZEzsigntemplatedocumentFlattenV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.h"
-#import "EZEzsigntemplatedocumentGetObjectV1Response.h"
 #import "EZEzsigntemplatedocumentGetObjectV2Response.h"
 #import "EZEzsigntemplatedocumentGetWordsPositionsV1Request.h"
 #import "EZEzsigntemplatedocumentGetWordsPositionsV1Response.h"
@@ -383,6 +383,89 @@ NSInteger kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Flatten
+/// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+///  @param pkiEzsigntemplatedocumentID  
+///
+///  @param body  
+///
+///  @returns EZEzsigntemplatedocumentFlattenV1Response*
+///
+-(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZEzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+    if (pkiEzsigntemplatedocumentID == nil) {
+        NSParameterAssert(pkiEzsigntemplatedocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatedocumentID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplatedocumentApiErrorDomain code:kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'body' is set
+    if (body == nil) {
+        NSParameterAssert(body);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"body"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplatedocumentApiErrorDomain code:kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplatedocumentID != nil) {
+        pathParams[@"pkiEzsigntemplatedocumentID"] = pkiEzsigntemplatedocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = body;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsigntemplatedocumentFlattenV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsigntemplatedocumentFlattenV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
 /// 
 ///  @param pkiEzsigntemplatedocumentID  
@@ -582,74 +665,6 @@ NSInteger kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Ezsigntemplatedocument
-/// 
-///  @param pkiEzsigntemplatedocumentID  
-///
-///  @returns EZEzsigntemplatedocumentGetObjectV1Response*
-///
--(NSURLSessionTask*) ezsigntemplatedocumentGetObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
-    completionHandler: (void (^)(EZEzsigntemplatedocumentGetObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
-    if (pkiEzsigntemplatedocumentID == nil) {
-        NSParameterAssert(pkiEzsigntemplatedocumentID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatedocumentID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsigntemplatedocumentApiErrorDomain code:kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsigntemplatedocumentID != nil) {
-        pathParams[@"pkiEzsigntemplatedocumentID"] = pkiEzsigntemplatedocumentID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZEzsigntemplatedocumentGetObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZEzsigntemplatedocumentGetObjectV1Response*)data, error);
                                 }
                             }];
 }

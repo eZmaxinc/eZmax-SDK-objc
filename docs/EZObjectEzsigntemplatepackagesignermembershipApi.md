@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplatepackagesignermembershipCreateObjectV1**](EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipcreateobjectv1) | **POST** /1/object/ezsigntemplatepackagesignermembership | Create a new Ezsigntemplatepackagesignermembership
 [**ezsigntemplatepackagesignermembershipDeleteObjectV1**](EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Delete an existing Ezsigntemplatepackagesignermembership
-[**ezsigntemplatepackagesignermembershipGetObjectV1**](EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipgetobjectv1) | **GET** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 [**ezsigntemplatepackagesignermembershipGetObjectV2**](EZObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipgetobjectv2) | **GET** /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 
 
@@ -112,63 +111,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response***](EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplatepackagesignermembershipGetObjectV1**
-```objc
--(NSURLSessionTask*) ezsigntemplatepackagesignermembershipGetObjectV1WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID
-        completionHandler: (void (^)(EZEzsigntemplatepackagesignermembershipGetObjectV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsigntemplatepackagesignermembership
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsigntemplatepackagesignermembershipID = @56; // 
-
-EZObjectEzsigntemplatepackagesignermembershipApi*apiInstance = [[EZObjectEzsigntemplatepackagesignermembershipApi alloc] init];
-
-// Retrieve an existing Ezsigntemplatepackagesignermembership
-[apiInstance ezsigntemplatepackagesignermembershipGetObjectV1WithPkiEzsigntemplatepackagesignermembershipID:pkiEzsigntemplatepackagesignermembershipID
-          completionHandler: ^(EZEzsigntemplatepackagesignermembershipGetObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsigntemplatepackagesignermembershipApi->ezsigntemplatepackagesignermembershipGetObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatepackagesignermembershipID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZEzsigntemplatepackagesignermembershipGetObjectV1Response***](EZEzsigntemplatepackagesignermembershipGetObjectV1Response.md)
 
 ### Authorization
 

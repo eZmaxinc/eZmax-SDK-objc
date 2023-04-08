@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationID": @"pkiCommunicationID", @"eCommunicationImportance": @"eCommunicationImportance", @"eCommunicationType": @"eCommunicationType", @"sCommunicationSubject": @"sCommunicationSubject", @"eCommunicationDirection": @"eCommunicationDirection", @"iCommunicationrecipientCount": @"iCommunicationrecipientCount", @"objContactFrom": @"objContactFrom", @"objAudit": @"objAudit" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationID": @"pkiCommunicationID", @"eCommunicationImportance": @"eCommunicationImportance", @"eCommunicationType": @"eCommunicationType", @"sCommunicationSubject": @"sCommunicationSubject", @"sCommunicationBodyurl": @"sCommunicationBodyurl", @"eCommunicationDirection": @"eCommunicationDirection", @"iCommunicationrecipientCount": @"iCommunicationrecipientCount", @"objDescriptionstaticSender": @"objDescriptionstaticSender", @"objEmailstaticSender": @"objEmailstaticSender", @"objPhonestaticSender": @"objPhonestaticSender", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"sCommunicationBodyurl", @"objDescriptionstaticSender", @"objEmailstaticSender", @"objPhonestaticSender", ];
   return [optionalProperties containsObject:propertyName];
 }
 

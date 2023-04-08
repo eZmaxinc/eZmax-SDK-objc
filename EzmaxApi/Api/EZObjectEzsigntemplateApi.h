@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "EZCommonGetAutocompleteV1Response.h"
 #import "EZCommonResponseError.h"
 #import "EZEzsigntemplateCopyV1Request.h"
 #import "EZEzsigntemplateCopyV1Response.h"
@@ -90,24 +89,6 @@ extern NSInteger kEZObjectEzsigntemplateApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigntemplateEditObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
     ezsigntemplateEditObjectV1Request: (EZEzsigntemplateEditObjectV1Request*) ezsigntemplateEditObjectV1Request
     completionHandler: (void (^)(EZEzsigntemplateEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve Ezsigntemplate and IDs
-/// Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Ezsigntemplate to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
-/// @return EZCommonGetAutocompleteV1Response*
--(NSURLSessionTask*) ezsigntemplateGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigntemplates and IDs

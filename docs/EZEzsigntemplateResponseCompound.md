@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **sEzsigntemplateDescription** | **NSString*** | The description of the Ezsigntemplate | 
 **bEzsigntemplateAdminonly** | **NSNumber*** | Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
+**objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 
 **objEzsigntemplatedocument** | [**EZEzsigntemplatedocumentResponse***](EZEzsigntemplatedocumentResponse.md) |  | [optional] 
 **aObjEzsigntemplatesigner** | [**NSArray&lt;EZEzsigntemplatesignerResponseCompound&gt;***](EZEzsigntemplatesignerResponseCompound.md) |  | 
 

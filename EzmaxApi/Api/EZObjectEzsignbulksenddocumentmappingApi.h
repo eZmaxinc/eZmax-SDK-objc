@@ -3,7 +3,6 @@
 #import "EZEzsignbulksenddocumentmappingCreateObjectV1Request.h"
 #import "EZEzsignbulksenddocumentmappingCreateObjectV1Response.h"
 #import "EZEzsignbulksenddocumentmappingDeleteObjectV1Response.h"
-#import "EZEzsignbulksenddocumentmappingGetObjectV1Response.h"
 #import "EZEzsignbulksenddocumentmappingGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -52,19 +51,6 @@ extern NSInteger kEZObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 /// @return EZEzsignbulksenddocumentmappingDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingDeleteObjectV1WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
     completionHandler: (void (^)(EZEzsignbulksenddocumentmappingDeleteObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignbulksenddocumentmapping
-/// 
-///
-/// @param pkiEzsignbulksenddocumentmappingID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsignbulksenddocumentmappingGetObjectV1Response*
--(NSURLSessionTask*) ezsignbulksenddocumentmappingGetObjectV1WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
-    completionHandler: (void (^)(EZEzsignbulksenddocumentmappingGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignbulksenddocumentmapping

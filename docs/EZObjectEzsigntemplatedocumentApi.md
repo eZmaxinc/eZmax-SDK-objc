@@ -8,10 +8,10 @@ Method | HTTP request | Description
 [**ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplateformfieldgroupsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups | Edit multiple Ezsigntemplateformfieldgroups
 [**ezsigntemplatedocumentEditEzsigntemplatesignaturesV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatesignaturesv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures
 [**ezsigntemplatedocumentEditObjectV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditobjectv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Edit an existing Ezsigntemplatedocument
+[**ezsigntemplatedocumentFlattenV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentflattenv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten | Flatten
 [**ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatedocumentpagesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
 [**ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplateformfieldgroupsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
 [**ezsigntemplatedocumentGetEzsigntemplatesignaturesV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatesignaturesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
-[**ezsigntemplatedocumentGetObjectV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetobjectv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 [**ezsigntemplatedocumentGetObjectV2**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetobjectv2) | **GET** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 [**ezsigntemplatedocumentGetWordsPositionsV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetwordspositionsv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 [**ezsigntemplatedocumentPatchObjectV1**](EZObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentpatchobjectv1) | **PATCH** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Patch an existing Ezsigntemplatedocument
@@ -257,6 +257,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsigntemplatedocumentFlattenV1**
+```objc
+-(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    body: (NSObject*) body
+        completionHandler: (void (^)(EZEzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
+```
+
+Flatten
+
+Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplatedocumentID = @56; // 
+NSObject* body = NULL; // 
+
+EZObjectEzsigntemplatedocumentApi*apiInstance = [[EZObjectEzsigntemplatedocumentApi alloc] init];
+
+// Flatten
+[apiInstance ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID:pkiEzsigntemplatedocumentID
+              body:body
+          completionHandler: ^(EZEzsigntemplatedocumentFlattenV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigntemplatedocumentApi->ezsigntemplatedocumentFlattenV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatedocumentID** | **NSNumber***|  | 
+ **body** | **NSObject***|  | 
+
+### Return type
+
+[**EZEzsigntemplatedocumentFlattenV1Response***](EZEzsigntemplatedocumentFlattenV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
@@ -416,63 +477,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response***](EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplatedocumentGetObjectV1**
-```objc
--(NSURLSessionTask*) ezsigntemplatedocumentGetObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
-        completionHandler: (void (^)(EZEzsigntemplatedocumentGetObjectV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsigntemplatedocument
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsigntemplatedocumentID = @56; // 
-
-EZObjectEzsigntemplatedocumentApi*apiInstance = [[EZObjectEzsigntemplatedocumentApi alloc] init];
-
-// Retrieve an existing Ezsigntemplatedocument
-[apiInstance ezsigntemplatedocumentGetObjectV1WithPkiEzsigntemplatedocumentID:pkiEzsigntemplatedocumentID
-          completionHandler: ^(EZEzsigntemplatedocumentGetObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsigntemplatedocumentApi->ezsigntemplatedocumentGetObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatedocumentID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZEzsigntemplatedocumentGetObjectV1Response***](EZEzsigntemplatedocumentGetObjectV1Response.md)
 
 ### Authorization
 

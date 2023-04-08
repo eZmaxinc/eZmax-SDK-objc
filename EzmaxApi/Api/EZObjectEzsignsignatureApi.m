@@ -9,7 +9,7 @@
 #import "EZEzsignsignatureDeleteObjectV1Response.h"
 #import "EZEzsignsignatureEditObjectV1Request.h"
 #import "EZEzsignsignatureEditObjectV1Response.h"
-#import "EZEzsignsignatureGetObjectV1Response.h"
+#import "EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignsignatureGetObjectV2Response.h"
 #import "EZEzsignsignatureSignV1Request.h"
 #import "EZEzsignsignatureSignV1Response.h"
@@ -344,31 +344,15 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 }
 
 ///
-/// Retrieve an existing Ezsignsignature
-/// 
-///  @param pkiEzsignsignatureID  
+/// Retrieve all automatic Ezsignsignatures
+/// Return all the Ezsignsignatures that can be signed by the current user
+///  @returns EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response*
 ///
-///  @returns EZEzsignsignatureGetObjectV1Response*
-///
--(NSURLSessionTask*) ezsignsignatureGetObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EZEzsignsignatureGetObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignsignatureID' is set
-    if (pkiEzsignsignatureID == nil) {
-        NSParameterAssert(pkiEzsignsignatureID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignsignatureID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsignsignatureApiErrorDomain code:kEZObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignsignature/{pkiEzsignsignatureID}"];
+-(NSURLSessionTask*) ezsignsignatureGetEzsignsignaturesAutomaticV1WithCompletionHandler: 
+    (void (^)(EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler {
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignsignature/getEzsignsignaturesAutomatic"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignsignatureID != nil) {
-        pathParams[@"pkiEzsignsignatureID"] = pkiEzsignsignatureID;
-    }
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
@@ -403,10 +387,10 @@ NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EZEzsignsignatureGetObjectV1Response*"
+                              responseType: @"EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EZEzsignsignatureGetObjectV1Response*)data, error);
+                                    handler((EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response*)data, error);
                                 }
                             }];
 }

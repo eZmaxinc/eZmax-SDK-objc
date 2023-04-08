@@ -15,9 +15,12 @@
 
 
 #import "EZCommonAudit.h"
+#import "EZFieldEPaymenttermType.h"
 #import "EZMultilingualPaymenttermDescription.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
+@protocol EZFieldEPaymenttermType;
+@class EZFieldEPaymenttermType;
 @protocol EZMultilingualPaymenttermDescription;
 @class EZMultilingualPaymenttermDescription;
 
@@ -34,6 +37,11 @@
 /* The code of the Paymentterm 
  */
 @property(nonatomic) NSString* sPaymenttermCode;
+
+@property(nonatomic) EZFieldEPaymenttermType* ePaymenttermType;
+/* The day of the Paymentterm 
+ */
+@property(nonatomic) NSNumber* iPaymenttermDay;
 
 @property(nonatomic) EZMultilingualPaymenttermDescription* objPaymenttermDescription;
 /* Whether the Paymentterm is active or not 

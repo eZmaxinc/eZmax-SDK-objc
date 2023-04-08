@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency", @"sEzsignfolderExternalid": @"sEzsignfolderExternalid" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsignfolderID", @"fkiEzsigntsarequirementID", ];
+  NSArray *optionalProperties = @[@"pkiEzsignfolderID", @"fkiEzsigntsarequirementID", @"sEzsignfolderExternalid"];
   return [optionalProperties containsObject:propertyName];
 }
 

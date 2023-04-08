@@ -5,9 +5,7 @@
 #import "EZBrandingEditObjectV1Response.h"
 #import "EZBrandingGetAutocompleteV2Response.h"
 #import "EZBrandingGetListV1Response.h"
-#import "EZBrandingGetObjectV1Response.h"
 #import "EZBrandingGetObjectV2Response.h"
-#import "EZCommonGetAutocompleteV1Response.h"
 #import "EZCommonResponseError.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
@@ -70,24 +68,6 @@ extern NSInteger kEZObjectBrandingApiMissingParamErrorCode;
 /// 
 ///  code:200 message:"Successful response"
 ///
-/// @return EZCommonGetAutocompleteV1Response*
--(NSURLSessionTask*) brandingGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve Brandings and IDs
-/// Get the list of Branding to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Brandings to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
 /// @return EZBrandingGetAutocompleteV2Response*
 -(NSURLSessionTask*) brandingGetAutocompleteV2WithSSelector: (NSString*) sSelector
     eFilterActive: (NSString*) eFilterActive
@@ -115,19 +95,6 @@ extern NSInteger kEZObjectBrandingApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZBrandingGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Branding
-/// 
-///
-/// @param pkiBrandingID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZBrandingGetObjectV1Response*
--(NSURLSessionTask*) brandingGetObjectV1WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    completionHandler: (void (^)(EZBrandingGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Branding

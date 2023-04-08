@@ -37,5 +37,8 @@
 /* The number of total signatures in the Ezsigntemplate. 
  */
 @property(nonatomic) NSNumber* iEzsigntemplatedocumentSignaturetotal;
+/* If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) 
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatedocumentHassignedsignatures;
 
 @end

@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "EZActivesessionGetCurrentV1Response.h"
+#import "EZActivesessionGetListV1Response.h"
+#import "EZCommonResponseError.h"
 #import "EZCommonResponseRedirectSSecretquestionTextX.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
@@ -40,6 +43,27 @@ extern NSInteger kEZObjectActivesessionApiMissingParamErrorCode;
 /// @return EZActivesessionGetCurrentV1Response*
 -(NSURLSessionTask*) activesessionGetCurrentV1WithCompletionHandler: 
     (void (^)(EZActivesessionGetCurrentV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Activesession list
+/// 
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
+///
+/// @return EZActivesessionGetListV1Response*
+-(NSURLSessionTask*) activesessionGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZActivesessionGetListV1Response* output, NSError* error)) handler;
 
 
 

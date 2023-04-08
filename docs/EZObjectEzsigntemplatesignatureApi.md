@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**ezsigntemplatesignatureCreateObjectV1**](EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturecreateobjectv1) | **POST** /1/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
 [**ezsigntemplatesignatureDeleteObjectV1**](EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Delete an existing Ezsigntemplatesignature
 [**ezsigntemplatesignatureEditObjectV1**](EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureeditobjectv1) | **PUT** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
-[**ezsigntemplatesignatureGetObjectV1**](EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv1) | **GET** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 [**ezsigntemplatesignatureGetObjectV2**](EZObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv2) | **GET** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 
 
@@ -182,63 +181,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplatesignatureGetObjectV1**
-```objc
--(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-        completionHandler: (void (^)(EZEzsigntemplatesignatureGetObjectV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsigntemplatesignature
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsigntemplatesignatureID = @56; // 
-
-EZObjectEzsigntemplatesignatureApi*apiInstance = [[EZObjectEzsigntemplatesignatureApi alloc] init];
-
-// Retrieve an existing Ezsigntemplatesignature
-[apiInstance ezsigntemplatesignatureGetObjectV1WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
-          completionHandler: ^(EZEzsigntemplatesignatureGetObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureGetObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatesignatureID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZEzsigntemplatesignatureGetObjectV1Response***](EZEzsigntemplatesignatureGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

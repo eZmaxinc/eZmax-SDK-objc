@@ -31,6 +31,9 @@
 /* The unique ID of the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* pkiEzsignfolderID;
+/* The description of the Ezsignfolder 
+ */
+@property(nonatomic) NSString* sEzsignfolderDescription;
 
 @property(nonatomic) EZFieldEEzsignfolderStep* eEzsignfolderStep;
 /* The number of total signatures that were requested in the Ezsignfolder 

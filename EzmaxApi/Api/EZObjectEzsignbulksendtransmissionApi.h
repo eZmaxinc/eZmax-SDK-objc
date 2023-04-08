@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "EZCommonResponseError.h"
+#import "EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignbulksendtransmissionGetFormsDataV1Response.h"
-#import "EZEzsignbulksendtransmissionGetObjectV1Response.h"
 #import "EZEzsignbulksendtransmissionGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -41,6 +41,19 @@ extern NSInteger kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
     completionHandler: (void (^)(NSString* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
+/// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+///
+/// @param pkiEzsignbulksendtransmissionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response*
+-(NSURLSessionTask*) ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
+    completionHandler: (void (^)(EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignbulksendtransmission's forms data
 /// 
 ///
@@ -54,19 +67,6 @@ extern NSInteger kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @return EZEzsignbulksendtransmissionGetFormsDataV1Response*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetFormsDataV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
     completionHandler: (void (^)(EZEzsignbulksendtransmissionGetFormsDataV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignbulksendtransmission
-/// 
-///
-/// @param pkiEzsignbulksendtransmissionID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsignbulksendtransmissionGetObjectV1Response*
--(NSURLSessionTask*) ezsignbulksendtransmissionGetObjectV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
-    completionHandler: (void (^)(EZEzsignbulksendtransmissionGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignbulksendtransmission

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV2**](EZObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-[**ezsignsignatureGetObjectV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetEzsignsignaturesAutomaticV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 [**ezsignsignatureGetObjectV2**](EZObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](EZObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
@@ -245,15 +245,15 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureGetObjectV1**
+# **ezsignsignatureGetEzsignsignaturesAutomaticV1**
 ```objc
--(NSURLSessionTask*) ezsignsignatureGetObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-        completionHandler: (void (^)(EZEzsignsignatureGetObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignsignatureGetEzsignsignaturesAutomaticV1WithCompletionHandler: 
+        (void (^)(EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
 ```
 
-Retrieve an existing Ezsignsignature
+Retrieve all automatic Ezsignsignatures
 
-
+Return all the Ezsignsignatures that can be signed by the current user
 
 ### Example
 ```objc
@@ -265,31 +265,27 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiEzsignsignatureID = @56; // 
 
 EZObjectEzsignsignatureApi*apiInstance = [[EZObjectEzsignsignatureApi alloc] init];
 
-// Retrieve an existing Ezsignsignature
-[apiInstance ezsignsignatureGetObjectV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
-          completionHandler: ^(EZEzsignsignatureGetObjectV1Response* output, NSError* error) {
+// Retrieve all automatic Ezsignsignatures
+[apiInstance ezsignsignatureGetEzsignsignaturesAutomaticV1WithCompletionHandler: 
+          ^(EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling EZObjectEzsignsignatureApi->ezsignsignatureGetObjectV1: %@", error);
+                            NSLog(@"Error calling EZObjectEzsignsignatureApi->ezsignsignatureGetEzsignsignaturesAutomaticV1: %@", error);
                         }
                     }];
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**EZEzsignsignatureGetObjectV1Response***](EZEzsignsignatureGetObjectV1Response.md)
+[**EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response***](EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 

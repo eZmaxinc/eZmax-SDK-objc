@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**ezsigntemplateCreateObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-[**ezsigntemplateGetAutocompleteV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev1) | **GET** /1/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplate and IDs
 [**ezsigntemplateGetAutocompleteV2**](EZObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](EZObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
@@ -247,75 +246,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplateGetAutocompleteV1**
-```objc
--(NSURLSessionTask*) ezsigntemplateGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-        completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
-```
-
-Retrieve Ezsigntemplate and IDs
-
-Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSString* sSelector = @"sSelector_example"; // The type of Ezsigntemplate to return
-NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
-NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
-EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
-
-EZObjectEzsigntemplateApi*apiInstance = [[EZObjectEzsigntemplateApi alloc] init];
-
-// Retrieve Ezsigntemplate and IDs
-[apiInstance ezsigntemplateGetAutocompleteV1WithSSelector:sSelector
-              eFilterActive:eFilterActive
-              sQuery:sQuery
-              acceptLanguage:acceptLanguage
-          completionHandler: ^(EZCommonGetAutocompleteV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsigntemplateApi->ezsigntemplateGetAutocompleteV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **NSString***| The type of Ezsigntemplate to return | 
- **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
- **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
-
-### Return type
-
-[**EZCommonGetAutocompleteV1Response***](EZCommonGetAutocompleteV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

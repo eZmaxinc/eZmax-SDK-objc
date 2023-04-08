@@ -7,7 +7,6 @@
 #import "EZEzsignformfieldgroupDeleteObjectV1Response.h"
 #import "EZEzsignformfieldgroupEditObjectV1Request.h"
 #import "EZEzsignformfieldgroupEditObjectV1Response.h"
-#import "EZEzsignformfieldgroupGetObjectV1Response.h"
 #import "EZEzsignformfieldgroupGetObjectV2Response.h"
 
 
@@ -269,74 +268,6 @@ NSInteger kEZObjectEzsignformfieldgroupApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignformfieldgroupEditObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Ezsignformfieldgroup
-/// 
-///  @param pkiEzsignformfieldgroupID  
-///
-///  @returns EZEzsignformfieldgroupGetObjectV1Response*
-///
--(NSURLSessionTask*) ezsignformfieldgroupGetObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
-    completionHandler: (void (^)(EZEzsignformfieldgroupGetObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignformfieldgroupID' is set
-    if (pkiEzsignformfieldgroupID == nil) {
-        NSParameterAssert(pkiEzsignformfieldgroupID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignformfieldgroupID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsignformfieldgroupApiErrorDomain code:kEZObjectEzsignformfieldgroupApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignformfieldgroupID != nil) {
-        pathParams[@"pkiEzsignformfieldgroupID"] = pkiEzsignformfieldgroupID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZEzsignformfieldgroupGetObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZEzsignformfieldgroupGetObjectV1Response*)data, error);
                                 }
                             }];
 }

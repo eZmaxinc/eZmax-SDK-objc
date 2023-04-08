@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiPaymenttermID** | **NSNumber*** | The unique ID of the Paymentterm | 
 **sPaymenttermCode** | **NSString*** | The code of the Paymentterm | 
+**ePaymenttermType** | [**EZFieldEPaymenttermType***](EZFieldEPaymenttermType.md) |  | 
+**iPaymenttermDay** | **NSNumber*** | The day of the Paymentterm | 
 **objPaymenttermDescription** | [**EZMultilingualPaymenttermDescription***](EZMultilingualPaymenttermDescription.md) |  | 
 **bPaymenttermIsactive** | **NSNumber*** | Whether the Paymentterm is active or not | 
 **objAudit** | [**EZCommonAudit***](EZCommonAudit.md) |  | 

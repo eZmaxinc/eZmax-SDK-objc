@@ -7,7 +7,7 @@
 #import "EZEzsignsignatureDeleteObjectV1Response.h"
 #import "EZEzsignsignatureEditObjectV1Request.h"
 #import "EZEzsignsignatureEditObjectV1Response.h"
-#import "EZEzsignsignatureGetObjectV1Response.h"
+#import "EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignsignatureGetObjectV2Response.h"
 #import "EZEzsignsignatureSignV1Request.h"
 #import "EZEzsignsignatureSignV1Response.h"
@@ -88,17 +88,15 @@ extern NSInteger kEZObjectEzsignsignatureApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsignsignatureEditObjectV1Response* output, NSError* error)) handler;
 
 
-/// Retrieve an existing Ezsignsignature
-/// 
+/// Retrieve all automatic Ezsignsignatures
+/// Return all the Ezsignsignatures that can be signed by the current user
 ///
-/// @param pkiEzsignsignatureID 
 /// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:200 message:"Successful response"
 ///
-/// @return EZEzsignsignatureGetObjectV1Response*
--(NSURLSessionTask*) ezsignsignatureGetObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EZEzsignsignatureGetObjectV1Response* output, NSError* error)) handler;
+/// @return EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response*
+-(NSURLSessionTask*) ezsignsignatureGetEzsignsignaturesAutomaticV1WithCompletionHandler: 
+    (void (^)(EZEzsignsignatureGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignature

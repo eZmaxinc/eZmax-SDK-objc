@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "EZCommonGetAutocompleteDisabledV1Response.h"
 #import "EZCommonResponseError.h"
 #import "EZEzsigntemplatepackageCreateObjectV1Request.h"
 #import "EZEzsigntemplatepackageCreateObjectV1Response.h"
@@ -10,7 +9,6 @@
 #import "EZEzsigntemplatepackageEditObjectV1Response.h"
 #import "EZEzsigntemplatepackageGetAutocompleteV2Response.h"
 #import "EZEzsigntemplatepackageGetListV1Response.h"
-#import "EZEzsigntemplatepackageGetObjectV1Response.h"
 #import "EZEzsigntemplatepackageGetObjectV2Response.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
@@ -103,24 +101,6 @@ extern NSInteger kEZObjectEzsigntemplatepackageApiMissingParamErrorCode;
 /// 
 ///  code:200 message:"Successful response"
 ///
-/// @return EZCommonGetAutocompleteDisabledV1Response*
--(NSURLSessionTask*) ezsigntemplatepackageGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve Ezsigntemplatepackages and IDs
-/// Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Ezsigntemplatepackages to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
 /// @return EZEzsigntemplatepackageGetAutocompleteV2Response*
 -(NSURLSessionTask*) ezsigntemplatepackageGetAutocompleteV2WithSSelector: (NSString*) sSelector
     eFilterActive: (NSString*) eFilterActive
@@ -148,19 +128,6 @@ extern NSInteger kEZObjectEzsigntemplatepackageApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsigntemplatepackageGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplatepackage
-/// 
-///
-/// @param pkiEzsigntemplatepackageID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsigntemplatepackageGetObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatepackageGetObjectV1WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
-    completionHandler: (void (^)(EZEzsigntemplatepackageGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatepackage

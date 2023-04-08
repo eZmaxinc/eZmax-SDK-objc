@@ -9,7 +9,6 @@
 #import "EZWebhookEditObjectV1Response.h"
 #import "EZWebhookGetHistoryV1Response.h"
 #import "EZWebhookGetListV1Response.h"
-#import "EZWebhookGetObjectV1Response.h"
 #import "EZWebhookGetObjectV2Response.h"
 #import "EZWebhookTestV1Response.h"
 #import "EZApi.h"
@@ -110,19 +109,6 @@ extern NSInteger kEZObjectWebhookApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZWebhookGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Webhook
-/// 
-///
-/// @param pkiWebhookID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZWebhookGetObjectV1Response*
--(NSURLSessionTask*) webhookGetObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
-    completionHandler: (void (^)(EZWebhookGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Webhook

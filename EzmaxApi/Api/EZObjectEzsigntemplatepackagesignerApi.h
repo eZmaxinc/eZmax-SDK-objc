@@ -5,7 +5,6 @@
 #import "EZEzsigntemplatepackagesignerDeleteObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignerEditObjectV1Request.h"
 #import "EZEzsigntemplatepackagesignerEditObjectV1Response.h"
-#import "EZEzsigntemplatepackagesignerGetObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignerGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -69,19 +68,6 @@ extern NSInteger kEZObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigntemplatepackagesignerEditObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
     ezsigntemplatepackagesignerEditObjectV1Request: (EZEzsigntemplatepackagesignerEditObjectV1Request*) ezsigntemplatepackagesignerEditObjectV1Request
     completionHandler: (void (^)(EZEzsigntemplatepackagesignerEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplatepackagesigner
-/// 
-///
-/// @param pkiEzsigntemplatepackagesignerID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsigntemplatepackagesignerGetObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatepackagesignerGetObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
-    completionHandler: (void (^)(EZEzsigntemplatepackagesignerGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatepackagesigner

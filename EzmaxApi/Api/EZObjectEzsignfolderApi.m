@@ -15,8 +15,11 @@
 #import "EZEzsignfolderEditObjectV1Request.h"
 #import "EZEzsignfolderEditObjectV1Response.h"
 #import "EZEzsignfolderGetActionableElementsV1Response.h"
+#import "EZEzsignfolderGetCommunicationCountV1Response.h"
+#import "EZEzsignfolderGetCommunicationListV1Response.h"
 #import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
+#import "EZEzsignfolderGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetListV1Response.h"
 #import "EZEzsignfolderGetObjectV1Response.h"
@@ -749,6 +752,142 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Retrieve Communication count
+/// 
+///  @param pkiEzsignfolderID  
+///
+///  @returns EZEzsignfolderGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetCommunicationCountV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication list
+/// 
+///  @param pkiEzsignfolderID  
+///
+///  @returns EZEzsignfolderGetCommunicationListV1Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetCommunicationListV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetCommunicationListV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderGetCommunicationListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve an existing Ezsignfolder's Ezsigndocuments
 /// 
 ///  @param pkiEzsignfolderID  
@@ -880,6 +1019,74 @@ NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignfolderGetEzsignfoldersignerassociationsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+/// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+///  @param pkiEzsignfolderID  
+///
+///  @returns EZEzsignfolderGetEzsignsignaturesAutomaticV1Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesAutomaticV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignfolderApiErrorDomain code:kEZObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignfolderGetEzsignsignaturesAutomaticV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignfolderGetEzsignsignaturesAutomaticV1Response*)data, error);
                                 }
                             }];
 }

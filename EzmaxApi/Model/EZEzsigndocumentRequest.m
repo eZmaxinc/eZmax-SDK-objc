@@ -18,7 +18,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigndocumentID": @"pkiEzsigndocumentID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiEzsigntemplateID": @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID": @"fkiEzsignfoldersignerassociationID", @"fkiLanguageID": @"fkiLanguageID", @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentUrl": @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair": @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"eEzsigndocumentForm": @"eEzsigndocumentForm", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"sEzsigndocumentName": @"sEzsigndocumentName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigndocumentID": @"pkiEzsigndocumentID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiEzsigntemplateID": @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID": @"fkiEzsignfoldersignerassociationID", @"fkiLanguageID": @"fkiLanguageID", @"eEzsigndocumentSource": @"eEzsigndocumentSource", @"eEzsigndocumentFormat": @"eEzsigndocumentFormat", @"sEzsigndocumentBase64": @"sEzsigndocumentBase64", @"sEzsigndocumentUrl": @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair": @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword": @"sEzsigndocumentPassword", @"eEzsigndocumentForm": @"eEzsigndocumentForm", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"sEzsigndocumentName": @"sEzsigndocumentName", @"sEzsigndocumentExternalid": @"sEzsigndocumentExternalid" }];
 }
 
 /**
@@ -28,7 +28,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsigndocumentID", @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID", @"eEzsigndocumentFormat", @"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", @"eEzsigndocumentForm", ];
+  NSArray *optionalProperties = @[@"pkiEzsigndocumentID", @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID", @"eEzsigndocumentFormat", @"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", @"eEzsigndocumentForm", @"sEzsigndocumentExternalid"];
   return [optionalProperties containsObject:propertyName];
 }
 

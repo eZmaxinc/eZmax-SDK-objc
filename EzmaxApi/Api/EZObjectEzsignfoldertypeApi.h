@@ -7,7 +7,6 @@
 #import "EZEzsignfoldertypeEditObjectV1Response.h"
 #import "EZEzsignfoldertypeGetAutocompleteV2Response.h"
 #import "EZEzsignfoldertypeGetListV1Response.h"
-#import "EZEzsignfoldertypeGetObjectV1Response.h"
 #import "EZEzsignfoldertypeGetObjectV2Response.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
@@ -116,19 +115,6 @@ extern NSInteger kEZObjectEzsignfoldertypeApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsignfoldertypeGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignfoldertype
-/// 
-///
-/// @param pkiEzsignfoldertypeID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsignfoldertypeGetObjectV1Response*
--(NSURLSessionTask*) ezsignfoldertypeGetObjectV1WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    completionHandler: (void (^)(EZEzsignfoldertypeGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfoldertype

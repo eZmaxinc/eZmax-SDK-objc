@@ -1,7 +1,15 @@
 #import <Foundation/Foundation.h>
-#import "EZCommonGetAutocompleteV1Response.h"
+#import "EZCommonResponseError.h"
 #import "EZHeaderAcceptLanguage.h"
+#import "EZUsergroupCreateObjectV1Request.h"
+#import "EZUsergroupCreateObjectV1Response.h"
+#import "EZUsergroupDeleteObjectV1Response.h"
+#import "EZUsergroupEditObjectV1Request.h"
+#import "EZUsergroupEditObjectV1Response.h"
 #import "EZUsergroupGetAutocompleteV2Response.h"
+#import "EZUsergroupGetListV1Response.h"
+#import "EZUsergroupGetMembersV1Response.h"
+#import "EZUsergroupGetObjectV2Response.h"
 #import "EZApi.h"
 
 /**
@@ -25,22 +33,45 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Retrieve Usergroups and IDs
-/// Get the list of Usergroup to be used in a dropdown or autocomplete control.
+/// Create a new Usergroup
+/// The endpoint allows to create one or many elements at once.
 ///
-/// @param sSelector The type of Usergroups to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
+/// @param usergroupCreateObjectV1Request 
 /// 
-///  code:200 message:"Successful response"
+///  code:201 message:"Successful response"
 ///
-/// @return EZCommonGetAutocompleteV1Response*
--(NSURLSessionTask*) usergroupGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteV1Response* output, NSError* error)) handler;
+/// @return EZUsergroupCreateObjectV1Response*
+-(NSURLSessionTask*) usergroupCreateObjectV1WithUsergroupCreateObjectV1Request: (EZUsergroupCreateObjectV1Request*) usergroupCreateObjectV1Request
+    completionHandler: (void (^)(EZUsergroupCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Delete an existing Usergroup
+/// 
+///
+/// @param pkiUsergroupID The unique ID of the Usergroup
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZUsergroupDeleteObjectV1Response*
+-(NSURLSessionTask*) usergroupDeleteObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    completionHandler: (void (^)(EZUsergroupDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit an existing Usergroup
+/// 
+///
+/// @param pkiUsergroupID The unique ID of the Usergroup
+/// @param usergroupEditObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZUsergroupEditObjectV1Response*
+-(NSURLSessionTask*) usergroupEditObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    usergroupEditObjectV1Request: (EZUsergroupEditObjectV1Request*) usergroupEditObjectV1Request
+    completionHandler: (void (^)(EZUsergroupEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Usergroups and IDs
@@ -59,6 +90,53 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZUsergroupGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Usergroup list
+/// 
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional)
+/// @param iRowOffset  (optional)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
+///
+/// @return EZUsergroupGetListV1Response*
+-(NSURLSessionTask*) usergroupGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZUsergroupGetListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Usergroup's members
+/// 
+///
+/// @param pkiUsergroupID The unique ID of the Usergroup
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZUsergroupGetMembersV1Response*
+-(NSURLSessionTask*) usergroupGetMembersV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    completionHandler: (void (^)(EZUsergroupGetMembersV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Usergroup
+/// 
+///
+/// @param pkiUsergroupID The unique ID of the Usergroup
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZUsergroupGetObjectV2Response*
+-(NSURLSessionTask*) usergroupGetObjectV2WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    completionHandler: (void (^)(EZUsergroupGetObjectV2Response* output, NSError* error)) handler;
 
 
 

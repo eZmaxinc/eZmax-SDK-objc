@@ -14,6 +14,9 @@
 */
 
 
+#import "EZCommonAudit.h"
+@protocol EZCommonAudit;
+@class EZCommonAudit;
 
 
 
@@ -46,5 +49,7 @@
 /* The name of the Ezsignfoldertype in the language of the requester 
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
+
+@property(nonatomic) EZCommonAudit* objAudit;
 
 @end

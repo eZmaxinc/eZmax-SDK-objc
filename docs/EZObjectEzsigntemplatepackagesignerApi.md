@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**ezsigntemplatepackagesignerCreateObjectV1**](EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignercreateobjectv1) | **POST** /1/object/ezsigntemplatepackagesigner | Create a new Ezsigntemplatepackagesigner
 [**ezsigntemplatepackagesignerDeleteObjectV1**](EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Delete an existing Ezsigntemplatepackagesigner
 [**ezsigntemplatepackagesignerEditObjectV1**](EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignereditobjectv1) | **PUT** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Edit an existing Ezsigntemplatepackagesigner
-[**ezsigntemplatepackagesignerGetObjectV1**](EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignergetobjectv1) | **GET** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 [**ezsigntemplatepackagesignerGetObjectV2**](EZObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignergetobjectv2) | **GET** /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 
 
@@ -182,63 +181,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplatepackagesignerGetObjectV1**
-```objc
--(NSURLSessionTask*) ezsigntemplatepackagesignerGetObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
-        completionHandler: (void (^)(EZEzsigntemplatepackagesignerGetObjectV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsigntemplatepackagesigner
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsigntemplatepackagesignerID = @56; // 
-
-EZObjectEzsigntemplatepackagesignerApi*apiInstance = [[EZObjectEzsigntemplatepackagesignerApi alloc] init];
-
-// Retrieve an existing Ezsigntemplatepackagesigner
-[apiInstance ezsigntemplatepackagesignerGetObjectV1WithPkiEzsigntemplatepackagesignerID:pkiEzsigntemplatepackagesignerID
-          completionHandler: ^(EZEzsigntemplatepackagesignerGetObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsigntemplatepackagesignerApi->ezsigntemplatepackagesignerGetObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatepackagesignerID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZEzsigntemplatepackagesignerGetObjectV1Response***](EZEzsigntemplatepackagesignerGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

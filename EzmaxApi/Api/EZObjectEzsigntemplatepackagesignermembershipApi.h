@@ -3,7 +3,6 @@
 #import "EZEzsigntemplatepackagesignermembershipCreateObjectV1Request.h"
 #import "EZEzsigntemplatepackagesignermembershipCreateObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response.h"
-#import "EZEzsigntemplatepackagesignermembershipGetObjectV1Response.h"
 #import "EZEzsigntemplatepackagesignermembershipGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -52,19 +51,6 @@ extern NSInteger kEZObjectEzsigntemplatepackagesignermembershipApiMissingParamEr
 /// @return EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignermembershipDeleteObjectV1WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID
     completionHandler: (void (^)(EZEzsigntemplatepackagesignermembershipDeleteObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplatepackagesignermembership
-/// 
-///
-/// @param pkiEzsigntemplatepackagesignermembershipID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsigntemplatepackagesignermembershipGetObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatepackagesignermembershipGetObjectV1WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID
-    completionHandler: (void (^)(EZEzsigntemplatepackagesignermembershipGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatepackagesignermembership

@@ -84,8 +84,14 @@
 /* If the Ezsigndocument contains an Ezsignform or not 
  */
 @property(nonatomic) NSNumber* bEzsigndocumentEzsignform;
+/* If the Ezsigndocument contains signed signatures (From internal or external sources) 
+ */
+@property(nonatomic) NSNumber* bEzsigndocumentHassignedsignatures;
 
 @property(nonatomic) EZCommonAudit* objAudit;
+/* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  
+ */
+@property(nonatomic) NSString* sEzsigndocumentExternalid;
 /* The total number of steps in the form filling phase 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentStepformtotal;

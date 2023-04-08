@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
+**sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**EZFieldEEzsignfolderStep***](EZFieldEEzsignfolderStep.md) |  | 
 **iEzsignfolderSignaturetotal** | **NSNumber*** | The number of total signatures that were requested in the Ezsignfolder | 
 **iEzsignfolderSignaturesigned** | **NSNumber*** | The number of signatures that were signed in the Ezsignfolder. | 

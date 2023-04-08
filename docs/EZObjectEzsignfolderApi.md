@@ -13,8 +13,11 @@ Method | HTTP request | Description
 [**ezsignfolderDisposeV1**](EZObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 [**ezsignfolderEditObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderGetActionableElementsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
+[**ezsignfolderGetCommunicationCountV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetcommunicationcountv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
+[**ezsignfolderGetCommunicationListV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 [**ezsignfolderGetEzsigndocumentsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+[**ezsignfolderGetEzsignsignaturesAutomaticV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
 [**ezsignfolderGetFormsDataV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](EZObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -553,6 +556,120 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetCommunicationCountV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EZEzsignfolderGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance ezsignfolderGetCommunicationCountV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EZEzsignfolderGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignfolderGetCommunicationCountV1Response***](EZEzsignfolderGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetCommunicationListV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EZEzsignfolderGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance ezsignfolderGetCommunicationListV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EZEzsignfolderGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignfolderGetCommunicationListV1Response***](EZEzsignfolderGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderGetEzsigndocumentsV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderGetEzsigndocumentsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -655,6 +772,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsignfolderGetEzsignfoldersignerassociationsV1Response***](EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetEzsignsignaturesAutomaticV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesAutomaticV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EZEzsignfolderGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+
+Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+[apiInstance ezsignfolderGetEzsignsignaturesAutomaticV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EZEzsignfolderGetEzsignsignaturesAutomaticV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignfolderApi->ezsignfolderGetEzsignsignaturesAutomaticV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignfolderGetEzsignsignaturesAutomaticV1Response***](EZEzsignfolderGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 

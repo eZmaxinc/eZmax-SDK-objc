@@ -1,6 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "EZCommonGetAutocompleteDisabledV1Response.h"
-#import "EZCommonResponseError.h"
 #import "EZEzsigntsarequirementGetAutocompleteV2Response.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
@@ -25,27 +23,6 @@ extern NSString* kEZObjectEzsigntsarequirementApiErrorDomain;
 extern NSInteger kEZObjectEzsigntsarequirementApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Retrieve Ezsigntsarequirements and IDs
-/// Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Ezsigntsarequirements to return
-/// @param fkiEzsignfoldertypeID  (optional)
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EZCommonGetAutocompleteDisabledV1Response*
--(NSURLSessionTask*) ezsigntsarequirementGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(EZCommonGetAutocompleteDisabledV1Response* output, NSError* error)) handler;
-
 
 /// Retrieve Ezsigntsarequirements and IDs
 /// Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.

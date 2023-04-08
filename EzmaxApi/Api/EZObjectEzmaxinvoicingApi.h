@@ -2,7 +2,6 @@
 #import "EZCommonGetAutocompleteV1Response.h"
 #import "EZCommonResponseError.h"
 #import "EZEzmaxinvoicingGetAutocompleteV2Response.h"
-#import "EZEzmaxinvoicingGetObjectV1Response.h"
 #import "EZEzmaxinvoicingGetObjectV2Response.h"
 #import "EZEzmaxinvoicingGetProvisionalV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
@@ -63,19 +62,6 @@ extern NSInteger kEZObjectEzmaxinvoicingApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZEzmaxinvoicingGetAutocompleteV2Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezmaxinvoicing
-/// 
-///
-/// @param pkiEzmaxinvoicingID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzmaxinvoicingGetObjectV1Response*
--(NSURLSessionTask*) ezmaxinvoicingGetObjectV1WithPkiEzmaxinvoicingID: (NSNumber*) pkiEzmaxinvoicingID
-    completionHandler: (void (^)(EZEzmaxinvoicingGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezmaxinvoicing

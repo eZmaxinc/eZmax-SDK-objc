@@ -2,7 +2,10 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZActivesessionGetCurrentV1Response.h"
+#import "EZActivesessionGetListV1Response.h"
+#import "EZCommonResponseError.h"
 #import "EZCommonResponseRedirectSSecretquestionTextX.h"
+#import "EZHeaderAcceptLanguage.h"
 
 
 @interface EZObjectActivesessionApi ()
@@ -98,6 +101,87 @@ NSInteger kEZObjectActivesessionApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZActivesessionGetCurrentV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Activesession list
+/// 
+///  @param eOrderBy Specify how you want the results to be sorted (optional)
+///
+///  @param iRowMax  (optional)
+///
+///  @param iRowOffset  (optional)
+///
+///  @param acceptLanguage  (optional)
+///
+///  @param sFilter  (optional)
+///
+///  @returns EZActivesessionGetListV1Response*
+///
+-(NSURLSessionTask*) activesessionGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZActivesessionGetListV1Response* output, NSError* error)) handler {
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/activesession/getList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eOrderBy != nil) {
+        queryParams[@"eOrderBy"] = eOrderBy;
+    }
+    if (iRowMax != nil) {
+        queryParams[@"iRowMax"] = iRowMax;
+    }
+    if (iRowOffset != nil) {
+        queryParams[@"iRowOffset"] = iRowOffset;
+    }
+    if (sFilter != nil) {
+        queryParams[@"sFilter"] = sFilter;
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (acceptLanguage != nil) {
+        headerParams[@"Accept-Language"] = acceptLanguage;
+    }
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZActivesessionGetListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZActivesessionGetListV1Response*)data, error);
                                 }
                             }];
 }

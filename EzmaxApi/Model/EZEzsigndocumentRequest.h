@@ -64,5 +64,8 @@
 /* The name of the document that will be presented to Ezsignfoldersignerassociations 
  */
 @property(nonatomic) NSString* sEzsigndocumentName;
+/* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  [optional]
+ */
+@property(nonatomic) NSString* sEzsigndocumentExternalid;
 
 @end

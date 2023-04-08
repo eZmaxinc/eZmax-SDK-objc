@@ -15,10 +15,13 @@
 #import "EZEzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EZEzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentEndPrematurelyV1Response.h"
+#import "EZEzsigndocumentFlattenV1Response.h"
 #import "EZEzsigndocumentGetActionableElementsV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
+#import "EZEzsigndocumentGetEzsignannotationsV1Response.h"
 #import "EZEzsigndocumentGetEzsignformfieldgroupsV1Response.h"
 #import "EZEzsigndocumentGetEzsignpagesV1Response.h"
+#import "EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsigndocumentGetEzsignsignaturesV1Response.h"
 #import "EZEzsigndocumentGetFormDataV1Response.h"
 #import "EZEzsigndocumentGetObjectV1Response.h"
@@ -172,6 +175,22 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
 
 
+/// Flatten
+/// Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+///
+/// @param pkiEzsigndocumentID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZEzsigndocumentFlattenV1Response*
+-(NSURLSessionTask*) ezsigndocumentFlattenV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZEzsigndocumentFlattenV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve actionable elements for the Ezsigndocument
 /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
 ///
@@ -202,6 +221,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigndocumentGetDownloadUrlV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsigndocument's Ezsignannotations
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZEzsigndocumentGetEzsignannotationsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetEzsignannotationsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetEzsignannotationsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
 /// 
 ///
@@ -228,6 +261,19 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentGetEzsignpagesV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetEzsignpagesV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EZEzsigndocumentGetEzsignpagesV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
+/// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetEzsignsignaturesAutomaticV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigndocument's Ezsignsignatures

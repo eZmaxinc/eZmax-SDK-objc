@@ -10,9 +10,9 @@ Method | HTTP request | Description
 [**ezsignbulksendEditObjectV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
 [**ezsignbulksendGetCsvTemplateV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetcsvtemplatev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend&#39;s empty Csv template
 [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetezsignbulksendtransmissionsv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+[**ezsignbulksendGetEzsignsignaturesAutomaticV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
 [**ezsignbulksendGetFormsDataV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetformsdatav1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data
 [**ezsignbulksendGetListV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
-[**ezsignbulksendGetObjectV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendGetObjectV2**](EZObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](EZObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
@@ -369,6 +369,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignbulksendGetEzsignsignaturesAutomaticV1**
+```objc
+-(NSURLSessionTask*) ezsignbulksendGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+        completionHandler: (void (^)(EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
+
+Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksendID = @56; // 
+
+EZObjectEzsignbulksendApi*apiInstance = [[EZObjectEzsignbulksendApi alloc] init];
+
+// Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
+[apiInstance ezsignbulksendGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
+          completionHandler: ^(EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsignbulksendApi->ezsignbulksendGetEzsignsignaturesAutomaticV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response***](EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignbulksendGetFormsDataV1**
 ```objc
 -(NSURLSessionTask*) ezsignbulksendGetFormsDataV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
@@ -496,63 +553,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsignbulksendGetObjectV1**
-```objc
--(NSURLSessionTask*) ezsignbulksendGetObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-        completionHandler: (void (^)(EZEzsignbulksendGetObjectV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsignbulksend
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsignbulksendID = @56; // 
-
-EZObjectEzsignbulksendApi*apiInstance = [[EZObjectEzsignbulksendApi alloc] init];
-
-// Retrieve an existing Ezsignbulksend
-[apiInstance ezsignbulksendGetObjectV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
-          completionHandler: ^(EZEzsignbulksendGetObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectEzsignbulksendApi->ezsignbulksendGetObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignbulksendID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZEzsignbulksendGetObjectV1Response***](EZEzsignbulksendGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

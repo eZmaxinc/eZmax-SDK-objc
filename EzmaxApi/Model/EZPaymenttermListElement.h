@@ -14,6 +14,9 @@
 */
 
 
+#import "EZFieldEPaymenttermType.h"
+@protocol EZFieldEPaymenttermType;
+@class EZFieldEPaymenttermType;
 
 
 
@@ -28,6 +31,11 @@
 /* The code of the Paymentterm 
  */
 @property(nonatomic) NSString* sPaymenttermCode;
+
+@property(nonatomic) EZFieldEPaymenttermType* ePaymenttermType;
+/* The day of the Paymentterm 
+ */
+@property(nonatomic) NSNumber* iPaymenttermDay;
 /* The description of the Paymentterm in the language of the requester 
  */
 @property(nonatomic) NSString* sPaymenttermDescriptionX;

@@ -19,9 +19,11 @@
 #import "EZCommunicationexternalrecipientResponseCompound.h"
 #import "EZCommunicationrecipientResponseCompound.h"
 #import "EZComputedECommunicationDirection.h"
-#import "EZCustomContactNameResponse.h"
+#import "EZDescriptionstaticResponse.h"
+#import "EZEmailstaticResponse.h"
 #import "EZFieldECommunicationImportance.h"
 #import "EZFieldECommunicationType.h"
+#import "EZPhonestaticResponse.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
 @protocol EZCommunicationattachmentResponseCompound;
@@ -32,12 +34,16 @@
 @class EZCommunicationrecipientResponseCompound;
 @protocol EZComputedECommunicationDirection;
 @class EZComputedECommunicationDirection;
-@protocol EZCustomContactNameResponse;
-@class EZCustomContactNameResponse;
+@protocol EZDescriptionstaticResponse;
+@class EZDescriptionstaticResponse;
+@protocol EZEmailstaticResponse;
+@class EZEmailstaticResponse;
 @protocol EZFieldECommunicationImportance;
 @class EZFieldECommunicationImportance;
 @protocol EZFieldECommunicationType;
 @class EZFieldECommunicationType;
+@protocol EZPhonestaticResponse;
+@class EZPhonestaticResponse;
 
 
 
@@ -56,13 +62,20 @@
 /* The subject of the Communication 
  */
 @property(nonatomic) NSString* sCommunicationSubject;
+/* The url of the body used as body in the Communication [optional]
+ */
+@property(nonatomic) NSString* sCommunicationBodyurl;
 
 @property(nonatomic) EZComputedECommunicationDirection* eCommunicationDirection;
 /* The count of Communicationrecipient 
  */
 @property(nonatomic) NSNumber* iCommunicationrecipientCount;
 
-@property(nonatomic) EZCustomContactNameResponse* objContactFrom;
+@property(nonatomic) EZDescriptionstaticResponse* objDescriptionstaticSender;
+
+@property(nonatomic) EZEmailstaticResponse* objEmailstaticSender;
+
+@property(nonatomic) EZPhonestaticResponse* objPhonestaticSender;
 
 @property(nonatomic) EZCommonAudit* objAudit;
 

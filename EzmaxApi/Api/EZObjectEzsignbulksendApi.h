@@ -8,9 +8,9 @@
 #import "EZEzsignbulksendEditObjectV1Request.h"
 #import "EZEzsignbulksendEditObjectV1Response.h"
 #import "EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
+#import "EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignbulksendGetFormsDataV1Response.h"
 #import "EZEzsignbulksendGetListV1Response.h"
-#import "EZEzsignbulksendGetObjectV1Response.h"
 #import "EZEzsignbulksendGetObjectV2Response.h"
 #import "EZEzsignbulksendReorderV1Request.h"
 #import "EZEzsignbulksendReorderV1Response.h"
@@ -126,6 +126,19 @@ extern NSInteger kEZObjectEzsignbulksendApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsignbulksendGetEzsignbulksendtransmissionsV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
+/// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+///
+/// @param pkiEzsignbulksendID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response*
+-(NSURLSessionTask*) ezsignbulksendGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    completionHandler: (void (^)(EZEzsignbulksendGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignbulksend's forms data
 /// 
 ///
@@ -160,19 +173,6 @@ extern NSInteger kEZObjectEzsignbulksendApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZEzsignbulksendGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignbulksend
-/// 
-///
-/// @param pkiEzsignbulksendID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsignbulksendGetObjectV1Response*
--(NSURLSessionTask*) ezsignbulksendGetObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    completionHandler: (void (^)(EZEzsignbulksendGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignbulksend

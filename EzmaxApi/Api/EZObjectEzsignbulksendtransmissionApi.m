@@ -2,8 +2,8 @@
 #import "EZQueryParamCollection.h"
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
+#import "EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignbulksendtransmissionGetFormsDataV1Response.h"
-#import "EZEzsignbulksendtransmissionGetObjectV1Response.h"
 #import "EZEzsignbulksendtransmissionGetObjectV2Response.h"
 
 
@@ -121,6 +121,74 @@ NSInteger kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
+/// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+///  @param pkiEzsignbulksendtransmissionID  
+///
+///  @returns EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response*
+///
+-(NSURLSessionTask*) ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
+    completionHandler: (void (^)(EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
+    if (pkiEzsignbulksendtransmissionID == nil) {
+        NSParameterAssert(pkiEzsignbulksendtransmissionID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignbulksendtransmissionID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectEzsignbulksendtransmissionApiErrorDomain code:kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignbulksendtransmissionID != nil) {
+        pathParams[@"pkiEzsignbulksendtransmissionID"] = pkiEzsignbulksendtransmissionID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZEzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve an existing Ezsignbulksendtransmission's forms data
 /// 
 ///  @param pkiEzsignbulksendtransmissionID  
@@ -184,74 +252,6 @@ NSInteger kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZEzsignbulksendtransmissionGetFormsDataV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Ezsignbulksendtransmission
-/// 
-///  @param pkiEzsignbulksendtransmissionID  
-///
-///  @returns EZEzsignbulksendtransmissionGetObjectV1Response*
-///
--(NSURLSessionTask*) ezsignbulksendtransmissionGetObjectV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
-    completionHandler: (void (^)(EZEzsignbulksendtransmissionGetObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
-    if (pkiEzsignbulksendtransmissionID == nil) {
-        NSParameterAssert(pkiEzsignbulksendtransmissionID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignbulksendtransmissionID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectEzsignbulksendtransmissionApiErrorDomain code:kEZObjectEzsignbulksendtransmissionApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignbulksendtransmissionID != nil) {
-        pathParams[@"pkiEzsignbulksendtransmissionID"] = pkiEzsignbulksendtransmissionID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZEzsignbulksendtransmissionGetObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZEzsignbulksendtransmissionGetObjectV1Response*)data, error);
                                 }
                             }];
 }

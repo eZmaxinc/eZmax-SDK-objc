@@ -9,10 +9,10 @@
 #import "EZEzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response.h"
 #import "EZEzsigntemplatedocumentEditObjectV1Request.h"
 #import "EZEzsigntemplatedocumentEditObjectV1Response.h"
+#import "EZEzsigntemplatedocumentFlattenV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
 #import "EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.h"
-#import "EZEzsigntemplatedocumentGetObjectV1Response.h"
 #import "EZEzsigntemplatedocumentGetObjectV2Response.h"
 #import "EZEzsigntemplatedocumentGetWordsPositionsV1Request.h"
 #import "EZEzsigntemplatedocumentGetWordsPositionsV1Response.h"
@@ -102,6 +102,22 @@ extern NSInteger kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EZEzsigntemplatedocumentEditObjectV1Response* output, NSError* error)) handler;
 
 
+/// Flatten
+/// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZEzsigntemplatedocumentFlattenV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZEzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
 /// 
 ///
@@ -141,19 +157,6 @@ extern NSInteger kEZObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @return EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplatesignaturesV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     completionHandler: (void (^)(EZEzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplatedocument
-/// 
-///
-/// @param pkiEzsigntemplatedocumentID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsigntemplatedocumentGetObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatedocumentGetObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
-    completionHandler: (void (^)(EZEzsigntemplatedocumentGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatedocument

@@ -1,6 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "EZApikeyCreateObjectV1Request.h"
-#import "EZApikeyCreateObjectV1Response.h"
 #import "EZApikeyCreateObjectV2Request.h"
 #import "EZApikeyCreateObjectV2Response.h"
 #import "EZApi.h"
@@ -25,18 +23,6 @@ extern NSString* kEZObjectApikeyApiErrorDomain;
 extern NSInteger kEZObjectApikeyApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(EZApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Create a new Apikey
-/// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-///
-/// @param apikeyCreateObjectV1Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return EZApikeyCreateObjectV1Response*
--(NSURLSessionTask*) apikeyCreateObjectV1WithApikeyCreateObjectV1Request: (NSArray<EZApikeyCreateObjectV1Request>*) apikeyCreateObjectV1Request
-    completionHandler: (void (^)(EZApikeyCreateObjectV1Response* output, NSError* error)) handler;
-
 
 /// Create a new Apikey
 /// The endpoint allows to create one or many elements at once.

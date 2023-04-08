@@ -5,7 +5,6 @@
 #import "EZEzsignformfieldgroupDeleteObjectV1Response.h"
 #import "EZEzsignformfieldgroupEditObjectV1Request.h"
 #import "EZEzsignformfieldgroupEditObjectV1Response.h"
-#import "EZEzsignformfieldgroupGetObjectV1Response.h"
 #import "EZEzsignformfieldgroupGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -70,19 +69,6 @@ extern NSInteger kEZObjectEzsignformfieldgroupApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignformfieldgroupEditObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
     ezsignformfieldgroupEditObjectV1Request: (EZEzsignformfieldgroupEditObjectV1Request*) ezsignformfieldgroupEditObjectV1Request
     completionHandler: (void (^)(EZEzsignformfieldgroupEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignformfieldgroup
-/// 
-///
-/// @param pkiEzsignformfieldgroupID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZEzsignformfieldgroupGetObjectV1Response*
--(NSURLSessionTask*) ezsignformfieldgroupGetObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
-    completionHandler: (void (^)(EZEzsignformfieldgroupGetObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignformfieldgroup

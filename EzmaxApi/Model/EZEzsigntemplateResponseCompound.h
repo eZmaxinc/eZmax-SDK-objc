@@ -14,8 +14,11 @@
 */
 
 
+#import "EZCommonAudit.h"
 #import "EZEzsigntemplatedocumentResponse.h"
 #import "EZEzsigntemplatesignerResponseCompound.h"
+@protocol EZCommonAudit;
+@class EZCommonAudit;
 @protocol EZEzsigntemplatedocumentResponse;
 @class EZEzsigntemplatedocumentResponse;
 @protocol EZEzsigntemplatesignerResponseCompound;
@@ -52,6 +55,8 @@
 /* The name of the Ezsignfoldertype in the language of the requester 
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
+
+@property(nonatomic) EZCommonAudit* objAudit;
 
 @property(nonatomic) EZEzsigntemplatedocumentResponse* objEzsigntemplatedocument;
 
