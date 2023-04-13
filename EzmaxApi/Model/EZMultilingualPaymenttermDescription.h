@@ -22,10 +22,10 @@
 
 @interface EZMultilingualPaymenttermDescription : EZObject
 
-/* The description of the Paymentterm in french [optional]
+/* The description of the Paymentterm in French [optional]
  */
 @property(nonatomic) NSString* sPaymenttermDescription1;
-/* The description of the Paymentterm in english [optional]
+/* The description of the Paymentterm in English [optional]
  */
 @property(nonatomic) NSString* sPaymenttermDescription2;
 

@@ -22,10 +22,10 @@
 
 @interface EZMultilingualEzmaxinvoicingsummaryinternalDescription : EZObject
 
-/* The Ezmaxinvoicingsummaryinternal description in french [optional]
+/* The Ezmaxinvoicingsummaryinternal description in French [optional]
  */
 @property(nonatomic) NSString* sEzmaxinvoicingsummaryinternalDescription1;
-/* The Ezmaxinvoicingsummaryinternal description in english [optional]
+/* The Ezmaxinvoicingsummaryinternal description in English [optional]
  */
 @property(nonatomic) NSString* sEzmaxinvoicingsummaryinternalDescription2;
 
