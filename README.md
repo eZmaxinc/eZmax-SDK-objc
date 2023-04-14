@@ -76,7 +76,6 @@ Import the following:
 #import <EzmaxApi/EZBillingentityinternalCreateObjectV1Response.h>
 #import <EzmaxApi/EZBillingentityinternalCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZBillingentityinternalCreateObjectV1ResponseMPayload.h>
-#import <EzmaxApi/EZBillingentityinternalDeleteObjectV1Response.h>
 #import <EzmaxApi/EZBillingentityinternalEditObjectV1Request.h>
 #import <EzmaxApi/EZBillingentityinternalEditObjectV1Response.h>
 #import <EzmaxApi/EZBillingentityinternalGetAutocompleteV2Response.h>
@@ -199,9 +198,6 @@ Import the following:
 #import <EzmaxApi/EZDepartmentGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZDepartmentGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZDepartmentGetAutocompleteV2ResponseMPayload.h>
-#import <EzmaxApi/EZDepartmentGetMembersV1Response.h>
-#import <EzmaxApi/EZDepartmentGetMembersV1ResponseAllOf.h>
-#import <EzmaxApi/EZDepartmentGetMembersV1ResponseMPayload.h>
 #import <EzmaxApi/EZDescriptionstaticResponse.h>
 #import <EzmaxApi/EZDescriptionstaticResponseCompound.h>
 #import <EzmaxApi/EZEmailRequest.h>
@@ -889,7 +885,6 @@ Import the following:
 #import <EzmaxApi/EZPaymenttermCreateObjectV1Response.h>
 #import <EzmaxApi/EZPaymenttermCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZPaymenttermCreateObjectV1ResponseMPayload.h>
-#import <EzmaxApi/EZPaymenttermDeleteObjectV1Response.h>
 #import <EzmaxApi/EZPaymenttermEditObjectV1Request.h>
 #import <EzmaxApi/EZPaymenttermEditObjectV1Response.h>
 #import <EzmaxApi/EZPaymenttermGetAutocompleteV2Response.h>
@@ -944,7 +939,6 @@ Import the following:
 #import <EzmaxApi/EZUsergroupCreateObjectV1Response.h>
 #import <EzmaxApi/EZUsergroupCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZUsergroupCreateObjectV1ResponseMPayload.h>
-#import <EzmaxApi/EZUsergroupDeleteObjectV1Response.h>
 #import <EzmaxApi/EZUsergroupEditObjectV1Request.h>
 #import <EzmaxApi/EZUsergroupEditObjectV1Response.h>
 #import <EzmaxApi/EZUsergroupGetAutocompleteV2Response.h>
@@ -954,9 +948,6 @@ Import the following:
 #import <EzmaxApi/EZUsergroupGetListV1ResponseAllOf.h>
 #import <EzmaxApi/EZUsergroupGetListV1ResponseMPayload.h>
 #import <EzmaxApi/EZUsergroupGetListV1ResponseMPayloadAllOf.h>
-#import <EzmaxApi/EZUsergroupGetMembersV1Response.h>
-#import <EzmaxApi/EZUsergroupGetMembersV1ResponseAllOf.h>
-#import <EzmaxApi/EZUsergroupGetMembersV1ResponseMPayload.h>
 #import <EzmaxApi/EZUsergroupGetObjectV2Response.h>
 #import <EzmaxApi/EZUsergroupGetObjectV2ResponseAllOf.h>
 #import <EzmaxApi/EZUsergroupGetObjectV2ResponseMPayload.h>
@@ -970,7 +961,6 @@ Import the following:
 #import <EzmaxApi/EZVariableexpenseCreateObjectV1Response.h>
 #import <EzmaxApi/EZVariableexpenseCreateObjectV1ResponseAllOf.h>
 #import <EzmaxApi/EZVariableexpenseCreateObjectV1ResponseMPayload.h>
-#import <EzmaxApi/EZVariableexpenseDeleteObjectV1Response.h>
 #import <EzmaxApi/EZVariableexpenseEditObjectV1Request.h>
 #import <EzmaxApi/EZVariableexpenseEditObjectV1Response.h>
 #import <EzmaxApi/EZVariableexpenseGetAutocompleteV2Response.h>
@@ -1132,7 +1122,6 @@ Class | Method | HTTP request | Description
 *EZObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/EZObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 *EZObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/EZObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *EZObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalcreateobjectv1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
-*EZObjectBillingentityinternalApi* | [**billingentityinternalDeleteObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternaldeleteobjectv1) | **DELETE** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Delete an existing Billingentityinternal
 *EZObjectBillingentityinternalApi* | [**billingentityinternalEditObjectV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternaleditobjectv1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
 *EZObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV2**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetautocompletev2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
 *EZObjectBillingentityinternalApi* | [**billingentityinternalGetListV1**](docs/EZObjectBillingentityinternalApi.md#billingentityinternalgetlistv1) | **GET** /1/object/billingentityinternal/getList | Retrieve Billingentityinternal list
@@ -1144,7 +1133,6 @@ Class | Method | HTTP request | Description
 *EZObjectBrandingApi* | [**brandingGetObjectV2**](docs/EZObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *EZObjectCommunicationApi* | [**communicationGetObjectV2**](docs/EZObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *EZObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/EZObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
-*EZObjectDepartmentApi* | [**departmentGetMembersV1**](docs/EZObjectDepartmentApi.md#departmentgetmembersv1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
@@ -1303,7 +1291,6 @@ Class | Method | HTTP request | Description
 *EZObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/EZObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
 *EZObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/EZObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
 *EZObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](docs/EZObjectPaymenttermApi.md#paymenttermcreateobjectv1) | **POST** /1/object/paymentterm | Create a new Paymentterm
-*EZObjectPaymenttermApi* | [**paymenttermDeleteObjectV1**](docs/EZObjectPaymenttermApi.md#paymenttermdeleteobjectv1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
 *EZObjectPaymenttermApi* | [**paymenttermEditObjectV1**](docs/EZObjectPaymenttermApi.md#paymenttermeditobjectv1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 *EZObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](docs/EZObjectPaymenttermApi.md#paymenttermgetautocompletev2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
 *EZObjectPaymenttermApi* | [**paymenttermGetListV1**](docs/EZObjectPaymenttermApi.md#paymenttermgetlistv1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
@@ -1315,14 +1302,11 @@ Class | Method | HTTP request | Description
 *EZObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/EZObjectTimezoneApi.md#timezonegetautocompletev2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *EZObjectUserApi* | [**userGetAutocompleteV2**](docs/EZObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 *EZObjectUsergroupApi* | [**usergroupCreateObjectV1**](docs/EZObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
-*EZObjectUsergroupApi* | [**usergroupDeleteObjectV1**](docs/EZObjectUsergroupApi.md#usergroupdeleteobjectv1) | **DELETE** /1/object/usergroup/{pkiUsergroupID} | Delete an existing Usergroup
 *EZObjectUsergroupApi* | [**usergroupEditObjectV1**](docs/EZObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
 *EZObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/EZObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *EZObjectUsergroupApi* | [**usergroupGetListV1**](docs/EZObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
-*EZObjectUsergroupApi* | [**usergroupGetMembersV1**](docs/EZObjectUsergroupApi.md#usergroupgetmembersv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getMembers | Retrieve an existing Usergroup&#39;s members
 *EZObjectUsergroupApi* | [**usergroupGetObjectV2**](docs/EZObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
 *EZObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpensecreateobjectv1) | **POST** /1/object/variableexpense | Create a new Variableexpense
-*EZObjectVariableexpenseApi* | [**variableexpenseDeleteObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpensedeleteobjectv1) | **DELETE** /1/object/variableexpense/{pkiVariableexpenseID} | Delete an existing Variableexpense
 *EZObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpenseeditobjectv1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 *EZObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](docs/EZObjectVariableexpenseApi.md#variableexpensegetautocompletev2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
 *EZObjectVariableexpenseApi* | [**variableexpenseGetListV1**](docs/EZObjectVariableexpenseApi.md#variableexpensegetlistv1) | **GET** /1/object/variableexpense/getList | Retrieve Variableexpense list
@@ -1373,7 +1357,6 @@ Class | Method | HTTP request | Description
  - [EZBillingentityinternalCreateObjectV1Response](docs/EZBillingentityinternalCreateObjectV1Response.md)
  - [EZBillingentityinternalCreateObjectV1ResponseAllOf](docs/EZBillingentityinternalCreateObjectV1ResponseAllOf.md)
  - [EZBillingentityinternalCreateObjectV1ResponseMPayload](docs/EZBillingentityinternalCreateObjectV1ResponseMPayload.md)
- - [EZBillingentityinternalDeleteObjectV1Response](docs/EZBillingentityinternalDeleteObjectV1Response.md)
  - [EZBillingentityinternalEditObjectV1Request](docs/EZBillingentityinternalEditObjectV1Request.md)
  - [EZBillingentityinternalEditObjectV1Response](docs/EZBillingentityinternalEditObjectV1Response.md)
  - [EZBillingentityinternalGetAutocompleteV2Response](docs/EZBillingentityinternalGetAutocompleteV2Response.md)
@@ -1496,9 +1479,6 @@ Class | Method | HTTP request | Description
  - [EZDepartmentGetAutocompleteV2Response](docs/EZDepartmentGetAutocompleteV2Response.md)
  - [EZDepartmentGetAutocompleteV2ResponseAllOf](docs/EZDepartmentGetAutocompleteV2ResponseAllOf.md)
  - [EZDepartmentGetAutocompleteV2ResponseMPayload](docs/EZDepartmentGetAutocompleteV2ResponseMPayload.md)
- - [EZDepartmentGetMembersV1Response](docs/EZDepartmentGetMembersV1Response.md)
- - [EZDepartmentGetMembersV1ResponseAllOf](docs/EZDepartmentGetMembersV1ResponseAllOf.md)
- - [EZDepartmentGetMembersV1ResponseMPayload](docs/EZDepartmentGetMembersV1ResponseMPayload.md)
  - [EZDescriptionstaticResponse](docs/EZDescriptionstaticResponse.md)
  - [EZDescriptionstaticResponseCompound](docs/EZDescriptionstaticResponseCompound.md)
  - [EZEmailRequest](docs/EZEmailRequest.md)
@@ -2186,7 +2166,6 @@ Class | Method | HTTP request | Description
  - [EZPaymenttermCreateObjectV1Response](docs/EZPaymenttermCreateObjectV1Response.md)
  - [EZPaymenttermCreateObjectV1ResponseAllOf](docs/EZPaymenttermCreateObjectV1ResponseAllOf.md)
  - [EZPaymenttermCreateObjectV1ResponseMPayload](docs/EZPaymenttermCreateObjectV1ResponseMPayload.md)
- - [EZPaymenttermDeleteObjectV1Response](docs/EZPaymenttermDeleteObjectV1Response.md)
  - [EZPaymenttermEditObjectV1Request](docs/EZPaymenttermEditObjectV1Request.md)
  - [EZPaymenttermEditObjectV1Response](docs/EZPaymenttermEditObjectV1Response.md)
  - [EZPaymenttermGetAutocompleteV2Response](docs/EZPaymenttermGetAutocompleteV2Response.md)
@@ -2241,7 +2220,6 @@ Class | Method | HTTP request | Description
  - [EZUsergroupCreateObjectV1Response](docs/EZUsergroupCreateObjectV1Response.md)
  - [EZUsergroupCreateObjectV1ResponseAllOf](docs/EZUsergroupCreateObjectV1ResponseAllOf.md)
  - [EZUsergroupCreateObjectV1ResponseMPayload](docs/EZUsergroupCreateObjectV1ResponseMPayload.md)
- - [EZUsergroupDeleteObjectV1Response](docs/EZUsergroupDeleteObjectV1Response.md)
  - [EZUsergroupEditObjectV1Request](docs/EZUsergroupEditObjectV1Request.md)
  - [EZUsergroupEditObjectV1Response](docs/EZUsergroupEditObjectV1Response.md)
  - [EZUsergroupGetAutocompleteV2Response](docs/EZUsergroupGetAutocompleteV2Response.md)
@@ -2251,9 +2229,6 @@ Class | Method | HTTP request | Description
  - [EZUsergroupGetListV1ResponseAllOf](docs/EZUsergroupGetListV1ResponseAllOf.md)
  - [EZUsergroupGetListV1ResponseMPayload](docs/EZUsergroupGetListV1ResponseMPayload.md)
  - [EZUsergroupGetListV1ResponseMPayloadAllOf](docs/EZUsergroupGetListV1ResponseMPayloadAllOf.md)
- - [EZUsergroupGetMembersV1Response](docs/EZUsergroupGetMembersV1Response.md)
- - [EZUsergroupGetMembersV1ResponseAllOf](docs/EZUsergroupGetMembersV1ResponseAllOf.md)
- - [EZUsergroupGetMembersV1ResponseMPayload](docs/EZUsergroupGetMembersV1ResponseMPayload.md)
  - [EZUsergroupGetObjectV2Response](docs/EZUsergroupGetObjectV2Response.md)
  - [EZUsergroupGetObjectV2ResponseAllOf](docs/EZUsergroupGetObjectV2ResponseAllOf.md)
  - [EZUsergroupGetObjectV2ResponseMPayload](docs/EZUsergroupGetObjectV2ResponseMPayload.md)
@@ -2267,7 +2242,6 @@ Class | Method | HTTP request | Description
  - [EZVariableexpenseCreateObjectV1Response](docs/EZVariableexpenseCreateObjectV1Response.md)
  - [EZVariableexpenseCreateObjectV1ResponseAllOf](docs/EZVariableexpenseCreateObjectV1ResponseAllOf.md)
  - [EZVariableexpenseCreateObjectV1ResponseMPayload](docs/EZVariableexpenseCreateObjectV1ResponseMPayload.md)
- - [EZVariableexpenseDeleteObjectV1Response](docs/EZVariableexpenseDeleteObjectV1Response.md)
  - [EZVariableexpenseEditObjectV1Request](docs/EZVariableexpenseEditObjectV1Request.md)
  - [EZVariableexpenseEditObjectV1Response](docs/EZVariableexpenseEditObjectV1Response.md)
  - [EZVariableexpenseGetAutocompleteV2Response](docs/EZVariableexpenseGetAutocompleteV2Response.md)

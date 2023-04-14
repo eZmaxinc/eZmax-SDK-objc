@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "EZCommonResponseError.h"
 #import "EZDepartmentGetAutocompleteV2Response.h"
-#import "EZDepartmentGetMembersV1Response.h"
 #import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
@@ -42,19 +40,6 @@ extern NSInteger kEZObjectDepartmentApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(EZDepartmentGetAutocompleteV2Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Department's members
-/// 
-///
-/// @param pkiDepartmentID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZDepartmentGetMembersV1Response*
--(NSURLSessionTask*) departmentGetMembersV1WithPkiDepartmentID: (NSNumber*) pkiDepartmentID
-    completionHandler: (void (^)(EZDepartmentGetMembersV1Response* output, NSError* error)) handler;
 
 
 

@@ -5,7 +5,6 @@
 #import "EZHeaderAcceptLanguage.h"
 #import "EZVariableexpenseCreateObjectV1Request.h"
 #import "EZVariableexpenseCreateObjectV1Response.h"
-#import "EZVariableexpenseDeleteObjectV1Response.h"
 #import "EZVariableexpenseEditObjectV1Request.h"
 #import "EZVariableexpenseEditObjectV1Response.h"
 #import "EZVariableexpenseGetAutocompleteV2Response.h"
@@ -120,74 +119,6 @@ NSInteger kEZObjectVariableexpenseApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZVariableexpenseCreateObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Delete an existing Variableexpense
-/// 
-///  @param pkiVariableexpenseID The unique ID of the Variableexpense 
-///
-///  @returns EZVariableexpenseDeleteObjectV1Response*
-///
--(NSURLSessionTask*) variableexpenseDeleteObjectV1WithPkiVariableexpenseID: (NSNumber*) pkiVariableexpenseID
-    completionHandler: (void (^)(EZVariableexpenseDeleteObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiVariableexpenseID' is set
-    if (pkiVariableexpenseID == nil) {
-        NSParameterAssert(pkiVariableexpenseID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiVariableexpenseID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectVariableexpenseApiErrorDomain code:kEZObjectVariableexpenseApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/variableexpense/{pkiVariableexpenseID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiVariableexpenseID != nil) {
-        pathParams[@"pkiVariableexpenseID"] = pkiVariableexpenseID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"DELETE"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZVariableexpenseDeleteObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZVariableexpenseDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }

@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "EZBillingentityinternalCreateObjectV1Request.h"
 #import "EZBillingentityinternalCreateObjectV1Response.h"
-#import "EZBillingentityinternalDeleteObjectV1Response.h"
 #import "EZBillingentityinternalEditObjectV1Request.h"
 #import "EZBillingentityinternalEditObjectV1Response.h"
 #import "EZBillingentityinternalGetAutocompleteV2Response.h"
@@ -42,19 +41,6 @@ extern NSInteger kEZObjectBillingentityinternalApiMissingParamErrorCode;
 /// @return EZBillingentityinternalCreateObjectV1Response*
 -(NSURLSessionTask*) billingentityinternalCreateObjectV1WithBillingentityinternalCreateObjectV1Request: (EZBillingentityinternalCreateObjectV1Request*) billingentityinternalCreateObjectV1Request
     completionHandler: (void (^)(EZBillingentityinternalCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Delete an existing Billingentityinternal
-/// 
-///
-/// @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZBillingentityinternalDeleteObjectV1Response*
--(NSURLSessionTask*) billingentityinternalDeleteObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
-    completionHandler: (void (^)(EZBillingentityinternalDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Billingentityinternal

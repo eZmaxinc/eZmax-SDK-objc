@@ -3,12 +3,10 @@
 #import "EZHeaderAcceptLanguage.h"
 #import "EZUsergroupCreateObjectV1Request.h"
 #import "EZUsergroupCreateObjectV1Response.h"
-#import "EZUsergroupDeleteObjectV1Response.h"
 #import "EZUsergroupEditObjectV1Request.h"
 #import "EZUsergroupEditObjectV1Response.h"
 #import "EZUsergroupGetAutocompleteV2Response.h"
 #import "EZUsergroupGetListV1Response.h"
-#import "EZUsergroupGetMembersV1Response.h"
 #import "EZUsergroupGetObjectV2Response.h"
 #import "EZApi.h"
 
@@ -43,19 +41,6 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
 /// @return EZUsergroupCreateObjectV1Response*
 -(NSURLSessionTask*) usergroupCreateObjectV1WithUsergroupCreateObjectV1Request: (EZUsergroupCreateObjectV1Request*) usergroupCreateObjectV1Request
     completionHandler: (void (^)(EZUsergroupCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Delete an existing Usergroup
-/// 
-///
-/// @param pkiUsergroupID The unique ID of the Usergroup
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZUsergroupDeleteObjectV1Response*
--(NSURLSessionTask*) usergroupDeleteObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-    completionHandler: (void (^)(EZUsergroupDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Usergroup
@@ -111,19 +96,6 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
     acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
     sFilter: (NSString*) sFilter
     completionHandler: (void (^)(EZUsergroupGetListV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Usergroup's members
-/// 
-///
-/// @param pkiUsergroupID The unique ID of the Usergroup
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZUsergroupGetMembersV1Response*
--(NSURLSessionTask*) usergroupGetMembersV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-    completionHandler: (void (^)(EZUsergroupGetMembersV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Usergroup

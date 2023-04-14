@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**departmentGetAutocompleteV2**](EZObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
-[**departmentGetMembersV1**](EZObjectDepartmentApi.md#departmentgetmembersv1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
 
 
 # **departmentGetAutocompleteV2**
@@ -65,63 +64,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZDepartmentGetAutocompleteV2Response***](EZDepartmentGetAutocompleteV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **departmentGetMembersV1**
-```objc
--(NSURLSessionTask*) departmentGetMembersV1WithPkiDepartmentID: (NSNumber*) pkiDepartmentID
-        completionHandler: (void (^)(EZDepartmentGetMembersV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Department's members
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiDepartmentID = @56; // 
-
-EZObjectDepartmentApi*apiInstance = [[EZObjectDepartmentApi alloc] init];
-
-// Retrieve an existing Department's members
-[apiInstance departmentGetMembersV1WithPkiDepartmentID:pkiDepartmentID
-          completionHandler: ^(EZDepartmentGetMembersV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectDepartmentApi->departmentGetMembersV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDepartmentID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZDepartmentGetMembersV1Response***](EZDepartmentGetMembersV1Response.md)
 
 ### Authorization
 

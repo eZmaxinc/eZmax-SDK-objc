@@ -3,7 +3,6 @@
 #import "EZHeaderAcceptLanguage.h"
 #import "EZPaymenttermCreateObjectV1Request.h"
 #import "EZPaymenttermCreateObjectV1Response.h"
-#import "EZPaymenttermDeleteObjectV1Response.h"
 #import "EZPaymenttermEditObjectV1Request.h"
 #import "EZPaymenttermEditObjectV1Response.h"
 #import "EZPaymenttermGetAutocompleteV2Response.h"
@@ -43,20 +42,6 @@ extern NSInteger kEZObjectPaymenttermApiMissingParamErrorCode;
 /// @return EZPaymenttermCreateObjectV1Response*
 -(NSURLSessionTask*) paymenttermCreateObjectV1WithPaymenttermCreateObjectV1Request: (EZPaymenttermCreateObjectV1Request*) paymenttermCreateObjectV1Request
     completionHandler: (void (^)(EZPaymenttermCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Delete an existing Paymentterm
-/// 
-///
-/// @param pkiPaymenttermID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EZPaymenttermDeleteObjectV1Response*
--(NSURLSessionTask*) paymenttermDeleteObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
-    completionHandler: (void (^)(EZPaymenttermDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Paymentterm

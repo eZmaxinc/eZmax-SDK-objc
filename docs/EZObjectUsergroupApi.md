@@ -5,11 +5,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](EZObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
-[**usergroupDeleteObjectV1**](EZObjectUsergroupApi.md#usergroupdeleteobjectv1) | **DELETE** /1/object/usergroup/{pkiUsergroupID} | Delete an existing Usergroup
 [**usergroupEditObjectV1**](EZObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
 [**usergroupGetAutocompleteV2**](EZObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](EZObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
-[**usergroupGetMembersV1**](EZObjectUsergroupApi.md#usergroupgetmembersv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getMembers | Retrieve an existing Usergroup&#39;s members
 [**usergroupGetObjectV2**](EZObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
 
 
@@ -66,63 +64,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **usergroupDeleteObjectV1**
-```objc
--(NSURLSessionTask*) usergroupDeleteObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-        completionHandler: (void (^)(EZUsergroupDeleteObjectV1Response* output, NSError* error)) handler;
-```
-
-Delete an existing Usergroup
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiUsergroupID = @56; // The unique ID of the Usergroup
-
-EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
-
-// Delete an existing Usergroup
-[apiInstance usergroupDeleteObjectV1WithPkiUsergroupID:pkiUsergroupID
-          completionHandler: ^(EZUsergroupDeleteObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupDeleteObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **NSNumber***| The unique ID of the Usergroup | 
-
-### Return type
-
-[**EZUsergroupDeleteObjectV1Response***](EZUsergroupDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -327,61 +268,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **usergroupGetMembersV1**
-```objc
--(NSURLSessionTask*) usergroupGetMembersV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-        completionHandler: (void (^)(EZUsergroupGetMembersV1Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Usergroup's members
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiUsergroupID = @56; // The unique ID of the Usergroup
-
-EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
-
-// Retrieve an existing Usergroup's members
-[apiInstance usergroupGetMembersV1WithPkiUsergroupID:pkiUsergroupID
-          completionHandler: ^(EZUsergroupGetMembersV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupGetMembersV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **NSNumber***| The unique ID of the Usergroup | 
-
-### Return type
-
-[**EZUsergroupGetMembersV1Response***](EZUsergroupGetMembersV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

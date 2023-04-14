@@ -189,8 +189,6 @@ EzmaxApi/Model/EZBillingentityinternalCreateObjectV1ResponseAllOf.h
 EzmaxApi/Model/EZBillingentityinternalCreateObjectV1ResponseAllOf.m
 EzmaxApi/Model/EZBillingentityinternalCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZBillingentityinternalCreateObjectV1ResponseMPayload.m
-EzmaxApi/Model/EZBillingentityinternalDeleteObjectV1Response.h
-EzmaxApi/Model/EZBillingentityinternalDeleteObjectV1Response.m
 EzmaxApi/Model/EZBillingentityinternalEditObjectV1Request.h
 EzmaxApi/Model/EZBillingentityinternalEditObjectV1Request.m
 EzmaxApi/Model/EZBillingentityinternalEditObjectV1Response.h
@@ -435,12 +433,6 @@ EzmaxApi/Model/EZDepartmentGetAutocompleteV2ResponseAllOf.h
 EzmaxApi/Model/EZDepartmentGetAutocompleteV2ResponseAllOf.m
 EzmaxApi/Model/EZDepartmentGetAutocompleteV2ResponseMPayload.h
 EzmaxApi/Model/EZDepartmentGetAutocompleteV2ResponseMPayload.m
-EzmaxApi/Model/EZDepartmentGetMembersV1Response.h
-EzmaxApi/Model/EZDepartmentGetMembersV1Response.m
-EzmaxApi/Model/EZDepartmentGetMembersV1ResponseAllOf.h
-EzmaxApi/Model/EZDepartmentGetMembersV1ResponseAllOf.m
-EzmaxApi/Model/EZDepartmentGetMembersV1ResponseMPayload.h
-EzmaxApi/Model/EZDepartmentGetMembersV1ResponseMPayload.m
 EzmaxApi/Model/EZDescriptionstaticResponse.h
 EzmaxApi/Model/EZDescriptionstaticResponse.m
 EzmaxApi/Model/EZDescriptionstaticResponseCompound.h
@@ -1815,8 +1807,6 @@ EzmaxApi/Model/EZPaymenttermCreateObjectV1ResponseAllOf.h
 EzmaxApi/Model/EZPaymenttermCreateObjectV1ResponseAllOf.m
 EzmaxApi/Model/EZPaymenttermCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZPaymenttermCreateObjectV1ResponseMPayload.m
-EzmaxApi/Model/EZPaymenttermDeleteObjectV1Response.h
-EzmaxApi/Model/EZPaymenttermDeleteObjectV1Response.m
 EzmaxApi/Model/EZPaymenttermEditObjectV1Request.h
 EzmaxApi/Model/EZPaymenttermEditObjectV1Request.m
 EzmaxApi/Model/EZPaymenttermEditObjectV1Response.h
@@ -1925,8 +1915,6 @@ EzmaxApi/Model/EZUsergroupCreateObjectV1ResponseAllOf.h
 EzmaxApi/Model/EZUsergroupCreateObjectV1ResponseAllOf.m
 EzmaxApi/Model/EZUsergroupCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZUsergroupCreateObjectV1ResponseMPayload.m
-EzmaxApi/Model/EZUsergroupDeleteObjectV1Response.h
-EzmaxApi/Model/EZUsergroupDeleteObjectV1Response.m
 EzmaxApi/Model/EZUsergroupEditObjectV1Request.h
 EzmaxApi/Model/EZUsergroupEditObjectV1Request.m
 EzmaxApi/Model/EZUsergroupEditObjectV1Response.h
@@ -1945,12 +1933,6 @@ EzmaxApi/Model/EZUsergroupGetListV1ResponseMPayload.h
 EzmaxApi/Model/EZUsergroupGetListV1ResponseMPayload.m
 EzmaxApi/Model/EZUsergroupGetListV1ResponseMPayloadAllOf.h
 EzmaxApi/Model/EZUsergroupGetListV1ResponseMPayloadAllOf.m
-EzmaxApi/Model/EZUsergroupGetMembersV1Response.h
-EzmaxApi/Model/EZUsergroupGetMembersV1Response.m
-EzmaxApi/Model/EZUsergroupGetMembersV1ResponseAllOf.h
-EzmaxApi/Model/EZUsergroupGetMembersV1ResponseAllOf.m
-EzmaxApi/Model/EZUsergroupGetMembersV1ResponseMPayload.h
-EzmaxApi/Model/EZUsergroupGetMembersV1ResponseMPayload.m
 EzmaxApi/Model/EZUsergroupGetObjectV2Response.h
 EzmaxApi/Model/EZUsergroupGetObjectV2Response.m
 EzmaxApi/Model/EZUsergroupGetObjectV2ResponseAllOf.h
@@ -1977,8 +1959,6 @@ EzmaxApi/Model/EZVariableexpenseCreateObjectV1ResponseAllOf.h
 EzmaxApi/Model/EZVariableexpenseCreateObjectV1ResponseAllOf.m
 EzmaxApi/Model/EZVariableexpenseCreateObjectV1ResponseMPayload.h
 EzmaxApi/Model/EZVariableexpenseCreateObjectV1ResponseMPayload.m
-EzmaxApi/Model/EZVariableexpenseDeleteObjectV1Response.h
-EzmaxApi/Model/EZVariableexpenseDeleteObjectV1Response.m
 EzmaxApi/Model/EZVariableexpenseEditObjectV1Request.h
 EzmaxApi/Model/EZVariableexpenseEditObjectV1Request.m
 EzmaxApi/Model/EZVariableexpenseEditObjectV1Response.h
@@ -2124,7 +2104,6 @@ docs/EZBillingentityinternalCreateObjectV1Request.md
 docs/EZBillingentityinternalCreateObjectV1Response.md
 docs/EZBillingentityinternalCreateObjectV1ResponseAllOf.md
 docs/EZBillingentityinternalCreateObjectV1ResponseMPayload.md
-docs/EZBillingentityinternalDeleteObjectV1Response.md
 docs/EZBillingentityinternalEditObjectV1Request.md
 docs/EZBillingentityinternalEditObjectV1Response.md
 docs/EZBillingentityinternalGetAutocompleteV2Response.md
@@ -2247,9 +2226,6 @@ docs/EZDepartmentAutocompleteElementResponse.md
 docs/EZDepartmentGetAutocompleteV2Response.md
 docs/EZDepartmentGetAutocompleteV2ResponseAllOf.md
 docs/EZDepartmentGetAutocompleteV2ResponseMPayload.md
-docs/EZDepartmentGetMembersV1Response.md
-docs/EZDepartmentGetMembersV1ResponseAllOf.md
-docs/EZDepartmentGetMembersV1ResponseMPayload.md
 docs/EZDescriptionstaticResponse.md
 docs/EZDescriptionstaticResponseCompound.md
 docs/EZEmailRequest.md
@@ -2986,7 +2962,6 @@ docs/EZPaymenttermCreateObjectV1Request.md
 docs/EZPaymenttermCreateObjectV1Response.md
 docs/EZPaymenttermCreateObjectV1ResponseAllOf.md
 docs/EZPaymenttermCreateObjectV1ResponseMPayload.md
-docs/EZPaymenttermDeleteObjectV1Response.md
 docs/EZPaymenttermEditObjectV1Request.md
 docs/EZPaymenttermEditObjectV1Response.md
 docs/EZPaymenttermGetAutocompleteV2Response.md
@@ -3041,7 +3016,6 @@ docs/EZUsergroupCreateObjectV1Request.md
 docs/EZUsergroupCreateObjectV1Response.md
 docs/EZUsergroupCreateObjectV1ResponseAllOf.md
 docs/EZUsergroupCreateObjectV1ResponseMPayload.md
-docs/EZUsergroupDeleteObjectV1Response.md
 docs/EZUsergroupEditObjectV1Request.md
 docs/EZUsergroupEditObjectV1Response.md
 docs/EZUsergroupGetAutocompleteV2Response.md
@@ -3051,9 +3025,6 @@ docs/EZUsergroupGetListV1Response.md
 docs/EZUsergroupGetListV1ResponseAllOf.md
 docs/EZUsergroupGetListV1ResponseMPayload.md
 docs/EZUsergroupGetListV1ResponseMPayloadAllOf.md
-docs/EZUsergroupGetMembersV1Response.md
-docs/EZUsergroupGetMembersV1ResponseAllOf.md
-docs/EZUsergroupGetMembersV1ResponseMPayload.md
 docs/EZUsergroupGetObjectV2Response.md
 docs/EZUsergroupGetObjectV2ResponseAllOf.md
 docs/EZUsergroupGetObjectV2ResponseMPayload.md
@@ -3067,7 +3038,6 @@ docs/EZVariableexpenseCreateObjectV1Request.md
 docs/EZVariableexpenseCreateObjectV1Response.md
 docs/EZVariableexpenseCreateObjectV1ResponseAllOf.md
 docs/EZVariableexpenseCreateObjectV1ResponseMPayload.md
-docs/EZVariableexpenseDeleteObjectV1Response.md
 docs/EZVariableexpenseEditObjectV1Request.md
 docs/EZVariableexpenseEditObjectV1Response.md
 docs/EZVariableexpenseGetAutocompleteV2Response.md

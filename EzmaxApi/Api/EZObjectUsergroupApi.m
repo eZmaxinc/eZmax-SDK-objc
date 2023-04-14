@@ -5,12 +5,10 @@
 #import "EZHeaderAcceptLanguage.h"
 #import "EZUsergroupCreateObjectV1Request.h"
 #import "EZUsergroupCreateObjectV1Response.h"
-#import "EZUsergroupDeleteObjectV1Response.h"
 #import "EZUsergroupEditObjectV1Request.h"
 #import "EZUsergroupEditObjectV1Response.h"
 #import "EZUsergroupGetAutocompleteV2Response.h"
 #import "EZUsergroupGetListV1Response.h"
-#import "EZUsergroupGetMembersV1Response.h"
 #import "EZUsergroupGetObjectV2Response.h"
 
 
@@ -121,74 +119,6 @@ NSInteger kEZObjectUsergroupApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUsergroupCreateObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Delete an existing Usergroup
-/// 
-///  @param pkiUsergroupID The unique ID of the Usergroup 
-///
-///  @returns EZUsergroupDeleteObjectV1Response*
-///
--(NSURLSessionTask*) usergroupDeleteObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-    completionHandler: (void (^)(EZUsergroupDeleteObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiUsergroupID' is set
-    if (pkiUsergroupID == nil) {
-        NSParameterAssert(pkiUsergroupID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUsergroupID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectUsergroupApiErrorDomain code:kEZObjectUsergroupApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/usergroup/{pkiUsergroupID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiUsergroupID != nil) {
-        pathParams[@"pkiUsergroupID"] = pkiUsergroupID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"DELETE"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZUsergroupDeleteObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZUsergroupDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -439,74 +369,6 @@ NSInteger kEZObjectUsergroupApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUsergroupGetListV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Usergroup's members
-/// 
-///  @param pkiUsergroupID The unique ID of the Usergroup 
-///
-///  @returns EZUsergroupGetMembersV1Response*
-///
--(NSURLSessionTask*) usergroupGetMembersV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
-    completionHandler: (void (^)(EZUsergroupGetMembersV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiUsergroupID' is set
-    if (pkiUsergroupID == nil) {
-        NSParameterAssert(pkiUsergroupID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUsergroupID"] };
-            NSError* error = [NSError errorWithDomain:kEZObjectUsergroupApiErrorDomain code:kEZObjectUsergroupApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/usergroup/{pkiUsergroupID}/getMembers"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiUsergroupID != nil) {
-        pathParams[@"pkiUsergroupID"] = pkiUsergroupID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EZUsergroupGetMembersV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EZUsergroupGetMembersV1Response*)data, error);
                                 }
                             }];
 }

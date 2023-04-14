@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymenttermCreateObjectV1**](EZObjectPaymenttermApi.md#paymenttermcreateobjectv1) | **POST** /1/object/paymentterm | Create a new Paymentterm
-[**paymenttermDeleteObjectV1**](EZObjectPaymenttermApi.md#paymenttermdeleteobjectv1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
 [**paymenttermEditObjectV1**](EZObjectPaymenttermApi.md#paymenttermeditobjectv1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 [**paymenttermGetAutocompleteV2**](EZObjectPaymenttermApi.md#paymenttermgetautocompletev2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
 [**paymenttermGetListV1**](EZObjectPaymenttermApi.md#paymenttermgetlistv1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
@@ -65,63 +64,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **paymenttermDeleteObjectV1**
-```objc
--(NSURLSessionTask*) paymenttermDeleteObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
-        completionHandler: (void (^)(EZPaymenttermDeleteObjectV1Response* output, NSError* error)) handler;
-```
-
-Delete an existing Paymentterm
-
-
-
-### Example
-```objc
-EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiPaymenttermID = @56; // 
-
-EZObjectPaymenttermApi*apiInstance = [[EZObjectPaymenttermApi alloc] init];
-
-// Delete an existing Paymentterm
-[apiInstance paymenttermDeleteObjectV1WithPkiPaymenttermID:pkiPaymenttermID
-          completionHandler: ^(EZPaymenttermDeleteObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling EZObjectPaymenttermApi->paymenttermDeleteObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiPaymenttermID** | **NSNumber***|  | 
-
-### Return type
-
-[**EZPaymenttermDeleteObjectV1Response***](EZPaymenttermDeleteObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

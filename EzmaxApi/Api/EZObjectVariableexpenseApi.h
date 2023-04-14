@@ -3,7 +3,6 @@
 #import "EZHeaderAcceptLanguage.h"
 #import "EZVariableexpenseCreateObjectV1Request.h"
 #import "EZVariableexpenseCreateObjectV1Response.h"
-#import "EZVariableexpenseDeleteObjectV1Response.h"
 #import "EZVariableexpenseEditObjectV1Request.h"
 #import "EZVariableexpenseEditObjectV1Response.h"
 #import "EZVariableexpenseGetAutocompleteV2Response.h"
@@ -42,19 +41,6 @@ extern NSInteger kEZObjectVariableexpenseApiMissingParamErrorCode;
 /// @return EZVariableexpenseCreateObjectV1Response*
 -(NSURLSessionTask*) variableexpenseCreateObjectV1WithVariableexpenseCreateObjectV1Request: (EZVariableexpenseCreateObjectV1Request*) variableexpenseCreateObjectV1Request
     completionHandler: (void (^)(EZVariableexpenseCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Delete an existing Variableexpense
-/// 
-///
-/// @param pkiVariableexpenseID The unique ID of the Variableexpense
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EZVariableexpenseDeleteObjectV1Response*
--(NSURLSessionTask*) variableexpenseDeleteObjectV1WithPkiVariableexpenseID: (NSNumber*) pkiVariableexpenseID
-    completionHandler: (void (^)(EZVariableexpenseDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Variableexpense
