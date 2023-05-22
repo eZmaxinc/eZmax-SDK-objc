@@ -19,8 +19,11 @@ Name | Type | Description | Notes
 **eEzsignsignatureAttachmentnamesource** | [**EZFieldEEzsignsignatureAttachmentnamesource***](EZFieldEEzsignsignatureAttachmentnamesource.md) |  | [optional] 
 **bEzsignsignatureRequired** | **NSNumber*** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. | [optional] 
 **fkiEzsignfoldersignerassociationIDValidation** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | [optional] 
+**dtEzsignsignatureDate** | **NSString*** | The date the Ezsignsignature was signed | [optional] 
+**objContactName** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | 
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **aObjEzsignsignaturecustomdate** | [**NSArray&lt;EZEzsignsignaturecustomdateResponseCompound&gt;***](EZEzsignsignaturecustomdateResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
+**objCreditcardtransaction** | [**EZCustomCreditcardtransactionResponse***](EZCustomCreditcardtransactionResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,12 +22,12 @@
 
 @interface EZBillingentityinternalAutocompleteElementResponse : EZObject
 
-/* The description of the Billingentityinternal in the language of the requester 
- */
-@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
 /* The unique ID of the Billingentityinternal. 
  */
 @property(nonatomic) NSNumber* pkiBillingentityinternalID;
+/* The description of the Billingentityinternal in the language of the requester 
+ */
+@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
 /* Whether the Billingentityinternal is active or not 
  */
 @property(nonatomic) NSNumber* bBillingentityinternalIsactive;

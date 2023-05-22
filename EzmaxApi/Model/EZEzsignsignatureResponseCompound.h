@@ -14,11 +14,17 @@
 */
 
 
+#import "EZCustomContactNameResponse.h"
+#import "EZCustomCreditcardtransactionResponse.h"
 #import "EZEzsignsignaturecustomdateResponseCompound.h"
 #import "EZFieldEEzsignsignatureAttachmentnamesource.h"
 #import "EZFieldEEzsignsignatureFont.h"
 #import "EZFieldEEzsignsignatureTooltipposition.h"
 #import "EZFieldEEzsignsignatureType.h"
+@protocol EZCustomContactNameResponse;
+@class EZCustomContactNameResponse;
+@protocol EZCustomCreditcardtransactionResponse;
+@class EZCustomCreditcardtransactionResponse;
 @protocol EZEzsignsignaturecustomdateResponseCompound;
 @class EZEzsignsignaturecustomdateResponseCompound;
 @protocol EZFieldEEzsignsignatureAttachmentnamesource;
@@ -81,11 +87,18 @@
 /* The unique ID of the Ezsignfoldersignerassociation [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationIDValidation;
+/* The date the Ezsignsignature was signed [optional]
+ */
+@property(nonatomic) NSString* dtEzsignsignatureDate;
+
+@property(nonatomic) EZCustomContactNameResponse* objContactName;
 /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) [optional]
  */
 @property(nonatomic) NSNumber* bEzsignsignatureCustomdate;
 /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
  */
 @property(nonatomic) NSArray<EZEzsignsignaturecustomdateResponseCompound>* aObjEzsignsignaturecustomdate;
+
+@property(nonatomic) EZCustomCreditcardtransactionResponse* objCreditcardtransaction;
 
 @end

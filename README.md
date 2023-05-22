@@ -116,6 +116,11 @@ Import the following:
 #import <EzmaxApi/EZBrandingResponse.h>
 #import <EzmaxApi/EZBrandingResponseCompound.h>
 #import <EzmaxApi/EZBrandingResponseCompoundAllOf.h>
+#import <EzmaxApi/EZClonehistoryGetListV1Response.h>
+#import <EzmaxApi/EZClonehistoryGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZClonehistoryGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZClonehistoryGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZClonehistoryListElement.h>
 #import <EzmaxApi/EZCommonAudit.h>
 #import <EzmaxApi/EZCommonAuditdetail.h>
 #import <EzmaxApi/EZCommonGetAutocompleteV1Response.h>
@@ -158,6 +163,7 @@ Import the following:
 #import <EzmaxApi/EZCustomAutocompleteElementResponse.h>
 #import <EzmaxApi/EZCustomCommunicationListElementResponse.h>
 #import <EzmaxApi/EZCustomContactNameResponse.h>
+#import <EzmaxApi/EZCustomCreditcardtransactionResponse.h>
 #import <EzmaxApi/EZCustomDropdownElementRequest.h>
 #import <EzmaxApi/EZCustomDropdownElementRequestCompound.h>
 #import <EzmaxApi/EZCustomDropdownElementResponse.h>
@@ -353,6 +359,9 @@ Import the following:
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetActionableElementsV1ResponseMPayload.h>
+#import <EzmaxApi/EZEzsigndocumentGetCompletedElementsV1Response.h>
+#import <EzmaxApi/EZEzsigndocumentGetCompletedElementsV1ResponseAllOf.h>
+#import <EzmaxApi/EZEzsigndocumentGetCompletedElementsV1ResponseMPayload.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1Response.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.h>
@@ -788,6 +797,7 @@ Import the following:
 #import <EzmaxApi/EZEzsigntsarequirementGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZEzsigntsarequirementGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZEzsigntsarequirementGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZFieldEActivesessionOrigin.h>
 #import <EzmaxApi/EZFieldEActivesessionUsertype.h>
 #import <EzmaxApi/EZFieldEActivesessionWeekdaystart.h>
 #import <EzmaxApi/EZFieldEBrandingLogo.h>
@@ -826,6 +836,7 @@ Import the following:
 #import <EzmaxApi/EZFieldENotificationpreferenceStatus.h>
 #import <EzmaxApi/EZFieldEPaymenttermType.h>
 #import <EzmaxApi/EZFieldEPhoneType.h>
+#import <EzmaxApi/EZFieldESessionhistoryEndby.h>
 #import <EzmaxApi/EZFieldEUserEzsignsendreminderfrequency.h>
 #import <EzmaxApi/EZFieldEUserType.h>
 #import <EzmaxApi/EZFieldEVariableexpenseTaxable.h>
@@ -860,6 +871,7 @@ Import the following:
 #import <EzmaxApi/EZFranchisereferalincomeRequestCompoundAllOf.h>
 #import <EzmaxApi/EZGlobalCustomerGetEndpointV1Response.h>
 #import <EzmaxApi/EZGlobalEzmaxclientVersionV1Response.h>
+#import <EzmaxApi/EZGlobalEzmaxcustomerGetConfigurationV1Response.h>
 #import <EzmaxApi/EZHeaderAcceptLanguage.h>
 #import <EzmaxApi/EZMultilingualApikeyDescription.h>
 #import <EzmaxApi/EZMultilingualBillingentityinternalDescription.h>
@@ -914,6 +926,11 @@ Import the following:
 #import <EzmaxApi/EZSecretquestionGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZSecretquestionGetAutocompleteV2ResponseAllOf.h>
 #import <EzmaxApi/EZSecretquestionGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/EZSessionhistoryGetListV1Response.h>
+#import <EzmaxApi/EZSessionhistoryGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZSessionhistoryGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZSessionhistoryGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZSessionhistoryListElement.h>
 #import <EzmaxApi/EZTaxassignmentAutocompleteElementResponse.h>
 #import <EzmaxApi/EZTaxassignmentGetAutocompleteV2Response.h>
 #import <EzmaxApi/EZTaxassignmentGetAutocompleteV2ResponseAllOf.h>
@@ -956,6 +973,19 @@ Import the following:
 #import <EzmaxApi/EZUsergroupRequestCompound.h>
 #import <EzmaxApi/EZUsergroupResponse.h>
 #import <EzmaxApi/EZUsergroupResponseCompound.h>
+#import <EzmaxApi/EZUserstagedDeleteObjectV1Response.h>
+#import <EzmaxApi/EZUserstagedGetListV1Response.h>
+#import <EzmaxApi/EZUserstagedGetListV1ResponseAllOf.h>
+#import <EzmaxApi/EZUserstagedGetListV1ResponseMPayload.h>
+#import <EzmaxApi/EZUserstagedGetListV1ResponseMPayloadAllOf.h>
+#import <EzmaxApi/EZUserstagedGetObjectV2Response.h>
+#import <EzmaxApi/EZUserstagedGetObjectV2ResponseAllOf.h>
+#import <EzmaxApi/EZUserstagedGetObjectV2ResponseMPayload.h>
+#import <EzmaxApi/EZUserstagedListElement.h>
+#import <EzmaxApi/EZUserstagedMapV1Request.h>
+#import <EzmaxApi/EZUserstagedMapV1Response.h>
+#import <EzmaxApi/EZUserstagedResponse.h>
+#import <EzmaxApi/EZUserstagedResponseCompound.h>
 #import <EzmaxApi/EZVariableexpenseAutocompleteElementResponse.h>
 #import <EzmaxApi/EZVariableexpenseCreateObjectV1Request.h>
 #import <EzmaxApi/EZVariableexpenseCreateObjectV1Response.h>
@@ -992,6 +1022,9 @@ Import the following:
 #import <EzmaxApi/EZWebhookEditObjectV1Response.h>
 #import <EzmaxApi/EZWebhookEzsignDocumentCompleted.h>
 #import <EzmaxApi/EZWebhookEzsignDocumentCompletedAllOf.h>
+#import <EzmaxApi/EZWebhookEzsignEzsignsignerAcceptclause.h>
+#import <EzmaxApi/EZWebhookEzsignEzsignsignerAcceptclauseAllOf.h>
+#import <EzmaxApi/EZWebhookEzsignEzsignsignerConnect.h>
 #import <EzmaxApi/EZWebhookEzsignFolderCompleted.h>
 #import <EzmaxApi/EZWebhookEzsignFolderCompletedAllOf.h>
 #import <EzmaxApi/EZWebhookGetHistoryV1Response.h>
@@ -1019,6 +1052,7 @@ Import the following:
 // load API classes for accessing endpoints
 #import <EzmaxApi/EZGlobalCustomerApi.h>
 #import <EzmaxApi/EZGlobalEzmaxclientApi.h>
+#import <EzmaxApi/EZGlobalEzmaxcustomerApi.h>
 #import <EzmaxApi/EZModuleEzsignApi.h>
 #import <EzmaxApi/EZModuleUserApi.h>
 #import <EzmaxApi/EZObjectActivesessionApi.h>
@@ -1026,6 +1060,7 @@ Import the following:
 #import <EzmaxApi/EZObjectBillingentityexternalApi.h>
 #import <EzmaxApi/EZObjectBillingentityinternalApi.h>
 #import <EzmaxApi/EZObjectBrandingApi.h>
+#import <EzmaxApi/EZObjectClonehistoryApi.h>
 #import <EzmaxApi/EZObjectCommunicationApi.h>
 #import <EzmaxApi/EZObjectDepartmentApi.h>
 #import <EzmaxApi/EZObjectEzmaxinvoicingApi.h>
@@ -1059,10 +1094,12 @@ Import the following:
 #import <EzmaxApi/EZObjectPaymenttermApi.h>
 #import <EzmaxApi/EZObjectPeriodApi.h>
 #import <EzmaxApi/EZObjectSecretquestionApi.h>
+#import <EzmaxApi/EZObjectSessionhistoryApi.h>
 #import <EzmaxApi/EZObjectTaxassignmentApi.h>
 #import <EzmaxApi/EZObjectTimezoneApi.h>
 #import <EzmaxApi/EZObjectUserApi.h>
 #import <EzmaxApi/EZObjectUsergroupApi.h>
+#import <EzmaxApi/EZObjectUserstagedApi.h>
 #import <EzmaxApi/EZObjectVariableexpenseApi.h>
 #import <EzmaxApi/EZObjectVersionhistoryApi.h>
 #import <EzmaxApi/EZObjectWebhookApi.h>
@@ -1114,6 +1151,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EZGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/EZGlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *EZGlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/EZGlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
+*EZGlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/EZGlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
 *EZModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/EZModuleEzsignApi.md#ezsignsuggestsignersv1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *EZModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/EZModuleEzsignApi.md#ezsignsuggesttemplatesv1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *EZModuleUserApi* | [**userCreateEzsignuserV1**](docs/EZModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -1131,6 +1169,7 @@ Class | Method | HTTP request | Description
 *EZObjectBrandingApi* | [**brandingGetAutocompleteV2**](docs/EZObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *EZObjectBrandingApi* | [**brandingGetListV1**](docs/EZObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *EZObjectBrandingApi* | [**brandingGetObjectV2**](docs/EZObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*EZObjectClonehistoryApi* | [**clonehistoryGetListV1**](docs/EZObjectClonehistoryApi.md#clonehistorygetlistv1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *EZObjectCommunicationApi* | [**communicationGetObjectV2**](docs/EZObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *EZObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/EZObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *EZObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/EZObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -1169,6 +1208,7 @@ Class | Method | HTTP request | Description
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
+*EZObjectEzsigndocumentApi* | [**ezsigndocumentGetCompletedElementsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetcompletedelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignannotationsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
 *EZObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignformfieldgroupsV1**](docs/EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
@@ -1298,6 +1338,7 @@ Class | Method | HTTP request | Description
 *EZObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/EZObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *EZObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/EZObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *EZObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/EZObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
+*EZObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](docs/EZObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *EZObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](docs/EZObjectTaxassignmentApi.md#taxassignmentgetautocompletev2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *EZObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/EZObjectTimezoneApi.md#timezonegetautocompletev2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *EZObjectUserApi* | [**userGetAutocompleteV2**](docs/EZObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
@@ -1306,6 +1347,10 @@ Class | Method | HTTP request | Description
 *EZObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/EZObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *EZObjectUsergroupApi* | [**usergroupGetListV1**](docs/EZObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 *EZObjectUsergroupApi* | [**usergroupGetObjectV2**](docs/EZObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*EZObjectUserstagedApi* | [**userstagedDeleteObjectV1**](docs/EZObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
+*EZObjectUserstagedApi* | [**userstagedGetListV1**](docs/EZObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
+*EZObjectUserstagedApi* | [**userstagedGetObjectV2**](docs/EZObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
+*EZObjectUserstagedApi* | [**userstagedMapV1**](docs/EZObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 *EZObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpensecreateobjectv1) | **POST** /1/object/variableexpense | Create a new Variableexpense
 *EZObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](docs/EZObjectVariableexpenseApi.md#variableexpenseeditobjectv1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 *EZObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](docs/EZObjectVariableexpenseApi.md#variableexpensegetautocompletev2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
@@ -1397,6 +1442,11 @@ Class | Method | HTTP request | Description
  - [EZBrandingResponse](docs/EZBrandingResponse.md)
  - [EZBrandingResponseCompound](docs/EZBrandingResponseCompound.md)
  - [EZBrandingResponseCompoundAllOf](docs/EZBrandingResponseCompoundAllOf.md)
+ - [EZClonehistoryGetListV1Response](docs/EZClonehistoryGetListV1Response.md)
+ - [EZClonehistoryGetListV1ResponseAllOf](docs/EZClonehistoryGetListV1ResponseAllOf.md)
+ - [EZClonehistoryGetListV1ResponseMPayload](docs/EZClonehistoryGetListV1ResponseMPayload.md)
+ - [EZClonehistoryGetListV1ResponseMPayloadAllOf](docs/EZClonehistoryGetListV1ResponseMPayloadAllOf.md)
+ - [EZClonehistoryListElement](docs/EZClonehistoryListElement.md)
  - [EZCommonAudit](docs/EZCommonAudit.md)
  - [EZCommonAuditdetail](docs/EZCommonAuditdetail.md)
  - [EZCommonGetAutocompleteV1Response](docs/EZCommonGetAutocompleteV1Response.md)
@@ -1439,6 +1489,7 @@ Class | Method | HTTP request | Description
  - [EZCustomAutocompleteElementResponse](docs/EZCustomAutocompleteElementResponse.md)
  - [EZCustomCommunicationListElementResponse](docs/EZCustomCommunicationListElementResponse.md)
  - [EZCustomContactNameResponse](docs/EZCustomContactNameResponse.md)
+ - [EZCustomCreditcardtransactionResponse](docs/EZCustomCreditcardtransactionResponse.md)
  - [EZCustomDropdownElementRequest](docs/EZCustomDropdownElementRequest.md)
  - [EZCustomDropdownElementRequestCompound](docs/EZCustomDropdownElementRequestCompound.md)
  - [EZCustomDropdownElementResponse](docs/EZCustomDropdownElementResponse.md)
@@ -1634,6 +1685,9 @@ Class | Method | HTTP request | Description
  - [EZEzsigndocumentGetActionableElementsV1Response](docs/EZEzsigndocumentGetActionableElementsV1Response.md)
  - [EZEzsigndocumentGetActionableElementsV1ResponseAllOf](docs/EZEzsigndocumentGetActionableElementsV1ResponseAllOf.md)
  - [EZEzsigndocumentGetActionableElementsV1ResponseMPayload](docs/EZEzsigndocumentGetActionableElementsV1ResponseMPayload.md)
+ - [EZEzsigndocumentGetCompletedElementsV1Response](docs/EZEzsigndocumentGetCompletedElementsV1Response.md)
+ - [EZEzsigndocumentGetCompletedElementsV1ResponseAllOf](docs/EZEzsigndocumentGetCompletedElementsV1ResponseAllOf.md)
+ - [EZEzsigndocumentGetCompletedElementsV1ResponseMPayload](docs/EZEzsigndocumentGetCompletedElementsV1ResponseMPayload.md)
  - [EZEzsigndocumentGetDownloadUrlV1Response](docs/EZEzsigndocumentGetDownloadUrlV1Response.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EZEzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [EZEzsigndocumentGetDownloadUrlV1ResponseMPayload](docs/EZEzsigndocumentGetDownloadUrlV1ResponseMPayload.md)
@@ -2069,6 +2123,7 @@ Class | Method | HTTP request | Description
  - [EZEzsigntsarequirementGetAutocompleteV2Response](docs/EZEzsigntsarequirementGetAutocompleteV2Response.md)
  - [EZEzsigntsarequirementGetAutocompleteV2ResponseAllOf](docs/EZEzsigntsarequirementGetAutocompleteV2ResponseAllOf.md)
  - [EZEzsigntsarequirementGetAutocompleteV2ResponseMPayload](docs/EZEzsigntsarequirementGetAutocompleteV2ResponseMPayload.md)
+ - [EZFieldEActivesessionOrigin](docs/EZFieldEActivesessionOrigin.md)
  - [EZFieldEActivesessionUsertype](docs/EZFieldEActivesessionUsertype.md)
  - [EZFieldEActivesessionWeekdaystart](docs/EZFieldEActivesessionWeekdaystart.md)
  - [EZFieldEBrandingLogo](docs/EZFieldEBrandingLogo.md)
@@ -2107,6 +2162,7 @@ Class | Method | HTTP request | Description
  - [EZFieldENotificationpreferenceStatus](docs/EZFieldENotificationpreferenceStatus.md)
  - [EZFieldEPaymenttermType](docs/EZFieldEPaymenttermType.md)
  - [EZFieldEPhoneType](docs/EZFieldEPhoneType.md)
+ - [EZFieldESessionhistoryEndby](docs/EZFieldESessionhistoryEndby.md)
  - [EZFieldEUserEzsignsendreminderfrequency](docs/EZFieldEUserEzsignsendreminderfrequency.md)
  - [EZFieldEUserType](docs/EZFieldEUserType.md)
  - [EZFieldEVariableexpenseTaxable](docs/EZFieldEVariableexpenseTaxable.md)
@@ -2141,6 +2197,7 @@ Class | Method | HTTP request | Description
  - [EZFranchisereferalincomeRequestCompoundAllOf](docs/EZFranchisereferalincomeRequestCompoundAllOf.md)
  - [EZGlobalCustomerGetEndpointV1Response](docs/EZGlobalCustomerGetEndpointV1Response.md)
  - [EZGlobalEzmaxclientVersionV1Response](docs/EZGlobalEzmaxclientVersionV1Response.md)
+ - [EZGlobalEzmaxcustomerGetConfigurationV1Response](docs/EZGlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [EZHeaderAcceptLanguage](docs/EZHeaderAcceptLanguage.md)
  - [EZMultilingualApikeyDescription](docs/EZMultilingualApikeyDescription.md)
  - [EZMultilingualBillingentityinternalDescription](docs/EZMultilingualBillingentityinternalDescription.md)
@@ -2195,6 +2252,11 @@ Class | Method | HTTP request | Description
  - [EZSecretquestionGetAutocompleteV2Response](docs/EZSecretquestionGetAutocompleteV2Response.md)
  - [EZSecretquestionGetAutocompleteV2ResponseAllOf](docs/EZSecretquestionGetAutocompleteV2ResponseAllOf.md)
  - [EZSecretquestionGetAutocompleteV2ResponseMPayload](docs/EZSecretquestionGetAutocompleteV2ResponseMPayload.md)
+ - [EZSessionhistoryGetListV1Response](docs/EZSessionhistoryGetListV1Response.md)
+ - [EZSessionhistoryGetListV1ResponseAllOf](docs/EZSessionhistoryGetListV1ResponseAllOf.md)
+ - [EZSessionhistoryGetListV1ResponseMPayload](docs/EZSessionhistoryGetListV1ResponseMPayload.md)
+ - [EZSessionhistoryGetListV1ResponseMPayloadAllOf](docs/EZSessionhistoryGetListV1ResponseMPayloadAllOf.md)
+ - [EZSessionhistoryListElement](docs/EZSessionhistoryListElement.md)
  - [EZTaxassignmentAutocompleteElementResponse](docs/EZTaxassignmentAutocompleteElementResponse.md)
  - [EZTaxassignmentGetAutocompleteV2Response](docs/EZTaxassignmentGetAutocompleteV2Response.md)
  - [EZTaxassignmentGetAutocompleteV2ResponseAllOf](docs/EZTaxassignmentGetAutocompleteV2ResponseAllOf.md)
@@ -2237,6 +2299,19 @@ Class | Method | HTTP request | Description
  - [EZUsergroupRequestCompound](docs/EZUsergroupRequestCompound.md)
  - [EZUsergroupResponse](docs/EZUsergroupResponse.md)
  - [EZUsergroupResponseCompound](docs/EZUsergroupResponseCompound.md)
+ - [EZUserstagedDeleteObjectV1Response](docs/EZUserstagedDeleteObjectV1Response.md)
+ - [EZUserstagedGetListV1Response](docs/EZUserstagedGetListV1Response.md)
+ - [EZUserstagedGetListV1ResponseAllOf](docs/EZUserstagedGetListV1ResponseAllOf.md)
+ - [EZUserstagedGetListV1ResponseMPayload](docs/EZUserstagedGetListV1ResponseMPayload.md)
+ - [EZUserstagedGetListV1ResponseMPayloadAllOf](docs/EZUserstagedGetListV1ResponseMPayloadAllOf.md)
+ - [EZUserstagedGetObjectV2Response](docs/EZUserstagedGetObjectV2Response.md)
+ - [EZUserstagedGetObjectV2ResponseAllOf](docs/EZUserstagedGetObjectV2ResponseAllOf.md)
+ - [EZUserstagedGetObjectV2ResponseMPayload](docs/EZUserstagedGetObjectV2ResponseMPayload.md)
+ - [EZUserstagedListElement](docs/EZUserstagedListElement.md)
+ - [EZUserstagedMapV1Request](docs/EZUserstagedMapV1Request.md)
+ - [EZUserstagedMapV1Response](docs/EZUserstagedMapV1Response.md)
+ - [EZUserstagedResponse](docs/EZUserstagedResponse.md)
+ - [EZUserstagedResponseCompound](docs/EZUserstagedResponseCompound.md)
  - [EZVariableexpenseAutocompleteElementResponse](docs/EZVariableexpenseAutocompleteElementResponse.md)
  - [EZVariableexpenseCreateObjectV1Request](docs/EZVariableexpenseCreateObjectV1Request.md)
  - [EZVariableexpenseCreateObjectV1Response](docs/EZVariableexpenseCreateObjectV1Response.md)
@@ -2273,6 +2348,9 @@ Class | Method | HTTP request | Description
  - [EZWebhookEditObjectV1Response](docs/EZWebhookEditObjectV1Response.md)
  - [EZWebhookEzsignDocumentCompleted](docs/EZWebhookEzsignDocumentCompleted.md)
  - [EZWebhookEzsignDocumentCompletedAllOf](docs/EZWebhookEzsignDocumentCompletedAllOf.md)
+ - [EZWebhookEzsignEzsignsignerAcceptclause](docs/EZWebhookEzsignEzsignsignerAcceptclause.md)
+ - [EZWebhookEzsignEzsignsignerAcceptclauseAllOf](docs/EZWebhookEzsignEzsignsignerAcceptclauseAllOf.md)
+ - [EZWebhookEzsignEzsignsignerConnect](docs/EZWebhookEzsignEzsignsignerConnect.md)
  - [EZWebhookEzsignFolderCompleted](docs/EZWebhookEzsignFolderCompleted.md)
  - [EZWebhookEzsignFolderCompletedAllOf](docs/EZWebhookEzsignFolderCompletedAllOf.md)
  - [EZWebhookGetHistoryV1Response](docs/EZWebhookGetHistoryV1Response.md)
@@ -2302,7 +2380,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## Authorization
+Authentication schemes defined for the API:
+### Authorization
 
 - **Type**: API key
 - **API key parameter name**: Authorization

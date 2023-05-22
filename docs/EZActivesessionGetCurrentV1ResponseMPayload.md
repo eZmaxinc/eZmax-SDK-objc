@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eActivesessionUsertype** | [**EZFieldEActivesessionUsertype***](EZFieldEActivesessionUsertype.md) |  | 
+**eActivesessionOrigin** | [**EZFieldEActivesessionOrigin***](EZFieldEActivesessionOrigin.md) |  | 
 **eActivesessionWeekdaystart** | [**EZFieldEActivesessionWeekdaystart***](EZFieldEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **NSString*** | The Name of the Company in the language of the requester | 

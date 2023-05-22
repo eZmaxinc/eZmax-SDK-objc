@@ -14,10 +14,13 @@
 */
 
 
+#import "EZCustomContactNameResponse.h"
 #import "EZFieldEEzsignsignatureAttachmentnamesource.h"
 #import "EZFieldEEzsignsignatureFont.h"
 #import "EZFieldEEzsignsignatureTooltipposition.h"
 #import "EZFieldEEzsignsignatureType.h"
+@protocol EZCustomContactNameResponse;
+@class EZCustomContactNameResponse;
 @protocol EZFieldEEzsignsignatureAttachmentnamesource;
 @class EZFieldEEzsignsignatureAttachmentnamesource;
 @protocol EZFieldEEzsignsignatureFont;
@@ -78,5 +81,10 @@
 /* The unique ID of the Ezsignfoldersignerassociation [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationIDValidation;
+/* The date the Ezsignsignature was signed [optional]
+ */
+@property(nonatomic) NSString* dtEzsignsignatureDate;
+
+@property(nonatomic) EZCustomContactNameResponse* objContactName;
 
 @end

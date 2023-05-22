@@ -923,8 +923,8 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 
 
 NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
-NSNumber* iRowMax = @56; //  (optional)
-NSNumber* iRowOffset = @56; //  (optional)
+NSNumber* iRowMax = @10000; //  (optional) (default to @10000)
+NSNumber* iRowOffset = @0; //  (optional) (default to @0)
 EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sFilter = @"sFilter_example"; //  (optional)
 
@@ -951,8 +951,8 @@ EZObjectEzsignfolderApi*apiInstance = [[EZObjectEzsignfolderApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **NSNumber***|  | [optional] 
- **iRowOffset** | **NSNumber***|  | [optional] 
+ **iRowMax** | **NSNumber***|  | [optional] [default to @10000]
+ **iRowOffset** | **NSNumber***|  | [optional] [default to @0]
  **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **NSString***|  | [optional] 
 

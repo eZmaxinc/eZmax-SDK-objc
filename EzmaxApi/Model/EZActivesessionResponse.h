@@ -14,8 +14,11 @@
 */
 
 
+#import "EZFieldEActivesessionOrigin.h"
 #import "EZFieldEActivesessionUsertype.h"
 #import "EZFieldEActivesessionWeekdaystart.h"
+@protocol EZFieldEActivesessionOrigin;
+@class EZFieldEActivesessionOrigin;
 @protocol EZFieldEActivesessionUsertype;
 @class EZFieldEActivesessionUsertype;
 @protocol EZFieldEActivesessionWeekdaystart;
@@ -30,6 +33,8 @@
 
 
 @property(nonatomic) EZFieldEActivesessionUsertype* eActivesessionUsertype;
+
+@property(nonatomic) EZFieldEActivesessionOrigin* eActivesessionOrigin;
 
 @property(nonatomic) EZFieldEActivesessionWeekdaystart* eActivesessionWeekdaystart;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 

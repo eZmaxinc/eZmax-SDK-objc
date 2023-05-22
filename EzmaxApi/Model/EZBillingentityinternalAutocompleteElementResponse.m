@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sBillingentityinternalDescriptionX": @"sBillingentityinternalDescriptionX", @"pkiBillingentityinternalID": @"pkiBillingentityinternalID", @"bBillingentityinternalIsactive": @"bBillingentityinternalIsactive" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBillingentityinternalID": @"pkiBillingentityinternalID", @"sBillingentityinternalDescriptionX": @"sBillingentityinternalDescriptionX", @"bBillingentityinternalIsactive": @"bBillingentityinternalIsactive" }];
 }
 
 /**

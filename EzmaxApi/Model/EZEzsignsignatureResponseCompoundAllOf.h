@@ -14,7 +14,10 @@
 */
 
 
+#import "EZCustomCreditcardtransactionResponse.h"
 #import "EZEzsignsignaturecustomdateResponseCompound.h"
+@protocol EZCustomCreditcardtransactionResponse;
+@class EZCustomCreditcardtransactionResponse;
 @protocol EZEzsignsignaturecustomdateResponseCompound;
 @class EZEzsignsignaturecustomdateResponseCompound;
 
@@ -31,5 +34,7 @@
 /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
  */
 @property(nonatomic) NSArray<EZEzsignsignaturecustomdateResponseCompound>* aObjEzsignsignaturecustomdate;
+
+@property(nonatomic) EZCustomCreditcardtransactionResponse* objCreditcardtransaction;
 
 @end

@@ -297,9 +297,9 @@ NSInteger kEZObjectBrandingApiMissingParamErrorCode = 234513;
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default<br>JPEG<br>PNG |
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
 ///
-///  @param iRowMax  (optional)
+///  @param iRowMax  (optional, default to @10000)
 ///
-///  @param iRowOffset  (optional)
+///  @param iRowOffset  (optional, default to @0)
 ///
 ///  @param acceptLanguage  (optional)
 ///

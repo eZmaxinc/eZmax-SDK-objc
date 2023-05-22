@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"bEzsignsignatureCustomdate": @"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate": @"a_objEzsignsignaturecustomdate" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"bEzsignsignatureCustomdate": @"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate": @"a_objEzsignsignaturecustomdate", @"objCreditcardtransaction": @"objCreditcardtransaction" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate"];
+  NSArray *optionalProperties = @[@"bEzsignsignatureCustomdate", @"aObjEzsignsignaturecustomdate", @"objCreditcardtransaction"];
   return [optionalProperties containsObject:propertyName];
 }
 

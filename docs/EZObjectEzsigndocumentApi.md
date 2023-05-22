@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**ezsigndocumentEndPrematurelyV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 [**ezsigndocumentFlattenV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 [**ezsigndocumentGetActionableElementsV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
+[**ezsigndocumentGetCompletedElementsV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetcompletedelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 [**ezsigndocumentGetDownloadUrlV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetEzsignannotationsV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
 [**ezsigndocumentGetEzsignformfieldgroupsV1**](EZObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
@@ -611,6 +612,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EZEzsigndocumentGetActionableElementsV1Response***](EZEzsigndocumentGetActionableElementsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentGetCompletedElementsV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentGetCompletedElementsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+        completionHandler: (void (^)(EZEzsigndocumentGetCompletedElementsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve completed elements for the Ezsigndocument
+
+Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+
+EZObjectEzsigndocumentApi*apiInstance = [[EZObjectEzsigndocumentApi alloc] init];
+
+// Retrieve completed elements for the Ezsigndocument
+[apiInstance ezsigndocumentGetCompletedElementsV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+          completionHandler: ^(EZEzsigndocumentGetCompletedElementsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectEzsigndocumentApi->ezsigndocumentGetCompletedElementsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZEzsigndocumentGetCompletedElementsV1Response***](EZEzsigndocumentGetCompletedElementsV1Response.md)
 
 ### Authorization
 

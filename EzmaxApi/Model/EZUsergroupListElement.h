@@ -28,5 +28,8 @@
 /* The Name of the Usergroup in the language of the requester 
  */
 @property(nonatomic) NSString* sUsergroupNameX;
+/* Numer of user in group 
+ */
+@property(nonatomic) NSNumber* iCountUser;
 
 @end

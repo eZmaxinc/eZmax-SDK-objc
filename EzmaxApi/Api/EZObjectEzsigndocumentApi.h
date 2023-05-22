@@ -17,6 +17,7 @@
 #import "EZEzsigndocumentEndPrematurelyV1Response.h"
 #import "EZEzsigndocumentFlattenV1Response.h"
 #import "EZEzsigndocumentGetActionableElementsV1Response.h"
+#import "EZEzsigndocumentGetCompletedElementsV1Response.h"
 #import "EZEzsigndocumentGetDownloadUrlV1Response.h"
 #import "EZEzsigndocumentGetEzsignannotationsV1Response.h"
 #import "EZEzsigndocumentGetEzsignformfieldgroupsV1Response.h"
@@ -203,6 +204,20 @@ extern NSInteger kEZObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EZEzsigndocumentGetActionableElementsV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetActionableElementsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EZEzsigndocumentGetActionableElementsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve completed elements for the Ezsigndocument
+/// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZEzsigndocumentGetCompletedElementsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetCompletedElementsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EZEzsigndocumentGetCompletedElementsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve a URL to download documents.
