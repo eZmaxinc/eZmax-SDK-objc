@@ -89,7 +89,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiVariableexpenseID = @56; // The unique ID of the Variableexpense
+NSNumber* pkiVariableexpenseID = @56; // 
 EZVariableexpenseEditObjectV1Request* variableexpenseEditObjectV1Request = [[EZVariableexpenseEditObjectV1Request alloc] init]; // 
 
 EZObjectVariableexpenseApi*apiInstance = [[EZObjectVariableexpenseApi alloc] init];
@@ -111,7 +111,7 @@ EZObjectVariableexpenseApi*apiInstance = [[EZObjectVariableexpenseApi alloc] ini
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **NSNumber***| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **NSNumber***|  | 
  **variableexpenseEditObjectV1Request** | [**EZVariableexpenseEditObjectV1Request***](EZVariableexpenseEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -291,7 +291,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiVariableexpenseID = @56; // The unique ID of the Variableexpense
+NSNumber* pkiVariableexpenseID = @56; // 
 
 EZObjectVariableexpenseApi*apiInstance = [[EZObjectVariableexpenseApi alloc] init];
 
@@ -311,7 +311,7 @@ EZObjectVariableexpenseApi*apiInstance = [[EZObjectVariableexpenseApi alloc] ini
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **NSNumber***| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **NSNumber***|  | 
 
 ### Return type
 

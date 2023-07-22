@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **NSNumber*** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **NSNumber*** | The unique ID of the Systemconfigurationtype | [optional] 
+**fkiSignatureID** | **NSNumber*** | The unique ID of the Signature | [optional] 
 **aPkiPermissionID** | **NSArray&lt;NSNumber*&gt;*** | An array of permissions granted to the user or api key | 
 **objUserReal** | [**EZActivesessionResponseCompoundUser***](EZActivesessionResponseCompoundUser.md) |  | 
 **objUserCloned** | [**EZActivesessionResponseCompoundUser***](EZActivesessionResponseCompoundUser.md) |  | [optional] 

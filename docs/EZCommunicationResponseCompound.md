@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **sCommunicationBodyurl** | **NSString*** | The url of the body used as body in the Communication | [optional] 
 **eCommunicationDirection** | [**EZComputedECommunicationDirection***](EZComputedECommunicationDirection.md) |  | 
 **iCommunicationrecipientCount** | **NSNumber*** | The count of Communicationrecipient | 
+**bCommunicationPrivate** | **NSNumber*** | Whether the Communication is private or not | 
 **objDescriptionstaticSender** | [**EZDescriptionstaticResponse***](EZDescriptionstaticResponse.md) |  | [optional] 
 **objEmailstaticSender** | [**EZEmailstaticResponse***](EZEmailstaticResponse.md) |  | [optional] 
 **objPhonestaticSender** | [**EZPhonestaticResponse***](EZPhonestaticResponse.md) |  | [optional] 

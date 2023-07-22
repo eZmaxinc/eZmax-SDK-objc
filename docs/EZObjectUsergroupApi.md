@@ -6,9 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](EZObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
 [**usergroupEditObjectV1**](EZObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+[**usergroupEditPermissionsV1**](EZObjectUsergroupApi.md#usergroupeditpermissionsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+[**usergroupEditUsergroupmembershipsV1**](EZObjectUsergroupApi.md#usergroupeditusergroupmembershipsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 [**usergroupGetAutocompleteV2**](EZObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](EZObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 [**usergroupGetObjectV2**](EZObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+[**usergroupGetPermissionsV1**](EZObjectUsergroupApi.md#usergroupgetpermissionsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions
+[**usergroupGetUsergroupmembershipsV1**](EZObjectUsergroupApi.md#usergroupgetusergroupmembershipsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships
 
 
 # **usergroupCreateObjectV1**
@@ -89,7 +93,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiUsergroupID = @56; // The unique ID of the Usergroup
+NSNumber* pkiUsergroupID = @56; // 
 EZUsergroupEditObjectV1Request* usergroupEditObjectV1Request = [[EZUsergroupEditObjectV1Request alloc] init]; // 
 
 EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
@@ -111,12 +115,134 @@ EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **NSNumber***| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **NSNumber***|  | 
  **usergroupEditObjectV1Request** | [**EZUsergroupEditObjectV1Request***](EZUsergroupEditObjectV1Request.md)|  | 
 
 ### Return type
 
 [**EZUsergroupEditObjectV1Response***](EZUsergroupEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupEditPermissionsV1**
+```objc
+-(NSURLSessionTask*) usergroupEditPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    usergroupEditPermissionsV1Request: (EZUsergroupEditPermissionsV1Request*) usergroupEditPermissionsV1Request
+        completionHandler: (void (^)(EZUsergroupEditPermissionsV1Response* output, NSError* error)) handler;
+```
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUsergroupID = @56; // 
+EZUsergroupEditPermissionsV1Request* usergroupEditPermissionsV1Request = [[EZUsergroupEditPermissionsV1Request alloc] init]; // 
+
+EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
+
+// Edit multiple Permissions
+[apiInstance usergroupEditPermissionsV1WithPkiUsergroupID:pkiUsergroupID
+              usergroupEditPermissionsV1Request:usergroupEditPermissionsV1Request
+          completionHandler: ^(EZUsergroupEditPermissionsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupEditPermissionsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **NSNumber***|  | 
+ **usergroupEditPermissionsV1Request** | [**EZUsergroupEditPermissionsV1Request***](EZUsergroupEditPermissionsV1Request.md)|  | 
+
+### Return type
+
+[**EZUsergroupEditPermissionsV1Response***](EZUsergroupEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupEditUsergroupmembershipsV1**
+```objc
+-(NSURLSessionTask*) usergroupEditUsergroupmembershipsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    usergroupEditUsergroupmembershipsV1Request: (EZUsergroupEditUsergroupmembershipsV1Request*) usergroupEditUsergroupmembershipsV1Request
+        completionHandler: (void (^)(EZUsergroupEditUsergroupmembershipsV1Response* output, NSError* error)) handler;
+```
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUsergroupID = @56; // 
+EZUsergroupEditUsergroupmembershipsV1Request* usergroupEditUsergroupmembershipsV1Request = [[EZUsergroupEditUsergroupmembershipsV1Request alloc] init]; // 
+
+EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
+
+// Edit multiple Usergroupmemberships
+[apiInstance usergroupEditUsergroupmembershipsV1WithPkiUsergroupID:pkiUsergroupID
+              usergroupEditUsergroupmembershipsV1Request:usergroupEditUsergroupmembershipsV1Request
+          completionHandler: ^(EZUsergroupEditUsergroupmembershipsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupEditUsergroupmembershipsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **NSNumber***|  | 
+ **usergroupEditUsergroupmembershipsV1Request** | [**EZUsergroupEditUsergroupmembershipsV1Request***](EZUsergroupEditUsergroupmembershipsV1Request.md)|  | 
+
+### Return type
+
+[**EZUsergroupEditUsergroupmembershipsV1Response***](EZUsergroupEditUsergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -291,7 +417,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiUsergroupID = @56; // The unique ID of the Usergroup
+NSNumber* pkiUsergroupID = @56; // 
 
 EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
 
@@ -311,11 +437,121 @@ EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **NSNumber***| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **NSNumber***|  | 
 
 ### Return type
 
 [**EZUsergroupGetObjectV2Response***](EZUsergroupGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupGetPermissionsV1**
+```objc
+-(NSURLSessionTask*) usergroupGetPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+        completionHandler: (void (^)(EZUsergroupGetPermissionsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Usergroup's Permissions
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUsergroupID = @56; // 
+
+EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
+
+// Retrieve an existing Usergroup's Permissions
+[apiInstance usergroupGetPermissionsV1WithPkiUsergroupID:pkiUsergroupID
+          completionHandler: ^(EZUsergroupGetPermissionsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupGetPermissionsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZUsergroupGetPermissionsV1Response***](EZUsergroupGetPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupGetUsergroupmembershipsV1**
+```objc
+-(NSURLSessionTask*) usergroupGetUsergroupmembershipsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+        completionHandler: (void (^)(EZUsergroupGetUsergroupmembershipsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Usergroup's Usergroupmemberships
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUsergroupID = @56; // 
+
+EZObjectUsergroupApi*apiInstance = [[EZObjectUsergroupApi alloc] init];
+
+// Retrieve an existing Usergroup's Usergroupmemberships
+[apiInstance usergroupGetUsergroupmembershipsV1WithPkiUsergroupID:pkiUsergroupID
+          completionHandler: ^(EZUsergroupGetUsergroupmembershipsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUsergroupApi->usergroupGetUsergroupmembershipsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZUsergroupGetUsergroupmembershipsV1Response***](EZUsergroupGetUsergroupmembershipsV1Response.md)
 
 ### Authorization
 

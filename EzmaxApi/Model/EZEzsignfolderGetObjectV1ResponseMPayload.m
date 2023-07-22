@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderDuedate", @"dtEzsignfolderSentdate", @"dtEzsignfolderScheduledarchive", @"dtEzsignfolderScheduleddispose", @"dtEzsignfolderClose", ];
+  NSArray *optionalProperties = @[@"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX", @"fkiBillingentityinternalID", @"sBillingentityinternalDescriptionX", @"fkiEzsigntsarequirementID", @"sEzsigntsarequirementDescriptionX", @"tEzsignfolderNote", @"bEzsignfolderIsdisposable", @"eEzsignfolderSendreminderfrequency", @"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderDuedate", @"dtEzsignfolderSentdate", @"dtEzsignfolderScheduledarchive", @"dtEzsignfolderScheduleddispose", @"eEzsignfolderStep", @"dtEzsignfolderClose", @"tEzsignfolderMessage", @"objAudit", @"sEzsignfolderExternalid"];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sTimezoneName** | **NSString*** | The description of the Timezone in the language of the requester | 
+**sTimezoneName** | **NSString*** | The description of the Timezone | 
 **pkiTimezoneID** | **NSNumber*** | The unique ID of the Timezone | 
 **bTimezoneIsactive** | **NSNumber*** | Whether the Timezone is active or not | 
 

@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiUserID** | **NSNumber*** | The unique ID of the User | 
 **fkiApikeyID** | **NSNumber*** | The unique ID of the Apikey | [optional] 
-**sUserLoginname** | **NSString*** | The Login name of the User. | 
-**sUserLastname** | **NSString*** | The Last name of the user | 
-**sUserFirstname** | **NSString*** | The First name of the user | 
+**sUserLoginname** | **NSString*** | The login name of the User. | 
+**sUserLastname** | **NSString*** | The last name of the user | 
+**sUserFirstname** | **NSString*** | The first name of the user | 
 **sApikeyDescriptionX** | **NSString*** | The description of the Apikey in the language of the requester | [optional] 
 **dtAuditdetailDate** | **NSString*** | Represent a Date Time. The timezone is the one configured in the User&#39;s profile. | 
 

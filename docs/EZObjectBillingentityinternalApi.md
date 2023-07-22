@@ -89,7 +89,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiBillingentityinternalID = @56; // The unique ID of the Billingentityinternal
+NSNumber* pkiBillingentityinternalID = @56; // 
 EZBillingentityinternalEditObjectV1Request* billingentityinternalEditObjectV1Request = [[EZBillingentityinternalEditObjectV1Request alloc] init]; // 
 
 EZObjectBillingentityinternalApi*apiInstance = [[EZObjectBillingentityinternalApi alloc] init];
@@ -111,7 +111,7 @@ EZObjectBillingentityinternalApi*apiInstance = [[EZObjectBillingentityinternalAp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **NSNumber***| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **NSNumber***|  | 
  **billingentityinternalEditObjectV1Request** | [**EZBillingentityinternalEditObjectV1Request***](EZBillingentityinternalEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -291,7 +291,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiBillingentityinternalID = @56; // The unique ID of the Billingentityinternal
+NSNumber* pkiBillingentityinternalID = @56; // 
 
 EZObjectBillingentityinternalApi*apiInstance = [[EZObjectBillingentityinternalApi alloc] init];
 
@@ -311,7 +311,7 @@ EZObjectBillingentityinternalApi*apiInstance = [[EZObjectBillingentityinternalAp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **NSNumber***| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **NSNumber***|  | 
 
 ### Return type
 

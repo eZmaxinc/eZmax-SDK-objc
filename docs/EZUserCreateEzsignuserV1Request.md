@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
-**sUserFirstname** | **NSString*** | The First name of the user | 
-**sUserLastname** | **NSString*** | The Last name of the user | 
+**sUserFirstname** | **NSString*** | The first name of the user | 
+**sUserLastname** | **NSString*** | The last name of the user | 
 **sEmailAddress** | **NSString*** | The email address. | 
 **sPhoneRegion** | **NSString*** | The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123 | 
 **sPhoneExchange** | **NSString*** | The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123 | 

@@ -126,7 +126,7 @@ NSInteger kEZObjectBillingentityinternalApiMissingParamErrorCode = 234513;
 ///
 /// Edit an existing Billingentityinternal
 /// 
-///  @param pkiBillingentityinternalID The unique ID of the Billingentityinternal 
+///  @param pkiBillingentityinternalID  
 ///
 ///  @param billingentityinternalEditObjectV1Request  
 ///
@@ -376,7 +376,7 @@ NSInteger kEZObjectBillingentityinternalApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Billingentityinternal
 /// 
-///  @param pkiBillingentityinternalID The unique ID of the Billingentityinternal 
+///  @param pkiBillingentityinternalID  
 ///
 ///  @returns EZBillingentityinternalGetObjectV2Response*
 ///

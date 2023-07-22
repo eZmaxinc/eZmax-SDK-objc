@@ -8,7 +8,9 @@ Name | Type | Description | Notes
 **bEzsignfoldersignerassociationDelayedsend** | **NSNumber*** | If this flag is true the signatory is part of a delayed send. | 
 **bEzsignfoldersignerassociationReceivecopy** | **NSNumber*** | If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. | 
 **tEzsignfoldersignerassociationMessage** | **NSString*** | A custom text message that will be added to the email sent. | 
+**objEzsignsignergroup** | [**EZEzsignsignergroupResponseCompound***](EZEzsignsignergroupResponseCompound.md) |  | [optional] 
 **objUser** | [**EZEzsignfoldersignerassociationResponseCompoundUser***](EZEzsignfoldersignerassociationResponseCompoundUser.md) |  | [optional] 
+**objUsergroup** | [**EZUsergroupResponseCompound***](EZUsergroupResponseCompound.md) |  | [optional] 
 **objEzsignsigner** | [**EZEzsignsignerResponseCompound***](EZEzsignsignerResponseCompound.md) |  | [optional] 
 **bEzsignfoldersignerassociationHasactionableelementsCurrent** | **NSNumber*** | Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step | 
 **bEzsignfoldersignerassociationHasactionableelementsFuture** | **NSNumber*** | Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step | [optional] 

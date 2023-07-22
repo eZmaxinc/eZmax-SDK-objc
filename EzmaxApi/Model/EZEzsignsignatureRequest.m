@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignsignatureID": @"pkiEzsignsignatureID", @"fkiEzsignfoldersignerassociationID": @"fkiEzsignfoldersignerassociationID", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"iEzsignsignatureX": @"iEzsignsignatureX", @"iEzsignsignatureY": @"iEzsignsignatureY", @"iEzsignsignatureStep": @"iEzsignsignatureStep", @"eEzsignsignatureType": @"eEzsignsignatureType", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"tEzsignsignatureTooltip": @"tEzsignsignatureTooltip", @"eEzsignsignatureTooltipposition": @"eEzsignsignatureTooltipposition", @"eEzsignsignatureFont": @"eEzsignsignatureFont", @"fkiEzsignfoldersignerassociationIDValidation": @"fkiEzsignfoldersignerassociationIDValidation", @"bEzsignsignatureRequired": @"bEzsignsignatureRequired", @"eEzsignsignatureAttachmentnamesource": @"eEzsignsignatureAttachmentnamesource", @"sEzsignsignatureAttachmentdescription": @"sEzsignsignatureAttachmentdescription", @"iEzsignsignatureValidationstep": @"iEzsignsignatureValidationstep" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignsignatureID": @"pkiEzsignsignatureID", @"fkiEzsignfoldersignerassociationID": @"fkiEzsignfoldersignerassociationID", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"iEzsignsignatureX": @"iEzsignsignatureX", @"iEzsignsignatureY": @"iEzsignsignatureY", @"iEzsignsignatureWidth": @"iEzsignsignatureWidth", @"iEzsignsignatureHeight": @"iEzsignsignatureHeight", @"iEzsignsignatureStep": @"iEzsignsignatureStep", @"eEzsignsignatureType": @"eEzsignsignatureType", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"tEzsignsignatureTooltip": @"tEzsignsignatureTooltip", @"eEzsignsignatureTooltipposition": @"eEzsignsignatureTooltipposition", @"eEzsignsignatureFont": @"eEzsignsignatureFont", @"fkiEzsignfoldersignerassociationIDValidation": @"fkiEzsignfoldersignerassociationIDValidation", @"bEzsignsignatureRequired": @"bEzsignsignatureRequired", @"eEzsignsignatureAttachmentnamesource": @"eEzsignsignatureAttachmentnamesource", @"sEzsignsignatureAttachmentdescription": @"sEzsignsignatureAttachmentdescription", @"iEzsignsignatureValidationstep": @"iEzsignsignatureValidationstep", @"eEzsignsignatureTextvalidation": @"eEzsignsignatureTextvalidation", @"sEzsignsignatureRegexp": @"sEzsignsignatureRegexp" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsignsignatureID", @"tEzsignsignatureTooltip", @"eEzsignsignatureTooltipposition", @"eEzsignsignatureFont", @"fkiEzsignfoldersignerassociationIDValidation", @"bEzsignsignatureRequired", @"eEzsignsignatureAttachmentnamesource", @"sEzsignsignatureAttachmentdescription", @"iEzsignsignatureValidationstep"];
+  NSArray *optionalProperties = @[@"pkiEzsignsignatureID", @"iEzsignsignatureWidth", @"iEzsignsignatureHeight", @"tEzsignsignatureTooltip", @"eEzsignsignatureTooltipposition", @"eEzsignsignatureFont", @"fkiEzsignfoldersignerassociationIDValidation", @"bEzsignsignatureRequired", @"eEzsignsignatureAttachmentnamesource", @"sEzsignsignatureAttachmentdescription", @"iEzsignsignatureValidationstep", @"eEzsignsignatureTextvalidation", @"sEzsignsignatureRegexp"];
   return [optionalProperties containsObject:propertyName];
 }
 

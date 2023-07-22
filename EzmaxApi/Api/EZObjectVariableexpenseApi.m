@@ -126,7 +126,7 @@ NSInteger kEZObjectVariableexpenseApiMissingParamErrorCode = 234513;
 ///
 /// Edit an existing Variableexpense
 /// 
-///  @param pkiVariableexpenseID The unique ID of the Variableexpense 
+///  @param pkiVariableexpenseID  
 ///
 ///  @param variableexpenseEditObjectV1Request  
 ///
@@ -376,7 +376,7 @@ NSInteger kEZObjectVariableexpenseApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Variableexpense
 /// 
-///  @param pkiVariableexpenseID The unique ID of the Variableexpense 
+///  @param pkiVariableexpenseID  
 ///
 ///  @returns EZVariableexpenseGetObjectV2Response*
 ///

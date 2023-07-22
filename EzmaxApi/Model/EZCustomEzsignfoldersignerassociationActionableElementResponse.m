@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfoldersignerassociationID": @"pkiEzsignfoldersignerassociationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"bEzsignfoldersignerassociationDelayedsend": @"bEzsignfoldersignerassociationDelayedsend", @"bEzsignfoldersignerassociationReceivecopy": @"bEzsignfoldersignerassociationReceivecopy", @"tEzsignfoldersignerassociationMessage": @"tEzsignfoldersignerassociationMessage", @"objUser": @"objUser", @"objEzsignsigner": @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsCurrent": @"bEzsignfoldersignerassociationHasactionableelementsCurrent", @"bEzsignfoldersignerassociationHasactionableelementsFuture": @"bEzsignfoldersignerassociationHasactionableelementsFuture" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfoldersignerassociationID": @"pkiEzsignfoldersignerassociationID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"bEzsignfoldersignerassociationDelayedsend": @"bEzsignfoldersignerassociationDelayedsend", @"bEzsignfoldersignerassociationReceivecopy": @"bEzsignfoldersignerassociationReceivecopy", @"tEzsignfoldersignerassociationMessage": @"tEzsignfoldersignerassociationMessage", @"objEzsignsignergroup": @"objEzsignsignergroup", @"objUser": @"objUser", @"objUsergroup": @"objUsergroup", @"objEzsignsigner": @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsCurrent": @"bEzsignfoldersignerassociationHasactionableelementsCurrent", @"bEzsignfoldersignerassociationHasactionableelementsFuture": @"bEzsignfoldersignerassociationHasactionableelementsFuture" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objUser", @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsFuture"];
+  NSArray *optionalProperties = @[@"objEzsignsignergroup", @"objUser", @"objUsergroup", @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsFuture"];
   return [optionalProperties containsObject:propertyName];
 }
 

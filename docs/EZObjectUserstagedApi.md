@@ -4,11 +4,73 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**userstagedCreateUserV1**](EZObjectUserstagedApi.md#userstagedcreateuserv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 [**userstagedDeleteObjectV1**](EZObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 [**userstagedGetListV1**](EZObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
 [**userstagedGetObjectV2**](EZObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
 [**userstagedMapV1**](EZObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 
+
+# **userstagedCreateUserV1**
+```objc
+-(NSURLSessionTask*) userstagedCreateUserV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
+    body: (NSObject*) body
+        completionHandler: (void (^)(EZUserstagedCreateUserV1Response* output, NSError* error)) handler;
+```
+
+Create a User from a Userstaged and then map it
+
+Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserstagedID = @56; // 
+NSObject* body = NULL; // 
+
+EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
+
+// Create a User from a Userstaged and then map it
+[apiInstance userstagedCreateUserV1WithPkiUserstagedID:pkiUserstagedID
+              body:body
+          completionHandler: ^(EZUserstagedCreateUserV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUserstagedApi->userstagedCreateUserV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserstagedID** | **NSNumber***|  | 
+ **body** | **NSObject***|  | 
+
+### Return type
+
+[**EZUserstagedCreateUserV1Response***](EZUserstagedCreateUserV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userstagedDeleteObjectV1**
 ```objc
@@ -30,7 +92,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiUserstagedID = @56; // The unique ID of the Userstaged
+NSNumber* pkiUserstagedID = @56; // 
 
 EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
 
@@ -50,7 +112,7 @@ EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **NSNumber***| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -160,7 +222,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiUserstagedID = @56; // The unique ID of the Userstaged
+NSNumber* pkiUserstagedID = @56; // 
 
 EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
 
@@ -180,7 +242,7 @@ EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **NSNumber***| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **NSNumber***|  | 
 
 ### Return type
 
@@ -218,7 +280,7 @@ EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiUserstagedID = @56; // The unique ID of the Userstaged
+NSNumber* pkiUserstagedID = @56; // 
 EZUserstagedMapV1Request* userstagedMapV1Request = [[EZUserstagedMapV1Request alloc] init]; // 
 
 EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
@@ -240,7 +302,7 @@ EZObjectUserstagedApi*apiInstance = [[EZObjectUserstagedApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **NSNumber***| The unique ID of the Userstaged | 
+ **pkiUserstagedID** | **NSNumber***|  | 
  **userstagedMapV1Request** | [**EZUserstagedMapV1Request***](EZUserstagedMapV1Request.md)|  | 
 
 ### Return type

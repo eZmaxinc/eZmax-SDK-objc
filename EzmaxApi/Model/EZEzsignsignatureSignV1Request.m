@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sValue": @"sValue", @"bIsAutomatic": @"bIsAutomatic" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sValue": @"sValue", @"eAttachmentsConfirmationDecision": @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason": @"sAttachmentsRefusalReason", @"sSvg": @"sSvg", @"aObjFile": @"a_objFile", @"bIsAutomatic": @"bIsAutomatic" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sValue", ];
+  NSArray *optionalProperties = @[@"sValue", @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason", @"sSvg", @"aObjFile", ];
   return [optionalProperties containsObject:propertyName];
 }
 

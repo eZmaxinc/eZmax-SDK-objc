@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sErrorMessage** | **NSString*** | More detail about the error | 
-**eErrorCode** | **NSString*** | The error code. See documentation for valid values | 
+**sErrorMessage** | **NSString*** | The message giving details about the error | 
+**eErrorCode** | [**EZFieldEErrorCode***](EZFieldEErrorCode.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

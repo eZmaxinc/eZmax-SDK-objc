@@ -3,6 +3,7 @@
 #import "EZApiClient.h"
 #import "EZCommonResponseError.h"
 #import "EZHeaderAcceptLanguage.h"
+#import "EZUserstagedCreateUserV1Response.h"
 #import "EZUserstagedDeleteObjectV1Response.h"
 #import "EZUserstagedGetListV1Response.h"
 #import "EZUserstagedGetObjectV2Response.h"
@@ -56,9 +57,92 @@ NSInteger kEZObjectUserstagedApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
+/// Create a User from a Userstaged and then map it
+/// Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+///  @param pkiUserstagedID  
+///
+///  @param body  
+///
+///  @returns EZUserstagedCreateUserV1Response*
+///
+-(NSURLSessionTask*) userstagedCreateUserV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZUserstagedCreateUserV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserstagedID' is set
+    if (pkiUserstagedID == nil) {
+        NSParameterAssert(pkiUserstagedID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserstagedID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUserstagedApiErrorDomain code:kEZObjectUserstagedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'body' is set
+    if (body == nil) {
+        NSParameterAssert(body);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"body"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUserstagedApiErrorDomain code:kEZObjectUserstagedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/userstaged/{pkiUserstagedID}/createUser"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserstagedID != nil) {
+        pathParams[@"pkiUserstagedID"] = pkiUserstagedID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = body;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZUserstagedCreateUserV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZUserstagedCreateUserV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Delete an existing Userstaged
 /// 
-///  @param pkiUserstagedID The unique ID of the Userstaged 
+///  @param pkiUserstagedID  
 ///
 ///  @returns EZUserstagedDeleteObjectV1Response*
 ///
@@ -207,7 +291,7 @@ NSInteger kEZObjectUserstagedApiMissingParamErrorCode = 234513;
 ///
 /// Retrieve an existing Userstaged
 /// 
-///  @param pkiUserstagedID The unique ID of the Userstaged 
+///  @param pkiUserstagedID  
 ///
 ///  @returns EZUserstagedGetObjectV2Response*
 ///
@@ -275,7 +359,7 @@ NSInteger kEZObjectUserstagedApiMissingParamErrorCode = 234513;
 ///
 /// Map the Userstaged to an existing user
 /// 
-///  @param pkiUserstagedID The unique ID of the Userstaged 
+///  @param pkiUserstagedID  
 ///
 ///  @param userstagedMapV1Request  
 ///

@@ -111,6 +111,20 @@
                        @"key": @"Authorization",
                        @"value": [self getApiKeyWithPrefix:@"Authorization"]
                    },
+               @"Bearer":
+                   @{
+                       @"type": @"bearer",
+                       @"in": @"header",
+                       @"key": @"Authorization",
+                       @"value": [self getAccessToken]
+                   },
+               @"Presigned":
+                   @{
+                       @"type": @"api_key",
+                       @"in": @"query",
+                       @"key": @"sAuthorization",
+                       @"value": [self getApiKeyWithPrefix:@"sAuthorization"]
+                   },
                };
 }
 

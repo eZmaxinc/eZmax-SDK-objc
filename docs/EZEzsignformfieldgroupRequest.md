@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **sEzsignformfieldgroupRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **tEzsignformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **eEzsignformfieldgroupTooltipposition** | [**EZFieldEEzsignformfieldgroupTooltipposition***](EZFieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
+**eEzsignformfieldgroupTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

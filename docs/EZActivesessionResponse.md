@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **NSNumber*** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **NSNumber*** | The unique ID of the Systemconfigurationtype | [optional] 
+**fkiSignatureID** | **NSNumber*** | The unique ID of the Signature | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
