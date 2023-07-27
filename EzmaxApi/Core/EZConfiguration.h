@@ -15,7 +15,7 @@
 */
 
 
-static NSString * const kEZAPIVersion = @"1.1.18";
+static NSString * const kEZAPIVersion = @"1.1.19";
 
 @protocol EZConfiguration <NSObject>
 

@@ -5,10 +5,15 @@
 #import "EZApikeyEditObjectV1Response.h"
 #import "EZApikeyEditPermissionsV1Request.h"
 #import "EZApikeyEditPermissionsV1Response.h"
+#import "EZApikeyGetCorsV1Response.h"
+#import "EZApikeyGetListV1Response.h"
 #import "EZApikeyGetObjectV2Response.h"
 #import "EZApikeyGetPermissionsV1Response.h"
 #import "EZApikeyGetSubnetsV1Response.h"
+#import "EZApikeyRegenerateV1Request.h"
+#import "EZApikeyRegenerateV1Response.h"
 #import "EZCommonResponseError.h"
+#import "EZHeaderAcceptLanguage.h"
 #import "EZApi.h"
 
 /**
@@ -76,6 +81,40 @@ extern NSInteger kEZObjectApikeyApiMissingParamErrorCode;
     completionHandler: (void (^)(EZApikeyEditPermissionsV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Apikey's cors
+/// 
+///
+/// @param pkiApikeyID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZApikeyGetCorsV1Response*
+-(NSURLSessionTask*) apikeyGetCorsV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
+    completionHandler: (void (^)(EZApikeyGetCorsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Apikey list
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+///
+/// @param eOrderBy Specify how you want the results to be sorted (optional)
+/// @param iRowMax  (optional) (default to @10000)
+/// @param iRowOffset  (optional) (default to @0)
+/// @param acceptLanguage  (optional)
+/// @param sFilter  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
+///
+/// @return EZApikeyGetListV1Response*
+-(NSURLSessionTask*) apikeyGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(EZApikeyGetListV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Apikey
 /// 
 ///
@@ -113,6 +152,21 @@ extern NSInteger kEZObjectApikeyApiMissingParamErrorCode;
 /// @return EZApikeyGetSubnetsV1Response*
 -(NSURLSessionTask*) apikeyGetSubnetsV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
     completionHandler: (void (^)(EZApikeyGetSubnetsV1Response* output, NSError* error)) handler;
+
+
+/// Regenerate the Apikey
+/// 
+///
+/// @param pkiApikeyID 
+/// @param apikeyRegenerateV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZApikeyRegenerateV1Response*
+-(NSURLSessionTask*) apikeyRegenerateV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
+    apikeyRegenerateV1Request: (EZApikeyRegenerateV1Request*) apikeyRegenerateV1Request
+    completionHandler: (void (^)(EZApikeyRegenerateV1Response* output, NSError* error)) handler;
 
 
 

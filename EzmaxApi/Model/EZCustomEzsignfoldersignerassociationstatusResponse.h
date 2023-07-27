@@ -34,6 +34,9 @@
 /* The first name of the Ezsignsigner [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldersignerassociationstatusFirstname;
+/* The description of the Ezsignsigner [optional]
+ */
+@property(nonatomic) NSString* sEzsignfoldersignerassociationstatusDescriptionX;
 
 @property(nonatomic) NSArray<EZCustomEzsignsignaturestatusResponse>* aObjEzsignsignaturestatus;
 

@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **tEzsignfoldersignerassociationMessage** | **NSString*** | A custom text message that will be added to the email sent. | 
 **objEzsignsignergroup** | [**EZEzsignsignergroupResponseCompound***](EZEzsignsignergroupResponseCompound.md) |  | [optional] 
 **objUser** | [**EZEzsignfoldersignerassociationResponseCompoundUser***](EZEzsignfoldersignerassociationResponseCompoundUser.md) |  | [optional] 
-**objUsergroup** | [**EZUsergroupResponseCompound***](EZUsergroupResponseCompound.md) |  | [optional] 
 **objEzsignsigner** | [**EZEzsignsignerResponseCompound***](EZEzsignsignerResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

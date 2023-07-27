@@ -17,15 +17,12 @@
 #import "EZEzsignfoldersignerassociationResponseCompoundUser.h"
 #import "EZEzsignsignerResponseCompound.h"
 #import "EZEzsignsignergroupResponseCompound.h"
-#import "EZUsergroupResponseCompound.h"
 @protocol EZEzsignfoldersignerassociationResponseCompoundUser;
 @class EZEzsignfoldersignerassociationResponseCompoundUser;
 @protocol EZEzsignsignerResponseCompound;
 @class EZEzsignsignerResponseCompound;
 @protocol EZEzsignsignergroupResponseCompound;
 @class EZEzsignsignergroupResponseCompound;
-@protocol EZUsergroupResponseCompound;
-@class EZUsergroupResponseCompound;
 
 
 
@@ -53,8 +50,6 @@
 @property(nonatomic) EZEzsignsignergroupResponseCompound* objEzsignsignergroup;
 
 @property(nonatomic) EZEzsignfoldersignerassociationResponseCompoundUser* objUser;
-
-@property(nonatomic) EZUsergroupResponseCompound* objUsergroup;
 
 @property(nonatomic) EZEzsignsignerResponseCompound* objEzsignsigner;
 /* Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step 

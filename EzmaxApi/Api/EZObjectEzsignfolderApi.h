@@ -17,6 +17,7 @@
 #import "EZEzsignfolderGetCommunicationListV1Response.h"
 #import "EZEzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EZEzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
+#import "EZEzsignfolderGetEzsignfoldersignerassociationsmineV1Response.h"
 #import "EZEzsignfolderGetEzsignsignaturesAutomaticV1Response.h"
 #import "EZEzsignfolderGetFormsDataV1Response.h"
 #import "EZEzsignfolderGetListV1Response.h"
@@ -240,6 +241,19 @@ extern NSInteger kEZObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EZEzsignfolderGetEzsignfoldersignerassociationsV1Response*
 -(NSURLSessionTask*) ezsignfolderGetEzsignfoldersignerassociationsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EZEzsignfolderGetEzsignfoldersignerassociationsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZEzsignfolderGetEzsignfoldersignerassociationsmineV1Response*
+-(NSURLSessionTask*) ezsignfolderGetEzsignfoldersignerassociationsmineV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EZEzsignfolderGetEzsignfoldersignerassociationsmineV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures

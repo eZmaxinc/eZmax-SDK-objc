@@ -14,6 +14,9 @@
 */
 
 
+#import "EZMultilingualEzsignsignergroupDescription.h"
+@protocol EZMultilingualEzsignsignergroupDescription;
+@class EZMultilingualEzsignsignergroupDescription;
 
 
 
@@ -25,5 +28,10 @@
 /* The unique ID of the Ezsignsignergroup 
  */
 @property(nonatomic) NSNumber* pkiEzsignsignergroupID;
+
+@property(nonatomic) EZMultilingualEzsignsignergroupDescription* objEzsignsignergroupDescription;
+/* The Description of the Ezsignsignergroup in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sEzsignsignergroupDescriptionX;
 
 @end

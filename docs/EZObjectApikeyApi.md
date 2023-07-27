@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**apikeyCreateObjectV2**](EZObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 [**apikeyEditObjectV1**](EZObjectApikeyApi.md#apikeyeditobjectv1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
 [**apikeyEditPermissionsV1**](EZObjectApikeyApi.md#apikeyeditpermissionsv1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+[**apikeyGetCorsV1**](EZObjectApikeyApi.md#apikeygetcorsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getCors | Retrieve an existing Apikey&#39;s cors
+[**apikeyGetListV1**](EZObjectApikeyApi.md#apikeygetlistv1) | **GET** /1/object/apikey/getList | Retrieve Apikey list
 [**apikeyGetObjectV2**](EZObjectApikeyApi.md#apikeygetobjectv2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
 [**apikeyGetPermissionsV1**](EZObjectApikeyApi.md#apikeygetpermissionsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getPermissions | Retrieve an existing Apikey&#39;s Permissions
 [**apikeyGetSubnetsV1**](EZObjectApikeyApi.md#apikeygetsubnetsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey&#39;s subnets
+[**apikeyRegenerateV1**](EZObjectApikeyApi.md#apikeyregeneratev1) | **POST** /1/object/apikey/{pkiApikeyID}/regenerate | Regenerate the Apikey
 
 
 # **apikeyCreateObjectV2**
@@ -191,6 +194,134 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **apikeyGetCorsV1**
+```objc
+-(NSURLSessionTask*) apikeyGetCorsV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
+        completionHandler: (void (^)(EZApikeyGetCorsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Apikey's cors
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiApikeyID = @56; // 
+
+EZObjectApikeyApi*apiInstance = [[EZObjectApikeyApi alloc] init];
+
+// Retrieve an existing Apikey's cors
+[apiInstance apikeyGetCorsV1WithPkiApikeyID:pkiApikeyID
+          completionHandler: ^(EZApikeyGetCorsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectApikeyApi->apikeyGetCorsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiApikeyID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZApikeyGetCorsV1Response***](EZApikeyGetCorsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apikeyGetListV1**
+```objc
+-(NSURLSessionTask*) apikeyGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (EZHeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+        completionHandler: (void (^)(EZApikeyGetListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Apikey list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
+NSNumber* iRowMax = @10000; //  (optional) (default to @10000)
+NSNumber* iRowOffset = @0; //  (optional) (default to @0)
+EZHeaderAcceptLanguage acceptLanguage = [[EZHeaderAcceptLanguage alloc] init]; //  (optional)
+NSString* sFilter = @"sFilter_example"; //  (optional)
+
+EZObjectApikeyApi*apiInstance = [[EZObjectApikeyApi alloc] init];
+
+// Retrieve Apikey list
+[apiInstance apikeyGetListV1WithEOrderBy:eOrderBy
+              iRowMax:iRowMax
+              iRowOffset:iRowOffset
+              acceptLanguage:acceptLanguage
+              sFilter:sFilter
+          completionHandler: ^(EZApikeyGetListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectApikeyApi->apikeyGetListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **NSNumber***|  | [optional] [default to @10000]
+ **iRowOffset** | **NSNumber***|  | [optional] [default to @0]
+ **acceptLanguage** | [**EZHeaderAcceptLanguage**](.md)|  | [optional] 
+ **sFilter** | **NSString***|  | [optional] 
+
+### Return type
+
+[**EZApikeyGetListV1Response***](EZApikeyGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **apikeyGetObjectV2**
 ```objc
 -(NSURLSessionTask*) apikeyGetObjectV2WithPkiApikeyID: (NSNumber*) pkiApikeyID
@@ -354,6 +485,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apikeyRegenerateV1**
+```objc
+-(NSURLSessionTask*) apikeyRegenerateV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
+    apikeyRegenerateV1Request: (EZApikeyRegenerateV1Request*) apikeyRegenerateV1Request
+        completionHandler: (void (^)(EZApikeyRegenerateV1Response* output, NSError* error)) handler;
+```
+
+Regenerate the Apikey
+
+
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiApikeyID = @56; // 
+EZApikeyRegenerateV1Request* apikeyRegenerateV1Request = [[EZApikeyRegenerateV1Request alloc] init]; // 
+
+EZObjectApikeyApi*apiInstance = [[EZObjectApikeyApi alloc] init];
+
+// Regenerate the Apikey
+[apiInstance apikeyRegenerateV1WithPkiApikeyID:pkiApikeyID
+              apikeyRegenerateV1Request:apikeyRegenerateV1Request
+          completionHandler: ^(EZApikeyRegenerateV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectApikeyApi->apikeyRegenerateV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiApikeyID** | **NSNumber***|  | 
+ **apikeyRegenerateV1Request** | [**EZApikeyRegenerateV1Request***](EZApikeyRegenerateV1Request.md)|  | 
+
+### Return type
+
+[**EZApikeyRegenerateV1Response***](EZApikeyRegenerateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

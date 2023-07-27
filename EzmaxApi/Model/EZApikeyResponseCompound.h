@@ -15,9 +15,12 @@
 
 
 #import "EZCommonAudit.h"
+#import "EZCustomContactNameResponse.h"
 #import "EZMultilingualApikeyDescription.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
+@protocol EZCustomContactNameResponse;
+@class EZCustomContactNameResponse;
 @protocol EZMultilingualApikeyDescription;
 @class EZMultilingualApikeyDescription;
 
@@ -36,12 +39,20 @@
 @property(nonatomic) NSNumber* fkiUserID;
 
 @property(nonatomic) EZMultilingualApikeyDescription* objApikeyDescription;
-/* The secret token for the API key.  This will be returned only on creation. [optional]
+
+@property(nonatomic) EZCustomContactNameResponse* objContactName;
+/* The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
  */
-@property(nonatomic) NSString* sComputedToken;
+@property(nonatomic) NSString* sApikeyApikey;
+/* The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
+ */
+@property(nonatomic) NSString* sApikeySecret;
 /* Whether the apikey is active or not 
  */
 @property(nonatomic) NSNumber* bApikeyIsactive;
+/* Whether the apikey is signed or not [optional]
+ */
+@property(nonatomic) NSNumber* bApikeyIssigned;
 
 @property(nonatomic) EZCommonAudit* objAudit;
 

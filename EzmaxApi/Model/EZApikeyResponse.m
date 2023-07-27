@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiApikeyID": @"pkiApikeyID", @"fkiUserID": @"fkiUserID", @"objApikeyDescription": @"objApikeyDescription", @"sComputedToken": @"sComputedToken", @"bApikeyIsactive": @"bApikeyIsactive", @"objAudit": @"objAudit" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiApikeyID": @"pkiApikeyID", @"fkiUserID": @"fkiUserID", @"objApikeyDescription": @"objApikeyDescription", @"objContactName": @"objContactName", @"sApikeyApikey": @"sApikeyApikey", @"sApikeySecret": @"sApikeySecret", @"bApikeyIsactive": @"bApikeyIsactive", @"bApikeyIssigned": @"bApikeyIssigned", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sComputedToken", ];
+  NSArray *optionalProperties = @[@"sApikeyApikey", @"sApikeySecret", @"bApikeyIssigned", ];
   return [optionalProperties containsObject:propertyName];
 }
 

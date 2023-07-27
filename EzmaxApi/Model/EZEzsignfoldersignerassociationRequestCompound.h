@@ -31,9 +31,6 @@
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Usergroup [optional]
- */
-@property(nonatomic) NSNumber* fkiUsergroupID;
 /* The unique ID of the Ezsignsignergroup [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignsignergroupID;

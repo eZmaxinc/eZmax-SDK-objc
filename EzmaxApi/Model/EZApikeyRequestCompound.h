@@ -36,5 +36,8 @@
 /* Whether the apikey is active or not [optional]
  */
 @property(nonatomic) NSNumber* bApikeyIsactive;
+/* Whether the apikey is signed or not [optional]
+ */
+@property(nonatomic) NSNumber* bApikeyIssigned;
 
 @end
