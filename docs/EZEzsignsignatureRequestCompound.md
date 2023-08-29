@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **eEzsignsignatureAttachmentnamesource** | [**EZFieldEEzsignsignatureAttachmentnamesource***](EZFieldEEzsignsignatureAttachmentnamesource.md) |  | [optional] 
 **sEzsignsignatureAttachmentdescription** | **NSString*** | The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments | [optional] 
 **iEzsignsignatureValidationstep** | **NSNumber*** | The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments | [optional] 
+**iEzsignsignatureMaxlength** | **NSNumber*** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** | [optional] 
 **eEzsignsignatureTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **sEzsignsignatureRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 

@@ -32,10 +32,10 @@
 @interface EZClonehistoryGetListV1Response : EZObject
 
 
-@property(nonatomic) EZClonehistoryGetListV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayloadGetList* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZClonehistoryGetListV1ResponseMPayload* mPayload;
 
 @end

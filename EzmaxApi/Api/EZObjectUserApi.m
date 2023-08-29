@@ -9,12 +9,14 @@
 #import "EZUserEditObjectV1Response.h"
 #import "EZUserEditPermissionsV1Request.h"
 #import "EZUserEditPermissionsV1Response.h"
+#import "EZUserGetApikeysV1Response.h"
 #import "EZUserGetAutocompleteV2Response.h"
 #import "EZUserGetEffectivePermissionsV1Response.h"
 #import "EZUserGetListV1Response.h"
 #import "EZUserGetObjectV2Response.h"
 #import "EZUserGetPermissionsV1Response.h"
 #import "EZUserGetSubnetsV1Response.h"
+#import "EZUserSendPasswordResetV1Response.h"
 
 
 @interface EZObjectUserApi ()
@@ -290,6 +292,74 @@ NSInteger kEZObjectUserApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUserEditPermissionsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing User's Apikeys
+/// 
+///  @param pkiUserID  
+///
+///  @returns EZUserGetApikeysV1Response*
+///
+-(NSURLSessionTask*) userGetApikeysV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(EZUserGetApikeysV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUserApiErrorDomain code:kEZObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/user/{pkiUserID}/getApikeys"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZUserGetApikeysV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZUserGetApikeysV1Response*)data, error);
                                 }
                             }];
 }
@@ -729,6 +799,89 @@ NSInteger kEZObjectUserApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUserGetSubnetsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Send password reset
+/// Send the password reset email
+///  @param pkiUserID  
+///
+///  @param body  
+///
+///  @returns EZUserSendPasswordResetV1Response*
+///
+-(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZUserSendPasswordResetV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUserApiErrorDomain code:kEZObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'body' is set
+    if (body == nil) {
+        NSParameterAssert(body);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"body"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUserApiErrorDomain code:kEZObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/user/{pkiUserID}/sendPasswordReset"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = body;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZUserSendPasswordResetV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZUserSendPasswordResetV1Response*)data, error);
                                 }
                             }];
 }

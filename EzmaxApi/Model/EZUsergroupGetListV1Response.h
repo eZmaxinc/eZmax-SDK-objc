@@ -32,10 +32,10 @@
 @interface EZUsergroupGetListV1Response : EZObject
 
 
-@property(nonatomic) EZUsergroupGetListV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayloadGetList* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZUsergroupGetListV1ResponseMPayload* mPayload;
 
 @end

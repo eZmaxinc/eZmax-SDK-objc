@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **iEzsigntemplateformfieldgroupMaxlength** | **NSNumber*** | The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** | [optional] 
 **bEzsigntemplateformfieldgroupEncrypted** | **NSNumber*** | Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** | [optional] 
 **sEzsigntemplateformfieldgroupRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** | [optional] 
+**eEzsigntemplateformfieldgroupTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **tEzsigntemplateformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup | [optional] 
 **eEzsigntemplateformfieldgroupTooltipposition** | [**EZFieldEEzsigntemplateformfieldgroupTooltipposition***](EZFieldEEzsigntemplateformfieldgroupTooltipposition.md) |  | [optional] 
 

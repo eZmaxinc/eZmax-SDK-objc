@@ -14,9 +14,12 @@
 */
 
 
+#import "EZEnumTextvalidation.h"
 #import "EZFieldEEzsignformfieldgroupSignerrequirement.h"
 #import "EZFieldEEzsignformfieldgroupTooltipposition.h"
 #import "EZFieldEEzsignformfieldgroupType.h"
+@protocol EZEnumTextvalidation;
+@class EZEnumTextvalidation;
 @protocol EZFieldEEzsignformfieldgroupSignerrequirement;
 @class EZFieldEEzsignformfieldgroupSignerrequirement;
 @protocol EZFieldEEzsignformfieldgroupTooltipposition;
@@ -65,6 +68,8 @@
 /* Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSNumber* bEzsignformfieldgroupEncrypted;
+
+@property(nonatomic) EZEnumTextvalidation* eEzsignformfieldgroupTextvalidation;
 /* A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupRegexp;

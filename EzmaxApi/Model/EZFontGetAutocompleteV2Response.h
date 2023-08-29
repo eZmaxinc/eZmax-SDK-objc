@@ -32,10 +32,10 @@
 @interface EZFontGetAutocompleteV2Response : EZObject
 
 
-@property(nonatomic) EZFontGetAutocompleteV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZFontGetAutocompleteV2ResponseMPayload* mPayload;
 
 @end

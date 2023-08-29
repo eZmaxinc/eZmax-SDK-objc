@@ -26,6 +26,6 @@
 @interface EZEzsignsignergroupEditObjectV1Request : EZObject
 
 
-@property(nonatomic) EZEzsignsignergroupRequestCompound* objBranding;
+@property(nonatomic) EZEzsignsignergroupRequestCompound* objEzsignsignergroup;
 
 @end

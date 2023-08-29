@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **dtEzsignsignatureDate** | **NSString*** | The date the Ezsignsignature was signed | [optional] 
 **iEzsignsignatureattachmentCount** | **NSNumber*** | The count of Ezsignsignatureattachment | [optional] 
 **sEzsignsignatureDescription** | **NSString*** | The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea** | [optional] 
+**iEzsignsignatureMaxlength** | **NSNumber*** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** | [optional] 
 **eEzsignsignatureTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **sEzsignsignatureRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **objContactName** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | 

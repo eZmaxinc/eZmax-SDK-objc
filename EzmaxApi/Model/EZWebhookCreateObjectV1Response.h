@@ -32,10 +32,10 @@
 @interface EZWebhookCreateObjectV1Response : EZObject
 
 
-@property(nonatomic) EZWebhookCreateObjectV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZWebhookCreateObjectV1ResponseMPayload* mPayload;
 
 @end

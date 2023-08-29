@@ -31,12 +31,12 @@
 
 @interface EZEzsigntemplatedocumentGetWordsPositionsV1Response : EZObject
 
-/* Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions 
- */
-@property(nonatomic) NSArray<EZCustomWordPositionWordResponse>* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+/* Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions 
+ */
+@property(nonatomic) NSArray<EZCustomWordPositionWordResponse>* mPayload;
 
 @end

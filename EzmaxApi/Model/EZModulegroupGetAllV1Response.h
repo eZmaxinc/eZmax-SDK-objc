@@ -32,10 +32,10 @@
 @interface EZModulegroupGetAllV1Response : EZObject
 
 
-@property(nonatomic) EZModulegroupGetAllV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZModulegroupGetAllV1ResponseMPayload* mPayload;
 
 @end

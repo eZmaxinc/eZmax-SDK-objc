@@ -32,10 +32,10 @@
 @interface EZApikeyCreateObjectV2Response : EZObject
 
 
-@property(nonatomic) EZApikeyCreateObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZApikeyCreateObjectV2ResponseMPayload* mPayload;
 
 @end

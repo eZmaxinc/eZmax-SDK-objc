@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EZSessionhistoryGetListV1ResponseMPayload***](EZSessionhistoryGetListV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**EZCommonResponseObjDebugPayloadGetList***](EZCommonResponseObjDebugPayloadGetList.md) |  | [optional] 
+**objDebugPayload** | [**EZCommonResponseObjDebugPayloadGetList***](EZCommonResponseObjDebugPayloadGetList.md) |  | 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
+**mPayload** | [**EZSessionhistoryGetListV1ResponseMPayload***](EZSessionhistoryGetListV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

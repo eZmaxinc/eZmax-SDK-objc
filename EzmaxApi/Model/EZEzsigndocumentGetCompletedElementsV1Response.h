@@ -32,10 +32,10 @@
 @interface EZEzsigndocumentGetCompletedElementsV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentGetCompletedElementsV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigndocumentGetCompletedElementsV1ResponseMPayload* mPayload;
 
 @end

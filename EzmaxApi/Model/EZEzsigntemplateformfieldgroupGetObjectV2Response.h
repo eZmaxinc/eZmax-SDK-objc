@@ -32,10 +32,10 @@
 @interface EZEzsigntemplateformfieldgroupGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZEzsigntemplateformfieldgroupGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigntemplateformfieldgroupGetObjectV2ResponseMPayload* mPayload;
 
 @end

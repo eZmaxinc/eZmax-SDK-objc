@@ -14,11 +14,14 @@
 */
 
 
+#import "EZEnumTextvalidation.h"
 #import "EZEzsigntemplatesignaturecustomdateRequestCompound.h"
 #import "EZFieldEEzsigntemplatesignatureAttachmentnamesource.h"
 #import "EZFieldEEzsigntemplatesignatureFont.h"
 #import "EZFieldEEzsigntemplatesignatureTooltipposition.h"
 #import "EZFieldEEzsigntemplatesignatureType.h"
+@protocol EZEnumTextvalidation;
+@class EZEnumTextvalidation;
 @protocol EZEzsigntemplatesignaturecustomdateRequestCompound;
 @class EZEzsigntemplatesignaturecustomdateRequestCompound;
 @protocol EZFieldEEzsigntemplatesignatureAttachmentnamesource;
@@ -58,6 +61,12 @@
 /* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. 
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureY;
+/* The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth. [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatesignatureWidth;
+/* The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight. [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatesignatureHeight;
 /* The step when the Ezsigntemplatesigner will be invited to sign 
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureStep;
@@ -81,6 +90,14 @@
 /* The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureValidationstep;
+/* The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatesignatureMaxlength;
+/* A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplatesignatureRegexp;
+
+@property(nonatomic) EZEnumTextvalidation* eEzsigntemplatesignatureTextvalidation;
 /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) [optional]
  */
 @property(nonatomic) NSNumber* bEzsigntemplatesignatureCustomdate;

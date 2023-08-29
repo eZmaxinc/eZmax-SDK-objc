@@ -32,10 +32,10 @@
 @interface EZEzsignfoldersignerassociationCreateObjectV2Response : EZObject
 
 
-@property(nonatomic) EZEzsignfoldersignerassociationCreateObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsignfoldersignerassociationCreateObjectV2ResponseMPayload* mPayload;
 
 @end

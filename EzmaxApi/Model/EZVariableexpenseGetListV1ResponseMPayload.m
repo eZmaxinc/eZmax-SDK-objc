@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjVariableexpense": @"a_objVariableexpense", @"iRowReturned": @"iRowReturned", @"iRowFiltered": @"iRowFiltered" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iRowReturned": @"iRowReturned", @"iRowFiltered": @"iRowFiltered", @"aObjVariableexpense": @"a_objVariableexpense" }];
 }
 
 /**

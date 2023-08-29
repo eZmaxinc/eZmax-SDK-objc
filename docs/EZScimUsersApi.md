@@ -22,9 +22,6 @@ Create a new User
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 EZScimUser* scimUser = [[EZScimUser alloc] init]; // 
@@ -75,9 +72,6 @@ Delete an existing User
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* userId = @"userId_example"; // 
@@ -126,9 +120,6 @@ Edit an existing User
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* userId = @"userId_example"; // 
@@ -182,9 +173,6 @@ Retrieve User list
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* filter = @"filter_example"; // Filter expression for searching users (optional)
@@ -235,9 +223,6 @@ Retrieve an existing User
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* userId = @"userId_example"; // 

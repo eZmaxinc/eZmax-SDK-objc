@@ -7,12 +7,14 @@ Method | HTTP request | Description
 [**userCreateObjectV1**](EZObjectUserApi.md#usercreateobjectv1) | **POST** /1/object/user | Create a new User
 [**userEditObjectV1**](EZObjectUserApi.md#usereditobjectv1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
 [**userEditPermissionsV1**](EZObjectUserApi.md#usereditpermissionsv1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
+[**userGetApikeysV1**](EZObjectUserApi.md#usergetapikeysv1) | **GET** /1/object/user/{pkiUserID}/getApikeys | Retrieve an existing User&#39;s Apikeys
 [**userGetAutocompleteV2**](EZObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 [**userGetEffectivePermissionsV1**](EZObjectUserApi.md#usergeteffectivepermissionsv1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
 [**userGetListV1**](EZObjectUserApi.md#usergetlistv1) | **GET** /1/object/user/getList | Retrieve User list
 [**userGetObjectV2**](EZObjectUserApi.md#usergetobjectv2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
 [**userGetPermissionsV1**](EZObjectUserApi.md#usergetpermissionsv1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
 [**userGetSubnetsV1**](EZObjectUserApi.md#usergetsubnetsv1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
+[**userSendPasswordResetV1**](EZObjectUserApi.md#usersendpasswordresetv1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset
 
 
 # **userCreateObjectV1**
@@ -190,6 +192,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userGetApikeysV1**
+```objc
+-(NSURLSessionTask*) userGetApikeysV1WithPkiUserID: (NSNumber*) pkiUserID
+        completionHandler: (void (^)(EZUserGetApikeysV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing User's Apikeys
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+
+EZObjectUserApi*apiInstance = [[EZObjectUserApi alloc] init];
+
+// Retrieve an existing User's Apikeys
+[apiInstance userGetApikeysV1WithPkiUserID:pkiUserID
+          completionHandler: ^(EZUserGetApikeysV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUserApi->userGetApikeysV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+
+### Return type
+
+[**EZUserGetApikeysV1Response***](EZUserGetApikeysV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -556,6 +613,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userSendPasswordResetV1**
+```objc
+-(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
+    body: (NSObject*) body
+        completionHandler: (void (^)(EZUserSendPasswordResetV1Response* output, NSError* error)) handler;
+```
+
+Send password reset
+
+Send the password reset email
+
+### Example
+```objc
+EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+NSObject* body = NULL; // 
+
+EZObjectUserApi*apiInstance = [[EZObjectUserApi alloc] init];
+
+// Send password reset
+[apiInstance userSendPasswordResetV1WithPkiUserID:pkiUserID
+              body:body
+          completionHandler: ^(EZUserSendPasswordResetV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling EZObjectUserApi->userSendPasswordResetV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+ **body** | **NSObject***|  | 
+
+### Return type
+
+[**EZUserSendPasswordResetV1Response***](EZUserSendPasswordResetV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

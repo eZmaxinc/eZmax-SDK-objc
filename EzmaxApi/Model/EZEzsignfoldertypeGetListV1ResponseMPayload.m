@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignfoldertype": @"a_objEzsignfoldertype", @"iRowReturned": @"iRowReturned", @"iRowFiltered": @"iRowFiltered" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iRowReturned": @"iRowReturned", @"iRowFiltered": @"iRowFiltered", @"aObjEzsignfoldertype": @"a_objEzsignfoldertype" }];
 }
 
 /**

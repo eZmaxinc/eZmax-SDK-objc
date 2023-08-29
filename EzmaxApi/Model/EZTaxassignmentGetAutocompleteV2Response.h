@@ -32,10 +32,10 @@
 @interface EZTaxassignmentGetAutocompleteV2Response : EZObject
 
 
-@property(nonatomic) EZTaxassignmentGetAutocompleteV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZTaxassignmentGetAutocompleteV2ResponseMPayload* mPayload;
 
 @end

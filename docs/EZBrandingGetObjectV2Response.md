@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EZBrandingGetObjectV2ResponseMPayload***](EZBrandingGetObjectV2ResponseMPayload.md) |  | 
-**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
+**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
+**mPayload** | [**EZBrandingGetObjectV2ResponseMPayload***](EZBrandingGetObjectV2ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,10 +32,10 @@
 @interface EZVariableexpenseGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZVariableexpenseGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZVariableexpenseGetObjectV2ResponseMPayload* mPayload;
 
 @end

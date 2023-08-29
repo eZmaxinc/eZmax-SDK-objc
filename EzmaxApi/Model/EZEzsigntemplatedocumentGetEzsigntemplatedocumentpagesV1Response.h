@@ -32,10 +32,10 @@
 @interface EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload* mPayload;
 
 @end

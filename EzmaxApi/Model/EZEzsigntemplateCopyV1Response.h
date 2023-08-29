@@ -32,10 +32,10 @@
 @interface EZEzsigntemplateCopyV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigntemplateCopyV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigntemplateCopyV1ResponseMPayload* mPayload;
 
 @end

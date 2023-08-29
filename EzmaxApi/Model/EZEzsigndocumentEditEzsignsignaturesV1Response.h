@@ -32,10 +32,10 @@
 @interface EZEzsigndocumentEditEzsignsignaturesV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentEditEzsignsignaturesV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigndocumentEditEzsignsignaturesV1ResponseMPayload* mPayload;
 
 @end

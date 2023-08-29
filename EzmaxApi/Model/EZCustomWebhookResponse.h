@@ -31,12 +31,6 @@
 
 @interface EZCustomWebhookResponse : EZObject
 
-/* The customer code assigned to your account 
- */
-@property(nonatomic) NSString* pksCustomerCode;
-/* Wheter the webhook received is a manual test or a real event 
- */
-@property(nonatomic) NSNumber* bWebhookTest;
 /* The unique ID of the Webhook 
  */
 @property(nonatomic) NSNumber* pkiWebhookID;
@@ -67,5 +61,11 @@
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
+/* The customer code assigned to your account 
+ */
+@property(nonatomic) NSString* pksCustomerCode;
+/* Wheter the webhook received is a manual test or a real event 
+ */
+@property(nonatomic) NSNumber* bWebhookTest;
 
 @end

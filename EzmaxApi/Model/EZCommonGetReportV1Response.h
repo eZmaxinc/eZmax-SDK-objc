@@ -32,10 +32,10 @@
 @interface EZCommonGetReportV1Response : EZObject
 
 
-@property(nonatomic) EZCommonGetReportV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZCommonGetReportV1ResponseMPayload* mPayload;
 
 @end

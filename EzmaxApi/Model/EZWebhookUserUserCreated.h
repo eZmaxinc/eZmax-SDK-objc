@@ -32,11 +32,11 @@
 @interface EZWebhookUserUserCreated : EZObject
 
 
-@property(nonatomic) EZUserResponseCompound* objUser;
-
 @property(nonatomic) EZCustomWebhookResponse* objWebhook;
 /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
  */
 @property(nonatomic) NSArray<EZAttemptResponseCompound>* aObjAttempt;
+
+@property(nonatomic) EZUserResponseCompound* objUser;
 
 @end

@@ -32,10 +32,10 @@
 @interface EZPaymenttermGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZPaymenttermGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZPaymenttermGetObjectV2ResponseMPayload* mPayload;
 
 @end

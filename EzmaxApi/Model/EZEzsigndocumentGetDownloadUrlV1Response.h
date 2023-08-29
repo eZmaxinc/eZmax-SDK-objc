@@ -32,10 +32,10 @@
 @interface EZEzsigndocumentGetDownloadUrlV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentGetDownloadUrlV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigndocumentGetDownloadUrlV1ResponseMPayload* mPayload;
 
 @end

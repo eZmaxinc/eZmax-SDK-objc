@@ -31,12 +31,12 @@
 
 @interface EZCommonGetAutocompleteV1Response : EZObject
 
-/* Generic Autocomplete Response 
- */
-@property(nonatomic) NSArray<EZCustomAutocompleteElementResponse>* mPayload;
 
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+/* Generic Autocomplete Response 
+ */
+@property(nonatomic) NSArray<EZCustomAutocompleteElementResponse>* mPayload;
 
 @end

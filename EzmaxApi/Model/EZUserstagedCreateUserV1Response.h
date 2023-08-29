@@ -32,10 +32,10 @@
 @interface EZUserstagedCreateUserV1Response : EZObject
 
 
-@property(nonatomic) EZUserstagedCreateUserV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZUserstagedCreateUserV1ResponseMPayload* mPayload;
 
 @end

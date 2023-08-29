@@ -28,13 +28,13 @@
 /* The unique ID of the Ezsignsignergroup 
  */
 @property(nonatomic) NSNumber* fkiEzsignsignergroupID;
-/* The unique ID of the Ezsignsigner 
+/* The unique ID of the Ezsignsigner [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignsignerID;
-/* The unique ID of the User 
+/* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Usergroup 
+/* The unique ID of the Usergroup [optional]
  */
 @property(nonatomic) NSNumber* fkiUsergroupID;
 

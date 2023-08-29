@@ -7,12 +7,14 @@
 #import "EZUserEditObjectV1Response.h"
 #import "EZUserEditPermissionsV1Request.h"
 #import "EZUserEditPermissionsV1Response.h"
+#import "EZUserGetApikeysV1Response.h"
 #import "EZUserGetAutocompleteV2Response.h"
 #import "EZUserGetEffectivePermissionsV1Response.h"
 #import "EZUserGetListV1Response.h"
 #import "EZUserGetObjectV2Response.h"
 #import "EZUserGetPermissionsV1Response.h"
 #import "EZUserGetSubnetsV1Response.h"
+#import "EZUserSendPasswordResetV1Response.h"
 #import "EZApi.h"
 
 /**
@@ -78,6 +80,19 @@ extern NSInteger kEZObjectUserApiMissingParamErrorCode;
 -(NSURLSessionTask*) userEditPermissionsV1WithPkiUserID: (NSNumber*) pkiUserID
     userEditPermissionsV1Request: (EZUserEditPermissionsV1Request*) userEditPermissionsV1Request
     completionHandler: (void (^)(EZUserEditPermissionsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing User's Apikeys
+/// 
+///
+/// @param pkiUserID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZUserGetApikeysV1Response*
+-(NSURLSessionTask*) userGetApikeysV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(EZUserGetApikeysV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Users and IDs
@@ -169,6 +184,22 @@ extern NSInteger kEZObjectUserApiMissingParamErrorCode;
 /// @return EZUserGetSubnetsV1Response*
 -(NSURLSessionTask*) userGetSubnetsV1WithPkiUserID: (NSNumber*) pkiUserID
     completionHandler: (void (^)(EZUserGetSubnetsV1Response* output, NSError* error)) handler;
+
+
+/// Send password reset
+/// Send the password reset email
+///
+/// @param pkiUserID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZUserSendPasswordResetV1Response*
+-(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EZUserSendPasswordResetV1Response* output, NSError* error)) handler;
 
 
 

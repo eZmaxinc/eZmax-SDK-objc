@@ -32,10 +32,10 @@
 @interface EZEzsignsignergroupmembershipGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZEzsignsignergroupmembershipGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsignsignergroupmembershipGetObjectV2ResponseMPayload* mPayload;
 
 @end

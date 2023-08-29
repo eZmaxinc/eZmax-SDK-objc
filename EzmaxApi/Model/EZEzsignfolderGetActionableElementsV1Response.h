@@ -32,10 +32,10 @@
 @interface EZEzsignfolderGetActionableElementsV1Response : EZObject
 
 
-@property(nonatomic) EZEzsignfolderGetActionableElementsV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsignfolderGetActionableElementsV1ResponseMPayload* mPayload;
 
 @end

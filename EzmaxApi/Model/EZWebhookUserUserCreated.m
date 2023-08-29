@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objUser": @"objUser", @"objWebhook": @"objWebhook", @"aObjAttempt": @"a_objAttempt" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objWebhook": @"objWebhook", @"aObjAttempt": @"a_objAttempt", @"objUser": @"objUser" }];
 }
 
 /**

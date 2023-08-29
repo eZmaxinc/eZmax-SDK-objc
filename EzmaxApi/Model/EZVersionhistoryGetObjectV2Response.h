@@ -32,10 +32,10 @@
 @interface EZVersionhistoryGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZVersionhistoryGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZVersionhistoryGetObjectV2ResponseMPayload* mPayload;
 
 @end

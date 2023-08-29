@@ -7,12 +7,15 @@
 #import "EZUsergroupEditObjectV1Response.h"
 #import "EZUsergroupEditPermissionsV1Request.h"
 #import "EZUsergroupEditPermissionsV1Response.h"
+#import "EZUsergroupEditUsergroupdelegationsV1Request.h"
+#import "EZUsergroupEditUsergroupdelegationsV1Response.h"
 #import "EZUsergroupEditUsergroupmembershipsV1Request.h"
 #import "EZUsergroupEditUsergroupmembershipsV1Response.h"
 #import "EZUsergroupGetAutocompleteV2Response.h"
 #import "EZUsergroupGetListV1Response.h"
 #import "EZUsergroupGetObjectV2Response.h"
 #import "EZUsergroupGetPermissionsV1Response.h"
+#import "EZUsergroupGetUsergroupdelegationsV1Response.h"
 #import "EZUsergroupGetUsergroupmembershipsV1Response.h"
 #import "EZApi.h"
 
@@ -79,6 +82,22 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
 -(NSURLSessionTask*) usergroupEditPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
     usergroupEditPermissionsV1Request: (EZUsergroupEditPermissionsV1Request*) usergroupEditPermissionsV1Request
     completionHandler: (void (^)(EZUsergroupEditPermissionsV1Response* output, NSError* error)) handler;
+
+
+/// Edit multiple Usergroupdelegations
+/// Edit multiple Usergroupdelegations
+///
+/// @param pkiUsergroupID 
+/// @param usergroupEditUsergroupdelegationsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EZUsergroupEditUsergroupdelegationsV1Response*
+-(NSURLSessionTask*) usergroupEditUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    usergroupEditUsergroupdelegationsV1Request: (EZUsergroupEditUsergroupdelegationsV1Request*) usergroupEditUsergroupdelegationsV1Request
+    completionHandler: (void (^)(EZUsergroupEditUsergroupdelegationsV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Usergroupmemberships
@@ -160,6 +179,19 @@ extern NSInteger kEZObjectUsergroupApiMissingParamErrorCode;
 /// @return EZUsergroupGetPermissionsV1Response*
 -(NSURLSessionTask*) usergroupGetPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
     completionHandler: (void (^)(EZUsergroupGetPermissionsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Usergroup's Usergroupdelegations
+/// 
+///
+/// @param pkiUsergroupID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EZUsergroupGetUsergroupdelegationsV1Response*
+-(NSURLSessionTask*) usergroupGetUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    completionHandler: (void (^)(EZUsergroupGetUsergroupdelegationsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Usergroup's Usergroupmemberships

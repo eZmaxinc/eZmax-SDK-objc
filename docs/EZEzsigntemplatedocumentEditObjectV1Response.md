@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
+**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
 **aObjWarning** | [**NSArray&lt;EZCommonResponseWarning&gt;***](EZCommonResponseWarning.md) |  | [optional] 
 

@@ -32,10 +32,10 @@
 @interface EZEzmaxinvoicingGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZEzmaxinvoicingGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzmaxinvoicingGetObjectV2ResponseMPayload* mPayload;
 
 @end

@@ -32,10 +32,10 @@
 @interface EZFranchisereferalincomeCreateObjectV1Response : EZObject
 
 
-@property(nonatomic) EZFranchisereferalincomeCreateObjectV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZFranchisereferalincomeCreateObjectV1ResponseMPayload* mPayload;
 
 @end

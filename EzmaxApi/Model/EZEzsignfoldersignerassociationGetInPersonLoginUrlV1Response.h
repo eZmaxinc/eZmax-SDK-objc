@@ -32,10 +32,10 @@
 @interface EZEzsignfoldersignerassociationGetInPersonLoginUrlV1Response : EZObject
 
 
-@property(nonatomic) EZEzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload* mPayload;
 
 @end

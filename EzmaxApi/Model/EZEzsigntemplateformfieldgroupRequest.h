@@ -14,9 +14,12 @@
 */
 
 
+#import "EZEnumTextvalidation.h"
 #import "EZFieldEEzsigntemplateformfieldgroupSignerrequirement.h"
 #import "EZFieldEEzsigntemplateformfieldgroupTooltipposition.h"
 #import "EZFieldEEzsigntemplateformfieldgroupType.h"
+@protocol EZEnumTextvalidation;
+@class EZEnumTextvalidation;
 @protocol EZFieldEEzsigntemplateformfieldgroupSignerrequirement;
 @class EZFieldEEzsigntemplateformfieldgroupSignerrequirement;
 @protocol EZFieldEEzsigntemplateformfieldgroupTooltipposition;
@@ -68,6 +71,8 @@
 /* A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplateformfieldgroupRegexp;
+
+@property(nonatomic) EZEnumTextvalidation* eEzsigntemplateformfieldgroupTextvalidation;
 /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup [optional]
  */
 @property(nonatomic) NSString* tEzsigntemplateformfieldgroupTooltip;

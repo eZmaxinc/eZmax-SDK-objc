@@ -32,10 +32,10 @@
 @interface EZApikeyEditPermissionsV1Response : EZObject
 
 
-@property(nonatomic) EZApikeyEditPermissionsV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZApikeyEditPermissionsV1ResponseMPayload* mPayload;
 
 @end

@@ -15,6 +15,7 @@
 
 
 #import "EZCustomDropdownElementResponseCompound.h"
+#import "EZEnumTextvalidation.h"
 #import "EZEzsigntemplateformfieldResponseCompound.h"
 #import "EZEzsigntemplateformfieldgroupsignerResponseCompound.h"
 #import "EZFieldEEzsigntemplateformfieldgroupSignerrequirement.h"
@@ -22,6 +23,8 @@
 #import "EZFieldEEzsigntemplateformfieldgroupType.h"
 @protocol EZCustomDropdownElementResponseCompound;
 @class EZCustomDropdownElementResponseCompound;
+@protocol EZEnumTextvalidation;
+@class EZEnumTextvalidation;
 @protocol EZEzsigntemplateformfieldResponseCompound;
 @class EZEzsigntemplateformfieldResponseCompound;
 @protocol EZEzsigntemplateformfieldgroupsignerResponseCompound;
@@ -77,6 +80,8 @@
 /* A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplateformfieldgroupRegexp;
+
+@property(nonatomic) EZEnumTextvalidation* eEzsigntemplateformfieldgroupTextvalidation;
 /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup [optional]
  */
 @property(nonatomic) NSString* tEzsigntemplateformfieldgroupTooltip;

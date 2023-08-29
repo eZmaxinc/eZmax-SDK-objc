@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objDebugPayload", @"objDebug"];
+  NSArray *optionalProperties = @[@"objDebug"];
   return [optionalProperties containsObject:propertyName];
 }
 

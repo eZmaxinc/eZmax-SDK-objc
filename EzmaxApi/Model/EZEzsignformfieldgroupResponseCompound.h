@@ -15,6 +15,7 @@
 
 
 #import "EZCustomDropdownElementResponseCompound.h"
+#import "EZEnumTextvalidation.h"
 #import "EZEzsignformfieldResponseCompound.h"
 #import "EZEzsignformfieldgroupsignerResponseCompound.h"
 #import "EZFieldEEzsignformfieldgroupSignerrequirement.h"
@@ -22,6 +23,8 @@
 #import "EZFieldEEzsignformfieldgroupType.h"
 @protocol EZCustomDropdownElementResponseCompound;
 @class EZCustomDropdownElementResponseCompound;
+@protocol EZEnumTextvalidation;
+@class EZEnumTextvalidation;
 @protocol EZEzsignformfieldResponseCompound;
 @class EZEzsignformfieldResponseCompound;
 @protocol EZEzsignformfieldgroupsignerResponseCompound;
@@ -74,6 +77,8 @@
 /* Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSNumber* bEzsignformfieldgroupEncrypted;
+
+@property(nonatomic) EZEnumTextvalidation* eEzsignformfieldgroupTextvalidation;
 /* A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupRegexp;

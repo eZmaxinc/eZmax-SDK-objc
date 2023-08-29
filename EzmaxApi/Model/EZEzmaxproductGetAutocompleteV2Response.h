@@ -32,10 +32,10 @@
 @interface EZEzmaxproductGetAutocompleteV2Response : EZObject
 
 
-@property(nonatomic) EZEzmaxproductGetAutocompleteV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzmaxproductGetAutocompleteV2ResponseMPayload* mPayload;
 
 @end

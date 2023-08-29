@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EZEzsigntemplatepackageCreateObjectV1ResponseMPayload***](EZEzsigntemplatepackageCreateObjectV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | [optional] 
+**objDebugPayload** | [**EZCommonResponseObjDebugPayload***](EZCommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**EZCommonResponseObjDebug***](EZCommonResponseObjDebug.md) |  | [optional] 
+**mPayload** | [**EZEzsigntemplatepackageCreateObjectV1ResponseMPayload***](EZEzsigntemplatepackageCreateObjectV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,13 +25,13 @@
 
 @interface EZUserstagedGetListV1ResponseMPayload : EZObject
 
-
-@property(nonatomic) NSArray<EZUserstagedListElement>* aObjUserstaged;
 /* The number of rows returned 
  */
 @property(nonatomic) NSNumber* iRowReturned;
 /* The number of rows matching your filters (if any) or the total number of rows 
  */
 @property(nonatomic) NSNumber* iRowFiltered;
+
+@property(nonatomic) NSArray<EZUserstagedListElement>* aObjUserstaged;
 
 @end

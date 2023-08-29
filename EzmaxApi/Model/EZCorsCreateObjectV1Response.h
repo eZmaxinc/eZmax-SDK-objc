@@ -32,10 +32,10 @@
 @interface EZCorsCreateObjectV1Response : EZObject
 
 
-@property(nonatomic) EZCorsCreateObjectV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZCorsCreateObjectV1ResponseMPayload* mPayload;
 
 @end

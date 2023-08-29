@@ -32,10 +32,10 @@
 @interface EZBrandingCreateObjectV1Response : EZObject
 
 
-@property(nonatomic) EZBrandingCreateObjectV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZBrandingCreateObjectV1ResponseMPayload* mPayload;
 
 @end

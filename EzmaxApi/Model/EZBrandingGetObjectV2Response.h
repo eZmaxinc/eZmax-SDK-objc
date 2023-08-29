@@ -32,10 +32,10 @@
 @interface EZBrandingGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZBrandingGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZBrandingGetObjectV2ResponseMPayload* mPayload;
 
 @end

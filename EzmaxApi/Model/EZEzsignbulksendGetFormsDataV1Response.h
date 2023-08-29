@@ -32,10 +32,10 @@
 @interface EZEzsignbulksendGetFormsDataV1Response : EZObject
 
 
-@property(nonatomic) EZEzsignbulksendGetFormsDataV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsignbulksendGetFormsDataV1ResponseMPayload* mPayload;
 
 @end

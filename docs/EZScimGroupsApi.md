@@ -22,9 +22,6 @@ Create a new Usergroup
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 EZScimGroup* scimGroup = [[EZScimGroup alloc] init]; // 
@@ -75,9 +72,6 @@ Delete an existing Usergroup
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* groupId = @"groupId_example"; // 
@@ -126,9 +120,6 @@ Edit an existing Usergroup
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* groupId = @"groupId_example"; // 
@@ -182,9 +173,6 @@ Retrieve Usergroup list
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* filter = @"filter_example"; // Filter expression for searching groups (optional)
@@ -235,9 +223,6 @@ Retrieve an existing Usergroup
 ### Example
 ```objc
 EZDefaultConfiguration *apiConfig = [EZDefaultConfiguration sharedConfig];
-// Configure HTTP basic authorization (authentication scheme: Bearer)
-[apiConfig setUsername:@"YOUR_USERNAME"];
-[apiConfig setPassword:@"YOUR_PASSWORD"];
 
 
 NSString* groupId = @"groupId_example"; // 

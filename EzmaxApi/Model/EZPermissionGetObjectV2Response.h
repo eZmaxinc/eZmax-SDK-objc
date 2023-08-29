@@ -32,10 +32,10 @@
 @interface EZPermissionGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZPermissionGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZPermissionGetObjectV2ResponseMPayload* mPayload;
 
 @end

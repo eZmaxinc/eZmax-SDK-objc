@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **bEzsignformfieldgroupReadonly** | **NSNumber*** | Whether the Ezsignformfieldgroup is read only or not. | 
 **iEzsignformfieldgroupMaxlength** | **NSNumber*** | The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **bEzsignformfieldgroupEncrypted** | **NSNumber*** | Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
+**eEzsignformfieldgroupTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **sEzsignformfieldgroupRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** | [optional] 
 **tEzsignformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **eEzsignformfieldgroupTooltipposition** | [**EZFieldEEzsignformfieldgroupTooltipposition***](EZFieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 

@@ -9,12 +9,15 @@
 #import "EZUsergroupEditObjectV1Response.h"
 #import "EZUsergroupEditPermissionsV1Request.h"
 #import "EZUsergroupEditPermissionsV1Response.h"
+#import "EZUsergroupEditUsergroupdelegationsV1Request.h"
+#import "EZUsergroupEditUsergroupdelegationsV1Response.h"
 #import "EZUsergroupEditUsergroupmembershipsV1Request.h"
 #import "EZUsergroupEditUsergroupmembershipsV1Response.h"
 #import "EZUsergroupGetAutocompleteV2Response.h"
 #import "EZUsergroupGetListV1Response.h"
 #import "EZUsergroupGetObjectV2Response.h"
 #import "EZUsergroupGetPermissionsV1Response.h"
+#import "EZUsergroupGetUsergroupdelegationsV1Response.h"
 #import "EZUsergroupGetUsergroupmembershipsV1Response.h"
 
 
@@ -291,6 +294,89 @@ NSInteger kEZObjectUsergroupApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUsergroupEditPermissionsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Edit multiple Usergroupdelegations
+/// Edit multiple Usergroupdelegations
+///  @param pkiUsergroupID  
+///
+///  @param usergroupEditUsergroupdelegationsV1Request  
+///
+///  @returns EZUsergroupEditUsergroupdelegationsV1Response*
+///
+-(NSURLSessionTask*) usergroupEditUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    usergroupEditUsergroupdelegationsV1Request: (EZUsergroupEditUsergroupdelegationsV1Request*) usergroupEditUsergroupdelegationsV1Request
+    completionHandler: (void (^)(EZUsergroupEditUsergroupdelegationsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == nil) {
+        NSParameterAssert(pkiUsergroupID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUsergroupID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUsergroupApiErrorDomain code:kEZObjectUsergroupApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'usergroupEditUsergroupdelegationsV1Request' is set
+    if (usergroupEditUsergroupdelegationsV1Request == nil) {
+        NSParameterAssert(usergroupEditUsergroupdelegationsV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"usergroupEditUsergroupdelegationsV1Request"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUsergroupApiErrorDomain code:kEZObjectUsergroupApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUsergroupID != nil) {
+        pathParams[@"pkiUsergroupID"] = pkiUsergroupID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = usergroupEditUsergroupdelegationsV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"PUT"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZUsergroupEditUsergroupdelegationsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZUsergroupEditUsergroupdelegationsV1Response*)data, error);
                                 }
                             }];
 }
@@ -677,6 +763,74 @@ NSInteger kEZObjectUsergroupApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EZUsergroupGetPermissionsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Usergroup's Usergroupdelegations
+/// 
+///  @param pkiUsergroupID  
+///
+///  @returns EZUsergroupGetUsergroupdelegationsV1Response*
+///
+-(NSURLSessionTask*) usergroupGetUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
+    completionHandler: (void (^)(EZUsergroupGetUsergroupdelegationsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUsergroupID' is set
+    if (pkiUsergroupID == nil) {
+        NSParameterAssert(pkiUsergroupID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUsergroupID"] };
+            NSError* error = [NSError errorWithDomain:kEZObjectUsergroupApiErrorDomain code:kEZObjectUsergroupApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUsergroupID != nil) {
+        pathParams[@"pkiUsergroupID"] = pkiUsergroupID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EZUsergroupGetUsergroupdelegationsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EZUsergroupGetUsergroupdelegationsV1Response*)data, error);
                                 }
                             }];
 }

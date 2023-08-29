@@ -32,10 +32,10 @@
 @interface EZNotificationtestGetElementsV1Response : EZObject
 
 
-@property(nonatomic) EZNotificationtestGetElementsV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZNotificationtestGetElementsV1ResponseMPayload* mPayload;
 
 @end

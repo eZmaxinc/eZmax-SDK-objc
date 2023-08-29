@@ -15,10 +15,13 @@
 
 
 #import "EZCommonAudit.h"
+#import "EZComputedEEzsigndocumentSteptype.h"
 #import "EZCustomEzsignfoldersignerassociationstatusResponse.h"
 #import "EZFieldEEzsigndocumentStep.h"
 @protocol EZCommonAudit;
 @class EZCommonAudit;
+@protocol EZComputedEEzsigndocumentSteptype;
+@class EZComputedEEzsigndocumentSteptype;
 @protocol EZCustomEzsignfoldersignerassociationstatusResponse;
 @class EZCustomEzsignfoldersignerassociationstatusResponse;
 @protocol EZFieldEEzsigndocumentStep;
@@ -92,6 +95,8 @@
 /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  [optional]
  */
 @property(nonatomic) NSString* sEzsigndocumentExternalid;
+
+@property(nonatomic) EZComputedEEzsigndocumentSteptype* eEzsigndocumentSteptype;
 /* The total number of steps in the form filling phase 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentStepformtotal;

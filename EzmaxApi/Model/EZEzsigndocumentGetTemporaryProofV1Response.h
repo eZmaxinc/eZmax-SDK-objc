@@ -32,10 +32,10 @@
 @interface EZEzsigndocumentGetTemporaryProofV1Response : EZObject
 
 
-@property(nonatomic) EZEzsigndocumentGetTemporaryProofV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZEzsigndocumentGetTemporaryProofV1ResponseMPayload* mPayload;
 
 @end

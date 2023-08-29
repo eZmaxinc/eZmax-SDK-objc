@@ -32,10 +32,10 @@
 @interface EZSystemconfigurationGetObjectV2Response : EZObject
 
 
-@property(nonatomic) EZSystemconfigurationGetObjectV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZSystemconfigurationGetObjectV2ResponseMPayload* mPayload;
 
 @end

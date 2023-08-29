@@ -102,6 +102,9 @@
 /* The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea** [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureDescription;
+/* The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignsignatureMaxlength;
 
 @property(nonatomic) EZEnumTextvalidation* eEzsignsignatureTextvalidation;
 /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** [optional]

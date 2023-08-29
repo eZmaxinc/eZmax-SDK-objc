@@ -32,10 +32,10 @@
 @interface EZBillingentityinternalCreateObjectV1Response : EZObject
 
 
-@property(nonatomic) EZBillingentityinternalCreateObjectV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZBillingentityinternalCreateObjectV1ResponseMPayload* mPayload;
 
 @end

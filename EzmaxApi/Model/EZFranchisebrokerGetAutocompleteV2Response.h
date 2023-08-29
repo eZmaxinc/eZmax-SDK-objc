@@ -32,10 +32,10 @@
 @interface EZFranchisebrokerGetAutocompleteV2Response : EZObject
 
 
-@property(nonatomic) EZFranchisebrokerGetAutocompleteV2ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZFranchisebrokerGetAutocompleteV2ResponseMPayload* mPayload;
 
 @end

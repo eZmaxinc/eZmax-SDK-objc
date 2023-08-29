@@ -32,10 +32,10 @@
 @interface EZApikeyGetSubnetsV1Response : EZObject
 
 
-@property(nonatomic) EZApikeyGetSubnetsV1ResponseMPayload* mPayload;
-
 @property(nonatomic) EZCommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) EZCommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EZApikeyGetSubnetsV1ResponseMPayload* mPayload;
 
 @end
