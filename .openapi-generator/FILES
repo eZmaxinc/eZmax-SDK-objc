@@ -491,6 +491,8 @@ EzmaxApi/Model/EZCustomEzsignfoldertransmissionResponse.h
 EzmaxApi/Model/EZCustomEzsignfoldertransmissionResponse.m
 EzmaxApi/Model/EZCustomEzsignfoldertransmissionSignerResponse.h
 EzmaxApi/Model/EZCustomEzsignfoldertransmissionSignerResponse.m
+EzmaxApi/Model/EZCustomEzsignfoldertypeResponse.h
+EzmaxApi/Model/EZCustomEzsignfoldertypeResponse.m
 EzmaxApi/Model/EZCustomEzsignformfieldRequest.h
 EzmaxApi/Model/EZCustomEzsignformfieldRequest.m
 EzmaxApi/Model/EZCustomEzsignformfielderrorResponse.h
@@ -2427,6 +2429,7 @@ docs/EZCustomEzsignfoldersignerassociationmineResponse.md
 docs/EZCustomEzsignfoldersignerassociationstatusResponse.md
 docs/EZCustomEzsignfoldertransmissionResponse.md
 docs/EZCustomEzsignfoldertransmissionSignerResponse.md
+docs/EZCustomEzsignfoldertypeResponse.md
 docs/EZCustomEzsignformfieldRequest.md
 docs/EZCustomEzsignformfielderrorResponse.md
 docs/EZCustomEzsignformfielderrortestResponse.md

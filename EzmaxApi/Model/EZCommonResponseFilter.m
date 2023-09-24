@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aAutoType": @"a_AutoType", @"aEnum": @"a_Enum" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aAutoType": @"a_AutoType", @"aAutoTypeHaving": @"a_AutoTypeHaving", @"aEnum": @"a_Enum" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aAutoType", @"aEnum"];
+  NSArray *optionalProperties = @[@"aAutoType", @"aAutoTypeHaving", @"aEnum"];
   return [optionalProperties containsObject:propertyName];
 }
 

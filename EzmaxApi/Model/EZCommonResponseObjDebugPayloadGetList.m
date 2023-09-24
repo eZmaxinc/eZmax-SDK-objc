@@ -6,6 +6,8 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
+    self.iRowMax = @10000;
+    self.iRowOffset = @0;
     
   }
   return self;
@@ -17,7 +19,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iVersionMin": @"iVersionMin", @"iVersionMax": @"iVersionMax", @"aRequiredPermission": @"a_RequiredPermission", @"bVersionDeprecated": @"bVersionDeprecated", @"aFilter": @"a_Filter", @"aOrderBy": @"a_OrderBy" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iVersionMin": @"iVersionMin", @"iVersionMax": @"iVersionMax", @"aRequiredPermission": @"a_RequiredPermission", @"bVersionDeprecated": @"bVersionDeprecated", @"aFilter": @"a_Filter", @"aOrderBy": @"a_OrderBy", @"iRowMax": @"iRowMax", @"iRowOffset": @"iRowOffset" }];
 }
 
 /**

@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **eEzsignsignatureTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **sEzsignsignatureRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **objContactName** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | 
+**objContactNameDelegation** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | [optional] 
 **objSignature** | [**EZSignatureResponseCompound***](EZSignatureResponseCompound.md) |  | [optional] 
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **aObjEzsignsignaturecustomdate** | [**NSArray&lt;EZEzsignsignaturecustomdateResponseCompound&gt;***](EZEzsignsignaturecustomdateResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 

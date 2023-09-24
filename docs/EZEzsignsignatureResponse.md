@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **eEzsignsignatureTextvalidation** | [**EZEnumTextvalidation***](EZEnumTextvalidation.md) |  | [optional] 
 **sEzsignsignatureRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **objContactName** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | 
+**objContactNameDelegation** | [**EZCustomContactNameResponse***](EZCustomContactNameResponse.md) |  | [optional] 
 **objSignature** | [**EZSignatureResponseCompound***](EZSignatureResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
