@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"bEzsignfoldertypeDelegate", @"bEzsignfoldertypeReassign"];
+  NSArray *optionalProperties = @[@"sEzsignfoldertypeNameX", @"bEzsignfoldertypeIncludeproofsigner", @"bEzsignfoldertypeIncludeproofuser", @"bEzsignfoldertypeDelegate", @"bEzsignfoldertypeReassign"];
   return [optionalProperties containsObject:propertyName];
 }
 

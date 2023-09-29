@@ -766,7 +766,7 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsigndocumentID = @56; // 
-NSString* eDocumentType = @"eDocumentType_example"; // The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
+NSString* eDocumentType = @"eDocumentType_example"; // The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
 
 ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 
@@ -788,7 +788,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigndocumentID** | **NSNumber***|  | 
- **eDocumentType** | **NSString***| The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  | 
+ **eDocumentType** | **NSString***| The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  | 
 
 ### Return type
 

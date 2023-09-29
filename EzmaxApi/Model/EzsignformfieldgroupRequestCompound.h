@@ -59,7 +59,7 @@
 /* The step when the Ezsignsigner will be invited to fill the form fields 
  */
 @property(nonatomic) NSNumber* iEzsignformfieldgroupStep;
-/* The default value for the Ezsignformfieldgroup 
+/* The default value for the Ezsignformfieldgroup [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupDefaultvalue;
 /* The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup 

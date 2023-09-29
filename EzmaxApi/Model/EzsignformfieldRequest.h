@@ -46,6 +46,9 @@
 /* The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  
  */
 @property(nonatomic) NSNumber* iEzsignformfieldHeight;
+/* Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text** [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignformfieldAutocomplete;
 /* Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio** [optional]
  */
 @property(nonatomic) NSNumber* bEzsignformfieldSelected;

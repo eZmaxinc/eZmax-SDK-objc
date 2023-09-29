@@ -25,13 +25,13 @@
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* pkiEzsignfoldertypeID;
-/* The name of the Ezsignfoldertype in the language of the requester 
+/* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
-/* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners 
+/* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofsigner;
-/* Whether we include the proof with the signed Ezsigndocument for users 
+/* Whether we include the proof with the signed Ezsigndocument for users [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofuser;
 /* Wheter if delegation of signature is allowed to another user or not [optional]
