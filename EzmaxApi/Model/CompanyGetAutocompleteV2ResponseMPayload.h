@@ -25,7 +25,7 @@
 
 @interface CompanyGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Company autocomplete element response. [optional]
+/* An array of Company autocomplete element response. 
  */
 @property(nonatomic) NSArray<CompanyAutocompleteElementResponse>* aObjCompany;
 

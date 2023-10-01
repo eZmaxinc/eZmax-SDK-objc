@@ -25,7 +25,7 @@
 
 @interface FontGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Font autocomplete element response. [optional]
+/* An array of Font autocomplete element response. 
  */
 @property(nonatomic) NSArray<FontAutocompleteElementResponse>* aObjFont;
 

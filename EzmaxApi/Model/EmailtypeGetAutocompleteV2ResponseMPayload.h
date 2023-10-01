@@ -25,7 +25,7 @@
 
 @interface EmailtypeGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Emailtype autocomplete element response. [optional]
+/* An array of Emailtype autocomplete element response. 
  */
 @property(nonatomic) NSArray<EmailtypeAutocompleteElementResponse>* aObjEmailtype;
 

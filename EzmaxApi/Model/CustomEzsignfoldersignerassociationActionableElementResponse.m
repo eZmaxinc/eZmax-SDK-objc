@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objEzsignsignergroup", @"objUser", @"objEzsignsigner", @"bEzsignfoldersignerassociationHasactionableelementsFuture"];
+  NSArray *optionalProperties = @[@"objEzsignsignergroup", @"objUser", @"objEzsignsigner", ];
   return [optionalProperties containsObject:propertyName];
 }
 

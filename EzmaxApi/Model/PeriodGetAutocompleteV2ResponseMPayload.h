@@ -25,7 +25,7 @@
 
 @interface PeriodGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Period autocomplete element response. [optional]
+/* An array of Period autocomplete element response. 
  */
 @property(nonatomic) NSArray<PeriodAutocompleteElementResponse>* aObjPeriod;
 

@@ -25,7 +25,7 @@
 
 @interface BillingentityexternalGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Billingentityexternal autocomplete element response. [optional]
+/* An array of Billingentityexternal autocomplete element response. 
  */
 @property(nonatomic) NSArray<BillingentityexternalAutocompleteElementResponse>* aObjBillingentityexternal;
 

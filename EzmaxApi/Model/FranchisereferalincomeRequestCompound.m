@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiFranchisereferalincomeID", ];
+  NSArray *optionalProperties = @[@"pkiFranchisereferalincomeID", @"objAddress", ];
   return [optionalProperties containsObject:propertyName];
 }
 

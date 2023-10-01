@@ -25,7 +25,7 @@
 
 @interface VariableexpenseGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Variableexpense autocomplete element response. [optional]
+/* An array of Variableexpense autocomplete element response. 
  */
 @property(nonatomic) NSArray<VariableexpenseAutocompleteElementResponse>* aObjVariableexpense;
 

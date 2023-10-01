@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eCreditcardtypeCodename** | [**FieldECreditcardtypeCodename***](FieldECreditcardtypeCodename.md) |  | [optional] 
+**eCreditcardtypeCodename** | [**FieldECreditcardtypeCodename***](FieldECreditcardtypeCodename.md) |  | 
 **dCreditcardtransactionAmount** | **NSString*** | The amount of the Creditcardtransaction | 
 **sCreditcardtransactionPartiallydecryptednumber** | **NSString*** | The partially decrypted credit card number used in the Creditcardtransaction | 
 **sCreditcardtransactionReferencenumber** | **NSString*** | The reference number on the creditcard service for the Creditcardtransaction | 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **bActivesessionDebug** | **NSNumber*** | Whether the active session is in debug or not | 
 **bActivesessionIssuperadmin** | **NSNumber*** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
-**fkiSystemconfigurationtypeID** | **NSNumber*** | The unique ID of the Systemconfigurationtype | [optional] 
+**fkiSystemconfigurationtypeID** | **NSNumber*** | The unique ID of the Systemconfigurationtype | 
 **fkiSignatureID** | **NSNumber*** | The unique ID of the Signature | [optional] 
 **aPkiPermissionID** | **NSArray&lt;NSNumber*&gt;*** | An array of permissions granted to the user or api key | 
 **objUserReal** | [**ActivesessionResponseCompoundUser***](ActivesessionResponseCompoundUser.md) |  | 

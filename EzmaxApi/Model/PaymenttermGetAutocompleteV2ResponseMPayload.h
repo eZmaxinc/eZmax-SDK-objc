@@ -25,7 +25,7 @@
 
 @interface PaymenttermGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Paymentterm autocomplete element response. [optional]
+/* An array of Paymentterm autocomplete element response. 
  */
 @property(nonatomic) NSArray<PaymenttermAutocompleteElementResponse>* aObjPaymentterm;
 

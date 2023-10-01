@@ -25,7 +25,7 @@
 
 @interface PhonetypeGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Phonetype autocomplete element response. [optional]
+/* An array of Phonetype autocomplete element response. 
  */
 @property(nonatomic) NSArray<PhonetypeAutocompleteElementResponse>* aObjPhonetype;
 

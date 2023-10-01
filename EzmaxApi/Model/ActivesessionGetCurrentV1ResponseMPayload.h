@@ -61,7 +61,7 @@
 /* The customer code assigned to your account 
  */
 @property(nonatomic) NSString* pksCustomerCode;
-/* The unique ID of the Systemconfigurationtype [optional]
+/* The unique ID of the Systemconfigurationtype 
  */
 @property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
 /* The unique ID of the Signature [optional]

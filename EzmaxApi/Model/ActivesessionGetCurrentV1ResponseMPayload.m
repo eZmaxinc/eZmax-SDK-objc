@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiSystemconfigurationtypeID", @"fkiSignatureID", @"objUserCloned", @"objApikey", ];
+  NSArray *optionalProperties = @[@"fkiSignatureID", @"objUserCloned", @"objApikey", ];
   return [optionalProperties containsObject:propertyName];
 }
 

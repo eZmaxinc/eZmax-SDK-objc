@@ -25,7 +25,7 @@
 
 @interface FranchiseofficeGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Franchiseoffice autocomplete element response. [optional]
+/* An array of Franchiseoffice autocomplete element response. 
  */
 @property(nonatomic) NSArray<FranchiseofficeAutocompleteElementResponse>* aObjFranchiseoffice;
 

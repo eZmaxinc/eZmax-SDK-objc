@@ -25,7 +25,7 @@
 
 @interface EzmaxproductGetAutocompleteV2ResponseMPayload : Object
 
-/* An array of Ezmaxproduct autocomplete element response. [optional]
+/* An array of Ezmaxproduct autocomplete element response. 
  */
 @property(nonatomic) NSArray<EzmaxproductAutocompleteElementResponse>* aObjEzmaxproduct;
 

@@ -61,7 +61,7 @@
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
-/* The concatenated string to describe the Webhook event 
+/* The concatenated string to describe the Webhook event [optional]
  */
 @property(nonatomic) NSString* sWebhookEvent;
 

@@ -55,7 +55,7 @@
 /* Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step 
  */
 @property(nonatomic) NSNumber* bEzsignfoldersignerassociationHasactionableelementsCurrent;
-/* Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step [optional]
+/* Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step 
  */
 @property(nonatomic) NSNumber* bEzsignfoldersignerassociationHasactionableelementsFuture;
 
