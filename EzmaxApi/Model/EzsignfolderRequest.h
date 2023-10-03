@@ -37,7 +37,7 @@
 /* The description of the Ezsignfolder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;
-/* Note about the Ezsignfolder 
+/* Note about the Ezsignfolder [optional]
  */
 @property(nonatomic) NSString* tEzsignfolderNote;
 

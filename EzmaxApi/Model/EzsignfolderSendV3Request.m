@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtEzsignfolderDelayedsenddate", ];
+  NSArray *optionalProperties = @[@"tEzsignfolderMessage", @"dtEzsignfolderDelayedsenddate", ];
   return [optionalProperties containsObject:propertyName];
 }
 
