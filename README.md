@@ -392,6 +392,10 @@ Import the following:
 #import <EzmaxApi/EzsigndocumentUnsendV1Response.h>
 #import <EzmaxApi/EzsigndocumentlogResponse.h>
 #import <EzmaxApi/EzsigndocumentlogResponseCompound.h>
+#import <EzmaxApi/EzsignelementdependencyRequest.h>
+#import <EzmaxApi/EzsignelementdependencyRequestCompound.h>
+#import <EzmaxApi/EzsignelementdependencyResponse.h>
+#import <EzmaxApi/EzsignelementdependencyResponseCompound.h>
 #import <EzmaxApi/EzsignfolderArchiveV1Response.h>
 #import <EzmaxApi/EzsignfolderBatchDownloadV1Request.h>
 #import <EzmaxApi/EzsignfolderCreateObjectV1Request.h>
@@ -623,6 +627,10 @@ Import the following:
 #import <EzmaxApi/EzsigntemplatedocumentResponseCompound.h>
 #import <EzmaxApi/EzsigntemplatedocumentpageResponse.h>
 #import <EzmaxApi/EzsigntemplatedocumentpageResponseCompound.h>
+#import <EzmaxApi/EzsigntemplateelementdependencyRequest.h>
+#import <EzmaxApi/EzsigntemplateelementdependencyRequestCompound.h>
+#import <EzmaxApi/EzsigntemplateelementdependencyResponse.h>
+#import <EzmaxApi/EzsigntemplateelementdependencyResponseCompound.h>
 #import <EzmaxApi/EzsigntemplateformfieldRequest.h>
 #import <EzmaxApi/EzsigntemplateformfieldRequestCompound.h>
 #import <EzmaxApi/EzsigntemplateformfieldResponse.h>
@@ -748,22 +756,30 @@ Import the following:
 #import <EzmaxApi/FieldEEzsignannotationType.h>
 #import <EzmaxApi/FieldEEzsigndocumentStep.h>
 #import <EzmaxApi/FieldEEzsigndocumentlogType.h>
+#import <EzmaxApi/FieldEEzsignelementdependencyOperator.h>
+#import <EzmaxApi/FieldEEzsignelementdependencyValidation.h>
 #import <EzmaxApi/FieldEEzsignfolderSendreminderfrequency.h>
 #import <EzmaxApi/FieldEEzsignfolderStep.h>
 #import <EzmaxApi/FieldEEzsignfoldertypeDisposal.h>
 #import <EzmaxApi/FieldEEzsignfoldertypePrivacylevel.h>
 #import <EzmaxApi/FieldEEzsignfoldertypeSendreminderfrequency.h>
+#import <EzmaxApi/FieldEEzsignformfieldDependencyrequirement.h>
 #import <EzmaxApi/FieldEEzsignformfieldgroupSignerrequirement.h>
 #import <EzmaxApi/FieldEEzsignformfieldgroupTooltipposition.h>
 #import <EzmaxApi/FieldEEzsignformfieldgroupType.h>
 #import <EzmaxApi/FieldEEzsignsignatureAttachmentnamesource.h>
+#import <EzmaxApi/FieldEEzsignsignatureDependencyrequirement.h>
 #import <EzmaxApi/FieldEEzsignsignatureFont.h>
 #import <EzmaxApi/FieldEEzsignsignatureTooltipposition.h>
 #import <EzmaxApi/FieldEEzsignsignatureType.h>
+#import <EzmaxApi/FieldEEzsigntemplateelementdependencyOperator.h>
+#import <EzmaxApi/FieldEEzsigntemplateelementdependencyValidation.h>
+#import <EzmaxApi/FieldEEzsigntemplateformfieldDependencyrequirement.h>
 #import <EzmaxApi/FieldEEzsigntemplateformfieldgroupSignerrequirement.h>
 #import <EzmaxApi/FieldEEzsigntemplateformfieldgroupTooltipposition.h>
 #import <EzmaxApi/FieldEEzsigntemplateformfieldgroupType.h>
 #import <EzmaxApi/FieldEEzsigntemplatesignatureAttachmentnamesource.h>
+#import <EzmaxApi/FieldEEzsigntemplatesignatureDependencyrequirement.h>
 #import <EzmaxApi/FieldEEzsigntemplatesignatureFont.h>
 #import <EzmaxApi/FieldEEzsigntemplatesignatureTooltipposition.h>
 #import <EzmaxApi/FieldEEzsigntemplatesignatureType.h>
@@ -1849,6 +1865,10 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentUnsendV1Response](docs/EzsigndocumentUnsendV1Response.md)
  - [EzsigndocumentlogResponse](docs/EzsigndocumentlogResponse.md)
  - [EzsigndocumentlogResponseCompound](docs/EzsigndocumentlogResponseCompound.md)
+ - [EzsignelementdependencyRequest](docs/EzsignelementdependencyRequest.md)
+ - [EzsignelementdependencyRequestCompound](docs/EzsignelementdependencyRequestCompound.md)
+ - [EzsignelementdependencyResponse](docs/EzsignelementdependencyResponse.md)
+ - [EzsignelementdependencyResponseCompound](docs/EzsignelementdependencyResponseCompound.md)
  - [EzsignfolderArchiveV1Response](docs/EzsignfolderArchiveV1Response.md)
  - [EzsignfolderBatchDownloadV1Request](docs/EzsignfolderBatchDownloadV1Request.md)
  - [EzsignfolderCreateObjectV1Request](docs/EzsignfolderCreateObjectV1Request.md)
@@ -2080,6 +2100,10 @@ Class | Method | HTTP request | Description
  - [EzsigntemplatedocumentResponseCompound](docs/EzsigntemplatedocumentResponseCompound.md)
  - [EzsigntemplatedocumentpageResponse](docs/EzsigntemplatedocumentpageResponse.md)
  - [EzsigntemplatedocumentpageResponseCompound](docs/EzsigntemplatedocumentpageResponseCompound.md)
+ - [EzsigntemplateelementdependencyRequest](docs/EzsigntemplateelementdependencyRequest.md)
+ - [EzsigntemplateelementdependencyRequestCompound](docs/EzsigntemplateelementdependencyRequestCompound.md)
+ - [EzsigntemplateelementdependencyResponse](docs/EzsigntemplateelementdependencyResponse.md)
+ - [EzsigntemplateelementdependencyResponseCompound](docs/EzsigntemplateelementdependencyResponseCompound.md)
  - [EzsigntemplateformfieldRequest](docs/EzsigntemplateformfieldRequest.md)
  - [EzsigntemplateformfieldRequestCompound](docs/EzsigntemplateformfieldRequestCompound.md)
  - [EzsigntemplateformfieldResponse](docs/EzsigntemplateformfieldResponse.md)
@@ -2205,22 +2229,30 @@ Class | Method | HTTP request | Description
  - [FieldEEzsignannotationType](docs/FieldEEzsignannotationType.md)
  - [FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [FieldEEzsigndocumentlogType](docs/FieldEEzsigndocumentlogType.md)
+ - [FieldEEzsignelementdependencyOperator](docs/FieldEEzsignelementdependencyOperator.md)
+ - [FieldEEzsignelementdependencyValidation](docs/FieldEEzsignelementdependencyValidation.md)
  - [FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](docs/FieldEEzsignfolderStep.md)
  - [FieldEEzsignfoldertypeDisposal](docs/FieldEEzsignfoldertypeDisposal.md)
  - [FieldEEzsignfoldertypePrivacylevel](docs/FieldEEzsignfoldertypePrivacylevel.md)
  - [FieldEEzsignfoldertypeSendreminderfrequency](docs/FieldEEzsignfoldertypeSendreminderfrequency.md)
+ - [FieldEEzsignformfieldDependencyrequirement](docs/FieldEEzsignformfieldDependencyrequirement.md)
  - [FieldEEzsignformfieldgroupSignerrequirement](docs/FieldEEzsignformfieldgroupSignerrequirement.md)
  - [FieldEEzsignformfieldgroupTooltipposition](docs/FieldEEzsignformfieldgroupTooltipposition.md)
  - [FieldEEzsignformfieldgroupType](docs/FieldEEzsignformfieldgroupType.md)
  - [FieldEEzsignsignatureAttachmentnamesource](docs/FieldEEzsignsignatureAttachmentnamesource.md)
+ - [FieldEEzsignsignatureDependencyrequirement](docs/FieldEEzsignsignatureDependencyrequirement.md)
  - [FieldEEzsignsignatureFont](docs/FieldEEzsignsignatureFont.md)
  - [FieldEEzsignsignatureTooltipposition](docs/FieldEEzsignsignatureTooltipposition.md)
  - [FieldEEzsignsignatureType](docs/FieldEEzsignsignatureType.md)
+ - [FieldEEzsigntemplateelementdependencyOperator](docs/FieldEEzsigntemplateelementdependencyOperator.md)
+ - [FieldEEzsigntemplateelementdependencyValidation](docs/FieldEEzsigntemplateelementdependencyValidation.md)
+ - [FieldEEzsigntemplateformfieldDependencyrequirement](docs/FieldEEzsigntemplateformfieldDependencyrequirement.md)
  - [FieldEEzsigntemplateformfieldgroupSignerrequirement](docs/FieldEEzsigntemplateformfieldgroupSignerrequirement.md)
  - [FieldEEzsigntemplateformfieldgroupTooltipposition](docs/FieldEEzsigntemplateformfieldgroupTooltipposition.md)
  - [FieldEEzsigntemplateformfieldgroupType](docs/FieldEEzsigntemplateformfieldgroupType.md)
  - [FieldEEzsigntemplatesignatureAttachmentnamesource](docs/FieldEEzsigntemplatesignatureAttachmentnamesource.md)
+ - [FieldEEzsigntemplatesignatureDependencyrequirement](docs/FieldEEzsigntemplatesignatureDependencyrequirement.md)
  - [FieldEEzsigntemplatesignatureFont](docs/FieldEEzsigntemplatesignatureFont.md)
  - [FieldEEzsigntemplatesignatureTooltipposition](docs/FieldEEzsigntemplatesignatureTooltipposition.md)
  - [FieldEEzsigntemplatesignatureType](docs/FieldEEzsigntemplatesignatureType.md)

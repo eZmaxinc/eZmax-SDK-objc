@@ -16,6 +16,7 @@
 
 #import "EnumTextvalidation.h"
 #import "FieldEEzsigntemplatesignatureAttachmentnamesource.h"
+#import "FieldEEzsigntemplatesignatureDependencyrequirement.h"
 #import "FieldEEzsigntemplatesignatureFont.h"
 #import "FieldEEzsigntemplatesignatureTooltipposition.h"
 #import "FieldEEzsigntemplatesignatureType.h"
@@ -23,6 +24,8 @@
 @class EnumTextvalidation;
 @protocol FieldEEzsigntemplatesignatureAttachmentnamesource;
 @class FieldEEzsigntemplatesignatureAttachmentnamesource;
+@protocol FieldEEzsigntemplatesignatureDependencyrequirement;
+@class FieldEEzsigntemplatesignatureDependencyrequirement;
 @protocol FieldEEzsigntemplatesignatureFont;
 @class FieldEEzsigntemplatesignatureFont;
 @protocol FieldEEzsigntemplatesignatureTooltipposition;
@@ -95,5 +98,7 @@
 @property(nonatomic) NSString* sEzsigntemplatesignatureRegexp;
 
 @property(nonatomic) EnumTextvalidation* eEzsigntemplatesignatureTextvalidation;
+
+@property(nonatomic) FieldEEzsigntemplatesignatureDependencyrequirement* eEzsigntemplatesignatureDependencyrequirement;
 
 @end

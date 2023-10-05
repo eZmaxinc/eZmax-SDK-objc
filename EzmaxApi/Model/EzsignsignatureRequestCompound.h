@@ -15,17 +15,23 @@
 
 
 #import "EnumTextvalidation.h"
+#import "EzsignelementdependencyRequestCompound.h"
 #import "EzsignsignaturecustomdateRequestCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
+#import "FieldEEzsignsignatureDependencyrequirement.h"
 #import "FieldEEzsignsignatureFont.h"
 #import "FieldEEzsignsignatureTooltipposition.h"
 #import "FieldEEzsignsignatureType.h"
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
+@protocol EzsignelementdependencyRequestCompound;
+@class EzsignelementdependencyRequestCompound;
 @protocol EzsignsignaturecustomdateRequestCompound;
 @class EzsignsignaturecustomdateRequestCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
+@protocol FieldEEzsignsignatureDependencyrequirement;
+@class FieldEEzsignsignatureDependencyrequirement;
 @protocol FieldEEzsignsignatureFont;
 @class FieldEEzsignsignatureFont;
 @protocol FieldEEzsignsignatureTooltipposition;
@@ -98,11 +104,15 @@
 /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureRegexp;
+
+@property(nonatomic) FieldEEzsignsignatureDependencyrequirement* eEzsignsignatureDependencyrequirement;
 /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) [optional]
  */
 @property(nonatomic) NSNumber* bEzsignsignatureCustomdate;
 /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. [optional]
  */
 @property(nonatomic) NSArray<EzsignsignaturecustomdateRequestCompound>* aObjEzsignsignaturecustomdate;
+
+@property(nonatomic) NSArray<EzsignelementdependencyRequestCompound>* aObjEzsignelementdependency;
 
 @end

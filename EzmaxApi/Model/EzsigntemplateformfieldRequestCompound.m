@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateformfieldID": @"pkiEzsigntemplateformfieldID", @"iEzsigntemplatedocumentpagePagenumber": @"iEzsigntemplatedocumentpagePagenumber", @"sEzsigntemplateformfieldLabel": @"sEzsigntemplateformfieldLabel", @"sEzsigntemplateformfieldValue": @"sEzsigntemplateformfieldValue", @"iEzsigntemplateformfieldX": @"iEzsigntemplateformfieldX", @"iEzsigntemplateformfieldY": @"iEzsigntemplateformfieldY", @"iEzsigntemplateformfieldWidth": @"iEzsigntemplateformfieldWidth", @"iEzsigntemplateformfieldHeight": @"iEzsigntemplateformfieldHeight", @"bEzsigntemplateformfieldAutocomplete": @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected": @"bEzsigntemplateformfieldSelected" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateformfieldID": @"pkiEzsigntemplateformfieldID", @"iEzsigntemplatedocumentpagePagenumber": @"iEzsigntemplatedocumentpagePagenumber", @"sEzsigntemplateformfieldLabel": @"sEzsigntemplateformfieldLabel", @"sEzsigntemplateformfieldValue": @"sEzsigntemplateformfieldValue", @"iEzsigntemplateformfieldX": @"iEzsigntemplateformfieldX", @"iEzsigntemplateformfieldY": @"iEzsigntemplateformfieldY", @"iEzsigntemplateformfieldWidth": @"iEzsigntemplateformfieldWidth", @"iEzsigntemplateformfieldHeight": @"iEzsigntemplateformfieldHeight", @"bEzsigntemplateformfieldAutocomplete": @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected": @"bEzsigntemplateformfieldSelected", @"eEzsigntemplateformfieldDependencyrequirement": @"eEzsigntemplateformfieldDependencyrequirement", @"aObjEzsigntemplateelementdependency": @"a_objEzsigntemplateelementdependency" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsigntemplateformfieldID", @"sEzsigntemplateformfieldValue", @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected"];
+  NSArray *optionalProperties = @[@"pkiEzsigntemplateformfieldID", @"sEzsigntemplateformfieldValue", @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected", @"eEzsigntemplateformfieldDependencyrequirement", @"aObjEzsigntemplateelementdependency"];
   return [optionalProperties containsObject:propertyName];
 }
 

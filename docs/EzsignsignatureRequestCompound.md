@@ -24,8 +24,10 @@ Name | Type | Description | Notes
 **iEzsignsignatureMaxlength** | **NSNumber*** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** | [optional] 
 **eEzsignsignatureTextvalidation** | [**EnumTextvalidation***](EnumTextvalidation.md) |  | [optional] 
 **sEzsignsignatureRegexp** | **NSString*** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
+**eEzsignsignatureDependencyrequirement** | [**FieldEEzsignsignatureDependencyrequirement***](FieldEEzsignsignatureDependencyrequirement.md) |  | [optional] 
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **aObjEzsignsignaturecustomdate** | [**NSArray&lt;EzsignsignaturecustomdateRequestCompound&gt;***](EzsignsignaturecustomdateRequestCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
+**aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyRequestCompound&gt;***](EzsignelementdependencyRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

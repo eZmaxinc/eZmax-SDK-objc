@@ -14,6 +14,12 @@
 */
 
 
+#import "EzsignelementdependencyResponseCompound.h"
+#import "FieldEEzsignformfieldDependencyrequirement.h"
+@protocol EzsignelementdependencyResponseCompound;
+@class EzsignelementdependencyResponseCompound;
+@protocol FieldEEzsignformfieldDependencyrequirement;
+@class FieldEEzsignformfieldDependencyrequirement;
 
 
 
@@ -55,5 +61,9 @@
 /* This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldEnteredvalue;
+
+@property(nonatomic) FieldEEzsignformfieldDependencyrequirement* eEzsignformfieldDependencyrequirement;
+
+@property(nonatomic) NSArray<EzsignelementdependencyResponseCompound>* aObjEzsignelementdependency;
 
 @end

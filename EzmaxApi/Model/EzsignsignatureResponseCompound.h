@@ -17,8 +17,10 @@
 #import "CustomContactNameResponse.h"
 #import "CustomCreditcardtransactionResponse.h"
 #import "EnumTextvalidation.h"
+#import "EzsignelementdependencyResponseCompound.h"
 #import "EzsignsignaturecustomdateResponseCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
+#import "FieldEEzsignsignatureDependencyrequirement.h"
 #import "FieldEEzsignsignatureFont.h"
 #import "FieldEEzsignsignatureTooltipposition.h"
 #import "FieldEEzsignsignatureType.h"
@@ -29,10 +31,14 @@
 @class CustomCreditcardtransactionResponse;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
+@protocol EzsignelementdependencyResponseCompound;
+@class EzsignelementdependencyResponseCompound;
 @protocol EzsignsignaturecustomdateResponseCompound;
 @class EzsignsignaturecustomdateResponseCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
+@protocol FieldEEzsignsignatureDependencyrequirement;
+@class FieldEEzsignsignatureDependencyrequirement;
 @protocol FieldEEzsignsignatureFont;
 @class FieldEEzsignsignatureFont;
 @protocol FieldEEzsignsignatureTooltipposition;
@@ -113,6 +119,8 @@
 @property(nonatomic) NSNumber* iEzsignsignatureMaxlength;
 
 @property(nonatomic) EnumTextvalidation* eEzsignsignatureTextvalidation;
+
+@property(nonatomic) FieldEEzsignsignatureDependencyrequirement* eEzsignsignatureDependencyrequirement;
 /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureRegexp;
@@ -130,5 +138,7 @@
 @property(nonatomic) NSArray<EzsignsignaturecustomdateResponseCompound>* aObjEzsignsignaturecustomdate;
 
 @property(nonatomic) CustomCreditcardtransactionResponse* objCreditcardtransaction;
+
+@property(nonatomic) NSArray<EzsignelementdependencyResponseCompound>* aObjEzsignelementdependency;
 
 @end

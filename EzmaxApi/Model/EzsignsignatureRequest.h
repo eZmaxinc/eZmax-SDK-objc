@@ -16,6 +16,7 @@
 
 #import "EnumTextvalidation.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
+#import "FieldEEzsignsignatureDependencyrequirement.h"
 #import "FieldEEzsignsignatureFont.h"
 #import "FieldEEzsignsignatureTooltipposition.h"
 #import "FieldEEzsignsignatureType.h"
@@ -23,6 +24,8 @@
 @class EnumTextvalidation;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
+@protocol FieldEEzsignsignatureDependencyrequirement;
+@class FieldEEzsignsignatureDependencyrequirement;
 @protocol FieldEEzsignsignatureFont;
 @class FieldEEzsignsignatureFont;
 @protocol FieldEEzsignsignatureTooltipposition;
@@ -95,5 +98,7 @@
 /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureRegexp;
+
+@property(nonatomic) FieldEEzsignsignatureDependencyrequirement* eEzsignsignatureDependencyrequirement;
 
 @end

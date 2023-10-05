@@ -14,6 +14,12 @@
 */
 
 
+#import "EzsigntemplateelementdependencyResponseCompound.h"
+#import "FieldEEzsigntemplateformfieldDependencyrequirement.h"
+@protocol EzsigntemplateelementdependencyResponseCompound;
+@class EzsigntemplateelementdependencyResponseCompound;
+@protocol FieldEEzsigntemplateformfieldDependencyrequirement;
+@class FieldEEzsigntemplateformfieldDependencyrequirement;
 
 
 
@@ -52,5 +58,9 @@
 /* Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** [optional]
  */
 @property(nonatomic) NSNumber* bEzsigntemplateformfieldSelected;
+
+@property(nonatomic) FieldEEzsigntemplateformfieldDependencyrequirement* eEzsigntemplateformfieldDependencyrequirement;
+
+@property(nonatomic) NSArray<EzsigntemplateelementdependencyResponseCompound>* aObjEzsigntemplateelementdependency;
 
 @end
