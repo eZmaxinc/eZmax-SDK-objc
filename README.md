@@ -824,6 +824,9 @@ Import the following:
 #import <EzmaxApi/GlobalEzmaxclientVersionV1Response.h>
 #import <EzmaxApi/GlobalEzmaxcustomerGetConfigurationV1Response.h>
 #import <EzmaxApi/HeaderAcceptLanguage.h>
+#import <EzmaxApi/LanguageAutocompleteElementResponse.h>
+#import <EzmaxApi/LanguageGetAutocompleteV2Response.h>
+#import <EzmaxApi/LanguageGetAutocompleteV2ResponseMPayload.h>
 #import <EzmaxApi/ModuleResponse.h>
 #import <EzmaxApi/ModuleResponseCompound.h>
 #import <EzmaxApi/ModulegroupGetAllV1Response.h>
@@ -1152,6 +1155,7 @@ Import the following:
 #import <EzmaxApi/ObjectFranchisebrokerApi.h>
 #import <EzmaxApi/ObjectFranchiseofficeApi.h>
 #import <EzmaxApi/ObjectFranchisereferalincomeApi.h>
+#import <EzmaxApi/ObjectLanguageApi.h>
 #import <EzmaxApi/ObjectModulegroupApi.h>
 #import <EzmaxApi/ObjectNotificationsectionApi.h>
 #import <EzmaxApi/ObjectNotificationtestApi.h>
@@ -1423,6 +1427,7 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectLanguageApi* | [**languageGetAutocompleteV2**](docs/ObjectLanguageApi.md#languagegetautocompletev2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupgetallv1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
@@ -2297,6 +2302,9 @@ Class | Method | HTTP request | Description
  - [GlobalEzmaxclientVersionV1Response](docs/GlobalEzmaxclientVersionV1Response.md)
  - [GlobalEzmaxcustomerGetConfigurationV1Response](docs/GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
+ - [LanguageAutocompleteElementResponse](docs/LanguageAutocompleteElementResponse.md)
+ - [LanguageGetAutocompleteV2Response](docs/LanguageGetAutocompleteV2Response.md)
+ - [LanguageGetAutocompleteV2ResponseMPayload](docs/LanguageGetAutocompleteV2ResponseMPayload.md)
  - [ModuleResponse](docs/ModuleResponse.md)
  - [ModuleResponseCompound](docs/ModuleResponseCompound.md)
  - [ModulegroupGetAllV1Response](docs/ModulegroupGetAllV1Response.md)

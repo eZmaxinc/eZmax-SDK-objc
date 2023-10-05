@@ -93,6 +93,8 @@ EzmaxApi/Api/ObjectFranchiseofficeApi.h
 EzmaxApi/Api/ObjectFranchiseofficeApi.m
 EzmaxApi/Api/ObjectFranchisereferalincomeApi.h
 EzmaxApi/Api/ObjectFranchisereferalincomeApi.m
+EzmaxApi/Api/ObjectLanguageApi.h
+EzmaxApi/Api/ObjectLanguageApi.m
 EzmaxApi/Api/ObjectModulegroupApi.h
 EzmaxApi/Api/ObjectModulegroupApi.m
 EzmaxApi/Api/ObjectNotificationsectionApi.h
@@ -1729,6 +1731,12 @@ EzmaxApi/Model/GlobalEzmaxcustomerGetConfigurationV1Response.h
 EzmaxApi/Model/GlobalEzmaxcustomerGetConfigurationV1Response.m
 EzmaxApi/Model/HeaderAcceptLanguage.h
 EzmaxApi/Model/HeaderAcceptLanguage.m
+EzmaxApi/Model/LanguageAutocompleteElementResponse.h
+EzmaxApi/Model/LanguageAutocompleteElementResponse.m
+EzmaxApi/Model/LanguageGetAutocompleteV2Response.h
+EzmaxApi/Model/LanguageGetAutocompleteV2Response.m
+EzmaxApi/Model/LanguageGetAutocompleteV2ResponseMPayload.h
+EzmaxApi/Model/LanguageGetAutocompleteV2ResponseMPayload.m
 EzmaxApi/Model/ModuleResponse.h
 EzmaxApi/Model/ModuleResponse.m
 EzmaxApi/Model/ModuleResponseCompound.h
@@ -3077,6 +3085,9 @@ docs/GlobalEzmaxclientVersionV1Response.md
 docs/GlobalEzmaxcustomerApi.md
 docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/LanguageAutocompleteElementResponse.md
+docs/LanguageGetAutocompleteV2Response.md
+docs/LanguageGetAutocompleteV2ResponseMPayload.md
 docs/ModuleEzsignApi.md
 docs/ModuleReportApi.md
 docs/ModuleResponse.md
@@ -3147,6 +3158,7 @@ docs/ObjectFontApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
+docs/ObjectLanguageApi.md
 docs/ObjectModulegroupApi.md
 docs/ObjectNotificationsectionApi.md
 docs/ObjectNotificationtestApi.md
