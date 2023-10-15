@@ -131,6 +131,8 @@ EzmaxApi/Api/ObjectUsergroupdelegationApi.h
 EzmaxApi/Api/ObjectUsergroupdelegationApi.m
 EzmaxApi/Api/ObjectUsergroupmembershipApi.h
 EzmaxApi/Api/ObjectUsergroupmembershipApi.m
+EzmaxApi/Api/ObjectUserlogintypeApi.h
+EzmaxApi/Api/ObjectUserlogintypeApi.m
 EzmaxApi/Api/ObjectUserstagedApi.h
 EzmaxApi/Api/ObjectUserstagedApi.m
 EzmaxApi/Api/ObjectVariableexpenseApi.h
@@ -2167,6 +2169,12 @@ EzmaxApi/Model/UsergroupmembershipResponse.h
 EzmaxApi/Model/UsergroupmembershipResponse.m
 EzmaxApi/Model/UsergroupmembershipResponseCompound.h
 EzmaxApi/Model/UsergroupmembershipResponseCompound.m
+EzmaxApi/Model/UserlogintypeAutocompleteElementResponse.h
+EzmaxApi/Model/UserlogintypeAutocompleteElementResponse.m
+EzmaxApi/Model/UserlogintypeGetAutocompleteV2Response.h
+EzmaxApi/Model/UserlogintypeGetAutocompleteV2Response.m
+EzmaxApi/Model/UserlogintypeGetAutocompleteV2ResponseMPayload.h
+EzmaxApi/Model/UserlogintypeGetAutocompleteV2ResponseMPayload.m
 EzmaxApi/Model/UserstagedCreateUserV1Response.h
 EzmaxApi/Model/UserstagedCreateUserV1Response.m
 EzmaxApi/Model/UserstagedCreateUserV1ResponseMPayload.h
@@ -3177,6 +3185,7 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectUsergroupdelegationApi.md
 docs/ObjectUsergroupmembershipApi.md
+docs/ObjectUserlogintypeApi.md
 docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
@@ -3372,6 +3381,9 @@ docs/UsergroupmembershipRequest.md
 docs/UsergroupmembershipRequestCompound.md
 docs/UsergroupmembershipResponse.md
 docs/UsergroupmembershipResponseCompound.md
+docs/UserlogintypeAutocompleteElementResponse.md
+docs/UserlogintypeGetAutocompleteV2Response.md
+docs/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 docs/UserstagedCreateUserV1Response.md
 docs/UserstagedCreateUserV1ResponseMPayload.md
 docs/UserstagedDeleteObjectV1Response.md
