@@ -6,7 +6,6 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
-    self.iRowMax = @10000;
     self.iRowOffset = @0;
     
   }

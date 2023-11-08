@@ -4,18 +4,18 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetObjectV2**](ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+[**communicationSendV1**](ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication
 
 
-# **communicationGetObjectV2**
+# **communicationSendV1**
 ```objc
--(NSURLSessionTask*) communicationGetObjectV2WithPkiCommunicationID: (NSNumber*) pkiCommunicationID
-        completionHandler: (void (^)(CommunicationGetObjectV2Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) communicationSendV1WithCommunicationSendV1Request: (CommunicationSendV1Request*) communicationSendV1Request
+        completionHandler: (void (^)(CommunicationSendV1Response* output, NSError* error)) handler;
 ```
 
-Retrieve an existing Communication
+Send a new Communication
 
-
+The endpoint allows to send one or many elements at once.
 
 ### Example
 ```objc
@@ -27,18 +27,18 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-NSNumber* pkiCommunicationID = @56; // 
+CommunicationSendV1Request* communicationSendV1Request = [[CommunicationSendV1Request alloc] init]; // 
 
 ObjectCommunicationApi*apiInstance = [[ObjectCommunicationApi alloc] init];
 
-// Retrieve an existing Communication
-[apiInstance communicationGetObjectV2WithPkiCommunicationID:pkiCommunicationID
-          completionHandler: ^(CommunicationGetObjectV2Response* output, NSError* error) {
+// Send a new Communication
+[apiInstance communicationSendV1WithCommunicationSendV1Request:communicationSendV1Request
+          completionHandler: ^(CommunicationSendV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectCommunicationApi->communicationGetObjectV2: %@", error);
+                            NSLog(@"Error calling ObjectCommunicationApi->communicationSendV1: %@", error);
                         }
                     }];
 ```
@@ -47,11 +47,11 @@ ObjectCommunicationApi*apiInstance = [[ObjectCommunicationApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiCommunicationID** | **NSNumber***|  | 
+ **communicationSendV1Request** | [**CommunicationSendV1Request***](CommunicationSendV1Request.md)|  | 
 
 ### Return type
 
-[**CommunicationGetObjectV2Response***](CommunicationGetObjectV2Response.md)
+[**CommunicationSendV1Response***](CommunicationSendV1Response.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

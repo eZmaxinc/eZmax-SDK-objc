@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponseError.h"
-#import "CommunicationGetObjectV2Response.h"
+#import "CommunicationSendV1Request.h"
+#import "CommunicationSendV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,17 +24,16 @@ extern NSInteger kObjectCommunicationApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Retrieve an existing Communication
-/// 
+/// Send a new Communication
+/// The endpoint allows to send one or many elements at once.
 ///
-/// @param pkiCommunicationID 
+/// @param communicationSendV1Request 
 /// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:201 message:"Successful response"
 ///
-/// @return CommunicationGetObjectV2Response*
--(NSURLSessionTask*) communicationGetObjectV2WithPkiCommunicationID: (NSNumber*) pkiCommunicationID
-    completionHandler: (void (^)(CommunicationGetObjectV2Response* output, NSError* error)) handler;
+/// @return CommunicationSendV1Response*
+-(NSURLSessionTask*) communicationSendV1WithCommunicationSendV1Request: (CommunicationSendV1Request*) communicationSendV1Request
+    completionHandler: (void (^)(CommunicationSendV1Response* output, NSError* error)) handler;
 
 
 

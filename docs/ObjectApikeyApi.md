@@ -274,7 +274,7 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
-NSNumber* iRowMax = @10000; //  (optional) (default to @10000)
+NSNumber* iRowMax = @56; //  (optional)
 NSNumber* iRowOffset = @0; //  (optional) (default to @0)
 HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
 NSString* sFilter = @"sFilter_example"; //  (optional)
@@ -302,7 +302,7 @@ ObjectApikeyApi*apiInstance = [[ObjectApikeyApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **NSNumber***|  | [optional] [default to @10000]
+ **iRowMax** | **NSNumber***|  | [optional] 
  **iRowOffset** | **NSNumber***|  | [optional] [default to @0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **NSString***|  | [optional] 

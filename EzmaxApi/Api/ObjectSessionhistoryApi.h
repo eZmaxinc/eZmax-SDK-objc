@@ -29,7 +29,7 @@ extern NSInteger kObjectSessionhistoryApiMissingParamErrorCode;
 /// 
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
-/// @param iRowMax  (optional) (default to @10000)
+/// @param iRowMax  (optional)
 /// @param iRowOffset  (optional) (default to @0)
 /// @param acceptLanguage  (optional)
 /// @param sFilter  (optional)

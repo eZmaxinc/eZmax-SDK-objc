@@ -15,6 +15,8 @@
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetCommunicationCountV1Response.h"
 #import "EzsignfolderGetCommunicationListV1Response.h"
+#import "EzsignfolderGetCommunicationrecipientsV1Response.h"
+#import "EzsignfolderGetCommunicationsendersV1Response.h"
 #import "EzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
 #import "EzsignfolderGetEzsignsignaturesAutomaticV1Response.h"
@@ -216,6 +218,32 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsignfolderGetCommunicationListV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve Ezsignfolder's Communicationrecipient
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetCommunicationrecipientsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Ezsignfolder's Communicationsender
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) ezsignfolderGetCommunicationsendersV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetCommunicationsendersV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignfolder's Ezsigndocuments
 /// 
 ///
@@ -271,10 +299,10 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve Ezsignfolder list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
-/// @param iRowMax  (optional) (default to @10000)
+/// @param iRowMax  (optional)
 /// @param iRowOffset  (optional) (default to @0)
 /// @param acceptLanguage  (optional)
 /// @param sFilter  (optional)

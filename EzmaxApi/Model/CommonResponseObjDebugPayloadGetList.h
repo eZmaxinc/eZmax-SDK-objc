@@ -42,7 +42,7 @@
 /* List of available values for *eOrderBy* 
  */
 @property(nonatomic) NSDictionary<NSString*, NSString*>* aOrderBy;
-/* The maximum numbers of results to be returned 
+/* The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. 
  */
 @property(nonatomic) NSNumber* iRowMax;
 /* The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, 

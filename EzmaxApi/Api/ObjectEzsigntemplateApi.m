@@ -452,7 +452,7 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplateType | Company<br>Team<br>User<br>Usergroup | 
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
 ///
-///  @param iRowMax  (optional, default to @10000)
+///  @param iRowMax  (optional)
 ///
 ///  @param iRowOffset  (optional, default to @0)
 ///

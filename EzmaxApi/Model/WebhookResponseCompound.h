@@ -55,7 +55,7 @@
 /* The email that will receive the Webhook in case all attempts fail 
  */
 @property(nonatomic) NSString* sWebhookEmailfailed;
-/* Whether the Webhook is active or not [optional]
+/* Whether the Webhook is active or not 
  */
 @property(nonatomic) NSNumber* bWebhookIsactive;
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 

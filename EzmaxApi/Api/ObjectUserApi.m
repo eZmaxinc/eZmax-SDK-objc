@@ -523,7 +523,7 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker<br>Assistant<br>Employee<br>EzsignUser<br>Normal | | eUserOrigin | BuiltIn<br>External | | eUserEzsignaccess | No<br>PaidByOffice<br>PerDocument<br>Prepaid |
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
 ///
-///  @param iRowMax  (optional, default to @10000)
+///  @param iRowMax  (optional)
 ///
 ///  @param iRowOffset  (optional, default to @0)
 ///
