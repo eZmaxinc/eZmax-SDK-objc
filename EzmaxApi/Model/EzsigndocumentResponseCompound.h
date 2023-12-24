@@ -95,6 +95,9 @@
 /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  [optional]
  */
 @property(nonatomic) NSString* sEzsigndocumentExternalid;
+/* The number of Ezsigndocumentattachment total 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentEzsignsignatureattachmenttotal;
 
 @property(nonatomic) ComputedEEzsigndocumentSteptype* eEzsigndocumentSteptype;
 /* The total number of steps in the form filling phase 

@@ -28,6 +28,9 @@
 /* The Type of message 
  */
 @property(nonatomic) NSString* eWebsocketMessagetype;
+/* The Channel on which to route the websocket message 
+ */
+@property(nonatomic) NSString* sWebsocketChannel;
 
 @property(nonatomic) WebsocketResponseErrorV1MPayload* mPayload;
 

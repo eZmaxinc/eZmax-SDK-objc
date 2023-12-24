@@ -25,5 +25,8 @@
 /* The version on the store 
  */
 @property(nonatomic) NSString* sEzmaxclientVersion;
+/* The latest OS version of the system running the application at the time of release 
+ */
+@property(nonatomic) NSString* sEzmaxclientOslatestversion;
 
 @end

@@ -7,10 +7,12 @@ Name | Type | Description | Notes
 **fkiBrokerID** | **NSNumber*** | The unique ID of the Broker. | [optional] 
 **fkiUserID** | **NSNumber*** | The unique ID of the User | [optional] 
 **fkiMailboxsharedID** | **NSNumber*** | The unique ID of the Mailboxshared | [optional] 
+**fkiPhonelinesharedID** | **NSNumber*** | The unique ID of the Phonelineshared | [optional] 
 **eCommunicationsenderObjecttype** | **NSString*** |  | 
 **objContactName** | [**CustomContactNameResponse***](CustomContactNameResponse.md) |  | 
-**sEmailAddress** | **NSString*** | The email address. | [optional] 
-**sPhoneE164** | **NSString*** | A phone number in E.164 Format | [optional] 
+**objEmail** | [**EmailResponseCompound***](EmailResponseCompound.md) |  | [optional] 
+**objPhoneFax** | [**PhoneResponseCompound***](PhoneResponseCompound.md) |  | [optional] 
+**objPhoneSMS** | [**PhoneResponseCompound***](PhoneResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

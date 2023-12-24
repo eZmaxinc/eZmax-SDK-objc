@@ -31,6 +31,9 @@
 /* The unique ID of the Mailboxshared [optional]
  */
 @property(nonatomic) NSNumber* fkiMailboxsharedID;
+/* The unique ID of the Phonelineshared [optional]
+ */
+@property(nonatomic) NSNumber* fkiPhonelinesharedID;
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;

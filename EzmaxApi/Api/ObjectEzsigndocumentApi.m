@@ -22,6 +22,7 @@
 #import "EzsigndocumentEndPrematurelyV1Response.h"
 #import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
+#import "EzsigndocumentGetAttachmentsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
 #import "EzsigndocumentGetDownloadUrlV1Response.h"
 #import "EzsigndocumentGetEzsignannotationsV1Response.h"
@@ -932,6 +933,74 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsigndocumentGetActionableElementsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Ezsigndocument's Attachments
+/// 
+///  @param pkiEzsigndocumentID  
+///
+///  @returns EzsigndocumentGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) ezsigndocumentGetAttachmentsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EzsigndocumentGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == nil) {
+        NSParameterAssert(pkiEzsigndocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigndocumentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigndocumentApiErrorDomain code:kObjectEzsigndocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigndocumentID != nil) {
+        pathParams[@"pkiEzsigndocumentID"] = pkiEzsigndocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsigndocumentGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsigndocumentGetAttachmentsV1Response*)data, error);
                                 }
                             }];
 }

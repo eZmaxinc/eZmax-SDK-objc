@@ -64,6 +64,12 @@
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;
+/* The unique ID of the Ezsignsigningreason [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignsigningreasonID;
+/* The description of the Ezsignsigningreason in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sEzsignsigningreasonDescriptionX;
 /* The page number in the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* iEzsignpagePagenumber;

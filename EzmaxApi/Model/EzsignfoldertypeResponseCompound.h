@@ -96,9 +96,39 @@
 /* Wheter if Reassignment of signature is allowed to another signatory or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassign;
-/* Whether we send the Ezsigndocument and the proof as attachment in the email 
+/* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendattatchmentsigner;
+/* Whether we send an email to Ezsignsigner  when document is completed [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtoezsignsigner;
+/* Whether we send an email to User who signed when document is completed [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtouser;
+/* Whether we send the Ezsigndocument in the email to Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendattachmentezsignsigner;
+/* Whether we send the proof in the email to Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendproofezsignsigner;
+/* Whether we send the Ezsigndocument in the email to User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendattachmentuser;
+/* Whether we send the proof in the email to User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendproofuser;
+/* Whether we send the proof in the email to external recipient [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendproofemail;
+/* Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+/* Whether we allow the proof to be downloaded by an Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAllowdownloadproofezsignsigner;
+/* Whether we send the proof to user and Ezsignsigner who receive all documents. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendproofreceivealldocument;
 /* Whether we send the signed Ezsigndocument to the Ezsigndocument's owner 
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtodocumentowner;
@@ -108,7 +138,7 @@
 /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtofullgroup;
-/* Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders [optional]
+/* THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtolimitedgroup;
 /* Whether we send the signed Ezsigndocument to the colleagues 
@@ -129,7 +159,7 @@
 /* Whether we send the summary to the colleagues 
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsummarytocolleague;
-/* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners 
+/* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofsigner;
 /* Whether we include the proof with the signed Ezsigndocument for users 

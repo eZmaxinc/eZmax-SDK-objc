@@ -6,6 +6,7 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
+    self.sEzmaxclientOslatestversion = @"11";
     
   }
   return self;
@@ -17,7 +18,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sEzmaxclientVersion": @"sEzmaxclientVersion" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sEzmaxclientVersion": @"sEzmaxclientVersion", @"sEzmaxclientOslatestversion": @"sEzmaxclientOslatestversion" }];
 }
 
 /**

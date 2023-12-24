@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**fkiEzsignsigningreasonID** | **NSNumber*** | The unique ID of the Ezsignsigningreason | [optional] 
 **sValue** | **NSString*** | The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** | [optional] 
 **eAttachmentsConfirmationDecision** | **NSString*** | Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** | [optional] 
 **sAttachmentsRefusalReason** | **NSString*** | The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** | [optional] 

@@ -6,12 +6,16 @@
 #import "HeaderAcceptLanguage.h"
 #import "WebhookCreateObjectV1Request.h"
 #import "WebhookCreateObjectV1Response.h"
+#import "WebhookCreateObjectV2Request.h"
+#import "WebhookCreateObjectV2Response.h"
 #import "WebhookDeleteObjectV1Response.h"
 #import "WebhookEditObjectV1Request.h"
 #import "WebhookEditObjectV1Response.h"
 #import "WebhookGetHistoryV1Response.h"
 #import "WebhookGetListV1Response.h"
 #import "WebhookGetObjectV2Response.h"
+#import "WebhookRegenerateApikeyV1Request.h"
+#import "WebhookRegenerateApikeyV1Response.h"
 #import "WebhookTestV1Response.h"
 
 
@@ -122,6 +126,72 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((WebhookCreateObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Create a new Webhook
+/// The endpoint allows to create one or many elements at once.
+///  @param webhookCreateObjectV2Request  
+///
+///  @returns WebhookCreateObjectV2Response*
+///
+-(NSURLSessionTask*) webhookCreateObjectV2WithWebhookCreateObjectV2Request: (WebhookCreateObjectV2Request*) webhookCreateObjectV2Request
+    completionHandler: (void (^)(WebhookCreateObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'webhookCreateObjectV2Request' is set
+    if (webhookCreateObjectV2Request == nil) {
+        NSParameterAssert(webhookCreateObjectV2Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"webhookCreateObjectV2Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectWebhookApiErrorDomain code:kObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/webhook"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = webhookCreateObjectV2Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"WebhookCreateObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((WebhookCreateObjectV2Response*)data, error);
                                 }
                             }];
 }
@@ -507,6 +577,89 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((WebhookGetObjectV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Regenerate the Apikey
+/// 
+///  @param pkiWebhookID  
+///
+///  @param webhookRegenerateApikeyV1Request  
+///
+///  @returns WebhookRegenerateApikeyV1Response*
+///
+-(NSURLSessionTask*) webhookRegenerateApikeyV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    webhookRegenerateApikeyV1Request: (WebhookRegenerateApikeyV1Request*) webhookRegenerateApikeyV1Request
+    completionHandler: (void (^)(WebhookRegenerateApikeyV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiWebhookID' is set
+    if (pkiWebhookID == nil) {
+        NSParameterAssert(pkiWebhookID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiWebhookID"] };
+            NSError* error = [NSError errorWithDomain:kObjectWebhookApiErrorDomain code:kObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'webhookRegenerateApikeyV1Request' is set
+    if (webhookRegenerateApikeyV1Request == nil) {
+        NSParameterAssert(webhookRegenerateApikeyV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"webhookRegenerateApikeyV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectWebhookApiErrorDomain code:kObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/webhook/{pkiWebhookID}/regenerateApikey"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiWebhookID != nil) {
+        pathParams[@"pkiWebhookID"] = pkiWebhookID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = webhookRegenerateApikeyV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"WebhookRegenerateApikeyV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((WebhookRegenerateApikeyV1Response*)data, error);
                                 }
                             }];
 }

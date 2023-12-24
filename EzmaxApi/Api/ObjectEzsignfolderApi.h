@@ -13,6 +13,8 @@
 #import "EzsignfolderEditObjectV1Request.h"
 #import "EzsignfolderEditObjectV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
+#import "EzsignfolderGetAttachmentCountV1Response.h"
+#import "EzsignfolderGetAttachmentsV1Response.h"
 #import "EzsignfolderGetCommunicationCountV1Response.h"
 #import "EzsignfolderGetCommunicationListV1Response.h"
 #import "EzsignfolderGetCommunicationrecipientsV1Response.h"
@@ -190,6 +192,32 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EzsignfolderGetActionableElementsV1Response*
 -(NSURLSessionTask*) ezsignfolderGetActionableElementsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EzsignfolderGetActionableElementsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Attachment count
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetAttachmentCountV1Response*
+-(NSURLSessionTask*) ezsignfolderGetAttachmentCountV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetAttachmentCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Ezsignfolder's Attachments
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetAttachmentsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetAttachmentsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetAttachmentsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Communication count

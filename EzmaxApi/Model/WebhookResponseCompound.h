@@ -55,9 +55,18 @@
 /* The email that will receive the Webhook in case all attempts fail 
  */
 @property(nonatomic) NSString* sWebhookEmailfailed;
+/* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
+ */
+@property(nonatomic) NSString* sWebhookApikey;
+/* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
+ */
+@property(nonatomic) NSString* sWebhookSecret;
 /* Whether the Webhook is active or not 
  */
 @property(nonatomic) NSNumber* bWebhookIsactive;
+/* Whether the requests will be signed or not 
+ */
+@property(nonatomic) NSNumber* bWebhookIssigned;
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;

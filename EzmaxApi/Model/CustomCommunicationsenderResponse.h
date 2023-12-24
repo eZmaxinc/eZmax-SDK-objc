@@ -15,8 +15,14 @@
 
 
 #import "CustomContactNameResponse.h"
+#import "EmailResponseCompound.h"
+#import "PhoneResponseCompound.h"
 @protocol CustomContactNameResponse;
 @class CustomContactNameResponse;
+@protocol EmailResponseCompound;
+@class EmailResponseCompound;
+@protocol PhoneResponseCompound;
+@class PhoneResponseCompound;
 
 
 
@@ -37,15 +43,18 @@
 /* The unique ID of the Mailboxshared [optional]
  */
 @property(nonatomic) NSNumber* fkiMailboxsharedID;
+/* The unique ID of the Phonelineshared [optional]
+ */
+@property(nonatomic) NSNumber* fkiPhonelinesharedID;
 
 @property(nonatomic) NSString* eCommunicationsenderObjecttype;
 
 @property(nonatomic) CustomContactNameResponse* objContactName;
-/* The email address. [optional]
- */
-@property(nonatomic) NSString* sEmailAddress;
-/* A phone number in E.164 Format [optional]
- */
-@property(nonatomic) NSString* sPhoneE164;
+
+@property(nonatomic) EmailResponseCompound* objEmail;
+
+@property(nonatomic) PhoneResponseCompound* objPhoneFax;
+
+@property(nonatomic) PhoneResponseCompound* objPhoneSMS;
 
 @end

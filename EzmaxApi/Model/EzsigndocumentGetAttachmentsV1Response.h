@@ -16,21 +16,26 @@
 
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
+#import "EzsigndocumentGetAttachmentsV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
+@protocol EzsigndocumentGetAttachmentsV1ResponseMPayload;
+@class EzsigndocumentGetAttachmentsV1ResponseMPayload;
 
 
 
-@protocol AttachmentDownloadV1Response
+@protocol EzsigndocumentGetAttachmentsV1Response
 @end
 
-@interface AttachmentDownloadV1Response : Object
+@interface EzsigndocumentGetAttachmentsV1Response : Object
 
 
 @property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EzsigndocumentGetAttachmentsV1ResponseMPayload* mPayload;
 
 @end

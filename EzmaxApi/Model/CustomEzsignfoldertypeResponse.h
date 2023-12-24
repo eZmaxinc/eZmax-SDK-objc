@@ -28,12 +28,21 @@
 /* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
-/* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners [optional]
+/* Whether we send the proof in the email to Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendproofezsignsigner;
+/* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofsigner;
 /* Whether we include the proof with the signed Ezsigndocument for users [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofuser;
+/* Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+/* Whether we allow the proof to be downloaded by an Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAllowdownloadproofezsignsigner;
 /* Wheter if delegation of signature is allowed to another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeDelegate;

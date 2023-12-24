@@ -4,12 +4,16 @@
 #import "HeaderAcceptLanguage.h"
 #import "WebhookCreateObjectV1Request.h"
 #import "WebhookCreateObjectV1Response.h"
+#import "WebhookCreateObjectV2Request.h"
+#import "WebhookCreateObjectV2Response.h"
 #import "WebhookDeleteObjectV1Response.h"
 #import "WebhookEditObjectV1Request.h"
 #import "WebhookEditObjectV1Response.h"
 #import "WebhookGetHistoryV1Response.h"
 #import "WebhookGetListV1Response.h"
 #import "WebhookGetObjectV2Response.h"
+#import "WebhookRegenerateApikeyV1Request.h"
+#import "WebhookRegenerateApikeyV1Response.h"
 #import "WebhookTestV1Response.h"
 #import "Api.h"
 
@@ -44,6 +48,18 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @return WebhookCreateObjectV1Response*
 -(NSURLSessionTask*) webhookCreateObjectV1WithWebhookCreateObjectV1Request: (WebhookCreateObjectV1Request*) webhookCreateObjectV1Request
     completionHandler: (void (^)(WebhookCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new Webhook
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param webhookCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return WebhookCreateObjectV2Response*
+-(NSURLSessionTask*) webhookCreateObjectV2WithWebhookCreateObjectV2Request: (WebhookCreateObjectV2Request*) webhookCreateObjectV2Request
+    completionHandler: (void (^)(WebhookCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Webhook
@@ -122,6 +138,21 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @return WebhookGetObjectV2Response*
 -(NSURLSessionTask*) webhookGetObjectV2WithPkiWebhookID: (NSNumber*) pkiWebhookID
     completionHandler: (void (^)(WebhookGetObjectV2Response* output, NSError* error)) handler;
+
+
+/// Regenerate the Apikey
+/// 
+///
+/// @param pkiWebhookID 
+/// @param webhookRegenerateApikeyV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return WebhookRegenerateApikeyV1Response*
+-(NSURLSessionTask*) webhookRegenerateApikeyV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    webhookRegenerateApikeyV1Request: (WebhookRegenerateApikeyV1Request*) webhookRegenerateApikeyV1Request
+    completionHandler: (void (^)(WebhookRegenerateApikeyV1Response* output, NSError* error)) handler;
 
 
 /// Test the Webhook by calling the Url

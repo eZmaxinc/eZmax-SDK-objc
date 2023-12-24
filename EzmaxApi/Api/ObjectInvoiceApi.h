@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "InvoiceGetAttachmentsV1Response.h"
 #import "InvoiceGetCommunicationListV1Response.h"
 #import "Api.h"
 
@@ -23,6 +24,19 @@ extern NSString* kObjectInvoiceApiErrorDomain;
 extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Retrieve Invoice's Attachments
+/// 
+///
+/// @param pkiInvoiceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InvoiceGetAttachmentsV1Response*
+-(NSURLSessionTask*) invoiceGetAttachmentsV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Communication list
 /// 

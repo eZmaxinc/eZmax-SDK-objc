@@ -55,6 +55,9 @@
 /* Whether the Webhook is active or not 
  */
 @property(nonatomic) NSNumber* bWebhookIsactive;
+/* Whether the requests will be signed or not [optional]
+ */
+@property(nonatomic) NSNumber* bWebhookIssigned;
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;

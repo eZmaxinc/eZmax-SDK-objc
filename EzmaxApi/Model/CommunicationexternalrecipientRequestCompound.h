@@ -36,7 +36,7 @@
 @property(nonatomic) NSString* sPhoneE164;
 
 @property(nonatomic) FieldECommunicationexternalrecipientType* eCommunicationexternalrecipientType;
-/* The name of the Communicationexternalrecipient 
+/* The name of the Communicationexternalrecipient [optional]
  */
 @property(nonatomic) NSString* sCommunicationexternalrecipientName;
 

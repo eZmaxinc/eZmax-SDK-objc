@@ -55,5 +55,8 @@
 /* Whether the Webhook is active or not 
  */
 @property(nonatomic) NSNumber* bWebhookIsactive;
+/* Whether the requests will be signed or not 
+ */
+@property(nonatomic) NSNumber* bWebhookIssigned;
 
 @end

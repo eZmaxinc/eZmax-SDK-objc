@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiCommunicationexternalrecipientID", @"sEmailAddress", @"sPhoneE164", @"eCommunicationexternalrecipientType", ];
+  NSArray *optionalProperties = @[@"pkiCommunicationexternalrecipientID", @"sEmailAddress", @"sPhoneE164", @"eCommunicationexternalrecipientType", @"sCommunicationexternalrecipientName"];
   return [optionalProperties containsObject:propertyName];
 }
 

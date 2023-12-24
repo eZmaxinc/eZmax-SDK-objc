@@ -25,6 +25,9 @@
 
 @interface EzsignsignatureSignV1Request : Object
 
+/* The unique ID of the Ezsignsigningreason [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignsigningreasonID;
 /* The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** [optional]
  */
 @property(nonatomic) NSString* sValue;

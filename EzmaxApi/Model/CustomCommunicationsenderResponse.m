@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiAgentID": @"fkiAgentID", @"fkiBrokerID": @"fkiBrokerID", @"fkiUserID": @"fkiUserID", @"fkiMailboxsharedID": @"fkiMailboxsharedID", @"eCommunicationsenderObjecttype": @"eCommunicationsenderObjecttype", @"objContactName": @"objContactName", @"sEmailAddress": @"sEmailAddress", @"sPhoneE164": @"sPhoneE164" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiAgentID": @"fkiAgentID", @"fkiBrokerID": @"fkiBrokerID", @"fkiUserID": @"fkiUserID", @"fkiMailboxsharedID": @"fkiMailboxsharedID", @"fkiPhonelinesharedID": @"fkiPhonelinesharedID", @"eCommunicationsenderObjecttype": @"eCommunicationsenderObjecttype", @"objContactName": @"objContactName", @"objEmail": @"objEmail", @"objPhoneFax": @"objPhoneFax", @"objPhoneSMS": @"objPhoneSMS" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiAgentID", @"fkiBrokerID", @"fkiUserID", @"fkiMailboxsharedID", @"sEmailAddress", @"sPhoneE164"];
+  NSArray *optionalProperties = @[@"fkiAgentID", @"fkiBrokerID", @"fkiUserID", @"fkiMailboxsharedID", @"fkiPhonelinesharedID", @"objEmail", @"objPhoneFax", @"objPhoneSMS"];
   return [optionalProperties containsObject:propertyName];
 }
 

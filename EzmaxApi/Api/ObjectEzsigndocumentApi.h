@@ -20,6 +20,7 @@
 #import "EzsigndocumentEndPrematurelyV1Response.h"
 #import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
+#import "EzsigndocumentGetAttachmentsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
 #import "EzsigndocumentGetDownloadUrlV1Response.h"
 #import "EzsigndocumentGetEzsignannotationsV1Response.h"
@@ -225,6 +226,19 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EzsigndocumentGetActionableElementsV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetActionableElementsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EzsigndocumentGetActionableElementsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Ezsigndocument's Attachments
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentGetAttachmentsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetAttachmentsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EzsigndocumentGetAttachmentsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve completed elements for the Ezsigndocument

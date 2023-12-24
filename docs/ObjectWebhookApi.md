@@ -5,11 +5,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**webhookCreateObjectV1**](ObjectWebhookApi.md#webhookcreateobjectv1) | **POST** /1/object/webhook | Create a new Webhook
+[**webhookCreateObjectV2**](ObjectWebhookApi.md#webhookcreateobjectv2) | **POST** /2/object/webhook | Create a new Webhook
 [**webhookDeleteObjectV1**](ObjectWebhookApi.md#webhookdeleteobjectv1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 [**webhookEditObjectV1**](ObjectWebhookApi.md#webhookeditobjectv1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
 [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV2**](ObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
+[**webhookRegenerateApikeyV1**](ObjectWebhookApi.md#webhookregenerateapikeyv1) | **POST** /1/object/webhook/{pkiWebhookID}/regenerateApikey | Regenerate the Apikey
 [**webhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -58,6 +60,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebhookCreateObjectV1Response***](WebhookCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **webhookCreateObjectV2**
+```objc
+-(NSURLSessionTask*) webhookCreateObjectV2WithWebhookCreateObjectV2Request: (WebhookCreateObjectV2Request*) webhookCreateObjectV2Request
+        completionHandler: (void (^)(WebhookCreateObjectV2Response* output, NSError* error)) handler;
+```
+
+Create a new Webhook
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+WebhookCreateObjectV2Request* webhookCreateObjectV2Request = [[WebhookCreateObjectV2Request alloc] init]; // 
+
+ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
+
+// Create a new Webhook
+[apiInstance webhookCreateObjectV2WithWebhookCreateObjectV2Request:webhookCreateObjectV2Request
+          completionHandler: ^(WebhookCreateObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectWebhookApi->webhookCreateObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhookCreateObjectV2Request** | [**WebhookCreateObjectV2Request***](WebhookCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**WebhookCreateObjectV2Response***](WebhookCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -375,6 +434,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **webhookRegenerateApikeyV1**
+```objc
+-(NSURLSessionTask*) webhookRegenerateApikeyV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
+    webhookRegenerateApikeyV1Request: (WebhookRegenerateApikeyV1Request*) webhookRegenerateApikeyV1Request
+        completionHandler: (void (^)(WebhookRegenerateApikeyV1Response* output, NSError* error)) handler;
+```
+
+Regenerate the Apikey
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiWebhookID = @56; // 
+WebhookRegenerateApikeyV1Request* webhookRegenerateApikeyV1Request = [[WebhookRegenerateApikeyV1Request alloc] init]; // 
+
+ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
+
+// Regenerate the Apikey
+[apiInstance webhookRegenerateApikeyV1WithPkiWebhookID:pkiWebhookID
+              webhookRegenerateApikeyV1Request:webhookRegenerateApikeyV1Request
+          completionHandler: ^(WebhookRegenerateApikeyV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectWebhookApi->webhookRegenerateApikeyV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiWebhookID** | **NSNumber***|  | 
+ **webhookRegenerateApikeyV1Request** | [**WebhookRegenerateApikeyV1Request***](WebhookRegenerateApikeyV1Request.md)|  | 
+
+### Return type
+
+[**WebhookRegenerateApikeyV1Response***](WebhookRegenerateApikeyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

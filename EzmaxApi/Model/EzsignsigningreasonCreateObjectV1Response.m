@@ -1,6 +1,6 @@
-#import "AttachmentDownloadV1Response.h"
+#import "EzsignsigningreasonCreateObjectV1Response.h"
 
-@implementation AttachmentDownloadV1Response
+@implementation EzsignsigningreasonCreateObjectV1Response
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug", @"mPayload": @"mPayload" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objDebug"];
+  NSArray *optionalProperties = @[@"objDebug", ];
   return [optionalProperties containsObject:propertyName];
 }
 

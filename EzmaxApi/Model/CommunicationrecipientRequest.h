@@ -31,12 +31,12 @@
 /* The unique ID of the Agent. [optional]
  */
 @property(nonatomic) NSNumber* fkiAgentID;
-/* The unique ID of the Agentincorporation. [optional]
- */
-@property(nonatomic) NSNumber* fkiAgentincorporationID;
 /* The unique ID of the Broker. [optional]
  */
 @property(nonatomic) NSNumber* fkiBrokerID;
+/* The unique ID of the Contact [optional]
+ */
+@property(nonatomic) NSNumber* fkiContactID;
 /* The unique ID of the Customer. [optional]
  */
 @property(nonatomic) NSNumber* fkiCustomerID;
@@ -61,6 +61,12 @@
 /* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Mailboxshared [optional]
+ */
+@property(nonatomic) NSNumber* fkiMailboxsharedID;
+/* The unique ID of the Phonelineshared [optional]
+ */
+@property(nonatomic) NSNumber* fkiPhonelinesharedID;
 
 @property(nonatomic) FieldECommunicationrecipientType* eCommunicationrecipientType;
 

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eWebsocketMessagetype": @"eWebsocketMessagetype", @"mPayload": @"mPayload" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eWebsocketMessagetype": @"eWebsocketMessagetype", @"sWebsocketChannel": @"sWebsocketChannel", @"mPayload": @"mPayload" }];
 }
 
 /**

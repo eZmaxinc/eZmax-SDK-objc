@@ -33,7 +33,7 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
 /// @return ElectronicfundstransferGetCommunicationListV1Response*
--(NSURLSessionTask*) eletronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+-(NSURLSessionTask*) electronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
     completionHandler: (void (^)(ElectronicfundstransferGetCommunicationListV1Response* output, NSError* error)) handler;
 
 

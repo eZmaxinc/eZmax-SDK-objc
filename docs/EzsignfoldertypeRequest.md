@@ -20,18 +20,28 @@ Name | Type | Description | Notes
 **iEzsignfoldertypeDeadlinedays** | **NSNumber*** | The number of days to get all Ezsignsignatures | 
 **bEzsignfoldertypeDelegate** | **NSNumber*** | Wheter if delegation of signature is allowed to another user or not | [optional] 
 **bEzsignfoldertypeReassign** | **NSNumber*** | Wheter if Reassignment of signature is allowed to another signatory or not | [optional] 
-**bEzsignfoldertypeSendattatchmentsigner** | **NSNumber*** | Whether we send the Ezsigndocument and the proof as attachment in the email | 
+**bEzsignfoldertypeSendattatchmentsigner** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email | [optional] 
+**bEzsignfoldertypeSendsignedtoezsignsigner** | **NSNumber*** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
+**bEzsignfoldertypeSendsignedtouser** | **NSNumber*** | Whether we send an email to User who signed when document is completed | [optional] 
+**bEzsignfoldertypeSendattachmentezsignsigner** | **NSNumber*** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 
+**bEzsignfoldertypeSendproofezsignsigner** | **NSNumber*** | Whether we send the proof in the email to Ezsignsigner | [optional] 
+**bEzsignfoldertypeSendattachmentuser** | **NSNumber*** | Whether we send the Ezsigndocument in the email to User | [optional] 
+**bEzsignfoldertypeSendproofuser** | **NSNumber*** | Whether we send the proof in the email to User | [optional] 
+**bEzsignfoldertypeSendproofemail** | **NSNumber*** | Whether we send the proof in the email to external recipient | [optional] 
+**bEzsignfoldertypeAllowdownloadattachmentezsignsigner** | **NSNumber*** | Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner | [optional] 
+**bEzsignfoldertypeAllowdownloadproofezsignsigner** | **NSNumber*** | Whether we allow the proof to be downloaded by an Ezsignsigner | [optional] 
+**bEzsignfoldertypeSendproofreceivealldocument** | **NSNumber*** | Whether we send the proof to user and Ezsignsigner who receive all documents. | [optional] 
 **bEzsignfoldertypeSendsignedtodocumentowner** | **NSNumber*** | Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner | 
 **bEzsignfoldertypeSendsignedtofolderowner** | **NSNumber*** | Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner | 
 **bEzsignfoldertypeSendsignedtofullgroup** | **NSNumber*** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders | [optional] 
-**bEzsignfoldertypeSendsignedtolimitedgroup** | **NSNumber*** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
+**bEzsignfoldertypeSendsignedtolimitedgroup** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsignedtocolleague** | **NSNumber*** | Whether we send the signed Ezsigndocument to the colleagues | 
 **bEzsignfoldertypeSendsummarytodocumentowner** | **NSNumber*** | Whether we send the summary to the Ezsigndocument&#39;s owner | 
 **bEzsignfoldertypeSendsummarytofolderowner** | **NSNumber*** | Whether we send the summary to the Ezsignfolder&#39;s owner | 
 **bEzsignfoldertypeSendsummarytofullgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytolimitedgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytocolleague** | **NSNumber*** | Whether we send the summary to the colleagues | 
-**bEzsignfoldertypeIncludeproofsigner** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | 
+**bEzsignfoldertypeIncludeproofsigner** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | [optional] 
 **bEzsignfoldertypeIncludeproofuser** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for users | 
 **bEzsignfoldertypeIsactive** | **NSNumber*** | Whether the Ezsignfoldertype is active or not | 
 

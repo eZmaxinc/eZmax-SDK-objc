@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "AttachmentDownloadV1Response.h"
+#import "AttachmentGetAttachmentlogsV1Response.h"
+#import "AttachmentGetDownloadUrlV1Response.h"
 #import "CommonResponseError.h"
 #import "Api.h"
 
@@ -29,13 +30,39 @@ extern NSInteger kObjectAttachmentApiMissingParamErrorCode;
 ///
 /// @param pkiAttachmentID 
 /// 
+///  code:302 message:"The user has been redirected",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return void
+-(NSURLSessionTask*) attachmentDownloadV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
+    completionHandler: (void (^)(NSError* error)) handler;
+
+
+/// Retrieve the Attachmentlogs
+/// Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+///
+/// @param pkiAttachmentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return AttachmentGetAttachmentlogsV1Response*
+-(NSURLSessionTask*) attachmentGetAttachmentlogsV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
+    completionHandler: (void (^)(AttachmentGetAttachmentlogsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve a URL to download attachments.
+/// This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+///
+/// @param pkiAttachmentID 
+/// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return AttachmentDownloadV1Response*
--(NSURLSessionTask*) attachmentDownloadV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
-    completionHandler: (void (^)(AttachmentDownloadV1Response* output, NSError* error)) handler;
+/// @return AttachmentGetDownloadUrlV1Response*
+-(NSURLSessionTask*) attachmentGetDownloadUrlV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
+    completionHandler: (void (^)(AttachmentGetDownloadUrlV1Response* output, NSError* error)) handler;
 
 
 

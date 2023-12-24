@@ -57,7 +57,7 @@ NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode = 234513;
 ///
 ///  @returns ElectronicfundstransferGetCommunicationListV1Response*
 ///
--(NSURLSessionTask*) eletronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+-(NSURLSessionTask*) electronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
     completionHandler: (void (^)(ElectronicfundstransferGetCommunicationListV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiElectronicfundstransferID' is set
     if (pkiElectronicfundstransferID == nil) {

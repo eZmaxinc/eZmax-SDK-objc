@@ -19,6 +19,8 @@
 #import "FieldEActivesessionOrigin.h"
 #import "FieldEActivesessionUsertype.h"
 #import "FieldEActivesessionWeekdaystart.h"
+#import "FieldEUserEzsignaccess.h"
+#import "FieldEUserEzsignprepaid.h"
 @protocol ActivesessionResponseCompoundApikey;
 @class ActivesessionResponseCompoundApikey;
 @protocol ActivesessionResponseCompoundUser;
@@ -29,6 +31,10 @@
 @class FieldEActivesessionUsertype;
 @protocol FieldEActivesessionWeekdaystart;
 @class FieldEActivesessionWeekdaystart;
+@protocol FieldEUserEzsignaccess;
+@class FieldEUserEzsignaccess;
+@protocol FieldEUserEzsignprepaid;
+@class FieldEUserEzsignprepaid;
 
 
 
@@ -67,6 +73,13 @@
 /* The unique ID of the Signature [optional]
  */
 @property(nonatomic) NSNumber* fkiSignatureID;
+
+@property(nonatomic) FieldEUserEzsignaccess* eUserEzsignaccess;
+
+@property(nonatomic) FieldEUserEzsignprepaid* eUserEzsignprepaid;
+/* The eZsign prepaid expiration date [optional]
+ */
+@property(nonatomic) NSString* dtUserEzsignprepaidexpiration;
 /* An array of permissions granted to the user or api key 
  */
 @property(nonatomic) NSArray<NSNumber*>* aPkiPermissionID;

@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "InscriptionGetAttachmentsV1Response.h"
 #import "InscriptionGetCommunicationListV1Response.h"
+#import "InscriptionGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,6 +26,19 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Inscription's Attachments
+/// 
+///
+/// @param pkiInscriptionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionGetAttachmentsV1Response*
+-(NSURLSessionTask*) inscriptionGetAttachmentsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    completionHandler: (void (^)(InscriptionGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -35,6 +50,19 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @return InscriptionGetCommunicationListV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationListV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
     completionHandler: (void (^)(InscriptionGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscription's Communicationsender
+/// 
+///
+/// @param pkiInscriptionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) inscriptionGetCommunicationsendersV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    completionHandler: (void (^)(InscriptionGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 
