@@ -16,12 +16,15 @@
 
 #import "CommonAudit.h"
 #import "CustomEzsignfoldertypeResponse.h"
+#import "FieldEEzsignfolderCompletion.h"
 #import "FieldEEzsignfolderSendreminderfrequency.h"
 #import "FieldEEzsignfolderStep.h"
 @protocol CommonAudit;
 @class CommonAudit;
 @protocol CustomEzsignfoldertypeResponse;
 @class CustomEzsignfoldertypeResponse;
+@protocol FieldEEzsignfolderCompletion;
+@class FieldEEzsignfolderCompletion;
 @protocol FieldEEzsignfolderSendreminderfrequency;
 @class FieldEEzsignfolderSendreminderfrequency;
 @protocol FieldEEzsignfolderStep;
@@ -42,6 +45,8 @@
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 
 @property(nonatomic) CustomEzsignfoldertypeResponse* objEzsignfoldertype;
+
+@property(nonatomic) FieldEEzsignfolderCompletion* eEzsignfolderCompletion;
 
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
 /* The unique ID of the Billingentityinternal. [optional]

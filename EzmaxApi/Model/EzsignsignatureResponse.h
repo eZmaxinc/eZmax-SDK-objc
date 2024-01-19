@@ -79,6 +79,9 @@
 /* The step when the Ezsignsigner will be invited to sign 
  */
 @property(nonatomic) NSNumber* iEzsignsignatureStep;
+/* The step when the Ezsignsigner will be invited to sign [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignsignatureStepadjusted;
 
 @property(nonatomic) FieldEEzsignsignatureType* eEzsignsignatureType;
 /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature [optional]

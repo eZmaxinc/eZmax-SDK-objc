@@ -47,6 +47,9 @@
 /* The date and time at which the object was created 
  */
 @property(nonatomic) NSString* dtCreatedDate;
+/* The date and time at which the Ezsignfolder will be sent in the future. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderDelayedsenddate;
 /* The date and time at which the Ezsignfolder was sent the last time. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderSentdate;

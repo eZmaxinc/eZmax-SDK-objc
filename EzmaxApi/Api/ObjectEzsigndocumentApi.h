@@ -6,6 +6,8 @@
 #import "EzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Request.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Response.h"
+#import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.h"
+#import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Response.h"
 #import "EzsigndocumentCreateObjectV1Request.h"
 #import "EzsigndocumentCreateObjectV1Response.h"
 #import "EzsigndocumentCreateObjectV2Request.h"
@@ -24,6 +26,7 @@
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
 #import "EzsigndocumentGetDownloadUrlV1Response.h"
 #import "EzsigndocumentGetEzsignannotationsV1Response.h"
+#import "EzsigndocumentGetEzsigndiscussionsV1Response.h"
 #import "EzsigndocumentGetEzsignformfieldgroupsV1Response.h"
 #import "EzsigndocumentGetEzsignpagesV1Response.h"
 #import "EzsigndocumentGetEzsignsignaturesAutomaticV1Response.h"
@@ -92,6 +95,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentApplyEzsigntemplateV2Request: (EzsigndocumentApplyEzsigntemplateV2Request*) ezsigndocumentApplyEzsigntemplateV2Request
     completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV2Response* output, NSError* error)) handler;
+
+
+/// Create multiple Ezsignsignatures/Ezsignformfieldgroups
+/// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentCreateEzsignelementsPositionedByWordV1Response*
+-(NSURLSessionTask*) ezsigndocumentCreateEzsignelementsPositionedByWordV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentCreateEzsignelementsPositionedByWordV1Request: (EzsigndocumentCreateEzsignelementsPositionedByWordV1Request*) ezsigndocumentCreateEzsignelementsPositionedByWordV1Request
+    completionHandler: (void (^)(EzsigndocumentCreateEzsignelementsPositionedByWordV1Response* output, NSError* error)) handler;
 
 
 /// Create a new Ezsigndocument
@@ -259,7 +278,7 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
 ///
 /// @param pkiEzsigndocumentID 
-/// @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+/// @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
@@ -283,6 +302,20 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EzsigndocumentGetEzsignannotationsV1Response*
 -(NSURLSessionTask*) ezsigndocumentGetEzsignannotationsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EzsigndocumentGetEzsignannotationsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigndocument's Ezsigndiscussions
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentGetEzsigndiscussionsV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetEzsigndiscussionsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EzsigndocumentGetEzsigndiscussionsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups

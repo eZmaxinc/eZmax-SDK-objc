@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **NSNumber*** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **NSNumber*** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**objAudit** | [**CommonAudit***](CommonAudit.md) |  | 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
 **bWebhookTest** | **NSNumber*** | Wheter the webhook received is a manual test or a real event | 
 

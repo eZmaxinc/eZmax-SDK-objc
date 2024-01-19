@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatesignaturecustomdateID": @"pkiEzsigntemplatesignaturecustomdateID", @"iEzsigntemplatesignaturecustomdateX": @"iEzsigntemplatesignaturecustomdateX", @"iEzsigntemplatesignaturecustomdateY": @"iEzsigntemplatesignaturecustomdateY", @"sEzsigntemplatesignaturecustomdateFormat": @"sEzsigntemplatesignaturecustomdateFormat" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatesignaturecustomdateID": @"pkiEzsigntemplatesignaturecustomdateID", @"iEzsigntemplatesignaturecustomdateX": @"iEzsigntemplatesignaturecustomdateX", @"iEzsigntemplatesignaturecustomdateY": @"iEzsigntemplatesignaturecustomdateY", @"iEzsigntemplatesignaturecustomdateOffsetx": @"iEzsigntemplatesignaturecustomdateOffsetx", @"iEzsigntemplatesignaturecustomdateOffsety": @"iEzsigntemplatesignaturecustomdateOffsety", @"sEzsigntemplatesignaturecustomdateFormat": @"sEzsigntemplatesignaturecustomdateFormat" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsigntemplatesignaturecustomdateID", ];
+  NSArray *optionalProperties = @[@"pkiEzsigntemplatesignaturecustomdateID", @"iEzsigntemplatesignaturecustomdateX", @"iEzsigntemplatesignaturecustomdateY", @"iEzsigntemplatesignaturecustomdateOffsetx", @"iEzsigntemplatesignaturecustomdateOffsety", ];
   return [optionalProperties containsObject:propertyName];
 }
 

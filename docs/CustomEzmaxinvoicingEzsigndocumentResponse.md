@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
+**fkiBillingentityinternalID** | **NSNumber*** | The unique ID of the Billingentityinternal. | [optional] 
 **sName** | **NSString*** |  | 
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **sEzsigndocumentName** | **NSString*** | The name of the document that will be presented to Ezsignfoldersignerassociations | 

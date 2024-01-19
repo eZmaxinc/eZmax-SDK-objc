@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **NSNumber*** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **NSNumber*** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**objAudit** | [**CommonAudit***](CommonAudit.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

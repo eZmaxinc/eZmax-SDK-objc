@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonAudit.h"
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+@protocol CommonAudit;
+@class CommonAudit;
 @protocol FieldEWebhookEzsignevent;
 @class FieldEWebhookEzsignevent;
 @protocol FieldEWebhookManagementevent;
@@ -70,5 +73,7 @@
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
+
+@property(nonatomic) CommonAudit* objAudit;
 
 @end

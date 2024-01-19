@@ -1,0 +1,34 @@
+#import "DiscussionmembershipRequestCompound.h"
+
+@implementation DiscussionmembershipRequestCompound
+
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    // initialize property's default value, if any
+    
+  }
+  return self;
+}
+
+
+/**
+ * Maps json key to property name.
+ * This method is used by `JSONModel`.
+ */
++ (JSONKeyMapper *)keyMapper {
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiDiscussionmembershipID": @"pkiDiscussionmembershipID", @"fkiDiscussionID": @"fkiDiscussionID", @"fkiUserID": @"fkiUserID", @"fkiUsergroupID": @"fkiUsergroupID", @"fkiModulesectionID": @"fkiModulesectionID", @"dtDiscussionmembershipJoined": @"dtDiscussionmembershipJoined" }];
+}
+
+/**
+ * Indicates whether the property with the given name is optional.
+ * If `propertyName` is optional, then return `YES`, otherwise return `NO`.
+ * This method is used by `JSONModel`.
+ */
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+
+  NSArray *optionalProperties = @[@"pkiDiscussionmembershipID", @"fkiUserID", @"fkiUsergroupID", @"fkiModulesectionID", ];
+  return [optionalProperties containsObject:propertyName];
+}
+
+@end

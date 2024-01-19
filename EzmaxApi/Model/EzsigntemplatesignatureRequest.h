@@ -18,6 +18,8 @@
 #import "FieldEEzsigntemplatesignatureAttachmentnamesource.h"
 #import "FieldEEzsigntemplatesignatureDependencyrequirement.h"
 #import "FieldEEzsigntemplatesignatureFont.h"
+#import "FieldEEzsigntemplatesignaturePositioning.h"
+#import "FieldEEzsigntemplatesignaturePositioningoccurence.h"
 #import "FieldEEzsigntemplatesignatureTooltipposition.h"
 #import "FieldEEzsigntemplatesignatureType.h"
 @protocol EnumTextvalidation;
@@ -28,6 +30,10 @@
 @class FieldEEzsigntemplatesignatureDependencyrequirement;
 @protocol FieldEEzsigntemplatesignatureFont;
 @class FieldEEzsigntemplatesignatureFont;
+@protocol FieldEEzsigntemplatesignaturePositioning;
+@class FieldEEzsigntemplatesignaturePositioning;
+@protocol FieldEEzsigntemplatesignaturePositioningoccurence;
+@class FieldEEzsigntemplatesignaturePositioningoccurence;
 @protocol FieldEEzsigntemplatesignatureTooltipposition;
 @class FieldEEzsigntemplatesignatureTooltipposition;
 @protocol FieldEEzsigntemplatesignatureType;
@@ -52,13 +58,15 @@
 /* The unique ID of the Ezsigntemplatesigner [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsigntemplatesignerIDValidation;
+
+@property(nonatomic) FieldEEzsigntemplatesignaturePositioning* eEzsigntemplatesignaturePositioning;
 /* The page number in the Ezsigntemplatedocument 
  */
 @property(nonatomic) NSNumber* iEzsigntemplatedocumentpagePagenumber;
-/* The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. 
+/* The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureX;
-/* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. 
+/* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureY;
 /* The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth. [optional]
@@ -100,5 +108,16 @@
 @property(nonatomic) EnumTextvalidation* eEzsigntemplatesignatureTextvalidation;
 
 @property(nonatomic) FieldEEzsigntemplatesignatureDependencyrequirement* eEzsigntemplatesignatureDependencyrequirement;
+/* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplatesignaturePositioningpattern;
+/* The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatesignaturePositioningoffsetx;
+/* The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatesignaturePositioningoffsety;
+
+@property(nonatomic) FieldEEzsigntemplatesignaturePositioningoccurence* eEzsigntemplatesignaturePositioningoccurence;
 
 @end

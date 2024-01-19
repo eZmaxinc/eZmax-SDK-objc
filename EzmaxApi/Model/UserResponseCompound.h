@@ -118,6 +118,9 @@
 /* The login name of the User. 
  */
 @property(nonatomic) NSString* sUserLoginname;
+/* The job title of the user [optional]
+ */
+@property(nonatomic) NSString* sUserJobtitle;
 
 @property(nonatomic) FieldEUserEzsignaccess* eUserEzsignaccess;
 /* The last logon date of the User [optional]

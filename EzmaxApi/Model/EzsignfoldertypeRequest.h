@@ -14,10 +14,13 @@
 */
 
 
+#import "FieldEEzsignfoldertypeCompletion.h"
 #import "FieldEEzsignfoldertypeDisposal.h"
 #import "FieldEEzsignfoldertypePrivacylevel.h"
 #import "FieldEEzsignfoldertypeSendreminderfrequency.h"
 #import "MultilingualEzsignfoldertypeName.h"
+@protocol FieldEEzsignfoldertypeCompletion;
+@class FieldEEzsignfoldertypeCompletion;
 @protocol FieldEEzsignfoldertypeDisposal;
 @class FieldEEzsignfoldertypeDisposal;
 @protocol FieldEEzsignfoldertypePrivacylevel;
@@ -69,6 +72,8 @@
 @property(nonatomic) NSNumber* iEzsignfoldertypeArchivaldays;
 
 @property(nonatomic) FieldEEzsignfoldertypeDisposal* eEzsignfoldertypeDisposal;
+
+@property(nonatomic) FieldEEzsignfoldertypeCompletion* eEzsignfoldertypeCompletion;
 /* The number of days after the archival before the disposal of the Ezsignfolder [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeDisposaldays;
@@ -81,6 +86,12 @@
 /* Wheter if Reassignment of signature is allowed to another signatory or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassign;
+/* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassignezsignsigner;
+/* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassignuser;
 /* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendattatchmentsigner;

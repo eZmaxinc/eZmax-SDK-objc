@@ -58,5 +58,8 @@
 /* The email address. 
  */
 @property(nonatomic) NSString* sEmailAddress;
+/* The job title of the user [optional]
+ */
+@property(nonatomic) NSString* sUserJobtitle;
 
 @end

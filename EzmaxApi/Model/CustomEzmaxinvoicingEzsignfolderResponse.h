@@ -25,6 +25,9 @@
 /* The unique ID of the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* fkiEzsignfolderID;
+/* The unique ID of the Billingentityinternal. [optional]
+ */
+@property(nonatomic) NSNumber* fkiBillingentityinternalID;
 /* The description of the Ezsignfolder 
  */
 @property(nonatomic) NSString* sEzsignfolderDescription;

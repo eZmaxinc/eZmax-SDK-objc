@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess***](FieldEUserEzsignaccess.md) |  | 
 **dtUserEzsignprepaidexpiration** | **NSString*** | The eZsign prepaid expiration date | [optional] 
 **sEmailAddress** | **NSString*** | The email address. | 
+**sUserJobtitle** | **NSString*** | The job title of the user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

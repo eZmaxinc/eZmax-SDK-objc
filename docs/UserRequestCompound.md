@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **sUserFirstname** | **NSString*** | The first name of the user | 
 **sUserLastname** | **NSString*** | The last name of the user | 
 **sUserLoginname** | **NSString*** | The login name of the User. | 
+**sUserJobtitle** | **NSString*** | The job title of the user | [optional] 
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess***](FieldEUserEzsignaccess.md) |  | 
 **bUserIsactive** | **NSNumber*** | Whether the User is active or not | 
 **bUserValidatebyadministration** | **NSNumber*** | Whether if the transactions in which the User is implicated must be validated by administrative personnel or not | [optional] 

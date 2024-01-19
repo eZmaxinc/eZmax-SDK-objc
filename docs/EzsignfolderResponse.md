@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **pkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
 **objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse***](CustomEzsignfoldertypeResponse.md) |  | [optional] 
+**eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion***](FieldEEzsignfolderCompletion.md) |  | [optional] 
 **sEzsignfoldertypeNameX** | **NSString*** |  | [optional] 
 **fkiBillingentityinternalID** | **NSNumber*** | The unique ID of the Billingentityinternal. | [optional] 
 **sBillingentityinternalDescriptionX** | **NSString*** | The description of the Billingentityinternal in the language of the requester | [optional] 

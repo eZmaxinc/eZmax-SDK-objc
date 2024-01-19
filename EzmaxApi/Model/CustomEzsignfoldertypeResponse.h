@@ -49,5 +49,11 @@
 /* Wheter if Reassignment of signature is allowed to another signatory or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassign;
+/* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassignezsignsigner;
+/* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassignuser;
 
 @end

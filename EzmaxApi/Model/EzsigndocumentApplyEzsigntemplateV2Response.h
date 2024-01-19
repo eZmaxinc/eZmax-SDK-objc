@@ -16,10 +16,13 @@
 
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
+#import "CommonResponseWarning.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
+@protocol CommonResponseWarning;
+@class CommonResponseWarning;
 
 
 
@@ -32,5 +35,7 @@
 @property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
+
+@property(nonatomic) NSArray<CommonResponseWarning>* aObjWarning;
 
 @end

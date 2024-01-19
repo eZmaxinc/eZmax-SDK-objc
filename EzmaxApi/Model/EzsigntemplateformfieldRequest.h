@@ -15,8 +15,14 @@
 
 
 #import "FieldEEzsigntemplateformfieldDependencyrequirement.h"
+#import "FieldEEzsigntemplateformfieldPositioning.h"
+#import "FieldEEzsigntemplateformfieldPositioningoccurence.h"
 @protocol FieldEEzsigntemplateformfieldDependencyrequirement;
 @class FieldEEzsigntemplateformfieldDependencyrequirement;
+@protocol FieldEEzsigntemplateformfieldPositioning;
+@class FieldEEzsigntemplateformfieldPositioning;
+@protocol FieldEEzsigntemplateformfieldPositioningoccurence;
+@class FieldEEzsigntemplateformfieldPositioningoccurence;
 
 
 
@@ -28,6 +34,8 @@
 /* The unique ID of the Ezsigntemplateformfield [optional]
  */
 @property(nonatomic) NSNumber* pkiEzsigntemplateformfieldID;
+
+@property(nonatomic) FieldEEzsigntemplateformfieldPositioning* eEzsigntemplateformfieldPositioning;
 /* The page number in the Ezsigntemplatedocument 
  */
 @property(nonatomic) NSNumber* iEzsigntemplatedocumentpagePagenumber;
@@ -37,10 +45,10 @@
 /* The value for the Ezsigntemplateformfield [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplateformfieldValue;
-/* The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate. 
+/* The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate. [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplateformfieldX;
-/* The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. 
+/* The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplateformfieldY;
 /* The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | 
@@ -57,5 +65,16 @@
 @property(nonatomic) NSNumber* bEzsigntemplateformfieldSelected;
 
 @property(nonatomic) FieldEEzsigntemplateformfieldDependencyrequirement* eEzsigntemplateformfieldDependencyrequirement;
+/* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplateformfieldPositioningpattern;
+/* The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplateformfieldPositioningoffsetx;
+/* The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsigntemplateformfieldPositioningoffsety;
+
+@property(nonatomic) FieldEEzsigntemplateformfieldPositioningoccurence* eEzsigntemplateformfieldPositioningoccurence;
 
 @end

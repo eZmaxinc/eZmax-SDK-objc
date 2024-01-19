@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **sUserFirstname** | **NSString*** | The first name of the user | 
 **sUserLastname** | **NSString*** | The last name of the user | 
 **sUserLoginname** | **NSString*** | The login name of the User. | 
+**sUserJobtitle** | **NSString*** | The job title of the user | [optional] 
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess***](FieldEUserEzsignaccess.md) |  | 
 **dtUserLastlogondate** | **NSString*** | The last logon date of the User | [optional] 
 **dtUserPasswordchanged** | **NSString*** | The date at which the User&#39;s password was last changed | [optional] 
