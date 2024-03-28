@@ -15,9 +15,12 @@
 
 
 #import "FieldEBrandingLogo.h"
+#import "FieldEBrandingLogointerface.h"
 #import "MultilingualBrandingDescription.h"
 @protocol FieldEBrandingLogo;
 @class FieldEBrandingLogo;
+@protocol FieldEBrandingLogointerface;
+@class FieldEBrandingLogointerface;
 @protocol MultilingualBrandingDescription;
 @class MultilingualBrandingDescription;
 
@@ -38,6 +41,11 @@
 /* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. [optional]
  */
 @property(nonatomic) NSData* sBrandingBase64;
+
+@property(nonatomic) FieldEBrandingLogointerface* eBrandingLogointerface;
+/* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. [optional]
+ */
+@property(nonatomic) NSData* sBrandingLogointerfaceBase64;
 /* The color of the text. This is a RGB color converted into integer 
  */
 @property(nonatomic) NSNumber* iBrandingColortext;
@@ -56,6 +64,9 @@
 /* The color of the background of the small box. This is a RGB color converted into integer 
  */
 @property(nonatomic) NSNumber* iBrandingColorbackgroundsmallbox;
+/* The color of the interface. This is a RGB color converted into integer [optional]
+ */
+@property(nonatomic) NSNumber* iBrandingInterfacecolor;
 /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty [optional]
  */
 @property(nonatomic) NSString* sBrandingName;

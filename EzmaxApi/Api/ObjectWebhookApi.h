@@ -2,8 +2,6 @@
 #import "CommonResponseError.h"
 #import "CommonResponseErrorTooManyRequests.h"
 #import "HeaderAcceptLanguage.h"
-#import "WebhookCreateObjectV1Request.h"
-#import "WebhookCreateObjectV1Response.h"
 #import "WebhookCreateObjectV2Request.h"
 #import "WebhookCreateObjectV2Response.h"
 #import "WebhookDeleteObjectV1Response.h"
@@ -37,18 +35,6 @@ extern NSString* kObjectWebhookApiErrorDomain;
 extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Create a new Webhook
-/// The endpoint allows to create one or many elements at once.
-///
-/// @param webhookCreateObjectV1Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return WebhookCreateObjectV1Response*
--(NSURLSessionTask*) webhookCreateObjectV1WithWebhookCreateObjectV1Request: (WebhookCreateObjectV1Request*) webhookCreateObjectV1Request
-    completionHandler: (void (^)(WebhookCreateObjectV1Response* output, NSError* error)) handler;
-
 
 /// Create a new Webhook
 /// The endpoint allows to create one or many elements at once.

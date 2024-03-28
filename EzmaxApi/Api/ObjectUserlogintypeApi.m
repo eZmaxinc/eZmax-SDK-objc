@@ -55,6 +55,8 @@ NSInteger kObjectUserlogintypeApiMissingParamErrorCode = 234513;
 /// Get the list of Userlogintype to be used in a dropdown or autocomplete control.
 ///  @param sSelector The type of Userlogintypes to return 
 ///
+///  @param fkiEzsignfoldertypeID  (optional)
+///
 ///  @param eFilterActive Specify which results we want to display. (optional, default to @"Active")
 ///
 ///  @param sQuery Allow to filter the returned results (optional)
@@ -64,6 +66,7 @@ NSInteger kObjectUserlogintypeApiMissingParamErrorCode = 234513;
 ///  @returns UserlogintypeGetAutocompleteV2Response*
 ///
 -(NSURLSessionTask*) userlogintypeGetAutocompleteV2WithSSelector: (NSString*) sSelector
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
@@ -87,6 +90,9 @@ NSInteger kObjectUserlogintypeApiMissingParamErrorCode = 234513;
     }
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (fkiEzsignfoldertypeID != nil) {
+        queryParams[@"fkiEzsignfoldertypeID"] = fkiEzsignfoldertypeID;
+    }
     if (eFilterActive != nil) {
         queryParams[@"eFilterActive"] = eFilterActive;
     }

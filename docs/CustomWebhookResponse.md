@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **NSNumber*** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
 **objAudit** | [**CommonAudit***](CommonAudit.md) |  | 
+**sWebhookEvent** | **NSString*** | The concatenated string to describe the Webhook event | [optional] 
+**aObjWebhookheader** | [**NSArray&lt;WebhookheaderResponseCompound&gt;***](WebhookheaderResponseCompound.md) |  | [optional] 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
 **bWebhookTest** | **NSNumber*** | Wheter the webhook received is a manual test or a real event | 
 

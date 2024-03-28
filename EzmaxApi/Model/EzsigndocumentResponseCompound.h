@@ -98,6 +98,9 @@
 /* The number of Ezsigndocumentattachment total 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentEzsignsignatureattachmenttotal;
+/* The total number of Ezsigndiscussions 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentEzsigndiscussiontotal;
 
 @property(nonatomic) ComputedEEzsigndocumentSteptype* eEzsigndocumentSteptype;
 /* The total number of steps in the form filling phase 

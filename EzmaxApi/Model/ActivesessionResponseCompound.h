@@ -19,6 +19,7 @@
 #import "FieldEActivesessionOrigin.h"
 #import "FieldEActivesessionUsertype.h"
 #import "FieldEActivesessionWeekdaystart.h"
+#import "FieldESystemconfigurationEzsignofficeplan.h"
 #import "FieldEUserEzsignaccess.h"
 #import "FieldEUserEzsignprepaid.h"
 @protocol ActivesessionResponseCompoundApikey;
@@ -31,6 +32,8 @@
 @class FieldEActivesessionUsertype;
 @protocol FieldEActivesessionWeekdaystart;
 @class FieldEActivesessionWeekdaystart;
+@protocol FieldESystemconfigurationEzsignofficeplan;
+@class FieldESystemconfigurationEzsignofficeplan;
 @protocol FieldEUserEzsignaccess;
 @class FieldEUserEzsignaccess;
 @protocol FieldEUserEzsignprepaid;
@@ -73,6 +76,11 @@
 /* The unique ID of the Signature [optional]
  */
 @property(nonatomic) NSNumber* fkiSignatureID;
+/* Whether if Ezsign is paid by the company or not [optional]
+ */
+@property(nonatomic) NSNumber* bSystemconfigurationEzsignpaidbyoffice;
+
+@property(nonatomic) FieldESystemconfigurationEzsignofficeplan* eSystemconfigurationEzsignofficeplan;
 
 @property(nonatomic) FieldEUserEzsignaccess* eUserEzsignaccess;
 

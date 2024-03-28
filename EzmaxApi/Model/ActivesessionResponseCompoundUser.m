@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"sAvatarUrl", @"sEmailAddress", ];
   return [optionalProperties containsObject:propertyName];
 }
 

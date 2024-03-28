@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sEzsigntemplateformfieldgroupDefaultvalue", @"iEzsigntemplateformfieldgroupMaxlength", @"bEzsigntemplateformfieldgroupEncrypted", @"sEzsigntemplateformfieldgroupRegexp", @"eEzsigntemplateformfieldgroupTextvalidation", @"tEzsigntemplateformfieldgroupTooltip", @"eEzsigntemplateformfieldgroupTooltipposition"];
+  NSArray *optionalProperties = @[@"eEzsigntemplateformfieldgroupSignerrequirement", @"sEzsigntemplateformfieldgroupDefaultvalue", @"iEzsigntemplateformfieldgroupMaxlength", @"bEzsigntemplateformfieldgroupEncrypted", @"sEzsigntemplateformfieldgroupRegexp", @"eEzsigntemplateformfieldgroupTextvalidation", @"tEzsigntemplateformfieldgroupTooltip", @"eEzsigntemplateformfieldgroupTooltipposition"];
   return [optionalProperties containsObject:propertyName];
 }
 

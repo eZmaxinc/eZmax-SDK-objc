@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.h"
+#import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV1Request.h"
 #import "EzsignfoldersignerassociationCreateObjectV1Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Request.h"
@@ -35,6 +37,22 @@ extern NSString* kObjectEzsignfoldersignerassociationApiErrorDomain;
 extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Creates an Url to allow embedded signing
+/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+///
+/// @param pkiEzsignfoldersignerassociationID 
+/// @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response*
+-(NSURLSessionTask*) ezsignfoldersignerassociationCreateEmbeddedUrlV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: (EzsignfoldersignerassociationCreateEmbeddedUrlV1Request*) ezsignfoldersignerassociationCreateEmbeddedUrlV1Request
+    completionHandler: (void (^)(EzsignfoldersignerassociationCreateEmbeddedUrlV1Response* output, NSError* error)) handler;
+
 
 /// Create a new Ezsignfoldersignerassociation
 /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.

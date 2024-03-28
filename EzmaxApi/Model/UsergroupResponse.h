@@ -30,5 +30,8 @@
 @property(nonatomic) NSNumber* pkiUsergroupID;
 
 @property(nonatomic) MultilingualUsergroupName* objUsergroupName;
+/* The Name of the Usergroup in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sUsergroupNameX;
 
 @end

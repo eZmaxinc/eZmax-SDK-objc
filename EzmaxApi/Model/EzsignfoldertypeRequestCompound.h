@@ -83,18 +83,15 @@
 /* Wheter if delegation of signature is allowed to another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeDelegate;
-/* Wheter if Reassignment of signature is allowed to another signatory or not [optional]
+/* Wheter if creating a new Discussion is allowed or not [optional]
  */
-@property(nonatomic) NSNumber* bEzsignfoldertypeReassign;
+@property(nonatomic) NSNumber* bEzsignfoldertypeDiscussion;
 /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassignezsignsigner;
 /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassignuser;
-/* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email [optional]
- */
-@property(nonatomic) NSNumber* bEzsignfoldertypeSendattatchmentsigner;
 /* Whether we send an email to Ezsignsigner  when document is completed [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtoezsignsigner;
@@ -155,12 +152,6 @@
 /* Whether we send the summary to the colleagues 
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsummarytocolleague;
-/* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners [optional]
- */
-@property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofsigner;
-/* Whether we include the proof with the signed Ezsigndocument for users 
- */
-@property(nonatomic) NSNumber* bEzsignfoldertypeIncludeproofuser;
 /* Whether the Ezsignfoldertype is active or not 
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeIsactive;

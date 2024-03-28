@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageAdminonly": @"bEzsigntemplatepackageAdminonly", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"aObjEzsigntemplatepackagesigner": @"a_objEzsigntemplatepackagesigner", @"aObjEzsigntemplatepackagemembership": @"a_objEzsigntemplatepackagemembership" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageAdminonly": @"bEzsigntemplatepackageAdminonly", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsigntemplatepackageEditallowed": @"bEzsigntemplatepackageEditallowed", @"aObjEzsigntemplatepackagesigner": @"a_objEzsigntemplatepackagesigner", @"aObjEzsigntemplatepackagemembership": @"a_objEzsigntemplatepackagemembership" }];
 }
 
 /**

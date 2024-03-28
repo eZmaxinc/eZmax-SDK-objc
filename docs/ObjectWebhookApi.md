@@ -4,7 +4,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**webhookCreateObjectV1**](ObjectWebhookApi.md#webhookcreateobjectv1) | **POST** /1/object/webhook | Create a new Webhook
 [**webhookCreateObjectV2**](ObjectWebhookApi.md#webhookcreateobjectv2) | **POST** /2/object/webhook | Create a new Webhook
 [**webhookDeleteObjectV1**](ObjectWebhookApi.md#webhookdeleteobjectv1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 [**webhookEditObjectV1**](ObjectWebhookApi.md#webhookeditobjectv1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
@@ -14,63 +13,6 @@ Method | HTTP request | Description
 [**webhookRegenerateApikeyV1**](ObjectWebhookApi.md#webhookregenerateapikeyv1) | **POST** /1/object/webhook/{pkiWebhookID}/regenerateApikey | Regenerate the Apikey
 [**webhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
-
-# **webhookCreateObjectV1**
-```objc
--(NSURLSessionTask*) webhookCreateObjectV1WithWebhookCreateObjectV1Request: (WebhookCreateObjectV1Request*) webhookCreateObjectV1Request
-        completionHandler: (void (^)(WebhookCreateObjectV1Response* output, NSError* error)) handler;
-```
-
-Create a new Webhook
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```objc
-DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-WebhookCreateObjectV1Request* webhookCreateObjectV1Request = [[WebhookCreateObjectV1Request alloc] init]; // 
-
-ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
-
-// Create a new Webhook
-[apiInstance webhookCreateObjectV1WithWebhookCreateObjectV1Request:webhookCreateObjectV1Request
-          completionHandler: ^(WebhookCreateObjectV1Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling ObjectWebhookApi->webhookCreateObjectV1: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhookCreateObjectV1Request** | [**WebhookCreateObjectV1Request***](WebhookCreateObjectV1Request.md)|  | 
-
-### Return type
-
-[**WebhookCreateObjectV1Response***](WebhookCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhookCreateObjectV2**
 ```objc

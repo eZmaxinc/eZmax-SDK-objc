@@ -21,14 +21,13 @@ Name | Type | Description | Notes
 **eEzsignfoldertypeSendreminderfrequency** | [**FieldEEzsignfoldertypeSendreminderfrequency***](FieldEEzsignfoldertypeSendreminderfrequency.md) |  | [optional] 
 **iEzsignfoldertypeArchivaldays** | **NSNumber*** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
 **eEzsignfoldertypeDisposal** | [**FieldEEzsignfoldertypeDisposal***](FieldEEzsignfoldertypeDisposal.md) |  | 
-**eEzsignfoldertypeCompletion** | [**FieldEEzsignfoldertypeCompletion***](FieldEEzsignfoldertypeCompletion.md) |  | [optional] 
+**eEzsignfoldertypeCompletion** | [**FieldEEzsignfoldertypeCompletion***](FieldEEzsignfoldertypeCompletion.md) |  | 
 **iEzsignfoldertypeDisposaldays** | **NSNumber*** | The number of days after the archival before the disposal of the Ezsignfolder | [optional] 
 **iEzsignfoldertypeDeadlinedays** | **NSNumber*** | The number of days to get all Ezsignsignatures | 
 **bEzsignfoldertypeDelegate** | **NSNumber*** | Wheter if delegation of signature is allowed to another user or not | [optional] 
-**bEzsignfoldertypeReassign** | **NSNumber*** | Wheter if Reassignment of signature is allowed to another signatory or not | [optional] 
+**bEzsignfoldertypeDiscussion** | **NSNumber*** | Wheter if creating a new Discussion is allowed or not | [optional] 
 **bEzsignfoldertypeReassignezsignsigner** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **bEzsignfoldertypeReassignuser** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
-**bEzsignfoldertypeSendattatchmentsigner** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email | [optional] 
 **bEzsignfoldertypeSendsignedtoezsignsigner** | **NSNumber*** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **bEzsignfoldertypeSendsignedtouser** | **NSNumber*** | Whether we send an email to User who signed when document is completed | [optional] 
 **bEzsignfoldertypeSendattachmentezsignsigner** | **NSNumber*** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 
@@ -49,9 +48,8 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeSendsummarytofullgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytolimitedgroup** | **NSNumber*** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders | [optional] 
 **bEzsignfoldertypeSendsummarytocolleague** | **NSNumber*** | Whether we send the summary to the colleagues | 
-**bEzsignfoldertypeIncludeproofsigner** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | [optional] 
-**bEzsignfoldertypeIncludeproofuser** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for users | 
 **bEzsignfoldertypeIsactive** | **NSNumber*** | Whether the Ezsignfoldertype is active or not | 
+**aObjUserlogintype** | [**NSArray&lt;UserlogintypeResponse&gt;***](UserlogintypeResponse.md) |  | 
 **aFkiUserIDSigned** | **NSArray&lt;NSNumber*&gt;*** |  | [optional] 
 **aFkiUserIDSummary** | **NSArray&lt;NSNumber*&gt;*** |  | [optional] 
 

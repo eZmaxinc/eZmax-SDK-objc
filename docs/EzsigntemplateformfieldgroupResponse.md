@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 **pkiEzsigntemplateformfieldgroupID** | **NSNumber*** | The unique ID of the Ezsigntemplateformfieldgroup | 
 **fkiEzsigntemplatedocumentID** | **NSNumber*** | The unique ID of the Ezsigntemplatedocument | 
 **eEzsigntemplateformfieldgroupType** | [**FieldEEzsigntemplateformfieldgroupType***](FieldEEzsigntemplateformfieldgroupType.md) |  | 
-**eEzsigntemplateformfieldgroupSignerrequirement** | [**FieldEEzsigntemplateformfieldgroupSignerrequirement***](FieldEEzsigntemplateformfieldgroupSignerrequirement.md) |  | 
+**eEzsigntemplateformfieldgroupSignerrequirement** | [**FieldEEzsigntemplateformfieldgroupSignerrequirement***](FieldEEzsigntemplateformfieldgroupSignerrequirement.md) |  | [optional] 
 **sEzsigntemplateformfieldgroupLabel** | **NSString*** | The Label for the Ezsigntemplateformfieldgroup | 
 **iEzsigntemplateformfieldgroupStep** | **NSNumber*** | The step when the Ezsigntemplatesigner will be invited to fill the form fields | 
-**sEzsigntemplateformfieldgroupDefaultvalue** | **NSString*** | The default value for the Ezsigntemplateformfieldgroup | [optional] 
+**sEzsigntemplateformfieldgroupDefaultvalue** | **NSString*** | The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | | [optional] 
 **iEzsigntemplateformfieldgroupFilledmin** | **NSNumber*** | The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup | 
 **iEzsigntemplateformfieldgroupFilledmax** | **NSNumber*** | The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup | 
 **bEzsigntemplateformfieldgroupReadonly** | **NSNumber*** | Whether the Ezsigntemplateformfieldgroup is read only or not. | 

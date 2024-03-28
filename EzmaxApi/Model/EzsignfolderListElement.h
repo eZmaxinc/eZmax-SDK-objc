@@ -68,5 +68,17 @@
 /* The total number of already signed signature blocks in all Ezsigndocuments in the folder 
  */
 @property(nonatomic) NSNumber* iEzsignsignatureSigned;
+/* The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder 
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroup;
+/* The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder 
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroupCompleted;
+/* Whether the Ezsignform/Ezsignsignatures has dependencies or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignformHasdependencies;
+/* Whether the Ezsignform/Ezsignsignatures has dependencies or not 
+ */
+@property(nonatomic) NSString* dEzsignfolderCompletedpercentage;
 
 @end

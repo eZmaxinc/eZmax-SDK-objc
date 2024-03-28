@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateID": @"pkiEzsigntemplateID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigntemplateDescription": @"sEzsigntemplateDescription", @"iEzsigntemplatedocumentPagetotal": @"iEzsigntemplatedocumentPagetotal", @"iEzsigntemplateSignaturetotal": @"iEzsigntemplateSignaturetotal", @"iEzsigntemplateFormfieldtotal": @"iEzsigntemplateFormfieldtotal", @"bEzsigntemplateIncomplete": @"bEzsigntemplateIncomplete", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateID": @"pkiEzsigntemplateID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigntemplateDescription": @"sEzsigntemplateDescription", @"iEzsigntemplatedocumentPagetotal": @"iEzsigntemplatedocumentPagetotal", @"iEzsigntemplateSignaturetotal": @"iEzsigntemplateSignaturetotal", @"iEzsigntemplateFormfieldtotal": @"iEzsigntemplateFormfieldtotal", @"bEzsigntemplateIncomplete": @"bEzsigntemplateIncomplete", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"eEzsigntemplateType": @"eEzsigntemplateType" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"iEzsigntemplatedocumentPagetotal", @"iEzsigntemplateSignaturetotal", @"iEzsigntemplateFormfieldtotal", ];
+  NSArray *optionalProperties = @[@"fkiEzsignfoldertypeID", @"iEzsigntemplatedocumentPagetotal", @"iEzsigntemplateSignaturetotal", @"iEzsigntemplateFormfieldtotal", @"sEzsignfoldertypeNameX", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -31,7 +31,7 @@
 /* The unique ID of the Timezone 
  */
 @property(nonatomic) NSNumber* fkiTimezoneID;
-/* The url of the picture used as avatar 
+/* The url of the picture used as avatar [optional]
  */
 @property(nonatomic) NSString* sAvatarUrl;
 /* The first name of the user 
@@ -40,7 +40,7 @@
 /* The last name of the user 
  */
 @property(nonatomic) NSString* sUserLastname;
-/* The email address. 
+/* The email address. [optional]
  */
 @property(nonatomic) NSString* sEmailAddress;
 

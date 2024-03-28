@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **bEzsigntemplatepackageNeedvalidation** | **NSNumber*** | Whether the Ezsignbulksend was automatically modified and needs a manual validation | 
 **bEzsigntemplatepackageIsactive** | **NSNumber*** | Whether the Ezsigntemplatepackage is active or not | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
+**bEzsigntemplatepackageEditallowed** | **NSNumber*** | Whether the Ezsigntemplatepackage if allowed to edit or not | 
 **aObjEzsigntemplatepackagesigner** | [**NSArray&lt;EzsigntemplatepackagesignerResponseCompound&gt;***](EzsigntemplatepackagesignerResponseCompound.md) |  | 
 **aObjEzsigntemplatepackagemembership** | [**NSArray&lt;EzsigntemplatepackagemembershipResponseCompound&gt;***](EzsigntemplatepackagemembershipResponseCompound.md) |  | 
 

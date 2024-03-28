@@ -294,7 +294,7 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
 
 ///
 /// Retrieve Branding list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default<br>JPEG<br>PNG |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default<br>JPEG<br>PNG | | eBrandingLogointerface | Default<br>JPEG<br>PNG |
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
 ///
 ///  @param iRowMax  (optional)

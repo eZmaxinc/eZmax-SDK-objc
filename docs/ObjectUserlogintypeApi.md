@@ -10,6 +10,7 @@ Method | HTTP request | Description
 # **userlogintypeGetAutocompleteV2**
 ```objc
 -(NSURLSessionTask*) userlogintypeGetAutocompleteV2WithSSelector: (NSString*) sSelector
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
@@ -31,6 +32,7 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSString* sSelector = @"sSelector_example"; // The type of Userlogintypes to return
+NSNumber* fkiEzsignfoldertypeID = @56; //  (optional)
 NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
@@ -39,6 +41,7 @@ ObjectUserlogintypeApi*apiInstance = [[ObjectUserlogintypeApi alloc] init];
 
 // Retrieve Userlogintypes and IDs
 [apiInstance userlogintypeGetAutocompleteV2WithSSelector:sSelector
+              fkiEzsignfoldertypeID:fkiEzsignfoldertypeID
               eFilterActive:eFilterActive
               sQuery:sQuery
               acceptLanguage:acceptLanguage
@@ -57,6 +60,7 @@ ObjectUserlogintypeApi*apiInstance = [[ObjectUserlogintypeApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **NSString***| The type of Userlogintypes to return | 
+ **fkiEzsignfoldertypeID** | **NSNumber***|  | [optional] 
  **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 

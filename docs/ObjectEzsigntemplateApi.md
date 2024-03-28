@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecopyv1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 [**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
+[**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
+[**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
@@ -132,6 +134,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsigntemplateCreateObjectV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplateCreateObjectV2WithEzsigntemplateCreateObjectV2Request: (EzsigntemplateCreateObjectV2Request*) ezsigntemplateCreateObjectV2Request
+        completionHandler: (void (^)(EzsigntemplateCreateObjectV2Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsigntemplate
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsigntemplateCreateObjectV2Request* ezsigntemplateCreateObjectV2Request = [[EzsigntemplateCreateObjectV2Request alloc] init]; // 
+
+ObjectEzsigntemplateApi*apiInstance = [[ObjectEzsigntemplateApi alloc] init];
+
+// Create a new Ezsigntemplate
+[apiInstance ezsigntemplateCreateObjectV2WithEzsigntemplateCreateObjectV2Request:ezsigntemplateCreateObjectV2Request
+          completionHandler: ^(EzsigntemplateCreateObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigntemplateApi->ezsigntemplateCreateObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request***](EzsigntemplateCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsigntemplateCreateObjectV2Response***](EzsigntemplateCreateObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsigntemplateDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplateDeleteObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
@@ -238,6 +297,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateEditObjectV1Response***](EzsigntemplateEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplateEditObjectV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplateEditObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateEditObjectV2Request: (EzsigntemplateEditObjectV2Request*) ezsigntemplateEditObjectV2Request
+        completionHandler: (void (^)(EzsigntemplateEditObjectV2Response* output, NSError* error)) handler;
+```
+
+Edit an existing Ezsigntemplate
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplateID = @56; // 
+EzsigntemplateEditObjectV2Request* ezsigntemplateEditObjectV2Request = [[EzsigntemplateEditObjectV2Request alloc] init]; // 
+
+ObjectEzsigntemplateApi*apiInstance = [[ObjectEzsigntemplateApi alloc] init];
+
+// Edit an existing Ezsigntemplate
+[apiInstance ezsigntemplateEditObjectV2WithPkiEzsigntemplateID:pkiEzsigntemplateID
+              ezsigntemplateEditObjectV2Request:ezsigntemplateEditObjectV2Request
+          completionHandler: ^(EzsigntemplateEditObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigntemplateApi->ezsigntemplateEditObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **NSNumber***|  | 
+ **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request***](EzsigntemplateEditObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsigntemplateEditObjectV2Response***](EzsigntemplateEditObjectV2Response.md)
 
 ### Authorization
 

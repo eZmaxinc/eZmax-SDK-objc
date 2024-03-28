@@ -3,6 +3,8 @@
 #import "HeaderAcceptLanguage.h"
 #import "UserCreateObjectV1Request.h"
 #import "UserCreateObjectV1Response.h"
+#import "UserCreateObjectV2Request.h"
+#import "UserCreateObjectV2Response.h"
 #import "UserEditObjectV1Request.h"
 #import "UserEditObjectV1Response.h"
 #import "UserEditPermissionsV1Request.h"
@@ -14,6 +16,8 @@
 #import "UserGetObjectV2Response.h"
 #import "UserGetPermissionsV1Response.h"
 #import "UserGetSubnetsV1Response.h"
+#import "UserGetUsergroupexternalsV1Response.h"
+#import "UserGetUsergroupsV1Response.h"
 #import "UserSendPasswordResetV1Response.h"
 #import "Api.h"
 
@@ -48,6 +52,18 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @return UserCreateObjectV1Response*
 -(NSURLSessionTask*) userCreateObjectV1WithUserCreateObjectV1Request: (UserCreateObjectV1Request*) userCreateObjectV1Request
     completionHandler: (void (^)(UserCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Create a new User
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param userCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return UserCreateObjectV2Response*
+-(NSURLSessionTask*) userCreateObjectV2WithUserCreateObjectV2Request: (UserCreateObjectV2Request*) userCreateObjectV2Request
+    completionHandler: (void (^)(UserCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Edit an existing User
@@ -184,6 +200,32 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @return UserGetSubnetsV1Response*
 -(NSURLSessionTask*) userGetSubnetsV1WithPkiUserID: (NSNumber*) pkiUserID
     completionHandler: (void (^)(UserGetSubnetsV1Response* output, NSError* error)) handler;
+
+
+/// Get User's Usergroupexternals
+/// 
+///
+/// @param pkiUserID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return UserGetUsergroupexternalsV1Response*
+-(NSURLSessionTask*) userGetUsergroupexternalsV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetUsergroupexternalsV1Response* output, NSError* error)) handler;
+
+
+/// Get User's Usergroups
+/// 
+///
+/// @param pkiUserID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return UserGetUsergroupsV1Response*
+-(NSURLSessionTask*) userGetUsergroupsV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetUsergroupsV1Response* output, NSError* error)) handler;
 
 
 /// Send password reset

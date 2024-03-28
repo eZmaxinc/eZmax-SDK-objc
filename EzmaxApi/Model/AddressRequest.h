@@ -46,5 +46,11 @@
 /* The Postal/Zip Code  The value must be entered without spaces 
  */
 @property(nonatomic) NSString* sAddressZip;
+/* The Longitude of the Address [optional]
+ */
+@property(nonatomic) NSString* fAddressLongitude;
+/* The Latitude of the Address [optional]
+ */
+@property(nonatomic) NSString* fAddressLatitude;
 
 @end

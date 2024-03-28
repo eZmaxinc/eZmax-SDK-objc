@@ -17,12 +17,15 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "WebhookheaderRequestCompound.h"
 @protocol FieldEWebhookEzsignevent;
 @class FieldEWebhookEzsignevent;
 @protocol FieldEWebhookManagementevent;
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol WebhookheaderRequestCompound;
+@class WebhookheaderRequestCompound;
 
 
 
@@ -61,5 +64,7 @@
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
+
+@property(nonatomic) NSArray<WebhookheaderRequestCompound>* aObjWebhookheader;
 
 @end

@@ -1,6 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "FranchisereferalincomeCreateObjectV1Request.h"
-#import "FranchisereferalincomeCreateObjectV1Response.h"
 #import "FranchisereferalincomeCreateObjectV2Request.h"
 #import "FranchisereferalincomeCreateObjectV2Response.h"
 #import "Api.h"
@@ -25,18 +23,6 @@ extern NSString* kObjectFranchisereferalincomeApiErrorDomain;
 extern NSInteger kObjectFranchisereferalincomeApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Create a new Franchisereferalincome
-/// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-///
-/// @param franchisereferalincomeCreateObjectV1Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return FranchisereferalincomeCreateObjectV1Response*
--(NSURLSessionTask*) franchisereferalincomeCreateObjectV1WithFranchisereferalincomeCreateObjectV1Request: (NSArray<FranchisereferalincomeCreateObjectV1Request>*) franchisereferalincomeCreateObjectV1Request
-    completionHandler: (void (^)(FranchisereferalincomeCreateObjectV1Response* output, NSError* error)) handler;
-
 
 /// Create a new Franchisereferalincome
 /// The endpoint allows to create one or many elements at once.

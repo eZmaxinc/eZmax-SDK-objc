@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **bEzsigntemplatepackageNeedvalidation** | **NSNumber*** | Whether the Ezsignbulksend was automatically modified and needs a manual validation | 
 **bEzsigntemplatepackageIsactive** | **NSNumber*** | Whether the Ezsigntemplatepackage is active or not | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
+**bEzsigntemplatepackageEditallowed** | **NSNumber*** | Whether the Ezsigntemplatepackage if allowed to edit or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

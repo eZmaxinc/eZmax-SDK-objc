@@ -12,6 +12,7 @@
 #import "EzsignfolderDisposeV1Response.h"
 #import "EzsignfolderEditObjectV1Request.h"
 #import "EzsignfolderEditObjectV1Response.h"
+#import "EzsignfolderEndPrematurelyV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetAttachmentCountV1Response.h"
 #import "EzsignfolderGetAttachmentsV1Response.h"
@@ -34,8 +35,6 @@
 #import "EzsignfolderReorderV1Response.h"
 #import "EzsignfolderSendV1Request.h"
 #import "EzsignfolderSendV1Response.h"
-#import "EzsignfolderSendV2Request.h"
-#import "EzsignfolderSendV2Response.h"
 #import "EzsignfolderSendV3Request.h"
 #import "EzsignfolderSendV3Response.h"
 #import "EzsignfolderUnsendV1Response.h"
@@ -178,6 +177,22 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderEditObjectV1Request: (EzsignfolderEditObjectV1Request*) ezsignfolderEditObjectV1Request
     completionHandler: (void (^)(EzsignfolderEditObjectV1Response* output, NSError* error)) handler;
+
+
+/// End prematurely
+/// End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
+///
+/// @param pkiEzsignfolderID 
+/// @param body 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderEndPrematurelyV1Response*
+-(NSURLSessionTask*) ezsignfolderEndPrematurelyV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    body: (NSObject*) body
+    completionHandler: (void (^)(EzsignfolderEndPrematurelyV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve actionable elements for the Ezsignfolder
@@ -436,22 +451,6 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderSendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderSendV1Request: (EzsignfolderSendV1Request*) ezsignfolderSendV1Request
     completionHandler: (void (^)(EzsignfolderSendV1Response* output, NSError* error)) handler;
-
-
-/// Send the Ezsignfolder to the signatories for signature
-/// 
-///
-/// @param pkiEzsignfolderID 
-/// @param ezsignfolderSendV2Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsignfolderSendV2Response*
--(NSURLSessionTask*) ezsignfolderSendV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    ezsignfolderSendV2Request: (EzsignfolderSendV2Request*) ezsignfolderSendV2Request
-    completionHandler: (void (^)(EzsignfolderSendV2Response* output, NSError* error)) handler;
 
 
 /// Send the Ezsignfolder to the signatories for signature

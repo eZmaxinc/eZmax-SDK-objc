@@ -92,5 +92,8 @@
 /* The number of Ezsigndocumentattachment total 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentEzsignsignatureattachmenttotal;
+/* The total number of Ezsigndiscussions 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentEzsigndiscussiontotal;
 
 @end

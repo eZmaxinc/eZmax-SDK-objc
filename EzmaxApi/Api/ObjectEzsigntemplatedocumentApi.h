@@ -47,6 +47,7 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @param ezsigntemplatedocumentCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
+///  code:413 message:"The request was large. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
 ///
 /// @return EzsigntemplatedocumentCreateObjectV1Response*

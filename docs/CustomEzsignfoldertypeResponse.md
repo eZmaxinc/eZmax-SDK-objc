@@ -6,12 +6,10 @@ Name | Type | Description | Notes
 **pkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
 **bEzsignfoldertypeSendproofezsignsigner** | **NSNumber*** | Whether we send the proof in the email to Ezsignsigner | [optional] 
-**bEzsignfoldertypeIncludeproofsigner** | **NSNumber*** | THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners | [optional] 
-**bEzsignfoldertypeIncludeproofuser** | **NSNumber*** | Whether we include the proof with the signed Ezsigndocument for users | [optional] 
 **bEzsignfoldertypeAllowdownloadattachmentezsignsigner** | **NSNumber*** | Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner | [optional] 
 **bEzsignfoldertypeAllowdownloadproofezsignsigner** | **NSNumber*** | Whether we allow the proof to be downloaded by an Ezsignsigner | [optional] 
 **bEzsignfoldertypeDelegate** | **NSNumber*** | Wheter if delegation of signature is allowed to another user or not | [optional] 
-**bEzsignfoldertypeReassign** | **NSNumber*** | Wheter if Reassignment of signature is allowed to another signatory or not | [optional] 
+**bEzsignfoldertypeDiscussion** | **NSNumber*** | Wheter if creating a new Discussion is allowed or not | [optional] 
 **bEzsignfoldertypeReassignezsignsigner** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **bEzsignfoldertypeReassignuser** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
 

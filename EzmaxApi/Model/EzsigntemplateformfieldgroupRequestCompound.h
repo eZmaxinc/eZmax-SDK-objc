@@ -59,7 +59,7 @@
 /* The step when the Ezsigntemplatesigner will be invited to fill the form fields 
  */
 @property(nonatomic) NSNumber* iEzsigntemplateformfieldgroupStep;
-/* The default value for the Ezsigntemplateformfieldgroup 
+/* The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | 
  */
 @property(nonatomic) NSString* sEzsigntemplateformfieldgroupDefaultvalue;
 /* The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup 

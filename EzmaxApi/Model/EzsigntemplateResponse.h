@@ -15,8 +15,11 @@
 
 
 #import "CommonAudit.h"
+#import "FieldEEzsigntemplateType.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol FieldEEzsigntemplateType;
+@class FieldEEzsigntemplateType;
 
 
 
@@ -31,7 +34,7 @@
 /* The unique ID of the Ezsigntemplatedocument [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsigntemplatedocumentID;
-/* The unique ID of the Ezsignfoldertype. 
+/* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
@@ -43,13 +46,21 @@
 /* The description of the Ezsigntemplate 
  */
 @property(nonatomic) NSString* sEzsigntemplateDescription;
+/* The filename pattern of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplateFilenamepattern;
 /* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) 
  */
 @property(nonatomic) NSNumber* bEzsigntemplateAdminonly;
-/* The name of the Ezsignfoldertype in the language of the requester 
+/* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
 
 @property(nonatomic) CommonAudit* objAudit;
+/* Whether the Ezsigntemplate if allowed to edit or not 
+ */
+@property(nonatomic) NSNumber* bEzsigntemplateEditallowed;
+
+@property(nonatomic) FieldEEzsigntemplateType* eEzsigntemplateType;
 
 @end

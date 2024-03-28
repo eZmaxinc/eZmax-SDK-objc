@@ -34,6 +34,9 @@
 /* The description of the Ezsigntemplate 
  */
 @property(nonatomic) NSString* sEzsigntemplateDescription;
+/* The filename pattern of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplateFilenamepattern;
 /* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) 
  */
 @property(nonatomic) NSNumber* bEzsigntemplateAdminonly;

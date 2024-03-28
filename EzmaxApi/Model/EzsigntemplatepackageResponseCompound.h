@@ -55,6 +55,9 @@
 /* The name of the Ezsignfoldertype in the language of the requester 
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
+/* Whether the Ezsigntemplatepackage if allowed to edit or not 
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatepackageEditallowed;
 
 @property(nonatomic) NSArray<EzsigntemplatepackagesignerResponseCompound>* aObjEzsigntemplatepackagesigner;
 

@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "CommonGetAutocompleteV1Response.h"
 #import "FranchisebrokerGetAutocompleteV2Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -24,24 +23,6 @@ extern NSString* kObjectFranchisebrokerApiErrorDomain;
 extern NSInteger kObjectFranchisebrokerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Retrieve Franchisebrokers and IDs
-/// Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Franchisebrokers to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
-/// @return CommonGetAutocompleteV1Response*
--(NSURLSessionTask*) franchisebrokerGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(CommonGetAutocompleteV1Response* output, NSError* error)) handler;
-
 
 /// Retrieve Franchisebrokers and IDs
 /// Get the list of Franchisebroker to be used in a dropdown or autocomplete control.

@@ -15,9 +15,12 @@
 
 
 #import "EzsigntemplateResponseCompound.h"
+#import "EzsigntemplateglobalResponseCompound.h"
 #import "EzsigntemplatepackageResponseCompound.h"
 @protocol EzsigntemplateResponseCompound;
 @class EzsigntemplateResponseCompound;
+@protocol EzsigntemplateglobalResponseCompound;
+@class EzsigntemplateglobalResponseCompound;
 @protocol EzsigntemplatepackageResponseCompound;
 @class EzsigntemplatepackageResponseCompound;
 
@@ -32,5 +35,7 @@
 @property(nonatomic) NSArray<EzsigntemplateResponseCompound>* aObjEzsigntemplate;
 
 @property(nonatomic) NSArray<EzsigntemplatepackageResponseCompound>* aObjEzsigntemplatepackage;
+
+@property(nonatomic) NSArray<EzsigntemplateglobalResponseCompound>* aObjEzsigntemplateglobal;
 
 @end

@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldEEzsigntemplateType.h"
+@protocol FieldEEzsigntemplateType;
+@class FieldEEzsigntemplateType;
 
 
 
@@ -25,7 +28,7 @@
 /* The unique ID of the Ezsigntemplate 
  */
 @property(nonatomic) NSNumber* pkiEzsigntemplateID;
-/* The unique ID of the Ezsignfoldertype. 
+/* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
@@ -46,8 +49,10 @@
 /* Indicate the Ezsigntemplate is incomplete and cannot be used 
  */
 @property(nonatomic) NSNumber* bEzsigntemplateIncomplete;
-/* The name of the Ezsignfoldertype in the language of the requester 
+/* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
+
+@property(nonatomic) FieldEEzsigntemplateType* eEzsigntemplateType;
 
 @end

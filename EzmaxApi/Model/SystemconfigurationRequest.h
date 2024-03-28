@@ -15,11 +15,14 @@
 
 
 #import "FieldESystemconfigurationEzsign.h"
+#import "FieldESystemconfigurationEzsignofficeplan.h"
 #import "FieldESystemconfigurationLanguage1.h"
 #import "FieldESystemconfigurationLanguage2.h"
 #import "FieldESystemconfigurationNewexternaluseraction.h"
 @protocol FieldESystemconfigurationEzsign;
 @class FieldESystemconfigurationEzsign;
+@protocol FieldESystemconfigurationEzsignofficeplan;
+@class FieldESystemconfigurationEzsignofficeplan;
 @protocol FieldESystemconfigurationLanguage1;
 @class FieldESystemconfigurationLanguage1;
 @protocol FieldESystemconfigurationLanguage2;
@@ -45,6 +48,11 @@
 @property(nonatomic) FieldESystemconfigurationLanguage2* eSystemconfigurationLanguage2;
 
 @property(nonatomic) FieldESystemconfigurationEzsign* eSystemconfigurationEzsign;
+
+@property(nonatomic) FieldESystemconfigurationEzsignofficeplan* eSystemconfigurationEzsignofficeplan;
+/* Whether if Ezsign is paid by the company or not [optional]
+ */
+@property(nonatomic) NSNumber* bSystemconfigurationEzsignpaidbyoffice;
 /* Whether if we allow the creation of personal files in eZsign 
  */
 @property(nonatomic) NSNumber* bSystemconfigurationEzsignpersonnal;

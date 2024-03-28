@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateID": @"pkiEzsigntemplateID", @"fkiEzsigntemplatedocumentID": @"fkiEzsigntemplatedocumentID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplateDescription": @"sEzsigntemplateDescription", @"bEzsigntemplateAdminonly": @"bEzsigntemplateAdminonly", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"objAudit": @"objAudit", @"objEzsigntemplatedocument": @"objEzsigntemplatedocument", @"aObjEzsigntemplatesigner": @"a_objEzsigntemplatesigner" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateID": @"pkiEzsigntemplateID", @"fkiEzsigntemplatedocumentID": @"fkiEzsigntemplatedocumentID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplateDescription": @"sEzsigntemplateDescription", @"sEzsigntemplateFilenamepattern": @"sEzsigntemplateFilenamepattern", @"bEzsigntemplateAdminonly": @"bEzsigntemplateAdminonly", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"objAudit": @"objAudit", @"bEzsigntemplateEditallowed": @"bEzsigntemplateEditallowed", @"eEzsigntemplateType": @"eEzsigntemplateType", @"objEzsigntemplatedocument": @"objEzsigntemplatedocument", @"aObjEzsigntemplatesigner": @"a_objEzsigntemplatesigner" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEzsigntemplatedocumentID", @"objEzsigntemplatedocument", ];
+  NSArray *optionalProperties = @[@"fkiEzsigntemplatedocumentID", @"fkiEzsignfoldertypeID", @"sEzsigntemplateFilenamepattern", @"sEzsignfoldertypeNameX", @"eEzsigntemplateType", @"objEzsigntemplatedocument", ];
   return [optionalProperties containsObject:propertyName];
 }
 

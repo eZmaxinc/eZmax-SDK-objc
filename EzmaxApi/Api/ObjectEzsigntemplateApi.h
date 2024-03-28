@@ -4,9 +4,13 @@
 #import "EzsigntemplateCopyV1Response.h"
 #import "EzsigntemplateCreateObjectV1Request.h"
 #import "EzsigntemplateCreateObjectV1Response.h"
+#import "EzsigntemplateCreateObjectV2Request.h"
+#import "EzsigntemplateCreateObjectV2Response.h"
 #import "EzsigntemplateDeleteObjectV1Response.h"
 #import "EzsigntemplateEditObjectV1Request.h"
 #import "EzsigntemplateEditObjectV1Response.h"
+#import "EzsigntemplateEditObjectV2Request.h"
+#import "EzsigntemplateEditObjectV2Response.h"
 #import "EzsigntemplateGetAutocompleteV2Response.h"
 #import "EzsigntemplateGetListV1Response.h"
 #import "EzsigntemplateGetObjectV1Response.h"
@@ -62,6 +66,18 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigntemplateCreateObjectV1Response* output, NSError* error)) handler;
 
 
+/// Create a new Ezsigntemplate
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsigntemplateCreateObjectV2Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EzsigntemplateCreateObjectV2Response*
+-(NSURLSessionTask*) ezsigntemplateCreateObjectV2WithEzsigntemplateCreateObjectV2Request: (EzsigntemplateCreateObjectV2Request*) ezsigntemplateCreateObjectV2Request
+    completionHandler: (void (^)(EzsigntemplateCreateObjectV2Response* output, NSError* error)) handler;
+
+
 /// Delete an existing Ezsigntemplate
 /// 
 ///
@@ -89,6 +105,22 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigntemplateEditObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
     ezsigntemplateEditObjectV1Request: (EzsigntemplateEditObjectV1Request*) ezsigntemplateEditObjectV1Request
     completionHandler: (void (^)(EzsigntemplateEditObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit an existing Ezsigntemplate
+/// 
+///
+/// @param pkiEzsigntemplateID 
+/// @param ezsigntemplateEditObjectV2Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplateEditObjectV2Response*
+-(NSURLSessionTask*) ezsigntemplateEditObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateEditObjectV2Request: (EzsigntemplateEditObjectV2Request*) ezsigntemplateEditObjectV2Request
+    completionHandler: (void (^)(EzsigntemplateEditObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigntemplates and IDs

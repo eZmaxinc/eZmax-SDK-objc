@@ -28,8 +28,11 @@
 /* The unique ID of the Usergroup 
  */
 @property(nonatomic) NSNumber* fkiUsergroupID;
-/* The unique ID of the User 
+/* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroupexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupexternalID;
 
 @end

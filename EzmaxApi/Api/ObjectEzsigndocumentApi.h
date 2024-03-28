@@ -6,6 +6,8 @@
 #import "EzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Request.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Response.h"
+#import "EzsigndocumentApplyEzsigntemplateglobalV1Request.h"
+#import "EzsigndocumentApplyEzsigntemplateglobalV1Response.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Response.h"
 #import "EzsigndocumentCreateObjectV1Request.h"
@@ -97,6 +99,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV2Response* output, NSError* error)) handler;
 
 
+/// Apply an Ezsigntemplateglobal to the Ezsigndocument.
+/// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentApplyEzsigntemplateglobalV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentApplyEzsigntemplateglobalV1Response*
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateglobalV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateglobalV1Request: (EzsigndocumentApplyEzsigntemplateglobalV1Request*) ezsigndocumentApplyEzsigntemplateglobalV1Request
+    completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateglobalV1Response* output, NSError* error)) handler;
+
+
 /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
 /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
 ///
@@ -119,6 +137,7 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// @param ezsigndocumentCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
+///  code:413 message:"The request was large. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
 ///
 /// @return EzsigndocumentCreateObjectV1Response*

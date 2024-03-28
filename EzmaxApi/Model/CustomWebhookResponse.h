@@ -18,6 +18,7 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "WebhookheaderResponseCompound.h"
 @protocol CommonAudit;
 @class CommonAudit;
 @protocol FieldEWebhookEzsignevent;
@@ -26,6 +27,8 @@
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol WebhookheaderResponseCompound;
+@class WebhookheaderResponseCompound;
 
 
 
@@ -75,6 +78,11 @@
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
 
 @property(nonatomic) CommonAudit* objAudit;
+/* The concatenated string to describe the Webhook event [optional]
+ */
+@property(nonatomic) NSString* sWebhookEvent;
+
+@property(nonatomic) NSArray<WebhookheaderResponseCompound>* aObjWebhookheader;
 /* The customer code assigned to your account 
  */
 @property(nonatomic) NSString* pksCustomerCode;

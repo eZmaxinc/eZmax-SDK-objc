@@ -15,9 +15,12 @@
 
 
 #import "FieldEBrandingLogo.h"
+#import "FieldEBrandingLogointerface.h"
 #import "MultilingualBrandingDescription.h"
 @protocol FieldEBrandingLogo;
 @class FieldEBrandingLogo;
+@protocol FieldEBrandingLogointerface;
+@class FieldEBrandingLogointerface;
 @protocol MultilingualBrandingDescription;
 @class MultilingualBrandingDescription;
 
@@ -47,6 +50,8 @@
 @property(nonatomic) NSString* sEmailAddress;
 
 @property(nonatomic) FieldEBrandingLogo* eBrandingLogo;
+
+@property(nonatomic) FieldEBrandingLogointerface* eBrandingLogointerface;
 /* The color of the text. This is a RGB color converted into integer 
  */
 @property(nonatomic) NSNumber* iBrandingColortext;
@@ -65,6 +70,9 @@
 /* The color of the background of the small box. This is a RGB color converted into integer 
  */
 @property(nonatomic) NSNumber* iBrandingColorbackgroundsmallbox;
+/* The color of the interface. This is a RGB color converted into integer [optional]
+ */
+@property(nonatomic) NSNumber* iBrandingInterfacecolor;
 /* Whether the Branding is active or not 
  */
 @property(nonatomic) NSNumber* bBrandingIsactive;

@@ -4,8 +4,6 @@
 #import "CommonResponseError.h"
 #import "CommonResponseErrorTooManyRequests.h"
 #import "HeaderAcceptLanguage.h"
-#import "WebhookCreateObjectV1Request.h"
-#import "WebhookCreateObjectV1Response.h"
 #import "WebhookCreateObjectV2Request.h"
 #import "WebhookCreateObjectV2Response.h"
 #import "WebhookDeleteObjectV1Response.h"
@@ -63,72 +61,6 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
-
-///
-/// Create a new Webhook
-/// The endpoint allows to create one or many elements at once.
-///  @param webhookCreateObjectV1Request  
-///
-///  @returns WebhookCreateObjectV1Response*
-///
--(NSURLSessionTask*) webhookCreateObjectV1WithWebhookCreateObjectV1Request: (WebhookCreateObjectV1Request*) webhookCreateObjectV1Request
-    completionHandler: (void (^)(WebhookCreateObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'webhookCreateObjectV1Request' is set
-    if (webhookCreateObjectV1Request == nil) {
-        NSParameterAssert(webhookCreateObjectV1Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"webhookCreateObjectV1Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectWebhookApiErrorDomain code:kObjectWebhookApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/webhook"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = webhookCreateObjectV1Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"POST"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"WebhookCreateObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((WebhookCreateObjectV1Response*)data, error);
-                                }
-                            }];
-}
 
 ///
 /// Create a new Webhook

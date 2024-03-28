@@ -28,16 +28,19 @@
 /* The unique ID of the Usergroup 
  */
 @property(nonatomic) NSNumber* fkiUsergroupID;
-/* The unique ID of the User 
+/* The unique ID of the User [optional]
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The first name of the user 
+/* The unique ID of the Usergroupexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupexternalID;
+/* The first name of the user [optional]
  */
 @property(nonatomic) NSString* sUserFirstname;
-/* The last name of the user 
+/* The last name of the user [optional]
  */
 @property(nonatomic) NSString* sUserLastname;
-/* The login name of the User. 
+/* The login name of the User. [optional]
  */
 @property(nonatomic) NSString* sUserLoginname;
 /* The email address. [optional]
@@ -46,5 +49,8 @@
 /* The Name of the Usergroup in the language of the requester 
  */
 @property(nonatomic) NSString* sUsergroupNameX;
+/* The name of the Usergroupexternal [optional]
+ */
+@property(nonatomic) NSString* sUsergroupexternalName;
 
 @end

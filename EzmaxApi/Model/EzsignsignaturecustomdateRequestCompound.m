@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignsignaturecustomdateID": @"pkiEzsignsignaturecustomdateID", @"iEzsignsignaturecustomdateX": @"iEzsignsignaturecustomdateX", @"iEzsignsignaturecustomdateY": @"iEzsignsignaturecustomdateY", @"sEzsignsignaturecustomdateFormat": @"sEzsignsignaturecustomdateFormat" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignsignaturecustomdateID": @"pkiEzsignsignaturecustomdateID", @"iEzsignsignaturecustomdateX": @"iEzsignsignaturecustomdateX", @"iEzsignsignaturecustomdateY": @"iEzsignsignaturecustomdateY", @"iEzsignsignaturecustomdateOffsetx": @"iEzsignsignaturecustomdateOffsetx", @"iEzsignsignaturecustomdateOffsety": @"iEzsignsignaturecustomdateOffsety", @"sEzsignsignaturecustomdateFormat": @"sEzsignsignaturecustomdateFormat" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsignsignaturecustomdateID", ];
+  NSArray *optionalProperties = @[@"pkiEzsignsignaturecustomdateID", @"iEzsignsignaturecustomdateX", @"iEzsignsignaturecustomdateY", @"iEzsignsignaturecustomdateOffsetx", @"iEzsignsignaturecustomdateOffsety", ];
   return [optionalProperties containsObject:propertyName];
 }
 

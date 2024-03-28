@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "CommonGetAutocompleteV1Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "PeriodGetAutocompleteV2Response.h"
 #import "Api.h"
@@ -24,24 +23,6 @@ extern NSString* kObjectPeriodApiErrorDomain;
 extern NSInteger kObjectPeriodApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Retrieve Periods and IDs
-/// Get the list of Periods to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The types of Periods to return
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
-/// @return CommonGetAutocompleteV1Response*
--(NSURLSessionTask*) periodGetAutocompleteV1WithSSelector: (NSString*) sSelector
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(CommonGetAutocompleteV1Response* output, NSError* error)) handler;
-
 
 /// Retrieve Periods and IDs
 /// Get the list of Period to be used in a dropdown or autocomplete control.
