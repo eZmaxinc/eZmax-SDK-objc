@@ -30,6 +30,6 @@
 @property(nonatomic) NSString* sIframedomain;
 /* Whether the url would be in an iFrame or not [optional]
  */
-@property(nonatomic) NSNumber* bIsiframe;
+@property(nonatomic) NSNumber* bIsIframe;
 
 @end

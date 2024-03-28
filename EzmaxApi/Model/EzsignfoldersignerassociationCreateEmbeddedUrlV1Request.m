@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sReturnUrl": @"sReturnUrl", @"sIframedomain": @"sIframedomain", @"bIsiframe": @"bIsiframe" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sReturnUrl": @"sReturnUrl", @"sIframedomain": @"sIframedomain", @"bIsIframe": @"bIsIframe" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sReturnUrl", @"sIframedomain", @"bIsiframe"];
+  NSArray *optionalProperties = @[@"sReturnUrl", @"sIframedomain", @"bIsIframe"];
   return [optionalProperties containsObject:propertyName];
 }
 
