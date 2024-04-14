@@ -34,5 +34,8 @@
 /* Wheter the current route is deprecated or not 
  */
 @property(nonatomic) NSNumber* bVersionDeprecated;
+/* Represent a Date Time. The timezone is the one configured in the User's profile. 
+ */
+@property(nonatomic) NSString* dtResponseDate;
 
 @end

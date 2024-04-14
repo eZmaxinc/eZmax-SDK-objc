@@ -37,5 +37,8 @@
 /* A custom text message that will be added to the email sent. 
  */
 @property(nonatomic) NSString* tEzsignfoldersignerassociationMessage;
+/* If the Ezsignfoldersignerassociation is allowed to sign in person or not 
+ */
+@property(nonatomic) NSNumber* bEzsignfoldersignerassociationAllowsigninginperson;
 
 @end
