@@ -6,12 +6,14 @@
 #import "EzsignsignatureCreateObjectV1Response.h"
 #import "EzsignsignatureCreateObjectV2Request.h"
 #import "EzsignsignatureCreateObjectV2Response.h"
+#import "EzsignsignatureCreateObjectV3Request.h"
+#import "EzsignsignatureCreateObjectV3Response.h"
 #import "EzsignsignatureDeleteObjectV1Response.h"
-#import "EzsignsignatureEditObjectV1Request.h"
-#import "EzsignsignatureEditObjectV1Response.h"
+#import "EzsignsignatureEditObjectV2Request.h"
+#import "EzsignsignatureEditObjectV2Response.h"
 #import "EzsignsignatureGetEzsignsignatureattachmentV1Response.h"
 #import "EzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
-#import "EzsignsignatureGetObjectV2Response.h"
+#import "EzsignsignatureGetObjectV3Response.h"
 #import "EzsignsignatureSignV1Request.h"
 #import "EzsignsignatureSignV1Response.h"
 
@@ -194,6 +196,72 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Create a new Ezsignsignature
+/// The endpoint allows to create one or many elements at once.
+///  @param ezsignsignatureCreateObjectV3Request  
+///
+///  @returns EzsignsignatureCreateObjectV3Response*
+///
+-(NSURLSessionTask*) ezsignsignatureCreateObjectV3WithEzsignsignatureCreateObjectV3Request: (EzsignsignatureCreateObjectV3Request*) ezsignsignatureCreateObjectV3Request
+    completionHandler: (void (^)(EzsignsignatureCreateObjectV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezsignsignatureCreateObjectV3Request' is set
+    if (ezsignsignatureCreateObjectV3Request == nil) {
+        NSParameterAssert(ezsignsignatureCreateObjectV3Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignsignatureCreateObjectV3Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignsignatureApiErrorDomain code:kObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignsignature"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignsignatureCreateObjectV3Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignsignatureCreateObjectV3Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignsignatureCreateObjectV3Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Delete an existing Ezsignsignature
 /// 
 ///  @param pkiEzsignsignatureID  
@@ -266,13 +334,13 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignsignatureID  
 ///
-///  @param ezsignsignatureEditObjectV1Request  
+///  @param ezsignsignatureEditObjectV2Request  
 ///
-///  @returns EzsignsignatureEditObjectV1Response*
+///  @returns EzsignsignatureEditObjectV2Response*
 ///
--(NSURLSessionTask*) ezsignsignatureEditObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV1Request: (EzsignsignatureEditObjectV1Request*) ezsignsignatureEditObjectV1Request
-    completionHandler: (void (^)(EzsignsignatureEditObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
+    completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == nil) {
         NSParameterAssert(pkiEzsignsignatureID);
@@ -284,18 +352,18 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'ezsignsignatureEditObjectV1Request' is set
-    if (ezsignsignatureEditObjectV1Request == nil) {
-        NSParameterAssert(ezsignsignatureEditObjectV1Request);
+    // verify the required parameter 'ezsignsignatureEditObjectV2Request' is set
+    if (ezsignsignatureEditObjectV2Request == nil) {
+        NSParameterAssert(ezsignsignatureEditObjectV2Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignsignatureEditObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignsignatureEditObjectV2Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsignsignatureApiErrorDomain code:kObjectEzsignsignatureApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignsignature/{pkiEzsignsignatureID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignsignature/{pkiEzsignsignatureID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignsignatureID != nil) {
@@ -323,7 +391,7 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignsignatureEditObjectV1Request;
+    bodyParam = ezsignsignatureEditObjectV2Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
@@ -336,10 +404,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignsignatureEditObjectV1Response*"
+                              responseType: @"EzsignsignatureEditObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignsignatureEditObjectV1Response*)data, error);
+                                    handler((EzsignsignatureEditObjectV2Response*)data, error);
                                 }
                             }];
 }
@@ -469,10 +537,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignsignatureID  
 ///
-///  @returns EzsignsignatureGetObjectV2Response*
+///  @returns EzsignsignatureGetObjectV3Response*
 ///
--(NSURLSessionTask*) ezsignsignatureGetObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EzsignsignatureGetObjectV2Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsignsignatureGetObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    completionHandler: (void (^)(EzsignsignatureGetObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == nil) {
         NSParameterAssert(pkiEzsignsignatureID);
@@ -484,7 +552,7 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignsignature/{pkiEzsignsignatureID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignsignature/{pkiEzsignsignatureID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignsignatureID != nil) {
@@ -524,10 +592,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignsignatureGetObjectV2Response*"
+                              responseType: @"EzsignsignatureGetObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignsignatureGetObjectV2Response*)data, error);
+                                    handler((EzsignsignatureGetObjectV3Response*)data, error);
                                 }
                             }];
 }

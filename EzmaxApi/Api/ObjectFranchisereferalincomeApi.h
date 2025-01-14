@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponseErrorWrongFranchiseoffice.h"
 #import "FranchisereferalincomeCreateObjectV2Request.h"
 #import "FranchisereferalincomeCreateObjectV2Response.h"
 #import "Api.h"
@@ -29,7 +30,8 @@ extern NSInteger kObjectFranchisereferalincomeApiMissingParamErrorCode;
 ///
 /// @param franchisereferalincomeCreateObjectV2Request 
 /// 
-///  code:201 message:"Successful response"
+///  code:201 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of this Franchisebroker is not in this Franchiseoffice. fkiFranchiseofficeID contains the id of Franchiseoffice where the Franchisebroker is located on the dtFranchisereferalincomeDisbursed. "
 ///
 /// @return FranchisereferalincomeCreateObjectV2Response*
 -(NSURLSessionTask*) franchisereferalincomeCreateObjectV2WithFranchisereferalincomeCreateObjectV2Request: (FranchisereferalincomeCreateObjectV2Request*) franchisereferalincomeCreateObjectV2Request

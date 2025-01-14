@@ -31,21 +31,18 @@
 /* The creditcard token identifier [optional]
  */
 @property(nonatomic) NSString* fksCreditcardtokenID;
-/* Whether if it's an relationisdefault 
+/* Whether if it's the creditcardclient is the default one 
  */
 @property(nonatomic) NSNumber* bCreditcardclientrelationIsdefault;
 /* The description of the Creditcardclient 
  */
 @property(nonatomic) NSString* sCreditcardclientDescription;
-/* Whether the creditcardclient is active or not 
- */
-@property(nonatomic) NSNumber* bCreditcardclientIsactive;
 /* Whether if it's an allowedagencypayment 
  */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedagencypayment;
+@property(nonatomic) NSNumber* bCreditcardclientAllowedcompanypayment;
 /* Whether if it's an allowedroyallepageprotection 
  */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedroyallepageprotection;
+@property(nonatomic) NSNumber* bCreditcardclientAllowedezsign;
 /* Whether if it's an allowedtranquillit 
  */
 @property(nonatomic) NSNumber* bCreditcardclientAllowedtranquillit;

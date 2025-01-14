@@ -24,5 +24,11 @@
 
 
 @property(nonatomic) NSArray<NSNumber*>* aFkiEzsignfoldertypeID;
+/* Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSNumber* bCopyCompany;
+/* Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSNumber* bCopyUser;
 
 @end

@@ -16,13 +16,13 @@
 
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "CommunicationCreateObjectV1ResponseMPayload.h"
+#import "CommunicationSendV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol CommunicationCreateObjectV1ResponseMPayload;
-@class CommunicationCreateObjectV1ResponseMPayload;
+@protocol CommunicationSendV1ResponseMPayload;
+@class CommunicationSendV1ResponseMPayload;
 
 
 
@@ -36,6 +36,6 @@
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
 
-@property(nonatomic) CommunicationCreateObjectV1ResponseMPayload* mPayload;
+@property(nonatomic) CommunicationSendV1ResponseMPayload* mPayload;
 
 @end

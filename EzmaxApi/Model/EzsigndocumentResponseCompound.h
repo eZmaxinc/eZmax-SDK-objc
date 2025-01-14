@@ -17,6 +17,7 @@
 #import "CommonAudit.h"
 #import "ComputedEEzsigndocumentSteptype.h"
 #import "CustomEzsignfoldersignerassociationstatusResponse.h"
+#import "EzsigndocumentdependencyResponse.h"
 #import "FieldEEzsigndocumentStep.h"
 @protocol CommonAudit;
 @class CommonAudit;
@@ -24,6 +25,8 @@
 @class ComputedEEzsigndocumentSteptype;
 @protocol CustomEzsignfoldersignerassociationstatusResponse;
 @class CustomEzsignfoldersignerassociationstatusResponse;
+@protocol EzsigndocumentdependencyResponse;
+@class EzsigndocumentdependencyResponse;
 @protocol FieldEEzsigndocumentStep;
 @class FieldEEzsigndocumentStep;
 
@@ -75,6 +78,9 @@
 /* The number of total signatures that were requested in the Ezsigndocument. 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentSignaturetotal;
+/* The number of total Ezsignformfield that were requested in the Ezsigndocument. 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentFormfieldtotal;
 /* MD5 Hash of the initial PDF Document before signatures were applied to it. [optional]
  */
 @property(nonatomic) NSString* sEzsigndocumentMD5initial;
@@ -117,5 +123,7 @@
 @property(nonatomic) NSNumber* iEzsigndocumentStepsignatureCurrent;
 
 @property(nonatomic) NSArray<CustomEzsignfoldersignerassociationstatusResponse>* aObjEzsignfoldersignerassociationstatus;
+
+@property(nonatomic) NSArray<EzsigndocumentdependencyResponse>* aObjEzsigndocumentdependency;
 
 @end

@@ -77,8 +77,17 @@
 /* Whether the Ezsignform/Ezsignsignatures has dependencies or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignformHasdependencies;
-/* Whether the Ezsignform/Ezsignsignatures has dependencies or not 
+/* Percentage of Ezsignform/Ezsignsignatures has completed 
  */
 @property(nonatomic) NSString* dEzsignfolderCompletedpercentage;
+/* Percentage of Ezsignform has completed 
+ */
+@property(nonatomic) NSString* dEzsignfolderFormcompletedpercentage;
+/* Percentage of Ezsignsignatures has signed 
+ */
+@property(nonatomic) NSString* dEzsignfolderSignaturecompletedpercentage;
+/* Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfolderSigner;
 
 @end

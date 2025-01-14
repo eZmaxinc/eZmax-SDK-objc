@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep***](FieldEEzsignfolderStep.md) |  | 
 **iEzsignfolderSignaturetotal** | **NSNumber*** | The number of total signatures that were requested in the Ezsignfolder | 
+**iEzsignfolderFormfieldtotal** | **NSNumber*** | The number of total form fields that were requested in the Ezsignfolder | 
 **iEzsignfolderSignaturesigned** | **NSNumber*** | The number of signatures that were signed in the Ezsignfolder. | 
 **aObjEzsignfoldertransmissionSigner** | [**NSArray&lt;CustomEzsignfoldertransmissionSignerResponse&gt;***](CustomEzsignfoldertransmissionSignerResponse.md) |  | 
 

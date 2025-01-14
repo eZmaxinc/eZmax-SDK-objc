@@ -28,8 +28,5 @@
 /* The description of the Creditcardclient 
  */
 @property(nonatomic) NSString* sCreditcardclientDescription;
-/* Whether the creditcardclient is active or not 
- */
-@property(nonatomic) NSNumber* bCreditcardclientIsactive;
 
 @end

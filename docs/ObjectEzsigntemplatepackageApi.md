@@ -255,6 +255,7 @@ Name | Type | Description  | Notes
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
         completionHandler: (void (^)(EzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error)) handler;
 ```
 
@@ -276,6 +277,7 @@ NSString* sSelector = @"sSelector_example"; // The type of Ezsigntemplatepackage
 NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
 NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
 HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
+NSNumber* fkiEzsignfoldertypeID = @56; // The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
 
 ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi alloc] init];
 
@@ -284,6 +286,7 @@ ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi al
               eFilterActive:eFilterActive
               sQuery:sQuery
               acceptLanguage:acceptLanguage
+              fkiEzsignfoldertypeID:fkiEzsignfoldertypeID
           completionHandler: ^(EzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
@@ -302,6 +305,7 @@ Name | Type | Description  | Notes
  **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
  **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **fkiEzsignfoldertypeID** | **NSNumber***| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] 
 
 ### Return type
 

@@ -33,6 +33,9 @@
 @property(nonatomic) NSString* sErrorMessage;
 
 @property(nonatomic) FieldEErrorCode* eErrorCode;
+/* More error message detail [optional]
+ */
+@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 /*  
  */
 @property(nonatomic) NSArray<CustomEzsignformfielderrorResponse>* aObjEzsignformfielderror;

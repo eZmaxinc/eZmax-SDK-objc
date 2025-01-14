@@ -4,8 +4,70 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**billingentityexternalGenerateFederationTokenV1**](ObjectBillingentityexternalApi.md#billingentityexternalgeneratefederationtokenv1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token
 [**billingentityexternalGetAutocompleteV2**](ObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 
+
+# **billingentityexternalGenerateFederationTokenV1**
+```objc
+-(NSURLSessionTask*) billingentityexternalGenerateFederationTokenV1WithPkiBillingentityexternalID: (NSNumber*) pkiBillingentityexternalID
+    billingentityexternalGenerateFederationTokenV1Request: (BillingentityexternalGenerateFederationTokenV1Request*) billingentityexternalGenerateFederationTokenV1Request
+        completionHandler: (void (^)(BillingentityexternalGenerateFederationTokenV1Response* output, NSError* error)) handler;
+```
+
+Generate a federation token
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBillingentityexternalID = @56; // 
+BillingentityexternalGenerateFederationTokenV1Request* billingentityexternalGenerateFederationTokenV1Request = [[BillingentityexternalGenerateFederationTokenV1Request alloc] init]; // 
+
+ObjectBillingentityexternalApi*apiInstance = [[ObjectBillingentityexternalApi alloc] init];
+
+// Generate a federation token
+[apiInstance billingentityexternalGenerateFederationTokenV1WithPkiBillingentityexternalID:pkiBillingentityexternalID
+              billingentityexternalGenerateFederationTokenV1Request:billingentityexternalGenerateFederationTokenV1Request
+          completionHandler: ^(BillingentityexternalGenerateFederationTokenV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBillingentityexternalApi->billingentityexternalGenerateFederationTokenV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBillingentityexternalID** | **NSNumber***|  | 
+ **billingentityexternalGenerateFederationTokenV1Request** | [**BillingentityexternalGenerateFederationTokenV1Request***](BillingentityexternalGenerateFederationTokenV1Request.md)|  | 
+
+### Return type
+
+[**BillingentityexternalGenerateFederationTokenV1Response***](BillingentityexternalGenerateFederationTokenV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **billingentityexternalGetAutocompleteV2**
 ```objc

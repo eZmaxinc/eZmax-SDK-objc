@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiWebhookID** | **NSNumber*** | The unique ID of the Webhook | [optional] 
+**fkiAuthenticationexternalID** | **NSNumber*** | The unique ID of the Authenticationexternal | [optional] 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
 **sWebhookDescription** | **NSString*** | The description of the Webhook | 
 **eWebhookModule** | [**FieldEWebhookModule***](FieldEWebhookModule.md) |  | 

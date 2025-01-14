@@ -16,6 +16,7 @@
 
 #import "EnumTextvalidation.h"
 #import "FieldEEzsigntemplatesignatureAttachmentnamesource.h"
+#import "FieldEEzsigntemplatesignatureConsultationtrigger.h"
 #import "FieldEEzsigntemplatesignatureDependencyrequirement.h"
 #import "FieldEEzsigntemplatesignatureFont.h"
 #import "FieldEEzsigntemplatesignaturePositioning.h"
@@ -26,6 +27,8 @@
 @class EnumTextvalidation;
 @protocol FieldEEzsigntemplatesignatureAttachmentnamesource;
 @class FieldEEzsigntemplatesignatureAttachmentnamesource;
+@protocol FieldEEzsigntemplatesignatureConsultationtrigger;
+@class FieldEEzsigntemplatesignatureConsultationtrigger;
 @protocol FieldEEzsigntemplatesignatureDependencyrequirement;
 @class FieldEEzsigntemplatesignatureDependencyrequirement;
 @protocol FieldEEzsigntemplatesignatureFont;
@@ -58,6 +61,12 @@
 /* The unique ID of the Ezsigntemplatesigner [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsigntemplatesignerIDValidation;
+/* Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatesignatureHandwritten;
+/* Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatesignatureReason;
 
 @property(nonatomic) FieldEEzsigntemplatesignaturePositioning* eEzsigntemplatesignaturePositioning;
 /* The page number in the Ezsigntemplatedocument 
@@ -80,6 +89,8 @@
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureStep;
 
 @property(nonatomic) FieldEEzsigntemplatesignatureType* eEzsigntemplatesignatureType;
+
+@property(nonatomic) FieldEEzsigntemplatesignatureConsultationtrigger* eEzsigntemplatesignatureConsultationtrigger;
 /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature [optional]
  */
 @property(nonatomic) NSString* tEzsigntemplatesignatureTooltip;
@@ -101,11 +112,17 @@
 /* The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea** [optional]
  */
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureMaxlength;
+/* The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplatesignatureDefaultvalue;
 /* A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplatesignatureRegexp;
 
 @property(nonatomic) EnumTextvalidation* eEzsigntemplatesignatureTextvalidation;
+/* Description of validation rule. Show by signatory. [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplatesignatureTextvalidationcustommessage;
 
 @property(nonatomic) FieldEEzsigntemplatesignatureDependencyrequirement* eEzsigntemplatesignatureDependencyrequirement;
 /* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** [optional]

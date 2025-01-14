@@ -40,6 +40,9 @@
 /* The unique ID of the Systemconfiguration [optional]
  */
 @property(nonatomic) NSNumber* pkiSystemconfigurationID;
+/* The unique ID of the Branding [optional]
+ */
+@property(nonatomic) NSNumber* fkiBrandingID;
 
 @property(nonatomic) FieldESystemconfigurationNewexternaluseraction* eSystemconfigurationNewexternaluseraction;
 

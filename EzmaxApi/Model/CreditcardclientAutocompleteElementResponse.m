@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"sCreditcardclientDescription": @"sCreditcardclientDescription", @"bCreditcardclientIsactive": @"bCreditcardclientIsactive" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"sCreditcardclientDescription": @"sCreditcardclientDescription" }];
 }
 
 /**

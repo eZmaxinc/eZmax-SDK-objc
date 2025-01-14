@@ -14,11 +14,23 @@
 */
 
 
+#import "FieldEActivesessionEzsign.h"
+#import "FieldEActivesessionEzsignaccess.h"
+#import "FieldEActivesessionEzsignprepaid.h"
 #import "FieldEActivesessionOrigin.h"
+#import "FieldEActivesessionRealestateinprogress.h"
 #import "FieldEActivesessionUsertype.h"
 #import "FieldEActivesessionWeekdaystart.h"
+@protocol FieldEActivesessionEzsign;
+@class FieldEActivesessionEzsign;
+@protocol FieldEActivesessionEzsignaccess;
+@class FieldEActivesessionEzsignaccess;
+@protocol FieldEActivesessionEzsignprepaid;
+@class FieldEActivesessionEzsignprepaid;
 @protocol FieldEActivesessionOrigin;
 @class FieldEActivesessionOrigin;
+@protocol FieldEActivesessionRealestateinprogress;
+@class FieldEActivesessionRealestateinprogress;
 @protocol FieldEActivesessionUsertype;
 @class FieldEActivesessionUsertype;
 @protocol FieldEActivesessionWeekdaystart;
@@ -52,6 +64,26 @@
 /* Whether the active session is superadmin or not 
  */
 @property(nonatomic) NSNumber* bActivesessionIssuperadmin;
+/* Can access attachment when we clone a user [optional]
+ */
+@property(nonatomic) NSNumber* bActivesessionAttachment;
+/* Can access canafe when we clone a user [optional]
+ */
+@property(nonatomic) NSNumber* bActivesessionCanafe;
+/* Can access financial element when we clone a user [optional]
+ */
+@property(nonatomic) NSNumber* bActivesessionFinancial;
+/* Can access closed realestate folders when we clone a user [optional]
+ */
+@property(nonatomic) NSNumber* bActivesessionRealestatecompleted;
+
+@property(nonatomic) FieldEActivesessionEzsign* eActivesessionEzsign;
+
+@property(nonatomic) FieldEActivesessionEzsignaccess* eActivesessionEzsignaccess;
+
+@property(nonatomic) FieldEActivesessionEzsignprepaid* eActivesessionEzsignprepaid;
+
+@property(nonatomic) FieldEActivesessionRealestateinprogress* eActivesessionRealestateinprogress;
 /* The customer code assigned to your account 
  */
 @property(nonatomic) NSString* pksCustomerCode;

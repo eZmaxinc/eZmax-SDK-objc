@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "OtherincomeGetCommunicationCountV1Response.h"
 #import "OtherincomeGetCommunicationListV1Response.h"
+#import "OtherincomeGetCommunicationrecipientsV1Response.h"
+#import "OtherincomeGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,6 +27,19 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiOtherincomeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return OtherincomeGetCommunicationCountV1Response*
+-(NSURLSessionTask*) otherincomeGetCommunicationCountV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    completionHandler: (void (^)(OtherincomeGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -35,6 +51,32 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 /// @return OtherincomeGetCommunicationListV1Response*
 -(NSURLSessionTask*) otherincomeGetCommunicationListV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
     completionHandler: (void (^)(OtherincomeGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Otherincome's Communicationrecipient
+/// 
+///
+/// @param pkiOtherincomeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return OtherincomeGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) otherincomeGetCommunicationrecipientsV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    completionHandler: (void (^)(OtherincomeGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Otherincome's Communicationsender
+/// 
+///
+/// @param pkiOtherincomeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return OtherincomeGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) otherincomeGetCommunicationsendersV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    completionHandler: (void (^)(OtherincomeGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 

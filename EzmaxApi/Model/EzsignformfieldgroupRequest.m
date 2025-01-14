@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignformfieldgroupID": @"pkiEzsignformfieldgroupID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"eEzsignformfieldgroupType": @"eEzsignformfieldgroupType", @"eEzsignformfieldgroupSignerrequirement": @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupLabel": @"sEzsignformfieldgroupLabel", @"iEzsignformfieldgroupStep": @"iEzsignformfieldgroupStep", @"sEzsignformfieldgroupDefaultvalue": @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupFilledmin": @"iEzsignformfieldgroupFilledmin", @"iEzsignformfieldgroupFilledmax": @"iEzsignformfieldgroupFilledmax", @"bEzsignformfieldgroupReadonly": @"bEzsignformfieldgroupReadonly", @"iEzsignformfieldgroupMaxlength": @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted": @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp": @"sEzsignformfieldgroupRegexp", @"tEzsignformfieldgroupTooltip": @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition": @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation": @"eEzsignformfieldgroupTextvalidation" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignformfieldgroupID": @"pkiEzsignformfieldgroupID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"eEzsignformfieldgroupType": @"eEzsignformfieldgroupType", @"eEzsignformfieldgroupSignerrequirement": @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupLabel": @"sEzsignformfieldgroupLabel", @"iEzsignformfieldgroupStep": @"iEzsignformfieldgroupStep", @"sEzsignformfieldgroupDefaultvalue": @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupFilledmin": @"iEzsignformfieldgroupFilledmin", @"iEzsignformfieldgroupFilledmax": @"iEzsignformfieldgroupFilledmax", @"bEzsignformfieldgroupReadonly": @"bEzsignformfieldgroupReadonly", @"iEzsignformfieldgroupMaxlength": @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted": @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp": @"sEzsignformfieldgroupRegexp", @"sEzsignformfieldgroupTextvalidationcustommessage": @"sEzsignformfieldgroupTextvalidationcustommessage", @"tEzsignformfieldgroupTooltip": @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition": @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation": @"eEzsignformfieldgroupTextvalidation" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsignformfieldgroupID", @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp", @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation"];
+  NSArray *optionalProperties = @[@"pkiEzsignformfieldgroupID", @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp", @"sEzsignformfieldgroupTextvalidationcustommessage", @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation"];
   return [optionalProperties containsObject:propertyName];
 }
 

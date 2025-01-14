@@ -10,11 +10,15 @@ Method | HTTP request | Description
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentCreateObjectV2**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
+[**ezsigndocumentCreateObjectV3**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv3) | **POST** /3/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeclineToSignV1**](ObjectEzsigndocumentApi.md#ezsigndocumentdeclinetosignv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
+[**ezsigndocumentEditEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumenteditezsignannotationsv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations | Edit multiple Ezsignannotations
 [**ezsigndocumentEditEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumenteditezsignformfieldgroupsv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumenteditezsignsignaturesv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
+[**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumenteditobjectv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Edit an existing Ezsigndocument
 [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
+[**ezsigndocumentExtractTextV1**](ObjectEzsigndocumentApi.md#ezsigndocumentextracttextv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area
 [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 [**ezsigndocumentGetAttachmentsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetattachmentsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments | Retrieve Ezsigndocument&#39;s Attachments
@@ -394,6 +398,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsigndocumentCreateObjectV3**
+```objc
+-(NSURLSessionTask*) ezsigndocumentCreateObjectV3WithEzsigndocumentCreateObjectV3Request: (EzsigndocumentCreateObjectV3Request*) ezsigndocumentCreateObjectV3Request
+        completionHandler: (void (^)(EzsigndocumentCreateObjectV3Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsigndocument
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsigndocumentCreateObjectV3Request* ezsigndocumentCreateObjectV3Request = [[EzsigndocumentCreateObjectV3Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Create a new Ezsigndocument
+[apiInstance ezsigndocumentCreateObjectV3WithEzsigndocumentCreateObjectV3Request:ezsigndocumentCreateObjectV3Request
+          completionHandler: ^(EzsigndocumentCreateObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentCreateObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigndocumentCreateObjectV3Request** | [**EzsigndocumentCreateObjectV3Request***](EzsigndocumentCreateObjectV3Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentCreateObjectV3Response***](EzsigndocumentCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsigndocumentDeclineToSignV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentDeclineToSignV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
@@ -508,6 +569,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentEditEzsignannotationsV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentEditEzsignannotationsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditEzsignannotationsV1Request: (EzsigndocumentEditEzsignannotationsV1Request*) ezsigndocumentEditEzsignannotationsV1Request
+        completionHandler: (void (^)(EzsigndocumentEditEzsignannotationsV1Response* output, NSError* error)) handler;
+```
+
+Edit multiple Ezsignannotations
+
+Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EzsigndocumentEditEzsignannotationsV1Request* ezsigndocumentEditEzsignannotationsV1Request = [[EzsigndocumentEditEzsignannotationsV1Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Edit multiple Ezsignannotations
+[apiInstance ezsigndocumentEditEzsignannotationsV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentEditEzsignannotationsV1Request:ezsigndocumentEditEzsignannotationsV1Request
+          completionHandler: ^(EzsigndocumentEditEzsignannotationsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentEditEzsignannotationsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentEditEzsignannotationsV1Request** | [**EzsigndocumentEditEzsignannotationsV1Request***](EzsigndocumentEditEzsignannotationsV1Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentEditEzsignannotationsV1Response***](EzsigndocumentEditEzsignannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -634,6 +756,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsigndocumentEditObjectV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentEditObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditObjectV1Request: (EzsigndocumentEditObjectV1Request*) ezsigndocumentEditObjectV1Request
+        completionHandler: (void (^)(EzsigndocumentEditObjectV1Response* output, NSError* error)) handler;
+```
+
+Edit an existing Ezsigndocument
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EzsigndocumentEditObjectV1Request* ezsigndocumentEditObjectV1Request = [[EzsigndocumentEditObjectV1Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Edit an existing Ezsigndocument
+[apiInstance ezsigndocumentEditObjectV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentEditObjectV1Request:ezsigndocumentEditObjectV1Request
+          completionHandler: ^(EzsigndocumentEditObjectV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentEditObjectV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentEditObjectV1Request** | [**EzsigndocumentEditObjectV1Request***](EzsigndocumentEditObjectV1Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentEditObjectV1Response***](EzsigndocumentEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsigndocumentEndPrematurelyV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
@@ -683,6 +866,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentEndPrematurelyV1Response***](EzsigndocumentEndPrematurelyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentExtractTextV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentExtractTextV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentExtractTextV1Request: (EzsigndocumentExtractTextV1Request*) ezsigndocumentExtractTextV1Request
+        completionHandler: (void (^)(EzsigndocumentExtractTextV1Response* output, NSError* error)) handler;
+```
+
+Extract text from Ezsigndocument area
+
+Extract text from Ezsigndocument area
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EzsigndocumentExtractTextV1Request* ezsigndocumentExtractTextV1Request = [[EzsigndocumentExtractTextV1Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Extract text from Ezsigndocument area
+[apiInstance ezsigndocumentExtractTextV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentExtractTextV1Request:ezsigndocumentExtractTextV1Request
+          completionHandler: ^(EzsigndocumentExtractTextV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentExtractTextV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentExtractTextV1Request** | [**EzsigndocumentExtractTextV1Request***](EzsigndocumentExtractTextV1Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentExtractTextV1Response***](EzsigndocumentExtractTextV1Response.md)
 
 ### Authorization
 

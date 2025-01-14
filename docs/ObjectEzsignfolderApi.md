@@ -8,10 +8,11 @@ Method | HTTP request | Description
 [**ezsignfolderBatchDownloadV1**](ObjectEzsignfolderApi.md#ezsignfolderbatchdownloadv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload | Download multiples files from an Ezsignfolder
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
+[**ezsignfolderCreateObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv3) | **POST** /3/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderDisposeEzsignfoldersV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposeezsignfoldersv1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
 [**ezsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
-[**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
+[**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetAttachmentCountV1**](ObjectEzsignfolderApi.md#ezsignfoldergetattachmentcountv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount | Retrieve Attachment count
@@ -27,9 +28,11 @@ Method | HTTP request | Description
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderGetObjectV2**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+[**ezsignfolderGetObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsignfoldersignerassociationsv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
 [**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderreorderv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
+[**ezsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderreorderv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
@@ -269,6 +272,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderCreateObjectV3**
+```objc
+-(NSURLSessionTask*) ezsignfolderCreateObjectV3WithEzsignfolderCreateObjectV3Request: (EzsignfolderCreateObjectV3Request*) ezsignfolderCreateObjectV3Request
+        completionHandler: (void (^)(EzsignfolderCreateObjectV3Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsignfolder
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsignfolderCreateObjectV3Request* ezsignfolderCreateObjectV3Request = [[EzsignfolderCreateObjectV3Request alloc] init]; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Create a new Ezsignfolder
+[apiInstance ezsignfolderCreateObjectV3WithEzsignfolderCreateObjectV3Request:ezsignfolderCreateObjectV3Request
+          completionHandler: ^(EzsignfolderCreateObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderCreateObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderCreateObjectV3Request** | [**EzsignfolderCreateObjectV3Request***](EzsignfolderCreateObjectV3Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderCreateObjectV3Response***](EzsignfolderCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderDeleteObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -442,11 +502,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignfolderEditObjectV1**
+# **ezsignfolderEditObjectV3**
 ```objc
--(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    ezsignfolderEditObjectV1Request: (EzsignfolderEditObjectV1Request*) ezsignfolderEditObjectV1Request
-        completionHandler: (void (^)(EzsignfolderEditObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignfolderEditObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderEditObjectV3Request: (EzsignfolderEditObjectV3Request*) ezsignfolderEditObjectV3Request
+        completionHandler: (void (^)(EzsignfolderEditObjectV3Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignfolder
@@ -464,19 +524,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsignfolderID = @56; // 
-EzsignfolderEditObjectV1Request* ezsignfolderEditObjectV1Request = [[EzsignfolderEditObjectV1Request alloc] init]; // 
+EzsignfolderEditObjectV3Request* ezsignfolderEditObjectV3Request = [[EzsignfolderEditObjectV3Request alloc] init]; // 
 
 ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 
 // Edit an existing Ezsignfolder
-[apiInstance ezsignfolderEditObjectV1WithPkiEzsignfolderID:pkiEzsignfolderID
-              ezsignfolderEditObjectV1Request:ezsignfolderEditObjectV1Request
-          completionHandler: ^(EzsignfolderEditObjectV1Response* output, NSError* error) {
+[apiInstance ezsignfolderEditObjectV3WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderEditObjectV3Request:ezsignfolderEditObjectV3Request
+          completionHandler: ^(EzsignfolderEditObjectV3Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderEditObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderEditObjectV3: %@", error);
                         }
                     }];
 ```
@@ -486,11 +546,11 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **NSNumber***|  | 
- **ezsignfolderEditObjectV1Request** | [**EzsignfolderEditObjectV1Request***](EzsignfolderEditObjectV1Request.md)|  | 
+ **ezsignfolderEditObjectV3Request** | [**EzsignfolderEditObjectV3Request***](EzsignfolderEditObjectV3Request.md)|  | 
 
 ### Return type
 
-[**EzsignfolderEditObjectV1Response***](EzsignfolderEditObjectV1Response.md)
+[**EzsignfolderEditObjectV3Response***](EzsignfolderEditObjectV3Response.md)
 
 ### Authorization
 
@@ -1203,7 +1263,7 @@ Name | Type | Description  | Notes
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 
 ### Example
 ```objc
@@ -1364,6 +1424,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetObjectV2Response***](EzsignfolderGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetObjectV3**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EzsignfolderGetObjectV3Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder
+[apiInstance ezsignfolderGetObjectV3WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EzsignfolderGetObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignfolderGetObjectV3Response***](EzsignfolderGetObjectV3Response.md)
 
 ### Authorization
 
@@ -1545,6 +1662,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderReorderV1Response***](EzsignfolderReorderV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderReorderV2**
+```objc
+-(NSURLSessionTask*) ezsignfolderReorderV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderReorderV2Request: (EzsignfolderReorderV2Request*) ezsignfolderReorderV2Request
+        completionHandler: (void (^)(EzsignfolderReorderV2Response* output, NSError* error)) handler;
+```
+
+Reorder Ezsigndocuments in the Ezsignfolder
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+EzsignfolderReorderV2Request* ezsignfolderReorderV2Request = [[EzsignfolderReorderV2Request alloc] init]; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Reorder Ezsigndocuments in the Ezsignfolder
+[apiInstance ezsignfolderReorderV2WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderReorderV2Request:ezsignfolderReorderV2Request
+          completionHandler: ^(EzsignfolderReorderV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderReorderV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **ezsignfolderReorderV2Request** | [**EzsignfolderReorderV2Request***](EzsignfolderReorderV2Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderReorderV2Response***](EzsignfolderReorderV2Response.md)
 
 ### Authorization
 

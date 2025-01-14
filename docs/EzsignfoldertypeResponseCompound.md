@@ -24,10 +24,12 @@ Name | Type | Description | Notes
 **eEzsignfoldertypeCompletion** | [**FieldEEzsignfoldertypeCompletion***](FieldEEzsignfoldertypeCompletion.md) |  | 
 **iEzsignfoldertypeDisposaldays** | **NSNumber*** | The number of days after the archival before the disposal of the Ezsignfolder | [optional] 
 **iEzsignfoldertypeDeadlinedays** | **NSNumber*** | The number of days to get all Ezsignsignatures | 
+**bEzsignfoldertypeAutomaticsignature** | **NSNumber*** | Whether we allow the automatic signature by an User | [optional] 
 **bEzsignfoldertypeDelegate** | **NSNumber*** | Wheter if delegation of signature is allowed to another user or not | [optional] 
 **bEzsignfoldertypeDiscussion** | **NSNumber*** | Wheter if creating a new Discussion is allowed or not | [optional] 
 **bEzsignfoldertypeReassignezsignsigner** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **bEzsignfoldertypeReassignuser** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
+**bEzsignfoldertypeReassigngroup** | **NSNumber*** | Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself | [optional] 
 **bEzsignfoldertypeSendsignedtoezsignsigner** | **NSNumber*** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **bEzsignfoldertypeSendsignedtouser** | **NSNumber*** | Whether we send an email to User who signed when document is completed | [optional] 
 **bEzsignfoldertypeSendattachmentezsignsigner** | **NSNumber*** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 

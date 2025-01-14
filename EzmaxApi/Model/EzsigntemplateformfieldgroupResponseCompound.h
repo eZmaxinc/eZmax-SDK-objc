@@ -80,6 +80,9 @@
 /* A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplateformfieldgroupRegexp;
+/* Description of validation rule. Show by signatory. [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplateformfieldgroupTextvalidationcustommessage;
 
 @property(nonatomic) EnumTextvalidation* eEzsigntemplateformfieldgroupTextvalidation;
 /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup [optional]

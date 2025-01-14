@@ -2,19 +2,14 @@
 #import "CommonResponseError.h"
 #import "EzsigntemplateCopyV1Request.h"
 #import "EzsigntemplateCopyV1Response.h"
-#import "EzsigntemplateCreateObjectV1Request.h"
-#import "EzsigntemplateCreateObjectV1Response.h"
-#import "EzsigntemplateCreateObjectV2Request.h"
-#import "EzsigntemplateCreateObjectV2Response.h"
+#import "EzsigntemplateCreateObjectV3Request.h"
+#import "EzsigntemplateCreateObjectV3Response.h"
 #import "EzsigntemplateDeleteObjectV1Response.h"
-#import "EzsigntemplateEditObjectV1Request.h"
-#import "EzsigntemplateEditObjectV1Response.h"
-#import "EzsigntemplateEditObjectV2Request.h"
-#import "EzsigntemplateEditObjectV2Response.h"
+#import "EzsigntemplateEditObjectV3Request.h"
+#import "EzsigntemplateEditObjectV3Response.h"
 #import "EzsigntemplateGetAutocompleteV2Response.h"
 #import "EzsigntemplateGetListV1Response.h"
-#import "EzsigntemplateGetObjectV1Response.h"
-#import "EzsigntemplateGetObjectV2Response.h"
+#import "EzsigntemplateGetObjectV3Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -57,25 +52,13 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// Create a new Ezsigntemplate
 /// The endpoint allows to create one or many elements at once.
 ///
-/// @param ezsigntemplateCreateObjectV1Request 
+/// @param ezsigntemplateCreateObjectV3Request 
 /// 
 ///  code:201 message:"Successful response"
 ///
-/// @return EzsigntemplateCreateObjectV1Response*
--(NSURLSessionTask*) ezsigntemplateCreateObjectV1WithEzsigntemplateCreateObjectV1Request: (EzsigntemplateCreateObjectV1Request*) ezsigntemplateCreateObjectV1Request
-    completionHandler: (void (^)(EzsigntemplateCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Create a new Ezsigntemplate
-/// The endpoint allows to create one or many elements at once.
-///
-/// @param ezsigntemplateCreateObjectV2Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return EzsigntemplateCreateObjectV2Response*
--(NSURLSessionTask*) ezsigntemplateCreateObjectV2WithEzsigntemplateCreateObjectV2Request: (EzsigntemplateCreateObjectV2Request*) ezsigntemplateCreateObjectV2Request
-    completionHandler: (void (^)(EzsigntemplateCreateObjectV2Response* output, NSError* error)) handler;
+/// @return EzsigntemplateCreateObjectV3Response*
+-(NSURLSessionTask*) ezsigntemplateCreateObjectV3WithEzsigntemplateCreateObjectV3Request: (EzsigntemplateCreateObjectV3Request*) ezsigntemplateCreateObjectV3Request
+    completionHandler: (void (^)(EzsigntemplateCreateObjectV3Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsigntemplate
@@ -95,32 +78,16 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// 
 ///
 /// @param pkiEzsigntemplateID 
-/// @param ezsigntemplateEditObjectV1Request 
+/// @param ezsigntemplateEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplateEditObjectV1Response*
--(NSURLSessionTask*) ezsigntemplateEditObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    ezsigntemplateEditObjectV1Request: (EzsigntemplateEditObjectV1Request*) ezsigntemplateEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplateEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Edit an existing Ezsigntemplate
-/// 
-///
-/// @param pkiEzsigntemplateID 
-/// @param ezsigntemplateEditObjectV2Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsigntemplateEditObjectV2Response*
--(NSURLSessionTask*) ezsigntemplateEditObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    ezsigntemplateEditObjectV2Request: (EzsigntemplateEditObjectV2Request*) ezsigntemplateEditObjectV2Request
-    completionHandler: (void (^)(EzsigntemplateEditObjectV2Response* output, NSError* error)) handler;
+/// @return EzsigntemplateEditObjectV3Response*
+-(NSURLSessionTask*) ezsigntemplateEditObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateEditObjectV3Request: (EzsigntemplateEditObjectV3Request*) ezsigntemplateEditObjectV3Request
+    completionHandler: (void (^)(EzsigntemplateEditObjectV3Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigntemplates and IDs
@@ -130,6 +97,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
 /// @param sQuery Allow to filter the returned results (optional)
 /// @param acceptLanguage  (optional)
+/// @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
 /// 
 ///  code:200 message:"Successful response"
 ///
@@ -138,6 +106,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     completionHandler: (void (^)(EzsigntemplateGetAutocompleteV2Response* output, NSError* error)) handler;
 
 
@@ -170,22 +139,9 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplateGetObjectV1Response*
--(NSURLSessionTask*) ezsigntemplateGetObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    completionHandler: (void (^)(EzsigntemplateGetObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplate
-/// 
-///
-/// @param pkiEzsigntemplateID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EzsigntemplateGetObjectV2Response*
--(NSURLSessionTask*) ezsigntemplateGetObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    completionHandler: (void (^)(EzsigntemplateGetObjectV2Response* output, NSError* error)) handler;
+/// @return EzsigntemplateGetObjectV3Response*
+-(NSURLSessionTask*) ezsigntemplateGetObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    completionHandler: (void (^)(EzsigntemplateGetObjectV3Response* output, NSError* error)) handler;
 
 
 

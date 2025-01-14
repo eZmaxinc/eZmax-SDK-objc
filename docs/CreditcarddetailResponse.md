@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCreditcarddetailID** | **NSNumber*** | The unique ID of the Creditcarddetail | 
 **fkiCreditcardtypeID** | **NSNumber*** | The unique ID of the Creditcardtype | 
-**sCreditcarddetailNumbermasked** | **NSString*** | The numbermasked of the Creditcarddetail | 
+**iCreditcarddetailLastdigits** | **NSNumber*** | The last digits of the Creditcarddetail | 
 **iCreditcarddetailExpirationmonth** | **NSNumber*** | The expirationmonth of the Creditcarddetail | 
 **iCreditcarddetailExpirationyear** | **NSNumber*** | The expirationyear of the Creditcarddetail | 
 **sCreditcarddetailCivic** | **NSString*** | The civic of the Creditcarddetail | 

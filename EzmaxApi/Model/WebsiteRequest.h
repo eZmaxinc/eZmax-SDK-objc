@@ -22,6 +22,9 @@
 
 @interface WebsiteRequest : Object
 
+/* The unique ID of the Website Default [optional]
+ */
+@property(nonatomic) NSNumber* pkiWebsiteID;
 /* The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| 
  */
 @property(nonatomic) NSNumber* fkiWebsitetypeID;

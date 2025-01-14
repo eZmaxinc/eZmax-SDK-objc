@@ -46,12 +46,21 @@
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;
+/* The unique ID of the Ezdoctemplatedocument [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
 /* The Name of the Language in the language of the requester 
  */
 @property(nonatomic) NSString* sLanguageNameX;
 /* The description of the Ezsigntemplate 
  */
 @property(nonatomic) NSString* sEzsigntemplateDescription;
+/* The external description of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplateExternaldescription;
+/* The comment of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSString* tEzsigntemplateComment;
 /* The filename pattern of the Ezsigntemplate [optional]
  */
 @property(nonatomic) NSString* sEzsigntemplateFilenamepattern;

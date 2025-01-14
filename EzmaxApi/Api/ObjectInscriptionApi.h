@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "InscriptionGetAttachmentsV1Response.h"
+#import "InscriptionGetCommunicationCountV1Response.h"
 #import "InscriptionGetCommunicationListV1Response.h"
+#import "InscriptionGetCommunicationrecipientsV1Response.h"
 #import "InscriptionGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
@@ -39,6 +41,19 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
     completionHandler: (void (^)(InscriptionGetAttachmentsV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiInscriptionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionGetCommunicationCountV1Response*
+-(NSURLSessionTask*) inscriptionGetCommunicationCountV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    completionHandler: (void (^)(InscriptionGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -50,6 +65,19 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @return InscriptionGetCommunicationListV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationListV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
     completionHandler: (void (^)(InscriptionGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscription's Communicationrecipient
+/// 
+///
+/// @param pkiInscriptionID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) inscriptionGetCommunicationrecipientsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    completionHandler: (void (^)(InscriptionGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Inscription's Communicationsender

@@ -1,7 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "InvoiceGetAttachmentsV1Response.h"
+#import "InvoiceGetCommunicationCountV1Response.h"
 #import "InvoiceGetCommunicationListV1Response.h"
+#import "InvoiceGetCommunicationrecipientsV1Response.h"
+#import "InvoiceGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -38,6 +41,19 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
     completionHandler: (void (^)(InvoiceGetAttachmentsV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiInvoiceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InvoiceGetCommunicationCountV1Response*
+-(NSURLSessionTask*) invoiceGetCommunicationCountV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -49,6 +65,32 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @return InvoiceGetCommunicationListV1Response*
 -(NSURLSessionTask*) invoiceGetCommunicationListV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
     completionHandler: (void (^)(InvoiceGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Invoice's Communicationrecipient
+/// 
+///
+/// @param pkiInvoiceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InvoiceGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) invoiceGetCommunicationrecipientsV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Invoice's Communicationsender
+/// 
+///
+/// @param pkiInvoiceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InvoiceGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) invoiceGetCommunicationsendersV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "EzsignbulksendCreateEzsignbulksendtransmissionV1Request.h"
-#import "EzsignbulksendCreateEzsignbulksendtransmissionV1Response.h"
+#import "EzsignbulksendCreateEzsignbulksendtransmissionV2Request.h"
+#import "EzsignbulksendCreateEzsignbulksendtransmissionV2Response.h"
 #import "EzsignbulksendCreateObjectV1Request.h"
 #import "EzsignbulksendCreateObjectV1Response.h"
 #import "EzsignbulksendDeleteObjectV1Response.h"
@@ -42,16 +42,16 @@ extern NSInteger kObjectEzsignbulksendApiMissingParamErrorCode;
 /// 
 ///
 /// @param pkiEzsignbulksendID 
-/// @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
+/// @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignbulksendCreateEzsignbulksendtransmissionV1Response*
--(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    ezsignbulksendCreateEzsignbulksendtransmissionV1Request: (EzsignbulksendCreateEzsignbulksendtransmissionV1Request*) ezsignbulksendCreateEzsignbulksendtransmissionV1Request
-    completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV1Response* output, NSError* error)) handler;
+/// @return EzsignbulksendCreateEzsignbulksendtransmissionV2Response*
+-(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV2WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    ezsignbulksendCreateEzsignbulksendtransmissionV2Request: (EzsignbulksendCreateEzsignbulksendtransmissionV2Request*) ezsignbulksendCreateEzsignbulksendtransmissionV2Request
+    completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV2Response* output, NSError* error)) handler;
 
 
 /// Create a new Ezsignbulksend

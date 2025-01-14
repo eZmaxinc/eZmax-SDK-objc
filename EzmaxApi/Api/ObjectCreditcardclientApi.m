@@ -2,6 +2,7 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
+#import "CommonResponseErrorCreditcardValidation.h"
 #import "CreditcardclientCreateObjectV1Request.h"
 #import "CreditcardclientCreateObjectV1Response.h"
 #import "CreditcardclientDeleteObjectV1Response.h"
@@ -10,6 +11,8 @@
 #import "CreditcardclientGetAutocompleteV2Response.h"
 #import "CreditcardclientGetListV1Response.h"
 #import "CreditcardclientGetObjectV2Response.h"
+#import "CreditcardclientPatchObjectV1Request.h"
+#import "CreditcardclientPatchObjectV1Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -506,6 +509,89 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((CreditcardclientGetObjectV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Patch an existing Creditcardclient
+/// 
+///  @param pkiCreditcardclientID The unique ID of the Creditcardclient 
+///
+///  @param creditcardclientPatchObjectV1Request  
+///
+///  @returns CreditcardclientPatchObjectV1Response*
+///
+-(NSURLSessionTask*) creditcardclientPatchObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
+    creditcardclientPatchObjectV1Request: (CreditcardclientPatchObjectV1Request*) creditcardclientPatchObjectV1Request
+    completionHandler: (void (^)(CreditcardclientPatchObjectV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiCreditcardclientID' is set
+    if (pkiCreditcardclientID == nil) {
+        NSParameterAssert(pkiCreditcardclientID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiCreditcardclientID"] };
+            NSError* error = [NSError errorWithDomain:kObjectCreditcardclientApiErrorDomain code:kObjectCreditcardclientApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+    if (creditcardclientPatchObjectV1Request == nil) {
+        NSParameterAssert(creditcardclientPatchObjectV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"creditcardclientPatchObjectV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectCreditcardclientApiErrorDomain code:kObjectCreditcardclientApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/creditcardclient/{pkiCreditcardclientID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiCreditcardclientID != nil) {
+        pathParams[@"pkiCreditcardclientID"] = pkiCreditcardclientID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = creditcardclientPatchObjectV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"PATCH"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"CreditcardclientPatchObjectV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((CreditcardclientPatchObjectV1Response*)data, error);
                                 }
                             }];
 }

@@ -52,7 +52,7 @@
 /* Try to repair the document or flatten it if it cannot be used for electronic signature. [optional]
  */
 @property(nonatomic) NSNumber* bEzsigntemplatedocumentForcerepair;
-/* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document [optional]
+/* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document. [optional]
  */
 @property(nonatomic) NSString* eEzsigntemplatedocumentForm;
 /* If the source template is password protected, the password to open/modify it. [optional]

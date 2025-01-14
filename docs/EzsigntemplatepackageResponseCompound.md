@@ -5,7 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsigntemplatepackageID** | **NSNumber*** | The unique ID of the Ezsigntemplatepackage | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | 
+**fkiEzdoctemplatedocumentID** | **NSNumber*** | The unique ID of the Ezdoctemplatedocument | [optional] 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
+**sEzdoctemplatedocumentNameX** | **NSString*** | The name of the Ezdoctemplatedocument in the language of the requester | [optional] 
 **sLanguageNameX** | **NSString*** | The Name of the Language in the language of the requester | 
 **sEzsigntemplatepackageDescription** | **NSString*** | The description of the Ezsigntemplatepackage | 
 **bEzsigntemplatepackageAdminonly** | **NSNumber*** | Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal) | 

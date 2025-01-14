@@ -7,12 +7,15 @@
 #import "UserCreateObjectV1Response.h"
 #import "UserCreateObjectV2Request.h"
 #import "UserCreateObjectV2Response.h"
+#import "UserEditColleaguesV2Request.h"
+#import "UserEditColleaguesV2Response.h"
 #import "UserEditObjectV1Request.h"
 #import "UserEditObjectV1Response.h"
 #import "UserEditPermissionsV1Request.h"
 #import "UserEditPermissionsV1Response.h"
 #import "UserGetApikeysV1Response.h"
 #import "UserGetAutocompleteV2Response.h"
+#import "UserGetColleaguesV2Response.h"
 #import "UserGetEffectivePermissionsV1Response.h"
 #import "UserGetListV1Response.h"
 #import "UserGetObjectV2Response.h"
@@ -196,6 +199,89 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((UserCreateObjectV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Edit multiple Colleagues
+/// Using this endpoint, you can edit multiple Colleagues at the same time.
+///  @param pkiUserID  
+///
+///  @param userEditColleaguesV2Request  
+///
+///  @returns UserEditColleaguesV2Response*
+///
+-(NSURLSessionTask*) userEditColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+    userEditColleaguesV2Request: (UserEditColleaguesV2Request*) userEditColleaguesV2Request
+    completionHandler: (void (^)(UserEditColleaguesV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'userEditColleaguesV2Request' is set
+    if (userEditColleaguesV2Request == nil) {
+        NSParameterAssert(userEditColleaguesV2Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"userEditColleaguesV2Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/user/{pkiUserID}/editColleagues"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = userEditColleaguesV2Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"PUT"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"UserEditColleaguesV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((UserEditColleaguesV2Response*)data, error);
                                 }
                             }];
 }
@@ -516,6 +602,74 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((UserGetAutocompleteV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing User's Colleagues
+/// 
+///  @param pkiUserID  
+///
+///  @returns UserGetColleaguesV2Response*
+///
+-(NSURLSessionTask*) userGetColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetColleaguesV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/user/{pkiUserID}/getColleagues"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"UserGetColleaguesV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((UserGetColleaguesV2Response*)data, error);
                                 }
                             }];
 }

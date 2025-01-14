@@ -371,12 +371,15 @@ NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode = 234513;
 ///
 ///  @param acceptLanguage  (optional)
 ///
+///  @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
+///
 ///  @returns EzsigntemplatepackageGetAutocompleteV2Response*
 ///
 -(NSURLSessionTask*) ezsigntemplatepackageGetAutocompleteV2WithSSelector: (NSString*) sSelector
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     completionHandler: (void (^)(EzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
@@ -402,6 +405,9 @@ NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode = 234513;
     }
     if (sQuery != nil) {
         queryParams[@"sQuery"] = sQuery;
+    }
+    if (fkiEzsignfoldertypeID != nil) {
+        queryParams[@"fkiEzsignfoldertypeID"] = fkiEzsignfoldertypeID;
     }
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];

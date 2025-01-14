@@ -4,16 +4,16 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsigntemplatesignatureCreateObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturecreateobjectv1) | **POST** /1/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
+[**ezsigntemplatesignatureCreateObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturecreateobjectv2) | **POST** /2/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
 [**ezsigntemplatesignatureDeleteObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Delete an existing Ezsigntemplatesignature
-[**ezsigntemplatesignatureEditObjectV1**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureeditobjectv1) | **PUT** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
-[**ezsigntemplatesignatureGetObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv2) | **GET** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
+[**ezsigntemplatesignatureEditObjectV2**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureeditobjectv2) | **PUT** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
+[**ezsigntemplatesignatureGetObjectV3**](ObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignaturegetobjectv3) | **GET** /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 
 
-# **ezsigntemplatesignatureCreateObjectV1**
+# **ezsigntemplatesignatureCreateObjectV2**
 ```objc
--(NSURLSessionTask*) ezsigntemplatesignatureCreateObjectV1WithEzsigntemplatesignatureCreateObjectV1Request: (EzsigntemplatesignatureCreateObjectV1Request*) ezsigntemplatesignatureCreateObjectV1Request
-        completionHandler: (void (^)(EzsigntemplatesignatureCreateObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsigntemplatesignatureCreateObjectV2WithEzsigntemplatesignatureCreateObjectV2Request: (EzsigntemplatesignatureCreateObjectV2Request*) ezsigntemplatesignatureCreateObjectV2Request
+        completionHandler: (void (^)(EzsigntemplatesignatureCreateObjectV2Response* output, NSError* error)) handler;
 ```
 
 Create a new Ezsigntemplatesignature
@@ -30,18 +30,18 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-EzsigntemplatesignatureCreateObjectV1Request* ezsigntemplatesignatureCreateObjectV1Request = [[EzsigntemplatesignatureCreateObjectV1Request alloc] init]; // 
+EzsigntemplatesignatureCreateObjectV2Request* ezsigntemplatesignatureCreateObjectV2Request = [[EzsigntemplatesignatureCreateObjectV2Request alloc] init]; // 
 
 ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureApi alloc] init];
 
 // Create a new Ezsigntemplatesignature
-[apiInstance ezsigntemplatesignatureCreateObjectV1WithEzsigntemplatesignatureCreateObjectV1Request:ezsigntemplatesignatureCreateObjectV1Request
-          completionHandler: ^(EzsigntemplatesignatureCreateObjectV1Response* output, NSError* error) {
+[apiInstance ezsigntemplatesignatureCreateObjectV2WithEzsigntemplatesignatureCreateObjectV2Request:ezsigntemplatesignatureCreateObjectV2Request
+          completionHandler: ^(EzsigntemplatesignatureCreateObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureCreateObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureCreateObjectV2: %@", error);
                         }
                     }];
 ```
@@ -50,11 +50,11 @@ ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureAp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatesignatureCreateObjectV1Request** | [**EzsigntemplatesignatureCreateObjectV1Request***](EzsigntemplatesignatureCreateObjectV1Request.md)|  | 
+ **ezsigntemplatesignatureCreateObjectV2Request** | [**EzsigntemplatesignatureCreateObjectV2Request***](EzsigntemplatesignatureCreateObjectV2Request.md)|  | 
 
 ### Return type
 
-[**EzsigntemplatesignatureCreateObjectV1Response***](EzsigntemplatesignatureCreateObjectV1Response.md)
+[**EzsigntemplatesignatureCreateObjectV2Response***](EzsigntemplatesignatureCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -124,11 +124,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigntemplatesignatureEditObjectV1**
+# **ezsigntemplatesignatureEditObjectV2**
 ```objc
--(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    ezsigntemplatesignatureEditObjectV1Request: (EzsigntemplatesignatureEditObjectV1Request*) ezsigntemplatesignatureEditObjectV1Request
-        completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
+    ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
+        completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatesignature
@@ -146,19 +146,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsigntemplatesignatureID = @56; // 
-EzsigntemplatesignatureEditObjectV1Request* ezsigntemplatesignatureEditObjectV1Request = [[EzsigntemplatesignatureEditObjectV1Request alloc] init]; // 
+EzsigntemplatesignatureEditObjectV2Request* ezsigntemplatesignatureEditObjectV2Request = [[EzsigntemplatesignatureEditObjectV2Request alloc] init]; // 
 
 ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureApi alloc] init];
 
 // Edit an existing Ezsigntemplatesignature
-[apiInstance ezsigntemplatesignatureEditObjectV1WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
-              ezsigntemplatesignatureEditObjectV1Request:ezsigntemplatesignatureEditObjectV1Request
-          completionHandler: ^(EzsigntemplatesignatureEditObjectV1Response* output, NSError* error) {
+[apiInstance ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
+              ezsigntemplatesignatureEditObjectV2Request:ezsigntemplatesignatureEditObjectV2Request
+          completionHandler: ^(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureEditObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureEditObjectV2: %@", error);
                         }
                     }];
 ```
@@ -168,11 +168,11 @@ ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureAp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatesignatureID** | **NSNumber***|  | 
- **ezsigntemplatesignatureEditObjectV1Request** | [**EzsigntemplatesignatureEditObjectV1Request***](EzsigntemplatesignatureEditObjectV1Request.md)|  | 
+ **ezsigntemplatesignatureEditObjectV2Request** | [**EzsigntemplatesignatureEditObjectV2Request***](EzsigntemplatesignatureEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**EzsigntemplatesignatureEditObjectV1Response***](EzsigntemplatesignatureEditObjectV1Response.md)
+[**EzsigntemplatesignatureEditObjectV2Response***](EzsigntemplatesignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -185,10 +185,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigntemplatesignatureGetObjectV2**
+# **ezsigntemplatesignatureGetObjectV3**
 ```objc
--(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-        completionHandler: (void (^)(EzsigntemplatesignatureGetObjectV2Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV3WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
+        completionHandler: (void (^)(EzsigntemplatesignatureGetObjectV3Response* output, NSError* error)) handler;
 ```
 
 Retrieve an existing Ezsigntemplatesignature
@@ -210,13 +210,13 @@ NSNumber* pkiEzsigntemplatesignatureID = @56; //
 ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureApi alloc] init];
 
 // Retrieve an existing Ezsigntemplatesignature
-[apiInstance ezsigntemplatesignatureGetObjectV2WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
-          completionHandler: ^(EzsigntemplatesignatureGetObjectV2Response* output, NSError* error) {
+[apiInstance ezsigntemplatesignatureGetObjectV3WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
+          completionHandler: ^(EzsigntemplatesignatureGetObjectV3Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureGetObjectV2: %@", error);
+                            NSLog(@"Error calling ObjectEzsigntemplatesignatureApi->ezsigntemplatesignatureGetObjectV3: %@", error);
                         }
                     }];
 ```
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatesignatureGetObjectV2Response***](EzsigntemplatesignatureGetObjectV2Response.md)
+[**EzsigntemplatesignatureGetObjectV3Response***](EzsigntemplatesignatureGetObjectV3Response.md)
 
 ### Authorization
 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**apikeyCreateObjectV2**](ObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 [**apikeyEditObjectV1**](ObjectApikeyApi.md#apikeyeditobjectv1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
 [**apikeyEditPermissionsV1**](ObjectApikeyApi.md#apikeyeditpermissionsv1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+[**apikeyGenerateDelegatedCredentialsV1**](ObjectApikeyApi.md#apikeygeneratedelegatedcredentialsv1) | **POST** /1/object/apikey/generateDelegatedCredentials | Generate a delegated credentials
 [**apikeyGetCorsV1**](ObjectApikeyApi.md#apikeygetcorsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getCors | Retrieve an existing Apikey&#39;s cors
 [**apikeyGetListV1**](ObjectApikeyApi.md#apikeygetlistv1) | **GET** /1/object/apikey/getList | Retrieve Apikey list
 [**apikeyGetObjectV2**](ObjectApikeyApi.md#apikeygetobjectv2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
@@ -182,6 +183,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApikeyEditPermissionsV1Response***](ApikeyEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apikeyGenerateDelegatedCredentialsV1**
+```objc
+-(NSURLSessionTask*) apikeyGenerateDelegatedCredentialsV1WithApikeyGenerateDelegatedCredentialsV1Request: (ApikeyGenerateDelegatedCredentialsV1Request*) apikeyGenerateDelegatedCredentialsV1Request
+        completionHandler: (void (^)(ApikeyGenerateDelegatedCredentialsV1Response* output, NSError* error)) handler;
+```
+
+Generate a delegated credentials
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+ApikeyGenerateDelegatedCredentialsV1Request* apikeyGenerateDelegatedCredentialsV1Request = [[ApikeyGenerateDelegatedCredentialsV1Request alloc] init]; // 
+
+ObjectApikeyApi*apiInstance = [[ObjectApikeyApi alloc] init];
+
+// Generate a delegated credentials
+[apiInstance apikeyGenerateDelegatedCredentialsV1WithApikeyGenerateDelegatedCredentialsV1Request:apikeyGenerateDelegatedCredentialsV1Request
+          completionHandler: ^(ApikeyGenerateDelegatedCredentialsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectApikeyApi->apikeyGenerateDelegatedCredentialsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apikeyGenerateDelegatedCredentialsV1Request** | [**ApikeyGenerateDelegatedCredentialsV1Request***](ApikeyGenerateDelegatedCredentialsV1Request.md)|  | 
+
+### Return type
+
+[**ApikeyGenerateDelegatedCredentialsV1Response***](ApikeyGenerateDelegatedCredentialsV1Response.md)
 
 ### Authorization
 

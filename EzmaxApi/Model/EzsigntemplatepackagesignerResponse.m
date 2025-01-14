@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackagesignerID": @"pkiEzsigntemplatepackagesignerID", @"fkiEzsigntemplatepackageID": @"fkiEzsigntemplatepackageID", @"sEzsigntemplatepackagesignerDescription": @"sEzsigntemplatepackagesignerDescription" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackagesignerID": @"pkiEzsigntemplatepackagesignerID", @"fkiEzsigntemplatepackageID": @"fkiEzsigntemplatepackageID", @"fkiEzdoctemplatedocumentID": @"fkiEzdoctemplatedocumentID", @"fkiUserID": @"fkiUserID", @"fkiUsergroupID": @"fkiUsergroupID", @"sEzdoctemplatedocumentNameX": @"sEzdoctemplatedocumentNameX", @"bEzsigntemplatepackagesignerReceivecopy": @"bEzsigntemplatepackagesignerReceivecopy", @"eEzsigntemplatepackagesignerMapping": @"eEzsigntemplatepackagesignerMapping", @"sEzsigntemplatepackagesignerDescription": @"sEzsigntemplatepackagesignerDescription", @"sUserName": @"sUserName", @"sUsergroupNameX": @"sUsergroupNameX" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"fkiEzdoctemplatedocumentID", @"fkiUserID", @"fkiUsergroupID", @"sEzdoctemplatedocumentNameX", @"bEzsigntemplatepackagesignerReceivecopy", @"eEzsigntemplatepackagesignerMapping", @"sUserName", @"sUsergroupNameX"];
   return [optionalProperties containsObject:propertyName];
 }
 

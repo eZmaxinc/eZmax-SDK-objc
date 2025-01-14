@@ -28,13 +28,13 @@
 /* The expirationyear of the Creditcarddetail 
  */
 @property(nonatomic) NSNumber* iCreditcarddetailExpirationyear;
-/* The civic of the Creditcarddetail [optional]
+/* The civic of the Creditcarddetail 
  */
 @property(nonatomic) NSString* sCreditcarddetailCivic;
-/* The street of the Creditcarddetail [optional]
+/* The street of the Creditcarddetail 
  */
 @property(nonatomic) NSString* sCreditcarddetailStreet;
-/* The zip of the Creditcarddetail [optional]
+/* The zip of the Creditcarddetail 
  */
 @property(nonatomic) NSString* sCreditcarddetailZip;
 

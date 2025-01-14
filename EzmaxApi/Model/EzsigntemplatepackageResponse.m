@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiLanguageID": @"fkiLanguageID", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageAdminonly": @"bEzsigntemplatepackageAdminonly", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsigntemplatepackageEditallowed": @"bEzsigntemplatepackageEditallowed" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepackageID": @"pkiEzsigntemplatepackageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzdoctemplatedocumentID": @"fkiEzdoctemplatedocumentID", @"fkiLanguageID": @"fkiLanguageID", @"sEzdoctemplatedocumentNameX": @"sEzdoctemplatedocumentNameX", @"sLanguageNameX": @"sLanguageNameX", @"sEzsigntemplatepackageDescription": @"sEzsigntemplatepackageDescription", @"bEzsigntemplatepackageAdminonly": @"bEzsigntemplatepackageAdminonly", @"bEzsigntemplatepackageNeedvalidation": @"bEzsigntemplatepackageNeedvalidation", @"bEzsigntemplatepackageIsactive": @"bEzsigntemplatepackageIsactive", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"bEzsigntemplatepackageEditallowed": @"bEzsigntemplatepackageEditallowed" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"fkiEzdoctemplatedocumentID", @"sEzdoctemplatedocumentNameX", ];
   return [optionalProperties containsObject:propertyName];
 }
 

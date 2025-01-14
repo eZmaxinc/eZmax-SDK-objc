@@ -69,6 +69,9 @@
 /* The number of total signatures that were requested in the Ezsigndocument. 
  */
 @property(nonatomic) NSNumber* iEzsigndocumentSignaturetotal;
+/* The number of total Ezsignformfield that were requested in the Ezsigndocument. 
+ */
+@property(nonatomic) NSNumber* iEzsigndocumentFormfieldtotal;
 /* MD5 Hash of the initial PDF Document before signatures were applied to it. [optional]
  */
 @property(nonatomic) NSString* sEzsigndocumentMD5initial;

@@ -22,7 +22,7 @@
 
 @interface FranchisebrokerAutocompleteElementResponse : Object
 
-/* The name of the Franchisebroker in the language of the requester 
+/* The name of the Franchisebroker 
  */
 @property(nonatomic) NSString* sFranchisebrokerName;
 /* The unique ID of the Franchisebroker 

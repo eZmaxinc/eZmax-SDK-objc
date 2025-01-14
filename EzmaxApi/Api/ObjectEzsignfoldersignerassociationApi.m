@@ -17,6 +17,8 @@
 #import "EzsignfoldersignerassociationGetObjectV2Response.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Request.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Response.h"
+#import "EzsignfoldersignerassociationReassignV1Request.h"
+#import "EzsignfoldersignerassociationReassignV1Response.h"
 
 
 @interface ObjectEzsignfoldersignerassociationApi ()
@@ -66,7 +68,7 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 
 ///
 /// Creates an Url to allow embedded signing
-/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
 ///  @param pkiEzsignfoldersignerassociationID  
 ///
 ///  @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  
@@ -796,6 +798,89 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignfoldersignerassociationPatchObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Reassign remaining unsigned signatures and forms
+/// Reassign remaining unsigned signatures and forms
+///  @param pkiEzsignfoldersignerassociationID  
+///
+///  @param ezsignfoldersignerassociationReassignV1Request  
+///
+///  @returns EzsignfoldersignerassociationReassignV1Response*
+///
+-(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
+    completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == nil) {
+        NSParameterAssert(pkiEzsignfoldersignerassociationID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfoldersignerassociationID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+    if (ezsignfoldersignerassociationReassignV1Request == nil) {
+        NSParameterAssert(ezsignfoldersignerassociationReassignV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldersignerassociationReassignV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfoldersignerassociationID != nil) {
+        pathParams[@"pkiEzsignfoldersignerassociationID"] = pkiEzsignfoldersignerassociationID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignfoldersignerassociationReassignV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfoldersignerassociationReassignV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfoldersignerassociationReassignV1Response*)data, error);
                                 }
                             }];
 }

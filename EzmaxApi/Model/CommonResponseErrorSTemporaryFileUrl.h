@@ -30,6 +30,9 @@
 @property(nonatomic) NSString* sErrorMessage;
 
 @property(nonatomic) FieldEErrorCode* eErrorCode;
+/* More error message detail [optional]
+ */
+@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. [optional]
  */
 @property(nonatomic) NSString* sTemporaryFileUrl;

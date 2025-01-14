@@ -3,7 +3,10 @@
 #import "ApiClient.h"
 #import "CommonResponseError.h"
 #import "InvoiceGetAttachmentsV1Response.h"
+#import "InvoiceGetCommunicationCountV1Response.h"
 #import "InvoiceGetCommunicationListV1Response.h"
+#import "InvoiceGetCommunicationrecipientsV1Response.h"
+#import "InvoiceGetCommunicationsendersV1Response.h"
 
 
 @interface ObjectInvoiceApi ()
@@ -120,6 +123,74 @@ NSInteger kObjectInvoiceApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Retrieve Communication count
+/// 
+///  @param pkiInvoiceID  
+///
+///  @returns InvoiceGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) invoiceGetCommunicationCountV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == nil) {
+        NSParameterAssert(pkiInvoiceID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInvoiceID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInvoiceApiErrorDomain code:kObjectInvoiceApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/invoice/{pkiInvoiceID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInvoiceID != nil) {
+        pathParams[@"pkiInvoiceID"] = pkiInvoiceID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InvoiceGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InvoiceGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve Communication list
 /// 
 ///  @param pkiInvoiceID  
@@ -183,6 +254,142 @@ NSInteger kObjectInvoiceApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((InvoiceGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Invoice's Communicationrecipient
+/// 
+///  @param pkiInvoiceID  
+///
+///  @returns InvoiceGetCommunicationrecipientsV1Response*
+///
+-(NSURLSessionTask*) invoiceGetCommunicationrecipientsV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationrecipientsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == nil) {
+        NSParameterAssert(pkiInvoiceID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInvoiceID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInvoiceApiErrorDomain code:kObjectInvoiceApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInvoiceID != nil) {
+        pathParams[@"pkiInvoiceID"] = pkiInvoiceID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InvoiceGetCommunicationrecipientsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InvoiceGetCommunicationrecipientsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Invoice's Communicationsender
+/// 
+///  @param pkiInvoiceID  
+///
+///  @returns InvoiceGetCommunicationsendersV1Response*
+///
+-(NSURLSessionTask*) invoiceGetCommunicationsendersV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    completionHandler: (void (^)(InvoiceGetCommunicationsendersV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == nil) {
+        NSParameterAssert(pkiInvoiceID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInvoiceID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInvoiceApiErrorDomain code:kObjectInvoiceApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInvoiceID != nil) {
+        pathParams[@"pkiInvoiceID"] = pkiInvoiceID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InvoiceGetCommunicationsendersV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InvoiceGetCommunicationsendersV1Response*)data, error);
                                 }
                             }];
 }

@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponseError.h"
 #import "CommunicationSendV1Request.h"
 #import "CommunicationSendV1Response.h"
 #import "Api.h"
@@ -23,6 +24,19 @@ extern NSString* kObjectCommunicationApiErrorDomain;
 extern NSInteger kObjectCommunicationApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Retrieve the communication body.
+/// This endpoint returns the communication body.
+///
+/// @param pkiCommunicationID 
+/// 
+///  code:302 message:"The user has been redirected",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return void
+-(NSURLSessionTask*) communicationGetCommunicationBodyV1WithPkiCommunicationID: (NSNumber*) pkiCommunicationID
+    completionHandler: (void (^)(NSError* error)) handler;
+
 
 /// Send a new Communication
 /// The endpoint allows to send one or many elements at once.

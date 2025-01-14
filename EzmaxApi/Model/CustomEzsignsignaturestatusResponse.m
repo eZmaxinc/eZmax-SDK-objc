@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsignsignaturestatusSteptype": @"eEzsignsignaturestatusSteptype", @"iEzsignsignaturestatusStep": @"iEzsignsignaturestatusStep", @"iEzsignsignaturestatusTotal": @"iEzsignsignaturestatusTotal", @"iEzsignsignaturestatusSigned": @"iEzsignsignaturestatusSigned" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsignsignaturestatusSteptype": @"eEzsignsignaturestatusSteptype", @"iEzsignsignaturestatusStep": @"iEzsignsignaturestatusStep", @"iEzsignsignaturestatusTotal": @"iEzsignsignaturestatusTotal", @"iEzsignsignaturestatusSigned": @"iEzsignsignaturestatusSigned", @"iEzsignsignaturestatusConditional": @"iEzsignsignaturestatusConditional" }];
 }
 
 /**

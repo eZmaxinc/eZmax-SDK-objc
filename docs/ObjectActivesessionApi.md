@@ -4,9 +4,67 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**activesessionGenerateFederationTokenV1**](ObjectActivesessionApi.md#activesessiongeneratefederationtokenv1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token
 [**activesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 [**activesessionGetListV1**](ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 
+
+# **activesessionGenerateFederationTokenV1**
+```objc
+-(NSURLSessionTask*) activesessionGenerateFederationTokenV1WithActivesessionGenerateFederationTokenV1Request: (ActivesessionGenerateFederationTokenV1Request*) activesessionGenerateFederationTokenV1Request
+        completionHandler: (void (^)(ActivesessionGenerateFederationTokenV1Response* output, NSError* error)) handler;
+```
+
+Generate a federation token
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+ActivesessionGenerateFederationTokenV1Request* activesessionGenerateFederationTokenV1Request = [[ActivesessionGenerateFederationTokenV1Request alloc] init]; // 
+
+ObjectActivesessionApi*apiInstance = [[ObjectActivesessionApi alloc] init];
+
+// Generate a federation token
+[apiInstance activesessionGenerateFederationTokenV1WithActivesessionGenerateFederationTokenV1Request:activesessionGenerateFederationTokenV1Request
+          completionHandler: ^(ActivesessionGenerateFederationTokenV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectActivesessionApi->activesessionGenerateFederationTokenV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activesessionGenerateFederationTokenV1Request** | [**ActivesessionGenerateFederationTokenV1Request***](ActivesessionGenerateFederationTokenV1Request.md)|  | 
+
+### Return type
+
+[**ActivesessionGenerateFederationTokenV1Response***](ActivesessionGenerateFederationTokenV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **activesessionGetCurrentV1**
 ```objc

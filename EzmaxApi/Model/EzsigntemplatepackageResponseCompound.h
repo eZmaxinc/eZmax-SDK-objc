@@ -34,9 +34,15 @@
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The unique ID of the Ezdoctemplatedocument [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;
+/* The name of the Ezdoctemplatedocument in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sEzdoctemplatedocumentNameX;
 /* The Name of the Language in the language of the requester 
  */
 @property(nonatomic) NSString* sLanguageNameX;

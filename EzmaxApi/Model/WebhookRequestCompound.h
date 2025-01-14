@@ -37,6 +37,9 @@
 /* The unique ID of the Webhook [optional]
  */
 @property(nonatomic) NSNumber* pkiWebhookID;
+/* The unique ID of the Authenticationexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiAuthenticationexternalID;
 /* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;

@@ -15,6 +15,8 @@
 #import "EzsignfoldersignerassociationGetObjectV2Response.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Request.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Response.h"
+#import "EzsignfoldersignerassociationReassignV1Request.h"
+#import "EzsignfoldersignerassociationReassignV1Response.h"
 #import "Api.h"
 
 /**
@@ -39,7 +41,7 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
 /// Creates an Url to allow embedded signing
-/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
 ///
 /// @param pkiEzsignfoldersignerassociationID 
 /// @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
@@ -178,6 +180,22 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfoldersignerassociationPatchObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationPatchObjectV1Request: (EzsignfoldersignerassociationPatchObjectV1Request*) ezsignfoldersignerassociationPatchObjectV1Request
     completionHandler: (void (^)(EzsignfoldersignerassociationPatchObjectV1Response* output, NSError* error)) handler;
+
+
+/// Reassign remaining unsigned signatures and forms
+/// Reassign remaining unsigned signatures and forms
+///
+/// @param pkiEzsignfoldersignerassociationID 
+/// @param ezsignfoldersignerassociationReassignV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfoldersignerassociationReassignV1Response*
+-(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
+    completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler;
 
 
 

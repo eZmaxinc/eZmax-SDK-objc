@@ -16,6 +16,7 @@
 
 #import "CommonAudit.h"
 #import "CustomEzsignfoldertypeResponse.h"
+#import "CustomTimezoneWithCodeResponse.h"
 #import "FieldEEzsignfolderCompletion.h"
 #import "FieldEEzsignfolderSendreminderfrequency.h"
 #import "FieldEEzsignfolderStep.h"
@@ -23,6 +24,8 @@
 @class CommonAudit;
 @protocol CustomEzsignfoldertypeResponse;
 @class CustomEzsignfoldertypeResponse;
+@protocol CustomTimezoneWithCodeResponse;
+@class CustomTimezoneWithCodeResponse;
 @protocol FieldEEzsignfolderCompletion;
 @class FieldEEzsignfolderCompletion;
 @protocol FieldEEzsignfolderSendreminderfrequency;
@@ -45,6 +48,9 @@
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 
 @property(nonatomic) CustomEzsignfoldertypeResponse* objEzsignfoldertype;
+/* The unique ID of the Timezone [optional]
+ */
+@property(nonatomic) NSNumber* fkiTimezoneID;
 
 @property(nonatomic) FieldEEzsignfolderCompletion* eEzsignfolderCompletion;
 
@@ -72,6 +78,12 @@
 @property(nonatomic) NSNumber* bEzsignfolderIsdisposable;
 
 @property(nonatomic) FieldEEzsignfolderSendreminderfrequency* eEzsignfolderSendreminderfrequency;
+/* The number of days before the the first reminder sending [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfolderSendreminderfirstdays;
+/* The number of days after the first reminder sending [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfolderSendreminderotherdays;
 /* The date and time at which the Ezsignfolder will be sent in the future. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderDelayedsenddate;
@@ -100,5 +112,7 @@
 /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  [optional]
  */
 @property(nonatomic) NSString* sEzsignfolderExternalid;
+
+@property(nonatomic) CustomTimezoneWithCodeResponse* objTimezone;
 
 @end

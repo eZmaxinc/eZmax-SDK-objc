@@ -6,12 +6,14 @@
 #import "EzsignfolderCreateObjectV1Response.h"
 #import "EzsignfolderCreateObjectV2Request.h"
 #import "EzsignfolderCreateObjectV2Response.h"
+#import "EzsignfolderCreateObjectV3Request.h"
+#import "EzsignfolderCreateObjectV3Response.h"
 #import "EzsignfolderDeleteObjectV1Response.h"
 #import "EzsignfolderDisposeEzsignfoldersV1Request.h"
 #import "EzsignfolderDisposeEzsignfoldersV1Response.h"
 #import "EzsignfolderDisposeV1Response.h"
-#import "EzsignfolderEditObjectV1Request.h"
-#import "EzsignfolderEditObjectV1Response.h"
+#import "EzsignfolderEditObjectV3Request.h"
+#import "EzsignfolderEditObjectV3Response.h"
 #import "EzsignfolderEndPrematurelyV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetAttachmentCountV1Response.h"
@@ -27,12 +29,15 @@
 #import "EzsignfolderGetListV1Response.h"
 #import "EzsignfolderGetObjectV1Response.h"
 #import "EzsignfolderGetObjectV2Response.h"
+#import "EzsignfolderGetObjectV3Response.h"
 #import "EzsignfolderImportEzsignfoldersignerassociationsV1Request.h"
 #import "EzsignfolderImportEzsignfoldersignerassociationsV1Response.h"
 #import "EzsignfolderImportEzsigntemplatepackageV1Request.h"
 #import "EzsignfolderImportEzsigntemplatepackageV1Response.h"
 #import "EzsignfolderReorderV1Request.h"
 #import "EzsignfolderReorderV1Response.h"
+#import "EzsignfolderReorderV2Request.h"
+#import "EzsignfolderReorderV2Response.h"
 #import "EzsignfolderSendV1Request.h"
 #import "EzsignfolderSendV1Response.h"
 #import "EzsignfolderSendV3Request.h"
@@ -119,6 +124,18 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsignfolderCreateObjectV2Response* output, NSError* error)) handler;
 
 
+/// Create a new Ezsignfolder
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsignfolderCreateObjectV3Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EzsignfolderCreateObjectV3Response*
+-(NSURLSessionTask*) ezsignfolderCreateObjectV3WithEzsignfolderCreateObjectV3Request: (EzsignfolderCreateObjectV3Request*) ezsignfolderCreateObjectV3Request
+    completionHandler: (void (^)(EzsignfolderCreateObjectV3Response* output, NSError* error)) handler;
+
+
 /// Delete an existing Ezsignfolder
 /// 
 ///
@@ -167,16 +184,16 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 /// 
 ///
 /// @param pkiEzsignfolderID 
-/// @param ezsignfolderEditObjectV1Request 
+/// @param ezsignfolderEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignfolderEditObjectV1Response*
--(NSURLSessionTask*) ezsignfolderEditObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    ezsignfolderEditObjectV1Request: (EzsignfolderEditObjectV1Request*) ezsignfolderEditObjectV1Request
-    completionHandler: (void (^)(EzsignfolderEditObjectV1Response* output, NSError* error)) handler;
+/// @return EzsignfolderEditObjectV3Response*
+-(NSURLSessionTask*) ezsignfolderEditObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderEditObjectV3Request: (EzsignfolderEditObjectV3Request*) ezsignfolderEditObjectV3Request
+    completionHandler: (void (^)(EzsignfolderEditObjectV3Response* output, NSError* error)) handler;
 
 
 /// End prematurely
@@ -342,7 +359,7 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve Ezsignfolder list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)
@@ -386,6 +403,19 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EzsignfolderGetObjectV2Response*
 -(NSURLSessionTask*) ezsignfolderGetObjectV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EzsignfolderGetObjectV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetObjectV3Response*
+-(NSURLSessionTask*) ezsignfolderGetObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetObjectV3Response* output, NSError* error)) handler;
 
 
 /// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
@@ -435,6 +465,22 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderReorderV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderReorderV1Request: (EzsignfolderReorderV1Request*) ezsignfolderReorderV1Request
     completionHandler: (void (^)(EzsignfolderReorderV1Response* output, NSError* error)) handler;
+
+
+/// Reorder Ezsigndocuments in the Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderReorderV2Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderReorderV2Response*
+-(NSURLSessionTask*) ezsignfolderReorderV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderReorderV2Request: (EzsignfolderReorderV2Request*) ezsignfolderReorderV2Request
+    completionHandler: (void (^)(EzsignfolderReorderV2Response* output, NSError* error)) handler;
 
 
 /// Send the Ezsignfolder to the signatories for signature

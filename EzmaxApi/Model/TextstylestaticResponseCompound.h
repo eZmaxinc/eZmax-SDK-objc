@@ -28,6 +28,9 @@
 /* The unique ID of the Font 
  */
 @property(nonatomic) NSNumber* fkiFontID;
+/* The name of the Font 
+ */
+@property(nonatomic) NSString* sFontName;
 /* Whether the Textstylestatic is Bold or not 
  */
 @property(nonatomic) NSNumber* bTextstylestaticBold;

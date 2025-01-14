@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldEEzsignfolderMessageorder.h"
+@protocol FieldEEzsignfolderMessageorder;
+@class FieldEEzsignfolderMessageorder;
 
 
 
@@ -25,6 +28,8 @@
 /* A custom text message that will be added to the email sent. [optional]
  */
 @property(nonatomic) NSString* tEzsignfolderMessage;
+
+@property(nonatomic) FieldEEzsignfolderMessageorder* eEzsignfolderMessageorder;
 /* The date and time at which the Ezsignfolder will be sent in the future. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderDelayedsenddate;

@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "InscriptiontempGetCommunicationCountV1Response.h"
 #import "InscriptiontempGetCommunicationListV1Response.h"
+#import "InscriptiontempGetCommunicationrecipientsV1Response.h"
+#import "InscriptiontempGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,6 +27,19 @@ extern NSInteger kObjectInscriptiontempApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiInscriptiontempID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptiontempGetCommunicationCountV1Response*
+-(NSURLSessionTask*) inscriptiontempGetCommunicationCountV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    completionHandler: (void (^)(InscriptiontempGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -35,6 +51,32 @@ extern NSInteger kObjectInscriptiontempApiMissingParamErrorCode;
 /// @return InscriptiontempGetCommunicationListV1Response*
 -(NSURLSessionTask*) inscriptiontempGetCommunicationListV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
     completionHandler: (void (^)(InscriptiontempGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscriptiontemp's Communicationrecipient
+/// 
+///
+/// @param pkiInscriptiontempID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptiontempGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) inscriptiontempGetCommunicationrecipientsV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    completionHandler: (void (^)(InscriptiontempGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscriptiontemp's Communicationsender
+/// 
+///
+/// @param pkiInscriptiontempID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptiontempGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) inscriptiontempGetCommunicationsendersV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    completionHandler: (void (^)(InscriptiontempGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 

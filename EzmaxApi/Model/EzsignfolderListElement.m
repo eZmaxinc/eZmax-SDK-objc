@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"eEzsignfoldertypePrivacylevel": @"eEzsignfoldertypePrivacylevel", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"eEzsignfolderStep": @"eEzsignfolderStep", @"dtCreatedDate": @"dtCreatedDate", @"dtEzsignfolderDelayedsenddate": @"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderSentdate": @"dtEzsignfolderSentdate", @"dtEzsignfolderDuedate": @"dtEzsignfolderDuedate", @"iEzsigndocument": @"iEzsigndocument", @"iEzsigndocumentEdm": @"iEzsigndocumentEdm", @"iEzsignsignature": @"iEzsignsignature", @"iEzsignsignatureSigned": @"iEzsignsignatureSigned", @"iEzsignformfieldgroup": @"iEzsignformfieldgroup", @"iEzsignformfieldgroupCompleted": @"iEzsignformfieldgroupCompleted", @"bEzsignformHasdependencies": @"bEzsignformHasdependencies", @"dEzsignfolderCompletedpercentage": @"dEzsignfolderCompletedpercentage" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"eEzsignfoldertypePrivacylevel": @"eEzsignfoldertypePrivacylevel", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"eEzsignfolderStep": @"eEzsignfolderStep", @"dtCreatedDate": @"dtCreatedDate", @"dtEzsignfolderDelayedsenddate": @"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderSentdate": @"dtEzsignfolderSentdate", @"dtEzsignfolderDuedate": @"dtEzsignfolderDuedate", @"iEzsigndocument": @"iEzsigndocument", @"iEzsigndocumentEdm": @"iEzsigndocumentEdm", @"iEzsignsignature": @"iEzsignsignature", @"iEzsignsignatureSigned": @"iEzsignsignatureSigned", @"iEzsignformfieldgroup": @"iEzsignformfieldgroup", @"iEzsignformfieldgroupCompleted": @"iEzsignformfieldgroupCompleted", @"bEzsignformHasdependencies": @"bEzsignformHasdependencies", @"dEzsignfolderCompletedpercentage": @"dEzsignfolderCompletedpercentage", @"dEzsignfolderFormcompletedpercentage": @"dEzsignfolderFormcompletedpercentage", @"dEzsignfolderSignaturecompletedpercentage": @"dEzsignfolderSignaturecompletedpercentage", @"bEzsignfolderSigner": @"bEzsignfolderSigner" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderSentdate", @"dtEzsignfolderDuedate", @"bEzsignformHasdependencies", ];
+  NSArray *optionalProperties = @[@"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderSentdate", @"dtEzsignfolderDuedate", @"bEzsignformHasdependencies", @"bEzsignfolderSigner"];
   return [optionalProperties containsObject:propertyName];
 }
 

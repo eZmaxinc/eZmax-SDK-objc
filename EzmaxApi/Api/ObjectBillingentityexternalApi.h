@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
+#import "BillingentityexternalGenerateFederationTokenV1Request.h"
+#import "BillingentityexternalGenerateFederationTokenV1Response.h"
 #import "BillingentityexternalGetAutocompleteV2Response.h"
+#import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -23,6 +26,21 @@ extern NSString* kObjectBillingentityexternalApiErrorDomain;
 extern NSInteger kObjectBillingentityexternalApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Generate a federation token
+/// 
+///
+/// @param pkiBillingentityexternalID 
+/// @param billingentityexternalGenerateFederationTokenV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return BillingentityexternalGenerateFederationTokenV1Response*
+-(NSURLSessionTask*) billingentityexternalGenerateFederationTokenV1WithPkiBillingentityexternalID: (NSNumber*) pkiBillingentityexternalID
+    billingentityexternalGenerateFederationTokenV1Request: (BillingentityexternalGenerateFederationTokenV1Request*) billingentityexternalGenerateFederationTokenV1Request
+    completionHandler: (void (^)(BillingentityexternalGenerateFederationTokenV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Billingentityexternals and IDs
 /// Get the list of Billingentityexternal to be used in a dropdown or autocomplete control.

@@ -25,6 +25,15 @@
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* pkiEzsignfoldertypeID;
+/* The unique ID of the Font [optional]
+ */
+@property(nonatomic) NSNumber* fkiFontIDAnnotation;
+/* The unique ID of the Font [optional]
+ */
+@property(nonatomic) NSNumber* fkiFontIDFormfield;
+/* The unique ID of the Font [optional]
+ */
+@property(nonatomic) NSNumber* fkiFontIDSignature;
 /* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
@@ -37,6 +46,9 @@
 /* Whether we allow the proof to be downloaded by an Ezsignsigner [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeAllowdownloadproofezsignsigner;
+/* Whether we allow the automatic signature by an User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAutomaticsignature;
 /* Wheter if delegation of signature is allowed to another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeDelegate;
@@ -49,5 +61,17 @@
 /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassignuser;
+/* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassigngroup;
+/* The number of days to get all Ezsignsignatures [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfoldertypeDeadlinedays;
+/* Font size for annotations [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfoldertypeFontsizeannotation;
+/* Font size for form fields [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfoldertypeFontsizeformfield;
 
 @end

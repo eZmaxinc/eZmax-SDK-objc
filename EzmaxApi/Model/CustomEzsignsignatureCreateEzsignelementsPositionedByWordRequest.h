@@ -19,6 +19,7 @@
 #import "EzsignelementdependencyRequestCompound.h"
 #import "EzsignsignaturecustomdateRequestCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
+#import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
 #import "FieldEEzsignsignatureFont.h"
 #import "FieldEEzsignsignatureTooltipposition.h"
@@ -33,6 +34,8 @@
 @class EzsignsignaturecustomdateRequestCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
+@protocol FieldEEzsignsignatureConsultationtrigger;
+@class FieldEEzsignsignatureConsultationtrigger;
 @protocol FieldEEzsignsignatureDependencyrequirement;
 @class FieldEEzsignsignatureDependencyrequirement;
 @protocol FieldEEzsignsignatureFont;
@@ -88,7 +91,13 @@
 /* The unique ID of the Ezsignfoldersignerassociation [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationIDValidation;
-/* Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments. [optional]
+/* Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignsignatureHandwritten;
+/* Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignsignatureReason;
+/* Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea. [optional]
  */
 @property(nonatomic) NSNumber* bEzsignsignatureRequired;
 
@@ -96,14 +105,22 @@
 /* The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureAttachmentdescription;
+
+@property(nonatomic) FieldEEzsignsignatureConsultationtrigger* eEzsignsignatureConsultationtrigger;
 /* The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments [optional]
  */
 @property(nonatomic) NSNumber* iEzsignsignatureValidationstep;
 /* The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** [optional]
  */
 @property(nonatomic) NSNumber* iEzsignsignatureMaxlength;
+/* The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | [optional]
+ */
+@property(nonatomic) NSString* sEzsignsignatureDefaultvalue;
 
 @property(nonatomic) EnumTextvalidation* eEzsignsignatureTextvalidation;
+/* Description of validation rule. Show by signatory. [optional]
+ */
+@property(nonatomic) NSString* sEzsignsignatureTextvalidationcustommessage;
 /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** [optional]
  */
 @property(nonatomic) NSString* sEzsignsignatureRegexp;

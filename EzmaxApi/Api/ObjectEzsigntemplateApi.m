@@ -4,19 +4,14 @@
 #import "CommonResponseError.h"
 #import "EzsigntemplateCopyV1Request.h"
 #import "EzsigntemplateCopyV1Response.h"
-#import "EzsigntemplateCreateObjectV1Request.h"
-#import "EzsigntemplateCreateObjectV1Response.h"
-#import "EzsigntemplateCreateObjectV2Request.h"
-#import "EzsigntemplateCreateObjectV2Response.h"
+#import "EzsigntemplateCreateObjectV3Request.h"
+#import "EzsigntemplateCreateObjectV3Response.h"
 #import "EzsigntemplateDeleteObjectV1Response.h"
-#import "EzsigntemplateEditObjectV1Request.h"
-#import "EzsigntemplateEditObjectV1Response.h"
-#import "EzsigntemplateEditObjectV2Request.h"
-#import "EzsigntemplateEditObjectV2Response.h"
+#import "EzsigntemplateEditObjectV3Request.h"
+#import "EzsigntemplateEditObjectV3Response.h"
 #import "EzsigntemplateGetAutocompleteV2Response.h"
 #import "EzsigntemplateGetListV1Response.h"
-#import "EzsigntemplateGetObjectV1Response.h"
-#import "EzsigntemplateGetObjectV2Response.h"
+#import "EzsigntemplateGetObjectV3Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -151,24 +146,24 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 ///
 /// Create a new Ezsigntemplate
 /// The endpoint allows to create one or many elements at once.
-///  @param ezsigntemplateCreateObjectV1Request  
+///  @param ezsigntemplateCreateObjectV3Request  
 ///
-///  @returns EzsigntemplateCreateObjectV1Response*
+///  @returns EzsigntemplateCreateObjectV3Response*
 ///
--(NSURLSessionTask*) ezsigntemplateCreateObjectV1WithEzsigntemplateCreateObjectV1Request: (EzsigntemplateCreateObjectV1Request*) ezsigntemplateCreateObjectV1Request
-    completionHandler: (void (^)(EzsigntemplateCreateObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
-    if (ezsigntemplateCreateObjectV1Request == nil) {
-        NSParameterAssert(ezsigntemplateCreateObjectV1Request);
+-(NSURLSessionTask*) ezsigntemplateCreateObjectV3WithEzsigntemplateCreateObjectV3Request: (EzsigntemplateCreateObjectV3Request*) ezsigntemplateCreateObjectV3Request
+    completionHandler: (void (^)(EzsigntemplateCreateObjectV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezsigntemplateCreateObjectV3Request' is set
+    if (ezsigntemplateCreateObjectV3Request == nil) {
+        NSParameterAssert(ezsigntemplateCreateObjectV3Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateCreateObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateCreateObjectV3Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplate"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsigntemplate"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 
@@ -193,7 +188,7 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsigntemplateCreateObjectV1Request;
+    bodyParam = ezsigntemplateCreateObjectV3Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"
@@ -206,76 +201,10 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplateCreateObjectV1Response*"
+                              responseType: @"EzsigntemplateCreateObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplateCreateObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Create a new Ezsigntemplate
-/// The endpoint allows to create one or many elements at once.
-///  @param ezsigntemplateCreateObjectV2Request  
-///
-///  @returns EzsigntemplateCreateObjectV2Response*
-///
--(NSURLSessionTask*) ezsigntemplateCreateObjectV2WithEzsigntemplateCreateObjectV2Request: (EzsigntemplateCreateObjectV2Request*) ezsigntemplateCreateObjectV2Request
-    completionHandler: (void (^)(EzsigntemplateCreateObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
-    if (ezsigntemplateCreateObjectV2Request == nil) {
-        NSParameterAssert(ezsigntemplateCreateObjectV2Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateCreateObjectV2Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplate"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsigntemplateCreateObjectV2Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"POST"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsigntemplateCreateObjectV2Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsigntemplateCreateObjectV2Response*)data, error);
+                                    handler((EzsigntemplateCreateObjectV3Response*)data, error);
                                 }
                             }];
 }
@@ -353,13 +282,13 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigntemplateID  
 ///
-///  @param ezsigntemplateEditObjectV1Request  
+///  @param ezsigntemplateEditObjectV3Request  
 ///
-///  @returns EzsigntemplateEditObjectV1Response*
+///  @returns EzsigntemplateEditObjectV3Response*
 ///
--(NSURLSessionTask*) ezsigntemplateEditObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    ezsigntemplateEditObjectV1Request: (EzsigntemplateEditObjectV1Request*) ezsigntemplateEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplateEditObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsigntemplateEditObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    ezsigntemplateEditObjectV3Request: (EzsigntemplateEditObjectV3Request*) ezsigntemplateEditObjectV3Request
+    completionHandler: (void (^)(EzsigntemplateEditObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == nil) {
         NSParameterAssert(pkiEzsigntemplateID);
@@ -371,18 +300,18 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'ezsigntemplateEditObjectV1Request' is set
-    if (ezsigntemplateEditObjectV1Request == nil) {
-        NSParameterAssert(ezsigntemplateEditObjectV1Request);
+    // verify the required parameter 'ezsigntemplateEditObjectV3Request' is set
+    if (ezsigntemplateEditObjectV3Request == nil) {
+        NSParameterAssert(ezsigntemplateEditObjectV3Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateEditObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateEditObjectV3Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplate/{pkiEzsigntemplateID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsigntemplate/{pkiEzsigntemplateID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsigntemplateID != nil) {
@@ -410,7 +339,7 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsigntemplateEditObjectV1Request;
+    bodyParam = ezsigntemplateEditObjectV3Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
@@ -423,93 +352,10 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplateEditObjectV1Response*"
+                              responseType: @"EzsigntemplateEditObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplateEditObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Edit an existing Ezsigntemplate
-/// 
-///  @param pkiEzsigntemplateID  
-///
-///  @param ezsigntemplateEditObjectV2Request  
-///
-///  @returns EzsigntemplateEditObjectV2Response*
-///
--(NSURLSessionTask*) ezsigntemplateEditObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    ezsigntemplateEditObjectV2Request: (EzsigntemplateEditObjectV2Request*) ezsigntemplateEditObjectV2Request
-    completionHandler: (void (^)(EzsigntemplateEditObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == nil) {
-        NSParameterAssert(pkiEzsigntemplateID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplateID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
-    if (ezsigntemplateEditObjectV2Request == nil) {
-        NSParameterAssert(ezsigntemplateEditObjectV2Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplateEditObjectV2Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplate/{pkiEzsigntemplateID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsigntemplateID != nil) {
-        pathParams[@"pkiEzsigntemplateID"] = pkiEzsigntemplateID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsigntemplateEditObjectV2Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"PUT"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsigntemplateEditObjectV2Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsigntemplateEditObjectV2Response*)data, error);
+                                    handler((EzsigntemplateEditObjectV3Response*)data, error);
                                 }
                             }];
 }
@@ -525,12 +371,15 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 ///
 ///  @param acceptLanguage  (optional)
 ///
+///  @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
+///
 ///  @returns EzsigntemplateGetAutocompleteV2Response*
 ///
 -(NSURLSessionTask*) ezsigntemplateGetAutocompleteV2WithSSelector: (NSString*) sSelector
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     completionHandler: (void (^)(EzsigntemplateGetAutocompleteV2Response* output, NSError* error)) handler {
     // verify the required parameter 'sSelector' is set
     if (sSelector == nil) {
@@ -556,6 +405,9 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
     }
     if (sQuery != nil) {
         queryParams[@"sQuery"] = sQuery;
+    }
+    if (fkiEzsignfoldertypeID != nil) {
+        queryParams[@"fkiEzsignfoldertypeID"] = fkiEzsignfoldertypeID;
     }
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
@@ -686,10 +538,10 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigntemplateID  
 ///
-///  @returns EzsigntemplateGetObjectV1Response*
+///  @returns EzsigntemplateGetObjectV3Response*
 ///
--(NSURLSessionTask*) ezsigntemplateGetObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    completionHandler: (void (^)(EzsigntemplateGetObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsigntemplateGetObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+    completionHandler: (void (^)(EzsigntemplateGetObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplateID' is set
     if (pkiEzsigntemplateID == nil) {
         NSParameterAssert(pkiEzsigntemplateID);
@@ -701,7 +553,7 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplate/{pkiEzsigntemplateID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsigntemplate/{pkiEzsigntemplateID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsigntemplateID != nil) {
@@ -741,78 +593,10 @@ NSInteger kObjectEzsigntemplateApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplateGetObjectV1Response*"
+                              responseType: @"EzsigntemplateGetObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplateGetObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Ezsigntemplate
-/// 
-///  @param pkiEzsigntemplateID  
-///
-///  @returns EzsigntemplateGetObjectV2Response*
-///
--(NSURLSessionTask*) ezsigntemplateGetObjectV2WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    completionHandler: (void (^)(EzsigntemplateGetObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsigntemplateID' is set
-    if (pkiEzsigntemplateID == nil) {
-        NSParameterAssert(pkiEzsigntemplateID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplateID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplateApiErrorDomain code:kObjectEzsigntemplateApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplate/{pkiEzsigntemplateID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsigntemplateID != nil) {
-        pathParams[@"pkiEzsigntemplateID"] = pkiEzsigntemplateID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsigntemplateGetObjectV2Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsigntemplateGetObjectV2Response*)data, error);
+                                    handler((EzsigntemplateGetObjectV3Response*)data, error);
                                 }
                             }];
 }

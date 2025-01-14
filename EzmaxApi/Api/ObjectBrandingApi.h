@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
-#import "BrandingCreateObjectV1Request.h"
-#import "BrandingCreateObjectV1Response.h"
-#import "BrandingEditObjectV1Request.h"
-#import "BrandingEditObjectV1Response.h"
+#import "BrandingCreateObjectV2Request.h"
+#import "BrandingCreateObjectV2Response.h"
+#import "BrandingEditObjectV2Request.h"
+#import "BrandingEditObjectV2Response.h"
 #import "BrandingGetAutocompleteV2Response.h"
 #import "BrandingGetListV1Response.h"
-#import "BrandingGetObjectV2Response.h"
+#import "BrandingGetObjectV3Response.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -34,28 +34,28 @@ extern NSInteger kObjectBrandingApiMissingParamErrorCode;
 /// Create a new Branding
 /// The endpoint allows to create one or many elements at once.
 ///
-/// @param brandingCreateObjectV1Request 
+/// @param brandingCreateObjectV2Request 
 /// 
 ///  code:201 message:"Successful response"
 ///
-/// @return BrandingCreateObjectV1Response*
--(NSURLSessionTask*) brandingCreateObjectV1WithBrandingCreateObjectV1Request: (BrandingCreateObjectV1Request*) brandingCreateObjectV1Request
-    completionHandler: (void (^)(BrandingCreateObjectV1Response* output, NSError* error)) handler;
+/// @return BrandingCreateObjectV2Response*
+-(NSURLSessionTask*) brandingCreateObjectV2WithBrandingCreateObjectV2Request: (BrandingCreateObjectV2Request*) brandingCreateObjectV2Request
+    completionHandler: (void (^)(BrandingCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Branding
 /// 
 ///
 /// @param pkiBrandingID 
-/// @param brandingEditObjectV1Request 
+/// @param brandingEditObjectV2Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return BrandingEditObjectV1Response*
--(NSURLSessionTask*) brandingEditObjectV1WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    brandingEditObjectV1Request: (BrandingEditObjectV1Request*) brandingEditObjectV1Request
-    completionHandler: (void (^)(BrandingEditObjectV1Response* output, NSError* error)) handler;
+/// @return BrandingEditObjectV2Response*
+-(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
+    brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
+    completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve Brandings and IDs
@@ -105,9 +105,9 @@ extern NSInteger kObjectBrandingApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return BrandingGetObjectV2Response*
--(NSURLSessionTask*) brandingGetObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    completionHandler: (void (^)(BrandingGetObjectV2Response* output, NSError* error)) handler;
+/// @return BrandingGetObjectV3Response*
+-(NSURLSessionTask*) brandingGetObjectV3WithPkiBrandingID: (NSNumber*) pkiBrandingID
+    completionHandler: (void (^)(BrandingGetObjectV3Response* output, NSError* error)) handler;
 
 
 

@@ -7,6 +7,8 @@
 #import "ApikeyEditObjectV1Response.h"
 #import "ApikeyEditPermissionsV1Request.h"
 #import "ApikeyEditPermissionsV1Response.h"
+#import "ApikeyGenerateDelegatedCredentialsV1Request.h"
+#import "ApikeyGenerateDelegatedCredentialsV1Response.h"
 #import "ApikeyGetCorsV1Response.h"
 #import "ApikeyGetListV1Response.h"
 #import "ApikeyGetObjectV2Response.h"
@@ -291,6 +293,72 @@ NSInteger kObjectApikeyApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((ApikeyEditPermissionsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Generate a delegated credentials
+/// 
+///  @param apikeyGenerateDelegatedCredentialsV1Request  
+///
+///  @returns ApikeyGenerateDelegatedCredentialsV1Response*
+///
+-(NSURLSessionTask*) apikeyGenerateDelegatedCredentialsV1WithApikeyGenerateDelegatedCredentialsV1Request: (ApikeyGenerateDelegatedCredentialsV1Request*) apikeyGenerateDelegatedCredentialsV1Request
+    completionHandler: (void (^)(ApikeyGenerateDelegatedCredentialsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
+    if (apikeyGenerateDelegatedCredentialsV1Request == nil) {
+        NSParameterAssert(apikeyGenerateDelegatedCredentialsV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"apikeyGenerateDelegatedCredentialsV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectApikeyApiErrorDomain code:kObjectApikeyApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/apikey/generateDelegatedCredentials"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = apikeyGenerateDelegatedCredentialsV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ApikeyGenerateDelegatedCredentialsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ApikeyGenerateDelegatedCredentialsV1Response*)data, error);
                                 }
                             }];
 }

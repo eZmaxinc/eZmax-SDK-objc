@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldEEzsigntemplatesignerMapping.h"
+@protocol FieldEEzsigntemplatesignerMapping;
+@class FieldEEzsigntemplatesignerMapping;
 
 
 
@@ -28,8 +31,28 @@
 /* The unique ID of the Ezsigntemplate 
  */
 @property(nonatomic) NSNumber* fkiEzsigntemplateID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroup [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* The unique ID of the Ezdoctemplatedocument [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
+/* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatesignerReceivecopy;
+
+@property(nonatomic) FieldEEzsigntemplatesignerMapping* eEzsigntemplatesignerMapping;
 /* The description of the Ezsigntemplatesigner 
  */
 @property(nonatomic) NSString* sEzsigntemplatesignerDescription;
+/* The description of the User in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sUserName;
+/* The Name of the Usergroup in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sUsergroupNameX;
 
 @end

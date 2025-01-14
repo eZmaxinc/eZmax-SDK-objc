@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sFranchisebrokerName** | **NSString*** | The name of the Franchisebroker in the language of the requester | 
+**sFranchisebrokerName** | **NSString*** | The name of the Franchisebroker | 
 **pkiFranchisebrokerID** | **NSNumber*** | The unique ID of the Franchisebroker | 
 **bFranchisebrokerIsactive** | **NSNumber*** | Whether the Franchisebroker is active or not | 
 

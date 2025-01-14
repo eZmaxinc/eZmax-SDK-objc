@@ -45,6 +45,9 @@
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
 
 @property(nonatomic) CustomEzsignfoldertypeResponse* objEzsignfoldertype;
+/* The unique ID of the Timezone [optional]
+ */
+@property(nonatomic) NSNumber* fkiTimezoneID;
 
 @property(nonatomic) FieldEEzsignfolderCompletion* eEzsignfolderCompletion;
 
@@ -72,6 +75,12 @@
 @property(nonatomic) NSNumber* bEzsignfolderIsdisposable;
 
 @property(nonatomic) FieldEEzsignfolderSendreminderfrequency* eEzsignfolderSendreminderfrequency;
+/* The number of days before the the first reminder sending [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfolderSendreminderfirstdays;
+/* The number of days after the first reminder sending [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfolderSendreminderotherdays;
 /* The date and time at which the Ezsignfolder will be sent in the future. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderDelayedsenddate;

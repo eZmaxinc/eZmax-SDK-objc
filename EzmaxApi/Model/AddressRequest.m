@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiAddresstypeID": @"fkiAddresstypeID", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"fkiProvinceID": @"fkiProvinceID", @"fkiCountryID": @"fkiCountryID", @"sAddressZip": @"sAddressZip", @"fAddressLongitude": @"fAddressLongitude", @"fAddressLatitude": @"fAddressLatitude" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiAddressID": @"pkiAddressID", @"fkiAddresstypeID": @"fkiAddresstypeID", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"fkiProvinceID": @"fkiProvinceID", @"fkiCountryID": @"fkiCountryID", @"sAddressZip": @"sAddressZip", @"fAddressLongitude": @"fAddressLongitude", @"fAddressLatitude": @"fAddressLatitude" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fAddressLongitude", @"fAddressLatitude"];
+  NSArray *optionalProperties = @[@"pkiAddressID", @"sAddressSuite", @"fAddressLongitude", @"fAddressLatitude"];
   return [optionalProperties containsObject:propertyName];
 }
 

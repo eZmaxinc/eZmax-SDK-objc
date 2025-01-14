@@ -98,6 +98,9 @@
 /* The number of days to get all Ezsignsignatures 
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeDeadlinedays;
+/* Whether we allow the automatic signature by an User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeAutomaticsignature;
 /* Wheter if delegation of signature is allowed to another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeDelegate;
@@ -110,6 +113,9 @@
 /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassignuser;
+/* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeReassigngroup;
 /* Whether we send an email to Ezsignsigner  when document is completed [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtoezsignsigner;

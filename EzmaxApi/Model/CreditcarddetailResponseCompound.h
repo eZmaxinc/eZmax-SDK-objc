@@ -28,9 +28,9 @@
 /* The unique ID of the Creditcardtype 
  */
 @property(nonatomic) NSNumber* fkiCreditcardtypeID;
-/* The numbermasked of the Creditcarddetail 
+/* The last digits of the Creditcarddetail 
  */
-@property(nonatomic) NSString* sCreditcarddetailNumbermasked;
+@property(nonatomic) NSNumber* iCreditcarddetailLastdigits;
 /* The expirationmonth of the Creditcarddetail 
  */
 @property(nonatomic) NSNumber* iCreditcarddetailExpirationmonth;

@@ -6,6 +6,7 @@
 #import "SignatureEditObjectV1Request.h"
 #import "SignatureEditObjectV1Response.h"
 #import "SignatureGetObjectV2Response.h"
+#import "SignatureGetObjectV3Response.h"
 #import "Api.h"
 
 /**
@@ -81,6 +82,45 @@ extern NSInteger kObjectSignatureApiMissingParamErrorCode;
 /// @return SignatureGetObjectV2Response*
 -(NSURLSessionTask*) signatureGetObjectV2WithPkiSignatureID: (NSNumber*) pkiSignatureID
     completionHandler: (void (^)(SignatureGetObjectV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Signature
+/// 
+///
+/// @param pkiSignatureID The unique ID of the Signature
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return SignatureGetObjectV3Response*
+-(NSURLSessionTask*) signatureGetObjectV3WithPkiSignatureID: (NSNumber*) pkiSignatureID
+    completionHandler: (void (^)(SignatureGetObjectV3Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Signature initial SVG
+/// 
+///
+/// @param pkiSignatureID The unique ID of the Signature
+/// 
+///  code:302 message:"The user has been redirected",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return void
+-(NSURLSessionTask*) signatureGetSVGInitialsV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
+    completionHandler: (void (^)(NSError* error)) handler;
+
+
+/// Retrieve an existing Signature SVG
+/// 
+///
+/// @param pkiSignatureID The unique ID of the Signature
+/// 
+///  code:302 message:"The user has been redirected",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return void
+-(NSURLSessionTask*) signatureGetSVGSignatureV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
+    completionHandler: (void (^)(NSError* error)) handler;
 
 
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **pkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
 **objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse***](CustomEzsignfoldertypeResponse.md) |  | [optional] 
+**fkiTimezoneID** | **NSNumber*** | The unique ID of the Timezone | [optional] 
 **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion***](FieldEEzsignfolderCompletion.md) |  | 
 **sEzsignfoldertypeNameX** | **NSString*** |  | [optional] 
 **fkiBillingentityinternalID** | **NSNumber*** | The unique ID of the Billingentityinternal. | [optional] 
@@ -16,6 +17,8 @@ Name | Type | Description | Notes
 **tEzsignfolderNote** | **NSString*** | Note about the Ezsignfolder | [optional] 
 **bEzsignfolderIsdisposable** | **NSNumber*** | If the Ezsigndocument can be disposed | [optional] 
 **eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency***](FieldEEzsignfolderSendreminderfrequency.md) |  | [optional] 
+**iEzsignfolderSendreminderfirstdays** | **NSNumber*** | The number of days before the the first reminder sending | [optional] 
+**iEzsignfolderSendreminderotherdays** | **NSNumber*** | The number of days after the first reminder sending | [optional] 
 **dtEzsignfolderDelayedsenddate** | **NSString*** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
 **dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 

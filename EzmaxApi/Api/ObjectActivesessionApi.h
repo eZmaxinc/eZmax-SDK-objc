@@ -1,4 +1,6 @@
 #import <Foundation/Foundation.h>
+#import "ActivesessionGenerateFederationTokenV1Request.h"
+#import "ActivesessionGenerateFederationTokenV1Response.h"
 #import "ActivesessionGetCurrentV1Response.h"
 #import "ActivesessionGetListV1Response.h"
 #import "CommonResponseError.h"
@@ -26,6 +28,19 @@ extern NSString* kObjectActivesessionApiErrorDomain;
 extern NSInteger kObjectActivesessionApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Generate a federation token
+/// 
+///
+/// @param activesessionGenerateFederationTokenV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return ActivesessionGenerateFederationTokenV1Response*
+-(NSURLSessionTask*) activesessionGenerateFederationTokenV1WithActivesessionGenerateFederationTokenV1Request: (ActivesessionGenerateFederationTokenV1Request*) activesessionGenerateFederationTokenV1Request
+    completionHandler: (void (^)(ActivesessionGenerateFederationTokenV1Response* output, NSError* error)) handler;
+
 
 /// Get Current Activesession
 /// Retrieve the details about the current activesession

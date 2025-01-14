@@ -5,6 +5,8 @@
 #import "ApikeyEditObjectV1Response.h"
 #import "ApikeyEditPermissionsV1Request.h"
 #import "ApikeyEditPermissionsV1Response.h"
+#import "ApikeyGenerateDelegatedCredentialsV1Request.h"
+#import "ApikeyGenerateDelegatedCredentialsV1Response.h"
 #import "ApikeyGetCorsV1Response.h"
 #import "ApikeyGetListV1Response.h"
 #import "ApikeyGetObjectV2Response.h"
@@ -79,6 +81,19 @@ extern NSInteger kObjectApikeyApiMissingParamErrorCode;
 -(NSURLSessionTask*) apikeyEditPermissionsV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
     apikeyEditPermissionsV1Request: (ApikeyEditPermissionsV1Request*) apikeyEditPermissionsV1Request
     completionHandler: (void (^)(ApikeyEditPermissionsV1Response* output, NSError* error)) handler;
+
+
+/// Generate a delegated credentials
+/// 
+///
+/// @param apikeyGenerateDelegatedCredentialsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return ApikeyGenerateDelegatedCredentialsV1Response*
+-(NSURLSessionTask*) apikeyGenerateDelegatedCredentialsV1WithApikeyGenerateDelegatedCredentialsV1Request: (ApikeyGenerateDelegatedCredentialsV1Request*) apikeyGenerateDelegatedCredentialsV1Request
+    completionHandler: (void (^)(ApikeyGenerateDelegatedCredentialsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Apikey's cors

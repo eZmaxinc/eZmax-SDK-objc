@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "EzsigntemplatesignatureCreateObjectV1Request.h"
-#import "EzsigntemplatesignatureCreateObjectV1Response.h"
+#import "EzsigntemplatesignatureCreateObjectV2Request.h"
+#import "EzsigntemplatesignatureCreateObjectV2Response.h"
 #import "EzsigntemplatesignatureDeleteObjectV1Response.h"
-#import "EzsigntemplatesignatureEditObjectV1Request.h"
-#import "EzsigntemplatesignatureEditObjectV1Response.h"
-#import "EzsigntemplatesignatureGetObjectV2Response.h"
+#import "EzsigntemplatesignatureEditObjectV2Request.h"
+#import "EzsigntemplatesignatureEditObjectV2Response.h"
+#import "EzsigntemplatesignatureGetObjectV3Response.h"
 #import "Api.h"
 
 /**
@@ -32,13 +32,13 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 /// Create a new Ezsigntemplatesignature
 /// The endpoint allows to create one or many elements at once.
 ///
-/// @param ezsigntemplatesignatureCreateObjectV1Request 
+/// @param ezsigntemplatesignatureCreateObjectV2Request 
 /// 
 ///  code:201 message:"Successful response"
 ///
-/// @return EzsigntemplatesignatureCreateObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatesignatureCreateObjectV1WithEzsigntemplatesignatureCreateObjectV1Request: (EzsigntemplatesignatureCreateObjectV1Request*) ezsigntemplatesignatureCreateObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatesignatureCreateObjectV1Response* output, NSError* error)) handler;
+/// @return EzsigntemplatesignatureCreateObjectV2Response*
+-(NSURLSessionTask*) ezsigntemplatesignatureCreateObjectV2WithEzsigntemplatesignatureCreateObjectV2Request: (EzsigntemplatesignatureCreateObjectV2Request*) ezsigntemplatesignatureCreateObjectV2Request
+    completionHandler: (void (^)(EzsigntemplatesignatureCreateObjectV2Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsigntemplatesignature
@@ -58,16 +58,16 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 /// 
 ///
 /// @param pkiEzsigntemplatesignatureID 
-/// @param ezsigntemplatesignatureEditObjectV1Request 
+/// @param ezsigntemplatesignatureEditObjectV2Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatesignatureEditObjectV1Response*
--(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    ezsigntemplatesignatureEditObjectV1Request: (EzsigntemplatesignatureEditObjectV1Request*) ezsigntemplatesignatureEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV1Response* output, NSError* error)) handler;
+/// @return EzsigntemplatesignatureEditObjectV2Response*
+-(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
+    ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
+    completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatesignature
@@ -78,9 +78,9 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatesignatureGetObjectV2Response*
--(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    completionHandler: (void (^)(EzsigntemplatesignatureGetObjectV2Response* output, NSError* error)) handler;
+/// @return EzsigntemplatesignatureGetObjectV3Response*
+-(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV3WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
+    completionHandler: (void (^)(EzsigntemplatesignatureGetObjectV3Response* output, NSError* error)) handler;
 
 
 

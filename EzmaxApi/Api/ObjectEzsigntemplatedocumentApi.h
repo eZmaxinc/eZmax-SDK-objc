@@ -3,13 +3,18 @@
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigntemplatedocumentCreateObjectV1Request.h"
 #import "EzsigntemplatedocumentCreateObjectV1Response.h"
+#import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request.h"
+#import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request.h"
 #import "EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response.h"
 #import "EzsigntemplatedocumentEditObjectV1Request.h"
 #import "EzsigntemplatedocumentEditObjectV1Response.h"
+#import "EzsigntemplatedocumentExtractTextV1Request.h"
+#import "EzsigntemplatedocumentExtractTextV1Response.h"
 #import "EzsigntemplatedocumentFlattenV1Response.h"
+#import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.h"
@@ -53,6 +58,22 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @return EzsigntemplatedocumentCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentCreateObjectV1WithEzsigntemplatedocumentCreateObjectV1Request: (EzsigntemplatedocumentCreateObjectV1Request*) ezsigntemplatedocumentCreateObjectV1Request
     completionHandler: (void (^)(EzsigntemplatedocumentCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit multiple Ezsigntemplatedocumentpagerecognitions
+/// Edit multiple Ezsigntemplatedocumentpagerecognitions
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// @param ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request: (EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request*) ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request
+    completionHandler: (void (^)(EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsigntemplateformfieldgroups
@@ -103,6 +124,22 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigntemplatedocumentEditObjectV1Response* output, NSError* error)) handler;
 
 
+/// Extract text from Ezsigntemplatedocument area
+/// Extract text from Ezsigntemplatedocument area
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// @param ezsigntemplatedocumentExtractTextV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatedocumentExtractTextV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentExtractTextV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    ezsigntemplatedocumentExtractTextV1Request: (EzsigntemplatedocumentExtractTextV1Request*) ezsigntemplatedocumentExtractTextV1Request
+    completionHandler: (void (^)(EzsigntemplatedocumentExtractTextV1Response* output, NSError* error)) handler;
+
+
 /// Flatten
 /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
 ///
@@ -117,6 +154,20 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions
+/// 
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    completionHandler: (void (^)(EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages

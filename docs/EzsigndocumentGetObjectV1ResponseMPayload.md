@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentPagetotal** | **NSNumber*** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **NSNumber*** | The number of signatures that were signed in the document. | 
 **iEzsigndocumentSignaturetotal** | **NSNumber*** | The number of total signatures that were requested in the Ezsigndocument. | 
+**iEzsigndocumentFormfieldtotal** | **NSNumber*** | The number of total Ezsignformfield that were requested in the Ezsigndocument. | 
 **sEzsigndocumentMD5initial** | **NSString*** | MD5 Hash of the initial PDF Document before signatures were applied to it. | [optional] 
 **tEzsigndocumentDeclinedtosignreason** | **NSString*** | A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign | [optional] 
 **sEzsigndocumentMD5signed** | **NSString*** | MD5 Hash of the final PDF Document after all signatures were applied to it. | [optional] 
@@ -32,6 +33,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentStepsignaturetotal** | **NSNumber*** | The total number of steps in the signature filling phase | 
 **iEzsigndocumentStepsignatureCurrent** | **NSNumber*** | The current step in the signature phase | 
 **aObjEzsignfoldersignerassociationstatus** | [**NSArray&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;***](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
+**aObjEzsigndocumentdependency** | [**NSArray&lt;EzsigndocumentdependencyResponse&gt;***](EzsigndocumentdependencyResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

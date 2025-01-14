@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldESignaturePreference.h"
+@protocol FieldESignaturePreference;
+@class FieldESignaturePreference;
 
 
 
@@ -25,8 +28,16 @@
 /* The unique ID of the Signature [optional]
  */
 @property(nonatomic) NSNumber* pkiSignatureID;
-/* The svg of the Signature 
+/* The unique ID of the Font 
+ */
+@property(nonatomic) NSNumber* fkiFontID;
+
+@property(nonatomic) FieldESignaturePreference* eSignaturePreference;
+/* The svg of the Signature [optional]
  */
 @property(nonatomic) NSString* tSignatureSvg;
+/* The svg of the Initials [optional]
+ */
+@property(nonatomic) NSString* tSignatureSvginitials;
 
 @end

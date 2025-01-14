@@ -2,8 +2,8 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
-#import "EzsignbulksendCreateEzsignbulksendtransmissionV1Request.h"
-#import "EzsignbulksendCreateEzsignbulksendtransmissionV1Response.h"
+#import "EzsignbulksendCreateEzsignbulksendtransmissionV2Request.h"
+#import "EzsignbulksendCreateEzsignbulksendtransmissionV2Response.h"
 #import "EzsignbulksendCreateObjectV1Request.h"
 #import "EzsignbulksendCreateObjectV1Response.h"
 #import "EzsignbulksendDeleteObjectV1Response.h"
@@ -69,13 +69,13 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignbulksendID  
 ///
-///  @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request  
+///  @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request  
 ///
-///  @returns EzsignbulksendCreateEzsignbulksendtransmissionV1Response*
+///  @returns EzsignbulksendCreateEzsignbulksendtransmissionV2Response*
 ///
--(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    ezsignbulksendCreateEzsignbulksendtransmissionV1Request: (EzsignbulksendCreateEzsignbulksendtransmissionV1Request*) ezsignbulksendCreateEzsignbulksendtransmissionV1Request
-    completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV2WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    ezsignbulksendCreateEzsignbulksendtransmissionV2Request: (EzsignbulksendCreateEzsignbulksendtransmissionV2Request*) ezsignbulksendCreateEzsignbulksendtransmissionV2Request
+    completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == nil) {
         NSParameterAssert(pkiEzsignbulksendID);
@@ -87,18 +87,18 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-    if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == nil) {
-        NSParameterAssert(ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+    // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+    if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == nil) {
+        NSParameterAssert(ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignbulksendCreateEzsignbulksendtransmissionV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignbulksendCreateEzsignbulksendtransmissionV2Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsignbulksendApiErrorDomain code:kObjectEzsignbulksendApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignbulksendID != nil) {
@@ -126,7 +126,7 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+    bodyParam = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"
@@ -139,10 +139,10 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignbulksendCreateEzsignbulksendtransmissionV1Response*"
+                              responseType: @"EzsignbulksendCreateEzsignbulksendtransmissionV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignbulksendCreateEzsignbulksendtransmissionV1Response*)data, error);
+                                    handler((EzsignbulksendCreateEzsignbulksendtransmissionV2Response*)data, error);
                                 }
                             }];
 }

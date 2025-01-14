@@ -4,17 +4,17 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingcreateobjectv1) | **POST** /1/object/branding | Create a new Branding
-[**brandingEditObjectV1**](ObjectBrandingApi.md#brandingeditobjectv1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
+[**brandingCreateObjectV2**](ObjectBrandingApi.md#brandingcreateobjectv2) | **POST** /2/object/branding | Create a new Branding
+[**brandingEditObjectV2**](ObjectBrandingApi.md#brandingeditobjectv2) | **PUT** /2/object/branding/{pkiBrandingID} | Edit an existing Branding
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
-[**brandingGetObjectV2**](ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+[**brandingGetObjectV3**](ObjectBrandingApi.md#brandinggetobjectv3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
-# **brandingCreateObjectV1**
+# **brandingCreateObjectV2**
 ```objc
--(NSURLSessionTask*) brandingCreateObjectV1WithBrandingCreateObjectV1Request: (BrandingCreateObjectV1Request*) brandingCreateObjectV1Request
-        completionHandler: (void (^)(BrandingCreateObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) brandingCreateObjectV2WithBrandingCreateObjectV2Request: (BrandingCreateObjectV2Request*) brandingCreateObjectV2Request
+        completionHandler: (void (^)(BrandingCreateObjectV2Response* output, NSError* error)) handler;
 ```
 
 Create a new Branding
@@ -31,18 +31,18 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-BrandingCreateObjectV1Request* brandingCreateObjectV1Request = [[BrandingCreateObjectV1Request alloc] init]; // 
+BrandingCreateObjectV2Request* brandingCreateObjectV2Request = [[BrandingCreateObjectV2Request alloc] init]; // 
 
 ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 
 // Create a new Branding
-[apiInstance brandingCreateObjectV1WithBrandingCreateObjectV1Request:brandingCreateObjectV1Request
-          completionHandler: ^(BrandingCreateObjectV1Response* output, NSError* error) {
+[apiInstance brandingCreateObjectV2WithBrandingCreateObjectV2Request:brandingCreateObjectV2Request
+          completionHandler: ^(BrandingCreateObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectBrandingApi->brandingCreateObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectBrandingApi->brandingCreateObjectV2: %@", error);
                         }
                     }];
 ```
@@ -51,11 +51,11 @@ ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request***](BrandingCreateObjectV1Request.md)|  | 
+ **brandingCreateObjectV2Request** | [**BrandingCreateObjectV2Request***](BrandingCreateObjectV2Request.md)|  | 
 
 ### Return type
 
-[**BrandingCreateObjectV1Response***](BrandingCreateObjectV1Response.md)
+[**BrandingCreateObjectV2Response***](BrandingCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **brandingEditObjectV1**
+# **brandingEditObjectV2**
 ```objc
--(NSURLSessionTask*) brandingEditObjectV1WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    brandingEditObjectV1Request: (BrandingEditObjectV1Request*) brandingEditObjectV1Request
-        completionHandler: (void (^)(BrandingEditObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
+    brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
+        completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Branding
@@ -90,19 +90,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiBrandingID = @56; // 
-BrandingEditObjectV1Request* brandingEditObjectV1Request = [[BrandingEditObjectV1Request alloc] init]; // 
+BrandingEditObjectV2Request* brandingEditObjectV2Request = [[BrandingEditObjectV2Request alloc] init]; // 
 
 ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 
 // Edit an existing Branding
-[apiInstance brandingEditObjectV1WithPkiBrandingID:pkiBrandingID
-              brandingEditObjectV1Request:brandingEditObjectV1Request
-          completionHandler: ^(BrandingEditObjectV1Response* output, NSError* error) {
+[apiInstance brandingEditObjectV2WithPkiBrandingID:pkiBrandingID
+              brandingEditObjectV2Request:brandingEditObjectV2Request
+          completionHandler: ^(BrandingEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectBrandingApi->brandingEditObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectBrandingApi->brandingEditObjectV2: %@", error);
                         }
                     }];
 ```
@@ -112,11 +112,11 @@ ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiBrandingID** | **NSNumber***|  | 
- **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request***](BrandingEditObjectV1Request.md)|  | 
+ **brandingEditObjectV2Request** | [**BrandingEditObjectV2Request***](BrandingEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**BrandingEditObjectV1Response***](BrandingEditObjectV1Response.md)
+[**BrandingEditObjectV2Response***](BrandingEditObjectV2Response.md)
 
 ### Authorization
 
@@ -271,10 +271,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **brandingGetObjectV2**
+# **brandingGetObjectV3**
 ```objc
--(NSURLSessionTask*) brandingGetObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
-        completionHandler: (void (^)(BrandingGetObjectV2Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) brandingGetObjectV3WithPkiBrandingID: (NSNumber*) pkiBrandingID
+        completionHandler: (void (^)(BrandingGetObjectV3Response* output, NSError* error)) handler;
 ```
 
 Retrieve an existing Branding
@@ -296,13 +296,13 @@ NSNumber* pkiBrandingID = @56; //
 ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 
 // Retrieve an existing Branding
-[apiInstance brandingGetObjectV2WithPkiBrandingID:pkiBrandingID
-          completionHandler: ^(BrandingGetObjectV2Response* output, NSError* error) {
+[apiInstance brandingGetObjectV3WithPkiBrandingID:pkiBrandingID
+          completionHandler: ^(BrandingGetObjectV3Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectBrandingApi->brandingGetObjectV2: %@", error);
+                            NSLog(@"Error calling ObjectBrandingApi->brandingGetObjectV3: %@", error);
                         }
                     }];
 ```
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BrandingGetObjectV2Response***](BrandingGetObjectV2Response.md)
+[**BrandingGetObjectV3Response***](BrandingGetObjectV3Response.md)
 
 ### Authorization
 

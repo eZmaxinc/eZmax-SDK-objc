@@ -14,14 +14,22 @@
 #import "EzsigndocumentCreateObjectV1Response.h"
 #import "EzsigndocumentCreateObjectV2Request.h"
 #import "EzsigndocumentCreateObjectV2Response.h"
+#import "EzsigndocumentCreateObjectV3Request.h"
+#import "EzsigndocumentCreateObjectV3Response.h"
 #import "EzsigndocumentDeclineToSignV1Request.h"
 #import "EzsigndocumentDeclineToSignV1Response.h"
 #import "EzsigndocumentDeleteObjectV1Response.h"
+#import "EzsigndocumentEditEzsignannotationsV1Request.h"
+#import "EzsigndocumentEditEzsignannotationsV1Response.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Request.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Response.h"
 #import "EzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EzsigndocumentEditEzsignsignaturesV1Response.h"
+#import "EzsigndocumentEditObjectV1Request.h"
+#import "EzsigndocumentEditObjectV1Response.h"
 #import "EzsigndocumentEndPrematurelyV1Response.h"
+#import "EzsigndocumentExtractTextV1Request.h"
+#import "EzsigndocumentExtractTextV1Response.h"
 #import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
 #import "EzsigndocumentGetAttachmentsV1Response.h"
@@ -158,6 +166,19 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigndocumentCreateObjectV2Response* output, NSError* error)) handler;
 
 
+/// Create a new Ezsigndocument
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsigndocumentCreateObjectV3Request 
+/// 
+///  code:201 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
+///
+/// @return EzsigndocumentCreateObjectV3Response*
+-(NSURLSessionTask*) ezsigndocumentCreateObjectV3WithEzsigndocumentCreateObjectV3Request: (EzsigndocumentCreateObjectV3Request*) ezsigndocumentCreateObjectV3Request
+    completionHandler: (void (^)(EzsigndocumentCreateObjectV3Response* output, NSError* error)) handler;
+
+
 /// Decline to sign
 /// Decline to sign
 ///
@@ -186,6 +207,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EzsigndocumentDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler;
+
+
+/// Edit multiple Ezsignannotations
+/// Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentEditEzsignannotationsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentEditEzsignannotationsV1Response*
+-(NSURLSessionTask*) ezsigndocumentEditEzsignannotationsV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditEzsignannotationsV1Request: (EzsigndocumentEditEzsignannotationsV1Request*) ezsigndocumentEditEzsignannotationsV1Request
+    completionHandler: (void (^)(EzsigndocumentEditEzsignannotationsV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsignformfieldgroups
@@ -220,6 +257,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigndocumentEditEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 
+/// Edit an existing Ezsigndocument
+/// 
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentEditObjectV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again"
+///
+/// @return EzsigndocumentEditObjectV1Response*
+-(NSURLSessionTask*) ezsigndocumentEditObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditObjectV1Request: (EzsigndocumentEditObjectV1Request*) ezsigndocumentEditObjectV1Request
+    completionHandler: (void (^)(EzsigndocumentEditObjectV1Response* output, NSError* error)) handler;
+
+
 /// End prematurely
 /// End prematurely an Ezsigndocument when some signatures are still required
 ///
@@ -234,6 +287,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
+
+
+/// Extract text from Ezsigndocument area
+/// Extract text from Ezsigndocument area
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentExtractTextV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentExtractTextV1Response*
+-(NSURLSessionTask*) ezsigndocumentExtractTextV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentExtractTextV1Request: (EzsigndocumentExtractTextV1Request*) ezsigndocumentExtractTextV1Request
+    completionHandler: (void (^)(EzsigndocumentExtractTextV1Response* output, NSError* error)) handler;
 
 
 /// Flatten

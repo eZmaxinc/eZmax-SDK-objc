@@ -4,12 +4,14 @@
 #import "EzsignsignatureCreateObjectV1Response.h"
 #import "EzsignsignatureCreateObjectV2Request.h"
 #import "EzsignsignatureCreateObjectV2Response.h"
+#import "EzsignsignatureCreateObjectV3Request.h"
+#import "EzsignsignatureCreateObjectV3Response.h"
 #import "EzsignsignatureDeleteObjectV1Response.h"
-#import "EzsignsignatureEditObjectV1Request.h"
-#import "EzsignsignatureEditObjectV1Response.h"
+#import "EzsignsignatureEditObjectV2Request.h"
+#import "EzsignsignatureEditObjectV2Response.h"
 #import "EzsignsignatureGetEzsignsignatureattachmentV1Response.h"
 #import "EzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
-#import "EzsignsignatureGetObjectV2Response.h"
+#import "EzsignsignatureGetObjectV3Response.h"
 #import "EzsignsignatureSignV1Request.h"
 #import "EzsignsignatureSignV1Response.h"
 #import "Api.h"
@@ -59,6 +61,18 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsignsignatureCreateObjectV2Response* output, NSError* error)) handler;
 
 
+/// Create a new Ezsignsignature
+/// The endpoint allows to create one or many elements at once.
+///
+/// @param ezsignsignatureCreateObjectV3Request 
+/// 
+///  code:201 message:"Successful response"
+///
+/// @return EzsignsignatureCreateObjectV3Response*
+-(NSURLSessionTask*) ezsignsignatureCreateObjectV3WithEzsignsignatureCreateObjectV3Request: (EzsignsignatureCreateObjectV3Request*) ezsignsignatureCreateObjectV3Request
+    completionHandler: (void (^)(EzsignsignatureCreateObjectV3Response* output, NSError* error)) handler;
+
+
 /// Delete an existing Ezsignsignature
 /// 
 ///
@@ -77,16 +91,16 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 /// 
 ///
 /// @param pkiEzsignsignatureID 
-/// @param ezsignsignatureEditObjectV1Request 
+/// @param ezsignsignatureEditObjectV2Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignsignatureEditObjectV1Response*
--(NSURLSessionTask*) ezsignsignatureEditObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV1Request: (EzsignsignatureEditObjectV1Request*) ezsignsignatureEditObjectV1Request
-    completionHandler: (void (^)(EzsignsignatureEditObjectV1Response* output, NSError* error)) handler;
+/// @return EzsignsignatureEditObjectV2Response*
+-(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
+    completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignature's Ezsignsignatureattachments
@@ -122,9 +136,9 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsignsignatureGetObjectV2Response*
--(NSURLSessionTask*) ezsignsignatureGetObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EzsignsignatureGetObjectV2Response* output, NSError* error)) handler;
+/// @return EzsignsignatureGetObjectV3Response*
+-(NSURLSessionTask*) ezsignsignatureGetObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    completionHandler: (void (^)(EzsignsignatureGetObjectV3Response* output, NSError* error)) handler;
 
 
 /// Sign the Ezsignsignature

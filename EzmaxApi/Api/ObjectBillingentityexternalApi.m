@@ -1,7 +1,10 @@
 #import "ObjectBillingentityexternalApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "BillingentityexternalGenerateFederationTokenV1Request.h"
+#import "BillingentityexternalGenerateFederationTokenV1Response.h"
 #import "BillingentityexternalGetAutocompleteV2Response.h"
+#import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -49,6 +52,89 @@ NSInteger kObjectBillingentityexternalApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Generate a federation token
+/// 
+///  @param pkiBillingentityexternalID  
+///
+///  @param billingentityexternalGenerateFederationTokenV1Request  
+///
+///  @returns BillingentityexternalGenerateFederationTokenV1Response*
+///
+-(NSURLSessionTask*) billingentityexternalGenerateFederationTokenV1WithPkiBillingentityexternalID: (NSNumber*) pkiBillingentityexternalID
+    billingentityexternalGenerateFederationTokenV1Request: (BillingentityexternalGenerateFederationTokenV1Request*) billingentityexternalGenerateFederationTokenV1Request
+    completionHandler: (void (^)(BillingentityexternalGenerateFederationTokenV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiBillingentityexternalID' is set
+    if (pkiBillingentityexternalID == nil) {
+        NSParameterAssert(pkiBillingentityexternalID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiBillingentityexternalID"] };
+            NSError* error = [NSError errorWithDomain:kObjectBillingentityexternalApiErrorDomain code:kObjectBillingentityexternalApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'billingentityexternalGenerateFederationTokenV1Request' is set
+    if (billingentityexternalGenerateFederationTokenV1Request == nil) {
+        NSParameterAssert(billingentityexternalGenerateFederationTokenV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"billingentityexternalGenerateFederationTokenV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectBillingentityexternalApiErrorDomain code:kObjectBillingentityexternalApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiBillingentityexternalID != nil) {
+        pathParams[@"pkiBillingentityexternalID"] = pkiBillingentityexternalID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = billingentityexternalGenerateFederationTokenV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"BillingentityexternalGenerateFederationTokenV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((BillingentityexternalGenerateFederationTokenV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Billingentityexternals and IDs

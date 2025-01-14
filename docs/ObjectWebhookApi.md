@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV2**](ObjectWebhookApi.md#webhookgetobjectv2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 [**webhookRegenerateApikeyV1**](ObjectWebhookApi.md#webhookregenerateapikeyv1) | **POST** /1/object/webhook/{pkiWebhookID}/regenerateApikey | Regenerate the Apikey
+[**webhookSendWebhookV1**](ObjectWebhookApi.md#webhooksendwebhookv1) | **POST** /1/object/webhook/sendWebhook | Emit a Webhook event
 [**webhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -429,6 +430,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebhookRegenerateApikeyV1Response***](WebhookRegenerateApikeyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **webhookSendWebhookV1**
+```objc
+-(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
+        completionHandler: (void (^)(WebhookSendWebhookV1Response* output, NSError* error)) handler;
+```
+
+Emit a Webhook event
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+WebhookSendWebhookV1Request* webhookSendWebhookV1Request = [[WebhookSendWebhookV1Request alloc] init]; // 
+
+ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
+
+// Emit a Webhook event
+[apiInstance webhookSendWebhookV1WithWebhookSendWebhookV1Request:webhookSendWebhookV1Request
+          completionHandler: ^(WebhookSendWebhookV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectWebhookApi->webhookSendWebhookV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhookSendWebhookV1Request** | [**WebhookSendWebhookV1Request***](WebhookSendWebhookV1Request.md)|  | 
+
+### Return type
+
+[**WebhookSendWebhookV1Response***](WebhookSendWebhookV1Response.md)
 
 ### Authorization
 

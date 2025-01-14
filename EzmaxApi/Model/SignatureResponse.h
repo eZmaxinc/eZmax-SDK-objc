@@ -25,8 +25,14 @@
 /* The unique ID of the Signature 
  */
 @property(nonatomic) NSNumber* pkiSignatureID;
-/* The URL of the SVG file for the Signature 
+/* The unique ID of the Font [optional]
+ */
+@property(nonatomic) NSNumber* fkiFontID;
+/* The URL of the SVG file for the Signature [optional]
  */
 @property(nonatomic) NSString* sSignatureUrl;
+/* The URL of the SVG file for the Initials [optional]
+ */
+@property(nonatomic) NSString* sSignatureUrlinitials;
 
 @end

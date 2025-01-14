@@ -22,6 +22,9 @@
 
 @interface AddressRequestCompound : Object
 
+/* The unique ID of the Address [optional]
+ */
+@property(nonatomic) NSNumber* pkiAddressID;
 /* The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping| 
  */
 @property(nonatomic) NSNumber* fkiAddresstypeID;
@@ -31,7 +34,7 @@
 /* The Street Name 
  */
 @property(nonatomic) NSString* sAddressStreet;
-/* The Suite or appartment number 
+/* The Suite or appartment number [optional]
  */
 @property(nonatomic) NSString* sAddressSuite;
 /* The City name 

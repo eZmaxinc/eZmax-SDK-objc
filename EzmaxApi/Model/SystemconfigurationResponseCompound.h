@@ -14,11 +14,14 @@
 */
 
 
+#import "CustomBrandingResponse.h"
 #import "FieldESystemconfigurationEzsign.h"
 #import "FieldESystemconfigurationEzsignofficeplan.h"
 #import "FieldESystemconfigurationLanguage1.h"
 #import "FieldESystemconfigurationLanguage2.h"
 #import "FieldESystemconfigurationNewexternaluseraction.h"
+@protocol CustomBrandingResponse;
+@class CustomBrandingResponse;
 @protocol FieldESystemconfigurationEzsign;
 @class FieldESystemconfigurationEzsign;
 @protocol FieldESystemconfigurationEzsignofficeplan;
@@ -43,6 +46,9 @@
 /* The unique ID of the Systemconfigurationtype 
  */
 @property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
+/* The unique ID of the Branding [optional]
+ */
+@property(nonatomic) NSNumber* fkiBrandingID;
 /* The description of the Systemconfigurationtype in the language of the requester 
  */
 @property(nonatomic) NSString* sSystemconfigurationtypeDescriptionX;
@@ -62,6 +68,9 @@
 /* Whether if we allow the creation of personal files in eZsign 
  */
 @property(nonatomic) NSNumber* bSystemconfigurationEzsignpersonnal;
+/* Whether there is a creditcard merchant configured or not [optional]
+ */
+@property(nonatomic) NSNumber* bSystemconfigurationHascreditcardmerchant;
 /* Whether is Disposal processus is active or not [optional]
  */
 @property(nonatomic) NSNumber* bSystemconfigurationIsdisposalactive;
@@ -74,5 +83,7 @@
 /* The end date where the system will be in read only [optional]
  */
 @property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationend;
+
+@property(nonatomic) CustomBrandingResponse* objBranding;
 
 @end

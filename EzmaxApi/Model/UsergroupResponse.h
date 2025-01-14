@@ -14,7 +14,10 @@
 */
 
 
+#import "EmailRequest.h"
 #import "MultilingualUsergroupName.h"
+@protocol EmailRequest;
+@class EmailRequest;
 @protocol MultilingualUsergroupName;
 @class MultilingualUsergroupName;
 
@@ -33,5 +36,7 @@
 /* The Name of the Usergroup in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sUsergroupNameX;
+
+@property(nonatomic) EmailRequest* objEmail;
 
 @end

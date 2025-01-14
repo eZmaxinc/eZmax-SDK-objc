@@ -5,12 +5,15 @@
 #import "UserCreateObjectV1Response.h"
 #import "UserCreateObjectV2Request.h"
 #import "UserCreateObjectV2Response.h"
+#import "UserEditColleaguesV2Request.h"
+#import "UserEditColleaguesV2Response.h"
 #import "UserEditObjectV1Request.h"
 #import "UserEditObjectV1Response.h"
 #import "UserEditPermissionsV1Request.h"
 #import "UserEditPermissionsV1Response.h"
 #import "UserGetApikeysV1Response.h"
 #import "UserGetAutocompleteV2Response.h"
+#import "UserGetColleaguesV2Response.h"
 #import "UserGetEffectivePermissionsV1Response.h"
 #import "UserGetListV1Response.h"
 #import "UserGetObjectV2Response.h"
@@ -64,6 +67,22 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @return UserCreateObjectV2Response*
 -(NSURLSessionTask*) userCreateObjectV2WithUserCreateObjectV2Request: (UserCreateObjectV2Request*) userCreateObjectV2Request
     completionHandler: (void (^)(UserCreateObjectV2Response* output, NSError* error)) handler;
+
+
+/// Edit multiple Colleagues
+/// Using this endpoint, you can edit multiple Colleagues at the same time.
+///
+/// @param pkiUserID 
+/// @param userEditColleaguesV2Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return UserEditColleaguesV2Response*
+-(NSURLSessionTask*) userEditColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+    userEditColleaguesV2Request: (UserEditColleaguesV2Request*) userEditColleaguesV2Request
+    completionHandler: (void (^)(UserEditColleaguesV2Response* output, NSError* error)) handler;
 
 
 /// Edit an existing User
@@ -127,6 +146,19 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(UserGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing User's Colleagues
+/// 
+///
+/// @param pkiUserID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return UserGetColleaguesV2Response*
+-(NSURLSessionTask*) userGetColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetColleaguesV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing User's Effective Permissions

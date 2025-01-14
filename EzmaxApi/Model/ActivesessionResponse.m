@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eActivesessionUsertype": @"eActivesessionUsertype", @"eActivesessionOrigin": @"eActivesessionOrigin", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"bActivesessionDebug": @"bActivesessionDebug", @"bActivesessionIssuperadmin": @"bActivesessionIssuperadmin", @"pksCustomerCode": @"pksCustomerCode", @"fkiSystemconfigurationtypeID": @"fkiSystemconfigurationtypeID", @"fkiSignatureID": @"fkiSignatureID" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eActivesessionUsertype": @"eActivesessionUsertype", @"eActivesessionOrigin": @"eActivesessionOrigin", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"bActivesessionDebug": @"bActivesessionDebug", @"bActivesessionIssuperadmin": @"bActivesessionIssuperadmin", @"bActivesessionAttachment": @"bActivesessionAttachment", @"bActivesessionCanafe": @"bActivesessionCanafe", @"bActivesessionFinancial": @"bActivesessionFinancial", @"bActivesessionRealestatecompleted": @"bActivesessionRealestatecompleted", @"eActivesessionEzsign": @"eActivesessionEzsign", @"eActivesessionEzsignaccess": @"eActivesessionEzsignaccess", @"eActivesessionEzsignprepaid": @"eActivesessionEzsignprepaid", @"eActivesessionRealestateinprogress": @"eActivesessionRealestateinprogress", @"pksCustomerCode": @"pksCustomerCode", @"fkiSystemconfigurationtypeID": @"fkiSystemconfigurationtypeID", @"fkiSignatureID": @"fkiSignatureID" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiSignatureID"];
+  NSArray *optionalProperties = @[@"bActivesessionAttachment", @"bActivesessionCanafe", @"bActivesessionFinancial", @"bActivesessionRealestatecompleted", @"eActivesessionEzsign", @"eActivesessionEzsignprepaid", @"eActivesessionRealestateinprogress", @"fkiSignatureID"];
   return [optionalProperties containsObject:propertyName];
 }
 

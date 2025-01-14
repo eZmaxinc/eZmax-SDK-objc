@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"fksCreditcardtokenID": @"fksCreditcardtokenID", @"bCreditcardclientrelationIsdefault": @"bCreditcardclientrelationIsdefault", @"sCreditcardclientDescription": @"sCreditcardclientDescription", @"bCreditcardclientIsactive": @"bCreditcardclientIsactive", @"bCreditcardclientAllowedagencypayment": @"bCreditcardclientAllowedagencypayment", @"bCreditcardclientAllowedroyallepageprotection": @"bCreditcardclientAllowedroyallepageprotection", @"bCreditcardclientAllowedtranquillit": @"bCreditcardclientAllowedtranquillit", @"objCreditcarddetail": @"objCreditcarddetail", @"sCreditcardclientCVV": @"sCreditcardclientCVV" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"fksCreditcardtokenID": @"fksCreditcardtokenID", @"bCreditcardclientrelationIsdefault": @"bCreditcardclientrelationIsdefault", @"sCreditcardclientDescription": @"sCreditcardclientDescription", @"bCreditcardclientAllowedcompanypayment": @"bCreditcardclientAllowedcompanypayment", @"bCreditcardclientAllowedezsign": @"bCreditcardclientAllowedezsign", @"bCreditcardclientAllowedtranquillit": @"bCreditcardclientAllowedtranquillit", @"objCreditcarddetail": @"objCreditcarddetail", @"sCreditcardclientCVV": @"sCreditcardclientCVV" }];
 }
 
 /**

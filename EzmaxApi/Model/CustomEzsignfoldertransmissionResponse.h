@@ -39,6 +39,9 @@
 /* The number of total signatures that were requested in the Ezsignfolder 
  */
 @property(nonatomic) NSNumber* iEzsignfolderSignaturetotal;
+/* The number of total form fields that were requested in the Ezsignfolder 
+ */
+@property(nonatomic) NSNumber* iEzsignfolderFormfieldtotal;
 /* The number of signatures that were signed in the Ezsignfolder. 
  */
 @property(nonatomic) NSNumber* iEzsignfolderSignaturesigned;

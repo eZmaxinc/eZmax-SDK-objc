@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**ezsignfoldersignerassociationGetObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationPatchObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationpatchobjectv1) | **PATCH** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Patch an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationReassignV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationreassignv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign | Reassign remaining unsigned signatures and forms
 
 
 # **ezsignfoldersignerassociationCreateEmbeddedUrlV1**
@@ -25,7 +26,7 @@ Method | HTTP request | Description
 
 Creates an Url to allow embedded signing
 
-This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
 
 ### Example
 ```objc
@@ -588,6 +589,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationPatchObjectV1Response***](EzsignfoldersignerassociationPatchObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldersignerassociationReassignV1**
+```objc
+-(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
+        completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler;
+```
+
+Reassign remaining unsigned signatures and forms
+
+Reassign remaining unsigned signatures and forms
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
+EzsignfoldersignerassociationReassignV1Request* ezsignfoldersignerassociationReassignV1Request = [[EzsignfoldersignerassociationReassignV1Request alloc] init]; // 
+
+ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignerassociationApi alloc] init];
+
+// Reassign remaining unsigned signatures and forms
+[apiInstance ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
+              ezsignfoldersignerassociationReassignV1Request:ezsignfoldersignerassociationReassignV1Request
+          completionHandler: ^(EzsignfoldersignerassociationReassignV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationReassignV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
+ **ezsignfoldersignerassociationReassignV1Request** | [**EzsignfoldersignerassociationReassignV1Request***](EzsignfoldersignerassociationReassignV1Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldersignerassociationReassignV1Response***](EzsignfoldersignerassociationReassignV1Response.md)
 
 ### Authorization
 

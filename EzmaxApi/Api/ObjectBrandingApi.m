@@ -1,13 +1,13 @@
 #import "ObjectBrandingApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "BrandingCreateObjectV1Request.h"
-#import "BrandingCreateObjectV1Response.h"
-#import "BrandingEditObjectV1Request.h"
-#import "BrandingEditObjectV1Response.h"
+#import "BrandingCreateObjectV2Request.h"
+#import "BrandingCreateObjectV2Response.h"
+#import "BrandingEditObjectV2Request.h"
+#import "BrandingEditObjectV2Response.h"
 #import "BrandingGetAutocompleteV2Response.h"
 #import "BrandingGetListV1Response.h"
-#import "BrandingGetObjectV2Response.h"
+#import "BrandingGetObjectV3Response.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
@@ -60,24 +60,24 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
 ///
 /// Create a new Branding
 /// The endpoint allows to create one or many elements at once.
-///  @param brandingCreateObjectV1Request  
+///  @param brandingCreateObjectV2Request  
 ///
-///  @returns BrandingCreateObjectV1Response*
+///  @returns BrandingCreateObjectV2Response*
 ///
--(NSURLSessionTask*) brandingCreateObjectV1WithBrandingCreateObjectV1Request: (BrandingCreateObjectV1Request*) brandingCreateObjectV1Request
-    completionHandler: (void (^)(BrandingCreateObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'brandingCreateObjectV1Request' is set
-    if (brandingCreateObjectV1Request == nil) {
-        NSParameterAssert(brandingCreateObjectV1Request);
+-(NSURLSessionTask*) brandingCreateObjectV2WithBrandingCreateObjectV2Request: (BrandingCreateObjectV2Request*) brandingCreateObjectV2Request
+    completionHandler: (void (^)(BrandingCreateObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'brandingCreateObjectV2Request' is set
+    if (brandingCreateObjectV2Request == nil) {
+        NSParameterAssert(brandingCreateObjectV2Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"brandingCreateObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"brandingCreateObjectV2Request"] };
             NSError* error = [NSError errorWithDomain:kObjectBrandingApiErrorDomain code:kObjectBrandingApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/branding"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/branding"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 
@@ -102,7 +102,7 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = brandingCreateObjectV1Request;
+    bodyParam = brandingCreateObjectV2Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"
@@ -115,10 +115,10 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"BrandingCreateObjectV1Response*"
+                              responseType: @"BrandingCreateObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((BrandingCreateObjectV1Response*)data, error);
+                                    handler((BrandingCreateObjectV2Response*)data, error);
                                 }
                             }];
 }
@@ -128,13 +128,13 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiBrandingID  
 ///
-///  @param brandingEditObjectV1Request  
+///  @param brandingEditObjectV2Request  
 ///
-///  @returns BrandingEditObjectV1Response*
+///  @returns BrandingEditObjectV2Response*
 ///
--(NSURLSessionTask*) brandingEditObjectV1WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    brandingEditObjectV1Request: (BrandingEditObjectV1Request*) brandingEditObjectV1Request
-    completionHandler: (void (^)(BrandingEditObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
+    brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
+    completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == nil) {
         NSParameterAssert(pkiBrandingID);
@@ -146,18 +146,18 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'brandingEditObjectV1Request' is set
-    if (brandingEditObjectV1Request == nil) {
-        NSParameterAssert(brandingEditObjectV1Request);
+    // verify the required parameter 'brandingEditObjectV2Request' is set
+    if (brandingEditObjectV2Request == nil) {
+        NSParameterAssert(brandingEditObjectV2Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"brandingEditObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"brandingEditObjectV2Request"] };
             NSError* error = [NSError errorWithDomain:kObjectBrandingApiErrorDomain code:kObjectBrandingApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/branding/{pkiBrandingID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/branding/{pkiBrandingID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiBrandingID != nil) {
@@ -185,7 +185,7 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = brandingEditObjectV1Request;
+    bodyParam = brandingEditObjectV2Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
@@ -198,10 +198,10 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"BrandingEditObjectV1Response*"
+                              responseType: @"BrandingEditObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((BrandingEditObjectV1Response*)data, error);
+                                    handler((BrandingEditObjectV2Response*)data, error);
                                 }
                             }];
 }
@@ -378,10 +378,10 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiBrandingID  
 ///
-///  @returns BrandingGetObjectV2Response*
+///  @returns BrandingGetObjectV3Response*
 ///
--(NSURLSessionTask*) brandingGetObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
-    completionHandler: (void (^)(BrandingGetObjectV2Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) brandingGetObjectV3WithPkiBrandingID: (NSNumber*) pkiBrandingID
+    completionHandler: (void (^)(BrandingGetObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == nil) {
         NSParameterAssert(pkiBrandingID);
@@ -393,7 +393,7 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/branding/{pkiBrandingID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/branding/{pkiBrandingID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiBrandingID != nil) {
@@ -433,10 +433,10 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"BrandingGetObjectV2Response*"
+                              responseType: @"BrandingGetObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((BrandingGetObjectV2Response*)data, error);
+                                    handler((BrandingGetObjectV3Response*)data, error);
                                 }
                             }];
 }

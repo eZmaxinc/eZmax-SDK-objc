@@ -98,6 +98,7 @@ extern NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode;
 /// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
 /// @param sQuery Allow to filter the returned results (optional)
 /// @param acceptLanguage  (optional)
+/// @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
 /// 
 ///  code:200 message:"Successful response"
 ///
@@ -106,6 +107,7 @@ extern NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode;
     eFilterActive: (NSString*) eFilterActive
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    fkiEzsignfoldertypeID: (NSNumber*) fkiEzsignfoldertypeID
     completionHandler: (void (^)(EzsigntemplatepackageGetAutocompleteV2Response* output, NSError* error)) handler;
 
 

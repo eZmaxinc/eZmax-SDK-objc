@@ -4,7 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsignbulksendCreateEzsignbulksendtransmissionV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+[**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
 [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksenddeleteobjectv1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
@@ -17,11 +17,11 @@ Method | HTTP request | Description
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
-# **ezsignbulksendCreateEzsignbulksendtransmissionV1**
+# **ezsignbulksendCreateEzsignbulksendtransmissionV2**
 ```objc
--(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    ezsignbulksendCreateEzsignbulksendtransmissionV1Request: (EzsignbulksendCreateEzsignbulksendtransmissionV1Request*) ezsignbulksendCreateEzsignbulksendtransmissionV1Request
-        completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignbulksendCreateEzsignbulksendtransmissionV2WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    ezsignbulksendCreateEzsignbulksendtransmissionV2Request: (EzsignbulksendCreateEzsignbulksendtransmissionV2Request*) ezsignbulksendCreateEzsignbulksendtransmissionV2Request
+        completionHandler: (void (^)(EzsignbulksendCreateEzsignbulksendtransmissionV2Response* output, NSError* error)) handler;
 ```
 
 Create a new Ezsignbulksendtransmission in the Ezsignbulksend
@@ -37,19 +37,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsignbulksendID = @56; // 
-EzsignbulksendCreateEzsignbulksendtransmissionV1Request* ezsignbulksendCreateEzsignbulksendtransmissionV1Request = [[EzsignbulksendCreateEzsignbulksendtransmissionV1Request alloc] init]; // 
+EzsignbulksendCreateEzsignbulksendtransmissionV2Request* ezsignbulksendCreateEzsignbulksendtransmissionV2Request = [[EzsignbulksendCreateEzsignbulksendtransmissionV2Request alloc] init]; // 
 
 ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
 
 // Create a new Ezsignbulksendtransmission in the Ezsignbulksend
-[apiInstance ezsignbulksendCreateEzsignbulksendtransmissionV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
-              ezsignbulksendCreateEzsignbulksendtransmissionV1Request:ezsignbulksendCreateEzsignbulksendtransmissionV1Request
-          completionHandler: ^(EzsignbulksendCreateEzsignbulksendtransmissionV1Response* output, NSError* error) {
+[apiInstance ezsignbulksendCreateEzsignbulksendtransmissionV2WithPkiEzsignbulksendID:pkiEzsignbulksendID
+              ezsignbulksendCreateEzsignbulksendtransmissionV2Request:ezsignbulksendCreateEzsignbulksendtransmissionV2Request
+          completionHandler: ^(EzsignbulksendCreateEzsignbulksendtransmissionV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendCreateEzsignbulksendtransmissionV1: %@", error);
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendCreateEzsignbulksendtransmissionV2: %@", error);
                         }
                     }];
 ```
@@ -59,11 +59,11 @@ ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignbulksendID** | **NSNumber***|  | 
- **ezsignbulksendCreateEzsignbulksendtransmissionV1Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV1Request***](EzsignbulksendCreateEzsignbulksendtransmissionV1Request.md)|  | 
+ **ezsignbulksendCreateEzsignbulksendtransmissionV2Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV2Request***](EzsignbulksendCreateEzsignbulksendtransmissionV2Request.md)|  | 
 
 ### Return type
 
-[**EzsignbulksendCreateEzsignbulksendtransmissionV1Response***](EzsignbulksendCreateEzsignbulksendtransmissionV1Response.md)
+[**EzsignbulksendCreateEzsignbulksendtransmissionV2Response***](EzsignbulksendCreateEzsignbulksendtransmissionV2Response.md)
 
 ### Authorization
 

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiTextstylestaticID** | **NSNumber*** | The unique ID of the Textstylestatic | [optional] 
 **fkiFontID** | **NSNumber*** | The unique ID of the Font | 
+**sFontName** | **NSString*** | The name of the Font | 
 **bTextstylestaticBold** | **NSNumber*** | Whether the Textstylestatic is Bold or not | 
 **bTextstylestaticUnderline** | **NSNumber*** | Whether the Textstylestatic is Underline or not | 
 **bTextstylestaticItalic** | **NSNumber*** | Whether the Textstylestatic is Italic or not | 

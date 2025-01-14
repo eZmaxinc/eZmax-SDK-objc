@@ -34,5 +34,8 @@
 /* The number of signature or form fields the Ezsignsigner has already processed at the current step 
  */
 @property(nonatomic) NSNumber* iEzsignsignaturestatusSigned;
+/* The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions. 
+ */
+@property(nonatomic) NSNumber* iEzsignsignaturestatusConditional;
 
 @end

@@ -20,7 +20,10 @@ Name | Type | Description | Notes
 **iEzsignformfieldgroup** | **NSNumber*** | The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder | 
 **iEzsignformfieldgroupCompleted** | **NSNumber*** | The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder | 
 **bEzsignformHasdependencies** | **NSNumber*** | Whether the Ezsignform/Ezsignsignatures has dependencies or not | [optional] 
-**dEzsignfolderCompletedpercentage** | **NSString*** | Whether the Ezsignform/Ezsignsignatures has dependencies or not | 
+**dEzsignfolderCompletedpercentage** | **NSString*** | Percentage of Ezsignform/Ezsignsignatures has completed | 
+**dEzsignfolderFormcompletedpercentage** | **NSString*** | Percentage of Ezsignform has completed | 
+**dEzsignfolderSignaturecompletedpercentage** | **NSString*** | Percentage of Ezsignsignatures has signed | 
+**bEzsignfolderSigner** | **NSNumber*** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

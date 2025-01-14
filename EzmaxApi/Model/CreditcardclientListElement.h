@@ -28,21 +28,18 @@
 /* The unique ID of the Creditcarddetail 
  */
 @property(nonatomic) NSNumber* fkiCreditcarddetailID;
-/* Whether if it's an relationisdefault 
+/* The unique ID of the Creditcardtype 
+ */
+@property(nonatomic) NSNumber* fkiCreditcardtypeID;
+/* Whether if it's the creditcardclient is the default one 
  */
 @property(nonatomic) NSNumber* bCreditcardclientrelationIsdefault;
 /* The description of the Creditcardclient 
  */
 @property(nonatomic) NSString* sCreditcardclientDescription;
-/* Whether the creditcardclient is active or not 
- */
-@property(nonatomic) NSNumber* bCreditcardclientIsactive;
 /* Whether if it's an allowedagencypayment 
  */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedagencypayment;
-/* Whether if it's an allowedroyallepageprotection 
- */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedroyallepageprotection;
+@property(nonatomic) NSNumber* bCreditcardclientAllowedcompanypayment;
 /* Whether if it's an allowedtranquillit 
  */
 @property(nonatomic) NSNumber* bCreditcardclientAllowedtranquillit;
@@ -52,8 +49,8 @@
 /* The expirationyear of the Creditcarddetail 
  */
 @property(nonatomic) NSNumber* iCreditcarddetailExpirationyear;
-/* The numbermasked of the Creditcarddetail 
+/* The last digits of the Creditcarddetail 
  */
-@property(nonatomic) NSString* sCreditcarddetailNumbermasked;
+@property(nonatomic) NSNumber* iCreditcarddetailLastdigits;
 
 @end

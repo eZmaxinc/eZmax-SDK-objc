@@ -2,16 +2,14 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
-#import "EzsignfoldertypeCreateObjectV2Request.h"
-#import "EzsignfoldertypeCreateObjectV2Response.h"
-#import "EzsignfoldertypeEditObjectV1Request.h"
-#import "EzsignfoldertypeEditObjectV1Response.h"
-#import "EzsignfoldertypeEditObjectV2Request.h"
-#import "EzsignfoldertypeEditObjectV2Response.h"
+#import "EzsignfoldertypeCreateObjectV3Request.h"
+#import "EzsignfoldertypeCreateObjectV3Response.h"
+#import "EzsignfoldertypeEditObjectV3Request.h"
+#import "EzsignfoldertypeEditObjectV3Response.h"
 #import "EzsignfoldertypeGetAutocompleteV2Response.h"
 #import "EzsignfoldertypeGetListV1Response.h"
 #import "EzsignfoldertypeGetObjectV2Response.h"
-#import "EzsignfoldertypeGetObjectV3Response.h"
+#import "EzsignfoldertypeGetObjectV4Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -63,24 +61,24 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 ///
 /// Create a new Ezsignfoldertype
 /// The endpoint allows to create one or many elements at once.
-///  @param ezsignfoldertypeCreateObjectV2Request  
+///  @param ezsignfoldertypeCreateObjectV3Request  
 ///
-///  @returns EzsignfoldertypeCreateObjectV2Response*
+///  @returns EzsignfoldertypeCreateObjectV3Response*
 ///
--(NSURLSessionTask*) ezsignfoldertypeCreateObjectV2WithEzsignfoldertypeCreateObjectV2Request: (EzsignfoldertypeCreateObjectV2Request*) ezsignfoldertypeCreateObjectV2Request
-    completionHandler: (void (^)(EzsignfoldertypeCreateObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'ezsignfoldertypeCreateObjectV2Request' is set
-    if (ezsignfoldertypeCreateObjectV2Request == nil) {
-        NSParameterAssert(ezsignfoldertypeCreateObjectV2Request);
+-(NSURLSessionTask*) ezsignfoldertypeCreateObjectV3WithEzsignfoldertypeCreateObjectV3Request: (EzsignfoldertypeCreateObjectV3Request*) ezsignfoldertypeCreateObjectV3Request
+    completionHandler: (void (^)(EzsignfoldertypeCreateObjectV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezsignfoldertypeCreateObjectV3Request' is set
+    if (ezsignfoldertypeCreateObjectV3Request == nil) {
+        NSParameterAssert(ezsignfoldertypeCreateObjectV3Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldertypeCreateObjectV2Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldertypeCreateObjectV3Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsignfoldertypeApiErrorDomain code:kObjectEzsignfoldertypeApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignfoldertype"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfoldertype"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 
@@ -105,7 +103,7 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignfoldertypeCreateObjectV2Request;
+    bodyParam = ezsignfoldertypeCreateObjectV3Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"
@@ -118,10 +116,10 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfoldertypeCreateObjectV2Response*"
+                              responseType: @"EzsignfoldertypeCreateObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfoldertypeCreateObjectV2Response*)data, error);
+                                    handler((EzsignfoldertypeCreateObjectV3Response*)data, error);
                                 }
                             }];
 }
@@ -131,13 +129,13 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignfoldertypeID  
 ///
-///  @param ezsignfoldertypeEditObjectV1Request  
+///  @param ezsignfoldertypeEditObjectV3Request  
 ///
-///  @returns EzsignfoldertypeEditObjectV1Response*
+///  @returns EzsignfoldertypeEditObjectV3Response*
 ///
--(NSURLSessionTask*) ezsignfoldertypeEditObjectV1WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    ezsignfoldertypeEditObjectV1Request: (EzsignfoldertypeEditObjectV1Request*) ezsignfoldertypeEditObjectV1Request
-    completionHandler: (void (^)(EzsignfoldertypeEditObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+    ezsignfoldertypeEditObjectV3Request: (EzsignfoldertypeEditObjectV3Request*) ezsignfoldertypeEditObjectV3Request
+    completionHandler: (void (^)(EzsignfoldertypeEditObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldertypeID' is set
     if (pkiEzsignfoldertypeID == nil) {
         NSParameterAssert(pkiEzsignfoldertypeID);
@@ -149,18 +147,18 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'ezsignfoldertypeEditObjectV1Request' is set
-    if (ezsignfoldertypeEditObjectV1Request == nil) {
-        NSParameterAssert(ezsignfoldertypeEditObjectV1Request);
+    // verify the required parameter 'ezsignfoldertypeEditObjectV3Request' is set
+    if (ezsignfoldertypeEditObjectV3Request == nil) {
+        NSParameterAssert(ezsignfoldertypeEditObjectV3Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldertypeEditObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldertypeEditObjectV3Request"] };
             NSError* error = [NSError errorWithDomain:kObjectEzsignfoldertypeApiErrorDomain code:kObjectEzsignfoldertypeApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignfoldertypeID != nil) {
@@ -188,7 +186,7 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignfoldertypeEditObjectV1Request;
+    bodyParam = ezsignfoldertypeEditObjectV3Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
@@ -201,93 +199,10 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfoldertypeEditObjectV1Response*"
+                              responseType: @"EzsignfoldertypeEditObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfoldertypeEditObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Edit an existing Ezsignfoldertype
-/// 
-///  @param pkiEzsignfoldertypeID  
-///
-///  @param ezsignfoldertypeEditObjectV2Request  
-///
-///  @returns EzsignfoldertypeEditObjectV2Response*
-///
--(NSURLSessionTask*) ezsignfoldertypeEditObjectV2WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    ezsignfoldertypeEditObjectV2Request: (EzsignfoldertypeEditObjectV2Request*) ezsignfoldertypeEditObjectV2Request
-    completionHandler: (void (^)(EzsignfoldertypeEditObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignfoldertypeID' is set
-    if (pkiEzsignfoldertypeID == nil) {
-        NSParameterAssert(pkiEzsignfoldertypeID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfoldertypeID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldertypeApiErrorDomain code:kObjectEzsignfoldertypeApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    // verify the required parameter 'ezsignfoldertypeEditObjectV2Request' is set
-    if (ezsignfoldertypeEditObjectV2Request == nil) {
-        NSParameterAssert(ezsignfoldertypeEditObjectV2Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldertypeEditObjectV2Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldertypeApiErrorDomain code:kObjectEzsignfoldertypeApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignfoldertypeID != nil) {
-        pathParams[@"pkiEzsignfoldertypeID"] = pkiEzsignfoldertypeID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignfoldertypeEditObjectV2Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"PUT"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsignfoldertypeEditObjectV2Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsignfoldertypeEditObjectV2Response*)data, error);
+                                    handler((EzsignfoldertypeEditObjectV3Response*)data, error);
                                 }
                             }];
 }
@@ -532,10 +447,10 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignfoldertypeID  
 ///
-///  @returns EzsignfoldertypeGetObjectV3Response*
+///  @returns EzsignfoldertypeGetObjectV4Response*
 ///
--(NSURLSessionTask*) ezsignfoldertypeGetObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    completionHandler: (void (^)(EzsignfoldertypeGetObjectV3Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) ezsignfoldertypeGetObjectV4WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+    completionHandler: (void (^)(EzsignfoldertypeGetObjectV4Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldertypeID' is set
     if (pkiEzsignfoldertypeID == nil) {
         NSParameterAssert(pkiEzsignfoldertypeID);
@@ -547,7 +462,7 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiEzsignfoldertypeID != nil) {
@@ -587,10 +502,10 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfoldertypeGetObjectV3Response*"
+                              responseType: @"EzsignfoldertypeGetObjectV4Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfoldertypeGetObjectV3Response*)data, error);
+                                    handler((EzsignfoldertypeGetObjectV4Response*)data, error);
                                 }
                             }];
 }

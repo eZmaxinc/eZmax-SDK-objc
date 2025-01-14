@@ -40,6 +40,9 @@
 /* The unique ID of the Webhook 
  */
 @property(nonatomic) NSNumber* pkiWebhookID;
+/* The unique ID of the Authenticationexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiAuthenticationexternalID;
 /* The description of the Webhook 
  */
 @property(nonatomic) NSString* sWebhookDescription;
@@ -76,6 +79,9 @@
 /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
  */
 @property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
+/* The description of the Authenticationexternal [optional]
+ */
+@property(nonatomic) NSString* sAuthenticationexternalDescription;
 
 @property(nonatomic) CommonAudit* objAudit;
 /* The concatenated string to describe the Webhook event [optional]
@@ -89,5 +95,8 @@
 /* Wheter the webhook received is a manual test or a real event 
  */
 @property(nonatomic) NSNumber* bWebhookTest;
+/* Wheter the webhook received is a manual test or a real event [optional]
+ */
+@property(nonatomic) NSString* eWebhookEmittype;
 
 @end

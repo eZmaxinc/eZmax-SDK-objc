@@ -1,15 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "EzsignfoldertypeCreateObjectV2Request.h"
-#import "EzsignfoldertypeCreateObjectV2Response.h"
-#import "EzsignfoldertypeEditObjectV1Request.h"
-#import "EzsignfoldertypeEditObjectV1Response.h"
-#import "EzsignfoldertypeEditObjectV2Request.h"
-#import "EzsignfoldertypeEditObjectV2Response.h"
+#import "EzsignfoldertypeCreateObjectV3Request.h"
+#import "EzsignfoldertypeCreateObjectV3Response.h"
+#import "EzsignfoldertypeEditObjectV3Request.h"
+#import "EzsignfoldertypeEditObjectV3Response.h"
 #import "EzsignfoldertypeGetAutocompleteV2Response.h"
 #import "EzsignfoldertypeGetListV1Response.h"
 #import "EzsignfoldertypeGetObjectV2Response.h"
-#import "EzsignfoldertypeGetObjectV3Response.h"
+#import "EzsignfoldertypeGetObjectV4Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -37,45 +35,29 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// Create a new Ezsignfoldertype
 /// The endpoint allows to create one or many elements at once.
 ///
-/// @param ezsignfoldertypeCreateObjectV2Request 
+/// @param ezsignfoldertypeCreateObjectV3Request 
 /// 
 ///  code:201 message:"Successful response"
 ///
-/// @return EzsignfoldertypeCreateObjectV2Response*
--(NSURLSessionTask*) ezsignfoldertypeCreateObjectV2WithEzsignfoldertypeCreateObjectV2Request: (EzsignfoldertypeCreateObjectV2Request*) ezsignfoldertypeCreateObjectV2Request
-    completionHandler: (void (^)(EzsignfoldertypeCreateObjectV2Response* output, NSError* error)) handler;
+/// @return EzsignfoldertypeCreateObjectV3Response*
+-(NSURLSessionTask*) ezsignfoldertypeCreateObjectV3WithEzsignfoldertypeCreateObjectV3Request: (EzsignfoldertypeCreateObjectV3Request*) ezsignfoldertypeCreateObjectV3Request
+    completionHandler: (void (^)(EzsignfoldertypeCreateObjectV3Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignfoldertype
 /// 
 ///
 /// @param pkiEzsignfoldertypeID 
-/// @param ezsignfoldertypeEditObjectV1Request 
+/// @param ezsignfoldertypeEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignfoldertypeEditObjectV1Response*
--(NSURLSessionTask*) ezsignfoldertypeEditObjectV1WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    ezsignfoldertypeEditObjectV1Request: (EzsignfoldertypeEditObjectV1Request*) ezsignfoldertypeEditObjectV1Request
-    completionHandler: (void (^)(EzsignfoldertypeEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Edit an existing Ezsignfoldertype
-/// 
-///
-/// @param pkiEzsignfoldertypeID 
-/// @param ezsignfoldertypeEditObjectV2Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsignfoldertypeEditObjectV2Response*
--(NSURLSessionTask*) ezsignfoldertypeEditObjectV2WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    ezsignfoldertypeEditObjectV2Request: (EzsignfoldertypeEditObjectV2Request*) ezsignfoldertypeEditObjectV2Request
-    completionHandler: (void (^)(EzsignfoldertypeEditObjectV2Response* output, NSError* error)) handler;
+/// @return EzsignfoldertypeEditObjectV3Response*
+-(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+    ezsignfoldertypeEditObjectV3Request: (EzsignfoldertypeEditObjectV3Request*) ezsignfoldertypeEditObjectV3Request
+    completionHandler: (void (^)(EzsignfoldertypeEditObjectV3Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsignfoldertypes and IDs
@@ -138,9 +120,9 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsignfoldertypeGetObjectV3Response*
--(NSURLSessionTask*) ezsignfoldertypeGetObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
-    completionHandler: (void (^)(EzsignfoldertypeGetObjectV3Response* output, NSError* error)) handler;
+/// @return EzsignfoldertypeGetObjectV4Response*
+-(NSURLSessionTask*) ezsignfoldertypeGetObjectV4WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+    completionHandler: (void (^)(EzsignfoldertypeGetObjectV4Response* output, NSError* error)) handler;
 
 
 

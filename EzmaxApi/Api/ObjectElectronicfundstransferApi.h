@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "ElectronicfundstransferGetCommunicationCountV1Response.h"
 #import "ElectronicfundstransferGetCommunicationListV1Response.h"
+#import "ElectronicfundstransferGetCommunicationrecipientsV1Response.h"
+#import "ElectronicfundstransferGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,6 +27,19 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiElectronicfundstransferID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return ElectronicfundstransferGetCommunicationCountV1Response*
+-(NSURLSessionTask*) electronicfundstransferGetCommunicationCountV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    completionHandler: (void (^)(ElectronicfundstransferGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -35,6 +51,32 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 /// @return ElectronicfundstransferGetCommunicationListV1Response*
 -(NSURLSessionTask*) electronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
     completionHandler: (void (^)(ElectronicfundstransferGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Electronicfundstransfer's Communicationrecipient
+/// 
+///
+/// @param pkiElectronicfundstransferID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return ElectronicfundstransferGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) electronicfundstransferGetCommunicationrecipientsV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    completionHandler: (void (^)(ElectronicfundstransferGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Electronicfundstransfer's Communicationsender
+/// 
+///
+/// @param pkiElectronicfundstransferID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return ElectronicfundstransferGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) electronicfundstransferGetCommunicationsendersV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    completionHandler: (void (^)(ElectronicfundstransferGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 

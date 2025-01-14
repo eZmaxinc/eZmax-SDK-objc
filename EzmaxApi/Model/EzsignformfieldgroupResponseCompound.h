@@ -59,7 +59,7 @@
 /* The step when the Ezsignsigner will be invited to fill the form fields 
  */
 @property(nonatomic) NSNumber* iEzsignformfieldgroupStep;
-/* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | [optional]
+/* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupDefaultvalue;
 /* The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup 
@@ -82,6 +82,9 @@
 /* A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
  */
 @property(nonatomic) NSString* sEzsignformfieldgroupRegexp;
+/* Description of validation rule. Show by signatory. [optional]
+ */
+@property(nonatomic) NSString* sEzsignformfieldgroupTextvalidationcustommessage;
 /* A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup [optional]
  */
 @property(nonatomic) NSString* tEzsignformfieldgroupTooltip;

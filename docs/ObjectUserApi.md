@@ -6,10 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**userCreateObjectV1**](ObjectUserApi.md#usercreateobjectv1) | **POST** /1/object/user | Create a new User
 [**userCreateObjectV2**](ObjectUserApi.md#usercreateobjectv2) | **POST** /2/object/user | Create a new User
+[**userEditColleaguesV2**](ObjectUserApi.md#usereditcolleaguesv2) | **PUT** /2/object/user/{pkiUserID}/editColleagues | Edit multiple Colleagues
 [**userEditObjectV1**](ObjectUserApi.md#usereditobjectv1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
 [**userEditPermissionsV1**](ObjectUserApi.md#usereditpermissionsv1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
 [**userGetApikeysV1**](ObjectUserApi.md#usergetapikeysv1) | **GET** /1/object/user/{pkiUserID}/getApikeys | Retrieve an existing User&#39;s Apikeys
 [**userGetAutocompleteV2**](ObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
+[**userGetColleaguesV2**](ObjectUserApi.md#usergetcolleaguesv2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues
 [**userGetEffectivePermissionsV1**](ObjectUserApi.md#usergeteffectivepermissionsv1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
 [**userGetListV1**](ObjectUserApi.md#usergetlistv1) | **GET** /1/object/user/getList | Retrieve User list
 [**userGetObjectV2**](ObjectUserApi.md#usergetobjectv2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
@@ -122,6 +124,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserCreateObjectV2Response***](UserCreateObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userEditColleaguesV2**
+```objc
+-(NSURLSessionTask*) userEditColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+    userEditColleaguesV2Request: (UserEditColleaguesV2Request*) userEditColleaguesV2Request
+        completionHandler: (void (^)(UserEditColleaguesV2Response* output, NSError* error)) handler;
+```
+
+Edit multiple Colleagues
+
+Using this endpoint, you can edit multiple Colleagues at the same time.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+UserEditColleaguesV2Request* userEditColleaguesV2Request = [[UserEditColleaguesV2Request alloc] init]; // 
+
+ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
+
+// Edit multiple Colleagues
+[apiInstance userEditColleaguesV2WithPkiUserID:pkiUserID
+              userEditColleaguesV2Request:userEditColleaguesV2Request
+          completionHandler: ^(UserEditColleaguesV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectUserApi->userEditColleaguesV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+ **userEditColleaguesV2Request** | [**UserEditColleaguesV2Request***](UserEditColleaguesV2Request.md)|  | 
+
+### Return type
+
+[**UserEditColleaguesV2Response***](UserEditColleaguesV2Response.md)
 
 ### Authorization
 
@@ -368,6 +431,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserGetAutocompleteV2Response***](UserGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userGetColleaguesV2**
+```objc
+-(NSURLSessionTask*) userGetColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
+        completionHandler: (void (^)(UserGetColleaguesV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing User's Colleagues
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+
+ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
+
+// Retrieve an existing User's Colleagues
+[apiInstance userGetColleaguesV2WithPkiUserID:pkiUserID
+          completionHandler: ^(UserGetColleaguesV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectUserApi->userGetColleaguesV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+
+### Return type
+
+[**UserGetColleaguesV2Response***](UserGetColleaguesV2Response.md)
 
 ### Authorization
 

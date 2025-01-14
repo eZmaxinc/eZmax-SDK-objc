@@ -12,6 +12,8 @@
 #import "WebhookGetObjectV2Response.h"
 #import "WebhookRegenerateApikeyV1Request.h"
 #import "WebhookRegenerateApikeyV1Response.h"
+#import "WebhookSendWebhookV1Request.h"
+#import "WebhookSendWebhookV1Response.h"
 #import "WebhookTestV1Response.h"
 #import "Api.h"
 
@@ -139,6 +141,19 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 -(NSURLSessionTask*) webhookRegenerateApikeyV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     webhookRegenerateApikeyV1Request: (WebhookRegenerateApikeyV1Request*) webhookRegenerateApikeyV1Request
     completionHandler: (void (^)(WebhookRegenerateApikeyV1Response* output, NSError* error)) handler;
+
+
+/// Emit a Webhook event
+/// 
+///
+/// @param webhookSendWebhookV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return WebhookSendWebhookV1Response*
+-(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
+    completionHandler: (void (^)(WebhookSendWebhookV1Response* output, NSError* error)) handler;
 
 
 /// Test the Webhook by calling the Url

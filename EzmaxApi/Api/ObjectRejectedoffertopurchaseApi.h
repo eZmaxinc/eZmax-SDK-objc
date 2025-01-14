@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "RejectedoffertopurchaseGetCommunicationCountV1Response.h"
 #import "RejectedoffertopurchaseGetCommunicationListV1Response.h"
+#import "RejectedoffertopurchaseGetCommunicationrecipientsV1Response.h"
+#import "RejectedoffertopurchaseGetCommunicationsendersV1Response.h"
 #import "Api.h"
 
 /**
@@ -24,6 +27,19 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiRejectedoffertopurchaseID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return RejectedoffertopurchaseGetCommunicationCountV1Response*
+-(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationCountV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    completionHandler: (void (^)(RejectedoffertopurchaseGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication list
 /// 
 ///
@@ -35,6 +51,32 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 /// @return RejectedoffertopurchaseGetCommunicationListV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationListV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
     completionHandler: (void (^)(RejectedoffertopurchaseGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Rejectedoffertopurchase's Communicationrecipient
+/// 
+///
+/// @param pkiRejectedoffertopurchaseID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return RejectedoffertopurchaseGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationrecipientsV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    completionHandler: (void (^)(RejectedoffertopurchaseGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Rejectedoffertopurchase's Communicationsender
+/// 
+///
+/// @param pkiRejectedoffertopurchaseID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return RejectedoffertopurchaseGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationsendersV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    completionHandler: (void (^)(RejectedoffertopurchaseGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 

@@ -6,11 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
+[**ezsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
+[**ezsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignatureattachmentv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
-[**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
 
@@ -128,6 +129,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignsignatureCreateObjectV3**
+```objc
+-(NSURLSessionTask*) ezsignsignatureCreateObjectV3WithEzsignsignatureCreateObjectV3Request: (EzsignsignatureCreateObjectV3Request*) ezsignsignatureCreateObjectV3Request
+        completionHandler: (void (^)(EzsignsignatureCreateObjectV3Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsignsignature
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsignsignatureCreateObjectV3Request* ezsignsignatureCreateObjectV3Request = [[EzsignsignatureCreateObjectV3Request alloc] init]; // 
+
+ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
+
+// Create a new Ezsignsignature
+[apiInstance ezsignsignatureCreateObjectV3WithEzsignsignatureCreateObjectV3Request:ezsignsignatureCreateObjectV3Request
+          completionHandler: ^(EzsignsignatureCreateObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureCreateObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignsignatureCreateObjectV3Request** | [**EzsignsignatureCreateObjectV3Request***](EzsignsignatureCreateObjectV3Request.md)|  | 
+
+### Return type
+
+[**EzsignsignatureCreateObjectV3Response***](EzsignsignatureCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignsignatureDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignsignatureDeleteObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
@@ -185,11 +243,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureEditObjectV1**
+# **ezsignsignatureEditObjectV2**
 ```objc
--(NSURLSessionTask*) ezsignsignatureEditObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV1Request: (EzsignsignatureEditObjectV1Request*) ezsignsignatureEditObjectV1Request
-        completionHandler: (void (^)(EzsignsignatureEditObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+    ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
+        completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignsignature
@@ -207,19 +265,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiEzsignsignatureID = @56; // 
-EzsignsignatureEditObjectV1Request* ezsignsignatureEditObjectV1Request = [[EzsignsignatureEditObjectV1Request alloc] init]; // 
+EzsignsignatureEditObjectV2Request* ezsignsignatureEditObjectV2Request = [[EzsignsignatureEditObjectV2Request alloc] init]; // 
 
 ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
 
 // Edit an existing Ezsignsignature
-[apiInstance ezsignsignatureEditObjectV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
-              ezsignsignatureEditObjectV1Request:ezsignsignatureEditObjectV1Request
-          completionHandler: ^(EzsignsignatureEditObjectV1Response* output, NSError* error) {
+[apiInstance ezsignsignatureEditObjectV2WithPkiEzsignsignatureID:pkiEzsignsignatureID
+              ezsignsignatureEditObjectV2Request:ezsignsignatureEditObjectV2Request
+          completionHandler: ^(EzsignsignatureEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureEditObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureEditObjectV2: %@", error);
                         }
                     }];
 ```
@@ -229,11 +287,11 @@ ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignatureID** | **NSNumber***|  | 
- **ezsignsignatureEditObjectV1Request** | [**EzsignsignatureEditObjectV1Request***](EzsignsignatureEditObjectV1Request.md)|  | 
+ **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request***](EzsignsignatureEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**EzsignsignatureEditObjectV1Response***](EzsignsignatureEditObjectV1Response.md)
+[**EzsignsignatureEditObjectV2Response***](EzsignsignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -354,10 +412,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureGetObjectV2**
+# **ezsignsignatureGetObjectV3**
 ```objc
--(NSURLSessionTask*) ezsignsignatureGetObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-        completionHandler: (void (^)(EzsignsignatureGetObjectV2Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezsignsignatureGetObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
+        completionHandler: (void (^)(EzsignsignatureGetObjectV3Response* output, NSError* error)) handler;
 ```
 
 Retrieve an existing Ezsignsignature
@@ -379,13 +437,13 @@ NSNumber* pkiEzsignsignatureID = @56; //
 ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
 
 // Retrieve an existing Ezsignsignature
-[apiInstance ezsignsignatureGetObjectV2WithPkiEzsignsignatureID:pkiEzsignsignatureID
-          completionHandler: ^(EzsignsignatureGetObjectV2Response* output, NSError* error) {
+[apiInstance ezsignsignatureGetObjectV3WithPkiEzsignsignatureID:pkiEzsignsignatureID
+          completionHandler: ^(EzsignsignatureGetObjectV3Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureGetObjectV2: %@", error);
+                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureGetObjectV3: %@", error);
                         }
                     }];
 ```
@@ -398,7 +456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureGetObjectV2Response***](EzsignsignatureGetObjectV2Response.md)
+[**EzsignsignatureGetObjectV3Response***](EzsignsignatureGetObjectV3Response.md)
 
 ### Authorization
 

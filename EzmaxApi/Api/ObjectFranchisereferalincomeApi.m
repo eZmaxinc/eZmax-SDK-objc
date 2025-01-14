@@ -1,6 +1,7 @@
 #import "ObjectFranchisereferalincomeApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponseErrorWrongFranchiseoffice.h"
 #import "FranchisereferalincomeCreateObjectV2Request.h"
 #import "FranchisereferalincomeCreateObjectV2Response.h"
 
