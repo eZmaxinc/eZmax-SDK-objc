@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **signatureDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) signatureDeleteObjectV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
-        completionHandler: (void (^)(SignatureDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Signature
@@ -96,7 +96,7 @@ ObjectSignatureApi*apiInstance = [[ObjectSignatureApi alloc] init];
 
 // Delete an existing Signature
 [apiInstance signatureDeleteObjectV1WithPkiSignatureID:pkiSignatureID
-          completionHandler: ^(SignatureDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureDeleteObjectV1Response***](SignatureDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) signatureEditObjectV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
     signatureEditObjectV1Request: (SignatureEditObjectV1Request*) signatureEditObjectV1Request
-        completionHandler: (void (^)(SignatureEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Signature
@@ -156,7 +156,7 @@ ObjectSignatureApi*apiInstance = [[ObjectSignatureApi alloc] init];
 // Edit an existing Signature
 [apiInstance signatureEditObjectV1WithPkiSignatureID:pkiSignatureID
               signatureEditObjectV1Request:signatureEditObjectV1Request
-          completionHandler: ^(SignatureEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureEditObjectV1Response***](SignatureEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

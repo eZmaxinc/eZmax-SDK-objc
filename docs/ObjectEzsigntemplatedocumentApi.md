@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Flatten
@@ -411,7 +411,7 @@ ObjectEzsigntemplatedocumentApi*apiInstance = [[ObjectEzsigntemplatedocumentApi 
 // Flatten
 [apiInstance ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID:pkiEzsigntemplatedocumentID
               body:body
-          completionHandler: ^(EzsigntemplatedocumentFlattenV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentFlattenV1Response***](EzsigntemplatedocumentFlattenV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatedocumentPatchObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     ezsigntemplatedocumentPatchObjectV1Request: (EzsigntemplatedocumentPatchObjectV1Request*) ezsigntemplatedocumentPatchObjectV1Request
-        completionHandler: (void (^)(EzsigntemplatedocumentPatchObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Patch an existing Ezsigntemplatedocument
@@ -818,7 +818,7 @@ ObjectEzsigntemplatedocumentApi*apiInstance = [[ObjectEzsigntemplatedocumentApi 
 // Patch an existing Ezsigntemplatedocument
 [apiInstance ezsigntemplatedocumentPatchObjectV1WithPkiEzsigntemplatedocumentID:pkiEzsigntemplatedocumentID
               ezsigntemplatedocumentPatchObjectV1Request:ezsigntemplatedocumentPatchObjectV1Request
-          completionHandler: ^(EzsigntemplatedocumentPatchObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentPatchObjectV1Response***](EzsigntemplatedocumentPatchObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

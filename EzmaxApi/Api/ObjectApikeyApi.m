@@ -4,7 +4,6 @@
 #import "ApikeyCreateObjectV2Request.h"
 #import "ApikeyCreateObjectV2Response.h"
 #import "ApikeyEditObjectV1Request.h"
-#import "ApikeyEditObjectV1Response.h"
 #import "ApikeyEditPermissionsV1Request.h"
 #import "ApikeyEditPermissionsV1Response.h"
 #import "ApikeyGenerateDelegatedCredentialsV1Request.h"
@@ -16,6 +15,7 @@
 #import "ApikeyGetSubnetsV1Response.h"
 #import "ApikeyRegenerateV1Request.h"
 #import "ApikeyRegenerateV1Response.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
@@ -138,11 +138,11 @@ NSInteger kObjectApikeyApiMissingParamErrorCode = 234513;
 ///
 ///  @param apikeyEditObjectV1Request  
 ///
-///  @returns ApikeyEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) apikeyEditObjectV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
     apikeyEditObjectV1Request: (ApikeyEditObjectV1Request*) apikeyEditObjectV1Request
-    completionHandler: (void (^)(ApikeyEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiApikeyID' is set
     if (pkiApikeyID == nil) {
         NSParameterAssert(pkiApikeyID);
@@ -206,10 +206,10 @@ NSInteger kObjectApikeyApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"ApikeyEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((ApikeyEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

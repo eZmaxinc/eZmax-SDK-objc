@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **ezsigndiscussionDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigndiscussionDeleteObjectV1WithPkiEzsigndiscussionID: (NSNumber*) pkiEzsigndiscussionID
-        completionHandler: (void (^)(EzsigndiscussionDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigndiscussion
@@ -92,7 +92,7 @@ ObjectEzsigndiscussionApi*apiInstance = [[ObjectEzsigndiscussionApi alloc] init]
 
 // Delete an existing Ezsigndiscussion
 [apiInstance ezsigndiscussionDeleteObjectV1WithPkiEzsigndiscussionID:pkiEzsigndiscussionID
-          completionHandler: ^(EzsigndiscussionDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndiscussionDeleteObjectV1Response***](EzsigndiscussionDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

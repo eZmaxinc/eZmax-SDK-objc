@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **discussionDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) discussionDeleteObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
-        completionHandler: (void (^)(DiscussionDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Discussion
@@ -94,7 +94,7 @@ ObjectDiscussionApi*apiInstance = [[ObjectDiscussionApi alloc] init];
 
 // Delete an existing Discussion
 [apiInstance discussionDeleteObjectV1WithPkiDiscussionID:pkiDiscussionID
-          completionHandler: ^(DiscussionDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DiscussionDeleteObjectV1Response***](DiscussionDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) discussionPatchObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionPatchObjectV1Request: (DiscussionPatchObjectV1Request*) discussionPatchObjectV1Request
-        completionHandler: (void (^)(DiscussionPatchObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Patch an existing Discussion
@@ -211,7 +211,7 @@ ObjectDiscussionApi*apiInstance = [[ObjectDiscussionApi alloc] init];
 // Patch an existing Discussion
 [apiInstance discussionPatchObjectV1WithPkiDiscussionID:pkiDiscussionID
               discussionPatchObjectV1Request:discussionPatchObjectV1Request
-          completionHandler: ^(DiscussionPatchObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DiscussionPatchObjectV1Response***](DiscussionPatchObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) discussionUpdateDiscussionreadstatusV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionUpdateDiscussionreadstatusV1Request: (DiscussionUpdateDiscussionreadstatusV1Request*) discussionUpdateDiscussionreadstatusV1Request
-        completionHandler: (void (^)(DiscussionUpdateDiscussionreadstatusV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Update the read status of the discussion
@@ -270,7 +270,7 @@ ObjectDiscussionApi*apiInstance = [[ObjectDiscussionApi alloc] init];
 // Update the read status of the discussion
 [apiInstance discussionUpdateDiscussionreadstatusV1WithPkiDiscussionID:pkiDiscussionID
               discussionUpdateDiscussionreadstatusV1Request:discussionUpdateDiscussionreadstatusV1Request
-          completionHandler: ^(DiscussionUpdateDiscussionreadstatusV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DiscussionUpdateDiscussionreadstatusV1Response***](DiscussionUpdateDiscussionreadstatusV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

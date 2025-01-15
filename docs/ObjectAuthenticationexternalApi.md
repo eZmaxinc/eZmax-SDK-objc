@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **authenticationexternalDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) authenticationexternalDeleteObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
-        completionHandler: (void (^)(AuthenticationexternalDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Authenticationexternal
@@ -96,7 +96,7 @@ ObjectAuthenticationexternalApi*apiInstance = [[ObjectAuthenticationexternalApi 
 
 // Delete an existing Authenticationexternal
 [apiInstance authenticationexternalDeleteObjectV1WithPkiAuthenticationexternalID:pkiAuthenticationexternalID
-          completionHandler: ^(AuthenticationexternalDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalDeleteObjectV1Response***](AuthenticationexternalDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) authenticationexternalEditObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     authenticationexternalEditObjectV1Request: (AuthenticationexternalEditObjectV1Request*) authenticationexternalEditObjectV1Request
-        completionHandler: (void (^)(AuthenticationexternalEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Authenticationexternal
@@ -156,7 +156,7 @@ ObjectAuthenticationexternalApi*apiInstance = [[ObjectAuthenticationexternalApi 
 // Edit an existing Authenticationexternal
 [apiInstance authenticationexternalEditObjectV1WithPkiAuthenticationexternalID:pkiAuthenticationexternalID
               authenticationexternalEditObjectV1Request:authenticationexternalEditObjectV1Request
-          completionHandler: ^(AuthenticationexternalEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalEditObjectV1Response***](AuthenticationexternalEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) authenticationexternalResetAuthorizationV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     body: (NSObject*) body
-        completionHandler: (void (^)(AuthenticationexternalResetAuthorizationV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Reset the Authenticationexternal authorization
@@ -416,7 +416,7 @@ ObjectAuthenticationexternalApi*apiInstance = [[ObjectAuthenticationexternalApi 
 // Reset the Authenticationexternal authorization
 [apiInstance authenticationexternalResetAuthorizationV1WithPkiAuthenticationexternalID:pkiAuthenticationexternalID
               body:body
-          completionHandler: ^(AuthenticationexternalResetAuthorizationV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthenticationexternalResetAuthorizationV1Response***](AuthenticationexternalResetAuthorizationV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

@@ -1,13 +1,12 @@
 #import "ObjectSupplyApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "SupplyCreateObjectV1Request.h"
 #import "SupplyCreateObjectV1Response.h"
-#import "SupplyDeleteObjectV1Response.h"
 #import "SupplyEditObjectV1Request.h"
-#import "SupplyEditObjectV1Response.h"
 #import "SupplyGetAutocompleteV2Response.h"
 #import "SupplyGetListV1Response.h"
 #import "SupplyGetObjectV2Response.h"
@@ -129,10 +128,10 @@ NSInteger kObjectSupplyApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiSupplyID The unique ID of the Supply 
 ///
-///  @returns SupplyDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) supplyDeleteObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
-    completionHandler: (void (^)(SupplyDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiSupplyID' is set
     if (pkiSupplyID == nil) {
         NSParameterAssert(pkiSupplyID);
@@ -184,10 +183,10 @@ NSInteger kObjectSupplyApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"SupplyDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((SupplyDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -199,11 +198,11 @@ NSInteger kObjectSupplyApiMissingParamErrorCode = 234513;
 ///
 ///  @param supplyEditObjectV1Request  
 ///
-///  @returns SupplyEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) supplyEditObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
     supplyEditObjectV1Request: (SupplyEditObjectV1Request*) supplyEditObjectV1Request
-    completionHandler: (void (^)(SupplyEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiSupplyID' is set
     if (pkiSupplyID == nil) {
         NSParameterAssert(pkiSupplyID);
@@ -267,10 +266,10 @@ NSInteger kObjectSupplyApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"SupplyEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((SupplyEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

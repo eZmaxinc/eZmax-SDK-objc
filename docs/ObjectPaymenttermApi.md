@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) paymenttermEditObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
     paymenttermEditObjectV1Request: (PaymenttermEditObjectV1Request*) paymenttermEditObjectV1Request
-        completionHandler: (void (^)(PaymenttermEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Paymentterm
@@ -97,7 +97,7 @@ ObjectPaymenttermApi*apiInstance = [[ObjectPaymenttermApi alloc] init];
 // Edit an existing Paymentterm
 [apiInstance paymenttermEditObjectV1WithPkiPaymenttermID:pkiPaymenttermID
               paymenttermEditObjectV1Request:paymenttermEditObjectV1Request
-          completionHandler: ^(PaymenttermEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymenttermEditObjectV1Response***](PaymenttermEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

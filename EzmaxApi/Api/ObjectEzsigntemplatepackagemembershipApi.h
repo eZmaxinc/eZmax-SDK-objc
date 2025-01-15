@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepackagemembershipCreateObjectV1Request.h"
 #import "EzsigntemplatepackagemembershipCreateObjectV1Response.h"
-#import "EzsigntemplatepackagemembershipDeleteObjectV1Response.h"
 #import "EzsigntemplatepackagemembershipGetObjectV2Response.h"
 #import "Api.h"
 
@@ -48,9 +48,9 @@ extern NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatepackagemembershipDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipDeleteObjectV1WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID
-    completionHandler: (void (^)(EzsigntemplatepackagemembershipDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatepackagemembership

@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CorsCreateObjectV1Request.h"
 #import "CorsCreateObjectV1Response.h"
-#import "CorsDeleteObjectV1Response.h"
 #import "CorsEditObjectV1Request.h"
-#import "CorsEditObjectV1Response.h"
 #import "CorsGetObjectV2Response.h"
 #import "Api.h"
 
@@ -49,9 +48,9 @@ extern NSInteger kObjectCorsApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CorsDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) corsDeleteObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
-    completionHandler: (void (^)(CorsDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Cors
@@ -64,10 +63,10 @@ extern NSInteger kObjectCorsApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CorsEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) corsEditObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
     corsEditObjectV1Request: (CorsEditObjectV1Request*) corsEditObjectV1Request
-    completionHandler: (void (^)(CorsEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Cors

@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **ezsignbulksendsignermappingDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignbulksendsignermappingDeleteObjectV1WithPkiEzsignbulksendsignermappingID: (NSNumber*) pkiEzsignbulksendsignermappingID
-        completionHandler: (void (^)(EzsignbulksendsignermappingDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignbulksendsignermapping
@@ -92,7 +92,7 @@ ObjectEzsignbulksendsignermappingApi*apiInstance = [[ObjectEzsignbulksendsignerm
 
 // Delete an existing Ezsignbulksendsignermapping
 [apiInstance ezsignbulksendsignermappingDeleteObjectV1WithPkiEzsignbulksendsignermappingID:pkiEzsignbulksendsignermappingID
-          completionHandler: ^(EzsignbulksendsignermappingDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendsignermappingDeleteObjectV1Response***](EzsignbulksendsignermappingDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

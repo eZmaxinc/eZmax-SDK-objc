@@ -42,7 +42,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) ezsignfolderArchiveV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsignfolderArchiveV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Archive the Ezsignfolder
@@ -67,7 +67,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Archive the Ezsignfolder
 [apiInstance ezsignfolderArchiveV1WithPkiEzsignfolderID:pkiEzsignfolderID
               body:body
-          completionHandler: ^(EzsignfolderArchiveV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderArchiveV1Response***](EzsignfolderArchiveV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 # **ezsignfolderDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderDeleteObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-        completionHandler: (void (^)(EzsignfolderDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignfolder
@@ -353,7 +353,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 
 // Delete an existing Ezsignfolder
 [apiInstance ezsignfolderDeleteObjectV1WithPkiEzsignfolderID:pkiEzsignfolderID
-          completionHandler: ^(EzsignfolderDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderDeleteObjectV1Response***](EzsignfolderDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 # **ezsignfolderDisposeEzsignfoldersV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderDisposeEzsignfoldersV1WithEzsignfolderDisposeEzsignfoldersV1Request: (EzsignfolderDisposeEzsignfoldersV1Request*) ezsignfolderDisposeEzsignfoldersV1Request
-        completionHandler: (void (^)(EzsignfolderDisposeEzsignfoldersV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Dispose Ezsignfolders
@@ -410,7 +410,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 
 // Dispose Ezsignfolders
 [apiInstance ezsignfolderDisposeEzsignfoldersV1WithEzsignfolderDisposeEzsignfoldersV1Request:ezsignfolderDisposeEzsignfoldersV1Request
-          completionHandler: ^(EzsignfolderDisposeEzsignfoldersV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderDisposeEzsignfoldersV1Response***](EzsignfolderDisposeEzsignfoldersV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderDisposeV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsignfolderDisposeV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Dispose the Ezsignfolder
@@ -470,7 +470,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Dispose the Ezsignfolder
 [apiInstance ezsignfolderDisposeV1WithPkiEzsignfolderID:pkiEzsignfolderID
               body:body
-          completionHandler: ^(EzsignfolderDisposeV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderDisposeV1Response***](EzsignfolderDisposeV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderEditObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderEditObjectV3Request: (EzsignfolderEditObjectV3Request*) ezsignfolderEditObjectV3Request
-        completionHandler: (void (^)(EzsignfolderEditObjectV3Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignfolder
@@ -531,7 +531,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Edit an existing Ezsignfolder
 [apiInstance ezsignfolderEditObjectV3WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderEditObjectV3Request:ezsignfolderEditObjectV3Request
-          completionHandler: ^(EzsignfolderEditObjectV3Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderEditObjectV3Response***](EzsignfolderEditObjectV3Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderEndPrematurelyV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsignfolderEndPrematurelyV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 End prematurely
@@ -592,7 +592,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // End prematurely
 [apiInstance ezsignfolderEndPrematurelyV1WithPkiEzsignfolderID:pkiEzsignfolderID
               body:body
-          completionHandler: ^(EzsignfolderEndPrematurelyV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderEndPrematurelyV1Response***](EzsignfolderEndPrematurelyV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1619,7 +1619,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderReorderV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderReorderV1Request: (EzsignfolderReorderV1Request*) ezsignfolderReorderV1Request
-        completionHandler: (void (^)(EzsignfolderReorderV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Reorder Ezsigndocuments in the Ezsignfolder
@@ -1642,7 +1642,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Reorder Ezsigndocuments in the Ezsignfolder
 [apiInstance ezsignfolderReorderV1WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderReorderV1Request:ezsignfolderReorderV1Request
-          completionHandler: ^(EzsignfolderReorderV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1661,7 +1661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderReorderV1Response***](EzsignfolderReorderV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1678,7 +1678,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderReorderV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderReorderV2Request: (EzsignfolderReorderV2Request*) ezsignfolderReorderV2Request
-        completionHandler: (void (^)(EzsignfolderReorderV2Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Reorder Ezsigndocuments in the Ezsignfolder
@@ -1701,7 +1701,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Reorder Ezsigndocuments in the Ezsignfolder
 [apiInstance ezsignfolderReorderV2WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderReorderV2Request:ezsignfolderReorderV2Request
-          completionHandler: ^(EzsignfolderReorderV2Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1720,7 +1720,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderReorderV2Response***](EzsignfolderReorderV2Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1737,7 +1737,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderSendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderSendV1Request: (EzsignfolderSendV1Request*) ezsignfolderSendV1Request
-        completionHandler: (void (^)(EzsignfolderSendV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Send the Ezsignfolder to the signatories for signature
@@ -1762,7 +1762,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Send the Ezsignfolder to the signatories for signature
 [apiInstance ezsignfolderSendV1WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderSendV1Request:ezsignfolderSendV1Request
-          completionHandler: ^(EzsignfolderSendV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1781,7 +1781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderSendV1Response***](EzsignfolderSendV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1798,7 +1798,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderSendV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderSendV3Request: (EzsignfolderSendV3Request*) ezsignfolderSendV3Request
-        completionHandler: (void (^)(EzsignfolderSendV3Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Send the Ezsignfolder to the signatories for signature
@@ -1823,7 +1823,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Send the Ezsignfolder to the signatories for signature
 [apiInstance ezsignfolderSendV3WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderSendV3Request:ezsignfolderSendV3Request
-          completionHandler: ^(EzsignfolderSendV3Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1842,7 +1842,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderSendV3Response***](EzsignfolderSendV3Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1859,7 +1859,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsignfolderUnsendV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Unsend the Ezsignfolder
@@ -1884,7 +1884,7 @@ ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 // Unsend the Ezsignfolder
 [apiInstance ezsignfolderUnsendV1WithPkiEzsignfolderID:pkiEzsignfolderID
               body:body
-          completionHandler: ^(EzsignfolderUnsendV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1903,7 +1903,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfolderUnsendV1Response***](EzsignfolderUnsendV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

@@ -1,12 +1,11 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplateCopyV1Request.h"
 #import "EzsigntemplateCopyV1Response.h"
 #import "EzsigntemplateCreateObjectV3Request.h"
 #import "EzsigntemplateCreateObjectV3Response.h"
-#import "EzsigntemplateDeleteObjectV1Response.h"
 #import "EzsigntemplateEditObjectV3Request.h"
-#import "EzsigntemplateEditObjectV3Response.h"
 #import "EzsigntemplateGetAutocompleteV2Response.h"
 #import "EzsigntemplateGetListV1Response.h"
 #import "EzsigntemplateGetObjectV3Response.h"
@@ -69,9 +68,9 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplateDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplateDeleteObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-    completionHandler: (void (^)(EzsigntemplateDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsigntemplate
@@ -84,10 +83,10 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplateEditObjectV3Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplateEditObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
     ezsigntemplateEditObjectV3Request: (EzsigntemplateEditObjectV3Request*) ezsigntemplateEditObjectV3Request
-    completionHandler: (void (^)(EzsigntemplateEditObjectV3Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigntemplates and IDs

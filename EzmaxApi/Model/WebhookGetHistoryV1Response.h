@@ -16,13 +16,10 @@
 
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "WebhookGetHistoryV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol WebhookGetHistoryV1ResponseMPayload;
-@class WebhookGetHistoryV1ResponseMPayload;
 
 
 
@@ -35,7 +32,8 @@
 @property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
-
-@property(nonatomic) WebhookGetHistoryV1ResponseMPayload* mPayload;
+/* Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory 
+ */
+@property(nonatomic) NSObject* mPayload;
 
 @end

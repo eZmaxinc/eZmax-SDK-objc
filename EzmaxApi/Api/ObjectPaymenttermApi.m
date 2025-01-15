@@ -1,12 +1,12 @@
 #import "ObjectPaymenttermApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "PaymenttermCreateObjectV1Request.h"
 #import "PaymenttermCreateObjectV1Response.h"
 #import "PaymenttermEditObjectV1Request.h"
-#import "PaymenttermEditObjectV1Response.h"
 #import "PaymenttermGetAutocompleteV2Response.h"
 #import "PaymenttermGetListV1Response.h"
 #import "PaymenttermGetObjectV2Response.h"
@@ -130,11 +130,11 @@ NSInteger kObjectPaymenttermApiMissingParamErrorCode = 234513;
 ///
 ///  @param paymenttermEditObjectV1Request  
 ///
-///  @returns PaymenttermEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) paymenttermEditObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
     paymenttermEditObjectV1Request: (PaymenttermEditObjectV1Request*) paymenttermEditObjectV1Request
-    completionHandler: (void (^)(PaymenttermEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiPaymenttermID' is set
     if (pkiPaymenttermID == nil) {
         NSParameterAssert(pkiPaymenttermID);
@@ -198,10 +198,10 @@ NSInteger kObjectPaymenttermApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"PaymenttermEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((PaymenttermEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

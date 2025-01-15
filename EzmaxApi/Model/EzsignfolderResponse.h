@@ -15,14 +15,11 @@
 
 
 #import "CommonAudit.h"
-#import "CustomEzsignfoldertypeResponse.h"
 #import "FieldEEzsignfolderCompletion.h"
 #import "FieldEEzsignfolderSendreminderfrequency.h"
 #import "FieldEEzsignfolderStep.h"
 @protocol CommonAudit;
 @class CommonAudit;
-@protocol CustomEzsignfoldertypeResponse;
-@class CustomEzsignfoldertypeResponse;
 @protocol FieldEEzsignfolderCompletion;
 @class FieldEEzsignfolderCompletion;
 @protocol FieldEEzsignfolderSendreminderfrequency;
@@ -43,8 +40,9 @@
 /* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-
-@property(nonatomic) CustomEzsignfoldertypeResponse* objEzsignfoldertype;
+/* A Custom Ezsignfoldertype Object [optional]
+ */
+@property(nonatomic) NSObject* objEzsignfoldertype;
 /* The unique ID of the Timezone [optional]
  */
 @property(nonatomic) NSNumber* fkiTimezoneID;

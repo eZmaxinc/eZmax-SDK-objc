@@ -1,12 +1,11 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsignergroupCreateObjectV1Request.h"
 #import "EzsignsignergroupCreateObjectV1Response.h"
-#import "EzsignsignergroupDeleteObjectV1Response.h"
 #import "EzsignsignergroupEditEzsignsignergroupmembershipsV1Request.h"
 #import "EzsignsignergroupEditEzsignsignergroupmembershipsV1Response.h"
 #import "EzsignsignergroupEditObjectV1Request.h"
-#import "EzsignsignergroupEditObjectV1Response.h"
 #import "EzsignsignergroupGetEzsignsignergroupmembershipsV1Response.h"
 #import "EzsignsignergroupGetObjectV2Response.h"
 #import "Api.h"
@@ -52,9 +51,9 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsignsignergroupDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignsignergroupDeleteObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
-    completionHandler: (void (^)(EzsignsignergroupDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsignsignergroupmemberships
@@ -82,10 +81,10 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsignsignergroupEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignsignergroupEditObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
     ezsignsignergroupEditObjectV1Request: (EzsignsignergroupEditObjectV1Request*) ezsignsignergroupEditObjectV1Request
-    completionHandler: (void (^)(EzsignsignergroupEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignergroup's Ezsignsignergroupmemberships

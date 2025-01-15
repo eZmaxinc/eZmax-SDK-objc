@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DomainCreateObjectV1Request.h"
 #import "DomainCreateObjectV1Response.h"
-#import "DomainDeleteObjectV1Response.h"
 #import "DomainGetListV1Response.h"
 #import "DomainGetObjectV2Response.h"
 #import "HeaderAcceptLanguage.h"
@@ -49,9 +49,9 @@ extern NSInteger kObjectDomainApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return DomainDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) domainDeleteObjectV1WithPkiDomainID: (NSNumber*) pkiDomainID
-    completionHandler: (void (^)(DomainDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Domain list

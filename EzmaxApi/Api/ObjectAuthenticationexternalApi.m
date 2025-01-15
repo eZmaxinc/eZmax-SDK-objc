@@ -3,13 +3,11 @@
 #import "ApiClient.h"
 #import "AuthenticationexternalCreateObjectV1Request.h"
 #import "AuthenticationexternalCreateObjectV1Response.h"
-#import "AuthenticationexternalDeleteObjectV1Response.h"
 #import "AuthenticationexternalEditObjectV1Request.h"
-#import "AuthenticationexternalEditObjectV1Response.h"
 #import "AuthenticationexternalGetAutocompleteV2Response.h"
 #import "AuthenticationexternalGetListV1Response.h"
 #import "AuthenticationexternalGetObjectV2Response.h"
-#import "AuthenticationexternalResetAuthorizationV1Response.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
@@ -130,10 +128,10 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal 
 ///
-///  @returns AuthenticationexternalDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) authenticationexternalDeleteObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
-    completionHandler: (void (^)(AuthenticationexternalDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == nil) {
         NSParameterAssert(pkiAuthenticationexternalID);
@@ -185,10 +183,10 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"AuthenticationexternalDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((AuthenticationexternalDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -200,11 +198,11 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
 ///
 ///  @param authenticationexternalEditObjectV1Request  
 ///
-///  @returns AuthenticationexternalEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) authenticationexternalEditObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     authenticationexternalEditObjectV1Request: (AuthenticationexternalEditObjectV1Request*) authenticationexternalEditObjectV1Request
-    completionHandler: (void (^)(AuthenticationexternalEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == nil) {
         NSParameterAssert(pkiAuthenticationexternalID);
@@ -268,10 +266,10 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"AuthenticationexternalEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((AuthenticationexternalEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -518,11 +516,11 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns AuthenticationexternalResetAuthorizationV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) authenticationexternalResetAuthorizationV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     body: (NSObject*) body
-    completionHandler: (void (^)(AuthenticationexternalResetAuthorizationV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiAuthenticationexternalID' is set
     if (pkiAuthenticationexternalID == nil) {
         NSParameterAssert(pkiAuthenticationexternalID);
@@ -586,10 +584,10 @@ NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"AuthenticationexternalResetAuthorizationV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((AuthenticationexternalResetAuthorizationV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

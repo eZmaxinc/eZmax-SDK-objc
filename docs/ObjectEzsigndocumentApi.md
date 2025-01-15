@@ -44,7 +44,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentApplyEzsigntemplateV1Request: (EzsigndocumentApplyEzsigntemplateV1Request*) ezsigndocumentApplyEzsigntemplateV1Request
-        completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Apply an Ezsigntemplate to the Ezsigndocument.
@@ -69,7 +69,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Apply an Ezsigntemplate to the Ezsigndocument.
 [apiInstance ezsigndocumentApplyEzsigntemplateV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               ezsigndocumentApplyEzsigntemplateV1Request:ezsigndocumentApplyEzsigntemplateV1Request
-          completionHandler: ^(EzsigndocumentApplyEzsigntemplateV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentApplyEzsigntemplateV1Response***](EzsigndocumentApplyEzsigntemplateV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentDeclineToSignV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentDeclineToSignV1Request: (EzsigndocumentDeclineToSignV1Request*) ezsigndocumentDeclineToSignV1Request
-        completionHandler: (void (^)(EzsigndocumentDeclineToSignV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Decline to sign
@@ -484,7 +484,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Decline to sign
 [apiInstance ezsigndocumentDeclineToSignV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               ezsigndocumentDeclineToSignV1Request:ezsigndocumentDeclineToSignV1Request
-          completionHandler: ^(EzsigndocumentDeclineToSignV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentDeclineToSignV1Response***](EzsigndocumentDeclineToSignV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 # **ezsigndocumentDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-        completionHandler: (void (^)(EzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigndocument
@@ -542,7 +542,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 
 // Delete an existing Ezsigndocument
 [apiInstance ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
-          completionHandler: ^(EzsigndocumentDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentDeleteObjectV1Response***](EzsigndocumentDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -821,7 +821,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 End prematurely
@@ -846,7 +846,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // End prematurely
 [apiInstance ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               body:body
-          completionHandler: ^(EzsigndocumentEndPrematurelyV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -865,7 +865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentEndPrematurelyV1Response***](EzsigndocumentEndPrematurelyV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -943,7 +943,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentFlattenV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsigndocumentFlattenV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Flatten
@@ -968,7 +968,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Flatten
 [apiInstance ezsigndocumentFlattenV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               body:body
-          completionHandler: ^(EzsigndocumentFlattenV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -987,7 +987,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentFlattenV1Response***](EzsigndocumentFlattenV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1865,7 +1865,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentPatchObjectV1Request: (EzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
-        completionHandler: (void (^)(EzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Patch an existing Ezsigndocument
@@ -1890,7 +1890,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Patch an existing Ezsigndocument
 [apiInstance ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               ezsigndocumentPatchObjectV1Request:ezsigndocumentPatchObjectV1Request
-          completionHandler: ^(EzsigndocumentPatchObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1909,7 +1909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentPatchObjectV1Response***](EzsigndocumentPatchObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1926,7 +1926,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentSubmitEzsignformV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentSubmitEzsignformV1Request: (EzsigndocumentSubmitEzsignformV1Request*) ezsigndocumentSubmitEzsignformV1Request
-        completionHandler: (void (^)(EzsigndocumentSubmitEzsignformV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Submit the Ezsignform
@@ -1951,7 +1951,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Submit the Ezsignform
 [apiInstance ezsigndocumentSubmitEzsignformV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               ezsigndocumentSubmitEzsignformV1Request:ezsigndocumentSubmitEzsignformV1Request
-          completionHandler: ^(EzsigndocumentSubmitEzsignformV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -1970,7 +1970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentSubmitEzsignformV1Response***](EzsigndocumentSubmitEzsignformV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -1987,7 +1987,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigndocumentUnsendV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsigndocumentUnsendV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Unsend the Ezsigndocument
@@ -2012,7 +2012,7 @@ ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
 // Unsend the Ezsigndocument
 [apiInstance ezsigndocumentUnsendV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
               body:body
-          completionHandler: ^(EzsigndocumentUnsendV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -2031,7 +2031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigndocumentUnsendV1Response***](EzsigndocumentUnsendV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

@@ -1,20 +1,20 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorTooManyRequests.h"
+#import "CustomEWebhookEzsignevent.h"
+#import "FieldEWebhookManagementevent.h"
+#import "FieldEWebhookModule.h"
 #import "HeaderAcceptLanguage.h"
 #import "WebhookCreateObjectV2Request.h"
 #import "WebhookCreateObjectV2Response.h"
-#import "WebhookDeleteObjectV1Response.h"
 #import "WebhookEditObjectV1Request.h"
-#import "WebhookEditObjectV1Response.h"
 #import "WebhookGetHistoryV1Response.h"
 #import "WebhookGetListV1Response.h"
 #import "WebhookGetObjectV2Response.h"
 #import "WebhookRegenerateApikeyV1Request.h"
 #import "WebhookRegenerateApikeyV1Response.h"
 #import "WebhookSendWebhookV1Request.h"
-#import "WebhookSendWebhookV1Response.h"
-#import "WebhookTestV1Response.h"
 #import "Api.h"
 
 /**
@@ -58,9 +58,9 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return WebhookDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) webhookDeleteObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
-    completionHandler: (void (^)(WebhookDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Webhook
@@ -72,10 +72,10 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return WebhookEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) webhookEditObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     webhookEditObjectV1Request: (WebhookEditObjectV1Request*) webhookEditObjectV1Request
-    completionHandler: (void (^)(WebhookEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve the logs for recent Webhook calls
@@ -151,9 +151,9 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return WebhookSendWebhookV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
-    completionHandler: (void (^)(WebhookSendWebhookV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Test the Webhook by calling the Url
@@ -165,10 +165,10 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return WebhookTestV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     body: (NSObject*) body
-    completionHandler: (void (^)(WebhookTestV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 

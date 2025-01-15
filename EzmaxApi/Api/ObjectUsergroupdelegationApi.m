@@ -1,12 +1,11 @@
 #import "ObjectUsergroupdelegationApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "UsergroupdelegationCreateObjectV1Request.h"
 #import "UsergroupdelegationCreateObjectV1Response.h"
-#import "UsergroupdelegationDeleteObjectV1Response.h"
 #import "UsergroupdelegationEditObjectV1Request.h"
-#import "UsergroupdelegationEditObjectV1Response.h"
 #import "UsergroupdelegationGetObjectV2Response.h"
 
 
@@ -126,10 +125,10 @@ NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation 
 ///
-///  @returns UsergroupdelegationDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) usergroupdelegationDeleteObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
-    completionHandler: (void (^)(UsergroupdelegationDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupdelegationID' is set
     if (pkiUsergroupdelegationID == nil) {
         NSParameterAssert(pkiUsergroupdelegationID);
@@ -181,10 +180,10 @@ NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UsergroupdelegationDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UsergroupdelegationDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -196,11 +195,11 @@ NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode = 234513;
 ///
 ///  @param usergroupdelegationEditObjectV1Request  
 ///
-///  @returns UsergroupdelegationEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) usergroupdelegationEditObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
     usergroupdelegationEditObjectV1Request: (UsergroupdelegationEditObjectV1Request*) usergroupdelegationEditObjectV1Request
-    completionHandler: (void (^)(UsergroupdelegationEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupdelegationID' is set
     if (pkiUsergroupdelegationID == nil) {
         NSParameterAssert(pkiUsergroupdelegationID);
@@ -264,10 +263,10 @@ NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UsergroupdelegationEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UsergroupdelegationEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

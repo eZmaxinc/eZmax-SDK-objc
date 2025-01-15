@@ -1,16 +1,14 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorCreditcardValidation.h"
 #import "CreditcardclientCreateObjectV1Request.h"
 #import "CreditcardclientCreateObjectV1Response.h"
-#import "CreditcardclientDeleteObjectV1Response.h"
 #import "CreditcardclientEditObjectV1Request.h"
-#import "CreditcardclientEditObjectV1Response.h"
 #import "CreditcardclientGetAutocompleteV2Response.h"
 #import "CreditcardclientGetListV1Response.h"
 #import "CreditcardclientGetObjectV2Response.h"
 #import "CreditcardclientPatchObjectV1Request.h"
-#import "CreditcardclientPatchObjectV1Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -56,9 +54,9 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CreditcardclientDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) creditcardclientDeleteObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
-    completionHandler: (void (^)(CreditcardclientDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Creditcardclient
@@ -71,10 +69,10 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
-/// @return CreditcardclientEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) creditcardclientEditObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientEditObjectV1Request: (CreditcardclientEditObjectV1Request*) creditcardclientEditObjectV1Request
-    completionHandler: (void (^)(CreditcardclientEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Creditcardclients and IDs
@@ -139,10 +137,10 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CreditcardclientPatchObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) creditcardclientPatchObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientPatchObjectV1Request: (CreditcardclientPatchObjectV1Request*) creditcardclientPatchObjectV1Request
-    completionHandler: (void (^)(CreditcardclientPatchObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 

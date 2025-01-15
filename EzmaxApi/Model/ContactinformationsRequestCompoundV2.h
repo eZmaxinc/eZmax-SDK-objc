@@ -14,21 +14,21 @@
 */
 
 
-#import "AddressRequestCompound.h"
-#import "EmailRequestCompound.h"
+#import "AddressRequest.h"
+#import "EmailRequest.h"
 #import "FieldEContactinformationsType.h"
-#import "PhoneRequestCompound.h"
-#import "WebsiteRequestCompound.h"
-@protocol AddressRequestCompound;
-@class AddressRequestCompound;
-@protocol EmailRequestCompound;
-@class EmailRequestCompound;
+#import "PhoneRequest.h"
+#import "WebsiteRequest.h"
+@protocol AddressRequest;
+@class AddressRequest;
+@protocol EmailRequest;
+@class EmailRequest;
 @protocol FieldEContactinformationsType;
 @class FieldEContactinformationsType;
-@protocol PhoneRequestCompound;
-@class PhoneRequestCompound;
-@protocol WebsiteRequestCompound;
-@class WebsiteRequestCompound;
+@protocol PhoneRequest;
+@class PhoneRequest;
+@protocol WebsiteRequest;
+@class WebsiteRequest;
 
 
 

@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsigndocumentRequestCompound.h"
-@protocol EzsigndocumentRequestCompound;
-@class EzsigndocumentRequestCompound;
+#import "EzsigndocumentRequest.h"
+@protocol EzsigndocumentRequest;
+@class EzsigndocumentRequest;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface EzsigndocumentEditObjectV1Request : Object
 
-
-@property(nonatomic) EzsigndocumentRequestCompound* objEzsigndocument;
+/* An Ezsigndocument Object and children to create a complete structure 
+ */
+@property(nonatomic) EzsigndocumentRequest* objEzsigndocument;
 
 @end

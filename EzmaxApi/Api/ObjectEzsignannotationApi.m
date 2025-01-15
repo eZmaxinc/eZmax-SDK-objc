@@ -1,12 +1,11 @@
 #import "ObjectEzsignannotationApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignannotationCreateObjectV1Request.h"
 #import "EzsignannotationCreateObjectV1Response.h"
-#import "EzsignannotationDeleteObjectV1Response.h"
 #import "EzsignannotationEditObjectV1Request.h"
-#import "EzsignannotationEditObjectV1Response.h"
 #import "EzsignannotationGetObjectV2Response.h"
 
 
@@ -126,10 +125,10 @@ NSInteger kObjectEzsignannotationApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignannotationID  
 ///
-///  @returns EzsignannotationDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignannotationDeleteObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
-    completionHandler: (void (^)(EzsignannotationDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignannotationID' is set
     if (pkiEzsignannotationID == nil) {
         NSParameterAssert(pkiEzsignannotationID);
@@ -181,10 +180,10 @@ NSInteger kObjectEzsignannotationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignannotationDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignannotationDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -196,11 +195,11 @@ NSInteger kObjectEzsignannotationApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignannotationEditObjectV1Request  
 ///
-///  @returns EzsignannotationEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignannotationEditObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
     ezsignannotationEditObjectV1Request: (EzsignannotationEditObjectV1Request*) ezsignannotationEditObjectV1Request
-    completionHandler: (void (^)(EzsignannotationEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignannotationID' is set
     if (pkiEzsignannotationID == nil) {
         NSParameterAssert(pkiEzsignannotationID);
@@ -264,10 +263,10 @@ NSInteger kObjectEzsignannotationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignannotationEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignannotationEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

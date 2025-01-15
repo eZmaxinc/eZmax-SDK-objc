@@ -14,14 +14,11 @@
 */
 
 
-#import "CustomBrandingResponse.h"
 #import "FieldESystemconfigurationEzsign.h"
 #import "FieldESystemconfigurationEzsignofficeplan.h"
 #import "FieldESystemconfigurationLanguage1.h"
 #import "FieldESystemconfigurationLanguage2.h"
 #import "FieldESystemconfigurationNewexternaluseraction.h"
-@protocol CustomBrandingResponse;
-@class CustomBrandingResponse;
 @protocol FieldESystemconfigurationEzsign;
 @class FieldESystemconfigurationEzsign;
 @protocol FieldESystemconfigurationEzsignofficeplan;
@@ -83,7 +80,8 @@
 /* The end date where the system will be in read only [optional]
  */
 @property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationend;
-
-@property(nonatomic) CustomBrandingResponse* objBranding;
+/* A Custom Branding Object [optional]
+ */
+@property(nonatomic) NSObject* objBranding;
 
 @end
