@@ -14,28 +14,28 @@
 */
 
 
+#import "ActivesessionGetCurrentV2ResponseMPayload.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "WebhookGetHistoryV1ResponseMPayload.h"
+@protocol ActivesessionGetCurrentV2ResponseMPayload;
+@class ActivesessionGetCurrentV2ResponseMPayload;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol WebhookGetHistoryV1ResponseMPayload;
-@class WebhookGetHistoryV1ResponseMPayload;
 
 
 
-@protocol WebhookGetHistoryV1Response
+@protocol ActivesessionGetCurrentV2Response
 @end
 
-@interface WebhookGetHistoryV1Response : Object
+@interface ActivesessionGetCurrentV2Response : Object
 
 
 @property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
 
-@property(nonatomic) WebhookGetHistoryV1ResponseMPayload* mPayload;
+@property(nonatomic) ActivesessionGetCurrentV2ResponseMPayload* mPayload;
 
 @end

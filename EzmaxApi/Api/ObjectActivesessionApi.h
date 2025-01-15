@@ -2,6 +2,7 @@
 #import "ActivesessionGenerateFederationTokenV1Request.h"
 #import "ActivesessionGenerateFederationTokenV1Response.h"
 #import "ActivesessionGetCurrentV1Response.h"
+#import "ActivesessionGetCurrentV2Response.h"
 #import "ActivesessionGetListV1Response.h"
 #import "CommonResponseError.h"
 #import "CommonResponseRedirectSSecretquestionTextX.h"
@@ -58,6 +59,24 @@ extern NSInteger kObjectActivesessionApiMissingParamErrorCode;
 /// @return ActivesessionGetCurrentV1Response*
 -(NSURLSessionTask*) activesessionGetCurrentV1WithCompletionHandler: 
     (void (^)(ActivesessionGetCurrentV1Response* output, NSError* error)) handler;
+
+
+/// Get Current Activesession
+/// Retrieve the details about the current activesession
+///
+/// 
+///  code:200 message:"OK",
+///  code:350 message:"The user must authenticate before he can continue with this request",
+///  code:351 message:"The user is configured with 2FA and needs to validate its phone number before he can continue with this request",
+///  code:352 message:"The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request",
+///  code:353 message:"The user must accept clauses before he can continue with this request",
+///  code:354 message:"The user's computer must be validated before he can continue with this request",
+///  code:355 message:"The user must change its password before he can continue with this request",
+///  code:356 message:"The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request"
+///
+/// @return ActivesessionGetCurrentV2Response*
+-(NSURLSessionTask*) activesessionGetCurrentV2WithCompletionHandler: 
+    (void (^)(ActivesessionGetCurrentV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve Activesession list

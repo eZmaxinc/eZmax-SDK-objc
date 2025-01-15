@@ -48,6 +48,8 @@ Import the following:
 #import <EzmaxApi/ActivesessionGenerateFederationTokenV1ResponseMPayload.h>
 #import <EzmaxApi/ActivesessionGetCurrentV1Response.h>
 #import <EzmaxApi/ActivesessionGetCurrentV1ResponseMPayload.h>
+#import <EzmaxApi/ActivesessionGetCurrentV2Response.h>
+#import <EzmaxApi/ActivesessionGetCurrentV2ResponseMPayload.h>
 #import <EzmaxApi/ActivesessionGetListV1Response.h>
 #import <EzmaxApi/ActivesessionGetListV1ResponseMPayload.h>
 #import <EzmaxApi/ActivesessionListElement.h>
@@ -1834,6 +1836,7 @@ Class | Method | HTTP request | Description
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGenerateFederationTokenV1**](docs/ObjectActivesessionApi.md#activesessiongeneratefederationtokenv1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+*ObjectActivesessionApi* | [**activesessionGetCurrentV2**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession
 *ObjectActivesessionApi* | [**activesessionGetListV1**](docs/ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 *ObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/ObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 *ObjectApikeyApi* | [**apikeyEditObjectV1**](docs/ObjectApikeyApi.md#apikeyeditobjectv1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
@@ -2291,6 +2294,8 @@ Class | Method | HTTP request | Description
  - [ActivesessionGenerateFederationTokenV1ResponseMPayload](docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md)
  - [ActivesessionGetCurrentV1Response](docs/ActivesessionGetCurrentV1Response.md)
  - [ActivesessionGetCurrentV1ResponseMPayload](docs/ActivesessionGetCurrentV1ResponseMPayload.md)
+ - [ActivesessionGetCurrentV2Response](docs/ActivesessionGetCurrentV2Response.md)
+ - [ActivesessionGetCurrentV2ResponseMPayload](docs/ActivesessionGetCurrentV2ResponseMPayload.md)
  - [ActivesessionGetListV1Response](docs/ActivesessionGetListV1Response.md)
  - [ActivesessionGetListV1ResponseMPayload](docs/ActivesessionGetListV1ResponseMPayload.md)
  - [ActivesessionListElement](docs/ActivesessionListElement.md)

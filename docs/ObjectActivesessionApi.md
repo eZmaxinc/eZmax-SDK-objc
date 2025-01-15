@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activesessionGenerateFederationTokenV1**](ObjectActivesessionApi.md#activesessiongeneratefederationtokenv1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token
 [**activesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+[**activesessionGetCurrentV2**](ObjectActivesessionApi.md#activesessiongetcurrentv2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession
 [**activesessionGetListV1**](ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 
 
@@ -107,6 +108,59 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ActivesessionGetCurrentV1Response***](ActivesessionGetCurrentV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **activesessionGetCurrentV2**
+```objc
+-(NSURLSessionTask*) activesessionGetCurrentV2WithCompletionHandler: 
+        (void (^)(ActivesessionGetCurrentV2Response* output, NSError* error)) handler;
+```
+
+Get Current Activesession
+
+Retrieve the details about the current activesession
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+
+ObjectActivesessionApi*apiInstance = [[ObjectActivesessionApi alloc] init];
+
+// Get Current Activesession
+[apiInstance activesessionGetCurrentV2WithCompletionHandler: 
+          ^(ActivesessionGetCurrentV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectActivesessionApi->activesessionGetCurrentV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ActivesessionGetCurrentV2Response***](ActivesessionGetCurrentV2Response.md)
 
 ### Authorization
 

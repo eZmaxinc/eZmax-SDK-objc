@@ -251,6 +251,10 @@ EzmaxApi/Model/ActivesessionGetCurrentV1Response.h
 EzmaxApi/Model/ActivesessionGetCurrentV1Response.m
 EzmaxApi/Model/ActivesessionGetCurrentV1ResponseMPayload.h
 EzmaxApi/Model/ActivesessionGetCurrentV1ResponseMPayload.m
+EzmaxApi/Model/ActivesessionGetCurrentV2Response.h
+EzmaxApi/Model/ActivesessionGetCurrentV2Response.m
+EzmaxApi/Model/ActivesessionGetCurrentV2ResponseMPayload.h
+EzmaxApi/Model/ActivesessionGetCurrentV2ResponseMPayload.m
 EzmaxApi/Model/ActivesessionGetListV1Response.h
 EzmaxApi/Model/ActivesessionGetListV1Response.m
 EzmaxApi/Model/ActivesessionGetListV1ResponseMPayload.h
@@ -3517,6 +3521,8 @@ docs/ActivesessionGenerateFederationTokenV1Response.md
 docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionGetCurrentV2Response.md
+docs/ActivesessionGetCurrentV2ResponseMPayload.md
 docs/ActivesessionGetListV1Response.md
 docs/ActivesessionGetListV1ResponseMPayload.md
 docs/ActivesessionListElement.md
