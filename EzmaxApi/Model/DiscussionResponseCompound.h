@@ -14,8 +14,11 @@
 */
 
 
+#import "CustomDiscussionconfigurationResponse.h"
 #import "DiscussionmembershipResponseCompound.h"
 #import "DiscussionmessageResponseCompound.h"
+@protocol CustomDiscussionconfigurationResponse;
+@class CustomDiscussionconfigurationResponse;
 @protocol DiscussionmembershipResponseCompound;
 @class DiscussionmembershipResponseCompound;
 @protocol DiscussionmessageResponseCompound;
@@ -46,9 +49,8 @@
 /* The count of Attachment. 
  */
 @property(nonatomic) NSNumber* iDiscussionmessageCountunread;
-/* A Custom Discussionconfiguration Object [optional]
- */
-@property(nonatomic) NSObject* objDiscussionconfiguration;
+
+@property(nonatomic) CustomDiscussionconfigurationResponse* objDiscussionconfiguration;
 
 @property(nonatomic) NSArray<DiscussionmembershipResponseCompound>* aObjDiscussionmembership;
 

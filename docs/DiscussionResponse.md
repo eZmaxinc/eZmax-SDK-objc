@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dtDiscussionLastread** | **NSString*** | The date the Discussion was last read | [optional] 
 **iDiscussionmessageCount** | **NSNumber*** | The count of Attachment. | 
 **iDiscussionmessageCountunread** | **NSNumber*** | The count of Attachment. | 
-**objDiscussionconfiguration** | **NSObject*** | A Custom Discussionconfiguration Object | [optional] 
+**objDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse***](CustomDiscussionconfigurationResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

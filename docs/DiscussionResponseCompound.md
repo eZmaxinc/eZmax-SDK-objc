@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dtDiscussionLastread** | **NSString*** | The date the Discussion was last read | [optional] 
 **iDiscussionmessageCount** | **NSNumber*** | The count of Attachment. | 
 **iDiscussionmessageCountunread** | **NSNumber*** | The count of Attachment. | 
-**objDiscussionconfiguration** | **NSObject*** | A Custom Discussionconfiguration Object | [optional] 
+**objDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse***](CustomDiscussionconfigurationResponse.md) |  | [optional] 
 **aObjDiscussionmembership** | [**NSArray&lt;DiscussionmembershipResponseCompound&gt;***](DiscussionmembershipResponseCompound.md) |  | 
 **aObjDiscussionmessage** | [**NSArray&lt;DiscussionmessageResponseCompound&gt;***](DiscussionmessageResponseCompound.md) |  | 
 

@@ -16,6 +16,7 @@
 
 #import "CommonAudit.h"
 #import "ComputedEEzsignfolderAccess.h"
+#import "CustomEzsignfoldertypeResponse.h"
 #import "CustomTimezoneWithCodeResponse.h"
 #import "FieldEEzsignfolderCompletion.h"
 #import "FieldEEzsignfolderDocumentdependency.h"
@@ -24,6 +25,8 @@
 @class CommonAudit;
 @protocol ComputedEEzsignfolderAccess;
 @class ComputedEEzsignfolderAccess;
+@protocol CustomEzsignfoldertypeResponse;
+@class CustomEzsignfoldertypeResponse;
 @protocol CustomTimezoneWithCodeResponse;
 @class CustomTimezoneWithCodeResponse;
 @protocol FieldEEzsignfolderCompletion;
@@ -46,9 +49,8 @@
 /* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-/* A Custom Ezsignfoldertype Object [optional]
- */
-@property(nonatomic) NSObject* objEzsignfoldertype;
+
+@property(nonatomic) CustomEzsignfoldertypeResponse* objEzsignfoldertype;
 /* The unique ID of the Timezone [optional]
  */
 @property(nonatomic) NSNumber* fkiTimezoneID;
