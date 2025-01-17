@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "UsergroupGetAutocompleteV2ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol UsergroupGetAutocompleteV2Response
 @end
 
-@interface UsergroupGetAutocompleteV2Response : Object
+@interface UsergroupGetAutocompleteV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) UsergroupGetAutocompleteV2ResponseMPayload* mPayload;
 

@@ -15,10 +15,13 @@
 
 
 #import "BrandingGetObjectV3ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BrandingGetObjectV3ResponseMPayload;
 @class BrandingGetObjectV3ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol BrandingGetObjectV3Response
 @end
 
-@interface BrandingGetObjectV3Response : Object
+@interface BrandingGetObjectV3Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BrandingGetObjectV3ResponseMPayload* mPayload;
 

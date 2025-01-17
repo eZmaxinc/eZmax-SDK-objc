@@ -15,10 +15,13 @@
 
 
 #import "ClonehistoryGetListV1ResponseMPayload.h"
+#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 @protocol ClonehistoryGetListV1ResponseMPayload;
 @class ClonehistoryGetListV1ResponseMPayload;
+@protocol CommonResponseGetList;
+@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -29,12 +32,8 @@
 @protocol ClonehistoryGetListV1Response
 @end
 
-@interface ClonehistoryGetListV1Response : Object
+@interface ClonehistoryGetListV1Response : CommonResponseGetList
 
-
-@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ClonehistoryGetListV1ResponseMPayload* mPayload;
 

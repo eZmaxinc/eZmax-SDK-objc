@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "FranchisereferalincomeCreateObjectV2ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol FranchisereferalincomeCreateObjectV2Response
 @end
 
-@interface FranchisereferalincomeCreateObjectV2Response : Object
+@interface FranchisereferalincomeCreateObjectV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) FranchisereferalincomeCreateObjectV2ResponseMPayload* mPayload;
 

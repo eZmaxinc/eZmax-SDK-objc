@@ -14,28 +14,16 @@
 */
 
 
+#import "EzsigntemplatepackagesignermembershipResponse.h"
+@protocol EzsigntemplatepackagesignermembershipResponse;
+@class EzsigntemplatepackagesignermembershipResponse;
 
 
 
 @protocol EzsigntemplatepackagesignermembershipResponseCompound
 @end
 
-@interface EzsigntemplatepackagesignermembershipResponseCompound : Object
+@interface EzsigntemplatepackagesignermembershipResponseCompound : EzsigntemplatepackagesignermembershipResponse
 
-/* The unique ID of the Ezsigntemplatepackagesignermembership 
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplatepackagesignermembershipID;
-/* The unique ID of the Ezsigntemplatepackagemembership 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplatepackagemembershipID;
-/* The unique ID of the Ezsigntemplatepackagesigner 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplatepackagesignerID;
-/* The unique ID of the Ezsigntemplatesigner 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplatesignerID;
-/* The Copy number in case of multiple copies. [optional]
- */
-@property(nonatomic) NSNumber* iEzsigntemplatepackagesignermembershipCopy;
 
 @end

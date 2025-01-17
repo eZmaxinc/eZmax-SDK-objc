@@ -14,8 +14,11 @@
 */
 
 
+#import "EzsigntemplateRequestV3.h"
 #import "FieldEEzsigntemplateRecognition.h"
 #import "FieldEEzsigntemplateType.h"
+@protocol EzsigntemplateRequestV3;
+@class EzsigntemplateRequestV3;
 @protocol FieldEEzsigntemplateRecognition;
 @class FieldEEzsigntemplateRecognition;
 @protocol FieldEEzsigntemplateType;
@@ -26,38 +29,7 @@
 @protocol EzsigntemplateRequestCompoundV3
 @end
 
-@interface EzsigntemplateRequestCompoundV3 : Object
+@interface EzsigntemplateRequestCompoundV3 : EzsigntemplateRequestV3
 
-/* The unique ID of the Ezsigntemplate [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplateID;
-/* The unique ID of the Ezsignfoldertype. [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
- */
-@property(nonatomic) NSNumber* fkiLanguageID;
-/* The unique ID of the Ezdoctemplatedocument [optional]
- */
-@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
-/* The description of the Ezsigntemplate 
- */
-@property(nonatomic) NSString* sEzsigntemplateDescription;
-/* The external description of the Ezsigntemplate [optional]
- */
-@property(nonatomic) NSString* sEzsigntemplateExternaldescription;
-/* The comment of the Ezsigntemplate [optional]
- */
-@property(nonatomic) NSString* tEzsigntemplateComment;
-
-@property(nonatomic) FieldEEzsigntemplateRecognition* eEzsigntemplateRecognition;
-/* The filename regexp of the Ezsigntemplate. [optional]
- */
-@property(nonatomic) NSString* sEzsigntemplateFilenameregexp;
-/* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) 
- */
-@property(nonatomic) NSNumber* bEzsigntemplateAdminonly;
-
-@property(nonatomic) FieldEEzsigntemplateType* eEzsigntemplateType;
 
 @end

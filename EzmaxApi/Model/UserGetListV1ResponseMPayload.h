@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "UserListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol UserListElement;
 @class UserListElement;
 
@@ -23,14 +26,8 @@
 @protocol UserGetListV1ResponseMPayload
 @end
 
-@interface UserGetListV1ResponseMPayload : Object
+@interface UserGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<UserListElement>* aObjUser;
 

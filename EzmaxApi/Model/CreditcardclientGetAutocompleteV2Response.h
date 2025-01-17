@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "CreditcardclientGetAutocompleteV2ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol CreditcardclientGetAutocompleteV2Response
 @end
 
-@interface CreditcardclientGetAutocompleteV2Response : Object
+@interface CreditcardclientGetAutocompleteV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) CreditcardclientGetAutocompleteV2ResponseMPayload* mPayload;
 

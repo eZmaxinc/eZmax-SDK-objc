@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "WebhookListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol WebhookListElement;
 @class WebhookListElement;
 
@@ -23,14 +26,8 @@
 @protocol WebhookGetListV1ResponseMPayload
 @end
 
-@interface WebhookGetListV1ResponseMPayload : Object
+@interface WebhookGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<WebhookListElement>* aObjWebhook;
 

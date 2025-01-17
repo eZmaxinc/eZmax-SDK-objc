@@ -14,25 +14,16 @@
 */
 
 
+#import "CommunicationattachmentRequest.h"
+@protocol CommunicationattachmentRequest;
+@class CommunicationattachmentRequest;
 
 
 
 @protocol CommunicationattachmentRequestCompound
 @end
 
-@interface CommunicationattachmentRequestCompound : Object
+@interface CommunicationattachmentRequestCompound : CommunicationattachmentRequest
 
-/* The unique ID of the Communicationattachment [optional]
- */
-@property(nonatomic) NSNumber* pkiCommunicationattachmentID;
-/* The unique ID of the Attachment. [optional]
- */
-@property(nonatomic) NSNumber* fkiAttachmentID;
-/* The unique ID of the Invoice. [optional]
- */
-@property(nonatomic) NSNumber* fkiInvoiceID;
-/* The unique ID of the Salarypreparation. [optional]
- */
-@property(nonatomic) NSNumber* fkiSalarypreparationID;
 
 @end

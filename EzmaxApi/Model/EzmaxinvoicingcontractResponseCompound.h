@@ -15,9 +15,12 @@
 
 
 #import "CommonAudit.h"
+#import "EzmaxinvoicingcontractResponse.h"
 #import "FieldEEzmaxinvoicingcontractPaymenttype.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol EzmaxinvoicingcontractResponse;
+@class EzmaxinvoicingcontractResponse;
 @protocol FieldEEzmaxinvoicingcontractPaymenttype;
 @class FieldEEzmaxinvoicingcontractPaymenttype;
 
@@ -26,32 +29,7 @@
 @protocol EzmaxinvoicingcontractResponseCompound
 @end
 
-@interface EzmaxinvoicingcontractResponseCompound : Object
+@interface EzmaxinvoicingcontractResponseCompound : EzmaxinvoicingcontractResponse
 
-/* The unique ID of the Ezmaxinvoicingcontract 
- */
-@property(nonatomic) NSNumber* pkiEzmaxinvoicingcontractID;
-
-@property(nonatomic) FieldEEzmaxinvoicingcontractPaymenttype* eEzmaxinvoicingcontractPaymenttype;
-/* The length in years of the Ezmaxinvoicingcontract 
- */
-@property(nonatomic) NSNumber* iEzmaxinvoicingcontractLength;
-/* The start date of the Ezmaxinvoicingcontract 
- */
-@property(nonatomic) NSString* dtEzmaxinvoicingcontractStart;
-/* The end date of the Ezmaxinvoicingcontract 
- */
-@property(nonatomic) NSString* dtEzmaxinvoicingcontractEnd;
-/* The price of the license 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingcontractLicense;
-/* The price for 121QA 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingcontract121qa;
-/* Whether eZsign is for all agents 
- */
-@property(nonatomic) NSNumber* bEzmaxinvoicingcontractEzsignallagents;
-
-@property(nonatomic) CommonAudit* objAudit;
 
 @end

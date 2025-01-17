@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingcommissionID": @"pkiEzmaxinvoicingcommissionID", @"fkiEzmaxinvoicingsummaryglobalID": @"fkiEzmaxinvoicingsummaryglobalID", @"fkiEzmaxpartnerID": @"fkiEzmaxpartnerID", @"fkiEzmaxrepresentativeID": @"fkiEzmaxrepresentativeID", @"dtEzmaxinvoicingcommissionStart": @"dtEzmaxinvoicingcommissionStart", @"dtEzmaxinvoicingcommissionEnd": @"dtEzmaxinvoicingcommissionEnd", @"iEzmaxinvoicingcommissionDays": @"iEzmaxinvoicingcommissionDays", @"dEzmaxinvoicingcommissionAmount": @"dEzmaxinvoicingcommissionAmount", @"objContactName": @"objContactName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objContactName": @"objContactName" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzmaxinvoicingcommissionID", @"fkiEzmaxinvoicingsummaryglobalID", @"fkiEzmaxpartnerID", @"fkiEzmaxrepresentativeID", @"objContactName"];
+  NSArray *optionalProperties = @[@"objContactName"];
   return [optionalProperties containsObject:propertyName];
 }
 

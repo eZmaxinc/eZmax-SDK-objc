@@ -14,25 +14,16 @@
 */
 
 
+#import "EzsignbulksendsignermappingRequest.h"
+@protocol EzsignbulksendsignermappingRequest;
+@class EzsignbulksendsignermappingRequest;
 
 
 
 @protocol EzsignbulksendsignermappingRequestCompound
 @end
 
-@interface EzsignbulksendsignermappingRequestCompound : Object
+@interface EzsignbulksendsignermappingRequestCompound : EzsignbulksendsignermappingRequest
 
-/* The unique ID of the Ezsignbulksendsignermapping [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsignbulksendsignermappingID;
-/* The unique ID of the Ezsignbulksend 
- */
-@property(nonatomic) NSNumber* fkiEzsignbulksendID;
-/* The unique ID of the User [optional]
- */
-@property(nonatomic) NSNumber* fkiUserID;
-/* The description of the Ezsignbulksendsignermapping 
- */
-@property(nonatomic) NSString* sEzsignbulksendsignermappingDescription;
 
 @end

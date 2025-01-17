@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "SupplyListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol SupplyListElement;
 @class SupplyListElement;
 
@@ -23,14 +26,8 @@
 @protocol SupplyGetListV1ResponseMPayload
 @end
 
-@interface SupplyGetListV1ResponseMPayload : Object
+@interface SupplyGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<SupplyListElement>* aObjSupply;
 

@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "DomainListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol DomainListElement;
 @class DomainListElement;
 
@@ -23,14 +26,8 @@
 @protocol DomainGetListV1ResponseMPayload
 @end
 
-@interface DomainGetListV1ResponseMPayload : Object
+@interface DomainGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<DomainListElement>* aObjDomain;
 

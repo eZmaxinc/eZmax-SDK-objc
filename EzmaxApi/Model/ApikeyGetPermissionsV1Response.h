@@ -15,10 +15,13 @@
 
 
 #import "ApikeyGetPermissionsV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ApikeyGetPermissionsV1ResponseMPayload;
 @class ApikeyGetPermissionsV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol ApikeyGetPermissionsV1Response
 @end
 
-@interface ApikeyGetPermissionsV1Response : Object
+@interface ApikeyGetPermissionsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyGetPermissionsV1ResponseMPayload* mPayload;
 

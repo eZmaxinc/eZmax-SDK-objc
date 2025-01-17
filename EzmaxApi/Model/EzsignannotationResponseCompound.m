@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignannotationID": @"pkiEzsignannotationID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"eEzsignannotationHorizontalalignment": @"eEzsignannotationHorizontalalignment", @"eEzsignannotationVerticalalignment": @"eEzsignannotationVerticalalignment", @"eEzsignannotationType": @"eEzsignannotationType", @"iEzsignannotationX": @"iEzsignannotationX", @"iEzsignannotationY": @"iEzsignannotationY", @"iEzsignannotationWidth": @"iEzsignannotationWidth", @"iEzsignannotationHeight": @"iEzsignannotationHeight", @"sEzsignannotationText": @"sEzsignannotationText", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"objTextstylestatic": @"objTextstylestatic" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objTextstylestatic": @"objTextstylestatic" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"eEzsignannotationHorizontalalignment", @"eEzsignannotationVerticalalignment", @"iEzsignannotationWidth", @"iEzsignannotationHeight", @"sEzsignannotationText", @"objTextstylestatic"];
+  NSArray *optionalProperties = @[@"objTextstylestatic"];
   return [optionalProperties containsObject:propertyName];
 }
 

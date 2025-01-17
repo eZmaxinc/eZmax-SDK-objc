@@ -17,6 +17,7 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "WebhookRequest.h"
 #import "WebhookheaderRequestCompound.h"
 @protocol FieldEWebhookEzsignevent;
 @class FieldEWebhookEzsignevent;
@@ -24,6 +25,8 @@
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol WebhookRequest;
+@class WebhookRequest;
 @protocol WebhookheaderRequestCompound;
 @class WebhookheaderRequestCompound;
 
@@ -32,41 +35,8 @@
 @protocol WebhookRequestCompound
 @end
 
-@interface WebhookRequestCompound : Object
+@interface WebhookRequestCompound : WebhookRequest
 
-/* The unique ID of the Webhook [optional]
- */
-@property(nonatomic) NSNumber* pkiWebhookID;
-/* The unique ID of the Authenticationexternal [optional]
- */
-@property(nonatomic) NSNumber* fkiAuthenticationexternalID;
-/* The unique ID of the Ezsignfoldertype. [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-/* The description of the Webhook 
- */
-@property(nonatomic) NSString* sWebhookDescription;
-
-@property(nonatomic) FieldEWebhookModule* eWebhookModule;
-
-@property(nonatomic) FieldEWebhookEzsignevent* eWebhookEzsignevent;
-
-@property(nonatomic) FieldEWebhookManagementevent* eWebhookManagementevent;
-/* The URL of the Webhook callback 
- */
-@property(nonatomic) NSString* sWebhookUrl;
-/* The email that will receive the Webhook in case all attempts fail 
- */
-@property(nonatomic) NSString* sWebhookEmailfailed;
-/* Whether the Webhook is active or not 
- */
-@property(nonatomic) NSNumber* bWebhookIsactive;
-/* Whether the requests will be signed or not [optional]
- */
-@property(nonatomic) NSNumber* bWebhookIssigned;
-/* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
- */
-@property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
 
 @property(nonatomic) NSArray<WebhookheaderRequestCompound>* aObjWebhookheader;
 

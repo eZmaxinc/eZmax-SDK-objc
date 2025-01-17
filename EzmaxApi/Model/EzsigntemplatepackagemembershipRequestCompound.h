@@ -14,22 +14,16 @@
 */
 
 
+#import "EzsigntemplatepackagemembershipRequest.h"
+@protocol EzsigntemplatepackagemembershipRequest;
+@class EzsigntemplatepackagemembershipRequest;
 
 
 
 @protocol EzsigntemplatepackagemembershipRequestCompound
 @end
 
-@interface EzsigntemplatepackagemembershipRequestCompound : Object
+@interface EzsigntemplatepackagemembershipRequestCompound : EzsigntemplatepackagemembershipRequest
 
-/* The unique ID of the Ezsigntemplatepackagemembership [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplatepackagemembershipID;
-/* The unique ID of the Ezsigntemplatepackage 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplatepackageID;
-/* The unique ID of the Ezsigntemplate 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplateID;
 
 @end

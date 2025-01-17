@@ -15,10 +15,13 @@
 
 
 #import "BillingentityexternalGenerateFederationTokenV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BillingentityexternalGenerateFederationTokenV1ResponseMPayload;
 @class BillingentityexternalGenerateFederationTokenV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol BillingentityexternalGenerateFederationTokenV1Response
 @end
 
-@interface BillingentityexternalGenerateFederationTokenV1Response : Object
+@interface BillingentityexternalGenerateFederationTokenV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BillingentityexternalGenerateFederationTokenV1ResponseMPayload* mPayload;
 

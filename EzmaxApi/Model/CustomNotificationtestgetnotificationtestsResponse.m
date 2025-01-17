@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiNotificationtestID": @"pkiNotificationtestID", @"objNotificationtestName": @"objNotificationtestName", @"fkiNotificationsubsectionID": @"fkiNotificationsubsectionID", @"sNotificationtestFunction": @"sNotificationtestFunction", @"sNotificationtestNameX": @"sNotificationtestNameX", @"eNotificationpreferenceStatus": @"eNotificationpreferenceStatus", @"iNotificationtest": @"iNotificationtest" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eNotificationpreferenceStatus": @"eNotificationpreferenceStatus", @"iNotificationtest": @"iNotificationtest" }];
 }
 
 /**

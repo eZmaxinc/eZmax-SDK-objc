@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingsummaryglobalID": @"pkiEzmaxinvoicingsummaryglobalID", @"fkiEzmaxinvoicingID": @"fkiEzmaxinvoicingID", @"fkiEzmaxproductID": @"fkiEzmaxproductID", @"sEzmaxproductDescriptionX": @"sEzmaxproductDescriptionX", @"dtEzmaxinvoicingsummaryglobalStart": @"dtEzmaxinvoicingsummaryglobalStart", @"dtEzmaxinvoicingsummaryglobalEnd": @"dtEzmaxinvoicingsummaryglobalEnd", @"iEzmaxinvoicingsummaryglobalDays": @"iEzmaxinvoicingsummaryglobalDays", @"dEzmaxinvoicingsummaryglobalCountreal": @"dEzmaxinvoicingsummaryglobalCountreal", @"dEzmaxinvoicingsummaryglobalCountbilled": @"dEzmaxinvoicingsummaryglobalCountbilled", @"dEzmaxinvoicingsummaryglobalSubtotal": @"dEzmaxinvoicingsummaryglobalSubtotal", @"dEzmaxinvoicingsummaryglobalRebateamount": @"dEzmaxinvoicingsummaryglobalRebateamount", @"dEzmaxinvoicingsummaryglobalRebatepercent": @"dEzmaxinvoicingsummaryglobalRebatepercent", @"dEzmaxinvoicingsummaryglobalRebatetotal": @"dEzmaxinvoicingsummaryglobalRebatetotal", @"dEzmaxinvoicingsummaryglobalTotal": @"dEzmaxinvoicingsummaryglobalTotal", @"dEzmaxinvoicingsummaryglobalRepresentative": @"dEzmaxinvoicingsummaryglobalRepresentative", @"dEzmaxinvoicingsummaryglobalPartner": @"dEzmaxinvoicingsummaryglobalPartner", @"dEzmaxinvoicingsummaryglobalNet": @"dEzmaxinvoicingsummaryglobalNet", @"bEzmaxinvoicingsummaryglobalAdjustment": @"bEzmaxinvoicingsummaryglobalAdjustment", @"tEzmaxproductHelpX": @"tEzmaxproductHelpX", @"aObjEzmaxinvoicingcommission": @"a_objEzmaxinvoicingcommission" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzmaxinvoicingcommission": @"a_objEzmaxinvoicingcommission" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzmaxinvoicingsummaryglobalID", @"fkiEzmaxinvoicingID", @"dEzmaxinvoicingsummaryglobalRepresentative", @"dEzmaxinvoicingsummaryglobalPartner", @"dEzmaxinvoicingsummaryglobalNet", @"aObjEzmaxinvoicingcommission"];
+  NSArray *optionalProperties = @[@"aObjEzmaxinvoicingcommission"];
   return [optionalProperties containsObject:propertyName];
 }
 

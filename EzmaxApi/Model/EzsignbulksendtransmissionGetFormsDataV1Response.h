@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol EzsignbulksendtransmissionGetFormsDataV1Response
 @end
 
-@interface EzsignbulksendtransmissionGetFormsDataV1Response : Object
+@interface EzsignbulksendtransmissionGetFormsDataV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload* mPayload;
 

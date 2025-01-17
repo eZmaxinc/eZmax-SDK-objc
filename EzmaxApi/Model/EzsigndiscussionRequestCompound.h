@@ -15,32 +15,18 @@
 
 
 #import "DiscussionRequest.h"
+#import "EzsigndiscussionRequest.h"
 @protocol DiscussionRequest;
 @class DiscussionRequest;
+@protocol EzsigndiscussionRequest;
+@class EzsigndiscussionRequest;
 
 
 
 @protocol EzsigndiscussionRequestCompound
 @end
 
-@interface EzsigndiscussionRequestCompound : Object
+@interface EzsigndiscussionRequestCompound : EzsigndiscussionRequest
 
-/* The unique ID of the Ezsigndiscussion [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsigndiscussionID;
-/* The unique ID of the Ezsigndocument 
- */
-@property(nonatomic) NSNumber* fkiEzsigndocumentID;
-/* The page number in the Ezsigndocument for the Ezsigndiscussion 
- */
-@property(nonatomic) NSNumber* iEzsigndiscussionPagenumber;
-/* The x of the Ezsigndiscussion 
- */
-@property(nonatomic) NSNumber* iEzsigndiscussionX;
-/* The y of the Ezsigndiscussion 
- */
-@property(nonatomic) NSNumber* iEzsigndiscussionY;
-
-@property(nonatomic) DiscussionRequest* objDiscussion;
 
 @end

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateformfieldgroupID": @"pkiEzsigntemplateformfieldgroupID", @"fkiEzsigntemplatedocumentID": @"fkiEzsigntemplatedocumentID", @"eEzsigntemplateformfieldgroupType": @"eEzsigntemplateformfieldgroupType", @"eEzsigntemplateformfieldgroupSignerrequirement": @"eEzsigntemplateformfieldgroupSignerrequirement", @"sEzsigntemplateformfieldgroupLabel": @"sEzsigntemplateformfieldgroupLabel", @"iEzsigntemplateformfieldgroupStep": @"iEzsigntemplateformfieldgroupStep", @"sEzsigntemplateformfieldgroupDefaultvalue": @"sEzsigntemplateformfieldgroupDefaultvalue", @"iEzsigntemplateformfieldgroupFilledmin": @"iEzsigntemplateformfieldgroupFilledmin", @"iEzsigntemplateformfieldgroupFilledmax": @"iEzsigntemplateformfieldgroupFilledmax", @"bEzsigntemplateformfieldgroupReadonly": @"bEzsigntemplateformfieldgroupReadonly", @"iEzsigntemplateformfieldgroupMaxlength": @"iEzsigntemplateformfieldgroupMaxlength", @"bEzsigntemplateformfieldgroupEncrypted": @"bEzsigntemplateformfieldgroupEncrypted", @"sEzsigntemplateformfieldgroupRegexp": @"sEzsigntemplateformfieldgroupRegexp", @"sEzsigntemplateformfieldgroupTextvalidationcustommessage": @"sEzsigntemplateformfieldgroupTextvalidationcustommessage", @"eEzsigntemplateformfieldgroupTextvalidation": @"eEzsigntemplateformfieldgroupTextvalidation", @"tEzsigntemplateformfieldgroupTooltip": @"tEzsigntemplateformfieldgroupTooltip", @"eEzsigntemplateformfieldgroupTooltipposition": @"eEzsigntemplateformfieldgroupTooltipposition", @"aObjEzsigntemplateformfieldgroupsigner": @"a_objEzsigntemplateformfieldgroupsigner", @"aObjDropdownElement": @"a_objDropdownElement", @"aObjEzsigntemplateformfield": @"a_objEzsigntemplateformfield" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsigntemplateformfieldgroupsigner": @"a_objEzsigntemplateformfieldgroupsigner", @"aObjDropdownElement": @"a_objDropdownElement", @"aObjEzsigntemplateformfield": @"a_objEzsigntemplateformfield" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"eEzsigntemplateformfieldgroupSignerrequirement", @"sEzsigntemplateformfieldgroupDefaultvalue", @"iEzsigntemplateformfieldgroupMaxlength", @"bEzsigntemplateformfieldgroupEncrypted", @"sEzsigntemplateformfieldgroupRegexp", @"sEzsigntemplateformfieldgroupTextvalidationcustommessage", @"eEzsigntemplateformfieldgroupTextvalidation", @"tEzsigntemplateformfieldgroupTooltip", @"eEzsigntemplateformfieldgroupTooltipposition", @"aObjDropdownElement", ];
+  NSArray *optionalProperties = @[@"aObjDropdownElement", ];
   return [optionalProperties containsObject:propertyName];
 }
 

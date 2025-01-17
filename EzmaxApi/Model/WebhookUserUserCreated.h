@@ -15,10 +15,13 @@
 
 
 #import "AttemptResponse.h"
+#import "CommonWebhook.h"
 #import "CustomWebhookResponse.h"
 #import "UserResponse.h"
 @protocol AttemptResponse;
 @class AttemptResponse;
+@protocol CommonWebhook;
+@class CommonWebhook;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
 @protocol UserResponse;
@@ -29,13 +32,8 @@
 @protocol WebhookUserUserCreated
 @end
 
-@interface WebhookUserUserCreated : Object
+@interface WebhookUserUserCreated : CommonWebhook
 
-
-@property(nonatomic) CustomWebhookResponse* objWebhook;
-/* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
- */
-@property(nonatomic) NSArray<AttemptResponseCompound>* aObjAttempt;
 /* A User Object and children to create a complete structure 
  */
 @property(nonatomic) UserResponse* objUser;

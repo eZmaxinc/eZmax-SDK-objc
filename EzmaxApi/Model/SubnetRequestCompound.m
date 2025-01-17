@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiSubnetID": @"pkiSubnetID", @"fkiUserID": @"fkiUserID", @"fkiApikeyID": @"fkiApikeyID", @"objSubnetDescription": @"objSubnetDescription", @"iSubnetNetwork": @"iSubnetNetwork", @"iSubnetMask": @"iSubnetMask" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiSubnetID", @"fkiUserID", @"fkiApikeyID", ];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

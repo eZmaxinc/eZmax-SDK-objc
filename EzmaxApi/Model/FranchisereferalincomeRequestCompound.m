@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiFranchisereferalincomeID": @"pkiFranchisereferalincomeID", @"fkiFranchisebrokerID": @"fkiFranchisebrokerID", @"fkiFranchisereferalincomeprogramID": @"fkiFranchisereferalincomeprogramID", @"fkiPeriodID": @"fkiPeriodID", @"dFranchisereferalincomeLoan": @"dFranchisereferalincomeLoan", @"dFranchisereferalincomeFranchiseamount": @"dFranchisereferalincomeFranchiseamount", @"dFranchisereferalincomeFranchisoramount": @"dFranchisereferalincomeFranchisoramount", @"dFranchisereferalincomeAgentamount": @"dFranchisereferalincomeAgentamount", @"dtFranchisereferalincomeDisbursed": @"dtFranchisereferalincomeDisbursed", @"tFranchisereferalincomeComment": @"tFranchisereferalincomeComment", @"fkiFranchiseofficeID": @"fkiFranchiseofficeID", @"sFranchisereferalincomeRemoteid": @"sFranchisereferalincomeRemoteid", @"objAddress": @"objAddress", @"aObjContact": @"a_objContact" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objAddress": @"objAddress", @"aObjContact": @"a_objContact" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiFranchisereferalincomeID", @"objAddress", ];
+  NSArray *optionalProperties = @[@"objAddress", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -15,10 +15,13 @@
 
 
 #import "ApikeyGetSubnetsV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ApikeyGetSubnetsV1ResponseMPayload;
 @class ApikeyGetSubnetsV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol ApikeyGetSubnetsV1Response
 @end
 
-@interface ApikeyGetSubnetsV1Response : Object
+@interface ApikeyGetSubnetsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyGetSubnetsV1ResponseMPayload* mPayload;
 

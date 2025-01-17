@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 #import "InscriptionGetCommunicationListV1ResponseMPayload.h"
+@protocol CommonResponseGetList;
+@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -29,12 +32,8 @@
 @protocol InscriptionGetCommunicationListV1Response
 @end
 
-@interface InscriptionGetCommunicationListV1Response : Object
+@interface InscriptionGetCommunicationListV1Response : CommonResponseGetList
 
-
-@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) InscriptionGetCommunicationListV1ResponseMPayload* mPayload;
 

@@ -15,10 +15,13 @@
 
 
 #import "AttachmentGetAttachmentlogsV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol AttachmentGetAttachmentlogsV1ResponseMPayload;
 @class AttachmentGetAttachmentlogsV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol AttachmentGetAttachmentlogsV1Response
 @end
 
-@interface AttachmentGetAttachmentlogsV1Response : Object
+@interface AttachmentGetAttachmentlogsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) AttachmentGetAttachmentlogsV1ResponseMPayload* mPayload;
 

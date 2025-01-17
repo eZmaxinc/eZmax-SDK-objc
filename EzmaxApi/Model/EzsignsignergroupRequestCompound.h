@@ -14,7 +14,10 @@
 */
 
 
+#import "EzsignsignergroupRequest.h"
 #import "MultilingualEzsignsignergroupDescription.h"
+@protocol EzsignsignergroupRequest;
+@class EzsignsignergroupRequest;
 @protocol MultilingualEzsignsignergroupDescription;
 @class MultilingualEzsignsignergroupDescription;
 
@@ -23,15 +26,7 @@
 @protocol EzsignsignergroupRequestCompound
 @end
 
-@interface EzsignsignergroupRequestCompound : Object
+@interface EzsignsignergroupRequestCompound : EzsignsignergroupRequest
 
-/* The unique ID of the Ezsignsignergroup [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsignsignergroupID;
-/* The unique ID of the Ezsignfolder 
- */
-@property(nonatomic) NSNumber* fkiEzsignfolderID;
-
-@property(nonatomic) MultilingualEzsignsignergroupDescription* objEzsignsignergroupDescription;
 
 @end

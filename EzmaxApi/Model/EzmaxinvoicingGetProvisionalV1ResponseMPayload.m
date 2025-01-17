@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingID": @"pkiEzmaxinvoicingID", @"fkiEzmaxinvoicingcontractID": @"fkiEzmaxinvoicingcontractID", @"fkiEzmaxpricingID": @"fkiEzmaxpricingID", @"fkiSystemconfigurationtypeID": @"fkiSystemconfigurationtypeID", @"sSystemconfigurationtypeDescriptionX": @"sSystemconfigurationtypeDescriptionX", @"yyyymmEzmaxinvoicing": @"yyyymmEzmaxinvoicing", @"iEzmaxinvoicingDays": @"iEzmaxinvoicingDays", @"eEzmaxinvoicingPaymenttype": @"eEzmaxinvoicingPaymenttype", @"dEzmaxinvoicingRebatepaymenttype": @"dEzmaxinvoicingRebatepaymenttype", @"iEzmaxinvoicingContractlength": @"iEzmaxinvoicingContractlength", @"dEzmaxinvoicingRebatecontractlength": @"dEzmaxinvoicingRebatecontractlength", @"bEzmaxinvoicingRebateEzsignallagents": @"bEzmaxinvoicingRebateEzsignallagents", @"objAudit": @"objAudit", @"objEzmaxinvoicingcontract": @"objEzmaxinvoicingcontract", @"objEzmaxpricing": @"objEzmaxpricing", @"aObjEzmaxinvoicingsummaryglobal": @"a_objEzmaxinvoicingsummaryglobal", @"aObjEzmaxinvoicingsummaryexternal": @"a_objEzmaxinvoicingsummaryexternal", @"aObjEzmaxinvoicingsummaryinternal": @"a_objEzmaxinvoicingsummaryinternal", @"aObjEzmaxinvoicingagent": @"a_objEzmaxinvoicingagent", @"aObjEzmaxinvoicinguser": @"a_objEzmaxinvoicinguser", @"aObjEzmaxinvoicingezsignfolder": @"a_objEzmaxinvoicingezsignfolder", @"aObjEzmaxinvoicingezsigndocument": @"a_objEzmaxinvoicingezsigndocument" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzmaxinvoicingID", @"objAudit", ];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

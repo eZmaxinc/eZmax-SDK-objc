@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "EzsignfolderListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol EzsignfolderListElement;
 @class EzsignfolderListElement;
 
@@ -23,14 +26,8 @@
 @protocol EzsignfolderGetListV1ResponseMPayload
 @end
 
-@interface EzsignfolderGetListV1ResponseMPayload : Object
+@interface EzsignfolderGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<EzsignfolderListElement>* aObjEzsignfolder;
 

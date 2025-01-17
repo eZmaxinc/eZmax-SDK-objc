@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol UsergroupexternalGetUsergroupexternalmembershipsV1Response
 @end
 
-@interface UsergroupexternalGetUsergroupexternalmembershipsV1Response : Object
+@interface UsergroupexternalGetUsergroupexternalmembershipsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload* mPayload;
 

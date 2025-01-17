@@ -15,31 +15,19 @@
 
 
 #import "CommonResponseFilter.h"
+#import "CommonResponseObjDebugPayload.h"
 @protocol CommonResponseFilter;
 @class CommonResponseFilter;
+@protocol CommonResponseObjDebugPayload;
+@class CommonResponseObjDebugPayload;
 
 
 
 @protocol CommonResponseObjDebugPayloadGetList
 @end
 
-@interface CommonResponseObjDebugPayloadGetList : Object
+@interface CommonResponseObjDebugPayloadGetList : CommonResponseObjDebugPayload
 
-/* The minimum version of the function that can be called 
- */
-@property(nonatomic) NSNumber* iVersionMin;
-/* The maximum version of the function that can be called 
- */
-@property(nonatomic) NSNumber* iVersionMax;
-/* An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them. 
- */
-@property(nonatomic) NSArray<NSNumber*>* aRequiredPermission;
-/* Wheter the current route is deprecated or not 
- */
-@property(nonatomic) NSNumber* bVersionDeprecated;
-/* Represent a Date Time. The timezone is the one configured in the User's profile. 
- */
-@property(nonatomic) NSString* dtResponseDate;
 
 @property(nonatomic) CommonResponseFilter* aFilter;
 /* List of available values for *eOrderBy* 

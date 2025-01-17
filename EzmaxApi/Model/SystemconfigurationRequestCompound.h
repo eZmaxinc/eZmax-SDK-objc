@@ -19,6 +19,7 @@
 #import "FieldESystemconfigurationLanguage1.h"
 #import "FieldESystemconfigurationLanguage2.h"
 #import "FieldESystemconfigurationNewexternaluseraction.h"
+#import "SystemconfigurationRequest.h"
 @protocol FieldESystemconfigurationEzsign;
 @class FieldESystemconfigurationEzsign;
 @protocol FieldESystemconfigurationEzsignofficeplan;
@@ -29,44 +30,15 @@
 @class FieldESystemconfigurationLanguage2;
 @protocol FieldESystemconfigurationNewexternaluseraction;
 @class FieldESystemconfigurationNewexternaluseraction;
+@protocol SystemconfigurationRequest;
+@class SystemconfigurationRequest;
 
 
 
 @protocol SystemconfigurationRequestCompound
 @end
 
-@interface SystemconfigurationRequestCompound : Object
+@interface SystemconfigurationRequestCompound : SystemconfigurationRequest
 
-/* The unique ID of the Systemconfiguration [optional]
- */
-@property(nonatomic) NSNumber* pkiSystemconfigurationID;
-/* The unique ID of the Branding [optional]
- */
-@property(nonatomic) NSNumber* fkiBrandingID;
-
-@property(nonatomic) FieldESystemconfigurationNewexternaluseraction* eSystemconfigurationNewexternaluseraction;
-
-@property(nonatomic) FieldESystemconfigurationLanguage1* eSystemconfigurationLanguage1;
-
-@property(nonatomic) FieldESystemconfigurationLanguage2* eSystemconfigurationLanguage2;
-
-@property(nonatomic) FieldESystemconfigurationEzsign* eSystemconfigurationEzsign;
-
-@property(nonatomic) FieldESystemconfigurationEzsignofficeplan* eSystemconfigurationEzsignofficeplan;
-/* Whether if Ezsign is paid by the company or not [optional]
- */
-@property(nonatomic) NSNumber* bSystemconfigurationEzsignpaidbyoffice;
-/* Whether if we allow the creation of personal files in eZsign 
- */
-@property(nonatomic) NSNumber* bSystemconfigurationEzsignpersonnal;
-/* Whether if we allow SSPR 
- */
-@property(nonatomic) NSNumber* bSystemconfigurationSspr;
-/* The start date where the system will be in read only [optional]
- */
-@property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationstart;
-/* The end date where the system will be in read only [optional]
- */
-@property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationend;
 
 @end

@@ -14,34 +14,16 @@
 */
 
 
+#import "BillingentityinternalproductResponse.h"
+@protocol BillingentityinternalproductResponse;
+@class BillingentityinternalproductResponse;
 
 
 
 @protocol BillingentityinternalproductResponseCompound
 @end
 
-@interface BillingentityinternalproductResponseCompound : Object
+@interface BillingentityinternalproductResponseCompound : BillingentityinternalproductResponse
 
-/* The unique ID of the Billingentityinternalproduct 
- */
-@property(nonatomic) NSNumber* pkiBillingentityinternalproductID;
-/* The unique ID of the Billingentityinternal. 
- */
-@property(nonatomic) NSNumber* fkiBillingentityinternalID;
-/* The description of the Billingentityinternal in the language of the requester 
- */
-@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
-/* The unique ID of the Ezmaxproduct 
- */
-@property(nonatomic) NSNumber* fkiEzmaxproductID;
-/* The description of the Ezmaxproduct in the language of the requester 
- */
-@property(nonatomic) NSString* sEzmaxproductDescriptionX;
-/* The unique ID of the Billingentityexternal 
- */
-@property(nonatomic) NSNumber* fkiBillingentityexternalID;
-/* The description of the Billingentityexternal 
- */
-@property(nonatomic) NSString* sBillingentityexternalDescription;
 
 @end

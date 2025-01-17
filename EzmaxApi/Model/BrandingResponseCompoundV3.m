@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBrandingID": @"pkiBrandingID", @"fkiEmailID": @"fkiEmailID", @"objBrandingDescription": @"objBrandingDescription", @"sBrandingDescriptionX": @"sBrandingDescriptionX", @"sBrandingName": @"sBrandingName", @"sEmailAddress": @"sEmailAddress", @"eBrandingLogo": @"eBrandingLogo", @"eBrandingAlignlogo": @"eBrandingAlignlogo", @"iBrandingColor": @"iBrandingColor", @"bBrandingIsactive": @"bBrandingIsactive", @"sBrandingLogourl": @"sBrandingLogourl", @"sBrandingLogoemailurl": @"sBrandingLogoemailurl", @"sBrandingLogointerfaceurl": @"sBrandingLogointerfaceurl" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sBrandingLogourl": @"sBrandingLogourl", @"sBrandingLogoemailurl": @"sBrandingLogoemailurl", @"sBrandingLogointerfaceurl": @"sBrandingLogointerfaceurl" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEmailID", @"sBrandingName", @"sEmailAddress", @"sBrandingLogourl", @"sBrandingLogoemailurl", @"sBrandingLogointerfaceurl"];
+  NSArray *optionalProperties = @[@"sBrandingLogourl", @"sBrandingLogoemailurl", @"sBrandingLogointerfaceurl"];
   return [optionalProperties containsObject:propertyName];
 }
 

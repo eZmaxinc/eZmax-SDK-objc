@@ -15,9 +15,12 @@
 
 
 #import "CommonAudit.h"
+#import "DiscussionmessageResponse.h"
 #import "FieldEDiscussionmessageStatus.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol DiscussionmessageResponse;
+@class DiscussionmessageResponse;
 @protocol FieldEDiscussionmessageStatus;
 @class FieldEDiscussionmessageStatus;
 
@@ -26,32 +29,7 @@
 @protocol DiscussionmessageResponseCompound
 @end
 
-@interface DiscussionmessageResponseCompound : Object
+@interface DiscussionmessageResponseCompound : DiscussionmessageResponse
 
-/* The unique ID of the Discussionmessage 
- */
-@property(nonatomic) NSNumber* pkiDiscussionmessageID;
-/* The unique ID of the Discussion 
- */
-@property(nonatomic) NSNumber* fkiDiscussionID;
-/* The unique ID of the Discussionmembership [optional]
- */
-@property(nonatomic) NSNumber* fkiDiscussionmembershipID;
-/* The unique ID of the Discussionmembership [optional]
- */
-@property(nonatomic) NSNumber* fkiDiscussionmembershipIDActionrequired;
-
-@property(nonatomic) FieldEDiscussionmessageStatus* eDiscussionmessageStatus;
-/* The content of the Discussionmessage 
- */
-@property(nonatomic) NSString* tDiscussionmessageContent;
-/* The name the creator of the Discussionmessage. 
- */
-@property(nonatomic) NSString* sDiscussionmessageCreatorname;
-/* The name the Actionrequired of the Discussionmessage. [optional]
- */
-@property(nonatomic) NSString* sDiscussionmessageActionrequiredname;
-
-@property(nonatomic) CommonAudit* objAudit;
 
 @end

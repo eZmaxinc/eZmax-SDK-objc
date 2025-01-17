@@ -14,8 +14,11 @@
 */
 
 
+#import "AuthenticationexternalResponse.h"
 #import "CommonAudit.h"
 #import "FieldEAuthenticationexternalType.h"
+@protocol AuthenticationexternalResponse;
+@class AuthenticationexternalResponse;
 @protocol CommonAudit;
 @class CommonAudit;
 @protocol FieldEAuthenticationexternalType;
@@ -26,23 +29,7 @@
 @protocol AuthenticationexternalResponseCompound
 @end
 
-@interface AuthenticationexternalResponseCompound : Object
+@interface AuthenticationexternalResponseCompound : AuthenticationexternalResponse
 
-/* The unique ID of the Authenticationexternal 
- */
-@property(nonatomic) NSNumber* pkiAuthenticationexternalID;
-/* The description of the Authenticationexternal 
- */
-@property(nonatomic) NSString* sAuthenticationexternalDescription;
-
-@property(nonatomic) FieldEAuthenticationexternalType* eAuthenticationexternalType;
-/* Whether the Authenticationexternal has been connected or not [optional]
- */
-@property(nonatomic) NSNumber* bAuthenticationexternalConnected;
-/* The url to authorize the Authenticationexternal [optional]
- */
-@property(nonatomic) NSString* sAuthenticationexternalAuthorizationurl;
-
-@property(nonatomic) CommonAudit* objAudit;
 
 @end

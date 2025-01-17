@@ -20,6 +20,7 @@
 #import "FieldESystemconfigurationLanguage1.h"
 #import "FieldESystemconfigurationLanguage2.h"
 #import "FieldESystemconfigurationNewexternaluseraction.h"
+#import "SystemconfigurationResponse.h"
 @protocol CustomBrandingResponse;
 @class CustomBrandingResponse;
 @protocol FieldESystemconfigurationEzsign;
@@ -32,58 +33,15 @@
 @class FieldESystemconfigurationLanguage2;
 @protocol FieldESystemconfigurationNewexternaluseraction;
 @class FieldESystemconfigurationNewexternaluseraction;
+@protocol SystemconfigurationResponse;
+@class SystemconfigurationResponse;
 
 
 
 @protocol SystemconfigurationResponseCompound
 @end
 
-@interface SystemconfigurationResponseCompound : Object
+@interface SystemconfigurationResponseCompound : SystemconfigurationResponse
 
-/* The unique ID of the Systemconfiguration 
- */
-@property(nonatomic) NSNumber* pkiSystemconfigurationID;
-/* The unique ID of the Systemconfigurationtype 
- */
-@property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
-/* The unique ID of the Branding [optional]
- */
-@property(nonatomic) NSNumber* fkiBrandingID;
-/* The description of the Systemconfigurationtype in the language of the requester 
- */
-@property(nonatomic) NSString* sSystemconfigurationtypeDescriptionX;
-
-@property(nonatomic) FieldESystemconfigurationNewexternaluseraction* eSystemconfigurationNewexternaluseraction;
-
-@property(nonatomic) FieldESystemconfigurationLanguage1* eSystemconfigurationLanguage1;
-
-@property(nonatomic) FieldESystemconfigurationLanguage2* eSystemconfigurationLanguage2;
-
-@property(nonatomic) FieldESystemconfigurationEzsign* eSystemconfigurationEzsign;
-
-@property(nonatomic) FieldESystemconfigurationEzsignofficeplan* eSystemconfigurationEzsignofficeplan;
-/* Whether if Ezsign is paid by the company or not [optional]
- */
-@property(nonatomic) NSNumber* bSystemconfigurationEzsignpaidbyoffice;
-/* Whether if we allow the creation of personal files in eZsign 
- */
-@property(nonatomic) NSNumber* bSystemconfigurationEzsignpersonnal;
-/* Whether there is a creditcard merchant configured or not [optional]
- */
-@property(nonatomic) NSNumber* bSystemconfigurationHascreditcardmerchant;
-/* Whether is Disposal processus is active or not [optional]
- */
-@property(nonatomic) NSNumber* bSystemconfigurationIsdisposalactive;
-/* Whether if we allow SSPR 
- */
-@property(nonatomic) NSNumber* bSystemconfigurationSspr;
-/* The start date where the system will be in read only [optional]
- */
-@property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationstart;
-/* The end date where the system will be in read only [optional]
- */
-@property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationend;
-
-@property(nonatomic) CustomBrandingResponse* objBranding;
 
 @end

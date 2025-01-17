@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iRowReturned": @"iRowReturned", @"iRowFiltered": @"iRowFiltered", @"aObjUser": @"a_objUser" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjUser": @"a_objUser" }];
 }
 
 /**

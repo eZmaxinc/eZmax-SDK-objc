@@ -15,10 +15,13 @@
 
 
 #import "BuyercontractGetCommunicationCountV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BuyercontractGetCommunicationCountV1ResponseMPayload;
 @class BuyercontractGetCommunicationCountV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol BuyercontractGetCommunicationCountV1Response
 @end
 
-@interface BuyercontractGetCommunicationCountV1Response : Object
+@interface BuyercontractGetCommunicationCountV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BuyercontractGetCommunicationCountV1ResponseMPayload* mPayload;
 

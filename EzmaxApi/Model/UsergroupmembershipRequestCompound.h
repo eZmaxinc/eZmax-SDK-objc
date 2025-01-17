@@ -14,25 +14,16 @@
 */
 
 
+#import "UsergroupmembershipRequest.h"
+@protocol UsergroupmembershipRequest;
+@class UsergroupmembershipRequest;
 
 
 
 @protocol UsergroupmembershipRequestCompound
 @end
 
-@interface UsergroupmembershipRequestCompound : Object
+@interface UsergroupmembershipRequestCompound : UsergroupmembershipRequest
 
-/* The unique ID of the Usergroupmembership [optional]
- */
-@property(nonatomic) NSNumber* pkiUsergroupmembershipID;
-/* The unique ID of the Usergroup 
- */
-@property(nonatomic) NSNumber* fkiUsergroupID;
-/* The unique ID of the User [optional]
- */
-@property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Usergroupexternal [optional]
- */
-@property(nonatomic) NSNumber* fkiUsergroupexternalID;
 
 @end

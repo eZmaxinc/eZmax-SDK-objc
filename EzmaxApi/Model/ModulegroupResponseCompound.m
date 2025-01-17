@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiModulegroupID": @"pkiModulegroupID", @"sModulegroupNameX": @"sModulegroupNameX", @"aObjModule": @"a_objModule" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjModule": @"a_objModule" }];
 }
 
 /**

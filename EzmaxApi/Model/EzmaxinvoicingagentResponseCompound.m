@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingagentID": @"pkiEzmaxinvoicingagentID", @"fkiEzmaxinvoicingID": @"fkiEzmaxinvoicingID", @"fkiBillingentityinternalID": @"fkiBillingentityinternalID", @"sBillingentityinternalDescriptionX": @"sBillingentityinternalDescriptionX", @"fkiAgentID": @"fkiAgentID", @"fkiBrokerID": @"fkiBrokerID", @"iEzmaxinvoicingagentSession": @"iEzmaxinvoicingagentSession", @"iEzmaxinvoicingagentCloned": @"iEzmaxinvoicingagentCloned", @"iEzmaxinvoicingagentInvoice": @"iEzmaxinvoicingagentInvoice", @"iEzmaxinvoicingagentInscription": @"iEzmaxinvoicingagentInscription", @"iEzmaxinvoicingagentInscriptionactive": @"iEzmaxinvoicingagentInscriptionactive", @"iEzmaxinvoicingagentSale": @"iEzmaxinvoicingagentSale", @"iEzmaxinvoicingagentOtherincome": @"iEzmaxinvoicingagentOtherincome", @"iEzmaxinvoicingagentCommissioncalculation": @"iEzmaxinvoicingagentCommissioncalculation", @"iEzmaxinvoicingagentEzsigndocument": @"iEzmaxinvoicingagentEzsigndocument", @"bEzmaxinvoicingagentEzsignaccount": @"bEzmaxinvoicingagentEzsignaccount", @"bEzmaxinvoicingagentBillableezmax": @"bEzmaxinvoicingagentBillableezmax", @"eEzmaxinvoicingagentVariationezmax": @"eEzmaxinvoicingagentVariationezmax", @"bEzmaxinvoicingagentBillableezsign": @"bEzmaxinvoicingagentBillableezsign", @"eEzmaxinvoicingagentVariationezsign": @"eEzmaxinvoicingagentVariationezsign", @"objContactName": @"objContactName" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objContactName": @"objContactName" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzmaxinvoicingagentID", @"fkiEzmaxinvoicingID", @"fkiAgentID", @"fkiBrokerID", ];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

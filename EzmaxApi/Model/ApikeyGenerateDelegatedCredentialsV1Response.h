@@ -15,10 +15,13 @@
 
 
 #import "ApikeyGenerateDelegatedCredentialsV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ApikeyGenerateDelegatedCredentialsV1ResponseMPayload;
 @class ApikeyGenerateDelegatedCredentialsV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol ApikeyGenerateDelegatedCredentialsV1Response
 @end
 
-@interface ApikeyGenerateDelegatedCredentialsV1Response : Object
+@interface ApikeyGenerateDelegatedCredentialsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyGenerateDelegatedCredentialsV1ResponseMPayload* mPayload;
 

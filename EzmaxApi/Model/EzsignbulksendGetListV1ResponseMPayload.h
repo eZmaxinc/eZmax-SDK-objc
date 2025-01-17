@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "EzsignbulksendListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol EzsignbulksendListElement;
 @class EzsignbulksendListElement;
 
@@ -23,14 +26,8 @@
 @protocol EzsignbulksendGetListV1ResponseMPayload
 @end
 
-@interface EzsignbulksendGetListV1ResponseMPayload : Object
+@interface EzsignbulksendGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<EzsignbulksendListElement>* aObjEzsignbulksend;
 

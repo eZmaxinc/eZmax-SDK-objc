@@ -15,10 +15,13 @@
 
 
 #import "AttemptResponse.h"
+#import "CommonWebhook.h"
 #import "CustomWebhookResponse.h"
 #import "EzsigndocumentResponse.h"
 @protocol AttemptResponse;
 @class AttemptResponse;
+@protocol CommonWebhook;
+@class CommonWebhook;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
 @protocol EzsigndocumentResponse;
@@ -29,13 +32,8 @@
 @protocol WebhookEzsignDocumentCompleted
 @end
 
-@interface WebhookEzsignDocumentCompleted : Object
+@interface WebhookEzsignDocumentCompleted : CommonWebhook
 
-
-@property(nonatomic) CustomWebhookResponse* objWebhook;
-/* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
- */
-@property(nonatomic) NSArray<AttemptResponseCompound>* aObjAttempt;
 
 @property(nonatomic) EzsigndocumentResponse* objEzsigndocument;
 

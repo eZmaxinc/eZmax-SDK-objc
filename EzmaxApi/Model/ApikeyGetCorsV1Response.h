@@ -15,10 +15,13 @@
 
 
 #import "ApikeyGetCorsV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ApikeyGetCorsV1ResponseMPayload;
 @class ApikeyGetCorsV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol ApikeyGetCorsV1Response
 @end
 
-@interface ApikeyGetCorsV1Response : Object
+@interface ApikeyGetCorsV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyGetCorsV1ResponseMPayload* mPayload;
 

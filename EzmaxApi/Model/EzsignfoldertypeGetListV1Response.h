@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 #import "EzsignfoldertypeGetListV1ResponseMPayload.h"
+@protocol CommonResponseGetList;
+@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -29,12 +32,8 @@
 @protocol EzsignfoldertypeGetListV1Response
 @end
 
-@interface EzsignfoldertypeGetListV1Response : Object
+@interface EzsignfoldertypeGetListV1Response : CommonResponseGetList
 
-
-@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzsignfoldertypeGetListV1ResponseMPayload* mPayload;
 

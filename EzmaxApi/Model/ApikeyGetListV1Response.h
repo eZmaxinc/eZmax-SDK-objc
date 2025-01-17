@@ -15,10 +15,13 @@
 
 
 #import "ApikeyGetListV1ResponseMPayload.h"
+#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 @protocol ApikeyGetListV1ResponseMPayload;
 @class ApikeyGetListV1ResponseMPayload;
+@protocol CommonResponseGetList;
+@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -29,12 +32,8 @@
 @protocol ApikeyGetListV1Response
 @end
 
-@interface ApikeyGetListV1Response : Object
+@interface ApikeyGetListV1Response : CommonResponseGetList
 
-
-@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyGetListV1ResponseMPayload* mPayload;
 

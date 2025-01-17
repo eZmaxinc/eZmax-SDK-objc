@@ -15,23 +15,18 @@
 
 
 #import "ContactRequestCompoundV2.h"
+#import "EzsignuserRequest.h"
 @protocol ContactRequestCompoundV2;
 @class ContactRequestCompoundV2;
+@protocol EzsignuserRequest;
+@class EzsignuserRequest;
 
 
 
 @protocol EzsignuserRequestCompound
 @end
 
-@interface EzsignuserRequestCompound : Object
+@interface EzsignuserRequestCompound : EzsignuserRequest
 
-/* The unique ID of the Ezsignuser [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsignuserID;
-/* The unique ID of the Contact 
- */
-@property(nonatomic) NSNumber* fkiContactID;
-
-@property(nonatomic) ContactRequestCompoundV2* objContact;
 
 @end

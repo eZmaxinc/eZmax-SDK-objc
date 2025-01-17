@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
 @end
 
-@interface EzsigndocumentCreateEzsignelementsPositionedByWordV1Response : Object
+@interface EzsigndocumentCreateEzsignelementsPositionedByWordV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload* mPayload;
 

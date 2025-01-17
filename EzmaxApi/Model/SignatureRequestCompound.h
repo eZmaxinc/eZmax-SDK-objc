@@ -15,29 +15,18 @@
 
 
 #import "FieldESignaturePreference.h"
+#import "SignatureRequest.h"
 @protocol FieldESignaturePreference;
 @class FieldESignaturePreference;
+@protocol SignatureRequest;
+@class SignatureRequest;
 
 
 
 @protocol SignatureRequestCompound
 @end
 
-@interface SignatureRequestCompound : Object
+@interface SignatureRequestCompound : SignatureRequest
 
-/* The unique ID of the Signature [optional]
- */
-@property(nonatomic) NSNumber* pkiSignatureID;
-/* The unique ID of the Font 
- */
-@property(nonatomic) NSNumber* fkiFontID;
-
-@property(nonatomic) FieldESignaturePreference* eSignaturePreference;
-/* The svg of the Signature [optional]
- */
-@property(nonatomic) NSString* tSignatureSvg;
-/* The svg of the Initials [optional]
- */
-@property(nonatomic) NSString* tSignatureSvginitials;
 
 @end

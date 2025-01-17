@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol EzdoctemplatefieldtypecategoryGetAutocompleteV2Response
 @end
 
-@interface EzdoctemplatefieldtypecategoryGetAutocompleteV2Response : Object
+@interface EzdoctemplatefieldtypecategoryGetAutocompleteV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload* mPayload;
 

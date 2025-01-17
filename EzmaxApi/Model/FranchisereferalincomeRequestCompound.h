@@ -16,54 +16,21 @@
 
 #import "AddressRequest.h"
 #import "ContactRequestCompound.h"
+#import "FranchisereferalincomeRequest.h"
 @protocol AddressRequest;
 @class AddressRequest;
 @protocol ContactRequestCompound;
 @class ContactRequestCompound;
+@protocol FranchisereferalincomeRequest;
+@class FranchisereferalincomeRequest;
 
 
 
 @protocol FranchisereferalincomeRequestCompound
 @end
 
-@interface FranchisereferalincomeRequestCompound : Object
+@interface FranchisereferalincomeRequestCompound : FranchisereferalincomeRequest
 
-/* The unique ID of the Franchisereferalincome [optional]
- */
-@property(nonatomic) NSNumber* pkiFranchisereferalincomeID;
-/* The unique ID of the Franchisebroker 
- */
-@property(nonatomic) NSNumber* fkiFranchisebrokerID;
-/* The unique ID of the Franchisereferalincomeprogram 
- */
-@property(nonatomic) NSNumber* fkiFranchisereferalincomeprogramID;
-/* The unique ID of the Period 
- */
-@property(nonatomic) NSNumber* fkiPeriodID;
-/* The loan amount 
- */
-@property(nonatomic) NSString* dFranchisereferalincomeLoan;
-/* The amount that will be given to the franchise 
- */
-@property(nonatomic) NSString* dFranchisereferalincomeFranchiseamount;
-/* The amount that will be kept by the franchisor 
- */
-@property(nonatomic) NSString* dFranchisereferalincomeFranchisoramount;
-/* The amount that will be given to the agent 
- */
-@property(nonatomic) NSString* dFranchisereferalincomeAgentamount;
-/* The date the amounts were disbursed 
- */
-@property(nonatomic) NSString* dtFranchisereferalincomeDisbursed;
-/* Comment about the transaction 
- */
-@property(nonatomic) NSString* tFranchisereferalincomeComment;
-/* The unique ID of the Franchisereoffice 
- */
-@property(nonatomic) NSNumber* fkiFranchiseofficeID;
-/*  
- */
-@property(nonatomic) NSString* sFranchisereferalincomeRemoteid;
 
 @property(nonatomic) AddressRequest* objAddress;
 

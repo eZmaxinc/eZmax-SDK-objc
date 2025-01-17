@@ -14,19 +14,16 @@
 */
 
 
+#import "DomainRequest.h"
+@protocol DomainRequest;
+@class DomainRequest;
 
 
 
 @protocol DomainRequestCompound
 @end
 
-@interface DomainRequestCompound : Object
+@interface DomainRequestCompound : DomainRequest
 
-/* The unique ID of the Domain [optional]
- */
-@property(nonatomic) NSNumber* pkiDomainID;
-/* The name of the Domain 
- */
-@property(nonatomic) NSString* sDomainName;
 
 @end

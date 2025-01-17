@@ -15,12 +15,15 @@
 
 
 #import "AddressResponse.h"
+#import "ContactinformationsResponse.h"
 #import "EmailResponse.h"
 #import "FieldEContactinformationsType.h"
 #import "PhoneResponseCompound.h"
 #import "WebsiteResponse.h"
 @protocol AddressResponse;
 @class AddressResponse;
+@protocol ContactinformationsResponse;
+@class ContactinformationsResponse;
 @protocol EmailResponse;
 @class EmailResponse;
 @protocol FieldEContactinformationsType;
@@ -35,39 +38,8 @@
 @protocol ContactinformationsResponseCompound
 @end
 
-@interface ContactinformationsResponseCompound : Object
+@interface ContactinformationsResponseCompound : ContactinformationsResponse
 
-/* The unique ID of the Contactinformations 
- */
-@property(nonatomic) NSNumber* pkiContactinformationsID;
-/* The unique ID of the Address [optional]
- */
-@property(nonatomic) NSNumber* fkiAddressIDDefault;
-/* The unique ID of the Phone. [optional]
- */
-@property(nonatomic) NSNumber* fkiPhoneIDDefault;
-/* The unique ID of the Email [optional]
- */
-@property(nonatomic) NSNumber* fkiEmailIDDefault;
-/* The unique ID of the Website Default [optional]
- */
-@property(nonatomic) NSNumber* fkiWebsiteIDDefault;
-
-@property(nonatomic) FieldEContactinformationsType* eContactinformationsType;
-/* The url of the Contactinformations [optional]
- */
-@property(nonatomic) NSString* sContactinformationsUrl;
-/* An Address Object and children to create a complete structure [optional]
- */
-@property(nonatomic) AddressResponse* objAddressDefault;
-
-@property(nonatomic) PhoneResponseCompound* objPhoneDefault;
-/* An Email Object and children to create a complete structure [optional]
- */
-@property(nonatomic) EmailResponse* objEmailDefault;
-/* A Website Object and children to create a complete structure [optional]
- */
-@property(nonatomic) WebsiteResponse* objWebsiteDefault;
 
 @property(nonatomic) NSArray<AddressResponseCompound>* aObjAddress;
 

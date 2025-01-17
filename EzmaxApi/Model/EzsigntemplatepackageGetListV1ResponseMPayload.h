@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "EzsigntemplatepackageListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol EzsigntemplatepackageListElement;
 @class EzsigntemplatepackageListElement;
 
@@ -23,14 +26,8 @@
 @protocol EzsigntemplatepackageGetListV1ResponseMPayload
 @end
 
-@interface EzsigntemplatepackageGetListV1ResponseMPayload : Object
+@interface EzsigntemplatepackageGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<EzsigntemplatepackageListElement>* aObjEzsigntemplatepackage;
 

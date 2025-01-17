@@ -14,7 +14,10 @@
 */
 
 
+#import "AuthenticationexternalRequest.h"
 #import "FieldEAuthenticationexternalType.h"
+@protocol AuthenticationexternalRequest;
+@class AuthenticationexternalRequest;
 @protocol FieldEAuthenticationexternalType;
 @class FieldEAuthenticationexternalType;
 
@@ -23,15 +26,7 @@
 @protocol AuthenticationexternalRequestCompound
 @end
 
-@interface AuthenticationexternalRequestCompound : Object
+@interface AuthenticationexternalRequestCompound : AuthenticationexternalRequest
 
-/* The unique ID of the Authenticationexternal [optional]
- */
-@property(nonatomic) NSNumber* pkiAuthenticationexternalID;
-/* The description of the Authenticationexternal 
- */
-@property(nonatomic) NSString* sAuthenticationexternalDescription;
-
-@property(nonatomic) FieldEAuthenticationexternalType* eAuthenticationexternalType;
 
 @end

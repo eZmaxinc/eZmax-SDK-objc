@@ -14,22 +14,16 @@
 */
 
 
+#import "UsergroupexternalResponse.h"
+@protocol UsergroupexternalResponse;
+@class UsergroupexternalResponse;
 
 
 
 @protocol UsergroupexternalResponseCompound
 @end
 
-@interface UsergroupexternalResponseCompound : Object
+@interface UsergroupexternalResponseCompound : UsergroupexternalResponse
 
-/* The unique ID of the Usergroupexternal 
- */
-@property(nonatomic) NSNumber* pkiUsergroupexternalID;
-/* The name of the Usergroupexternal 
- */
-@property(nonatomic) NSString* sUsergroupexternalName;
-/* The id of the Usergroupexternal 
- */
-@property(nonatomic) NSString* sUsergroupexternalID;
 
 @end

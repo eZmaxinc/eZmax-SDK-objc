@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiContactinformationsID": @"pkiContactinformationsID", @"fkiAddressIDDefault": @"fkiAddressIDDefault", @"fkiPhoneIDDefault": @"fkiPhoneIDDefault", @"fkiEmailIDDefault": @"fkiEmailIDDefault", @"fkiWebsiteIDDefault": @"fkiWebsiteIDDefault", @"eContactinformationsType": @"eContactinformationsType", @"sContactinformationsUrl": @"sContactinformationsUrl", @"objAddressDefault": @"objAddressDefault", @"objPhoneDefault": @"objPhoneDefault", @"objEmailDefault": @"objEmailDefault", @"objWebsiteDefault": @"objWebsiteDefault", @"aObjAddress": @"a_objAddress", @"aObjPhone": @"a_objPhone", @"aObjEmail": @"a_objEmail", @"aObjWebsite": @"a_objWebsite" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjAddress": @"a_objAddress", @"aObjPhone": @"a_objPhone", @"aObjEmail": @"a_objEmail", @"aObjWebsite": @"a_objWebsite" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiAddressIDDefault", @"fkiPhoneIDDefault", @"fkiEmailIDDefault", @"fkiWebsiteIDDefault", @"sContactinformationsUrl", @"objAddressDefault", @"objPhoneDefault", @"objEmailDefault", @"objWebsiteDefault", ];
+  NSArray *optionalProperties = @[];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -14,8 +14,11 @@
 */
 
 
+#import "CommonResponseError.h"
 #import "CustomCreditcardtransactionresponseResponse.h"
 #import "FieldEErrorCode.h"
+@protocol CommonResponseError;
+@class CommonResponseError;
 @protocol CustomCreditcardtransactionresponseResponse;
 @class CustomCreditcardtransactionresponseResponse;
 @protocol FieldEErrorCode;
@@ -26,16 +29,8 @@
 @protocol CommonResponseErrorCreditcardValidation
 @end
 
-@interface CommonResponseErrorCreditcardValidation : Object
+@interface CommonResponseErrorCreditcardValidation : CommonResponseError
 
-/* The message giving details about the error 
- */
-@property(nonatomic) NSString* sErrorMessage;
-
-@property(nonatomic) FieldEErrorCode* eErrorCode;
-/* More error message detail [optional]
- */
-@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 
 @property(nonatomic) CustomCreditcardtransactionresponseResponse* objCreditcardtransactionresponse;
 

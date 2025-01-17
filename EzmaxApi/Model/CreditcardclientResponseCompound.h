@@ -14,7 +14,10 @@
 */
 
 
+#import "CreditcardclientResponse.h"
 #import "CreditcarddetailResponseCompound.h"
+@protocol CreditcardclientResponse;
+@class CreditcardclientResponse;
 @protocol CreditcarddetailResponseCompound;
 @class CreditcarddetailResponseCompound;
 
@@ -23,27 +26,7 @@
 @protocol CreditcardclientResponseCompound
 @end
 
-@interface CreditcardclientResponseCompound : Object
+@interface CreditcardclientResponseCompound : CreditcardclientResponse
 
-/* The unique ID of the Creditcardclient 
- */
-@property(nonatomic) NSNumber* pkiCreditcardclientID;
-/* The unique ID of the Creditcarddetail 
- */
-@property(nonatomic) NSNumber* fkiCreditcarddetailID;
-/* Whether if it's the creditcardclient is the default one 
- */
-@property(nonatomic) NSNumber* bCreditcardclientrelationIsdefault;
-/* The description of the Creditcardclient 
- */
-@property(nonatomic) NSString* sCreditcardclientDescription;
-/* Whether if it's an allowedagencypayment 
- */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedcompanypayment;
-/* Whether if it's an allowedtranquillit 
- */
-@property(nonatomic) NSNumber* bCreditcardclientAllowedtranquillit;
-
-@property(nonatomic) CreditcarddetailResponseCompound* objCreditcarddetail;
 
 @end

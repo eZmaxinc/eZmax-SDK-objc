@@ -16,30 +16,20 @@
 
 #import "FieldEVariableexpenseTaxable.h"
 #import "MultilingualVariableexpenseDescription.h"
+#import "VariableexpenseResponse.h"
 @protocol FieldEVariableexpenseTaxable;
 @class FieldEVariableexpenseTaxable;
 @protocol MultilingualVariableexpenseDescription;
 @class MultilingualVariableexpenseDescription;
+@protocol VariableexpenseResponse;
+@class VariableexpenseResponse;
 
 
 
 @protocol VariableexpenseResponseCompound
 @end
 
-@interface VariableexpenseResponseCompound : Object
+@interface VariableexpenseResponseCompound : VariableexpenseResponse
 
-/* The unique ID of the Variableexpense 
- */
-@property(nonatomic) NSNumber* pkiVariableexpenseID;
-/* The code of the Variableexpense [optional]
- */
-@property(nonatomic) NSString* sVariableexpenseCode;
-
-@property(nonatomic) MultilingualVariableexpenseDescription* objVariableexpenseDescription;
-
-@property(nonatomic) FieldEVariableexpenseTaxable* eVariableexpenseTaxable;
-/* Whether the variableexpense is active or not [optional]
- */
-@property(nonatomic) NSNumber* bVariableexpenseIsactive;
 
 @end

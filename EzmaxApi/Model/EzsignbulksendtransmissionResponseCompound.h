@@ -16,32 +16,21 @@
 
 #import "CommonAudit.h"
 #import "CustomEzsignfoldertransmissionResponse.h"
+#import "EzsignbulksendtransmissionResponse.h"
 @protocol CommonAudit;
 @class CommonAudit;
 @protocol CustomEzsignfoldertransmissionResponse;
 @class CustomEzsignfoldertransmissionResponse;
+@protocol EzsignbulksendtransmissionResponse;
+@class EzsignbulksendtransmissionResponse;
 
 
 
 @protocol EzsignbulksendtransmissionResponseCompound
 @end
 
-@interface EzsignbulksendtransmissionResponseCompound : Object
+@interface EzsignbulksendtransmissionResponseCompound : EzsignbulksendtransmissionResponse
 
-/* The unique ID of the Ezsignbulksendtransmission 
- */
-@property(nonatomic) NSNumber* pkiEzsignbulksendtransmissionID;
-/* The unique ID of the Ezsignbulksend 
- */
-@property(nonatomic) NSNumber* fkiEzsignbulksendID;
-/* The description of the Ezsignbulksendtransmission 
- */
-@property(nonatomic) NSString* sEzsignbulksendtransmissionDescription;
-/* The number of errors during the Ezsignbulksendtransmission 
- */
-@property(nonatomic) NSNumber* iEzsignbulksendtransmissionErrors;
-
-@property(nonatomic) CommonAudit* objAudit;
 
 @property(nonatomic) NSArray<CustomEzsignfoldertransmissionResponse>* aObjEzsignfoldertransmission;
 

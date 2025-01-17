@@ -14,22 +14,16 @@
 */
 
 
+#import "DiscussionRequest.h"
+@protocol DiscussionRequest;
+@class DiscussionRequest;
 
 
 
 @protocol DiscussionRequestCompound
 @end
 
-@interface DiscussionRequestCompound : Object
+@interface DiscussionRequestCompound : DiscussionRequest
 
-/* The unique ID of the Discussion [optional]
- */
-@property(nonatomic) NSNumber* pkiDiscussionID;
-/* The description of the Discussion 
- */
-@property(nonatomic) NSString* sDiscussionDescription;
-/* Whether if it's an closed [optional]
- */
-@property(nonatomic) NSNumber* bDiscussionClosed;
 
 @end

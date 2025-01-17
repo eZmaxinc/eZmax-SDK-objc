@@ -14,37 +14,16 @@
 */
 
 
+#import "CreditcarddetailResponse.h"
+@protocol CreditcarddetailResponse;
+@class CreditcarddetailResponse;
 
 
 
 @protocol CreditcarddetailResponseCompound
 @end
 
-@interface CreditcarddetailResponseCompound : Object
+@interface CreditcarddetailResponseCompound : CreditcarddetailResponse
 
-/* The unique ID of the Creditcarddetail 
- */
-@property(nonatomic) NSNumber* pkiCreditcarddetailID;
-/* The unique ID of the Creditcardtype 
- */
-@property(nonatomic) NSNumber* fkiCreditcardtypeID;
-/* The last digits of the Creditcarddetail 
- */
-@property(nonatomic) NSNumber* iCreditcarddetailLastdigits;
-/* The expirationmonth of the Creditcarddetail 
- */
-@property(nonatomic) NSNumber* iCreditcarddetailExpirationmonth;
-/* The expirationyear of the Creditcarddetail 
- */
-@property(nonatomic) NSNumber* iCreditcarddetailExpirationyear;
-/* The civic of the Creditcarddetail 
- */
-@property(nonatomic) NSString* sCreditcarddetailCivic;
-/* The street of the Creditcarddetail 
- */
-@property(nonatomic) NSString* sCreditcarddetailStreet;
-/* The zip of the Creditcarddetail 
- */
-@property(nonatomic) NSString* sCreditcarddetailZip;
 
 @end

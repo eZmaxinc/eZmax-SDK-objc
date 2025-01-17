@@ -15,12 +15,15 @@
 
 
 #import "CommonAudit.h"
+#import "EzsigntemplateResponseV3.h"
 #import "EzsigntemplatedocumentResponse.h"
 #import "EzsigntemplatesignerResponseCompound.h"
 #import "FieldEEzsigntemplateRecognition.h"
 #import "FieldEEzsigntemplateType.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol EzsigntemplateResponseV3;
+@class EzsigntemplateResponseV3;
 @protocol EzsigntemplatedocumentResponse;
 @class EzsigntemplatedocumentResponse;
 @protocol EzsigntemplatesignerResponseCompound;
@@ -35,56 +38,8 @@
 @protocol EzsigntemplateResponseCompoundV3
 @end
 
-@interface EzsigntemplateResponseCompoundV3 : Object
+@interface EzsigntemplateResponseCompoundV3 : EzsigntemplateResponseV3
 
-/* The unique ID of the Ezsigntemplate 
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplateID;
-/* The unique ID of the Ezsigntemplatedocument [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplatedocumentID;
-/* The unique ID of the Ezsignfoldertype. [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
- */
-@property(nonatomic) NSNumber* fkiLanguageID;
-/* The unique ID of the Ezdoctemplatedocument [optional]
- */
-@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
-/* The name of the Ezdoctemplatedocument in the language of the requester [optional]
- */
-@property(nonatomic) NSString* sEzdoctemplatedocumentNameX;
-/* The Name of the Language in the language of the requester 
- */
-@property(nonatomic) NSString* sLanguageNameX;
-/* The description of the Ezsigntemplate 
- */
-@property(nonatomic) NSString* sEzsigntemplateDescription;
-/* The external description of the Ezsigntemplate [optional]
- */
-@property(nonatomic) NSString* sEzsigntemplateExternaldescription;
-/* The comment of the Ezsigntemplate [optional]
- */
-@property(nonatomic) NSString* tEzsigntemplateComment;
-
-@property(nonatomic) FieldEEzsigntemplateRecognition* eEzsigntemplateRecognition;
-/* The filename regexp of the Ezsigntemplate. [optional]
- */
-@property(nonatomic) NSString* sEzsigntemplateFilenameregexp;
-/* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) 
- */
-@property(nonatomic) NSNumber* bEzsigntemplateAdminonly;
-/* The name of the Ezsignfoldertype in the language of the requester [optional]
- */
-@property(nonatomic) NSString* sEzsignfoldertypeNameX;
-
-@property(nonatomic) CommonAudit* objAudit;
-/* Whether the Ezsigntemplate if allowed to edit or not 
- */
-@property(nonatomic) NSNumber* bEzsigntemplateEditallowed;
-
-@property(nonatomic) FieldEEzsigntemplateType* eEzsigntemplateType;
 
 @property(nonatomic) EzsigntemplatedocumentResponse* objEzsigntemplatedocument;
 

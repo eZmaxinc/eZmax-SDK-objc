@@ -14,22 +14,16 @@
 */
 
 
+#import "EzsigntemplateglobalsignerResponse.h"
+@protocol EzsigntemplateglobalsignerResponse;
+@class EzsigntemplateglobalsignerResponse;
 
 
 
 @protocol EzsigntemplateglobalsignerResponseCompound
 @end
 
-@interface EzsigntemplateglobalsignerResponseCompound : Object
+@interface EzsigntemplateglobalsignerResponseCompound : EzsigntemplateglobalsignerResponse
 
-/* The unique ID of the Ezsigntemplateglobalsigner 
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplateglobalsignerID;
-/* The unique ID of the Ezsigntemplateglobal 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplateglobalID;
-/* The description of the Ezsigntemplateglobalsigner 
- */
-@property(nonatomic) NSString* sEzsigntemplateglobalsignerDescription;
 
 @end

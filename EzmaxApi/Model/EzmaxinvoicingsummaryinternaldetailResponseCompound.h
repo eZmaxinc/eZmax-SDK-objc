@@ -14,49 +14,16 @@
 */
 
 
+#import "EzmaxinvoicingsummaryinternaldetailResponse.h"
+@protocol EzmaxinvoicingsummaryinternaldetailResponse;
+@class EzmaxinvoicingsummaryinternaldetailResponse;
 
 
 
 @protocol EzmaxinvoicingsummaryinternaldetailResponseCompound
 @end
 
-@interface EzmaxinvoicingsummaryinternaldetailResponseCompound : Object
+@interface EzmaxinvoicingsummaryinternaldetailResponseCompound : EzmaxinvoicingsummaryinternaldetailResponse
 
-/* The unique ID of the Ezmaxinvoicingsummaryinternaldetail [optional]
- */
-@property(nonatomic) NSNumber* pkiEzmaxinvoicingsummaryinternaldetailID;
-/* The unique ID of the Ezmaxinvoicingsummaryinternal [optional]
- */
-@property(nonatomic) NSNumber* fkiEzmaxinvoicingsummaryinternalID;
-/* The unique ID of the Ezmaxproduct 
- */
-@property(nonatomic) NSNumber* fkiEzmaxproductID;
-/* The description of the Ezmaxproduct in the language of the requester 
- */
-@property(nonatomic) NSString* sEzmaxproductDescriptionX;
-/* The unique ID of the Billingentityexternal 
- */
-@property(nonatomic) NSNumber* fkiBillingentityexternalID;
-/* The description of the Billingentityexternal 
- */
-@property(nonatomic) NSString* sBillingentityexternalDescription;
-/* The count item invoiced for the product 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingsummaryinternaldetailCountreal;
-/* The subtotal invoiced for the product 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingsummaryinternaldetailSubtotal;
-/* The rebate for the product 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingsummaryinternaldetailRebate;
-/* The total invoiced for the product 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingsummaryinternaldetailTotal;
-/* Whether if it's an adjustment 
- */
-@property(nonatomic) NSNumber* bEzmaxinvoicingsummaryinternaldetailAdjustment;
-/* The help message of the Ezmaxproduct in the language of the requester 
- */
-@property(nonatomic) NSString* tEzmaxproductHelpX;
 
 @end

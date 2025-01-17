@@ -15,10 +15,13 @@
 
 
 #import "CustomDiscussionconfigurationResponse.h"
+#import "DiscussionResponse.h"
 #import "DiscussionmembershipResponseCompound.h"
 #import "DiscussionmessageResponseCompound.h"
 @protocol CustomDiscussionconfigurationResponse;
 @class CustomDiscussionconfigurationResponse;
+@protocol DiscussionResponse;
+@class DiscussionResponse;
 @protocol DiscussionmembershipResponseCompound;
 @class DiscussionmembershipResponseCompound;
 @protocol DiscussionmessageResponseCompound;
@@ -29,28 +32,8 @@
 @protocol DiscussionResponseCompound
 @end
 
-@interface DiscussionResponseCompound : Object
+@interface DiscussionResponseCompound : DiscussionResponse
 
-/* The unique ID of the Discussion 
- */
-@property(nonatomic) NSNumber* pkiDiscussionID;
-/* The description of the Discussion 
- */
-@property(nonatomic) NSString* sDiscussionDescription;
-/* Whether if it's an closed 
- */
-@property(nonatomic) NSNumber* bDiscussionClosed;
-/* The date the Discussion was last read [optional]
- */
-@property(nonatomic) NSString* dtDiscussionLastread;
-/* The count of Attachment. 
- */
-@property(nonatomic) NSNumber* iDiscussionmessageCount;
-/* The count of Attachment. 
- */
-@property(nonatomic) NSNumber* iDiscussionmessageCountunread;
-
-@property(nonatomic) CustomDiscussionconfigurationResponse* objDiscussionconfiguration;
 
 @property(nonatomic) NSArray<DiscussionmembershipResponseCompound>* aObjDiscussionmembership;
 

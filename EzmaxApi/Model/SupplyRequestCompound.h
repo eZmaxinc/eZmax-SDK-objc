@@ -15,41 +15,18 @@
 
 
 #import "MultilingualSupplyDescription.h"
+#import "SupplyRequest.h"
 @protocol MultilingualSupplyDescription;
 @class MultilingualSupplyDescription;
+@protocol SupplyRequest;
+@class SupplyRequest;
 
 
 
 @protocol SupplyRequestCompound
 @end
 
-@interface SupplyRequestCompound : Object
+@interface SupplyRequestCompound : SupplyRequest
 
-/* The unique ID of the Supply [optional]
- */
-@property(nonatomic) NSNumber* pkiSupplyID;
-/* The unique ID of the Glaccount [optional]
- */
-@property(nonatomic) NSNumber* fkiGlaccountID;
-/* The unique ID of the Glaccountcontainer [optional]
- */
-@property(nonatomic) NSNumber* fkiGlaccountcontainerID;
-/* The unique ID of the Variableexpense 
- */
-@property(nonatomic) NSNumber* fkiVariableexpenseID;
-/* The code of the Supply 
- */
-@property(nonatomic) NSString* sSupplyCode;
-
-@property(nonatomic) MultilingualSupplyDescription* objSupplyDescription;
-/* The unit price of the Supply 
- */
-@property(nonatomic) NSString* dSupplyUnitprice;
-/* Whether the supply is active or not 
- */
-@property(nonatomic) NSNumber* bSupplyIsactive;
-/* Whether if the price is variable 
- */
-@property(nonatomic) NSNumber* bSupplyVariableprice;
 
 @end

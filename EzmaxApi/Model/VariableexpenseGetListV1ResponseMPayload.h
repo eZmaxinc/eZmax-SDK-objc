@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "VariableexpenseListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol VariableexpenseListElement;
 @class VariableexpenseListElement;
 
@@ -23,14 +26,8 @@
 @protocol VariableexpenseGetListV1ResponseMPayload
 @end
 
-@interface VariableexpenseGetListV1ResponseMPayload : Object
+@interface VariableexpenseGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<VariableexpenseListElement>* aObjVariableexpense;
 

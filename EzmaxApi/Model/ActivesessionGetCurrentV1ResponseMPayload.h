@@ -14,6 +14,7 @@
 */
 
 
+#import "ActivesessionResponseCompound.h"
 #import "ActivesessionResponseCompoundApikey.h"
 #import "ActivesessionResponseCompoundUser.h"
 #import "FieldEActivesessionEzsign.h"
@@ -26,6 +27,8 @@
 #import "FieldESystemconfigurationEzsignofficeplan.h"
 #import "FieldEUserEzsignaccess.h"
 #import "FieldEUserEzsignprepaid.h"
+@protocol ActivesessionResponseCompound;
+@class ActivesessionResponseCompound;
 @protocol ActivesessionResponseCompoundApikey;
 @class ActivesessionResponseCompoundApikey;
 @protocol ActivesessionResponseCompoundUser;
@@ -56,87 +59,7 @@
 @protocol ActivesessionGetCurrentV1ResponseMPayload
 @end
 
-@interface ActivesessionGetCurrentV1ResponseMPayload : Object
+@interface ActivesessionGetCurrentV1ResponseMPayload : ActivesessionResponseCompound
 
-
-@property(nonatomic) FieldEActivesessionUsertype* eActivesessionUsertype;
-
-@property(nonatomic) FieldEActivesessionOrigin* eActivesessionOrigin;
-
-@property(nonatomic) FieldEActivesessionWeekdaystart* eActivesessionWeekdaystart;
-/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
- */
-@property(nonatomic) NSNumber* fkiLanguageID;
-/* The Name of the Company in the language of the requester 
- */
-@property(nonatomic) NSString* sCompanyNameX;
-/* The Name of the Department in the language of the requester 
- */
-@property(nonatomic) NSString* sDepartmentNameX;
-/* Whether the active session is in debug or not 
- */
-@property(nonatomic) NSNumber* bActivesessionDebug;
-/* Whether the active session is superadmin or not 
- */
-@property(nonatomic) NSNumber* bActivesessionIssuperadmin;
-/* Can access attachment when we clone a user [optional]
- */
-@property(nonatomic) NSNumber* bActivesessionAttachment;
-/* Can access canafe when we clone a user [optional]
- */
-@property(nonatomic) NSNumber* bActivesessionCanafe;
-/* Can access financial element when we clone a user [optional]
- */
-@property(nonatomic) NSNumber* bActivesessionFinancial;
-/* Can access closed realestate folders when we clone a user [optional]
- */
-@property(nonatomic) NSNumber* bActivesessionRealestatecompleted;
-
-@property(nonatomic) FieldEActivesessionEzsign* eActivesessionEzsign;
-
-@property(nonatomic) FieldEActivesessionEzsignaccess* eActivesessionEzsignaccess;
-
-@property(nonatomic) FieldEActivesessionEzsignprepaid* eActivesessionEzsignprepaid;
-
-@property(nonatomic) FieldEActivesessionRealestateinprogress* eActivesessionRealestateinprogress;
-/* The customer code assigned to your account 
- */
-@property(nonatomic) NSString* pksCustomerCode;
-/* The unique ID of the Systemconfigurationtype 
- */
-@property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
-/* The unique ID of the Signature [optional]
- */
-@property(nonatomic) NSNumber* fkiSignatureID;
-/* The unique ID of the Ezsignuser [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsignuserID;
-/* Whether if Ezsign is paid by the company or not [optional]
- */
-@property(nonatomic) NSNumber* bSystemconfigurationEzsignpaidbyoffice;
-
-@property(nonatomic) FieldESystemconfigurationEzsignofficeplan* eSystemconfigurationEzsignofficeplan;
-
-@property(nonatomic) FieldEUserEzsignaccess* eUserEzsignaccess;
-
-@property(nonatomic) FieldEUserEzsignprepaid* eUserEzsignprepaid;
-/* Whether the User's eZsign subscription is a trial [optional]
- */
-@property(nonatomic) NSNumber* bUserEzsigntrial;
-/* The eZsign prepaid expiration date [optional]
- */
-@property(nonatomic) NSString* dtUserEzsignprepaidexpiration;
-/* An array of permissions granted to the user or api key 
- */
-@property(nonatomic) NSArray<NSNumber*>* aPkiPermissionID;
-
-@property(nonatomic) ActivesessionResponseCompoundUser* objUserReal;
-
-@property(nonatomic) ActivesessionResponseCompoundUser* objUserCloned;
-
-@property(nonatomic) ActivesessionResponseCompoundApikey* objApikey;
-/* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. 
- */
-@property(nonatomic) NSArray<NSString*>* aEModuleInternalname;
 
 @end

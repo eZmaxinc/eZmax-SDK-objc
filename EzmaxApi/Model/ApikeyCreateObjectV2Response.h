@@ -15,10 +15,13 @@
 
 
 #import "ApikeyCreateObjectV2ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ApikeyCreateObjectV2ResponseMPayload;
 @class ApikeyCreateObjectV2ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol ApikeyCreateObjectV2Response
 @end
 
-@interface ApikeyCreateObjectV2Response : Object
+@interface ApikeyCreateObjectV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ApikeyCreateObjectV2ResponseMPayload* mPayload;
 

@@ -14,9 +14,12 @@
 */
 
 
+#import "BrandingResponseV3.h"
 #import "FieldEBrandingAlignlogo.h"
 #import "FieldEBrandingLogo.h"
 #import "MultilingualBrandingDescription.h"
+@protocol BrandingResponseV3;
+@class BrandingResponseV3;
 @protocol FieldEBrandingAlignlogo;
 @class FieldEBrandingAlignlogo;
 @protocol FieldEBrandingLogo;
@@ -29,35 +32,8 @@
 @protocol BrandingResponseCompoundV3
 @end
 
-@interface BrandingResponseCompoundV3 : Object
+@interface BrandingResponseCompoundV3 : BrandingResponseV3
 
-/* The unique ID of the Branding 
- */
-@property(nonatomic) NSNumber* pkiBrandingID;
-/* The unique ID of the Email [optional]
- */
-@property(nonatomic) NSNumber* fkiEmailID;
-
-@property(nonatomic) MultilingualBrandingDescription* objBrandingDescription;
-/* The Description of the Branding in the language of the requester 
- */
-@property(nonatomic) NSString* sBrandingDescriptionX;
-/* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty [optional]
- */
-@property(nonatomic) NSString* sBrandingName;
-/* The email address. [optional]
- */
-@property(nonatomic) NSString* sEmailAddress;
-
-@property(nonatomic) FieldEBrandingLogo* eBrandingLogo;
-
-@property(nonatomic) FieldEBrandingAlignlogo* eBrandingAlignlogo;
-/* The primary color. This is a RGB color converted into integer 
- */
-@property(nonatomic) NSNumber* iBrandingColor;
-/* Whether the Branding is active or not 
- */
-@property(nonatomic) NSNumber* bBrandingIsactive;
 /* The url of the picture used as logo in the Branding [optional]
  */
 @property(nonatomic) NSString* sBrandingLogourl;

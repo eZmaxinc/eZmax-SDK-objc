@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonResponseError.h"
 #import "FieldEErrorCode.h"
+@protocol CommonResponseError;
+@class CommonResponseError;
 @protocol FieldEErrorCode;
 @class FieldEErrorCode;
 
@@ -23,15 +26,7 @@
 @protocol CommonResponseErrorTooManyRequests
 @end
 
-@interface CommonResponseErrorTooManyRequests : Object
+@interface CommonResponseErrorTooManyRequests : CommonResponseError
 
-/* The message giving details about the error 
- */
-@property(nonatomic) NSString* sErrorMessage;
-
-@property(nonatomic) FieldEErrorCode* eErrorCode;
-/* More error message detail [optional]
- */
-@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 
 @end

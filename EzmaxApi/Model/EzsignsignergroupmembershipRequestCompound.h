@@ -14,28 +14,16 @@
 */
 
 
+#import "EzsignsignergroupmembershipRequest.h"
+@protocol EzsignsignergroupmembershipRequest;
+@class EzsignsignergroupmembershipRequest;
 
 
 
 @protocol EzsignsignergroupmembershipRequestCompound
 @end
 
-@interface EzsignsignergroupmembershipRequestCompound : Object
+@interface EzsignsignergroupmembershipRequestCompound : EzsignsignergroupmembershipRequest
 
-/* The unique ID of the Ezsignsignergroupmembership [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsignsignergroupmembershipID;
-/* The unique ID of the Ezsignsignergroup 
- */
-@property(nonatomic) NSNumber* fkiEzsignsignergroupID;
-/* The unique ID of the Ezsignsigner [optional]
- */
-@property(nonatomic) NSNumber* fkiEzsignsignerID;
-/* The unique ID of the User [optional]
- */
-@property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Usergroup [optional]
- */
-@property(nonatomic) NSNumber* fkiUsergroupID;
 
 @end

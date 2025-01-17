@@ -14,9 +14,12 @@
 */
 
 
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload.h"
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response
 @end
 
-@interface EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response : Object
+@interface EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload* mPayload;
 

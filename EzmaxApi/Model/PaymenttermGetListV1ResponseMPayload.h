@@ -14,7 +14,10 @@
 */
 
 
+#import "CommonGetListV1ResponseMPayload.h"
 #import "PaymenttermListElement.h"
+@protocol CommonGetListV1ResponseMPayload;
+@class CommonGetListV1ResponseMPayload;
 @protocol PaymenttermListElement;
 @class PaymenttermListElement;
 
@@ -23,14 +26,8 @@
 @protocol PaymenttermGetListV1ResponseMPayload
 @end
 
-@interface PaymenttermGetListV1ResponseMPayload : Object
+@interface PaymenttermGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
 
-/* The number of rows returned 
- */
-@property(nonatomic) NSNumber* iRowReturned;
-/* The number of rows matching your filters (if any) or the total number of rows 
- */
-@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<PaymenttermListElement>* aObjPaymentterm;
 

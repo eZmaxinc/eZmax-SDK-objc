@@ -16,32 +16,21 @@
 
 #import "CustomNotificationtestgetnotificationtestsResponse.h"
 #import "MultilingualNotificationsubsectionName.h"
+#import "NotificationsubsectionResponse.h"
 @protocol CustomNotificationtestgetnotificationtestsResponse;
 @class CustomNotificationtestgetnotificationtestsResponse;
 @protocol MultilingualNotificationsubsectionName;
 @class MultilingualNotificationsubsectionName;
+@protocol NotificationsubsectionResponse;
+@class NotificationsubsectionResponse;
 
 
 
 @protocol CustomNotificationsubsectiongetnotificationtestsResponse
 @end
 
-@interface CustomNotificationsubsectiongetnotificationtestsResponse : Object
+@interface CustomNotificationsubsectiongetnotificationtestsResponse : NotificationsubsectionResponse
 
-/* The unique ID of the Notificationsubsection 
- */
-@property(nonatomic) NSNumber* pkiNotificationsubsectionID;
-/* The unique ID of the Notificationsection 
- */
-@property(nonatomic) NSNumber* fkiNotificationsectionID;
-
-@property(nonatomic) MultilingualNotificationsubsectionName* objNotificationsubsectionName;
-/* The name of the Notificationsection in the language of the requester [optional]
- */
-@property(nonatomic) NSString* sNotificationsectionNameX;
-/* The name of the Notificationsubsection in the language of the requester 
- */
-@property(nonatomic) NSString* sNotificationsubsectionNameX;
 
 @property(nonatomic) NSArray<CustomNotificationtestgetnotificationtestsResponse>* aObjNotificationtest;
 

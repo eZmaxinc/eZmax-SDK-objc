@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objWebhook": @"objWebhook", @"aObjAttempt": @"a_objAttempt", @"objEzsignfolder": @"objEzsignfolder" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objEzsignfolder": @"objEzsignfolder" }];
 }
 
 /**

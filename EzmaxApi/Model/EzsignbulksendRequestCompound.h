@@ -14,34 +14,16 @@
 */
 
 
+#import "EzsignbulksendRequest.h"
+@protocol EzsignbulksendRequest;
+@class EzsignbulksendRequest;
 
 
 
 @protocol EzsignbulksendRequestCompound
 @end
 
-@interface EzsignbulksendRequestCompound : Object
+@interface EzsignbulksendRequestCompound : EzsignbulksendRequest
 
-/* The unique ID of the Ezsignbulksend [optional]
- */
-@property(nonatomic) NSNumber* pkiEzsignbulksendID;
-/* The unique ID of the Ezsignfoldertype. 
- */
-@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
-/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
- */
-@property(nonatomic) NSNumber* fkiLanguageID;
-/* The description of the Ezsignbulksend 
- */
-@property(nonatomic) NSString* sEzsignbulksendDescription;
-/* Note about the Ezsignbulksend 
- */
-@property(nonatomic) NSString* tEzsignbulksendNote;
-/* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation 
- */
-@property(nonatomic) NSNumber* bEzsignbulksendNeedvalidation;
-/* Whether the Ezsignbulksend is active or not 
- */
-@property(nonatomic) NSNumber* bEzsignbulksendIsactive;
 
 @end

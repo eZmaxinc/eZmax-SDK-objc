@@ -3,10 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pkiEzsigntemplatepackagemembershipID** | **NSNumber*** | The unique ID of the Ezsigntemplatepackagemembership | 
-**fkiEzsigntemplatepackageID** | **NSNumber*** | The unique ID of the Ezsigntemplatepackage | 
-**fkiEzsigntemplateID** | **NSNumber*** | The unique ID of the Ezsigntemplate | 
-**iEzsigntemplatepackagemembershipOrder** | **NSNumber*** | The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. | 
 **objEzsigntemplate** | [**EzsigntemplateResponseCompound***](EzsigntemplateResponseCompound.md) |  | 
 **aObjEzsigntemplatepackagesignermembership** | [**NSArray&lt;EzsigntemplatepackagesignermembershipResponseCompound&gt;***](EzsigntemplatepackagesignermembershipResponseCompound.md) |  | 
 

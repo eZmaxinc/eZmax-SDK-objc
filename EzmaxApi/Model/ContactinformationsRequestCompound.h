@@ -15,11 +15,14 @@
 
 
 #import "AddressRequest.h"
+#import "ContactinformationsRequest.h"
 #import "EmailRequest.h"
 #import "PhoneRequest.h"
 #import "WebsiteRequest.h"
 @protocol AddressRequest;
 @class AddressRequest;
+@protocol ContactinformationsRequest;
+@class ContactinformationsRequest;
 @protocol EmailRequest;
 @class EmailRequest;
 @protocol PhoneRequest;
@@ -32,20 +35,8 @@
 @protocol ContactinformationsRequestCompound
 @end
 
-@interface ContactinformationsRequestCompound : Object
+@interface ContactinformationsRequestCompound : ContactinformationsRequest
 
-/* The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. 
- */
-@property(nonatomic) NSNumber* iAddressDefault;
-/* The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. 
- */
-@property(nonatomic) NSNumber* iPhoneDefault;
-/* The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. 
- */
-@property(nonatomic) NSNumber* iEmailDefault;
-/* The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. 
- */
-@property(nonatomic) NSNumber* iWebsiteDefault;
 
 @property(nonatomic) NSArray<AddressRequestCompound>* aObjAddress;
 

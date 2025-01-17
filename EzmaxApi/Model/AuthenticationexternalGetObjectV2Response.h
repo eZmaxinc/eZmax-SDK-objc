@@ -15,10 +15,13 @@
 
 
 #import "AuthenticationexternalGetObjectV2ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol AuthenticationexternalGetObjectV2ResponseMPayload;
 @class AuthenticationexternalGetObjectV2ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol AuthenticationexternalGetObjectV2Response
 @end
 
-@interface AuthenticationexternalGetObjectV2Response : Object
+@interface AuthenticationexternalGetObjectV2Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) AuthenticationexternalGetObjectV2ResponseMPayload* mPayload;
 

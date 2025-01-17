@@ -14,10 +14,13 @@
 */
 
 
+#import "EzsigntemplateglobalResponse.h"
 #import "EzsigntemplateglobaldocumentResponse.h"
 #import "EzsigntemplateglobalsignerResponseCompound.h"
 #import "FieldEEzsigntemplateglobalModule.h"
 #import "FieldEEzsigntemplateglobalSupplier.h"
+@protocol EzsigntemplateglobalResponse;
+@class EzsigntemplateglobalResponse;
 @protocol EzsigntemplateglobaldocumentResponse;
 @class EzsigntemplateglobaldocumentResponse;
 @protocol EzsigntemplateglobalsignerResponseCompound;
@@ -32,36 +35,8 @@
 @protocol EzsigntemplateglobalResponseCompound
 @end
 
-@interface EzsigntemplateglobalResponseCompound : Object
+@interface EzsigntemplateglobalResponseCompound : EzsigntemplateglobalResponse
 
-/* The unique ID of the Ezsigntemplateglobal 
- */
-@property(nonatomic) NSNumber* pkiEzsigntemplateglobalID;
-/* The unique ID of the Ezsigntemplateglobaldocument 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplateglobaldocumentID;
-/* The unique ID of the Module 
- */
-@property(nonatomic) NSNumber* fkiModuleID;
-/* The Name of the Module in the language of the requester [optional]
- */
-@property(nonatomic) NSString* sModuleNameX;
-/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
- */
-@property(nonatomic) NSNumber* fkiLanguageID;
-/* The Name of the Language in the language of the requester 
- */
-@property(nonatomic) NSString* sLanguageNameX;
-
-@property(nonatomic) FieldEEzsigntemplateglobalModule* eEzsigntemplateglobalModule;
-
-@property(nonatomic) FieldEEzsigntemplateglobalSupplier* eEzsigntemplateglobalSupplier;
-/* The Code of the Ezsigntemplateglobal 
- */
-@property(nonatomic) NSString* sEzsigntemplateglobalCode;
-/* The description of the Ezsigntemplate 
- */
-@property(nonatomic) NSString* sEzsigntemplateglobalDescription;
 
 @property(nonatomic) EzsigntemplateglobaldocumentResponse* objEzsigntemplateglobaldocument;
 

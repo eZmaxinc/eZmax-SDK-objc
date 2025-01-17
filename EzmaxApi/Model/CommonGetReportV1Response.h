@@ -15,10 +15,13 @@
 
 
 #import "CommonGetReportV1ResponseMPayload.h"
+#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol CommonGetReportV1ResponseMPayload;
 @class CommonGetReportV1ResponseMPayload;
+@protocol CommonResponse;
+@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,12 +32,8 @@
 @protocol CommonGetReportV1Response
 @end
 
-@interface CommonGetReportV1Response : Object
+@interface CommonGetReportV1Response : CommonResponse
 
-
-@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
-
-@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) CommonGetReportV1ResponseMPayload* mPayload;
 

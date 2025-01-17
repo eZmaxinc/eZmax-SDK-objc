@@ -16,6 +16,7 @@
 
 #import "CommonAudit.h"
 #import "CustomEzmaxpricingResponse.h"
+#import "EzmaxinvoicingResponse.h"
 #import "EzmaxinvoicingagentResponseCompound.h"
 #import "EzmaxinvoicingcontractResponseCompound.h"
 #import "EzmaxinvoicingsummaryexternalResponseCompound.h"
@@ -27,6 +28,8 @@
 @class CommonAudit;
 @protocol CustomEzmaxpricingResponse;
 @class CustomEzmaxpricingResponse;
+@protocol EzmaxinvoicingResponse;
+@class EzmaxinvoicingResponse;
 @protocol EzmaxinvoicingagentResponseCompound;
 @class EzmaxinvoicingagentResponseCompound;
 @protocol EzmaxinvoicingcontractResponseCompound;
@@ -47,45 +50,8 @@
 @protocol EzmaxinvoicingResponseCompound
 @end
 
-@interface EzmaxinvoicingResponseCompound : Object
+@interface EzmaxinvoicingResponseCompound : EzmaxinvoicingResponse
 
-/* The unique ID of the Ezmaxinvoicing [optional]
- */
-@property(nonatomic) NSNumber* pkiEzmaxinvoicingID;
-/* The unique ID of the Ezmaxinvoicingcontract 
- */
-@property(nonatomic) NSNumber* fkiEzmaxinvoicingcontractID;
-/* The unique ID of the Ezmaxpricing 
- */
-@property(nonatomic) NSNumber* fkiEzmaxpricingID;
-/* The unique ID of the Systemconfigurationtype 
- */
-@property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
-/* The description of the Systemconfigurationtype in the language of the requester 
- */
-@property(nonatomic) NSString* sSystemconfigurationtypeDescriptionX;
-/* The YYYYMM period of the Ezmaxinvoicing 
- */
-@property(nonatomic) NSString* yyyymmEzmaxinvoicing;
-/* The number of days invoiced 
- */
-@property(nonatomic) NSNumber* iEzmaxinvoicingDays;
-
-@property(nonatomic) FieldEEzmaxinvoicingPaymenttype* eEzmaxinvoicingPaymenttype;
-/* The percentage of rebate depending of the payment type 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingRebatepaymenttype;
-/* The length of the contract in years 
- */
-@property(nonatomic) NSNumber* iEzmaxinvoicingContractlength;
-/* The percentage of rebate depending of the contract length 
- */
-@property(nonatomic) NSString* dEzmaxinvoicingRebatecontractlength;
-/* Whether the rebate for eZsign is for all agents 
- */
-@property(nonatomic) NSNumber* bEzmaxinvoicingRebateEzsignallagents;
-
-@property(nonatomic) CommonAudit* objAudit;
 
 @property(nonatomic) EzmaxinvoicingcontractResponseCompound* objEzmaxinvoicingcontract;
 
