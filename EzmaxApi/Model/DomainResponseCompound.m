@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjDnsrecord": @"a_objDnsrecord" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiDomainID": @"pkiDomainID", @"sDomainName": @"sDomainName", @"bDomainValiddkim": @"bDomainValiddkim", @"bDomainValidmailfrom": @"bDomainValidmailfrom", @"bDomainValidcustomer": @"bDomainValidcustomer", @"objAudit": @"objAudit", @"aObjDnsrecord": @"a_objDnsrecord" }];
 }
 
 /**

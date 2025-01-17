@@ -14,11 +14,8 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,7 +26,11 @@
 @protocol CreditcardclientDeleteObjectV1Response
 @end
 
-@interface CreditcardclientDeleteObjectV1Response : CommonResponse
+@interface CreditcardclientDeleteObjectV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @end

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiAuthenticationexternalID": @"pkiAuthenticationexternalID", @"sAuthenticationexternalDescription": @"sAuthenticationexternalDescription", @"eAuthenticationexternalType": @"eAuthenticationexternalType", @"bAuthenticationexternalConnected": @"bAuthenticationexternalConnected", @"sAuthenticationexternalAuthorizationurl": @"sAuthenticationexternalAuthorizationurl", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"bAuthenticationexternalConnected", @"sAuthenticationexternalAuthorizationurl", ];
   return [optionalProperties containsObject:propertyName];
 }
 

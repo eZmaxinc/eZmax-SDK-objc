@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "SupplyCreateObjectV1ResponseMPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol SupplyCreateObjectV1Response
 @end
 
-@interface SupplyCreateObjectV1Response : CommonResponse
+@interface SupplyCreateObjectV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) SupplyCreateObjectV1ResponseMPayload* mPayload;
 

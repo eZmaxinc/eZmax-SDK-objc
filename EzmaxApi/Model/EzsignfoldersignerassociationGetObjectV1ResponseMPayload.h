@@ -14,12 +14,9 @@
 */
 
 
-#import "EzsignfoldersignerassociationResponseCompound.h"
 #import "EzsignfoldersignerassociationResponseCompoundUser.h"
 #import "EzsignsignerResponseCompound.h"
 #import "EzsignsignergroupResponseCompound.h"
-@protocol EzsignfoldersignerassociationResponseCompound;
-@class EzsignfoldersignerassociationResponseCompound;
 @protocol EzsignfoldersignerassociationResponseCompoundUser;
 @class EzsignfoldersignerassociationResponseCompoundUser;
 @protocol EzsignsignerResponseCompound;
@@ -32,7 +29,31 @@
 @protocol EzsignfoldersignerassociationGetObjectV1ResponseMPayload
 @end
 
-@interface EzsignfoldersignerassociationGetObjectV1ResponseMPayload : EzsignfoldersignerassociationResponseCompound
+@interface EzsignfoldersignerassociationGetObjectV1ResponseMPayload : Object
 
+/* The unique ID of the Ezsignfoldersignerassociation 
+ */
+@property(nonatomic) NSNumber* pkiEzsignfoldersignerassociationID;
+/* The unique ID of the Ezsignfolder 
+ */
+@property(nonatomic) NSNumber* fkiEzsignfolderID;
+/* If this flag is true the signatory is part of a delayed send. 
+ */
+@property(nonatomic) NSNumber* bEzsignfoldersignerassociationDelayedsend;
+/* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. 
+ */
+@property(nonatomic) NSNumber* bEzsignfoldersignerassociationReceivecopy;
+/* A custom text message that will be added to the email sent. 
+ */
+@property(nonatomic) NSString* tEzsignfoldersignerassociationMessage;
+/* If the Ezsignfoldersignerassociation is allowed to sign in person or not 
+ */
+@property(nonatomic) NSNumber* bEzsignfoldersignerassociationAllowsigninginperson;
+
+@property(nonatomic) EzsignsignergroupResponseCompound* objEzsignsignergroup;
+
+@property(nonatomic) EzsignfoldersignerassociationResponseCompoundUser* objUser;
+
+@property(nonatomic) EzsignsignerResponseCompound* objEzsignsigner;
 
 @end

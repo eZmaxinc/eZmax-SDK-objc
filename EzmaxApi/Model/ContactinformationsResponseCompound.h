@@ -14,32 +14,57 @@
 */
 
 
-#import "AddressResponse.h"
-#import "ContactinformationsResponse.h"
-#import "EmailResponse.h"
+#import "AddressResponseCompound.h"
+#import "EmailResponseCompound.h"
 #import "FieldEContactinformationsType.h"
 #import "PhoneResponseCompound.h"
-#import "WebsiteResponse.h"
-@protocol AddressResponse;
-@class AddressResponse;
-@protocol ContactinformationsResponse;
-@class ContactinformationsResponse;
-@protocol EmailResponse;
-@class EmailResponse;
+#import "WebsiteResponseCompound.h"
+@protocol AddressResponseCompound;
+@class AddressResponseCompound;
+@protocol EmailResponseCompound;
+@class EmailResponseCompound;
 @protocol FieldEContactinformationsType;
 @class FieldEContactinformationsType;
 @protocol PhoneResponseCompound;
 @class PhoneResponseCompound;
-@protocol WebsiteResponse;
-@class WebsiteResponse;
+@protocol WebsiteResponseCompound;
+@class WebsiteResponseCompound;
 
 
 
 @protocol ContactinformationsResponseCompound
 @end
 
-@interface ContactinformationsResponseCompound : ContactinformationsResponse
+@interface ContactinformationsResponseCompound : Object
 
+/* The unique ID of the Contactinformations 
+ */
+@property(nonatomic) NSNumber* pkiContactinformationsID;
+/* The unique ID of the Address [optional]
+ */
+@property(nonatomic) NSNumber* fkiAddressIDDefault;
+/* The unique ID of the Phone. [optional]
+ */
+@property(nonatomic) NSNumber* fkiPhoneIDDefault;
+/* The unique ID of the Email [optional]
+ */
+@property(nonatomic) NSNumber* fkiEmailIDDefault;
+/* The unique ID of the Website Default [optional]
+ */
+@property(nonatomic) NSNumber* fkiWebsiteIDDefault;
+
+@property(nonatomic) FieldEContactinformationsType* eContactinformationsType;
+/* The url of the Contactinformations [optional]
+ */
+@property(nonatomic) NSString* sContactinformationsUrl;
+
+@property(nonatomic) AddressResponseCompound* objAddressDefault;
+
+@property(nonatomic) PhoneResponseCompound* objPhoneDefault;
+
+@property(nonatomic) EmailResponseCompound* objEmailDefault;
+
+@property(nonatomic) WebsiteResponseCompound* objWebsiteDefault;
 
 @property(nonatomic) NSArray<AddressResponseCompound>* aObjAddress;
 

@@ -14,16 +14,25 @@
 */
 
 
-#import "DiscussionmessageRequest.h"
-@protocol DiscussionmessageRequest;
-@class DiscussionmessageRequest;
 
 
 
 @protocol DiscussionmessageRequestCompound
 @end
 
-@interface DiscussionmessageRequestCompound : DiscussionmessageRequest
+@interface DiscussionmessageRequestCompound : Object
 
+/* The unique ID of the Discussionmessage [optional]
+ */
+@property(nonatomic) NSNumber* pkiDiscussionmessageID;
+/* The unique ID of the Discussion 
+ */
+@property(nonatomic) NSNumber* fkiDiscussionID;
+/* The unique ID of the Discussionmembership [optional]
+ */
+@property(nonatomic) NSNumber* fkiDiscussionmembershipIDActionrequired;
+/* The content of the Discussionmessage 
+ */
+@property(nonatomic) NSString* tDiscussionmessageContent;
 
 @end

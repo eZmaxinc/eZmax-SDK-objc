@@ -15,19 +15,22 @@
 
 
 #import "ApikeyListElement.h"
-#import "CommonGetListV1ResponseMPayload.h"
 @protocol ApikeyListElement;
 @class ApikeyListElement;
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 
 
 
 @protocol ApikeyGetListV1ResponseMPayload
 @end
 
-@interface ApikeyGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface ApikeyGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<ApikeyListElement>* aObjApikey;
 

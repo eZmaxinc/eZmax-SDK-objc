@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplateformfieldgroupDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplateformfieldgroupDeleteObjectV1WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplateformfieldgroupDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplateformfieldgroup
@@ -93,7 +93,7 @@ ObjectEzsigntemplateformfieldgroupApi*apiInstance = [[ObjectEzsigntemplateformfi
 
 // Delete an existing Ezsigntemplateformfieldgroup
 [apiInstance ezsigntemplateformfieldgroupDeleteObjectV1WithPkiEzsigntemplateformfieldgroupID:pkiEzsigntemplateformfieldgroupID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplateformfieldgroupDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplateformfieldgroupDeleteObjectV1Response***](EzsigntemplateformfieldgroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplateformfieldgroupEditObjectV1WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
     ezsigntemplateformfieldgroupEditObjectV1Request: (EzsigntemplateformfieldgroupEditObjectV1Request*) ezsigntemplateformfieldgroupEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplateformfieldgroupEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplateformfieldgroup
@@ -153,7 +153,7 @@ ObjectEzsigntemplateformfieldgroupApi*apiInstance = [[ObjectEzsigntemplateformfi
 // Edit an existing Ezsigntemplateformfieldgroup
 [apiInstance ezsigntemplateformfieldgroupEditObjectV1WithPkiEzsigntemplateformfieldgroupID:pkiEzsigntemplateformfieldgroupID
               ezsigntemplateformfieldgroupEditObjectV1Request:ezsigntemplateformfieldgroupEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplateformfieldgroupEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplateformfieldgroupEditObjectV1Response***](EzsigntemplateformfieldgroupEditObjectV1Response.md)
 
 ### Authorization
 

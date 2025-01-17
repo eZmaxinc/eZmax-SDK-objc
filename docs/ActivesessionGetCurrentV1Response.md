@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**ActivesessionResponseCompound***](ActivesessionResponseCompound.md) | Payload for GET /1/object/activesession/getCurrent | 
+**objDebugPayload** | [**CommonResponseObjDebugPayload***](CommonResponseObjDebugPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug***](CommonResponseObjDebug.md) |  | [optional] 
+**mPayload** | [**ActivesessionGetCurrentV1ResponseMPayload***](ActivesessionGetCurrentV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -15,13 +15,10 @@
 
 
 #import "BillingentityinternalGetObjectV2ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BillingentityinternalGetObjectV2ResponseMPayload;
 @class BillingentityinternalGetObjectV2ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol BillingentityinternalGetObjectV2Response
 @end
 
-@interface BillingentityinternalGetObjectV2Response : CommonResponse
+@interface BillingentityinternalGetObjectV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BillingentityinternalGetObjectV2ResponseMPayload* mPayload;
 

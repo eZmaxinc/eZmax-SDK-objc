@@ -14,28 +14,28 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "EzsigndocumentResponseCompound.h"
-@protocol CommonResponse;
-@class CommonResponse;
+#import "EzsigndocumentGetObjectV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol EzsigndocumentResponseCompound;
-@class EzsigndocumentResponseCompound;
+@protocol EzsigndocumentGetObjectV1ResponseMPayload;
+@class EzsigndocumentGetObjectV1ResponseMPayload;
 
 
 
 @protocol EzsigndocumentGetObjectV1Response
 @end
 
-@interface EzsigndocumentGetObjectV1Response : CommonResponse
+@interface EzsigndocumentGetObjectV1Response : Object
 
-/* Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID} 
- */
-@property(nonatomic) EzsigndocumentResponseCompound* mPayload;
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EzsigndocumentGetObjectV1ResponseMPayload* mPayload;
 
 @end

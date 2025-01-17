@@ -14,28 +14,28 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "EzmaxinvoicingResponseCompound.h"
-@protocol CommonResponse;
-@class CommonResponse;
+#import "EzmaxinvoicingGetProvisionalV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol EzmaxinvoicingResponseCompound;
-@class EzmaxinvoicingResponseCompound;
+@protocol EzmaxinvoicingGetProvisionalV1ResponseMPayload;
+@class EzmaxinvoicingGetProvisionalV1ResponseMPayload;
 
 
 
 @protocol EzmaxinvoicingGetProvisionalV1Response
 @end
 
-@interface EzmaxinvoicingGetProvisionalV1Response : CommonResponse
+@interface EzmaxinvoicingGetProvisionalV1Response : Object
 
-/* Payload for GET /1/object/ezmaxinvoicing/getProvisional 
- */
-@property(nonatomic) EzmaxinvoicingResponseCompound* mPayload;
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
+
+@property(nonatomic) EzmaxinvoicingGetProvisionalV1ResponseMPayload* mPayload;
 
 @end

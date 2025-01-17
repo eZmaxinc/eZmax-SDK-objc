@@ -15,13 +15,10 @@
 
 
 #import "BillingentityexternalGetAutocompleteV2ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BillingentityexternalGetAutocompleteV2ResponseMPayload;
 @class BillingentityexternalGetAutocompleteV2ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol BillingentityexternalGetAutocompleteV2Response
 @end
 
-@interface BillingentityexternalGetAutocompleteV2Response : CommonResponse
+@interface BillingentityexternalGetAutocompleteV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BillingentityexternalGetAutocompleteV2ResponseMPayload* mPayload;
 

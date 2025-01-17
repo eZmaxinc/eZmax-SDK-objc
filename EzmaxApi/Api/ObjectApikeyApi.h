@@ -2,6 +2,7 @@
 #import "ApikeyCreateObjectV2Request.h"
 #import "ApikeyCreateObjectV2Response.h"
 #import "ApikeyEditObjectV1Request.h"
+#import "ApikeyEditObjectV1Response.h"
 #import "ApikeyEditPermissionsV1Request.h"
 #import "ApikeyEditPermissionsV1Response.h"
 #import "ApikeyGenerateDelegatedCredentialsV1Request.h"
@@ -13,7 +14,6 @@
 #import "ApikeyGetSubnetsV1Response.h"
 #import "ApikeyRegenerateV1Request.h"
 #import "ApikeyRegenerateV1Response.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -61,10 +61,10 @@ extern NSInteger kObjectApikeyApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return ApikeyEditObjectV1Response*
 -(NSURLSessionTask*) apikeyEditObjectV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
     apikeyEditObjectV1Request: (ApikeyEditObjectV1Request*) apikeyEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(ApikeyEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Permissions

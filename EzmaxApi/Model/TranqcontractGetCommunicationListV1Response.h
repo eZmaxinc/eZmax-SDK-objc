@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 #import "TranqcontractGetCommunicationListV1ResponseMPayload.h"
-@protocol CommonResponseGetList;
-@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -32,8 +29,12 @@
 @protocol TranqcontractGetCommunicationListV1Response
 @end
 
-@interface TranqcontractGetCommunicationListV1Response : CommonResponseGetList
+@interface TranqcontractGetCommunicationListV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) TranqcontractGetCommunicationListV1ResponseMPayload* mPayload;
 

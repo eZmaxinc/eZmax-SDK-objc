@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsigndocumentlogResponse.h"
-@protocol EzsigndocumentlogResponse;
-@class EzsigndocumentlogResponse;
+#import "EzsigndocumentlogResponseCompound.h"
+@protocol EzsigndocumentlogResponseCompound;
+@class EzsigndocumentlogResponseCompound;
 
 
 

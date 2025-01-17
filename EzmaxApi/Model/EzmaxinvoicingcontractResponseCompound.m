@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingcontractID": @"pkiEzmaxinvoicingcontractID", @"eEzmaxinvoicingcontractPaymenttype": @"eEzmaxinvoicingcontractPaymenttype", @"iEzmaxinvoicingcontractLength": @"iEzmaxinvoicingcontractLength", @"dtEzmaxinvoicingcontractStart": @"dtEzmaxinvoicingcontractStart", @"dtEzmaxinvoicingcontractEnd": @"dtEzmaxinvoicingcontractEnd", @"dEzmaxinvoicingcontractLicense": @"dEzmaxinvoicingcontractLicense", @"dEzmaxinvoicingcontract121qa": @"dEzmaxinvoicingcontract121qa", @"bEzmaxinvoicingcontractEzsignallagents": @"bEzmaxinvoicingcontractEzsignallagents", @"objAudit": @"objAudit" }];
 }
 
 /**

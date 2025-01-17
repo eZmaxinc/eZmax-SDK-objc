@@ -14,22 +14,19 @@
 */
 
 
-#import "CommunicationRequest.h"
 #import "CommunicationexternalrecipientRequestCompound.h"
 #import "CommunicationrecipientRequestCompound.h"
-#import "CommunicationreferenceRequest.h"
+#import "CommunicationreferenceRequestCompound.h"
 #import "CustomCommunicationattachmentRequest.h"
 #import "CustomCommunicationsenderRequest.h"
 #import "FieldECommunicationImportance.h"
 #import "FieldECommunicationType.h"
-@protocol CommunicationRequest;
-@class CommunicationRequest;
 @protocol CommunicationexternalrecipientRequestCompound;
 @class CommunicationexternalrecipientRequestCompound;
 @protocol CommunicationrecipientRequestCompound;
 @class CommunicationrecipientRequestCompound;
-@protocol CommunicationreferenceRequest;
-@class CommunicationreferenceRequest;
+@protocol CommunicationreferenceRequestCompound;
+@class CommunicationreferenceRequestCompound;
 @protocol CustomCommunicationattachmentRequest;
 @class CustomCommunicationattachmentRequest;
 @protocol CustomCommunicationsenderRequest;
@@ -44,8 +41,35 @@
 @protocol CommunicationRequestCompound
 @end
 
-@interface CommunicationRequestCompound : CommunicationRequest
+@interface CommunicationRequestCompound : Object
 
+/* The unique ID of the Communication. [optional]
+ */
+@property(nonatomic) NSNumber* pkiCommunicationID;
+
+@property(nonatomic) FieldECommunicationImportance* eCommunicationImportance;
+
+@property(nonatomic) FieldECommunicationType* eCommunicationType;
+
+@property(nonatomic) CustomCommunicationsenderRequest* objCommunicationsender;
+/* The subject of the Communication [optional]
+ */
+@property(nonatomic) NSString* sCommunicationSubject;
+/* The Body of the Communication 
+ */
+@property(nonatomic) NSString* tCommunicationBody;
+/* Whether the Communication is private or not 
+ */
+@property(nonatomic) NSNumber* bCommunicationPrivate;
+/* How the attachment should be included in the email.   Only used if eCommunicationType is **Email** [optional]
+ */
+@property(nonatomic) NSString* eCommunicationAttachmenttype;
+/* The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link** [optional]
+ */
+@property(nonatomic) NSNumber* iCommunicationAttachmentlinkexpiration;
+/* Whether we ask for a read receipt or not. [optional]
+ */
+@property(nonatomic) NSNumber* bCommunicationReadreceipt;
 
 @property(nonatomic) NSArray<CustomCommunicationattachmentRequest>* aObjCommunicationattachment;
 

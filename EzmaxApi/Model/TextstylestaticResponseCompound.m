@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiTextstylestaticID": @"pkiTextstylestaticID", @"fkiFontID": @"fkiFontID", @"sFontName": @"sFontName", @"bTextstylestaticBold": @"bTextstylestaticBold", @"bTextstylestaticUnderline": @"bTextstylestaticUnderline", @"bTextstylestaticItalic": @"bTextstylestaticItalic", @"bTextstylestaticStrikethrough": @"bTextstylestaticStrikethrough", @"iTextstylestaticFontcolor": @"iTextstylestaticFontcolor", @"iTextstylestaticSize": @"iTextstylestaticSize" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiTextstylestaticID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

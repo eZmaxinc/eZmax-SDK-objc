@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 #import "UsergroupexternalGetListV1ResponseMPayload.h"
-@protocol CommonResponseGetList;
-@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -32,8 +29,12 @@
 @protocol UsergroupexternalGetListV1Response
 @end
 
-@interface UsergroupexternalGetListV1Response : CommonResponseGetList
+@interface UsergroupexternalGetListV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) UsergroupexternalGetListV1ResponseMPayload* mPayload;
 

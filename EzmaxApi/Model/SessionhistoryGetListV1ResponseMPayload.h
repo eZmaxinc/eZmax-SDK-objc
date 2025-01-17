@@ -14,10 +14,7 @@
 */
 
 
-#import "CommonGetListV1ResponseMPayload.h"
 #import "SessionhistoryListElement.h"
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 @protocol SessionhistoryListElement;
 @class SessionhistoryListElement;
 
@@ -26,8 +23,14 @@
 @protocol SessionhistoryGetListV1ResponseMPayload
 @end
 
-@interface SessionhistoryGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface SessionhistoryGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<SessionhistoryListElement>* aObjSessionhistory;
 

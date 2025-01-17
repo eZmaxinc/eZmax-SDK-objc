@@ -14,11 +14,8 @@
 */
 
 
-#import "EzmaxinvoicingsummaryinternalResponse.h"
 #import "EzmaxinvoicingsummaryinternaldetailResponseCompound.h"
 #import "MultilingualEzmaxinvoicingsummaryinternalDescription.h"
-@protocol EzmaxinvoicingsummaryinternalResponse;
-@class EzmaxinvoicingsummaryinternalResponse;
 @protocol EzmaxinvoicingsummaryinternaldetailResponseCompound;
 @class EzmaxinvoicingsummaryinternaldetailResponseCompound;
 @protocol MultilingualEzmaxinvoicingsummaryinternalDescription;
@@ -29,8 +26,25 @@
 @protocol EzmaxinvoicingsummaryinternalResponseCompound
 @end
 
-@interface EzmaxinvoicingsummaryinternalResponseCompound : EzmaxinvoicingsummaryinternalResponse
+@interface EzmaxinvoicingsummaryinternalResponseCompound : Object
 
+/* The unique ID of the Ezmaxinvoicingsummaryinternal [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicingsummaryinternalID;
+
+@property(nonatomic) MultilingualEzmaxinvoicingsummaryinternalDescription* objEzmaxinvoicingsummaryinternalDescription;
+/* The Ezmaxinvoicingsummaryinternal description in the language of the requester 
+ */
+@property(nonatomic) NSString* sEzmaxinvoicingsummaryinternalDescriptionX;
+/* The unique ID of the Ezmaxinvoicing [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingID;
+/* The unique ID of the Billingentityinternal. 
+ */
+@property(nonatomic) NSNumber* fkiBillingentityinternalID;
+/* The description of the Billingentityinternal in the language of the requester 
+ */
+@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
 /*  
  */
 @property(nonatomic) NSArray<EzmaxinvoicingsummaryinternaldetailResponseCompound>* aObjEzmaxinvoicingsummaryinternaldetail;

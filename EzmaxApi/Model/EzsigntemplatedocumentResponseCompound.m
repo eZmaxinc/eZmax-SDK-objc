@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatedocumentID": @"pkiEzsigntemplatedocumentID", @"fkiEzsigntemplateID": @"fkiEzsigntemplateID", @"sEzsigntemplatedocumentName": @"sEzsigntemplatedocumentName", @"iEzsigntemplatedocumentPagetotal": @"iEzsigntemplatedocumentPagetotal", @"iEzsigntemplatedocumentSignaturetotal": @"iEzsigntemplatedocumentSignaturetotal", @"iEzsigntemplatedocumentFormfieldtotal": @"iEzsigntemplatedocumentFormfieldtotal", @"bEzsigntemplatedocumentHassignedsignatures": @"bEzsigntemplatedocumentHassignedsignatures" }];
 }
 
 /**

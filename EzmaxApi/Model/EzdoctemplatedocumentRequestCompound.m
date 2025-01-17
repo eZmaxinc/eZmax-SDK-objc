@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzdoctemplatedocumentID": @"pkiEzdoctemplatedocumentID", @"fkiLanguageID": @"fkiLanguageID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"fkiEzdoctemplatetypeID": @"fkiEzdoctemplatetypeID", @"fkiEzdoctemplatefieldtypecategoryID": @"fkiEzdoctemplatefieldtypecategoryID", @"eEzdoctemplatedocumentPrivacylevel": @"eEzdoctemplatedocumentPrivacylevel", @"bEzdoctemplatedocumentIsactive": @"bEzdoctemplatedocumentIsactive", @"objEzdoctemplatedocumentName": @"objEzdoctemplatedocumentName" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiEzdoctemplatedocumentID", @"fkiEzsignfoldertypeID", @"eEzdoctemplatedocumentPrivacylevel", ];
   return [optionalProperties containsObject:propertyName];
 }
 

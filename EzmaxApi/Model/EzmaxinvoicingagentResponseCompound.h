@@ -15,13 +15,10 @@
 
 
 #import "CustomContactNameResponse.h"
-#import "EzmaxinvoicingagentResponse.h"
 #import "FieldEEzmaxinvoicingagentVariationezmax.h"
 #import "FieldEEzmaxinvoicingagentVariationezsign.h"
 @protocol CustomContactNameResponse;
 @class CustomContactNameResponse;
-@protocol EzmaxinvoicingagentResponse;
-@class EzmaxinvoicingagentResponse;
 @protocol FieldEEzmaxinvoicingagentVariationezmax;
 @class FieldEEzmaxinvoicingagentVariationezmax;
 @protocol FieldEEzmaxinvoicingagentVariationezsign;
@@ -32,8 +29,66 @@
 @protocol EzmaxinvoicingagentResponseCompound
 @end
 
-@interface EzmaxinvoicingagentResponseCompound : EzmaxinvoicingagentResponse
+@interface EzmaxinvoicingagentResponseCompound : Object
 
+/* The unique ID of the Ezmaxinvoicingagent [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicingagentID;
+/* The unique ID of the Ezmaxinvoicing [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingID;
+/* The unique ID of the Billingentityinternal. 
+ */
+@property(nonatomic) NSNumber* fkiBillingentityinternalID;
+/* The description of the Billingentityinternal in the language of the requester 
+ */
+@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
+/* The unique ID of the Agent. [optional]
+ */
+@property(nonatomic) NSNumber* fkiAgentID;
+/* The unique ID of the Broker. [optional]
+ */
+@property(nonatomic) NSNumber* fkiBrokerID;
+/* The number of sessions 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentSession;
+/* The number of times this user was cloned 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentCloned;
+/* The number of invoices 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentInvoice;
+/* The number of inscriptions 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentInscription;
+/* The number of active inscriptions 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentInscriptionactive;
+/* The number of sales 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentSale;
+/* The number of otherincomes 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentOtherincome;
+/* The number of commission calculations 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentCommissioncalculation;
+/* The number of ezsign documents 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingagentEzsigndocument;
+/* Whether the agent has an eZsign account 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicingagentEzsignaccount;
+/* Whether it is billable for eZmax 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicingagentBillableezmax;
+
+@property(nonatomic) FieldEEzmaxinvoicingagentVariationezmax* eEzmaxinvoicingagentVariationezmax;
+/* Whether it is billable for eZsign 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicingagentBillableezsign;
+
+@property(nonatomic) FieldEEzmaxinvoicingagentVariationezsign* eEzmaxinvoicingagentVariationezsign;
 
 @property(nonatomic) CustomContactNameResponse* objContactName;
 

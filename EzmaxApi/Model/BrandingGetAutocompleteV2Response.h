@@ -15,13 +15,10 @@
 
 
 #import "BrandingGetAutocompleteV2ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BrandingGetAutocompleteV2ResponseMPayload;
 @class BrandingGetAutocompleteV2ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol BrandingGetAutocompleteV2Response
 @end
 
-@interface BrandingGetAutocompleteV2Response : CommonResponse
+@interface BrandingGetAutocompleteV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BrandingGetAutocompleteV2ResponseMPayload* mPayload;
 

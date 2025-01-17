@@ -14,16 +14,22 @@
 */
 
 
-#import "BillingentityinternalproductRequest.h"
-@protocol BillingentityinternalproductRequest;
-@class BillingentityinternalproductRequest;
 
 
 
 @protocol BillingentityinternalproductRequestCompound
 @end
 
-@interface BillingentityinternalproductRequestCompound : BillingentityinternalproductRequest
+@interface BillingentityinternalproductRequestCompound : Object
 
+/* The unique ID of the Billingentityinternalproduct [optional]
+ */
+@property(nonatomic) NSNumber* pkiBillingentityinternalproductID;
+/* The unique ID of the Ezmaxproduct 
+ */
+@property(nonatomic) NSNumber* fkiEzmaxproductID;
+/* The unique ID of the Billingentityexternal 
+ */
+@property(nonatomic) NSNumber* fkiBillingentityexternalID;
 
 @end

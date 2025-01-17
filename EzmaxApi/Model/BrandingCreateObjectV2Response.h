@@ -15,13 +15,10 @@
 
 
 #import "BrandingCreateObjectV2ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol BrandingCreateObjectV2ResponseMPayload;
 @class BrandingCreateObjectV2ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol BrandingCreateObjectV2Response
 @end
 
-@interface BrandingCreateObjectV2Response : CommonResponse
+@interface BrandingCreateObjectV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BrandingCreateObjectV2ResponseMPayload* mPayload;
 

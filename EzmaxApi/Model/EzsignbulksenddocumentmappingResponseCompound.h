@@ -14,11 +14,8 @@
 */
 
 
-#import "EzsignbulksenddocumentmappingResponse.h"
 #import "EzsigntemplateResponseCompound.h"
 #import "EzsigntemplatepackageResponseCompound.h"
-@protocol EzsignbulksenddocumentmappingResponse;
-@class EzsignbulksenddocumentmappingResponse;
 @protocol EzsigntemplateResponseCompound;
 @class EzsigntemplateResponseCompound;
 @protocol EzsigntemplatepackageResponseCompound;
@@ -29,8 +26,23 @@
 @protocol EzsignbulksenddocumentmappingResponseCompound
 @end
 
-@interface EzsignbulksenddocumentmappingResponseCompound : EzsignbulksenddocumentmappingResponse
+@interface EzsignbulksenddocumentmappingResponseCompound : Object
 
+/* The unique ID of the Ezsignbulksenddocumentmapping. 
+ */
+@property(nonatomic) NSNumber* pkiEzsignbulksenddocumentmappingID;
+/* The unique ID of the Ezsignbulksend 
+ */
+@property(nonatomic) NSNumber* fkiEzsignbulksendID;
+/* The unique ID of the Ezsigntemplatepackage [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplatepackageID;
+/* The unique ID of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplateID;
+/* The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. 
+ */
+@property(nonatomic) NSNumber* iEzsignbulksenddocumentmappingOrder;
 
 @property(nonatomic) EzsigntemplateResponseCompound* objEzsigntemplate;
 

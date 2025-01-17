@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjCommunicationattachment": @"a_objCommunicationattachment", @"aObjCommunicationrecipient": @"a_objCommunicationrecipient", @"aObjCommunicationreference": @"a_objCommunicationreference", @"aObjCommunicationexternalrecipient": @"a_objCommunicationexternalrecipient" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCommunicationID": @"pkiCommunicationID", @"eCommunicationImportance": @"eCommunicationImportance", @"eCommunicationType": @"eCommunicationType", @"objCommunicationsender": @"objCommunicationsender", @"sCommunicationSubject": @"sCommunicationSubject", @"tCommunicationBody": @"tCommunicationBody", @"bCommunicationPrivate": @"bCommunicationPrivate", @"eCommunicationAttachmenttype": @"eCommunicationAttachmenttype", @"iCommunicationAttachmentlinkexpiration": @"iCommunicationAttachmentlinkexpiration", @"bCommunicationReadreceipt": @"bCommunicationReadreceipt", @"aObjCommunicationattachment": @"a_objCommunicationattachment", @"aObjCommunicationrecipient": @"a_objCommunicationrecipient", @"aObjCommunicationreference": @"a_objCommunicationreference", @"aObjCommunicationexternalrecipient": @"a_objCommunicationexternalrecipient" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiCommunicationID", @"eCommunicationImportance", @"objCommunicationsender", @"sCommunicationSubject", @"eCommunicationAttachmenttype", @"iCommunicationAttachmentlinkexpiration", @"bCommunicationReadreceipt", ];
   return [optionalProperties containsObject:propertyName];
 }
 

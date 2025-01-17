@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzsigndocumentSteptype": @"eEzsigndocumentSteptype", @"iEzsigndocumentStepformtotal": @"iEzsigndocumentStepformtotal", @"iEzsigndocumentStepformcurrent": @"iEzsigndocumentStepformcurrent", @"iEzsigndocumentStepsignaturetotal": @"iEzsigndocumentStepsignaturetotal", @"iEzsigndocumentStepsignatureCurrent": @"iEzsigndocumentStepsignatureCurrent", @"aObjEzsignfoldersignerassociationstatus": @"a_objEzsignfoldersignerassociationstatus", @"aObjEzsigndocumentdependency": @"a_objEzsigndocumentdependency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigndocumentID": @"pkiEzsigndocumentID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiEzsignfoldersignerassociationIDDeclinedtosign": @"fkiEzsignfoldersignerassociationIDDeclinedtosign", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"dtEzsignformCompleted": @"dtEzsignformCompleted", @"fkiLanguageID": @"fkiLanguageID", @"sEzsigndocumentName": @"sEzsigndocumentName", @"eEzsigndocumentStep": @"eEzsigndocumentStep", @"dtEzsigndocumentFirstsend": @"dtEzsigndocumentFirstsend", @"dtEzsigndocumentLastsend": @"dtEzsigndocumentLastsend", @"iEzsigndocumentOrder": @"iEzsigndocumentOrder", @"iEzsigndocumentPagetotal": @"iEzsigndocumentPagetotal", @"iEzsigndocumentSignaturesigned": @"iEzsigndocumentSignaturesigned", @"iEzsigndocumentSignaturetotal": @"iEzsigndocumentSignaturetotal", @"iEzsigndocumentFormfieldtotal": @"iEzsigndocumentFormfieldtotal", @"sEzsigndocumentMD5initial": @"sEzsigndocumentMD5initial", @"tEzsigndocumentDeclinedtosignreason": @"tEzsigndocumentDeclinedtosignreason", @"sEzsigndocumentMD5signed": @"sEzsigndocumentMD5signed", @"bEzsigndocumentEzsignform": @"bEzsigndocumentEzsignform", @"bEzsigndocumentHassignedsignatures": @"bEzsigndocumentHassignedsignatures", @"objAudit": @"objAudit", @"sEzsigndocumentExternalid": @"sEzsigndocumentExternalid", @"iEzsigndocumentEzsignsignatureattachmenttotal": @"iEzsigndocumentEzsignsignatureattachmenttotal", @"iEzsigndocumentEzsigndiscussiontotal": @"iEzsigndocumentEzsigndiscussiontotal", @"eEzsigndocumentSteptype": @"eEzsigndocumentSteptype", @"iEzsigndocumentStepformtotal": @"iEzsigndocumentStepformtotal", @"iEzsigndocumentStepformcurrent": @"iEzsigndocumentStepformcurrent", @"iEzsigndocumentStepsignaturetotal": @"iEzsigndocumentStepsignaturetotal", @"iEzsigndocumentStepsignatureCurrent": @"iEzsigndocumentStepsignatureCurrent", @"aObjEzsignfoldersignerassociationstatus": @"a_objEzsignfoldersignerassociationstatus", @"aObjEzsigndocumentdependency": @"a_objEzsigndocumentdependency" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aObjEzsigndocumentdependency"];
+  NSArray *optionalProperties = @[@"fkiEzsignfoldersignerassociationIDDeclinedtosign", @"dtEzsignformCompleted", @"fkiLanguageID", @"dtEzsigndocumentFirstsend", @"dtEzsigndocumentLastsend", @"sEzsigndocumentMD5initial", @"tEzsigndocumentDeclinedtosignreason", @"sEzsigndocumentMD5signed", @"bEzsigndocumentEzsignform", @"bEzsigndocumentHassignedsignatures", @"objAudit", @"sEzsigndocumentExternalid", @"aObjEzsigndocumentdependency"];
   return [optionalProperties containsObject:propertyName];
 }
 

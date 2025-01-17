@@ -15,12 +15,9 @@
 
 
 #import "CustomContactNameResponse.h"
-#import "EzmaxinvoicinguserResponse.h"
 #import "FieldEEzmaxinvoicinguserVariationezsign.h"
 @protocol CustomContactNameResponse;
 @class CustomContactNameResponse;
-@protocol EzmaxinvoicinguserResponse;
-@class EzmaxinvoicinguserResponse;
 @protocol FieldEEzmaxinvoicinguserVariationezsign;
 @class FieldEEzmaxinvoicinguserVariationezsign;
 
@@ -29,8 +26,34 @@
 @protocol EzmaxinvoicinguserResponseCompound
 @end
 
-@interface EzmaxinvoicinguserResponseCompound : EzmaxinvoicinguserResponse
+@interface EzmaxinvoicinguserResponseCompound : Object
 
+/* The unique ID of the Ezmaxinvoicinguser [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicinguserID;
+/* The unique ID of the Ezmaxinvoicing [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingID;
+/* The unique ID of the Billingentityinternal. 
+ */
+@property(nonatomic) NSNumber* fkiBillingentityinternalID;
+/* The description of the Billingentityinternal in the language of the requester 
+ */
+@property(nonatomic) NSString* sBillingentityinternalDescriptionX;
+/* The unique ID of the User 
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The number of ezsign documents 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicinguserEzsigndocument;
+/* Whether there is an eZsign account 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicinguserEzsignaccount;
+/* Whether it is billable for eZsign 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicinguserBillableezsign;
+
+@property(nonatomic) FieldEEzmaxinvoicinguserVariationezsign* eEzmaxinvoicinguserVariationezsign;
 
 @property(nonatomic) CustomContactNameResponse* objContactName;
 

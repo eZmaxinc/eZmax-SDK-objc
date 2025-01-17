@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "EzmaxinvoicingGetAutocompleteV2ResponseMPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol EzmaxinvoicingGetAutocompleteV2Response
 @end
 
-@interface EzmaxinvoicingGetAutocompleteV2Response : CommonResponse
+@interface EzmaxinvoicingGetAutocompleteV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) EzmaxinvoicingGetAutocompleteV2ResponseMPayload* mPayload;
 

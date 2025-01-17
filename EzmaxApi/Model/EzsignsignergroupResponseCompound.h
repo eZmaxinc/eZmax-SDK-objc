@@ -14,10 +14,7 @@
 */
 
 
-#import "EzsignsignergroupResponse.h"
 #import "MultilingualEzsignsignergroupDescription.h"
-@protocol EzsignsignergroupResponse;
-@class EzsignsignergroupResponse;
 @protocol MultilingualEzsignsignergroupDescription;
 @class MultilingualEzsignsignergroupDescription;
 
@@ -26,7 +23,15 @@
 @protocol EzsignsignergroupResponseCompound
 @end
 
-@interface EzsignsignergroupResponseCompound : EzsignsignergroupResponse
+@interface EzsignsignergroupResponseCompound : Object
 
+/* The unique ID of the Ezsignsignergroup 
+ */
+@property(nonatomic) NSNumber* pkiEzsignsignergroupID;
+
+@property(nonatomic) MultilingualEzsignsignergroupDescription* objEzsignsignergroupDescription;
+/* The Description of the Ezsignsignergroup in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sEzsignsignergroupDescriptionX;
 
 @end

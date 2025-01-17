@@ -15,18 +15,32 @@
 
 
 #import "MultilingualSubnetDescription.h"
-#import "SubnetRequest.h"
 @protocol MultilingualSubnetDescription;
 @class MultilingualSubnetDescription;
-@protocol SubnetRequest;
-@class SubnetRequest;
 
 
 
 @protocol SubnetRequestCompound
 @end
 
-@interface SubnetRequestCompound : SubnetRequest
+@interface SubnetRequestCompound : Object
 
+/* The unique ID of the Subnet [optional]
+ */
+@property(nonatomic) NSNumber* pkiSubnetID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Apikey [optional]
+ */
+@property(nonatomic) NSNumber* fkiApikeyID;
+
+@property(nonatomic) MultilingualSubnetDescription* objSubnetDescription;
+/* The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 
+ */
+@property(nonatomic) NSNumber* iSubnetNetwork;
+/* The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 
+ */
+@property(nonatomic) NSNumber* iSubnetMask;
 
 @end

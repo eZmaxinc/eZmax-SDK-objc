@@ -14,10 +14,7 @@
 */
 
 
-#import "EzmaxinvoicingsummaryexternalResponse.h"
 #import "EzmaxinvoicingsummaryexternaldetailResponseCompound.h"
-@protocol EzmaxinvoicingsummaryexternalResponse;
-@class EzmaxinvoicingsummaryexternalResponse;
 @protocol EzmaxinvoicingsummaryexternaldetailResponseCompound;
 @class EzmaxinvoicingsummaryexternaldetailResponseCompound;
 
@@ -26,8 +23,23 @@
 @protocol EzmaxinvoicingsummaryexternalResponseCompound
 @end
 
-@interface EzmaxinvoicingsummaryexternalResponseCompound : EzmaxinvoicingsummaryexternalResponse
+@interface EzmaxinvoicingsummaryexternalResponseCompound : Object
 
+/* The unique ID of the Ezmaxinvoicingsummaryexternal [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicingsummaryexternalID;
+/* The unique ID of the Ezmaxinvoicing [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingID;
+/* The unique ID of the Billingentityexternal 
+ */
+@property(nonatomic) NSNumber* fkiBillingentityexternalID;
+/* The description of the Billingentityexternal 
+ */
+@property(nonatomic) NSString* sBillingentityexternalDescription;
+/* The description of the Ezmaxinvoicingsummaryexternal 
+ */
+@property(nonatomic) NSString* sEzmaxinvoicingsummaryexternalDescription;
 
 @property(nonatomic) NSArray<EzmaxinvoicingsummaryexternaldetailResponseCompound>* aObjEzmaxinvoicingsummaryexternaldetail;
 

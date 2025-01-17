@@ -15,7 +15,7 @@
 
 
 #import "CommonAudit.h"
-#import "EmailResponse.h"
+#import "EmailResponseCompound.h"
 #import "FieldEUserEzsignaccess.h"
 #import "FieldEUserLogintype.h"
 #import "FieldEUserOrigin.h"
@@ -23,8 +23,8 @@
 #import "PhoneResponseCompound.h"
 @protocol CommonAudit;
 @class CommonAudit;
-@protocol EmailResponse;
-@class EmailResponse;
+@protocol EmailResponseCompound;
+@class EmailResponseCompound;
 @protocol FieldEUserEzsignaccess;
 @class FieldEUserEzsignaccess;
 @protocol FieldEUserLogintype;
@@ -82,9 +82,8 @@
 /* The Name of the Language in the language of the requester 
  */
 @property(nonatomic) NSString* sLanguageNameX;
-/* An Email Object and children to create a complete structure 
- */
-@property(nonatomic) EmailResponse* objEmail;
+
+@property(nonatomic) EmailResponseCompound* objEmail;
 /* The unique ID of the Billingentityinternal. 
  */
 @property(nonatomic) NSNumber* fkiBillingentityinternalID;

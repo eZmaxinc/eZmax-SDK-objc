@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsigntemplateelementdependency": @"a_objEzsigntemplateelementdependency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateformfieldID": @"pkiEzsigntemplateformfieldID", @"eEzsigntemplateformfieldPositioning": @"eEzsigntemplateformfieldPositioning", @"iEzsigntemplatedocumentpagePagenumber": @"iEzsigntemplatedocumentpagePagenumber", @"sEzsigntemplateformfieldLabel": @"sEzsigntemplateformfieldLabel", @"sEzsigntemplateformfieldValue": @"sEzsigntemplateformfieldValue", @"iEzsigntemplateformfieldX": @"iEzsigntemplateformfieldX", @"iEzsigntemplateformfieldY": @"iEzsigntemplateformfieldY", @"iEzsigntemplateformfieldWidth": @"iEzsigntemplateformfieldWidth", @"iEzsigntemplateformfieldHeight": @"iEzsigntemplateformfieldHeight", @"bEzsigntemplateformfieldAutocomplete": @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected": @"bEzsigntemplateformfieldSelected", @"eEzsigntemplateformfieldDependencyrequirement": @"eEzsigntemplateformfieldDependencyrequirement", @"sEzsigntemplateformfieldPositioningpattern": @"sEzsigntemplateformfieldPositioningpattern", @"iEzsigntemplateformfieldPositioningoffsetx": @"iEzsigntemplateformfieldPositioningoffsetx", @"iEzsigntemplateformfieldPositioningoffsety": @"iEzsigntemplateformfieldPositioningoffsety", @"eEzsigntemplateformfieldPositioningoccurence": @"eEzsigntemplateformfieldPositioningoccurence", @"eEzsigntemplateformfieldHorizontalalignment": @"eEzsigntemplateformfieldHorizontalalignment", @"objTextstylestatic": @"objTextstylestatic", @"aObjEzsigntemplateelementdependency": @"a_objEzsigntemplateelementdependency" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aObjEzsigntemplateelementdependency"];
+  NSArray *optionalProperties = @[@"eEzsigntemplateformfieldPositioning", @"sEzsigntemplateformfieldValue", @"iEzsigntemplateformfieldX", @"iEzsigntemplateformfieldY", @"bEzsigntemplateformfieldAutocomplete", @"bEzsigntemplateformfieldSelected", @"eEzsigntemplateformfieldDependencyrequirement", @"sEzsigntemplateformfieldPositioningpattern", @"iEzsigntemplateformfieldPositioningoffsetx", @"iEzsigntemplateformfieldPositioningoffsety", @"eEzsigntemplateformfieldPositioningoccurence", @"eEzsigntemplateformfieldHorizontalalignment", @"objTextstylestatic", @"aObjEzsigntemplateelementdependency"];
   return [optionalProperties containsObject:propertyName];
 }
 

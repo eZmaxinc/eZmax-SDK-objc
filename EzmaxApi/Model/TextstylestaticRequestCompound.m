@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiFontID": @"fkiFontID", @"bTextstylestaticBold": @"bTextstylestaticBold", @"bTextstylestaticUnderline": @"bTextstylestaticUnderline", @"bTextstylestaticItalic": @"bTextstylestaticItalic", @"bTextstylestaticStrikethrough": @"bTextstylestaticStrikethrough", @"iTextstylestaticFontcolor": @"iTextstylestaticFontcolor", @"iTextstylestaticSize": @"iTextstylestaticSize" }];
 }
 
 /**

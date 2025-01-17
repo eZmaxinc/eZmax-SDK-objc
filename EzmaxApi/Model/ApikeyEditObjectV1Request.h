@@ -14,9 +14,9 @@
 */
 
 
-#import "ApikeyRequest.h"
-@protocol ApikeyRequest;
-@class ApikeyRequest;
+#import "ApikeyRequestCompound.h"
+@protocol ApikeyRequestCompound;
+@class ApikeyRequestCompound;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface ApikeyEditObjectV1Request : Object
 
-/* An Apikey Object and children to create a complete structure 
- */
-@property(nonatomic) ApikeyRequest* objApikey;
+
+@property(nonatomic) ApikeyRequestCompound* objApikey;
 
 @end

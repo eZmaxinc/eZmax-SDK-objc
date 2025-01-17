@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsignergroupmembershipCreateObjectV1Request.h"
 #import "EzsignsignergroupmembershipCreateObjectV1Response.h"
+#import "EzsignsignergroupmembershipDeleteObjectV1Response.h"
 #import "EzsignsignergroupmembershipGetObjectV2Response.h"
 #import "Api.h"
 
@@ -47,9 +47,9 @@ extern NSInteger kObjectEzsignsignergroupmembershipApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignsignergroupmembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignsignergroupmembershipDeleteObjectV1WithPkiEzsignsignergroupmembershipID: (NSNumber*) pkiEzsignsignergroupmembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignsignergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignergroupmembership

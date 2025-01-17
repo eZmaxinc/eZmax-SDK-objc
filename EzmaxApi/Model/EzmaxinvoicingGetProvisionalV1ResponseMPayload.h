@@ -15,8 +15,9 @@
 
 
 #import "CommonAudit.h"
+#import "CustomEzmaxinvoicingEzsigndocumentResponse.h"
+#import "CustomEzmaxinvoicingEzsignfolderResponse.h"
 #import "CustomEzmaxpricingResponse.h"
-#import "EzmaxinvoicingResponseCompound.h"
 #import "EzmaxinvoicingagentResponseCompound.h"
 #import "EzmaxinvoicingcontractResponseCompound.h"
 #import "EzmaxinvoicingsummaryexternalResponseCompound.h"
@@ -26,10 +27,12 @@
 #import "FieldEEzmaxinvoicingPaymenttype.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol CustomEzmaxinvoicingEzsigndocumentResponse;
+@class CustomEzmaxinvoicingEzsigndocumentResponse;
+@protocol CustomEzmaxinvoicingEzsignfolderResponse;
+@class CustomEzmaxinvoicingEzsignfolderResponse;
 @protocol CustomEzmaxpricingResponse;
 @class CustomEzmaxpricingResponse;
-@protocol EzmaxinvoicingResponseCompound;
-@class EzmaxinvoicingResponseCompound;
 @protocol EzmaxinvoicingagentResponseCompound;
 @class EzmaxinvoicingagentResponseCompound;
 @protocol EzmaxinvoicingcontractResponseCompound;
@@ -50,7 +53,62 @@
 @protocol EzmaxinvoicingGetProvisionalV1ResponseMPayload
 @end
 
-@interface EzmaxinvoicingGetProvisionalV1ResponseMPayload : EzmaxinvoicingResponseCompound
+@interface EzmaxinvoicingGetProvisionalV1ResponseMPayload : Object
 
+/* The unique ID of the Ezmaxinvoicing [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicingID;
+/* The unique ID of the Ezmaxinvoicingcontract 
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingcontractID;
+/* The unique ID of the Ezmaxpricing 
+ */
+@property(nonatomic) NSNumber* fkiEzmaxpricingID;
+/* The unique ID of the Systemconfigurationtype 
+ */
+@property(nonatomic) NSNumber* fkiSystemconfigurationtypeID;
+/* The description of the Systemconfigurationtype in the language of the requester 
+ */
+@property(nonatomic) NSString* sSystemconfigurationtypeDescriptionX;
+/* The YYYYMM period of the Ezmaxinvoicing 
+ */
+@property(nonatomic) NSString* yyyymmEzmaxinvoicing;
+/* The number of days invoiced 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingDays;
+
+@property(nonatomic) FieldEEzmaxinvoicingPaymenttype* eEzmaxinvoicingPaymenttype;
+/* The percentage of rebate depending of the payment type 
+ */
+@property(nonatomic) NSString* dEzmaxinvoicingRebatepaymenttype;
+/* The length of the contract in years 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingContractlength;
+/* The percentage of rebate depending of the contract length 
+ */
+@property(nonatomic) NSString* dEzmaxinvoicingRebatecontractlength;
+/* Whether the rebate for eZsign is for all agents 
+ */
+@property(nonatomic) NSNumber* bEzmaxinvoicingRebateEzsignallagents;
+
+@property(nonatomic) CommonAudit* objAudit;
+
+@property(nonatomic) EzmaxinvoicingcontractResponseCompound* objEzmaxinvoicingcontract;
+
+@property(nonatomic) CustomEzmaxpricingResponse* objEzmaxpricing;
+
+@property(nonatomic) NSArray<EzmaxinvoicingsummaryglobalResponseCompound>* aObjEzmaxinvoicingsummaryglobal;
+
+@property(nonatomic) NSArray<EzmaxinvoicingsummaryexternalResponseCompound>* aObjEzmaxinvoicingsummaryexternal;
+
+@property(nonatomic) NSArray<EzmaxinvoicingsummaryinternalResponseCompound>* aObjEzmaxinvoicingsummaryinternal;
+
+@property(nonatomic) NSArray<EzmaxinvoicingagentResponseCompound>* aObjEzmaxinvoicingagent;
+
+@property(nonatomic) NSArray<EzmaxinvoicinguserResponseCompound>* aObjEzmaxinvoicinguser;
+
+@property(nonatomic) NSArray<CustomEzmaxinvoicingEzsignfolderResponse>* aObjEzmaxinvoicingezsignfolder;
+
+@property(nonatomic) NSArray<CustomEzmaxinvoicingEzsigndocumentResponse>* aObjEzmaxinvoicingezsigndocument;
 
 @end

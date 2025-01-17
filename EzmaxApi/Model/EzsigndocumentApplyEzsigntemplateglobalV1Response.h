@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "CommonResponseWarning.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol EzsigndocumentApplyEzsigntemplateglobalV1Response
 @end
 
-@interface EzsigndocumentApplyEzsigntemplateglobalV1Response : CommonResponse
+@interface EzsigndocumentApplyEzsigntemplateglobalV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) NSArray<CommonResponseWarning>* aObjWarning;
 

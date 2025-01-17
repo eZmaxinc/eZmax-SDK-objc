@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objTimezone": @"objTimezone" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignfolderID": @"pkiEzsignfolderID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"objEzsignfoldertype": @"objEzsignfoldertype", @"fkiTimezoneID": @"fkiTimezoneID", @"eEzsignfolderCompletion": @"eEzsignfolderCompletion", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"fkiBillingentityinternalID": @"fkiBillingentityinternalID", @"sBillingentityinternalDescriptionX": @"sBillingentityinternalDescriptionX", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsigntsarequirementDescriptionX": @"sEzsigntsarequirementDescriptionX", @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"tEzsignfolderNote": @"tEzsignfolderNote", @"bEzsignfolderIsdisposable": @"bEzsignfolderIsdisposable", @"eEzsignfolderSendreminderfrequency": @"eEzsignfolderSendreminderfrequency", @"iEzsignfolderSendreminderfirstdays": @"iEzsignfolderSendreminderfirstdays", @"iEzsignfolderSendreminderotherdays": @"iEzsignfolderSendreminderotherdays", @"dtEzsignfolderDelayedsenddate": @"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderDuedate": @"dtEzsignfolderDuedate", @"dtEzsignfolderSentdate": @"dtEzsignfolderSentdate", @"dtEzsignfolderScheduledarchive": @"dtEzsignfolderScheduledarchive", @"dtEzsignfolderScheduleddispose": @"dtEzsignfolderScheduleddispose", @"eEzsignfolderStep": @"eEzsignfolderStep", @"dtEzsignfolderClose": @"dtEzsignfolderClose", @"tEzsignfolderMessage": @"tEzsignfolderMessage", @"objAudit": @"objAudit", @"sEzsignfolderExternalid": @"sEzsignfolderExternalid", @"objTimezone": @"objTimezone" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objTimezone"];
+  NSArray *optionalProperties = @[@"fkiEzsignfoldertypeID", @"objEzsignfoldertype", @"fkiTimezoneID", @"sEzsignfoldertypeNameX", @"fkiBillingentityinternalID", @"sBillingentityinternalDescriptionX", @"fkiEzsigntsarequirementID", @"sEzsigntsarequirementDescriptionX", @"tEzsignfolderNote", @"bEzsignfolderIsdisposable", @"eEzsignfolderSendreminderfrequency", @"iEzsignfolderSendreminderfirstdays", @"iEzsignfolderSendreminderotherdays", @"dtEzsignfolderDelayedsenddate", @"dtEzsignfolderDuedate", @"dtEzsignfolderSentdate", @"dtEzsignfolderScheduledarchive", @"dtEzsignfolderScheduleddispose", @"eEzsignfolderStep", @"dtEzsignfolderClose", @"tEzsignfolderMessage", @"objAudit", @"sEzsignfolderExternalid", @"objTimezone"];
   return [optionalProperties containsObject:propertyName];
 }
 

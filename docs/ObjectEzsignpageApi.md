@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) ezsignpageConsultV1WithPkiEzsignpageID: (NSNumber*) pkiEzsignpageID
     body: (NSObject*) body
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignpageConsultV1Response* output, NSError* error)) handler;
 ```
 
 Consult an Ezsignpage
@@ -34,7 +34,7 @@ ObjectEzsignpageApi*apiInstance = [[ObjectEzsignpageApi alloc] init];
 // Consult an Ezsignpage
 [apiInstance ezsignpageConsultV1WithPkiEzsignpageID:pkiEzsignpageID
               body:body
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignpageConsultV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignpageConsultV1Response***](EzsignpageConsultV1Response.md)
 
 ### Authorization
 

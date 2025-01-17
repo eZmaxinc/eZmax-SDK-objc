@@ -3,6 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiDiscussionID** | **NSNumber*** | The unique ID of the Discussion | 
+**sDiscussionDescription** | **NSString*** | The description of the Discussion | 
+**bDiscussionClosed** | **NSNumber*** | Whether if it&#39;s an closed | 
+**dtDiscussionLastread** | **NSString*** | The date the Discussion was last read | [optional] 
+**iDiscussionmessageCount** | **NSNumber*** | The count of Attachment. | 
+**iDiscussionmessageCountunread** | **NSNumber*** | The count of Attachment. | 
+**objDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse***](CustomDiscussionconfigurationResponse.md) |  | [optional] 
 **aObjDiscussionmembership** | [**NSArray&lt;DiscussionmembershipResponseCompound&gt;***](DiscussionmembershipResponseCompound.md) |  | 
 **aObjDiscussionmessage** | [**NSArray&lt;DiscussionmessageResponseCompound&gt;***](DiscussionmessageResponseCompound.md) |  | 
 

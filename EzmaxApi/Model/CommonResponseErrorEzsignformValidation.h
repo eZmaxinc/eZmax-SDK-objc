@@ -14,10 +14,10 @@
 */
 
 
-#import "CommonResponseError.h"
+#import "CustomEzsignformfielderrorResponse.h"
 #import "FieldEErrorCode.h"
-@protocol CommonResponseError;
-@class CommonResponseError;
+@protocol CustomEzsignformfielderrorResponse;
+@class CustomEzsignformfielderrorResponse;
 @protocol FieldEErrorCode;
 @class FieldEErrorCode;
 
@@ -26,8 +26,16 @@
 @protocol CommonResponseErrorEzsignformValidation
 @end
 
-@interface CommonResponseErrorEzsignformValidation : CommonResponseError
+@interface CommonResponseErrorEzsignformValidation : Object
 
+/* The message giving details about the error 
+ */
+@property(nonatomic) NSString* sErrorMessage;
+
+@property(nonatomic) FieldEErrorCode* eErrorCode;
+/* More error message detail [optional]
+ */
+@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 /*  
  */
 @property(nonatomic) NSArray<CustomEzsignformfielderrorResponse>* aObjEzsignformfielderror;

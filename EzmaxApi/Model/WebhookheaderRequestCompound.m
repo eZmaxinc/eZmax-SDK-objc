@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiWebhookheaderID": @"pkiWebhookheaderID", @"sWebhookheaderName": @"sWebhookheaderName", @"sWebhookheaderValue": @"sWebhookheaderValue" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiWebhookheaderID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

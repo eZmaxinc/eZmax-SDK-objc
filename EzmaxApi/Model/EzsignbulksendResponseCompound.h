@@ -15,14 +15,11 @@
 
 
 #import "CommonAudit.h"
-#import "EzsignbulksendResponse.h"
 #import "EzsignbulksenddocumentmappingResponseCompound.h"
 #import "EzsignbulksendsignermappingResponse.h"
 #import "FieldEEzsignfoldertypePrivacylevel.h"
 @protocol CommonAudit;
 @class CommonAudit;
-@protocol EzsignbulksendResponse;
-@class EzsignbulksendResponse;
 @protocol EzsignbulksenddocumentmappingResponseCompound;
 @class EzsignbulksenddocumentmappingResponseCompound;
 @protocol EzsignbulksendsignermappingResponse;
@@ -35,8 +32,39 @@
 @protocol EzsignbulksendResponseCompound
 @end
 
-@interface EzsignbulksendResponseCompound : EzsignbulksendResponse
+@interface EzsignbulksendResponseCompound : Object
 
+/* The unique ID of the Ezsignbulksend 
+ */
+@property(nonatomic) NSNumber* pkiEzsignbulksendID;
+/* The unique ID of the Ezsignfoldertype. 
+ */
+@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
+ */
+@property(nonatomic) NSNumber* fkiLanguageID;
+/* The Name of the Language in the language of the requester 
+ */
+@property(nonatomic) NSString* sLanguageNameX;
+
+@property(nonatomic) FieldEEzsignfoldertypePrivacylevel* eEzsignfoldertypePrivacylevel;
+/* The name of the Ezsignfoldertype in the language of the requester 
+ */
+@property(nonatomic) NSString* sEzsignfoldertypeNameX;
+/* The description of the Ezsignbulksend 
+ */
+@property(nonatomic) NSString* sEzsignbulksendDescription;
+/* Note about the Ezsignbulksend 
+ */
+@property(nonatomic) NSString* tEzsignbulksendNote;
+/* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation 
+ */
+@property(nonatomic) NSNumber* bEzsignbulksendNeedvalidation;
+/* Whether the Ezsignbulksend is active or not 
+ */
+@property(nonatomic) NSNumber* bEzsignbulksendIsactive;
+
+@property(nonatomic) CommonAudit* objAudit;
 
 @property(nonatomic) NSArray<EzsignbulksenddocumentmappingResponseCompound>* aObjEzsignbulksenddocumentmapping;
 

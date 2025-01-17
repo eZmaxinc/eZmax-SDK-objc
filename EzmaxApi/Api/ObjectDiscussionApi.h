@@ -1,11 +1,13 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DiscussionCreateObjectV1Request.h"
 #import "DiscussionCreateObjectV1Response.h"
+#import "DiscussionDeleteObjectV1Response.h"
 #import "DiscussionGetObjectV2Response.h"
 #import "DiscussionPatchObjectV1Request.h"
+#import "DiscussionPatchObjectV1Response.h"
 #import "DiscussionUpdateDiscussionreadstatusV1Request.h"
+#import "DiscussionUpdateDiscussionreadstatusV1Response.h"
 #import "Api.h"
 
 /**
@@ -49,9 +51,9 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionDeleteObjectV1Response*
 -(NSURLSessionTask*) discussionDeleteObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Discussion
@@ -77,10 +79,10 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionPatchObjectV1Response*
 -(NSURLSessionTask*) discussionPatchObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionPatchObjectV1Request: (DiscussionPatchObjectV1Request*) discussionPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionPatchObjectV1Response* output, NSError* error)) handler;
 
 
 /// Update the read status of the discussion
@@ -93,10 +95,10 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionUpdateDiscussionreadstatusV1Response*
 -(NSURLSessionTask*) discussionUpdateDiscussionreadstatusV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionUpdateDiscussionreadstatusV1Request: (DiscussionUpdateDiscussionreadstatusV1Request*) discussionUpdateDiscussionreadstatusV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionUpdateDiscussionreadstatusV1Response* output, NSError* error)) handler;
 
 
 

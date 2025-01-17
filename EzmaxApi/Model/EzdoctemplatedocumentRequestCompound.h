@@ -14,11 +14,8 @@
 */
 
 
-#import "EzdoctemplatedocumentRequest.h"
 #import "FieldEEzdoctemplatedocumentPrivacylevel.h"
 #import "MultilingualEzdoctemplatedocumentName.h"
-@protocol EzdoctemplatedocumentRequest;
-@class EzdoctemplatedocumentRequest;
 @protocol FieldEEzdoctemplatedocumentPrivacylevel;
 @class FieldEEzdoctemplatedocumentPrivacylevel;
 @protocol MultilingualEzdoctemplatedocumentName;
@@ -29,7 +26,29 @@
 @protocol EzdoctemplatedocumentRequestCompound
 @end
 
-@interface EzdoctemplatedocumentRequestCompound : EzdoctemplatedocumentRequest
+@interface EzdoctemplatedocumentRequestCompound : Object
 
+/* The unique ID of the Ezdoctemplatedocument [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzdoctemplatedocumentID;
+/* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
+ */
+@property(nonatomic) NSNumber* fkiLanguageID;
+/* The unique ID of the Ezsignfoldertype. [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The unique ID of the Ezdoctemplatetype 
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatetypeID;
+/* The unique ID of the Ezdoctemplatefieldtypecategory 
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatefieldtypecategoryID;
+
+@property(nonatomic) FieldEEzdoctemplatedocumentPrivacylevel* eEzdoctemplatedocumentPrivacylevel;
+/* Whether the ezdoctemplatedocument is active or not 
+ */
+@property(nonatomic) NSNumber* bEzdoctemplatedocumentIsactive;
+
+@property(nonatomic) MultilingualEzdoctemplatedocumentName* objEzdoctemplatedocumentName;
 
 @end

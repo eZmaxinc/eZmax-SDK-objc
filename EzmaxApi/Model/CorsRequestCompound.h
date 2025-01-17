@@ -14,16 +14,22 @@
 */
 
 
-#import "CorsRequest.h"
-@protocol CorsRequest;
-@class CorsRequest;
 
 
 
 @protocol CorsRequestCompound
 @end
 
-@interface CorsRequestCompound : CorsRequest
+@interface CorsRequestCompound : Object
 
+/* The unique ID of the Cors [optional]
+ */
+@property(nonatomic) NSNumber* pkiCorsID;
+/* The unique ID of the Apikey 
+ */
+@property(nonatomic) NSNumber* fkiApikeyID;
+/* The entryurl of the Cors 
+ */
+@property(nonatomic) NSString* sCorsEntryurl;
 
 @end

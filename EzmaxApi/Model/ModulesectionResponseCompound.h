@@ -14,20 +14,29 @@
 */
 
 
-#import "ModulesectionResponse.h"
-#import "PermissionResponse.h"
-@protocol ModulesectionResponse;
-@class ModulesectionResponse;
-@protocol PermissionResponse;
-@class PermissionResponse;
+#import "PermissionResponseCompound.h"
+@protocol PermissionResponseCompound;
+@class PermissionResponseCompound;
 
 
 
 @protocol ModulesectionResponseCompound
 @end
 
-@interface ModulesectionResponseCompound : ModulesectionResponse
+@interface ModulesectionResponseCompound : Object
 
+/* The unique ID of the Modulesection 
+ */
+@property(nonatomic) NSNumber* pkiModulesectionID;
+/* The unique ID of the Module 
+ */
+@property(nonatomic) NSNumber* fkiModuleID;
+/* The Internal name of the Module section. 
+ */
+@property(nonatomic) NSString* sModulesectionInternalname;
+/* The Name of the Modulesection in the language of the requester 
+ */
+@property(nonatomic) NSString* sModulesectionNameX;
 
 @property(nonatomic) NSArray<PermissionResponseCompound>* aObjPermission;
 

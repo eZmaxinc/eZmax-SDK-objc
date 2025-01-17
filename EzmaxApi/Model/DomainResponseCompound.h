@@ -15,19 +15,36 @@
 
 
 #import "CommonAudit.h"
-#import "DomainResponse.h"
+#import "CustomDnsrecordResponse.h"
 @protocol CommonAudit;
 @class CommonAudit;
-@protocol DomainResponse;
-@class DomainResponse;
+@protocol CustomDnsrecordResponse;
+@class CustomDnsrecordResponse;
 
 
 
 @protocol DomainResponseCompound
 @end
 
-@interface DomainResponseCompound : DomainResponse
+@interface DomainResponseCompound : Object
 
+/* The unique ID of the Domain 
+ */
+@property(nonatomic) NSNumber* pkiDomainID;
+/* The name of the Domain 
+ */
+@property(nonatomic) NSString* sDomainName;
+/* Whether the DKIM is valid or not 
+ */
+@property(nonatomic) NSNumber* bDomainValiddkim;
+/* Whether the mail from is valid or not 
+ */
+@property(nonatomic) NSNumber* bDomainValidmailfrom;
+/* Whether the customer has access to it or not 
+ */
+@property(nonatomic) NSNumber* bDomainValidcustomer;
+
+@property(nonatomic) CommonAudit* objAudit;
 /*  
  */
 @property(nonatomic) NSArray<CustomDnsrecordResponse>* aObjDnsrecord;

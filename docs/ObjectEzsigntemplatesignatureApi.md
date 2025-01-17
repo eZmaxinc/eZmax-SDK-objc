@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplatesignatureDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplatesignatureDeleteObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatesignatureDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplatesignature
@@ -93,7 +93,7 @@ ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureAp
 
 // Delete an existing Ezsigntemplatesignature
 [apiInstance ezsigntemplatesignatureDeleteObjectV1WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatesignatureDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatesignatureDeleteObjectV1Response***](EzsigntemplatesignatureDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
     ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatesignature
@@ -153,7 +153,7 @@ ObjectEzsigntemplatesignatureApi*apiInstance = [[ObjectEzsigntemplatesignatureAp
 // Edit an existing Ezsigntemplatesignature
 [apiInstance ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID:pkiEzsigntemplatesignatureID
               ezsigntemplatesignatureEditObjectV2Request:ezsigntemplatesignatureEditObjectV2Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatesignatureEditObjectV2Response***](EzsigntemplatesignatureEditObjectV2Response.md)
 
 ### Authorization
 

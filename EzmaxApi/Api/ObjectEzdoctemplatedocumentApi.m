@@ -1,15 +1,16 @@
 #import "ObjectEzdoctemplatedocumentApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzdoctemplatedocumentCreateObjectV1Request.h"
 #import "EzdoctemplatedocumentCreateObjectV1Response.h"
 #import "EzdoctemplatedocumentEditObjectV1Request.h"
+#import "EzdoctemplatedocumentEditObjectV1Response.h"
 #import "EzdoctemplatedocumentGetAutocompleteV2Response.h"
 #import "EzdoctemplatedocumentGetListV1Response.h"
 #import "EzdoctemplatedocumentGetObjectV2Response.h"
 #import "EzdoctemplatedocumentPatchObjectV1Request.h"
+#import "EzdoctemplatedocumentPatchObjectV1Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -199,11 +200,11 @@ NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezdoctemplatedocumentEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzdoctemplatedocumentEditObjectV1Response*
 ///
 -(NSURLSessionTask*) ezdoctemplatedocumentEditObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentEditObjectV1Request: (EzdoctemplatedocumentEditObjectV1Request*) ezdoctemplatedocumentEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzdoctemplatedocumentEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
     if (pkiEzdoctemplatedocumentID == nil) {
         NSParameterAssert(pkiEzdoctemplatedocumentID);
@@ -267,10 +268,10 @@ NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzdoctemplatedocumentEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzdoctemplatedocumentEditObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -540,11 +541,11 @@ NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezdoctemplatedocumentPatchObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzdoctemplatedocumentPatchObjectV1Response*
 ///
 -(NSURLSessionTask*) ezdoctemplatedocumentPatchObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentPatchObjectV1Request: (EzdoctemplatedocumentPatchObjectV1Request*) ezdoctemplatedocumentPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzdoctemplatedocumentPatchObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzdoctemplatedocumentID' is set
     if (pkiEzdoctemplatedocumentID == nil) {
         NSParameterAssert(pkiEzdoctemplatedocumentID);
@@ -608,10 +609,10 @@ NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzdoctemplatedocumentPatchObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzdoctemplatedocumentPatchObjectV1Response*)data, error);
                                 }
                             }];
 }

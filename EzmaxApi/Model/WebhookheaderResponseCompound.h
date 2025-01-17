@@ -14,16 +14,25 @@
 */
 
 
-#import "WebhookheaderResponse.h"
-@protocol WebhookheaderResponse;
-@class WebhookheaderResponse;
 
 
 
 @protocol WebhookheaderResponseCompound
 @end
 
-@interface WebhookheaderResponseCompound : WebhookheaderResponse
+@interface WebhookheaderResponseCompound : Object
 
+/* The unique ID of the Webhookheader 
+ */
+@property(nonatomic) NSNumber* pkiWebhookheaderID;
+/* The unique ID of the Webhook 
+ */
+@property(nonatomic) NSNumber* fkiWebhookID;
+/* The Name of the Webhookheader 
+ */
+@property(nonatomic) NSString* sWebhookheaderName;
+/* The Value of the Webhookheader 
+ */
+@property(nonatomic) NSString* sWebhookheaderValue;
 
 @end

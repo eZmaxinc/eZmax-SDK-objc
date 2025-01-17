@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 # **ezsignsignatureDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignsignatureDeleteObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignsignatureDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignsignature
@@ -212,7 +212,7 @@ ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
 
 // Delete an existing Ezsignsignature
 [apiInstance ezsignsignatureDeleteObjectV1WithPkiEzsignsignatureID:pkiEzsignsignatureID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignsignatureDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignsignatureDeleteObjectV1Response***](EzsignsignatureDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
     ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignsignature
@@ -272,7 +272,7 @@ ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
 // Edit an existing Ezsignsignature
 [apiInstance ezsignsignatureEditObjectV2WithPkiEzsignsignatureID:pkiEzsignsignatureID
               ezsignsignatureEditObjectV2Request:ezsignsignatureEditObjectV2Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignsignatureEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignsignatureEditObjectV2Response***](EzsignsignatureEditObjectV2Response.md)
 
 ### Authorization
 

@@ -15,19 +15,40 @@
 
 
 #import "CustomContactNameResponse.h"
-#import "EzmaxinvoicingcommissionResponse.h"
 @protocol CustomContactNameResponse;
 @class CustomContactNameResponse;
-@protocol EzmaxinvoicingcommissionResponse;
-@class EzmaxinvoicingcommissionResponse;
 
 
 
 @protocol EzmaxinvoicingcommissionResponseCompound
 @end
 
-@interface EzmaxinvoicingcommissionResponseCompound : EzmaxinvoicingcommissionResponse
+@interface EzmaxinvoicingcommissionResponseCompound : Object
 
+/* The unique ID of the Ezmaxinvoicingcommission [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzmaxinvoicingcommissionID;
+/* The unique ID of the Ezmaxinvoicingsummaryglobal [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxinvoicingsummaryglobalID;
+/* The unique ID of the Ezmaxpartner [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxpartnerID;
+/* The unique ID of the Ezmaxrepresentative [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxrepresentativeID;
+/* The start date for the Ezmaxinvoicingcommission 
+ */
+@property(nonatomic) NSString* dtEzmaxinvoicingcommissionStart;
+/* The end date for the Ezmaxinvoicingcommission 
+ */
+@property(nonatomic) NSString* dtEzmaxinvoicingcommissionEnd;
+/* This is the number of days during the month on which the Ezmaxinvoigcommission applies 
+ */
+@property(nonatomic) NSNumber* iEzmaxinvoicingcommissionDays;
+/* The amount of Ezmaxinvoicingcommission 
+ */
+@property(nonatomic) NSString* dEzmaxinvoicingcommissionAmount;
 
 @property(nonatomic) CustomContactNameResponse* objContactName;
 

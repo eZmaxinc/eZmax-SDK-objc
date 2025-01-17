@@ -1,11 +1,12 @@
 #import "ObjectUsergroupmembershipApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "UsergroupmembershipCreateObjectV1Request.h"
 #import "UsergroupmembershipCreateObjectV1Response.h"
+#import "UsergroupmembershipDeleteObjectV1Response.h"
 #import "UsergroupmembershipEditObjectV1Request.h"
+#import "UsergroupmembershipEditObjectV1Response.h"
 #import "UsergroupmembershipGetObjectV2Response.h"
 
 
@@ -125,10 +126,10 @@ NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiUsergroupmembershipID  
 ///
-///  @returns CommonResponse*
+///  @returns UsergroupmembershipDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) usergroupmembershipDeleteObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(UsergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupmembershipID' is set
     if (pkiUsergroupmembershipID == nil) {
         NSParameterAssert(pkiUsergroupmembershipID);
@@ -180,10 +181,10 @@ NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"UsergroupmembershipDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((UsergroupmembershipDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -195,11 +196,11 @@ NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode = 234513;
 ///
 ///  @param usergroupmembershipEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns UsergroupmembershipEditObjectV1Response*
 ///
 -(NSURLSessionTask*) usergroupmembershipEditObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
     usergroupmembershipEditObjectV1Request: (UsergroupmembershipEditObjectV1Request*) usergroupmembershipEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(UsergroupmembershipEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupmembershipID' is set
     if (pkiUsergroupmembershipID == nil) {
         NSParameterAssert(pkiUsergroupmembershipID);
@@ -263,10 +264,10 @@ NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"UsergroupmembershipEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((UsergroupmembershipEditObjectV1Response*)data, error);
                                 }
                             }];
 }

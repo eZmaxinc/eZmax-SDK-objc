@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignformfieldgroupsigner": @"a_objEzsignformfieldgroupsigner", @"aObjDropdownElement": @"a_objDropdownElement", @"aObjEzsignformfield": @"a_objEzsignformfield" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignformfieldgroupID": @"pkiEzsignformfieldgroupID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"eEzsignformfieldgroupType": @"eEzsignformfieldgroupType", @"eEzsignformfieldgroupSignerrequirement": @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupLabel": @"sEzsignformfieldgroupLabel", @"iEzsignformfieldgroupStep": @"iEzsignformfieldgroupStep", @"sEzsignformfieldgroupDefaultvalue": @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupFilledmin": @"iEzsignformfieldgroupFilledmin", @"iEzsignformfieldgroupFilledmax": @"iEzsignformfieldgroupFilledmax", @"bEzsignformfieldgroupReadonly": @"bEzsignformfieldgroupReadonly", @"iEzsignformfieldgroupMaxlength": @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted": @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp": @"sEzsignformfieldgroupRegexp", @"sEzsignformfieldgroupTextvalidationcustommessage": @"sEzsignformfieldgroupTextvalidationcustommessage", @"tEzsignformfieldgroupTooltip": @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition": @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation": @"eEzsignformfieldgroupTextvalidation", @"aObjEzsignformfieldgroupsigner": @"a_objEzsignformfieldgroupsigner", @"aObjDropdownElement": @"a_objDropdownElement", @"aObjEzsignformfield": @"a_objEzsignformfield" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aObjDropdownElement", ];
+  NSArray *optionalProperties = @[@"pkiEzsignformfieldgroupID", @"eEzsignformfieldgroupSignerrequirement", @"sEzsignformfieldgroupDefaultvalue", @"iEzsignformfieldgroupMaxlength", @"bEzsignformfieldgroupEncrypted", @"sEzsignformfieldgroupRegexp", @"sEzsignformfieldgroupTextvalidationcustommessage", @"tEzsignformfieldgroupTooltip", @"eEzsignformfieldgroupTooltipposition", @"eEzsignformfieldgroupTextvalidation", @"aObjDropdownElement", ];
   return [optionalProperties containsObject:propertyName];
 }
 

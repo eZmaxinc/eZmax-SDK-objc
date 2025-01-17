@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
     ezsignfoldertypeEditObjectV3Request: (EzsignfoldertypeEditObjectV3Request*) ezsignfoldertypeEditObjectV3Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignfoldertypeEditObjectV3Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignfoldertype
@@ -98,7 +98,7 @@ ObjectEzsignfoldertypeApi*apiInstance = [[ObjectEzsignfoldertypeApi alloc] init]
 // Edit an existing Ezsignfoldertype
 [apiInstance ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID:pkiEzsignfoldertypeID
               ezsignfoldertypeEditObjectV3Request:ezsignfoldertypeEditObjectV3Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignfoldertypeEditObjectV3Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignfoldertypeEditObjectV3Response***](EzsignfoldertypeEditObjectV3Response.md)
 
 ### Authorization
 

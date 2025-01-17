@@ -14,16 +14,34 @@
 */
 
 
-#import "DiscussionmembershipResponse.h"
-@protocol DiscussionmembershipResponse;
-@class DiscussionmembershipResponse;
 
 
 
 @protocol DiscussionmembershipResponseCompound
 @end
 
-@interface DiscussionmembershipResponseCompound : DiscussionmembershipResponse
+@interface DiscussionmembershipResponseCompound : Object
 
+/* The unique ID of the Discussionmembership 
+ */
+@property(nonatomic) NSNumber* pkiDiscussionmembershipID;
+/* The unique ID of the Discussion 
+ */
+@property(nonatomic) NSNumber* fkiDiscussionID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroup [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* The unique ID of the Modulesection [optional]
+ */
+@property(nonatomic) NSNumber* fkiModulesectionID;
+/* The Description containing the detail of who the Discussionmembership refers to 
+ */
+@property(nonatomic) NSString* sDiscussionmembershipDescription;
+/* The joined date of the Discussionmembership 
+ */
+@property(nonatomic) NSString* dtDiscussionmembershipJoined;
 
 @end

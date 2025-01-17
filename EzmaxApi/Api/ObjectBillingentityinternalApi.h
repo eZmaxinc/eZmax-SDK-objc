@@ -2,10 +2,10 @@
 #import "BillingentityinternalCreateObjectV1Request.h"
 #import "BillingentityinternalCreateObjectV1Response.h"
 #import "BillingentityinternalEditObjectV1Request.h"
+#import "BillingentityinternalEditObjectV1Response.h"
 #import "BillingentityinternalGetAutocompleteV2Response.h"
 #import "BillingentityinternalGetListV1Response.h"
 #import "BillingentityinternalGetObjectV2Response.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -53,10 +53,10 @@ extern NSInteger kObjectBillingentityinternalApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return BillingentityinternalEditObjectV1Response*
 -(NSURLSessionTask*) billingentityinternalEditObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
     billingentityinternalEditObjectV1Request: (BillingentityinternalEditObjectV1Request*) billingentityinternalEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(BillingentityinternalEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Billingentityinternals and IDs

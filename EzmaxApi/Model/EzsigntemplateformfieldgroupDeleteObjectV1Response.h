@@ -14,11 +14,8 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -29,7 +26,11 @@
 @protocol EzsigntemplateformfieldgroupDeleteObjectV1Response
 @end
 
-@interface EzsigntemplateformfieldgroupDeleteObjectV1Response : CommonResponse
+@interface EzsigntemplateformfieldgroupDeleteObjectV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @end

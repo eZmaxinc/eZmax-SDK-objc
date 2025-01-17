@@ -16,20 +16,27 @@
 
 #import "EmailRequest.h"
 #import "MultilingualUsergroupName.h"
-#import "UsergroupResponse.h"
 @protocol EmailRequest;
 @class EmailRequest;
 @protocol MultilingualUsergroupName;
 @class MultilingualUsergroupName;
-@protocol UsergroupResponse;
-@class UsergroupResponse;
 
 
 
 @protocol UsergroupResponseCompound
 @end
 
-@interface UsergroupResponseCompound : UsergroupResponse
+@interface UsergroupResponseCompound : Object
 
+/* The unique ID of the Usergroup 
+ */
+@property(nonatomic) NSNumber* pkiUsergroupID;
+
+@property(nonatomic) MultilingualUsergroupName* objUsergroupName;
+/* The Name of the Usergroup in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sUsergroupNameX;
+
+@property(nonatomic) EmailRequest* objEmail;
 
 @end

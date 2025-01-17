@@ -14,16 +14,25 @@
 */
 
 
-#import "SignatureResponse.h"
-@protocol SignatureResponse;
-@class SignatureResponse;
 
 
 
 @protocol SignatureResponseCompound
 @end
 
-@interface SignatureResponseCompound : SignatureResponse
+@interface SignatureResponseCompound : Object
 
+/* The unique ID of the Signature 
+ */
+@property(nonatomic) NSNumber* pkiSignatureID;
+/* The unique ID of the Font [optional]
+ */
+@property(nonatomic) NSNumber* fkiFontID;
+/* The URL of the SVG file for the Signature [optional]
+ */
+@property(nonatomic) NSString* sSignatureUrl;
+/* The URL of the SVG file for the Initials [optional]
+ */
+@property(nonatomic) NSString* sSignatureUrlinitials;
 
 @end

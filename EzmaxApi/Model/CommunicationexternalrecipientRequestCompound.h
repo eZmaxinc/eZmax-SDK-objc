@@ -14,10 +14,7 @@
 */
 
 
-#import "CommunicationexternalrecipientRequest.h"
 #import "FieldECommunicationexternalrecipientType.h"
-@protocol CommunicationexternalrecipientRequest;
-@class CommunicationexternalrecipientRequest;
 @protocol FieldECommunicationexternalrecipientType;
 @class FieldECommunicationexternalrecipientType;
 
@@ -26,7 +23,21 @@
 @protocol CommunicationexternalrecipientRequestCompound
 @end
 
-@interface CommunicationexternalrecipientRequestCompound : CommunicationexternalrecipientRequest
+@interface CommunicationexternalrecipientRequestCompound : Object
 
+/* The unique ID of the Communicationexternalrecipient [optional]
+ */
+@property(nonatomic) NSNumber* pkiCommunicationexternalrecipientID;
+/* The email address. [optional]
+ */
+@property(nonatomic) NSString* sEmailAddress;
+/* A phone number in E.164 Format [optional]
+ */
+@property(nonatomic) NSString* sPhoneE164;
+
+@property(nonatomic) FieldECommunicationexternalrecipientType* eCommunicationexternalrecipientType;
+/* The name of the Communicationexternalrecipient [optional]
+ */
+@property(nonatomic) NSString* sCommunicationexternalrecipientName;
 
 @end

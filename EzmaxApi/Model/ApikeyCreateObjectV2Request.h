@@ -14,9 +14,9 @@
 */
 
 
-#import "ApikeyRequest.h"
-@protocol ApikeyRequest;
-@class ApikeyRequest;
+#import "ApikeyRequestCompound.h"
+@protocol ApikeyRequestCompound;
+@class ApikeyRequestCompound;
 
 
 

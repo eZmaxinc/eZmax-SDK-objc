@@ -14,10 +14,7 @@
 */
 
 
-#import "CommonResponseError.h"
 #import "FieldEErrorCode.h"
-@protocol CommonResponseError;
-@class CommonResponseError;
 @protocol FieldEErrorCode;
 @class FieldEErrorCode;
 
@@ -26,8 +23,16 @@
 @protocol CommonResponseErrorWrongFranchiseoffice
 @end
 
-@interface CommonResponseErrorWrongFranchiseoffice : CommonResponseError
+@interface CommonResponseErrorWrongFranchiseoffice : Object
 
+/* The message giving details about the error 
+ */
+@property(nonatomic) NSString* sErrorMessage;
+
+@property(nonatomic) FieldEErrorCode* eErrorCode;
+/* More error message detail [optional]
+ */
+@property(nonatomic) NSArray<NSString*>* aSErrorMessagedetail;
 /* The unique ID of the Franchiseagence 
  */
 @property(nonatomic) NSNumber* fkiFranchiseagenceID;

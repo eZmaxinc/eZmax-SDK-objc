@@ -15,12 +15,12 @@
 
 
 #import "CustomContactNameResponse.h"
-#import "EmailResponse.h"
+#import "EmailResponseCompound.h"
 #import "PhoneResponseCompound.h"
 @protocol CustomContactNameResponse;
 @class CustomContactNameResponse;
-@protocol EmailResponse;
-@class EmailResponse;
+@protocol EmailResponseCompound;
+@class EmailResponseCompound;
 @protocol PhoneResponseCompound;
 @class PhoneResponseCompound;
 
@@ -80,9 +80,8 @@
 @property(nonatomic) NSString* eCommunicationrecipientsrecipientObjecttype;
 
 @property(nonatomic) CustomContactNameResponse* objContactName;
-/* An Email Object and children to create a complete structure [optional]
- */
-@property(nonatomic) EmailResponse* objEmail;
+
+@property(nonatomic) EmailResponseCompound* objEmail;
 
 @property(nonatomic) PhoneResponseCompound* objPhoneFax;
 

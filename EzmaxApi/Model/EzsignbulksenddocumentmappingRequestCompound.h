@@ -14,16 +14,25 @@
 */
 
 
-#import "EzsignbulksenddocumentmappingRequest.h"
-@protocol EzsignbulksenddocumentmappingRequest;
-@class EzsignbulksenddocumentmappingRequest;
 
 
 
 @protocol EzsignbulksenddocumentmappingRequestCompound
 @end
 
-@interface EzsignbulksenddocumentmappingRequestCompound : EzsignbulksenddocumentmappingRequest
+@interface EzsignbulksenddocumentmappingRequestCompound : Object
 
+/* The unique ID of the Ezsignbulksenddocumentmapping. [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignbulksenddocumentmappingID;
+/* The unique ID of the Ezsignbulksend 
+ */
+@property(nonatomic) NSNumber* fkiEzsignbulksendID;
+/* The unique ID of the Ezsigntemplatepackage [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplatepackageID;
+/* The unique ID of the Ezsigntemplate [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplateID;
 
 @end

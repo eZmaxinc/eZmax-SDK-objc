@@ -1,8 +1,8 @@
 #import "ObjectEzsignpageApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
+#import "EzsignpageConsultV1Response.h"
 
 
 @interface ObjectEzsignpageApi ()
@@ -57,11 +57,11 @@ NSInteger kObjectEzsignpageApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignpageConsultV1Response*
 ///
 -(NSURLSessionTask*) ezsignpageConsultV1WithPkiEzsignpageID: (NSNumber*) pkiEzsignpageID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignpageConsultV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignpageID' is set
     if (pkiEzsignpageID == nil) {
         NSParameterAssert(pkiEzsignpageID);
@@ -125,10 +125,10 @@ NSInteger kObjectEzsignpageApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignpageConsultV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignpageConsultV1Response*)data, error);
                                 }
                             }];
 }

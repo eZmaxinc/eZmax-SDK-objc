@@ -16,20 +16,27 @@
 
 #import "CommonAudit.h"
 #import "ContactResponseCompound.h"
-#import "EzsignuserResponse.h"
 @protocol CommonAudit;
 @class CommonAudit;
 @protocol ContactResponseCompound;
 @class ContactResponseCompound;
-@protocol EzsignuserResponse;
-@class EzsignuserResponse;
 
 
 
 @protocol EzsignuserResponseCompound
 @end
 
-@interface EzsignuserResponseCompound : EzsignuserResponse
+@interface EzsignuserResponseCompound : Object
 
+/* The unique ID of the Ezsignuser 
+ */
+@property(nonatomic) NSNumber* pkiEzsignuserID;
+/* The unique ID of the Contact 
+ */
+@property(nonatomic) NSNumber* fkiContactID;
+
+@property(nonatomic) ContactResponseCompound* objContact;
+
+@property(nonatomic) CommonAudit* objAudit;
 
 @end

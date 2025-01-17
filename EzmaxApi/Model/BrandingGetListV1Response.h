@@ -15,13 +15,10 @@
 
 
 #import "BrandingGetListV1ResponseMPayload.h"
-#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 @protocol BrandingGetListV1ResponseMPayload;
 @class BrandingGetListV1ResponseMPayload;
-@protocol CommonResponseGetList;
-@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -32,8 +29,12 @@
 @protocol BrandingGetListV1Response
 @end
 
-@interface BrandingGetListV1Response : CommonResponseGetList
+@interface BrandingGetListV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) BrandingGetListV1ResponseMPayload* mPayload;
 

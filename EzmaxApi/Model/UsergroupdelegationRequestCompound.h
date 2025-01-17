@@ -14,16 +14,22 @@
 */
 
 
-#import "UsergroupdelegationRequest.h"
-@protocol UsergroupdelegationRequest;
-@class UsergroupdelegationRequest;
 
 
 
 @protocol UsergroupdelegationRequestCompound
 @end
 
-@interface UsergroupdelegationRequestCompound : UsergroupdelegationRequest
+@interface UsergroupdelegationRequestCompound : Object
 
+/* The unique ID of the Usergroupdelegation [optional]
+ */
+@property(nonatomic) NSNumber* pkiUsergroupdelegationID;
+/* The unique ID of the Usergroup 
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* The unique ID of the User 
+ */
+@property(nonatomic) NSNumber* fkiUserID;
 
 @end

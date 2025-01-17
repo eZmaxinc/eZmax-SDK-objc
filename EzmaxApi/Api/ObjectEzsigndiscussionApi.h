@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigndiscussionCreateObjectV1Request.h"
 #import "EzsigndiscussionCreateObjectV1Response.h"
+#import "EzsigndiscussionDeleteObjectV1Response.h"
 #import "EzsigndiscussionGetObjectV2Response.h"
 #import "Api.h"
 
@@ -47,9 +47,9 @@ extern NSInteger kObjectEzsigndiscussionApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndiscussionDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigndiscussionDeleteObjectV1WithPkiEzsigndiscussionID: (NSNumber*) pkiEzsigndiscussionID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndiscussionDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigndiscussion

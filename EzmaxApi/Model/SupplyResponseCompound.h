@@ -15,18 +15,50 @@
 
 
 #import "MultilingualSupplyDescription.h"
-#import "SupplyResponse.h"
 @protocol MultilingualSupplyDescription;
 @class MultilingualSupplyDescription;
-@protocol SupplyResponse;
-@class SupplyResponse;
 
 
 
 @protocol SupplyResponseCompound
 @end
 
-@interface SupplyResponseCompound : SupplyResponse
+@interface SupplyResponseCompound : Object
 
+/* The unique ID of the Supply 
+ */
+@property(nonatomic) NSNumber* pkiSupplyID;
+/* The unique ID of the Glaccount [optional]
+ */
+@property(nonatomic) NSNumber* fkiGlaccountID;
+/* The unique ID of the Glaccountcontainer [optional]
+ */
+@property(nonatomic) NSNumber* fkiGlaccountcontainerID;
+/* The unique ID of the Variableexpense 
+ */
+@property(nonatomic) NSNumber* fkiVariableexpenseID;
+/* The code of the Supply 
+ */
+@property(nonatomic) NSString* sSupplyCode;
+
+@property(nonatomic) MultilingualSupplyDescription* objSupplyDescription;
+/* The unit price of the Supply 
+ */
+@property(nonatomic) NSString* dSupplyUnitprice;
+/* Whether the supply is active or not 
+ */
+@property(nonatomic) NSNumber* bSupplyIsactive;
+/* Whether if the price is variable 
+ */
+@property(nonatomic) NSNumber* bSupplyVariableprice;
+/* The Description for the Glaccount in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sGlaccountDescriptionX;
+/* The Description for the Glaccountcontainer in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sGlaccountcontainerLongdescriptionX;
+/* The description of the Variableexpense in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sVariableexpenseDescriptionX;
 
 @end

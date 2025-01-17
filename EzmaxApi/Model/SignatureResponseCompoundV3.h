@@ -15,18 +15,29 @@
 
 
 #import "FieldESignaturePreference.h"
-#import "SignatureResponseV3.h"
 @protocol FieldESignaturePreference;
 @class FieldESignaturePreference;
-@protocol SignatureResponseV3;
-@class SignatureResponseV3;
 
 
 
 @protocol SignatureResponseCompoundV3
 @end
 
-@interface SignatureResponseCompoundV3 : SignatureResponseV3
+@interface SignatureResponseCompoundV3 : Object
 
+/* The unique ID of the Signature 
+ */
+@property(nonatomic) NSNumber* pkiSignatureID;
+/* The unique ID of the Font 
+ */
+@property(nonatomic) NSNumber* fkiFontID;
+
+@property(nonatomic) FieldESignaturePreference* eSignaturePreference;
+/* Whether the signature has a SVG or not 
+ */
+@property(nonatomic) NSNumber* bSignatureSvg;
+/* Whether the initials has a SVG or not 
+ */
+@property(nonatomic) NSNumber* bSignatureSvginitials;
 
 @end

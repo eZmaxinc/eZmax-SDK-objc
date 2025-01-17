@@ -14,16 +14,34 @@
 */
 
 
-#import "EzsigntemplatedocumentResponse.h"
-@protocol EzsigntemplatedocumentResponse;
-@class EzsigntemplatedocumentResponse;
 
 
 
 @protocol EzsigntemplatedocumentResponseCompound
 @end
 
-@interface EzsigntemplatedocumentResponseCompound : EzsigntemplatedocumentResponse
+@interface EzsigntemplatedocumentResponseCompound : Object
 
+/* The unique ID of the Ezsigntemplatedocument 
+ */
+@property(nonatomic) NSNumber* pkiEzsigntemplatedocumentID;
+/* The unique ID of the Ezsigntemplate 
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplateID;
+/* The name of the Ezsigntemplatedocument. 
+ */
+@property(nonatomic) NSString* sEzsigntemplatedocumentName;
+/* The number of pages in the Ezsigntemplatedocument. 
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatedocumentPagetotal;
+/* The number of total signatures in the Ezsigntemplate. 
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatedocumentSignaturetotal;
+/* The number of total form fields in the Ezsigntemplate. 
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatedocumentFormfieldtotal;
+/* If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) 
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatedocumentHassignedsignatures;
 
 @end

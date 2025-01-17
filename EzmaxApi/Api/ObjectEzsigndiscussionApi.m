@@ -1,10 +1,10 @@
 #import "ObjectEzsigndiscussionApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigndiscussionCreateObjectV1Request.h"
 #import "EzsigndiscussionCreateObjectV1Response.h"
+#import "EzsigndiscussionDeleteObjectV1Response.h"
 #import "EzsigndiscussionGetObjectV2Response.h"
 
 
@@ -124,10 +124,10 @@ NSInteger kObjectEzsigndiscussionApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion 
 ///
-///  @returns CommonResponse*
+///  @returns EzsigndiscussionDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsigndiscussionDeleteObjectV1WithPkiEzsigndiscussionID: (NSNumber*) pkiEzsigndiscussionID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsigndiscussionDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndiscussionID' is set
     if (pkiEzsigndiscussionID == nil) {
         NSParameterAssert(pkiEzsigndiscussionID);
@@ -179,10 +179,10 @@ NSInteger kObjectEzsigndiscussionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsigndiscussionDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsigndiscussionDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }

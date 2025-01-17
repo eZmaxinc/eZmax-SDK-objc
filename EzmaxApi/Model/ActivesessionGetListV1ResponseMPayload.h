@@ -15,19 +15,22 @@
 
 
 #import "ActivesessionListElement.h"
-#import "CommonGetListV1ResponseMPayload.h"
 @protocol ActivesessionListElement;
 @class ActivesessionListElement;
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 
 
 
 @protocol ActivesessionGetListV1ResponseMPayload
 @end
 
-@interface ActivesessionGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface ActivesessionGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<ActivesessionListElement>* aObjActivesession;
 

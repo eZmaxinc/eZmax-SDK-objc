@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) usergroupEditObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
     usergroupEditObjectV1Request: (UsergroupEditObjectV1Request*) usergroupEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(UsergroupEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Usergroup
@@ -103,7 +103,7 @@ ObjectUsergroupApi*apiInstance = [[ObjectUsergroupApi alloc] init];
 // Edit an existing Usergroup
 [apiInstance usergroupEditObjectV1WithPkiUsergroupID:pkiUsergroupID
               usergroupEditObjectV1Request:usergroupEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(UsergroupEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**UsergroupEditObjectV1Response***](UsergroupEditObjectV1Response.md)
 
 ### Authorization
 

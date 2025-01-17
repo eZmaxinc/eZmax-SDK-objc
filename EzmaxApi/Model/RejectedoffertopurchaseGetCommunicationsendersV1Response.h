@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol RejectedoffertopurchaseGetCommunicationsendersV1Response
 @end
 
-@interface RejectedoffertopurchaseGetCommunicationsendersV1Response : CommonResponse
+@interface RejectedoffertopurchaseGetCommunicationsendersV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload* mPayload;
 

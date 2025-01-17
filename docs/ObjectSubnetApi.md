@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **subnetDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) subnetDeleteObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(SubnetDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Subnet
@@ -93,7 +93,7 @@ ObjectSubnetApi*apiInstance = [[ObjectSubnetApi alloc] init];
 
 // Delete an existing Subnet
 [apiInstance subnetDeleteObjectV1WithPkiSubnetID:pkiSubnetID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(SubnetDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**SubnetDeleteObjectV1Response***](SubnetDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) subnetEditObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
     subnetEditObjectV1Request: (SubnetEditObjectV1Request*) subnetEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(SubnetEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Subnet
@@ -153,7 +153,7 @@ ObjectSubnetApi*apiInstance = [[ObjectSubnetApi alloc] init];
 // Edit an existing Subnet
 [apiInstance subnetEditObjectV1WithPkiSubnetID:pkiSubnetID
               subnetEditObjectV1Request:subnetEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(SubnetEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**SubnetEditObjectV1Response***](SubnetEditObjectV1Response.md)
 
 ### Authorization
 

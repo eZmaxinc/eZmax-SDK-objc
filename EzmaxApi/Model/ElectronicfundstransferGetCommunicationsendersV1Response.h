@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "ElectronicfundstransferGetCommunicationsendersV1ResponseMPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol ElectronicfundstransferGetCommunicationsendersV1Response
 @end
 
-@interface ElectronicfundstransferGetCommunicationsendersV1Response : CommonResponse
+@interface ElectronicfundstransferGetCommunicationsendersV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ElectronicfundstransferGetCommunicationsendersV1ResponseMPayload* mPayload;
 

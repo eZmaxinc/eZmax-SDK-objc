@@ -1,12 +1,12 @@
 #import "ObjectUsergroupApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UsergroupCreateObjectV1Request.h"
 #import "UsergroupCreateObjectV1Response.h"
 #import "UsergroupEditObjectV1Request.h"
+#import "UsergroupEditObjectV1Response.h"
 #import "UsergroupEditPermissionsV1Request.h"
 #import "UsergroupEditPermissionsV1Response.h"
 #import "UsergroupEditUsergroupdelegationsV1Request.h"
@@ -139,11 +139,11 @@ NSInteger kObjectUsergroupApiMissingParamErrorCode = 234513;
 ///
 ///  @param usergroupEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns UsergroupEditObjectV1Response*
 ///
 -(NSURLSessionTask*) usergroupEditObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
     usergroupEditObjectV1Request: (UsergroupEditObjectV1Request*) usergroupEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(UsergroupEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupID' is set
     if (pkiUsergroupID == nil) {
         NSParameterAssert(pkiUsergroupID);
@@ -207,10 +207,10 @@ NSInteger kObjectUsergroupApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"UsergroupEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((UsergroupEditObjectV1Response*)data, error);
                                 }
                             }];
 }

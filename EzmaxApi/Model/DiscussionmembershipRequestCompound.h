@@ -14,16 +14,31 @@
 */
 
 
-#import "DiscussionmembershipRequest.h"
-@protocol DiscussionmembershipRequest;
-@class DiscussionmembershipRequest;
 
 
 
 @protocol DiscussionmembershipRequestCompound
 @end
 
-@interface DiscussionmembershipRequestCompound : DiscussionmembershipRequest
+@interface DiscussionmembershipRequestCompound : Object
 
+/* The unique ID of the Discussionmembership [optional]
+ */
+@property(nonatomic) NSNumber* pkiDiscussionmembershipID;
+/* The unique ID of the Discussion 
+ */
+@property(nonatomic) NSNumber* fkiDiscussionID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroup [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* The unique ID of the Modulesection [optional]
+ */
+@property(nonatomic) NSNumber* fkiModulesectionID;
+/* The joined date of the Discussionmembership 
+ */
+@property(nonatomic) NSString* dtDiscussionmembershipJoined;
 
 @end

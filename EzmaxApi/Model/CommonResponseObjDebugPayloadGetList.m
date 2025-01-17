@@ -18,7 +18,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aFilter": @"a_Filter", @"aOrderBy": @"a_OrderBy", @"iRowMax": @"iRowMax", @"iRowOffset": @"iRowOffset" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iVersionMin": @"iVersionMin", @"iVersionMax": @"iVersionMax", @"aRequiredPermission": @"a_RequiredPermission", @"bVersionDeprecated": @"bVersionDeprecated", @"dtResponseDate": @"dtResponseDate", @"aFilter": @"a_Filter", @"aOrderBy": @"a_OrderBy", @"iRowMax": @"iRowMax", @"iRowOffset": @"iRowOffset" }];
 }
 
 /**

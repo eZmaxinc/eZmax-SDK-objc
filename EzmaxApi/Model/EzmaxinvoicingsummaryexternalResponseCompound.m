@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzmaxinvoicingsummaryexternaldetail": @"a_objEzmaxinvoicingsummaryexternaldetail" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxinvoicingsummaryexternalID": @"pkiEzmaxinvoicingsummaryexternalID", @"fkiEzmaxinvoicingID": @"fkiEzmaxinvoicingID", @"fkiBillingentityexternalID": @"fkiBillingentityexternalID", @"sBillingentityexternalDescription": @"sBillingentityexternalDescription", @"sEzmaxinvoicingsummaryexternalDescription": @"sEzmaxinvoicingsummaryexternalDescription", @"aObjEzmaxinvoicingsummaryexternaldetail": @"a_objEzmaxinvoicingsummaryexternaldetail" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiEzmaxinvoicingsummaryexternalID", @"fkiEzmaxinvoicingID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

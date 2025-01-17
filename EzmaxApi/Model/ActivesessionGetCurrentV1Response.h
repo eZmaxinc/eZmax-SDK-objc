@@ -14,14 +14,11 @@
 */
 
 
-#import "ActivesessionResponseCompound.h"
-#import "CommonResponse.h"
+#import "ActivesessionGetCurrentV1ResponseMPayload.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-@protocol ActivesessionResponseCompound;
-@class ActivesessionResponseCompound;
-@protocol CommonResponse;
-@class CommonResponse;
+@protocol ActivesessionGetCurrentV1ResponseMPayload;
+@class ActivesessionGetCurrentV1ResponseMPayload;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,10 +29,13 @@
 @protocol ActivesessionGetCurrentV1Response
 @end
 
-@interface ActivesessionGetCurrentV1Response : CommonResponse
+@interface ActivesessionGetCurrentV1Response : Object
 
-/* Payload for GET /1/object/activesession/getCurrent 
- */
-@property(nonatomic) ActivesessionResponseCompound* mPayload;
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
+
+@property(nonatomic) ActivesessionGetCurrentV1ResponseMPayload* mPayload;
 
 @end

@@ -14,10 +14,7 @@
 */
 
 
-#import "EzsigntemplatepackagesignerRequest.h"
 #import "FieldEEzsigntemplatepackagesignerMapping.h"
-@protocol EzsigntemplatepackagesignerRequest;
-@class EzsigntemplatepackagesignerRequest;
 @protocol FieldEEzsigntemplatepackagesignerMapping;
 @class FieldEEzsigntemplatepackagesignerMapping;
 
@@ -26,7 +23,30 @@
 @protocol EzsigntemplatepackagesignerRequestCompound
 @end
 
-@interface EzsigntemplatepackagesignerRequestCompound : EzsigntemplatepackagesignerRequest
+@interface EzsigntemplatepackagesignerRequestCompound : Object
 
+/* The unique ID of the Ezsigntemplatepackagesigner [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsigntemplatepackagesignerID;
+/* The unique ID of the Ezsigntemplatepackage 
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplatepackageID;
+/* The unique ID of the Ezdoctemplatedocument [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzdoctemplatedocumentID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroup [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatepackagesignerReceivecopy;
+
+@property(nonatomic) FieldEEzsigntemplatepackagesignerMapping* eEzsigntemplatepackagesignerMapping;
+/* The description of the Ezsigntemplatepackagesigner 
+ */
+@property(nonatomic) NSString* sEzsigntemplatepackagesignerDescription;
 
 @end

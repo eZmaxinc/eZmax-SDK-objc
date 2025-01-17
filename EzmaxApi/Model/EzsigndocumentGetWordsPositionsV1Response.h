@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "CustomWordPositionWordResponse.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol EzsigndocumentGetWordsPositionsV1Response
 @end
 
-@interface EzsigndocumentGetWordsPositionsV1Response : CommonResponse
+@interface EzsigndocumentGetWordsPositionsV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 /* Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions 
  */
 @property(nonatomic) NSArray<CustomWordPositionWordResponse>* mPayload;

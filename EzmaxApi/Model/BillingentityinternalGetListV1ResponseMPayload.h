@@ -15,19 +15,22 @@
 
 
 #import "BillingentityinternalListElement.h"
-#import "CommonGetListV1ResponseMPayload.h"
 @protocol BillingentityinternalListElement;
 @class BillingentityinternalListElement;
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 
 
 
 @protocol BillingentityinternalGetListV1ResponseMPayload
 @end
 
-@interface BillingentityinternalGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface BillingentityinternalGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<BillingentityinternalListElement>* aObjBillingentityinternal;
 

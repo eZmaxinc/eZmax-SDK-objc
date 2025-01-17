@@ -1,11 +1,12 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepackageCreateObjectV1Request.h"
 #import "EzsigntemplatepackageCreateObjectV1Response.h"
+#import "EzsigntemplatepackageDeleteObjectV1Response.h"
 #import "EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request.h"
 #import "EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.h"
 #import "EzsigntemplatepackageEditObjectV1Request.h"
+#import "EzsigntemplatepackageEditObjectV1Response.h"
 #import "EzsigntemplatepackageGetAutocompleteV2Response.h"
 #import "EzsigntemplatepackageGetListV1Response.h"
 #import "EzsigntemplatepackageGetObjectV2Response.h"
@@ -53,9 +54,9 @@ extern NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigntemplatepackageDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackageDeleteObjectV1WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigntemplatepackageDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsigntemplatepackagesigners
@@ -84,10 +85,10 @@ extern NSInteger kObjectEzsigntemplatepackageApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigntemplatepackageEditObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackageEditObjectV1WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
     ezsigntemplatepackageEditObjectV1Request: (EzsigntemplatepackageEditObjectV1Request*) ezsigntemplatepackageEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigntemplatepackageEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigntemplatepackages and IDs

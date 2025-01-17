@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignformfielderror": @"a_objEzsignformfielderror" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sErrorMessage": @"sErrorMessage", @"eErrorCode": @"eErrorCode", @"aSErrorMessagedetail": @"a_sErrorMessagedetail", @"aObjEzsignformfielderror": @"a_objEzsignformfielderror" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"aSErrorMessagedetail", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -16,21 +16,32 @@
 
 #import "FieldENotificationpreferenceStatus.h"
 #import "MultilingualNotificationtestName.h"
-#import "NotificationtestResponse.h"
 @protocol FieldENotificationpreferenceStatus;
 @class FieldENotificationpreferenceStatus;
 @protocol MultilingualNotificationtestName;
 @class MultilingualNotificationtestName;
-@protocol NotificationtestResponse;
-@class NotificationtestResponse;
 
 
 
 @protocol CustomNotificationtestgetnotificationtestsResponse
 @end
 
-@interface CustomNotificationtestgetnotificationtestsResponse : NotificationtestResponse
+@interface CustomNotificationtestgetnotificationtestsResponse : Object
 
+/* The unique ID of the Notificationtest 
+ */
+@property(nonatomic) NSNumber* pkiNotificationtestID;
+
+@property(nonatomic) MultilingualNotificationtestName* objNotificationtestName;
+/* The unique ID of the Notificationsubsection 
+ */
+@property(nonatomic) NSNumber* fkiNotificationsubsectionID;
+/* The function name of the Notificationtest 
+ */
+@property(nonatomic) NSString* sNotificationtestFunction;
+/* The name of the Notificationtest in the language of the requester 
+ */
+@property(nonatomic) NSString* sNotificationtestNameX;
 
 @property(nonatomic) FieldENotificationpreferenceStatus* eNotificationpreferenceStatus;
 /* The number of elements returned by the Notificationtest 

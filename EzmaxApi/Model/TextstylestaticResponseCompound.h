@@ -14,16 +14,40 @@
 */
 
 
-#import "TextstylestaticResponse.h"
-@protocol TextstylestaticResponse;
-@class TextstylestaticResponse;
 
 
 
 @protocol TextstylestaticResponseCompound
 @end
 
-@interface TextstylestaticResponseCompound : TextstylestaticResponse
+@interface TextstylestaticResponseCompound : Object
 
+/* The unique ID of the Textstylestatic [optional]
+ */
+@property(nonatomic) NSNumber* pkiTextstylestaticID;
+/* The unique ID of the Font 
+ */
+@property(nonatomic) NSNumber* fkiFontID;
+/* The name of the Font 
+ */
+@property(nonatomic) NSString* sFontName;
+/* Whether the Textstylestatic is Bold or not 
+ */
+@property(nonatomic) NSNumber* bTextstylestaticBold;
+/* Whether the Textstylestatic is Underline or not 
+ */
+@property(nonatomic) NSNumber* bTextstylestaticUnderline;
+/* Whether the Textstylestatic is Italic or not 
+ */
+@property(nonatomic) NSNumber* bTextstylestaticItalic;
+/* Whether the Textstylestatic is Strikethrough or not 
+ */
+@property(nonatomic) NSNumber* bTextstylestaticStrikethrough;
+/* The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 
+ */
+@property(nonatomic) NSNumber* iTextstylestaticFontcolor;
+/* The Size for the Font of the Textstylestatic 
+ */
+@property(nonatomic) NSNumber* iTextstylestaticSize;
 
 @end

@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **discussionmessageDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) discussionmessageDeleteObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(DiscussionmessageDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Discussionmessage
@@ -92,7 +92,7 @@ ObjectDiscussionmessageApi*apiInstance = [[ObjectDiscussionmessageApi alloc] ini
 
 // Delete an existing Discussionmessage
 [apiInstance discussionmessageDeleteObjectV1WithPkiDiscussionmessageID:pkiDiscussionmessageID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(DiscussionmessageDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**DiscussionmessageDeleteObjectV1Response***](DiscussionmessageDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) discussionmessagePatchObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID
     discussionmessagePatchObjectV1Request: (DiscussionmessagePatchObjectV1Request*) discussionmessagePatchObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(DiscussionmessagePatchObjectV1Response* output, NSError* error)) handler;
 ```
 
 Patch an existing Discussionmessage
@@ -152,7 +152,7 @@ ObjectDiscussionmessageApi*apiInstance = [[ObjectDiscussionmessageApi alloc] ini
 // Patch an existing Discussionmessage
 [apiInstance discussionmessagePatchObjectV1WithPkiDiscussionmessageID:pkiDiscussionmessageID
               discussionmessagePatchObjectV1Request:discussionmessagePatchObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(DiscussionmessagePatchObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**DiscussionmessagePatchObjectV1Response***](DiscussionmessagePatchObjectV1Response.md)
 
 ### Authorization
 

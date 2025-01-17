@@ -4,10 +4,10 @@
 #import "BillingentityinternalCreateObjectV1Request.h"
 #import "BillingentityinternalCreateObjectV1Response.h"
 #import "BillingentityinternalEditObjectV1Request.h"
+#import "BillingentityinternalEditObjectV1Response.h"
 #import "BillingentityinternalGetAutocompleteV2Response.h"
 #import "BillingentityinternalGetListV1Response.h"
 #import "BillingentityinternalGetObjectV2Response.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
@@ -130,11 +130,11 @@ NSInteger kObjectBillingentityinternalApiMissingParamErrorCode = 234513;
 ///
 ///  @param billingentityinternalEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns BillingentityinternalEditObjectV1Response*
 ///
 -(NSURLSessionTask*) billingentityinternalEditObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
     billingentityinternalEditObjectV1Request: (BillingentityinternalEditObjectV1Request*) billingentityinternalEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(BillingentityinternalEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiBillingentityinternalID' is set
     if (pkiBillingentityinternalID == nil) {
         NSParameterAssert(pkiBillingentityinternalID);
@@ -198,10 +198,10 @@ NSInteger kObjectBillingentityinternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"BillingentityinternalEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((BillingentityinternalEditObjectV1Response*)data, error);
                                 }
                             }];
 }

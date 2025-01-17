@@ -3,6 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiNotificationtestID** | **NSNumber*** | The unique ID of the Notificationtest | 
+**objNotificationtestName** | [**MultilingualNotificationtestName***](MultilingualNotificationtestName.md) |  | 
+**fkiNotificationsubsectionID** | **NSNumber*** | The unique ID of the Notificationsubsection | 
+**sNotificationtestFunction** | **NSString*** | The function name of the Notificationtest | 
+**sNotificationtestNameX** | **NSString*** | The name of the Notificationtest in the language of the requester | 
 **eNotificationpreferenceStatus** | [**FieldENotificationpreferenceStatus***](FieldENotificationpreferenceStatus.md) |  | 
 **iNotificationtest** | **NSNumber*** | The number of elements returned by the Notificationtest | 
 

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignsignergroupID": @"pkiEzsignsignergroupID", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"objEzsignsignergroupDescription": @"objEzsignsignergroupDescription" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiEzsignsignergroupID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

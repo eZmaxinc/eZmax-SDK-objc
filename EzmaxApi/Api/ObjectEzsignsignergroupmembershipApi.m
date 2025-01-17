@@ -1,10 +1,10 @@
 #import "ObjectEzsignsignergroupmembershipApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsignergroupmembershipCreateObjectV1Request.h"
 #import "EzsignsignergroupmembershipCreateObjectV1Response.h"
+#import "EzsignsignergroupmembershipDeleteObjectV1Response.h"
 #import "EzsignsignergroupmembershipGetObjectV2Response.h"
 
 
@@ -124,10 +124,10 @@ NSInteger kObjectEzsignsignergroupmembershipApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership 
 ///
-///  @returns CommonResponse*
+///  @returns EzsignsignergroupmembershipDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignsignergroupmembershipDeleteObjectV1WithPkiEzsignsignergroupmembershipID: (NSNumber*) pkiEzsignsignergroupmembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignsignergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignergroupmembershipID' is set
     if (pkiEzsignsignergroupmembershipID == nil) {
         NSParameterAssert(pkiEzsignsignergroupmembershipID);
@@ -179,10 +179,10 @@ NSInteger kObjectEzsignsignergroupmembershipApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignsignergroupmembershipDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignsignergroupmembershipDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }

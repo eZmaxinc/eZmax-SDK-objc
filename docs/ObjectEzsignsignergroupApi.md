@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **ezsignsignergroupDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignsignergroupDeleteObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignsignergroupDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignsignergroup
@@ -95,7 +95,7 @@ ObjectEzsignsignergroupApi*apiInstance = [[ObjectEzsignsignergroupApi alloc] ini
 
 // Delete an existing Ezsignsignergroup
 [apiInstance ezsignsignergroupDeleteObjectV1WithPkiEzsignsignergroupID:pkiEzsignsignergroupID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignsignergroupDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignsignergroupDeleteObjectV1Response***](EzsignsignergroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignsignergroupEditObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
     ezsignsignergroupEditObjectV1Request: (EzsignsignergroupEditObjectV1Request*) ezsignsignergroupEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignsignergroupEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignsignergroup
@@ -216,7 +216,7 @@ ObjectEzsignsignergroupApi*apiInstance = [[ObjectEzsignsignergroupApi alloc] ini
 // Edit an existing Ezsignsignergroup
 [apiInstance ezsignsignergroupEditObjectV1WithPkiEzsignsignergroupID:pkiEzsignsignergroupID
               ezsignsignergroupEditObjectV1Request:ezsignsignergroupEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignsignergroupEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignsignergroupEditObjectV1Response***](EzsignsignergroupEditObjectV1Response.md)
 
 ### Authorization
 

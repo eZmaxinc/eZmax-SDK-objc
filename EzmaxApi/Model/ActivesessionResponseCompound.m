@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignuserID": @"fkiEzsignuserID", @"bSystemconfigurationEzsignpaidbyoffice": @"bSystemconfigurationEzsignpaidbyoffice", @"eSystemconfigurationEzsignofficeplan": @"eSystemconfigurationEzsignofficeplan", @"eUserEzsignaccess": @"eUserEzsignaccess", @"eUserEzsignprepaid": @"eUserEzsignprepaid", @"bUserEzsigntrial": @"bUserEzsigntrial", @"dtUserEzsignprepaidexpiration": @"dtUserEzsignprepaidexpiration", @"aPkiPermissionID": @"a_pkiPermissionID", @"objUserReal": @"objUserReal", @"objUserCloned": @"objUserCloned", @"objApikey": @"objApikey", @"aEModuleInternalname": @"a_eModuleInternalname" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eActivesessionUsertype": @"eActivesessionUsertype", @"eActivesessionOrigin": @"eActivesessionOrigin", @"eActivesessionWeekdaystart": @"eActivesessionWeekdaystart", @"fkiLanguageID": @"fkiLanguageID", @"sCompanyNameX": @"sCompanyNameX", @"sDepartmentNameX": @"sDepartmentNameX", @"bActivesessionDebug": @"bActivesessionDebug", @"bActivesessionIssuperadmin": @"bActivesessionIssuperadmin", @"bActivesessionAttachment": @"bActivesessionAttachment", @"bActivesessionCanafe": @"bActivesessionCanafe", @"bActivesessionFinancial": @"bActivesessionFinancial", @"bActivesessionRealestatecompleted": @"bActivesessionRealestatecompleted", @"eActivesessionEzsign": @"eActivesessionEzsign", @"eActivesessionEzsignaccess": @"eActivesessionEzsignaccess", @"eActivesessionEzsignprepaid": @"eActivesessionEzsignprepaid", @"eActivesessionRealestateinprogress": @"eActivesessionRealestateinprogress", @"pksCustomerCode": @"pksCustomerCode", @"fkiSystemconfigurationtypeID": @"fkiSystemconfigurationtypeID", @"fkiSignatureID": @"fkiSignatureID", @"fkiEzsignuserID": @"fkiEzsignuserID", @"bSystemconfigurationEzsignpaidbyoffice": @"bSystemconfigurationEzsignpaidbyoffice", @"eSystemconfigurationEzsignofficeplan": @"eSystemconfigurationEzsignofficeplan", @"eUserEzsignaccess": @"eUserEzsignaccess", @"eUserEzsignprepaid": @"eUserEzsignprepaid", @"bUserEzsigntrial": @"bUserEzsigntrial", @"dtUserEzsignprepaidexpiration": @"dtUserEzsignprepaidexpiration", @"aPkiPermissionID": @"a_pkiPermissionID", @"objUserReal": @"objUserReal", @"objUserCloned": @"objUserCloned", @"objApikey": @"objApikey", @"aEModuleInternalname": @"a_eModuleInternalname" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEzsignuserID", @"bSystemconfigurationEzsignpaidbyoffice", @"eSystemconfigurationEzsignofficeplan", @"eUserEzsignprepaid", @"bUserEzsigntrial", @"dtUserEzsignprepaidexpiration", @"objUserCloned", @"objApikey", ];
+  NSArray *optionalProperties = @[@"bActivesessionAttachment", @"bActivesessionCanafe", @"bActivesessionFinancial", @"bActivesessionRealestatecompleted", @"eActivesessionEzsign", @"eActivesessionEzsignprepaid", @"eActivesessionRealestateinprogress", @"fkiSignatureID", @"fkiEzsignuserID", @"bSystemconfigurationEzsignpaidbyoffice", @"eSystemconfigurationEzsignofficeplan", @"eUserEzsignprepaid", @"bUserEzsigntrial", @"dtUserEzsignprepaidexpiration", @"objUserCloned", @"objApikey", ];
   return [optionalProperties containsObject:propertyName];
 }
 

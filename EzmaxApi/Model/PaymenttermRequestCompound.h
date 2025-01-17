@@ -16,20 +16,33 @@
 
 #import "FieldEPaymenttermType.h"
 #import "MultilingualPaymenttermDescription.h"
-#import "PaymenttermRequest.h"
 @protocol FieldEPaymenttermType;
 @class FieldEPaymenttermType;
 @protocol MultilingualPaymenttermDescription;
 @class MultilingualPaymenttermDescription;
-@protocol PaymenttermRequest;
-@class PaymenttermRequest;
 
 
 
 @protocol PaymenttermRequestCompound
 @end
 
-@interface PaymenttermRequestCompound : PaymenttermRequest
+@interface PaymenttermRequestCompound : Object
 
+/* The unique ID of the Paymentterm [optional]
+ */
+@property(nonatomic) NSNumber* pkiPaymenttermID;
+/* The code of the Paymentterm 
+ */
+@property(nonatomic) NSString* sPaymenttermCode;
+
+@property(nonatomic) FieldEPaymenttermType* ePaymenttermType;
+/* The day of the Paymentterm 
+ */
+@property(nonatomic) NSNumber* iPaymenttermDay;
+
+@property(nonatomic) MultilingualPaymenttermDescription* objPaymenttermDescription;
+/* Whether the Paymentterm is active or not 
+ */
+@property(nonatomic) NSNumber* bPaymenttermIsactive;
 
 @end

@@ -14,32 +14,43 @@
 */
 
 
-#import "AddressRequest.h"
-#import "ContactinformationsRequestV2.h"
-#import "EmailRequest.h"
+#import "AddressRequestCompound.h"
+#import "EmailRequestCompound.h"
 #import "FieldEContactinformationsType.h"
-#import "PhoneRequest.h"
-#import "WebsiteRequest.h"
-@protocol AddressRequest;
-@class AddressRequest;
-@protocol ContactinformationsRequestV2;
-@class ContactinformationsRequestV2;
-@protocol EmailRequest;
-@class EmailRequest;
+#import "PhoneRequestCompound.h"
+#import "WebsiteRequestCompound.h"
+@protocol AddressRequestCompound;
+@class AddressRequestCompound;
+@protocol EmailRequestCompound;
+@class EmailRequestCompound;
 @protocol FieldEContactinformationsType;
 @class FieldEContactinformationsType;
-@protocol PhoneRequest;
-@class PhoneRequest;
-@protocol WebsiteRequest;
-@class WebsiteRequest;
+@protocol PhoneRequestCompound;
+@class PhoneRequestCompound;
+@protocol WebsiteRequestCompound;
+@class WebsiteRequestCompound;
 
 
 
 @protocol ContactinformationsRequestCompoundV2
 @end
 
-@interface ContactinformationsRequestCompoundV2 : ContactinformationsRequestV2
+@interface ContactinformationsRequestCompoundV2 : Object
 
+
+@property(nonatomic) FieldEContactinformationsType* eContactinformationsType;
+/* The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. 
+ */
+@property(nonatomic) NSNumber* iAddressDefault;
+/* The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. 
+ */
+@property(nonatomic) NSNumber* iPhoneDefault;
+/* The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. 
+ */
+@property(nonatomic) NSNumber* iEmailDefault;
+/* The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. 
+ */
+@property(nonatomic) NSNumber* iWebsiteDefault;
 
 @property(nonatomic) NSArray<AddressRequestCompound>* aObjAddress;
 

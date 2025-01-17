@@ -14,10 +14,7 @@
 */
 
 
-#import "EzsignsigningreasonResponse.h"
 #import "MultilingualEzsignsigningreasonDescription.h"
-@protocol EzsignsigningreasonResponse;
-@class EzsignsigningreasonResponse;
 @protocol MultilingualEzsignsigningreasonDescription;
 @class MultilingualEzsignsigningreasonDescription;
 
@@ -26,7 +23,15 @@
 @protocol EzsignsigningreasonResponseCompound
 @end
 
-@interface EzsignsigningreasonResponseCompound : EzsignsigningreasonResponse
+@interface EzsignsigningreasonResponseCompound : Object
 
+/* The unique ID of the Ezsignsigningreason 
+ */
+@property(nonatomic) NSNumber* pkiEzsignsigningreasonID;
+
+@property(nonatomic) MultilingualEzsignsigningreasonDescription* objEzsignsigningreasonDescription;
+/* Whether the ezsignsigningreason is active or not 
+ */
+@property(nonatomic) NSNumber* bEzsignsigningreasonIsactive;
 
 @end

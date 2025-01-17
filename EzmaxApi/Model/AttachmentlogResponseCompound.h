@@ -14,10 +14,7 @@
 */
 
 
-#import "AttachmentlogResponse.h"
 #import "FieldEAttachmentlogType.h"
-@protocol AttachmentlogResponse;
-@class AttachmentlogResponse;
 @protocol FieldEAttachmentlogType;
 @class FieldEAttachmentlogType;
 
@@ -26,7 +23,21 @@
 @protocol AttachmentlogResponseCompound
 @end
 
-@interface AttachmentlogResponseCompound : AttachmentlogResponse
+@interface AttachmentlogResponseCompound : Object
 
+/* The unique ID of the Attachment. 
+ */
+@property(nonatomic) NSNumber* fkiAttachmentID;
+/* The unique ID of the User 
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The created date 
+ */
+@property(nonatomic) NSString* dtAttachmentlogDatetime;
+
+@property(nonatomic) FieldEAttachmentlogType* eAttachmentlogType;
+/* The additionnal detail [optional]
+ */
+@property(nonatomic) NSString* sAttachmentlogDetail;
 
 @end

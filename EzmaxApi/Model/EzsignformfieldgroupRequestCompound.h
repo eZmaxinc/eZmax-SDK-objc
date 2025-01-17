@@ -14,24 +14,21 @@
 */
 
 
-#import "CustomDropdownElementRequest.h"
+#import "CustomDropdownElementRequestCompound.h"
 #import "EnumTextvalidation.h"
 #import "EzsignformfieldRequestCompound.h"
-#import "EzsignformfieldgroupRequest.h"
-#import "EzsignformfieldgroupsignerRequest.h"
+#import "EzsignformfieldgroupsignerRequestCompound.h"
 #import "FieldEEzsignformfieldgroupSignerrequirement.h"
 #import "FieldEEzsignformfieldgroupTooltipposition.h"
 #import "FieldEEzsignformfieldgroupType.h"
-@protocol CustomDropdownElementRequest;
-@class CustomDropdownElementRequest;
+@protocol CustomDropdownElementRequestCompound;
+@class CustomDropdownElementRequestCompound;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
 @protocol EzsignformfieldRequestCompound;
 @class EzsignformfieldRequestCompound;
-@protocol EzsignformfieldgroupRequest;
-@class EzsignformfieldgroupRequest;
-@protocol EzsignformfieldgroupsignerRequest;
-@class EzsignformfieldgroupsignerRequest;
+@protocol EzsignformfieldgroupsignerRequestCompound;
+@class EzsignformfieldgroupsignerRequestCompound;
 @protocol FieldEEzsignformfieldgroupSignerrequirement;
 @class FieldEEzsignformfieldgroupSignerrequirement;
 @protocol FieldEEzsignformfieldgroupTooltipposition;
@@ -44,8 +41,55 @@
 @protocol EzsignformfieldgroupRequestCompound
 @end
 
-@interface EzsignformfieldgroupRequestCompound : EzsignformfieldgroupRequest
+@interface EzsignformfieldgroupRequestCompound : Object
 
+/* The unique ID of the Ezsignformfieldgroup [optional]
+ */
+@property(nonatomic) NSNumber* pkiEzsignformfieldgroupID;
+/* The unique ID of the Ezsigndocument 
+ */
+@property(nonatomic) NSNumber* fkiEzsigndocumentID;
+
+@property(nonatomic) FieldEEzsignformfieldgroupType* eEzsignformfieldgroupType;
+
+@property(nonatomic) FieldEEzsignformfieldgroupSignerrequirement* eEzsignformfieldgroupSignerrequirement;
+/* The Label for the Ezsignformfieldgroup 
+ */
+@property(nonatomic) NSString* sEzsignformfieldgroupLabel;
+/* The step when the Ezsignsigner will be invited to fill the form fields 
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroupStep;
+/* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | [optional]
+ */
+@property(nonatomic) NSString* sEzsignformfieldgroupDefaultvalue;
+/* The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup 
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroupFilledmin;
+/* The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup 
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroupFilledmax;
+/* Whether the Ezsignformfieldgroup is read only or not. 
+ */
+@property(nonatomic) NSNumber* bEzsignformfieldgroupReadonly;
+/* The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignformfieldgroupMaxlength;
+/* Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignformfieldgroupEncrypted;
+/* A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** [optional]
+ */
+@property(nonatomic) NSString* sEzsignformfieldgroupRegexp;
+/* Description of validation rule. Show by signatory. [optional]
+ */
+@property(nonatomic) NSString* sEzsignformfieldgroupTextvalidationcustommessage;
+/* A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup [optional]
+ */
+@property(nonatomic) NSString* tEzsignformfieldgroupTooltip;
+
+@property(nonatomic) FieldEEzsignformfieldgroupTooltipposition* eEzsignformfieldgroupTooltipposition;
+
+@property(nonatomic) EnumTextvalidation* eEzsignformfieldgroupTextvalidation;
 
 @property(nonatomic) NSArray<EzsignformfieldgroupsignerRequestCompound>* aObjEzsignformfieldgroupsigner;
 

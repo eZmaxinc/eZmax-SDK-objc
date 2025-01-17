@@ -15,13 +15,10 @@
 
 
 #import "ActivesessionGetListV1ResponseMPayload.h"
-#import "CommonResponseGetList.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayloadGetList.h"
 @protocol ActivesessionGetListV1ResponseMPayload;
 @class ActivesessionGetListV1ResponseMPayload;
-@protocol CommonResponseGetList;
-@class CommonResponseGetList;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayloadGetList;
@@ -32,8 +29,12 @@
 @protocol ActivesessionGetListV1Response
 @end
 
-@interface ActivesessionGetListV1Response : CommonResponseGetList
+@interface ActivesessionGetListV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayloadGetList* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ActivesessionGetListV1ResponseMPayload* mPayload;
 

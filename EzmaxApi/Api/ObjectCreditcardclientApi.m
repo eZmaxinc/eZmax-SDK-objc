@@ -1,16 +1,18 @@
 #import "ObjectCreditcardclientApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorCreditcardValidation.h"
 #import "CreditcardclientCreateObjectV1Request.h"
 #import "CreditcardclientCreateObjectV1Response.h"
+#import "CreditcardclientDeleteObjectV1Response.h"
 #import "CreditcardclientEditObjectV1Request.h"
+#import "CreditcardclientEditObjectV1Response.h"
 #import "CreditcardclientGetAutocompleteV2Response.h"
 #import "CreditcardclientGetListV1Response.h"
 #import "CreditcardclientGetObjectV2Response.h"
 #import "CreditcardclientPatchObjectV1Request.h"
+#import "CreditcardclientPatchObjectV1Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -130,10 +132,10 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiCreditcardclientID The unique ID of the Creditcardclient 
 ///
-///  @returns CommonResponse*
+///  @returns CreditcardclientDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) creditcardclientDeleteObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(CreditcardclientDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == nil) {
         NSParameterAssert(pkiCreditcardclientID);
@@ -185,10 +187,10 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"CreditcardclientDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((CreditcardclientDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -200,11 +202,11 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
 ///
 ///  @param creditcardclientEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns CreditcardclientEditObjectV1Response*
 ///
 -(NSURLSessionTask*) creditcardclientEditObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientEditObjectV1Request: (CreditcardclientEditObjectV1Request*) creditcardclientEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(CreditcardclientEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == nil) {
         NSParameterAssert(pkiCreditcardclientID);
@@ -268,10 +270,10 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"CreditcardclientEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((CreditcardclientEditObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -518,11 +520,11 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
 ///
 ///  @param creditcardclientPatchObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns CreditcardclientPatchObjectV1Response*
 ///
 -(NSURLSessionTask*) creditcardclientPatchObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientPatchObjectV1Request: (CreditcardclientPatchObjectV1Request*) creditcardclientPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(CreditcardclientPatchObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiCreditcardclientID' is set
     if (pkiCreditcardclientID == nil) {
         NSParameterAssert(pkiCreditcardclientID);
@@ -586,10 +588,10 @@ NSInteger kObjectCreditcardclientApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"CreditcardclientPatchObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((CreditcardclientPatchObjectV1Response*)data, error);
                                 }
                             }];
 }

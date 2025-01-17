@@ -14,11 +14,8 @@
 */
 
 
-#import "BillingentityinternalRequest.h"
 #import "BillingentityinternalproductRequestCompound.h"
 #import "MultilingualBillingentityinternalDescription.h"
-@protocol BillingentityinternalRequest;
-@class BillingentityinternalRequest;
 @protocol BillingentityinternalproductRequestCompound;
 @class BillingentityinternalproductRequestCompound;
 @protocol MultilingualBillingentityinternalDescription;
@@ -29,8 +26,13 @@
 @protocol BillingentityinternalRequestCompound
 @end
 
-@interface BillingentityinternalRequestCompound : BillingentityinternalRequest
+@interface BillingentityinternalRequestCompound : Object
 
+/* The unique ID of the Billingentityinternal. [optional]
+ */
+@property(nonatomic) NSNumber* pkiBillingentityinternalID;
+
+@property(nonatomic) MultilingualBillingentityinternalDescription* objBillingentityinternalDescription;
 
 @property(nonatomic) NSArray<BillingentityinternalproductRequestCompound>* aObjBillingentityinternalproduct;
 

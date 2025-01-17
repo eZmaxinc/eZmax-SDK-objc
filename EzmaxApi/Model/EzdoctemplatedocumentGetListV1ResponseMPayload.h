@@ -14,10 +14,7 @@
 */
 
 
-#import "CommonGetListV1ResponseMPayload.h"
 #import "EzdoctemplatedocumentListElement.h"
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 @protocol EzdoctemplatedocumentListElement;
 @class EzdoctemplatedocumentListElement;
 
@@ -26,8 +23,14 @@
 @protocol EzdoctemplatedocumentGetListV1ResponseMPayload
 @end
 
-@interface EzdoctemplatedocumentGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface EzdoctemplatedocumentGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<EzdoctemplatedocumentListElement>* aObjEzdoctemplatedocument;
 

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignelementdependency": @"a_objEzsignelementdependency" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsignformfieldID": @"pkiEzsignformfieldID", @"iEzsignpagePagenumber": @"iEzsignpagePagenumber", @"sEzsignformfieldLabel": @"sEzsignformfieldLabel", @"sEzsignformfieldValue": @"sEzsignformfieldValue", @"iEzsignformfieldX": @"iEzsignformfieldX", @"iEzsignformfieldY": @"iEzsignformfieldY", @"iEzsignformfieldWidth": @"iEzsignformfieldWidth", @"iEzsignformfieldHeight": @"iEzsignformfieldHeight", @"bEzsignformfieldAutocomplete": @"bEzsignformfieldAutocomplete", @"bEzsignformfieldSelected": @"bEzsignformfieldSelected", @"sEzsignformfieldEnteredvalue": @"sEzsignformfieldEnteredvalue", @"eEzsignformfieldDependencyrequirement": @"eEzsignformfieldDependencyrequirement", @"eEzsignformfieldHorizontalalignment": @"eEzsignformfieldHorizontalalignment", @"objTextstylestatic": @"objTextstylestatic", @"aObjEzsignelementdependency": @"a_objEzsignelementdependency" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"aObjEzsignelementdependency"];
+  NSArray *optionalProperties = @[@"sEzsignformfieldValue", @"bEzsignformfieldAutocomplete", @"bEzsignformfieldSelected", @"sEzsignformfieldEnteredvalue", @"eEzsignformfieldDependencyrequirement", @"eEzsignformfieldHorizontalalignment", @"objTextstylestatic", @"aObjEzsignelementdependency"];
   return [optionalProperties containsObject:propertyName];
 }
 

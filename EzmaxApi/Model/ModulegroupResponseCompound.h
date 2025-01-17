@@ -15,19 +15,22 @@
 
 
 #import "ModuleResponseCompound.h"
-#import "ModulegroupResponse.h"
 @protocol ModuleResponseCompound;
 @class ModuleResponseCompound;
-@protocol ModulegroupResponse;
-@class ModulegroupResponse;
 
 
 
 @protocol ModulegroupResponseCompound
 @end
 
-@interface ModulegroupResponseCompound : ModulegroupResponse
+@interface ModulegroupResponseCompound : Object
 
+/* The unique ID of the Modulegroup 
+ */
+@property(nonatomic) NSNumber* pkiModulegroupID;
+/* The name of the Modulegroup in the language of the requester 
+ */
+@property(nonatomic) NSString* sModulegroupNameX;
 
 @property(nonatomic) NSArray<ModuleResponseCompound>* aObjModule;
 

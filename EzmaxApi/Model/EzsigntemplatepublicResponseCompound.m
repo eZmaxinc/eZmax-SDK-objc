@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignfolderezsigntemplatepublic": @"a_objEzsignfolderezsigntemplatepublic" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatepublicID": @"pkiEzsigntemplatepublicID", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"fkiUserlogintypeID": @"fkiUserlogintypeID", @"sUserlogintypeDescriptionX": @"sUserlogintypeDescriptionX", @"fkiEzsigntemplateID": @"fkiEzsigntemplateID", @"fkiEzsigntemplatepackageID": @"fkiEzsigntemplatepackageID", @"sEzsigntemplatepublicDescription": @"sEzsigntemplatepublicDescription", @"sEzsigntemplatepublicReferenceid": @"sEzsigntemplatepublicReferenceid", @"bEzsigntemplatepublicIsactive": @"bEzsigntemplatepublicIsactive", @"tEzsigntemplatepublicNote": @"tEzsigntemplatepublicNote", @"eEzsigntemplatepublicLimittype": @"eEzsigntemplatepublicLimittype", @"iEzsigntemplatepublicLimit": @"iEzsigntemplatepublicLimit", @"iEzsigntemplatepublicLimitexceeded": @"iEzsigntemplatepublicLimitexceeded", @"dtEzsigntemplatepublicLimitexceededsince": @"dtEzsigntemplatepublicLimitexceededsince", @"sEzsigntemplatepublicUrl": @"sEzsigntemplatepublicUrl", @"sEzsigntemplatepublicEzsigntemplatedescription": @"sEzsigntemplatepublicEzsigntemplatedescription", @"objAudit": @"objAudit", @"aObjEzsignfolderezsigntemplatepublic": @"a_objEzsignfolderezsigntemplatepublic" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"fkiEzsigntemplateID", @"fkiEzsigntemplatepackageID", @"objAudit", ];
   return [optionalProperties containsObject:propertyName];
 }
 

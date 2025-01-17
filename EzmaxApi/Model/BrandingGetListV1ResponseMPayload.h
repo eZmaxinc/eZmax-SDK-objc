@@ -15,19 +15,22 @@
 
 
 #import "BrandingListElement.h"
-#import "CommonGetListV1ResponseMPayload.h"
 @protocol BrandingListElement;
 @class BrandingListElement;
-@protocol CommonGetListV1ResponseMPayload;
-@class CommonGetListV1ResponseMPayload;
 
 
 
 @protocol BrandingGetListV1ResponseMPayload
 @end
 
-@interface BrandingGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload
+@interface BrandingGetListV1ResponseMPayload : Object
 
+/* The number of rows returned 
+ */
+@property(nonatomic) NSNumber* iRowReturned;
+/* The number of rows matching your filters (if any) or the total number of rows 
+ */
+@property(nonatomic) NSNumber* iRowFiltered;
 
 @property(nonatomic) NSArray<BrandingListElement>* aObjBranding;
 

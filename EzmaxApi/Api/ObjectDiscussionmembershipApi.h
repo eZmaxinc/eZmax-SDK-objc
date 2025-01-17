@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DiscussionmembershipCreateObjectV1Request.h"
 #import "DiscussionmembershipCreateObjectV1Response.h"
+#import "DiscussionmembershipDeleteObjectV1Response.h"
 #import "Api.h"
 
 /**
@@ -46,9 +46,9 @@ extern NSInteger kObjectDiscussionmembershipApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionmembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) discussionmembershipDeleteObjectV1WithPkiDiscussionmembershipID: (NSNumber*) pkiDiscussionmembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionmembershipDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 

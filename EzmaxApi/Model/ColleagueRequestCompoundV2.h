@@ -14,11 +14,8 @@
 */
 
 
-#import "ColleagueRequestV2.h"
 #import "FieldEColleagueEzsign.h"
 #import "FieldEColleagueRealestateinprogess.h"
-@protocol ColleagueRequestV2;
-@class ColleagueRequestV2;
 @protocol FieldEColleagueEzsign;
 @class FieldEColleagueEzsign;
 @protocol FieldEColleagueRealestateinprogess;
@@ -29,7 +26,47 @@
 @protocol ColleagueRequestCompoundV2
 @end
 
-@interface ColleagueRequestCompoundV2 : ColleagueRequestV2
+@interface ColleagueRequestCompoundV2 : Object
 
+/* The unique ID of the Colleague [optional]
+ */
+@property(nonatomic) NSNumber* pkiColleagueID;
+/* The unique ID of the User 
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the User 
+ */
+@property(nonatomic) NSNumber* fkiUserIDColleague;
+/* Whether the email can be used by the cloning user in Ezsign 
+ */
+@property(nonatomic) NSNumber* bColleagueEzsignemail;
+/* Whether the cloning user has access to the financial 
+ */
+@property(nonatomic) NSNumber* bColleagueFinancial;
+/* Whether the cloning user has access to the cloned user email to send communications 
+ */
+@property(nonatomic) NSNumber* bColleagueUsecloneemail;
+/* Whether the cloning user has access to the attachment 
+ */
+@property(nonatomic) NSNumber* bColleagueAttachment;
+/* Whether the cloning user has access to canafe 
+ */
+@property(nonatomic) NSNumber* bColleagueCanafe;
+/* Whether the cloning user copies the permission of the cloned user 
+ */
+@property(nonatomic) NSNumber* bColleaguePermission;
+/* Whether if the cloning user has access to the completed folders in real estate 
+ */
+@property(nonatomic) NSNumber* bColleagueRealestatecompleted;
+/* The from of the Colleague [optional]
+ */
+@property(nonatomic) NSString* dtColleagueFrom;
+/* The to of the Colleague [optional]
+ */
+@property(nonatomic) NSString* dtColleagueTo;
+
+@property(nonatomic) FieldEColleagueEzsign* eColleagueEzsign;
+
+@property(nonatomic) FieldEColleagueRealestateinprogess* eColleagueRealestateinprogress;
 
 @end

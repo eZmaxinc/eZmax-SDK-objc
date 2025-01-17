@@ -15,13 +15,10 @@
 
 
 #import "ActivesessionGenerateFederationTokenV1ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol ActivesessionGenerateFederationTokenV1ResponseMPayload;
 @class ActivesessionGenerateFederationTokenV1ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol ActivesessionGenerateFederationTokenV1Response
 @end
 
-@interface ActivesessionGenerateFederationTokenV1Response : CommonResponse
+@interface ActivesessionGenerateFederationTokenV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) ActivesessionGenerateFederationTokenV1ResponseMPayload* mPayload;
 

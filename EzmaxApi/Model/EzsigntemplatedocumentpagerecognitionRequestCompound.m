@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplatedocumentpagerecognitionID": @"pkiEzsigntemplatedocumentpagerecognitionID", @"fkiEzsigntemplatedocumentpageID": @"fkiEzsigntemplatedocumentpageID", @"eEzsigntemplatedocumentpagerecognitionOperator": @"eEzsigntemplatedocumentpagerecognitionOperator", @"eEzsigntemplatedocumentpagerecognitionSection": @"eEzsigntemplatedocumentpagerecognitionSection", @"iEzsigntemplatedocumentpagerecognitionSimilarpercentage": @"iEzsigntemplatedocumentpagerecognitionSimilarpercentage", @"iEzsigntemplatedocumentpagerecognitionX": @"iEzsigntemplatedocumentpagerecognitionX", @"iEzsigntemplatedocumentpagerecognitionY": @"iEzsigntemplatedocumentpagerecognitionY", @"iEzsigntemplatedocumentpagerecognitionWidth": @"iEzsigntemplatedocumentpagerecognitionWidth", @"iEzsigntemplatedocumentpagerecognitionHeight": @"iEzsigntemplatedocumentpagerecognitionHeight", @"tEzsigntemplatedocumentpagerecognitionText": @"tEzsigntemplatedocumentpagerecognitionText" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"pkiEzsigntemplatedocumentpagerecognitionID", @"iEzsigntemplatedocumentpagerecognitionSimilarpercentage", @"iEzsigntemplatedocumentpagerecognitionX", @"iEzsigntemplatedocumentpagerecognitionY", @"iEzsigntemplatedocumentpagerecognitionWidth", @"iEzsigntemplatedocumentpagerecognitionHeight", ];
   return [optionalProperties containsObject:propertyName];
 }
 

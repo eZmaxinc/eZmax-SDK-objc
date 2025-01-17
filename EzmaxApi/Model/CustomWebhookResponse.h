@@ -18,7 +18,6 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
-#import "WebhookResponseCompound.h"
 #import "WebhookheaderResponseCompound.h"
 @protocol CommonAudit;
 @class CommonAudit;
@@ -28,8 +27,6 @@
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
-@protocol WebhookResponseCompound;
-@class WebhookResponseCompound;
 @protocol WebhookheaderResponseCompound;
 @class WebhookheaderResponseCompound;
 
@@ -38,8 +35,60 @@
 @protocol CustomWebhookResponse
 @end
 
-@interface CustomWebhookResponse : WebhookResponseCompound
+@interface CustomWebhookResponse : Object
 
+/* The unique ID of the Webhook 
+ */
+@property(nonatomic) NSNumber* pkiWebhookID;
+/* The unique ID of the Authenticationexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiAuthenticationexternalID;
+/* The description of the Webhook 
+ */
+@property(nonatomic) NSString* sWebhookDescription;
+/* The unique ID of the Ezsignfoldertype. [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The name of the Ezsignfoldertype in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sEzsignfoldertypeNameX;
+
+@property(nonatomic) FieldEWebhookModule* eWebhookModule;
+
+@property(nonatomic) FieldEWebhookEzsignevent* eWebhookEzsignevent;
+
+@property(nonatomic) FieldEWebhookManagementevent* eWebhookManagementevent;
+/* The URL of the Webhook callback 
+ */
+@property(nonatomic) NSString* sWebhookUrl;
+/* The email that will receive the Webhook in case all attempts fail 
+ */
+@property(nonatomic) NSString* sWebhookEmailfailed;
+/* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
+ */
+@property(nonatomic) NSString* sWebhookApikey;
+/* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. [optional]
+ */
+@property(nonatomic) NSString* sWebhookSecret;
+/* Whether the Webhook is active or not 
+ */
+@property(nonatomic) NSNumber* bWebhookIsactive;
+/* Whether the requests will be signed or not 
+ */
+@property(nonatomic) NSNumber* bWebhookIssigned;
+/* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use 
+ */
+@property(nonatomic) NSNumber* bWebhookSkipsslvalidation;
+/* The description of the Authenticationexternal [optional]
+ */
+@property(nonatomic) NSString* sAuthenticationexternalDescription;
+
+@property(nonatomic) CommonAudit* objAudit;
+/* The concatenated string to describe the Webhook event [optional]
+ */
+@property(nonatomic) NSString* sWebhookEvent;
+
+@property(nonatomic) NSArray<WebhookheaderResponseCompound>* aObjWebhookheader;
 /* The customer code assigned to your account 
  */
 @property(nonatomic) NSString* pksCustomerCode;

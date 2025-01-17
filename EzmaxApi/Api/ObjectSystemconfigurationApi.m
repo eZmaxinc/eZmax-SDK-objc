@@ -1,9 +1,9 @@
 #import "ObjectSystemconfigurationApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "SystemconfigurationEditObjectV1Request.h"
+#import "SystemconfigurationEditObjectV1Response.h"
 #import "SystemconfigurationGetObjectV2Response.h"
 
 
@@ -59,11 +59,11 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
 ///
 ///  @param systemconfigurationEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns SystemconfigurationEditObjectV1Response*
 ///
 -(NSURLSessionTask*) systemconfigurationEditObjectV1WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
     systemconfigurationEditObjectV1Request: (SystemconfigurationEditObjectV1Request*) systemconfigurationEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(SystemconfigurationEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSystemconfigurationID' is set
     if (pkiSystemconfigurationID == nil) {
         NSParameterAssert(pkiSystemconfigurationID);
@@ -127,10 +127,10 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"SystemconfigurationEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((SystemconfigurationEditObjectV1Response*)data, error);
                                 }
                             }];
 }

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{  }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiWebhookheaderID": @"pkiWebhookheaderID", @"fkiWebhookID": @"fkiWebhookID", @"sWebhookheaderName": @"sWebhookheaderName", @"sWebhookheaderValue": @"sWebhookheaderValue" }];
 }
 
 /**

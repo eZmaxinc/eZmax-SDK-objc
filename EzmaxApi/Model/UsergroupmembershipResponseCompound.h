@@ -14,16 +14,43 @@
 */
 
 
-#import "UsergroupmembershipResponse.h"
-@protocol UsergroupmembershipResponse;
-@class UsergroupmembershipResponse;
 
 
 
 @protocol UsergroupmembershipResponseCompound
 @end
 
-@interface UsergroupmembershipResponseCompound : UsergroupmembershipResponse
+@interface UsergroupmembershipResponseCompound : Object
 
+/* The unique ID of the Usergroupmembership 
+ */
+@property(nonatomic) NSNumber* pkiUsergroupmembershipID;
+/* The unique ID of the Usergroup 
+ */
+@property(nonatomic) NSNumber* fkiUsergroupID;
+/* The unique ID of the User [optional]
+ */
+@property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Usergroupexternal [optional]
+ */
+@property(nonatomic) NSNumber* fkiUsergroupexternalID;
+/* The first name of the user [optional]
+ */
+@property(nonatomic) NSString* sUserFirstname;
+/* The last name of the user [optional]
+ */
+@property(nonatomic) NSString* sUserLastname;
+/* The login name of the User. [optional]
+ */
+@property(nonatomic) NSString* sUserLoginname;
+/* The email address. [optional]
+ */
+@property(nonatomic) NSString* sEmailAddress;
+/* The Name of the Usergroup in the language of the requester 
+ */
+@property(nonatomic) NSString* sUsergroupNameX;
+/* The name of the Usergroupexternal [optional]
+ */
+@property(nonatomic) NSString* sUsergroupexternalName;
 
 @end

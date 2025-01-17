@@ -15,13 +15,10 @@
 
 
 #import "AuthenticationexternalGetAutocompleteV2ResponseMPayload.h"
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 @protocol AuthenticationexternalGetAutocompleteV2ResponseMPayload;
 @class AuthenticationexternalGetAutocompleteV2ResponseMPayload;
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol AuthenticationexternalGetAutocompleteV2Response
 @end
 
-@interface AuthenticationexternalGetAutocompleteV2Response : CommonResponse
+@interface AuthenticationexternalGetAutocompleteV2Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) AuthenticationexternalGetAutocompleteV2ResponseMPayload* mPayload;
 

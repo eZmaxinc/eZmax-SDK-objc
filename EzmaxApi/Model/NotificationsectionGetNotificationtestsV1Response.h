@@ -14,12 +14,9 @@
 */
 
 
-#import "CommonResponse.h"
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
 #import "NotificationsectionGetNotificationtestsV1ResponseMPayload.h"
-@protocol CommonResponse;
-@class CommonResponse;
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
@@ -32,8 +29,12 @@
 @protocol NotificationsectionGetNotificationtestsV1Response
 @end
 
-@interface NotificationsectionGetNotificationtestsV1Response : CommonResponse
+@interface NotificationsectionGetNotificationtestsV1Response : Object
 
+
+@property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
+
+@property(nonatomic) CommonResponseObjDebug* objDebug;
 
 @property(nonatomic) NotificationsectionGetNotificationtestsV1ResponseMPayload* mPayload;
 
