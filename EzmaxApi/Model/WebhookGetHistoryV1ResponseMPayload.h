@@ -14,9 +14,6 @@
 */
 
 
-#import "CustomWebhooklogResponse.h"
-@protocol CustomWebhooklogResponse;
-@class CustomWebhooklogResponse;
 
 
 

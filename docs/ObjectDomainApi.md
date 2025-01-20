@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **domainDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) domainDeleteObjectV1WithPkiDomainID: (NSNumber*) pkiDomainID
-        completionHandler: (void (^)(DomainDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Domain
@@ -93,7 +93,7 @@ ObjectDomainApi*apiInstance = [[ObjectDomainApi alloc] init];
 
 // Delete an existing Domain
 [apiInstance domainDeleteObjectV1WithPkiDomainID:pkiDomainID
-          completionHandler: ^(DomainDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainDeleteObjectV1Response***](DomainDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

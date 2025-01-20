@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 **aObjEzmaxinvoicingsummaryinternal** | [**NSArray&lt;EzmaxinvoicingsummaryinternalResponseCompound&gt;***](EzmaxinvoicingsummaryinternalResponseCompound.md) |  | 
 **aObjEzmaxinvoicingagent** | [**NSArray&lt;EzmaxinvoicingagentResponseCompound&gt;***](EzmaxinvoicingagentResponseCompound.md) |  | 
 **aObjEzmaxinvoicinguser** | [**NSArray&lt;EzmaxinvoicinguserResponseCompound&gt;***](EzmaxinvoicinguserResponseCompound.md) |  | 
-**aObjEzmaxinvoicingezsignfolder** | [**NSArray&lt;CustomEzmaxinvoicingEzsignfolderResponse&gt;***](CustomEzmaxinvoicingEzsignfolderResponse.md) |  | 
-**aObjEzmaxinvoicingezsigndocument** | [**NSArray&lt;CustomEzmaxinvoicingEzsigndocumentResponse&gt;***](CustomEzmaxinvoicingEzsigndocumentResponse.md) |  | 
+**aObjEzmaxinvoicingezsignfolder** | **NSArray&lt;CustomEzmaxinvoicingEzsignfolderResponse&gt;*** |  | 
+**aObjEzmaxinvoicingezsigndocument** | **NSArray&lt;CustomEzmaxinvoicingEzsigndocumentResponse&gt;*** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

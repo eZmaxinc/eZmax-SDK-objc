@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 # **ezsignbulksendDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignbulksendDeleteObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-        completionHandler: (void (^)(EzsignbulksendDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignbulksend
@@ -159,7 +159,7 @@ ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
 
 // Delete an existing Ezsignbulksend
 [apiInstance ezsignbulksendDeleteObjectV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
-          completionHandler: ^(EzsignbulksendDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendDeleteObjectV1Response***](EzsignbulksendDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignbulksendEditObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendEditObjectV1Request: (EzsignbulksendEditObjectV1Request*) ezsignbulksendEditObjectV1Request
-        completionHandler: (void (^)(EzsignbulksendEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignbulksend
@@ -219,7 +219,7 @@ ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
 // Edit an existing Ezsignbulksend
 [apiInstance ezsignbulksendEditObjectV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
               ezsignbulksendEditObjectV1Request:ezsignbulksendEditObjectV1Request
-          completionHandler: ^(EzsignbulksendEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendEditObjectV1Response***](EzsignbulksendEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignbulksendReorderV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendReorderV1Request: (EzsignbulksendReorderV1Request*) ezsignbulksendReorderV1Request
-        completionHandler: (void (^)(EzsignbulksendReorderV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
@@ -640,7 +640,7 @@ ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
 // Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 [apiInstance ezsignbulksendReorderV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
               ezsignbulksendReorderV1Request:ezsignbulksendReorderV1Request
-          completionHandler: ^(EzsignbulksendReorderV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendReorderV1Response***](EzsignbulksendReorderV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

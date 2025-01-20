@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
     brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
-        completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Branding
@@ -97,7 +97,7 @@ ObjectBrandingApi*apiInstance = [[ObjectBrandingApi alloc] init];
 // Edit an existing Branding
 [apiInstance brandingEditObjectV2WithPkiBrandingID:pkiBrandingID
               brandingEditObjectV2Request:brandingEditObjectV2Request
-          completionHandler: ^(BrandingEditObjectV2Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BrandingEditObjectV2Response***](BrandingEditObjectV2Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

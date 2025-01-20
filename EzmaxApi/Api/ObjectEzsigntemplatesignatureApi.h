@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatesignatureCreateObjectV2Request.h"
 #import "EzsigntemplatesignatureCreateObjectV2Response.h"
-#import "EzsigntemplatesignatureDeleteObjectV1Response.h"
 #import "EzsigntemplatesignatureEditObjectV2Request.h"
-#import "EzsigntemplatesignatureEditObjectV2Response.h"
 #import "EzsigntemplatesignatureGetObjectV3Response.h"
 #import "Api.h"
 
@@ -49,9 +48,9 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatesignatureDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplatesignatureDeleteObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    completionHandler: (void (^)(EzsigntemplatesignatureDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsigntemplatesignature
@@ -64,10 +63,10 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatesignatureEditObjectV2Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
     ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
-    completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatesignature

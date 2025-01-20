@@ -14,9 +14,6 @@
 */
 
 
-#import "CustomEzsignformfieldgroupRequest.h"
-@protocol CustomEzsignformfieldgroupRequest;
-@class CustomEzsignformfieldgroupRequest;
 
 
 

@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "PermissionCreateObjectV1Request.h"
 #import "PermissionCreateObjectV1Response.h"
-#import "PermissionDeleteObjectV1Response.h"
 #import "PermissionEditObjectV1Request.h"
-#import "PermissionEditObjectV1Response.h"
 #import "PermissionGetObjectV2Response.h"
 #import "Api.h"
 
@@ -50,9 +49,9 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return PermissionDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) permissionDeleteObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
-    completionHandler: (void (^)(PermissionDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Permission
@@ -65,10 +64,10 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return PermissionEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) permissionEditObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
     permissionEditObjectV1Request: (PermissionEditObjectV1Request*) permissionEditObjectV1Request
-    completionHandler: (void (^)(PermissionEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Permission

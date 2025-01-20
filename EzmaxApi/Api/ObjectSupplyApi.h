@@ -1,11 +1,10 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "SupplyCreateObjectV1Request.h"
 #import "SupplyCreateObjectV1Response.h"
-#import "SupplyDeleteObjectV1Response.h"
 #import "SupplyEditObjectV1Request.h"
-#import "SupplyEditObjectV1Response.h"
 #import "SupplyGetAutocompleteV2Response.h"
 #import "SupplyGetListV1Response.h"
 #import "SupplyGetObjectV2Response.h"
@@ -52,9 +51,9 @@ extern NSInteger kObjectSupplyApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return SupplyDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) supplyDeleteObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
-    completionHandler: (void (^)(SupplyDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Supply
@@ -67,10 +66,10 @@ extern NSInteger kObjectSupplyApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return SupplyEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) supplyEditObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
     supplyEditObjectV1Request: (SupplyEditObjectV1Request*) supplyEditObjectV1Request
-    completionHandler: (void (^)(SupplyEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Supplys and IDs

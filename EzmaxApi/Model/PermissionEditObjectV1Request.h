@@ -14,9 +14,9 @@
 */
 
 
-#import "PermissionRequestCompound.h"
-@protocol PermissionRequestCompound;
-@class PermissionRequestCompound;
+#import "PermissionRequest.h"
+@protocol PermissionRequest;
+@class PermissionRequest;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface PermissionEditObjectV1Request : Object
 
-
-@property(nonatomic) PermissionRequestCompound* objPermission;
+/* A Permission Object and children to create a complete structure 
+ */
+@property(nonatomic) PermissionRequest* objPermission;
 
 @end

@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **usergroupmembershipDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) usergroupmembershipDeleteObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
-        completionHandler: (void (^)(UsergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Usergroupmembership
@@ -93,7 +93,7 @@ ObjectUsergroupmembershipApi*apiInstance = [[ObjectUsergroupmembershipApi alloc]
 
 // Delete an existing Usergroupmembership
 [apiInstance usergroupmembershipDeleteObjectV1WithPkiUsergroupmembershipID:pkiUsergroupmembershipID
-          completionHandler: ^(UsergroupmembershipDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupmembershipDeleteObjectV1Response***](UsergroupmembershipDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) usergroupmembershipEditObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
     usergroupmembershipEditObjectV1Request: (UsergroupmembershipEditObjectV1Request*) usergroupmembershipEditObjectV1Request
-        completionHandler: (void (^)(UsergroupmembershipEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Usergroupmembership
@@ -153,7 +153,7 @@ ObjectUsergroupmembershipApi*apiInstance = [[ObjectUsergroupmembershipApi alloc]
 // Edit an existing Usergroupmembership
 [apiInstance usergroupmembershipEditObjectV1WithPkiUsergroupmembershipID:pkiUsergroupmembershipID
               usergroupmembershipEditObjectV1Request:usergroupmembershipEditObjectV1Request
-          completionHandler: ^(UsergroupmembershipEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupmembershipEditObjectV1Response***](UsergroupmembershipEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

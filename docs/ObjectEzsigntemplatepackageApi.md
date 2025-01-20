@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplatepackageDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepackageDeleteObjectV1WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
-        completionHandler: (void (^)(EzsigntemplatepackageDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplatepackage
@@ -96,7 +96,7 @@ ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi al
 
 // Delete an existing Ezsigntemplatepackage
 [apiInstance ezsigntemplatepackageDeleteObjectV1WithPkiEzsigntemplatepackageID:pkiEzsigntemplatepackageID
-          completionHandler: ^(EzsigntemplatepackageDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackageDeleteObjectV1Response***](EzsigntemplatepackageDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepackageEditObjectV1WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
     ezsigntemplatepackageEditObjectV1Request: (EzsigntemplatepackageEditObjectV1Request*) ezsigntemplatepackageEditObjectV1Request
-        completionHandler: (void (^)(EzsigntemplatepackageEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatepackage
@@ -217,7 +217,7 @@ ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi al
 // Edit an existing Ezsigntemplatepackage
 [apiInstance ezsigntemplatepackageEditObjectV1WithPkiEzsigntemplatepackageID:pkiEzsigntemplatepackageID
               ezsigntemplatepackageEditObjectV1Request:ezsigntemplatepackageEditObjectV1Request
-          completionHandler: ^(EzsigntemplatepackageEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackageEditObjectV1Response***](EzsigntemplatepackageEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

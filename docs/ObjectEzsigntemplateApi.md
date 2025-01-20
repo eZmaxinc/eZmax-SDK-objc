@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplateDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplateDeleteObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
-        completionHandler: (void (^)(EzsigntemplateDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplate
@@ -157,7 +157,7 @@ ObjectEzsigntemplateApi*apiInstance = [[ObjectEzsigntemplateApi alloc] init];
 
 // Delete an existing Ezsigntemplate
 [apiInstance ezsigntemplateDeleteObjectV1WithPkiEzsigntemplateID:pkiEzsigntemplateID
-          completionHandler: ^(EzsigntemplateDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplateDeleteObjectV1Response***](EzsigntemplateDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplateEditObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
     ezsigntemplateEditObjectV3Request: (EzsigntemplateEditObjectV3Request*) ezsigntemplateEditObjectV3Request
-        completionHandler: (void (^)(EzsigntemplateEditObjectV3Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplate
@@ -217,7 +217,7 @@ ObjectEzsigntemplateApi*apiInstance = [[ObjectEzsigntemplateApi alloc] init];
 // Edit an existing Ezsigntemplate
 [apiInstance ezsigntemplateEditObjectV3WithPkiEzsigntemplateID:pkiEzsigntemplateID
               ezsigntemplateEditObjectV3Request:ezsigntemplateEditObjectV3Request
-          completionHandler: ^(EzsigntemplateEditObjectV3Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplateEditObjectV3Response***](EzsigntemplateEditObjectV3Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

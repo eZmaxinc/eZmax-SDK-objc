@@ -14,9 +14,9 @@
 */
 
 
-#import "PermissionResponseCompound.h"
-@protocol PermissionResponseCompound;
-@class PermissionResponseCompound;
+#import "PermissionResponse.h"
+@protocol PermissionResponse;
+@class PermissionResponse;
 
 
 

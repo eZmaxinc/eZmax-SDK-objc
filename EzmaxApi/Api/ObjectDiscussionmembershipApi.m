@@ -1,10 +1,10 @@
 #import "ObjectDiscussionmembershipApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DiscussionmembershipCreateObjectV1Request.h"
 #import "DiscussionmembershipCreateObjectV1Response.h"
-#import "DiscussionmembershipDeleteObjectV1Response.h"
 
 
 @interface ObjectDiscussionmembershipApi ()
@@ -123,10 +123,10 @@ NSInteger kObjectDiscussionmembershipApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiDiscussionmembershipID The unique ID of the Discussionmembership 
 ///
-///  @returns DiscussionmembershipDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) discussionmembershipDeleteObjectV1WithPkiDiscussionmembershipID: (NSNumber*) pkiDiscussionmembershipID
-    completionHandler: (void (^)(DiscussionmembershipDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiDiscussionmembershipID' is set
     if (pkiDiscussionmembershipID == nil) {
         NSParameterAssert(pkiDiscussionmembershipID);
@@ -178,10 +178,10 @@ NSInteger kObjectDiscussionmembershipApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"DiscussionmembershipDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((DiscussionmembershipDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

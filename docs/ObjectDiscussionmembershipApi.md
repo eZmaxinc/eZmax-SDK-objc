@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 # **discussionmembershipDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) discussionmembershipDeleteObjectV1WithPkiDiscussionmembershipID: (NSNumber*) pkiDiscussionmembershipID
-        completionHandler: (void (^)(DiscussionmembershipDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Discussionmembership
@@ -91,7 +91,7 @@ ObjectDiscussionmembershipApi*apiInstance = [[ObjectDiscussionmembershipApi allo
 
 // Delete an existing Discussionmembership
 [apiInstance discussionmembershipDeleteObjectV1WithPkiDiscussionmembershipID:pkiDiscussionmembershipID
-          completionHandler: ^(DiscussionmembershipDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DiscussionmembershipDeleteObjectV1Response***](DiscussionmembershipDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

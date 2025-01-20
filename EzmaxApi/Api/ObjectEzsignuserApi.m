@@ -1,9 +1,9 @@
 #import "ObjectEzsignuserApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignuserEditObjectV1Request.h"
-#import "EzsignuserEditObjectV1Response.h"
 #import "EzsignuserGetObjectV2Response.h"
 
 
@@ -59,11 +59,11 @@ NSInteger kObjectEzsignuserApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignuserEditObjectV1Request  
 ///
-///  @returns EzsignuserEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignuserEditObjectV1WithPkiEzsignuserID: (NSNumber*) pkiEzsignuserID
     ezsignuserEditObjectV1Request: (EzsignuserEditObjectV1Request*) ezsignuserEditObjectV1Request
-    completionHandler: (void (^)(EzsignuserEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignuserID' is set
     if (pkiEzsignuserID == nil) {
         NSParameterAssert(pkiEzsignuserID);
@@ -127,10 +127,10 @@ NSInteger kObjectEzsignuserApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignuserEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignuserEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

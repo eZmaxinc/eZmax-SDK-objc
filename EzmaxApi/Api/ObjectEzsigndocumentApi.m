@@ -1,11 +1,11 @@
 #import "ObjectEzsigndocumentApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorEzsignformValidation.h"
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigndocumentApplyEzsigntemplateV1Request.h"
-#import "EzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Request.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Response.h"
 #import "EzsigndocumentApplyEzsigntemplateglobalV1Request.h"
@@ -19,8 +19,6 @@
 #import "EzsigndocumentCreateObjectV3Request.h"
 #import "EzsigndocumentCreateObjectV3Response.h"
 #import "EzsigndocumentDeclineToSignV1Request.h"
-#import "EzsigndocumentDeclineToSignV1Response.h"
-#import "EzsigndocumentDeleteObjectV1Response.h"
 #import "EzsigndocumentEditEzsignannotationsV1Request.h"
 #import "EzsigndocumentEditEzsignannotationsV1Response.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Request.h"
@@ -29,10 +27,8 @@
 #import "EzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EzsigndocumentEditObjectV1Request.h"
 #import "EzsigndocumentEditObjectV1Response.h"
-#import "EzsigndocumentEndPrematurelyV1Response.h"
 #import "EzsigndocumentExtractTextV1Request.h"
 #import "EzsigndocumentExtractTextV1Response.h"
-#import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
 #import "EzsigndocumentGetAttachmentsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
@@ -50,10 +46,7 @@
 #import "EzsigndocumentGetWordsPositionsV1Request.h"
 #import "EzsigndocumentGetWordsPositionsV1Response.h"
 #import "EzsigndocumentPatchObjectV1Request.h"
-#import "EzsigndocumentPatchObjectV1Response.h"
 #import "EzsigndocumentSubmitEzsignformV1Request.h"
-#import "EzsigndocumentSubmitEzsignformV1Response.h"
-#import "EzsigndocumentUnsendV1Response.h"
 
 
 @interface ObjectEzsigndocumentApi ()
@@ -108,11 +101,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigndocumentApplyEzsigntemplateV1Request  
 ///
-///  @returns EzsigndocumentApplyEzsigntemplateV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentApplyEzsigntemplateV1Request: (EzsigndocumentApplyEzsigntemplateV1Request*) ezsigndocumentApplyEzsigntemplateV1Request
-    completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -176,10 +169,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentApplyEzsigntemplateV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentApplyEzsigntemplateV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -638,11 +631,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigndocumentDeclineToSignV1Request  
 ///
-///  @returns EzsigndocumentDeclineToSignV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentDeclineToSignV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentDeclineToSignV1Request: (EzsigndocumentDeclineToSignV1Request*) ezsigndocumentDeclineToSignV1Request
-    completionHandler: (void (^)(EzsigndocumentDeclineToSignV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -706,10 +699,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentDeclineToSignV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentDeclineToSignV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -719,10 +712,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigndocumentID  
 ///
-///  @returns EzsigndocumentDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-    completionHandler: (void (^)(EzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -774,10 +767,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -1121,11 +1114,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsigndocumentEndPrematurelyV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -1189,10 +1182,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentEndPrematurelyV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentEndPrematurelyV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -1287,11 +1280,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsigndocumentFlattenV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentFlattenV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsigndocumentFlattenV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -1355,10 +1348,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentFlattenV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentFlattenV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2422,11 +2415,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigndocumentPatchObjectV1Request  
 ///
-///  @returns EzsigndocumentPatchObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentPatchObjectV1Request: (EzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
-    completionHandler: (void (^)(EzsigndocumentPatchObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -2490,10 +2483,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentPatchObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentPatchObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2505,11 +2498,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigndocumentSubmitEzsignformV1Request  
 ///
-///  @returns EzsigndocumentSubmitEzsignformV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentSubmitEzsignformV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentSubmitEzsignformV1Request: (EzsigndocumentSubmitEzsignformV1Request*) ezsigndocumentSubmitEzsignformV1Request
-    completionHandler: (void (^)(EzsigndocumentSubmitEzsignformV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -2573,10 +2566,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentSubmitEzsignformV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentSubmitEzsignformV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2588,11 +2581,11 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsigndocumentUnsendV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigndocumentUnsendV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsigndocumentUnsendV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigndocumentID' is set
     if (pkiEzsigndocumentID == nil) {
         NSParameterAssert(pkiEzsigndocumentID);
@@ -2656,10 +2649,10 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigndocumentUnsendV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigndocumentUnsendV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

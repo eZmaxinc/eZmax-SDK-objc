@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) ezsignuserEditObjectV1WithPkiEzsignuserID: (NSNumber*) pkiEzsignuserID
     ezsignuserEditObjectV1Request: (EzsignuserEditObjectV1Request*) ezsignuserEditObjectV1Request
-        completionHandler: (void (^)(EzsignuserEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignuser
@@ -37,7 +37,7 @@ ObjectEzsignuserApi*apiInstance = [[ObjectEzsignuserApi alloc] init];
 // Edit an existing Ezsignuser
 [apiInstance ezsignuserEditObjectV1WithPkiEzsignuserID:pkiEzsignuserID
               ezsignuserEditObjectV1Request:ezsignuserEditObjectV1Request
-          completionHandler: ^(EzsignuserEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignuserEditObjectV1Response***](EzsignuserEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

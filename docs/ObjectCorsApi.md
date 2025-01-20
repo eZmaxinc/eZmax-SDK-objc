@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **corsDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) corsDeleteObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
-        completionHandler: (void (^)(CorsDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Cors
@@ -93,7 +93,7 @@ ObjectCorsApi*apiInstance = [[ObjectCorsApi alloc] init];
 
 // Delete an existing Cors
 [apiInstance corsDeleteObjectV1WithPkiCorsID:pkiCorsID
-          completionHandler: ^(CorsDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CorsDeleteObjectV1Response***](CorsDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) corsEditObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
     corsEditObjectV1Request: (CorsEditObjectV1Request*) corsEditObjectV1Request
-        completionHandler: (void (^)(CorsEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Cors
@@ -153,7 +153,7 @@ ObjectCorsApi*apiInstance = [[ObjectCorsApi alloc] init];
 // Edit an existing Cors
 [apiInstance corsEditObjectV1WithPkiCorsID:pkiCorsID
               corsEditObjectV1Request:corsEditObjectV1Request
-          completionHandler: ^(CorsEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CorsEditObjectV1Response***](CorsEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

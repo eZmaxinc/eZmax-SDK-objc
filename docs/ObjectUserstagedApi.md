@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **userstagedDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) userstagedDeleteObjectV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
-        completionHandler: (void (^)(UserstagedDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Userstaged
@@ -98,7 +98,7 @@ ObjectUserstagedApi*apiInstance = [[ObjectUserstagedApi alloc] init];
 
 // Delete an existing Userstaged
 [apiInstance userstagedDeleteObjectV1WithPkiUserstagedID:pkiUserstagedID
-          completionHandler: ^(UserstagedDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedDeleteObjectV1Response***](UserstagedDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) userstagedMapV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
     userstagedMapV1Request: (UserstagedMapV1Request*) userstagedMapV1Request
-        completionHandler: (void (^)(UserstagedMapV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Map the Userstaged to an existing user
@@ -288,7 +288,7 @@ ObjectUserstagedApi*apiInstance = [[ObjectUserstagedApi alloc] init];
 // Map the Userstaged to an existing user
 [apiInstance userstagedMapV1WithPkiUserstagedID:pkiUserstagedID
               userstagedMapV1Request:userstagedMapV1Request
-          completionHandler: ^(UserstagedMapV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedMapV1Response***](UserstagedMapV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

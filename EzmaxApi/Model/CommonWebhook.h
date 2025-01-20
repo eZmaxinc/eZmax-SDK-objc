@@ -14,10 +14,10 @@
 */
 
 
-#import "AttemptResponseCompound.h"
+#import "AttemptResponse.h"
 #import "CustomWebhookResponse.h"
-@protocol AttemptResponseCompound;
-@class AttemptResponseCompound;
+@protocol AttemptResponse;
+@class AttemptResponse;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
 

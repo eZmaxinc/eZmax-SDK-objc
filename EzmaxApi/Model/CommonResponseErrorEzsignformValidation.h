@@ -14,10 +14,7 @@
 */
 
 
-#import "CustomEzsignformfielderrorResponse.h"
 #import "FieldEErrorCode.h"
-@protocol CustomEzsignformfielderrorResponse;
-@class CustomEzsignformfielderrorResponse;
 @protocol FieldEErrorCode;
 @class FieldEErrorCode;
 
