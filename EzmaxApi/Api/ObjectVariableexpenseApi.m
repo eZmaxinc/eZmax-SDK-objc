@@ -1,12 +1,12 @@
 #import "ObjectVariableexpenseApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "VariableexpenseCreateObjectV1Request.h"
 #import "VariableexpenseCreateObjectV1Response.h"
 #import "VariableexpenseEditObjectV1Request.h"
-#import "VariableexpenseEditObjectV1Response.h"
 #import "VariableexpenseGetAutocompleteV2Response.h"
 #import "VariableexpenseGetListV1Response.h"
 #import "VariableexpenseGetObjectV2Response.h"
@@ -130,11 +130,11 @@ NSInteger kObjectVariableexpenseApiMissingParamErrorCode = 234513;
 ///
 ///  @param variableexpenseEditObjectV1Request  
 ///
-///  @returns VariableexpenseEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) variableexpenseEditObjectV1WithPkiVariableexpenseID: (NSNumber*) pkiVariableexpenseID
     variableexpenseEditObjectV1Request: (VariableexpenseEditObjectV1Request*) variableexpenseEditObjectV1Request
-    completionHandler: (void (^)(VariableexpenseEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiVariableexpenseID' is set
     if (pkiVariableexpenseID == nil) {
         NSParameterAssert(pkiVariableexpenseID);
@@ -198,10 +198,10 @@ NSInteger kObjectVariableexpenseApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"VariableexpenseEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((VariableexpenseEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

@@ -14,9 +14,9 @@
 */
 
 
-#import "PermissionResponseCompound.h"
-@protocol PermissionResponseCompound;
-@class PermissionResponseCompound;
+#import "PermissionResponse.h"
+@protocol PermissionResponse;
+@class PermissionResponse;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface PermissionGetObjectV2ResponseMPayload : Object
 
-
-@property(nonatomic) PermissionResponseCompound* objPermission;
+/* A Permission Object and children to create a complete structure 
+ */
+@property(nonatomic) PermissionResponse* objPermission;
 
 @end

@@ -15,13 +15,13 @@
 
 
 #import "EnumHorizontalalignment.h"
-#import "EzsignelementdependencyRequestCompound.h"
+#import "EzsignelementdependencyRequest.h"
 #import "FieldEEzsignformfieldDependencyrequirement.h"
 #import "TextstylestaticRequestCompound.h"
 @protocol EnumHorizontalalignment;
 @class EnumHorizontalalignment;
-@protocol EzsignelementdependencyRequestCompound;
-@class EzsignelementdependencyRequestCompound;
+@protocol EzsignelementdependencyRequest;
+@class EzsignelementdependencyRequest;
 @protocol FieldEEzsignformfieldDependencyrequirement;
 @class FieldEEzsignformfieldDependencyrequirement;
 @protocol TextstylestaticRequestCompound;

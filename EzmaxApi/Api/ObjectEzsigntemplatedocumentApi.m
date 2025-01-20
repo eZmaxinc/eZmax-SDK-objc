@@ -1,6 +1,7 @@
 #import "ObjectEzsigntemplatedocumentApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigntemplatedocumentCreateObjectV1Request.h"
@@ -15,7 +16,6 @@
 #import "EzsigntemplatedocumentEditObjectV1Response.h"
 #import "EzsigntemplatedocumentExtractTextV1Request.h"
 #import "EzsigntemplatedocumentExtractTextV1Response.h"
-#import "EzsigntemplatedocumentFlattenV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
@@ -24,7 +24,6 @@
 #import "EzsigntemplatedocumentGetWordsPositionsV1Request.h"
 #import "EzsigntemplatedocumentGetWordsPositionsV1Response.h"
 #import "EzsigntemplatedocumentPatchObjectV1Request.h"
-#import "EzsigntemplatedocumentPatchObjectV1Response.h"
 
 
 @interface ObjectEzsigntemplatedocumentApi ()
@@ -560,11 +559,11 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsigntemplatedocumentFlattenV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
     if (pkiEzsigntemplatedocumentID == nil) {
         NSParameterAssert(pkiEzsigntemplatedocumentID);
@@ -628,10 +627,10 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatedocumentFlattenV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatedocumentFlattenV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -1066,11 +1065,11 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigntemplatedocumentPatchObjectV1Request  
 ///
-///  @returns EzsigntemplatedocumentPatchObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatedocumentPatchObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     ezsigntemplatedocumentPatchObjectV1Request: (EzsigntemplatedocumentPatchObjectV1Request*) ezsigntemplatedocumentPatchObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatedocumentPatchObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
     if (pkiEzsigntemplatedocumentID == nil) {
         NSParameterAssert(pkiEzsigntemplatedocumentID);
@@ -1134,10 +1133,10 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatedocumentPatchObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatedocumentPatchObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

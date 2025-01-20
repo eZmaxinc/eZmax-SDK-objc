@@ -14,9 +14,9 @@
 */
 
 
-#import "ApikeyResponseCompound.h"
-@protocol ApikeyResponseCompound;
-@class ApikeyResponseCompound;
+#import "ApikeyResponse.h"
+@protocol ApikeyResponse;
+@class ApikeyResponse;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface ApikeyGetObjectV2ResponseMPayload : Object
 
-
-@property(nonatomic) ApikeyResponseCompound* objApikey;
+/* An Apikey Object and children to create a complete structure 
+ */
+@property(nonatomic) ApikeyResponse* objApikey;
 
 @end

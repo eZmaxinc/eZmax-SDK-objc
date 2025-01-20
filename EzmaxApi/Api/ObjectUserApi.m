@@ -1,6 +1,7 @@
 #import "ObjectUserApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UserCreateObjectV1Request.h"
@@ -10,7 +11,6 @@
 #import "UserEditColleaguesV2Request.h"
 #import "UserEditColleaguesV2Response.h"
 #import "UserEditObjectV1Request.h"
-#import "UserEditObjectV1Response.h"
 #import "UserEditPermissionsV1Request.h"
 #import "UserEditPermissionsV1Response.h"
 #import "UserGetApikeysV1Response.h"
@@ -23,7 +23,6 @@
 #import "UserGetSubnetsV1Response.h"
 #import "UserGetUsergroupexternalsV1Response.h"
 #import "UserGetUsergroupsV1Response.h"
-#import "UserSendPasswordResetV1Response.h"
 
 
 @interface ObjectUserApi ()
@@ -293,11 +292,11 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
 ///
 ///  @param userEditObjectV1Request  
 ///
-///  @returns UserEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) userEditObjectV1WithPkiUserID: (NSNumber*) pkiUserID
     userEditObjectV1Request: (UserEditObjectV1Request*) userEditObjectV1Request
-    completionHandler: (void (^)(UserEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUserID' is set
     if (pkiUserID == nil) {
         NSParameterAssert(pkiUserID);
@@ -361,10 +360,10 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UserEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UserEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -1170,11 +1169,11 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns UserSendPasswordResetV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
     body: (NSObject*) body
-    completionHandler: (void (^)(UserSendPasswordResetV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUserID' is set
     if (pkiUserID == nil) {
         NSParameterAssert(pkiUserID);
@@ -1238,10 +1237,10 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UserSendPasswordResetV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UserSendPasswordResetV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

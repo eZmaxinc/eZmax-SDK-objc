@@ -1,10 +1,10 @@
 #import "ObjectDomainApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DomainCreateObjectV1Request.h"
 #import "DomainCreateObjectV1Response.h"
-#import "DomainDeleteObjectV1Response.h"
 #import "DomainGetListV1Response.h"
 #import "DomainGetObjectV2Response.h"
 #import "HeaderAcceptLanguage.h"
@@ -126,10 +126,10 @@ NSInteger kObjectDomainApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiDomainID The unique ID of the Domain 
 ///
-///  @returns DomainDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) domainDeleteObjectV1WithPkiDomainID: (NSNumber*) pkiDomainID
-    completionHandler: (void (^)(DomainDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiDomainID' is set
     if (pkiDomainID == nil) {
         NSParameterAssert(pkiDomainID);
@@ -181,10 +181,10 @@ NSInteger kObjectDomainApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"DomainDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((DomainDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

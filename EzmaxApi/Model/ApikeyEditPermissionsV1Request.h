@@ -14,9 +14,9 @@
 */
 
 
-#import "PermissionRequestCompound.h"
-@protocol PermissionRequestCompound;
-@class PermissionRequestCompound;
+#import "PermissionRequest.h"
+@protocol PermissionRequest;
+@class PermissionRequest;
 
 
 

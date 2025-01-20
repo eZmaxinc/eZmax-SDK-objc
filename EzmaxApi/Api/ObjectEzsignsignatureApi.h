@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsignatureCreateObjectV1Request.h"
 #import "EzsignsignatureCreateObjectV1Response.h"
@@ -6,9 +7,7 @@
 #import "EzsignsignatureCreateObjectV2Response.h"
 #import "EzsignsignatureCreateObjectV3Request.h"
 #import "EzsignsignatureCreateObjectV3Response.h"
-#import "EzsignsignatureDeleteObjectV1Response.h"
 #import "EzsignsignatureEditObjectV2Request.h"
-#import "EzsignsignatureEditObjectV2Response.h"
 #import "EzsignsignatureGetEzsignsignatureattachmentV1Response.h"
 #import "EzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
 #import "EzsignsignatureGetObjectV3Response.h"
@@ -82,9 +81,9 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignsignatureDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignsignatureDeleteObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EzsignsignatureDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignsignature
@@ -97,10 +96,10 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignsignatureEditObjectV2Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
     ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
-    completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignature's Ezsignsignatureattachments

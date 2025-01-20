@@ -20,8 +20,8 @@ Name | Type | Description | Notes
 **eEzsigntemplateformfieldgroupTextvalidation** | [**EnumTextvalidation***](EnumTextvalidation.md) |  | [optional] 
 **tEzsigntemplateformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup | [optional] 
 **eEzsigntemplateformfieldgroupTooltipposition** | [**FieldEEzsigntemplateformfieldgroupTooltipposition***](FieldEEzsigntemplateformfieldgroupTooltipposition.md) |  | [optional] 
-**aObjEzsigntemplateformfieldgroupsigner** | [**NSArray&lt;EzsigntemplateformfieldgroupsignerResponseCompound&gt;***](EzsigntemplateformfieldgroupsignerResponseCompound.md) |  | 
-**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementResponseCompound&gt;***](CustomDropdownElementResponseCompound.md) |  | [optional] 
+**aObjEzsigntemplateformfieldgroupsigner** | [**NSArray&lt;EzsigntemplateformfieldgroupsignerResponseCompound&gt;***](EzsigntemplateformfieldgroupsignerResponse.md) |  | 
+**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementResponseCompound&gt;***](CustomDropdownElementResponse.md) |  | [optional] 
 **aObjEzsigntemplateformfield** | [**NSArray&lt;EzsigntemplateformfieldResponseCompound&gt;***](EzsigntemplateformfieldResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

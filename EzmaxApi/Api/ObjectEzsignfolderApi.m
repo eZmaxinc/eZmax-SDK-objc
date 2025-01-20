@@ -1,8 +1,8 @@
 #import "ObjectEzsignfolderApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
-#import "EzsignfolderArchiveV1Response.h"
 #import "EzsignfolderBatchDownloadV1Request.h"
 #import "EzsignfolderCreateObjectV1Request.h"
 #import "EzsignfolderCreateObjectV1Response.h"
@@ -10,13 +10,8 @@
 #import "EzsignfolderCreateObjectV2Response.h"
 #import "EzsignfolderCreateObjectV3Request.h"
 #import "EzsignfolderCreateObjectV3Response.h"
-#import "EzsignfolderDeleteObjectV1Response.h"
 #import "EzsignfolderDisposeEzsignfoldersV1Request.h"
-#import "EzsignfolderDisposeEzsignfoldersV1Response.h"
-#import "EzsignfolderDisposeV1Response.h"
 #import "EzsignfolderEditObjectV3Request.h"
-#import "EzsignfolderEditObjectV3Response.h"
-#import "EzsignfolderEndPrematurelyV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetAttachmentCountV1Response.h"
 #import "EzsignfolderGetAttachmentsV1Response.h"
@@ -37,14 +32,9 @@
 #import "EzsignfolderImportEzsigntemplatepackageV1Request.h"
 #import "EzsignfolderImportEzsigntemplatepackageV1Response.h"
 #import "EzsignfolderReorderV1Request.h"
-#import "EzsignfolderReorderV1Response.h"
 #import "EzsignfolderReorderV2Request.h"
-#import "EzsignfolderReorderV2Response.h"
 #import "EzsignfolderSendV1Request.h"
-#import "EzsignfolderSendV1Response.h"
 #import "EzsignfolderSendV3Request.h"
-#import "EzsignfolderSendV3Response.h"
-#import "EzsignfolderUnsendV1Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -100,11 +90,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsignfolderArchiveV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderArchiveV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsignfolderArchiveV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -168,10 +158,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderArchiveV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderArchiveV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -462,10 +452,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignfolderID  
 ///
-///  @returns EzsignfolderDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderDeleteObjectV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
-    completionHandler: (void (^)(EzsignfolderDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -517,10 +507,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -530,10 +520,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 /// 
 ///  @param ezsignfolderDisposeEzsignfoldersV1Request  
 ///
-///  @returns EzsignfolderDisposeEzsignfoldersV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderDisposeEzsignfoldersV1WithEzsignfolderDisposeEzsignfoldersV1Request: (EzsignfolderDisposeEzsignfoldersV1Request*) ezsignfolderDisposeEzsignfoldersV1Request
-    completionHandler: (void (^)(EzsignfolderDisposeEzsignfoldersV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'ezsignfolderDisposeEzsignfoldersV1Request' is set
     if (ezsignfolderDisposeEzsignfoldersV1Request == nil) {
         NSParameterAssert(ezsignfolderDisposeEzsignfoldersV1Request);
@@ -583,10 +573,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderDisposeEzsignfoldersV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderDisposeEzsignfoldersV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -598,11 +588,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsignfolderDisposeV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderDisposeV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsignfolderDisposeV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -666,10 +656,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderDisposeV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderDisposeV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -681,11 +671,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderEditObjectV3Request  
 ///
-///  @returns EzsignfolderEditObjectV3Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderEditObjectV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderEditObjectV3Request: (EzsignfolderEditObjectV3Request*) ezsignfolderEditObjectV3Request
-    completionHandler: (void (^)(EzsignfolderEditObjectV3Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -749,10 +739,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderEditObjectV3Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderEditObjectV3Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -764,11 +754,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsignfolderEndPrematurelyV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderEndPrematurelyV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsignfolderEndPrematurelyV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -832,10 +822,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderEndPrematurelyV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderEndPrematurelyV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2046,11 +2036,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderReorderV1Request  
 ///
-///  @returns EzsignfolderReorderV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderReorderV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderReorderV1Request: (EzsignfolderReorderV1Request*) ezsignfolderReorderV1Request
-    completionHandler: (void (^)(EzsignfolderReorderV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -2114,10 +2104,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderReorderV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderReorderV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2129,11 +2119,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderReorderV2Request  
 ///
-///  @returns EzsignfolderReorderV2Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderReorderV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderReorderV2Request: (EzsignfolderReorderV2Request*) ezsignfolderReorderV2Request
-    completionHandler: (void (^)(EzsignfolderReorderV2Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -2197,10 +2187,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderReorderV2Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderReorderV2Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2212,11 +2202,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderSendV1Request  
 ///
-///  @returns EzsignfolderSendV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderSendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderSendV1Request: (EzsignfolderSendV1Request*) ezsignfolderSendV1Request
-    completionHandler: (void (^)(EzsignfolderSendV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -2280,10 +2270,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderSendV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderSendV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2295,11 +2285,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderSendV3Request  
 ///
-///  @returns EzsignfolderSendV3Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderSendV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderSendV3Request: (EzsignfolderSendV3Request*) ezsignfolderSendV3Request
-    completionHandler: (void (^)(EzsignfolderSendV3Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -2363,10 +2353,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderSendV3Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderSendV3Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -2378,11 +2368,11 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns EzsignfolderUnsendV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignfolderUnsendV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
-    completionHandler: (void (^)(EzsignfolderUnsendV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
         NSParameterAssert(pkiEzsignfolderID);
@@ -2446,10 +2436,10 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignfolderUnsendV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignfolderUnsendV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

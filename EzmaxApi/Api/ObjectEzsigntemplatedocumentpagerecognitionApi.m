@@ -1,12 +1,11 @@
 #import "ObjectEzsigntemplatedocumentpagerecognitionApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatedocumentpagerecognitionCreateObjectV1Request.h"
 #import "EzsigntemplatedocumentpagerecognitionCreateObjectV1Response.h"
-#import "EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.h"
 #import "EzsigntemplatedocumentpagerecognitionEditObjectV1Request.h"
-#import "EzsigntemplatedocumentpagerecognitionEditObjectV1Response.h"
 #import "EzsigntemplatedocumentpagerecognitionGetObjectV2Response.h"
 
 
@@ -126,10 +125,10 @@ NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErrorCode =
 /// 
 ///  @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition 
 ///
-///  @returns EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
-    completionHandler: (void (^)(EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
     if (pkiEzsigntemplatedocumentpagerecognitionID == nil) {
         NSParameterAssert(pkiEzsigntemplatedocumentpagerecognitionID);
@@ -181,10 +180,10 @@ NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErrorCode =
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -196,11 +195,11 @@ NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErrorCode =
 ///
 ///  @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request  
 ///
-///  @returns EzsigntemplatedocumentpagerecognitionEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionEditObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
     ezsigntemplatedocumentpagerecognitionEditObjectV1Request: (EzsigntemplatedocumentpagerecognitionEditObjectV1Request*) ezsigntemplatedocumentpagerecognitionEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatedocumentpagerecognitionEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatedocumentpagerecognitionID' is set
     if (pkiEzsigntemplatedocumentpagerecognitionID == nil) {
         NSParameterAssert(pkiEzsigntemplatedocumentpagerecognitionID);
@@ -264,10 +263,10 @@ NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErrorCode =
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatedocumentpagerecognitionEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatedocumentpagerecognitionEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

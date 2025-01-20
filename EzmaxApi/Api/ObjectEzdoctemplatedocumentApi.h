@@ -1,14 +1,13 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzdoctemplatedocumentCreateObjectV1Request.h"
 #import "EzdoctemplatedocumentCreateObjectV1Response.h"
 #import "EzdoctemplatedocumentEditObjectV1Request.h"
-#import "EzdoctemplatedocumentEditObjectV1Response.h"
 #import "EzdoctemplatedocumentGetAutocompleteV2Response.h"
 #import "EzdoctemplatedocumentGetListV1Response.h"
 #import "EzdoctemplatedocumentGetObjectV2Response.h"
 #import "EzdoctemplatedocumentPatchObjectV1Request.h"
-#import "EzdoctemplatedocumentPatchObjectV1Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -68,10 +67,10 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzdoctemplatedocumentEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezdoctemplatedocumentEditObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentEditObjectV1Request: (EzdoctemplatedocumentEditObjectV1Request*) ezdoctemplatedocumentEditObjectV1Request
-    completionHandler: (void (^)(EzdoctemplatedocumentEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Ezdoctemplatedocuments and IDs
@@ -139,10 +138,10 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return EzdoctemplatedocumentPatchObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezdoctemplatedocumentPatchObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentPatchObjectV1Request: (EzdoctemplatedocumentPatchObjectV1Request*) ezdoctemplatedocumentPatchObjectV1Request
-    completionHandler: (void (^)(EzdoctemplatedocumentPatchObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 

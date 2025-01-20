@@ -1,21 +1,19 @@
 #import "ObjectEzsignbulksendApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignbulksendCreateEzsignbulksendtransmissionV2Request.h"
 #import "EzsignbulksendCreateEzsignbulksendtransmissionV2Response.h"
 #import "EzsignbulksendCreateObjectV1Request.h"
 #import "EzsignbulksendCreateObjectV1Response.h"
-#import "EzsignbulksendDeleteObjectV1Response.h"
 #import "EzsignbulksendEditObjectV1Request.h"
-#import "EzsignbulksendEditObjectV1Response.h"
 #import "EzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
 #import "EzsignbulksendGetEzsignsignaturesAutomaticV1Response.h"
 #import "EzsignbulksendGetFormsDataV1Response.h"
 #import "EzsignbulksendGetListV1Response.h"
 #import "EzsignbulksendGetObjectV2Response.h"
 #import "EzsignbulksendReorderV1Request.h"
-#import "EzsignbulksendReorderV1Response.h"
 #import "HeaderAcceptLanguage.h"
 
 
@@ -218,10 +216,10 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignbulksendID  
 ///
-///  @returns EzsignbulksendDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignbulksendDeleteObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    completionHandler: (void (^)(EzsignbulksendDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == nil) {
         NSParameterAssert(pkiEzsignbulksendID);
@@ -273,10 +271,10 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignbulksendDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignbulksendDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -288,11 +286,11 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignbulksendEditObjectV1Request  
 ///
-///  @returns EzsignbulksendEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignbulksendEditObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendEditObjectV1Request: (EzsignbulksendEditObjectV1Request*) ezsignbulksendEditObjectV1Request
-    completionHandler: (void (^)(EzsignbulksendEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == nil) {
         NSParameterAssert(pkiEzsignbulksendID);
@@ -356,10 +354,10 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignbulksendEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignbulksendEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -809,11 +807,11 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignbulksendReorderV1Request  
 ///
-///  @returns EzsignbulksendReorderV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsignbulksendReorderV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendReorderV1Request: (EzsignbulksendReorderV1Request*) ezsignbulksendReorderV1Request
-    completionHandler: (void (^)(EzsignbulksendReorderV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignbulksendID' is set
     if (pkiEzsignbulksendID == nil) {
         NSParameterAssert(pkiEzsignbulksendID);
@@ -877,10 +875,10 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsignbulksendReorderV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsignbulksendReorderV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

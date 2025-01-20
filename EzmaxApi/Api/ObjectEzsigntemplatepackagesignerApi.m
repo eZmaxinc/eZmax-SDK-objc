@@ -1,12 +1,12 @@
 #import "ObjectEzsigntemplatepackagesignerApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepackagesignerCreateObjectV1Request.h"
 #import "EzsigntemplatepackagesignerCreateObjectV1Response.h"
 #import "EzsigntemplatepackagesignerDeleteObjectV1Response.h"
 #import "EzsigntemplatepackagesignerEditObjectV1Request.h"
-#import "EzsigntemplatepackagesignerEditObjectV1Response.h"
 #import "EzsigntemplatepackagesignerGetObjectV2Response.h"
 
 
@@ -196,11 +196,11 @@ NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigntemplatepackagesignerEditObjectV1Request  
 ///
-///  @returns EzsigntemplatepackagesignerEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatepackagesignerEditObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
     ezsigntemplatepackagesignerEditObjectV1Request: (EzsigntemplatepackagesignerEditObjectV1Request*) ezsigntemplatepackagesignerEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatepackagesignerEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatepackagesignerID' is set
     if (pkiEzsigntemplatepackagesignerID == nil) {
         NSParameterAssert(pkiEzsigntemplatepackagesignerID);
@@ -264,10 +264,10 @@ NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatepackagesignerEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatepackagesignerEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

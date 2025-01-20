@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepublicCreateEzsignfolderV1Request.h"
 #import "EzsigntemplatepublicCreateEzsignfolderV1Response.h"
 #import "EzsigntemplatepublicCreateObjectV1Request.h"
 #import "EzsigntemplatepublicCreateObjectV1Response.h"
 #import "EzsigntemplatepublicEditObjectV1Request.h"
-#import "EzsigntemplatepublicEditObjectV1Response.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response.h"
 #import "EzsigntemplatepublicGetFormsDataV1Response.h"
@@ -72,10 +72,10 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsigntemplatepublicEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsigntemplatepublicEditObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
     ezsigntemplatepublicEditObjectV1Request: (EzsigntemplatepublicEditObjectV1Request*) ezsigntemplatepublicEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatepublicEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve the Ezsigntemplatepublic details

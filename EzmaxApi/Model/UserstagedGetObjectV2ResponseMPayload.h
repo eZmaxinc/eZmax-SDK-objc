@@ -14,9 +14,9 @@
 */
 
 
-#import "UserstagedResponseCompound.h"
-@protocol UserstagedResponseCompound;
-@class UserstagedResponseCompound;
+#import "UserstagedResponse.h"
+@protocol UserstagedResponse;
+@class UserstagedResponse;
 
 
 
@@ -25,7 +25,8 @@
 
 @interface UserstagedGetObjectV2ResponseMPayload : Object
 
-
-@property(nonatomic) UserstagedResponseCompound* objUserstaged;
+/* A Userstaged Object 
+ */
+@property(nonatomic) UserstagedResponse* objUserstaged;
 
 @end

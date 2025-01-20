@@ -1,13 +1,13 @@
 #import "ObjectEzsigntemplatepublicApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepublicCreateEzsignfolderV1Request.h"
 #import "EzsigntemplatepublicCreateEzsignfolderV1Response.h"
 #import "EzsigntemplatepublicCreateObjectV1Request.h"
 #import "EzsigntemplatepublicCreateObjectV1Response.h"
 #import "EzsigntemplatepublicEditObjectV1Request.h"
-#import "EzsigntemplatepublicEditObjectV1Response.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response.h"
 #import "EzsigntemplatepublicGetFormsDataV1Response.h"
@@ -202,11 +202,11 @@ NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigntemplatepublicEditObjectV1Request  
 ///
-///  @returns EzsigntemplatepublicEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatepublicEditObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
     ezsigntemplatepublicEditObjectV1Request: (EzsigntemplatepublicEditObjectV1Request*) ezsigntemplatepublicEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplatepublicEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatepublicID' is set
     if (pkiEzsigntemplatepublicID == nil) {
         NSParameterAssert(pkiEzsigntemplatepublicID);
@@ -270,10 +270,10 @@ NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatepublicEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatepublicEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

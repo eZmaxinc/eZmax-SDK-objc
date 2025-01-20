@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **sTimezoneName** | **NSString*** | The description of the Timezone | 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sLanguageNameX** | **NSString*** | The Name of the Language in the language of the requester | 
-**objEmail** | [**EmailResponseCompound***](EmailResponseCompound.md) |  | 
+**objEmail** | [**EmailResponse***](EmailResponse.md) | An Email Object and children to create a complete structure | 
 **fkiBillingentityinternalID** | **NSNumber*** | The unique ID of the Billingentityinternal. | 
 **sBillingentityinternalDescriptionX** | **NSString*** | The description of the Billingentityinternal in the language of the requester | 
 **objPhoneHome** | [**PhoneResponseCompound***](PhoneResponseCompound.md) |  | [optional] 

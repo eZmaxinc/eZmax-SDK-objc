@@ -1,12 +1,11 @@
 #import "ObjectEzsigntemplateformfieldgroupApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplateformfieldgroupCreateObjectV1Request.h"
 #import "EzsigntemplateformfieldgroupCreateObjectV1Response.h"
-#import "EzsigntemplateformfieldgroupDeleteObjectV1Response.h"
 #import "EzsigntemplateformfieldgroupEditObjectV1Request.h"
-#import "EzsigntemplateformfieldgroupEditObjectV1Response.h"
 #import "EzsigntemplateformfieldgroupGetObjectV2Response.h"
 
 
@@ -126,10 +125,10 @@ NSInteger kObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigntemplateformfieldgroupID  
 ///
-///  @returns EzsigntemplateformfieldgroupDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplateformfieldgroupDeleteObjectV1WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
-    completionHandler: (void (^)(EzsigntemplateformfieldgroupDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplateformfieldgroupID' is set
     if (pkiEzsigntemplateformfieldgroupID == nil) {
         NSParameterAssert(pkiEzsigntemplateformfieldgroupID);
@@ -181,10 +180,10 @@ NSInteger kObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplateformfieldgroupDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplateformfieldgroupDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -196,11 +195,11 @@ NSInteger kObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigntemplateformfieldgroupEditObjectV1Request  
 ///
-///  @returns EzsigntemplateformfieldgroupEditObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplateformfieldgroupEditObjectV1WithPkiEzsigntemplateformfieldgroupID: (NSNumber*) pkiEzsigntemplateformfieldgroupID
     ezsigntemplateformfieldgroupEditObjectV1Request: (EzsigntemplateformfieldgroupEditObjectV1Request*) ezsigntemplateformfieldgroupEditObjectV1Request
-    completionHandler: (void (^)(EzsigntemplateformfieldgroupEditObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplateformfieldgroupID' is set
     if (pkiEzsigntemplateformfieldgroupID == nil) {
         NSParameterAssert(pkiEzsigntemplateformfieldgroupID);
@@ -264,10 +263,10 @@ NSInteger kObjectEzsigntemplateformfieldgroupApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplateformfieldgroupEditObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplateformfieldgroupEditObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

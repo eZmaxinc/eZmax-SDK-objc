@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "PaymenttermCreateObjectV1Request.h"
 #import "PaymenttermCreateObjectV1Response.h"
 #import "PaymenttermEditObjectV1Request.h"
-#import "PaymenttermEditObjectV1Response.h"
 #import "PaymenttermGetAutocompleteV2Response.h"
 #import "PaymenttermGetListV1Response.h"
 #import "PaymenttermGetObjectV2Response.h"
@@ -54,10 +54,10 @@ extern NSInteger kObjectPaymenttermApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return PaymenttermEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) paymenttermEditObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
     paymenttermEditObjectV1Request: (PaymenttermEditObjectV1Request*) paymenttermEditObjectV1Request
-    completionHandler: (void (^)(PaymenttermEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Paymentterms and IDs

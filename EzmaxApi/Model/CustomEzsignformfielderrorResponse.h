@@ -14,9 +14,6 @@
 */
 
 
-#import "CustomEzsignformfielderrortestResponse.h"
-@protocol CustomEzsignformfielderrortestResponse;
-@class CustomEzsignformfielderrortestResponse;
 
 
 

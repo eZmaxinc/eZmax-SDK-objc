@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **ezsignsignergroupmembershipDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignsignergroupmembershipDeleteObjectV1WithPkiEzsignsignergroupmembershipID: (NSNumber*) pkiEzsignsignergroupmembershipID
-        completionHandler: (void (^)(EzsignsignergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignsignergroupmembership
@@ -92,7 +92,7 @@ ObjectEzsignsignergroupmembershipApi*apiInstance = [[ObjectEzsignsignergroupmemb
 
 // Delete an existing Ezsignsignergroupmembership
 [apiInstance ezsignsignergroupmembershipDeleteObjectV1WithPkiEzsignsignergroupmembershipID:pkiEzsignsignergroupmembershipID
-          completionHandler: ^(EzsignsignergroupmembershipDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignergroupmembershipDeleteObjectV1Response***](EzsignsignergroupmembershipDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

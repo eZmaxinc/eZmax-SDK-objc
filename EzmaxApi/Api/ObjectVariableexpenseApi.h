@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "VariableexpenseCreateObjectV1Request.h"
 #import "VariableexpenseCreateObjectV1Response.h"
 #import "VariableexpenseEditObjectV1Request.h"
-#import "VariableexpenseEditObjectV1Response.h"
 #import "VariableexpenseGetAutocompleteV2Response.h"
 #import "VariableexpenseGetListV1Response.h"
 #import "VariableexpenseGetObjectV2Response.h"
@@ -53,10 +53,10 @@ extern NSInteger kObjectVariableexpenseApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return VariableexpenseEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) variableexpenseEditObjectV1WithPkiVariableexpenseID: (NSNumber*) pkiVariableexpenseID
     variableexpenseEditObjectV1Request: (VariableexpenseEditObjectV1Request*) variableexpenseEditObjectV1Request
-    completionHandler: (void (^)(VariableexpenseEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Variableexpenses and IDs

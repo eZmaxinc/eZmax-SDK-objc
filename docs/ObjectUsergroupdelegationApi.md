@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **usergroupdelegationDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) usergroupdelegationDeleteObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
-        completionHandler: (void (^)(UsergroupdelegationDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Usergroupdelegation
@@ -93,7 +93,7 @@ ObjectUsergroupdelegationApi*apiInstance = [[ObjectUsergroupdelegationApi alloc]
 
 // Delete an existing Usergroupdelegation
 [apiInstance usergroupdelegationDeleteObjectV1WithPkiUsergroupdelegationID:pkiUsergroupdelegationID
-          completionHandler: ^(UsergroupdelegationDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupdelegationDeleteObjectV1Response***](UsergroupdelegationDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) usergroupdelegationEditObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
     usergroupdelegationEditObjectV1Request: (UsergroupdelegationEditObjectV1Request*) usergroupdelegationEditObjectV1Request
-        completionHandler: (void (^)(UsergroupdelegationEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Usergroupdelegation
@@ -153,7 +153,7 @@ ObjectUsergroupdelegationApi*apiInstance = [[ObjectUsergroupdelegationApi alloc]
 // Edit an existing Usergroupdelegation
 [apiInstance usergroupdelegationEditObjectV1WithPkiUsergroupdelegationID:pkiUsergroupdelegationID
               usergroupdelegationEditObjectV1Request:usergroupdelegationEditObjectV1Request
-          completionHandler: ^(UsergroupdelegationEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupdelegationEditObjectV1Response***](UsergroupdelegationEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

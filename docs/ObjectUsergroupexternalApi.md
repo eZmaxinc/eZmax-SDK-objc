@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **usergroupexternalDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) usergroupexternalDeleteObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
-        completionHandler: (void (^)(UsergroupexternalDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Usergroupexternal
@@ -97,7 +97,7 @@ ObjectUsergroupexternalApi*apiInstance = [[ObjectUsergroupexternalApi alloc] ini
 
 // Delete an existing Usergroupexternal
 [apiInstance usergroupexternalDeleteObjectV1WithPkiUsergroupexternalID:pkiUsergroupexternalID
-          completionHandler: ^(UsergroupexternalDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupexternalDeleteObjectV1Response***](UsergroupexternalDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) usergroupexternalEditObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
     usergroupexternalEditObjectV1Request: (UsergroupexternalEditObjectV1Request*) usergroupexternalEditObjectV1Request
-        completionHandler: (void (^)(UsergroupexternalEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Usergroupexternal
@@ -157,7 +157,7 @@ ObjectUsergroupexternalApi*apiInstance = [[ObjectUsergroupexternalApi alloc] ini
 // Edit an existing Usergroupexternal
 [apiInstance usergroupexternalEditObjectV1WithPkiUsergroupexternalID:pkiUsergroupexternalID
               usergroupexternalEditObjectV1Request:usergroupexternalEditObjectV1Request
-          completionHandler: ^(UsergroupexternalEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupexternalEditObjectV1Response***](UsergroupexternalEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) billingentityinternalEditObjectV1WithPkiBillingentityinternalID: (NSNumber*) pkiBillingentityinternalID
     billingentityinternalEditObjectV1Request: (BillingentityinternalEditObjectV1Request*) billingentityinternalEditObjectV1Request
-        completionHandler: (void (^)(BillingentityinternalEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Billingentityinternal
@@ -97,7 +97,7 @@ ObjectBillingentityinternalApi*apiInstance = [[ObjectBillingentityinternalApi al
 // Edit an existing Billingentityinternal
 [apiInstance billingentityinternalEditObjectV1WithPkiBillingentityinternalID:pkiBillingentityinternalID
               billingentityinternalEditObjectV1Request:billingentityinternalEditObjectV1Request
-          completionHandler: ^(BillingentityinternalEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingentityinternalEditObjectV1Response***](BillingentityinternalEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

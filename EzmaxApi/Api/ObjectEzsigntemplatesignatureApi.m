@@ -1,12 +1,11 @@
 #import "ObjectEzsigntemplatesignatureApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatesignatureCreateObjectV2Request.h"
 #import "EzsigntemplatesignatureCreateObjectV2Response.h"
-#import "EzsigntemplatesignatureDeleteObjectV1Response.h"
 #import "EzsigntemplatesignatureEditObjectV2Request.h"
-#import "EzsigntemplatesignatureEditObjectV2Response.h"
 #import "EzsigntemplatesignatureGetObjectV3Response.h"
 
 
@@ -126,10 +125,10 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsigntemplatesignatureID  
 ///
-///  @returns EzsigntemplatesignatureDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatesignatureDeleteObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    completionHandler: (void (^)(EzsigntemplatesignatureDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
     if (pkiEzsigntemplatesignatureID == nil) {
         NSParameterAssert(pkiEzsigntemplatesignatureID);
@@ -181,10 +180,10 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatesignatureDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatesignatureDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -196,11 +195,11 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsigntemplatesignatureEditObjectV2Request  
 ///
-///  @returns EzsigntemplatesignatureEditObjectV2Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
     ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
-    completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
     if (pkiEzsigntemplatesignatureID == nil) {
         NSParameterAssert(pkiEzsigntemplatesignatureID);
@@ -264,10 +263,10 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"EzsigntemplatesignatureEditObjectV2Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((EzsigntemplatesignatureEditObjectV2Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

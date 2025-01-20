@@ -1,14 +1,13 @@
 #import "ObjectUserstagedApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UserstagedCreateUserV1Response.h"
-#import "UserstagedDeleteObjectV1Response.h"
 #import "UserstagedGetListV1Response.h"
 #import "UserstagedGetObjectV2Response.h"
 #import "UserstagedMapV1Request.h"
-#import "UserstagedMapV1Response.h"
 
 
 @interface ObjectUserstagedApi ()
@@ -144,10 +143,10 @@ NSInteger kObjectUserstagedApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiUserstagedID  
 ///
-///  @returns UserstagedDeleteObjectV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) userstagedDeleteObjectV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
-    completionHandler: (void (^)(UserstagedDeleteObjectV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUserstagedID' is set
     if (pkiUserstagedID == nil) {
         NSParameterAssert(pkiUserstagedID);
@@ -199,10 +198,10 @@ NSInteger kObjectUserstagedApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UserstagedDeleteObjectV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UserstagedDeleteObjectV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }
@@ -363,11 +362,11 @@ NSInteger kObjectUserstagedApiMissingParamErrorCode = 234513;
 ///
 ///  @param userstagedMapV1Request  
 ///
-///  @returns UserstagedMapV1Response*
+///  @returns CommonResponse*
 ///
 -(NSURLSessionTask*) userstagedMapV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
     userstagedMapV1Request: (UserstagedMapV1Request*) userstagedMapV1Request
-    completionHandler: (void (^)(UserstagedMapV1Response* output, NSError* error)) handler {
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
     // verify the required parameter 'pkiUserstagedID' is set
     if (pkiUserstagedID == nil) {
         NSParameterAssert(pkiUserstagedID);
@@ -431,10 +430,10 @@ NSInteger kObjectUserstagedApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"UserstagedMapV1Response*"
+                              responseType: @"CommonResponse*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((UserstagedMapV1Response*)data, error);
+                                    handler((CommonResponse*)data, error);
                                 }
                             }];
 }

@@ -14,15 +14,15 @@
 */
 
 
-#import "AttemptResponseCompound.h"
+#import "AttemptResponse.h"
 #import "CustomWebhookResponse.h"
-#import "UserResponseCompound.h"
-@protocol AttemptResponseCompound;
-@class AttemptResponseCompound;
+#import "UserResponse.h"
+@protocol AttemptResponse;
+@class AttemptResponse;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
-@protocol UserResponseCompound;
-@class UserResponseCompound;
+@protocol UserResponse;
+@class UserResponse;
 
 
 
@@ -36,7 +36,8 @@
 /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
  */
 @property(nonatomic) NSArray<AttemptResponseCompound>* aObjAttempt;
-
-@property(nonatomic) UserResponseCompound* objUser;
+/* A User Object and children to create a complete structure 
+ */
+@property(nonatomic) UserResponse* objUser;
 
 @end

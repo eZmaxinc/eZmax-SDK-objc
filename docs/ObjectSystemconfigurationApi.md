@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) systemconfigurationEditObjectV1WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
     systemconfigurationEditObjectV1Request: (SystemconfigurationEditObjectV1Request*) systemconfigurationEditObjectV1Request
-        completionHandler: (void (^)(SystemconfigurationEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Systemconfiguration
@@ -37,7 +37,7 @@ ObjectSystemconfigurationApi*apiInstance = [[ObjectSystemconfigurationApi alloc]
 // Edit an existing Systemconfiguration
 [apiInstance systemconfigurationEditObjectV1WithPkiSystemconfigurationID:pkiSystemconfigurationID
               systemconfigurationEditObjectV1Request:systemconfigurationEditObjectV1Request
-          completionHandler: ^(SystemconfigurationEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response***](SystemconfigurationEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

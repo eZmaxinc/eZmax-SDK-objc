@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 # **ezsignfoldersignerassociationDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignfoldersignerassociationDeleteObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
-        completionHandler: (void (^)(EzsignfoldersignerassociationDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignfoldersignerassociation
@@ -218,7 +218,7 @@ ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignera
 
 // Delete an existing Ezsignfoldersignerassociation
 [apiInstance ezsignfoldersignerassociationDeleteObjectV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
-          completionHandler: ^(EzsignfoldersignerassociationDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldersignerassociationDeleteObjectV1Response***](EzsignfoldersignerassociationDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfoldersignerassociationEditObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationEditObjectV1Request: (EzsignfoldersignerassociationEditObjectV1Request*) ezsignfoldersignerassociationEditObjectV1Request
-        completionHandler: (void (^)(EzsignfoldersignerassociationEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignfoldersignerassociation
@@ -278,7 +278,7 @@ ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignera
 // Edit an existing Ezsignfoldersignerassociation
 [apiInstance ezsignfoldersignerassociationEditObjectV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
               ezsignfoldersignerassociationEditObjectV1Request:ezsignfoldersignerassociationEditObjectV1Request
-          completionHandler: ^(EzsignfoldersignerassociationEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldersignerassociationEditObjectV1Response***](EzsignfoldersignerassociationEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfoldersignerassociationForceDisconnectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     body: (NSObject*) body
-        completionHandler: (void (^)(EzsignfoldersignerassociationForceDisconnectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Disconnects the Ezsignfoldersignerassociation
@@ -339,7 +339,7 @@ ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignera
 // Disconnects the Ezsignfoldersignerassociation
 [apiInstance ezsignfoldersignerassociationForceDisconnectV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
               body:body
-          completionHandler: ^(EzsignfoldersignerassociationForceDisconnectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldersignerassociationForceDisconnectV1Response***](EzsignfoldersignerassociationForceDisconnectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfoldersignerassociationPatchObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationPatchObjectV1Request: (EzsignfoldersignerassociationPatchObjectV1Request*) ezsignfoldersignerassociationPatchObjectV1Request
-        completionHandler: (void (^)(EzsignfoldersignerassociationPatchObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Patch an existing Ezsignfoldersignerassociation
@@ -569,7 +569,7 @@ ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignera
 // Patch an existing Ezsignfoldersignerassociation
 [apiInstance ezsignfoldersignerassociationPatchObjectV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
               ezsignfoldersignerassociationPatchObjectV1Request:ezsignfoldersignerassociationPatchObjectV1Request
-          completionHandler: ^(EzsignfoldersignerassociationPatchObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldersignerassociationPatchObjectV1Response***](EzsignfoldersignerassociationPatchObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
-        completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Reassign remaining unsigned signatures and forms
@@ -630,7 +630,7 @@ ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignera
 // Reassign remaining unsigned signatures and forms
 [apiInstance ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
               ezsignfoldersignerassociationReassignV1Request:ezsignfoldersignerassociationReassignV1Request
-          completionHandler: ^(EzsignfoldersignerassociationReassignV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -649,7 +649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignfoldersignerassociationReassignV1Response***](EzsignfoldersignerassociationReassignV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

@@ -1,13 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "AuthenticationexternalCreateObjectV1Request.h"
 #import "AuthenticationexternalCreateObjectV1Response.h"
-#import "AuthenticationexternalDeleteObjectV1Response.h"
 #import "AuthenticationexternalEditObjectV1Request.h"
-#import "AuthenticationexternalEditObjectV1Response.h"
 #import "AuthenticationexternalGetAutocompleteV2Response.h"
 #import "AuthenticationexternalGetListV1Response.h"
 #import "AuthenticationexternalGetObjectV2Response.h"
-#import "AuthenticationexternalResetAuthorizationV1Response.h"
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -53,9 +51,9 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return AuthenticationexternalDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) authenticationexternalDeleteObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
-    completionHandler: (void (^)(AuthenticationexternalDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Authenticationexternal
@@ -68,10 +66,10 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return AuthenticationexternalEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) authenticationexternalEditObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     authenticationexternalEditObjectV1Request: (AuthenticationexternalEditObjectV1Request*) authenticationexternalEditObjectV1Request
-    completionHandler: (void (^)(AuthenticationexternalEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve Authenticationexternals and IDs
@@ -135,10 +133,10 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return AuthenticationexternalResetAuthorizationV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) authenticationexternalResetAuthorizationV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
     body: (NSObject*) body
-    completionHandler: (void (^)(AuthenticationexternalResetAuthorizationV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 

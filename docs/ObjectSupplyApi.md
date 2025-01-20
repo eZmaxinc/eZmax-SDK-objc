@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **supplyDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) supplyDeleteObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
-        completionHandler: (void (^)(SupplyDeleteObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Delete an existing Supply
@@ -95,7 +95,7 @@ ObjectSupplyApi*apiInstance = [[ObjectSupplyApi alloc] init];
 
 // Delete an existing Supply
 [apiInstance supplyDeleteObjectV1WithPkiSupplyID:pkiSupplyID
-          completionHandler: ^(SupplyDeleteObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SupplyDeleteObjectV1Response***](SupplyDeleteObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) supplyEditObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
     supplyEditObjectV1Request: (SupplyEditObjectV1Request*) supplyEditObjectV1Request
-        completionHandler: (void (^)(SupplyEditObjectV1Response* output, NSError* error)) handler;
+        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 ```
 
 Edit an existing Supply
@@ -155,7 +155,7 @@ ObjectSupplyApi*apiInstance = [[ObjectSupplyApi alloc] init];
 // Edit an existing Supply
 [apiInstance supplyEditObjectV1WithPkiSupplyID:pkiSupplyID
               supplyEditObjectV1Request:supplyEditObjectV1Request
-          completionHandler: ^(SupplyEditObjectV1Response* output, NSError* error) {
+          completionHandler: ^(CommonResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SupplyEditObjectV1Response***](SupplyEditObjectV1Response.md)
+[**CommonResponse***](CommonResponse.md)
 
 ### Authorization
 

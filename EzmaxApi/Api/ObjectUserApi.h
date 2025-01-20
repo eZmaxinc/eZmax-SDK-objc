@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UserCreateObjectV1Request.h"
@@ -8,7 +9,6 @@
 #import "UserEditColleaguesV2Request.h"
 #import "UserEditColleaguesV2Response.h"
 #import "UserEditObjectV1Request.h"
-#import "UserEditObjectV1Response.h"
 #import "UserEditPermissionsV1Request.h"
 #import "UserEditPermissionsV1Response.h"
 #import "UserGetApikeysV1Response.h"
@@ -21,7 +21,6 @@
 #import "UserGetSubnetsV1Response.h"
 #import "UserGetUsergroupexternalsV1Response.h"
 #import "UserGetUsergroupsV1Response.h"
-#import "UserSendPasswordResetV1Response.h"
 #import "Api.h"
 
 /**
@@ -95,10 +94,10 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return UserEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) userEditObjectV1WithPkiUserID: (NSNumber*) pkiUserID
     userEditObjectV1Request: (UserEditObjectV1Request*) userEditObjectV1Request
-    completionHandler: (void (^)(UserEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit multiple Permissions
@@ -270,10 +269,10 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return UserSendPasswordResetV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
     body: (NSObject*) body
-    completionHandler: (void (^)(UserSendPasswordResetV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 

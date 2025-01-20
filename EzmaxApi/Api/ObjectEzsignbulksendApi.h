@@ -1,19 +1,17 @@
 #import <Foundation/Foundation.h>
+#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignbulksendCreateEzsignbulksendtransmissionV2Request.h"
 #import "EzsignbulksendCreateEzsignbulksendtransmissionV2Response.h"
 #import "EzsignbulksendCreateObjectV1Request.h"
 #import "EzsignbulksendCreateObjectV1Response.h"
-#import "EzsignbulksendDeleteObjectV1Response.h"
 #import "EzsignbulksendEditObjectV1Request.h"
-#import "EzsignbulksendEditObjectV1Response.h"
 #import "EzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
 #import "EzsignbulksendGetEzsignsignaturesAutomaticV1Response.h"
 #import "EzsignbulksendGetFormsDataV1Response.h"
 #import "EzsignbulksendGetListV1Response.h"
 #import "EzsignbulksendGetObjectV2Response.h"
 #import "EzsignbulksendReorderV1Request.h"
-#import "EzsignbulksendReorderV1Response.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -75,9 +73,9 @@ extern NSInteger kObjectEzsignbulksendApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignbulksendDeleteObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignbulksendDeleteObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    completionHandler: (void (^)(EzsignbulksendDeleteObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignbulksend
@@ -90,10 +88,10 @@ extern NSInteger kObjectEzsignbulksendApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignbulksendEditObjectV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignbulksendEditObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendEditObjectV1Request: (EzsignbulksendEditObjectV1Request*) ezsignbulksendEditObjectV1Request
-    completionHandler: (void (^)(EzsignbulksendEditObjectV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignbulksend's empty Csv template
@@ -198,10 +196,10 @@ extern NSInteger kObjectEzsignbulksendApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return EzsignbulksendReorderV1Response*
+/// @return CommonResponse*
 -(NSURLSessionTask*) ezsignbulksendReorderV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     ezsignbulksendReorderV1Request: (EzsignbulksendReorderV1Request*) ezsignbulksendReorderV1Request
-    completionHandler: (void (^)(EzsignbulksendReorderV1Response* output, NSError* error)) handler;
+    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
 
 
 
