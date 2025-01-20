@@ -15,8 +15,11 @@
 
 
 #import "CommonAudit.h"
+#import "CustomDnsrecordResponse.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol CustomDnsrecordResponse;
+@class CustomDnsrecordResponse;
 
 
 

@@ -1,11 +1,12 @@
 #import "ObjectSubnetApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "SubnetCreateObjectV1Request.h"
 #import "SubnetCreateObjectV1Response.h"
+#import "SubnetDeleteObjectV1Response.h"
 #import "SubnetEditObjectV1Request.h"
+#import "SubnetEditObjectV1Response.h"
 #import "SubnetGetObjectV2Response.h"
 
 
@@ -125,10 +126,10 @@ NSInteger kObjectSubnetApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiSubnetID The unique ID of the Subnet 
 ///
-///  @returns CommonResponse*
+///  @returns SubnetDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) subnetDeleteObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(SubnetDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSubnetID' is set
     if (pkiSubnetID == nil) {
         NSParameterAssert(pkiSubnetID);
@@ -180,10 +181,10 @@ NSInteger kObjectSubnetApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"SubnetDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((SubnetDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -195,11 +196,11 @@ NSInteger kObjectSubnetApiMissingParamErrorCode = 234513;
 ///
 ///  @param subnetEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns SubnetEditObjectV1Response*
 ///
 -(NSURLSessionTask*) subnetEditObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
     subnetEditObjectV1Request: (SubnetEditObjectV1Request*) subnetEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(SubnetEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSubnetID' is set
     if (pkiSubnetID == nil) {
         NSParameterAssert(pkiSubnetID);
@@ -263,10 +264,10 @@ NSInteger kObjectSubnetApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"SubnetEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((SubnetEditObjectV1Response*)data, error);
                                 }
                             }];
 }

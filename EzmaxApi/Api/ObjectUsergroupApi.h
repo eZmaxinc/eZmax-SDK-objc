@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UsergroupCreateObjectV1Request.h"
 #import "UsergroupCreateObjectV1Response.h"
 #import "UsergroupEditObjectV1Request.h"
+#import "UsergroupEditObjectV1Response.h"
 #import "UsergroupEditPermissionsV1Request.h"
 #import "UsergroupEditPermissionsV1Response.h"
 #import "UsergroupEditUsergroupdelegationsV1Request.h"
@@ -62,10 +62,10 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupEditObjectV1Response*
 -(NSURLSessionTask*) usergroupEditObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
     usergroupEditObjectV1Request: (UsergroupEditObjectV1Request*) usergroupEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Permissions

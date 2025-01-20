@@ -15,15 +15,15 @@
 
 
 #import "EnumHorizontalalignment.h"
-#import "EzsigntemplateelementdependencyResponse.h"
+#import "EzsigntemplateelementdependencyResponseCompound.h"
 #import "FieldEEzsigntemplateformfieldDependencyrequirement.h"
 #import "FieldEEzsigntemplateformfieldPositioning.h"
 #import "FieldEEzsigntemplateformfieldPositioningoccurence.h"
 #import "TextstylestaticResponseCompound.h"
 @protocol EnumHorizontalalignment;
 @class EnumHorizontalalignment;
-@protocol EzsigntemplateelementdependencyResponse;
-@class EzsigntemplateelementdependencyResponse;
+@protocol EzsigntemplateelementdependencyResponseCompound;
+@class EzsigntemplateelementdependencyResponseCompound;
 @protocol FieldEEzsigntemplateformfieldDependencyrequirement;
 @class FieldEEzsigntemplateformfieldDependencyrequirement;
 @protocol FieldEEzsigntemplateformfieldPositioning;

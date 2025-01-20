@@ -20,8 +20,8 @@ Name | Type | Description | Notes
 **tEzsignformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition***](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
 **eEzsignformfieldgroupTextvalidation** | [**EnumTextvalidation***](EnumTextvalidation.md) |  | [optional] 
-**aObjEzsignformfieldgroupsigner** | [**NSArray&lt;EzsignformfieldgroupsignerRequestCompound&gt;***](EzsignformfieldgroupsignerRequest.md) |  | 
-**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementRequestCompound&gt;***](CustomDropdownElementRequest.md) |  | [optional] 
+**aObjEzsignformfieldgroupsigner** | [**NSArray&lt;EzsignformfieldgroupsignerRequestCompound&gt;***](EzsignformfieldgroupsignerRequestCompound.md) |  | 
+**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementRequestCompound&gt;***](CustomDropdownElementRequestCompound.md) |  | [optional] 
 **aObjEzsignformfield** | [**NSArray&lt;EzsignformfieldRequestCompound&gt;***](EzsignformfieldRequestCompound.md) |  | 
 **objCreateezsignelementspositionedbyword** | [**CustomCreateEzsignelementsPositionedByWordRequest***](CustomCreateEzsignelementsPositionedByWordRequest.md) |  | 
 

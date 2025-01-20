@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **ezsignannotationDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignannotationDeleteObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignannotationDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignannotation
@@ -93,7 +93,7 @@ ObjectEzsignannotationApi*apiInstance = [[ObjectEzsignannotationApi alloc] init]
 
 // Delete an existing Ezsignannotation
 [apiInstance ezsignannotationDeleteObjectV1WithPkiEzsignannotationID:pkiEzsignannotationID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignannotationDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignannotationDeleteObjectV1Response***](EzsignannotationDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignannotationEditObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
     ezsignannotationEditObjectV1Request: (EzsignannotationEditObjectV1Request*) ezsignannotationEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignannotationEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignannotation
@@ -153,7 +153,7 @@ ObjectEzsignannotationApi*apiInstance = [[ObjectEzsignannotationApi alloc] init]
 // Edit an existing Ezsignannotation
 [apiInstance ezsignannotationEditObjectV1WithPkiEzsignannotationID:pkiEzsignannotationID
               ezsignannotationEditObjectV1Request:ezsignannotationEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignannotationEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignannotationEditObjectV1Response***](EzsignannotationEditObjectV1Response.md)
 
 ### Authorization
 

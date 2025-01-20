@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignbulksenddocumentmappingCreateObjectV1Request.h"
 #import "EzsignbulksenddocumentmappingCreateObjectV1Response.h"
+#import "EzsignbulksenddocumentmappingDeleteObjectV1Response.h"
 #import "EzsignbulksenddocumentmappingGetObjectV2Response.h"
 #import "Api.h"
 
@@ -48,9 +48,9 @@ extern NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignbulksenddocumentmappingDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingDeleteObjectV1WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignbulksenddocumentmappingDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignbulksenddocumentmapping

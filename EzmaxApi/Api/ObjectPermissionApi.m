@@ -1,11 +1,12 @@
 #import "ObjectPermissionApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "PermissionCreateObjectV1Request.h"
 #import "PermissionCreateObjectV1Response.h"
+#import "PermissionDeleteObjectV1Response.h"
 #import "PermissionEditObjectV1Request.h"
+#import "PermissionEditObjectV1Response.h"
 #import "PermissionGetObjectV2Response.h"
 
 
@@ -125,10 +126,10 @@ NSInteger kObjectPermissionApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiPermissionID The unique ID of the Permission 
 ///
-///  @returns CommonResponse*
+///  @returns PermissionDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) permissionDeleteObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(PermissionDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiPermissionID' is set
     if (pkiPermissionID == nil) {
         NSParameterAssert(pkiPermissionID);
@@ -180,10 +181,10 @@ NSInteger kObjectPermissionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"PermissionDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((PermissionDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -195,11 +196,11 @@ NSInteger kObjectPermissionApiMissingParamErrorCode = 234513;
 ///
 ///  @param permissionEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns PermissionEditObjectV1Response*
 ///
 -(NSURLSessionTask*) permissionEditObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
     permissionEditObjectV1Request: (PermissionEditObjectV1Request*) permissionEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(PermissionEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiPermissionID' is set
     if (pkiPermissionID == nil) {
         NSParameterAssert(pkiPermissionID);
@@ -263,10 +264,10 @@ NSInteger kObjectPermissionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"PermissionEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((PermissionEditObjectV1Response*)data, error);
                                 }
                             }];
 }

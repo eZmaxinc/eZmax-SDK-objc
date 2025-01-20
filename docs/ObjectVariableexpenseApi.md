@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) variableexpenseEditObjectV1WithPkiVariableexpenseID: (NSNumber*) pkiVariableexpenseID
     variableexpenseEditObjectV1Request: (VariableexpenseEditObjectV1Request*) variableexpenseEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(VariableexpenseEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Variableexpense
@@ -97,7 +97,7 @@ ObjectVariableexpenseApi*apiInstance = [[ObjectVariableexpenseApi alloc] init];
 // Edit an existing Variableexpense
 [apiInstance variableexpenseEditObjectV1WithPkiVariableexpenseID:pkiVariableexpenseID
               variableexpenseEditObjectV1Request:variableexpenseEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(VariableexpenseEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**VariableexpenseEditObjectV1Response***](VariableexpenseEditObjectV1Response.md)
 
 ### Authorization
 

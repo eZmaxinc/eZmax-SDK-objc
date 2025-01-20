@@ -15,23 +15,23 @@
 
 
 #import "CustomCreateEzsignelementsPositionedByWordRequest.h"
-#import "CustomDropdownElementRequest.h"
+#import "CustomDropdownElementRequestCompound.h"
 #import "EnumTextvalidation.h"
 #import "EzsignformfieldRequestCompound.h"
-#import "EzsignformfieldgroupsignerRequest.h"
+#import "EzsignformfieldgroupsignerRequestCompound.h"
 #import "FieldEEzsignformfieldgroupSignerrequirement.h"
 #import "FieldEEzsignformfieldgroupTooltipposition.h"
 #import "FieldEEzsignformfieldgroupType.h"
 @protocol CustomCreateEzsignelementsPositionedByWordRequest;
 @class CustomCreateEzsignelementsPositionedByWordRequest;
-@protocol CustomDropdownElementRequest;
-@class CustomDropdownElementRequest;
+@protocol CustomDropdownElementRequestCompound;
+@class CustomDropdownElementRequestCompound;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
 @protocol EzsignformfieldRequestCompound;
 @class EzsignformfieldRequestCompound;
-@protocol EzsignformfieldgroupsignerRequest;
-@class EzsignformfieldgroupsignerRequest;
+@protocol EzsignformfieldgroupsignerRequestCompound;
+@class EzsignformfieldgroupsignerRequestCompound;
 @protocol FieldEEzsignformfieldgroupSignerrequirement;
 @class FieldEEzsignformfieldgroupSignerrequirement;
 @protocol FieldEEzsignformfieldgroupTooltipposition;

@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplatepackagemembershipDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipDeleteObjectV1WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatepackagemembershipDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplatepackagemembership
@@ -92,7 +92,7 @@ ObjectEzsigntemplatepackagemembershipApi*apiInstance = [[ObjectEzsigntemplatepac
 
 // Delete an existing Ezsigntemplatepackagemembership
 [apiInstance ezsigntemplatepackagemembershipDeleteObjectV1WithPkiEzsigntemplatepackagemembershipID:pkiEzsigntemplatepackagemembershipID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatepackagemembershipDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatepackagemembershipDeleteObjectV1Response***](EzsigntemplatepackagemembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

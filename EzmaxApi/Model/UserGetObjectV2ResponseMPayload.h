@@ -14,9 +14,9 @@
 */
 
 
-#import "UserResponse.h"
-@protocol UserResponse;
-@class UserResponse;
+#import "UserResponseCompound.h"
+@protocol UserResponseCompound;
+@class UserResponseCompound;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface UserGetObjectV2ResponseMPayload : Object
 
-/* A User Object and children to create a complete structure 
- */
-@property(nonatomic) UserResponse* objUser;
+
+@property(nonatomic) UserResponseCompound* objUser;
 
 @end

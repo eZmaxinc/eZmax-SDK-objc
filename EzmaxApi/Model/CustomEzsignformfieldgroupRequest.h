@@ -14,6 +14,9 @@
 */
 
 
+#import "CustomEzsignformfieldRequest.h"
+@protocol CustomEzsignformfieldRequest;
+@class CustomEzsignformfieldRequest;
 
 
 

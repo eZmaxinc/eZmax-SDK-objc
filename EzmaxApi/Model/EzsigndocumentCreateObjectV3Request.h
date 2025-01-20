@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsigndocumentRequest.h"
-@protocol EzsigndocumentRequest;
-@class EzsigndocumentRequest;
+#import "EzsigndocumentRequestCompound.h"
+@protocol EzsigndocumentRequestCompound;
+@class EzsigndocumentRequestCompound;
 
 
 

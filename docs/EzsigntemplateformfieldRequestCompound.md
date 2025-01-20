@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **eEzsigntemplateformfieldPositioningoccurence** | [**FieldEEzsigntemplateformfieldPositioningoccurence***](FieldEEzsigntemplateformfieldPositioningoccurence.md) |  | [optional] 
 **eEzsigntemplateformfieldHorizontalalignment** | [**EnumHorizontalalignment***](EnumHorizontalalignment.md) |  | [optional] 
 **objTextstylestatic** | [**TextstylestaticRequestCompound***](TextstylestaticRequestCompound.md) |  | [optional] 
-**aObjEzsigntemplateelementdependency** | [**NSArray&lt;EzsigntemplateelementdependencyRequestCompound&gt;***](EzsigntemplateelementdependencyRequest.md) |  | [optional] 
+**aObjEzsigntemplateelementdependency** | [**NSArray&lt;EzsigntemplateelementdependencyRequestCompound&gt;***](EzsigntemplateelementdependencyRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

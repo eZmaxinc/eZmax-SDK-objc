@@ -1,11 +1,11 @@
 #import "ObjectEzsignfoldertypeApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignfoldertypeCreateObjectV3Request.h"
 #import "EzsignfoldertypeCreateObjectV3Response.h"
 #import "EzsignfoldertypeEditObjectV3Request.h"
+#import "EzsignfoldertypeEditObjectV3Response.h"
 #import "EzsignfoldertypeGetAutocompleteV2Response.h"
 #import "EzsignfoldertypeGetListV1Response.h"
 #import "EzsignfoldertypeGetObjectV2Response.h"
@@ -131,11 +131,11 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfoldertypeEditObjectV3Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldertypeEditObjectV3Response*
 ///
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
     ezsignfoldertypeEditObjectV3Request: (EzsignfoldertypeEditObjectV3Request*) ezsignfoldertypeEditObjectV3Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldertypeEditObjectV3Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldertypeID' is set
     if (pkiEzsignfoldertypeID == nil) {
         NSParameterAssert(pkiEzsignfoldertypeID);
@@ -199,10 +199,10 @@ NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldertypeEditObjectV3Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldertypeEditObjectV3Response*)data, error);
                                 }
                             }];
 }

@@ -1,7 +1,6 @@
 #import "ObjectEzsignfoldersignerassociationApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.h"
@@ -9,12 +8,17 @@
 #import "EzsignfoldersignerassociationCreateObjectV1Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Request.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Response.h"
+#import "EzsignfoldersignerassociationDeleteObjectV1Response.h"
 #import "EzsignfoldersignerassociationEditObjectV1Request.h"
+#import "EzsignfoldersignerassociationEditObjectV1Response.h"
+#import "EzsignfoldersignerassociationForceDisconnectV1Response.h"
 #import "EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV2Response.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Request.h"
+#import "EzsignfoldersignerassociationPatchObjectV1Response.h"
 #import "EzsignfoldersignerassociationReassignV1Request.h"
+#import "EzsignfoldersignerassociationReassignV1Response.h"
 
 
 @interface ObjectEzsignfoldersignerassociationApi ()
@@ -282,10 +286,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignfoldersignerassociationID  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldersignerassociationDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignfoldersignerassociationDeleteObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldersignerassociationDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == nil) {
         NSParameterAssert(pkiEzsignfoldersignerassociationID);
@@ -337,10 +341,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldersignerassociationDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldersignerassociationDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -352,11 +356,11 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfoldersignerassociationEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldersignerassociationEditObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignfoldersignerassociationEditObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationEditObjectV1Request: (EzsignfoldersignerassociationEditObjectV1Request*) ezsignfoldersignerassociationEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldersignerassociationEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == nil) {
         NSParameterAssert(pkiEzsignfoldersignerassociationID);
@@ -420,10 +424,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldersignerassociationEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldersignerassociationEditObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -435,11 +439,11 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldersignerassociationForceDisconnectV1Response*
 ///
 -(NSURLSessionTask*) ezsignfoldersignerassociationForceDisconnectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldersignerassociationForceDisconnectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == nil) {
         NSParameterAssert(pkiEzsignfoldersignerassociationID);
@@ -503,10 +507,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldersignerassociationForceDisconnectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldersignerassociationForceDisconnectV1Response*)data, error);
                                 }
                             }];
 }
@@ -722,11 +726,11 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfoldersignerassociationPatchObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldersignerassociationPatchObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignfoldersignerassociationPatchObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationPatchObjectV1Request: (EzsignfoldersignerassociationPatchObjectV1Request*) ezsignfoldersignerassociationPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldersignerassociationPatchObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == nil) {
         NSParameterAssert(pkiEzsignfoldersignerassociationID);
@@ -790,10 +794,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldersignerassociationPatchObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldersignerassociationPatchObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -805,11 +809,11 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfoldersignerassociationReassignV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignfoldersignerassociationReassignV1Response*
 ///
 -(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
     if (pkiEzsignfoldersignerassociationID == nil) {
         NSParameterAssert(pkiEzsignfoldersignerassociationID);
@@ -873,10 +877,10 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignfoldersignerassociationReassignV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignfoldersignerassociationReassignV1Response*)data, error);
                                 }
                             }];
 }

@@ -15,6 +15,8 @@
 
 
 #import "CommonAudit.h"
+#import "CustomEzmaxinvoicingEzsigndocumentResponse.h"
+#import "CustomEzmaxinvoicingEzsignfolderResponse.h"
 #import "CustomEzmaxpricingResponse.h"
 #import "EzmaxinvoicingagentResponseCompound.h"
 #import "EzmaxinvoicingcontractResponseCompound.h"
@@ -25,6 +27,10 @@
 #import "FieldEEzmaxinvoicingPaymenttype.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol CustomEzmaxinvoicingEzsigndocumentResponse;
+@class CustomEzmaxinvoicingEzsigndocumentResponse;
+@protocol CustomEzmaxinvoicingEzsignfolderResponse;
+@class CustomEzmaxinvoicingEzsignfolderResponse;
 @protocol CustomEzmaxpricingResponse;
 @class CustomEzmaxpricingResponse;
 @protocol EzmaxinvoicingagentResponseCompound;

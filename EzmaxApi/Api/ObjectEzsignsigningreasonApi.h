@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsigningreasonCreateObjectV1Request.h"
 #import "EzsignsigningreasonCreateObjectV1Response.h"
 #import "EzsignsigningreasonEditObjectV1Request.h"
+#import "EzsignsigningreasonEditObjectV1Response.h"
 #import "EzsignsigningreasonGetAutocompleteV2Response.h"
 #import "EzsignsigningreasonGetListV1Response.h"
 #import "EzsignsigningreasonGetObjectV2Response.h"
@@ -53,10 +53,10 @@ extern NSInteger kObjectEzsignsigningreasonApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignsigningreasonEditObjectV1Response*
 -(NSURLSessionTask*) ezsignsigningreasonEditObjectV1WithPkiEzsignsigningreasonID: (NSNumber*) pkiEzsignsigningreasonID
     ezsignsigningreasonEditObjectV1Request: (EzsignsigningreasonEditObjectV1Request*) ezsignsigningreasonEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignsigningreasonEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsignsigningreasons and IDs

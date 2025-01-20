@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DiscussionmessageCreateObjectV1Request.h"
 #import "DiscussionmessageCreateObjectV1Response.h"
+#import "DiscussionmessageDeleteObjectV1Response.h"
 #import "DiscussionmessagePatchObjectV1Request.h"
+#import "DiscussionmessagePatchObjectV1Response.h"
 #import "Api.h"
 
 /**
@@ -48,9 +49,9 @@ extern NSInteger kObjectDiscussionmessageApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionmessageDeleteObjectV1Response*
 -(NSURLSessionTask*) discussionmessageDeleteObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionmessageDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Patch an existing Discussionmessage
@@ -63,10 +64,10 @@ extern NSInteger kObjectDiscussionmessageApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return DiscussionmessagePatchObjectV1Response*
 -(NSURLSessionTask*) discussionmessagePatchObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID
     discussionmessagePatchObjectV1Request: (DiscussionmessagePatchObjectV1Request*) discussionmessagePatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(DiscussionmessagePatchObjectV1Response* output, NSError* error)) handler;
 
 
 

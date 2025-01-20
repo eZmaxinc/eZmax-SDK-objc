@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **permissionDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) permissionDeleteObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(PermissionDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Permission
@@ -93,7 +93,7 @@ ObjectPermissionApi*apiInstance = [[ObjectPermissionApi alloc] init];
 
 // Delete an existing Permission
 [apiInstance permissionDeleteObjectV1WithPkiPermissionID:pkiPermissionID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(PermissionDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**PermissionDeleteObjectV1Response***](PermissionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) permissionEditObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
     permissionEditObjectV1Request: (PermissionEditObjectV1Request*) permissionEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(PermissionEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Permission
@@ -153,7 +153,7 @@ ObjectPermissionApi*apiInstance = [[ObjectPermissionApi alloc] init];
 // Edit an existing Permission
 [apiInstance permissionEditObjectV1WithPkiPermissionID:pkiPermissionID
               permissionEditObjectV1Request:permissionEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(PermissionEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**PermissionEditObjectV1Response***](PermissionEditObjectV1Response.md)
 
 ### Authorization
 

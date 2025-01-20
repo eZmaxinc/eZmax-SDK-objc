@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "UsergroupmembershipCreateObjectV1Request.h"
 #import "UsergroupmembershipCreateObjectV1Response.h"
+#import "UsergroupmembershipDeleteObjectV1Response.h"
 #import "UsergroupmembershipEditObjectV1Request.h"
+#import "UsergroupmembershipEditObjectV1Response.h"
 #import "UsergroupmembershipGetObjectV2Response.h"
 #import "Api.h"
 
@@ -48,9 +49,9 @@ extern NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupmembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) usergroupmembershipDeleteObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupmembershipDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Usergroupmembership
@@ -63,10 +64,10 @@ extern NSInteger kObjectUsergroupmembershipApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupmembershipEditObjectV1Response*
 -(NSURLSessionTask*) usergroupmembershipEditObjectV1WithPkiUsergroupmembershipID: (NSNumber*) pkiUsergroupmembershipID
     usergroupmembershipEditObjectV1Request: (UsergroupmembershipEditObjectV1Request*) usergroupmembershipEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupmembershipEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Usergroupmembership

@@ -21,8 +21,8 @@ Name | Type | Description | Notes
 **tEzsignformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition***](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
 **aObjEzsignformfield** | [**NSArray&lt;EzsignformfieldResponseCompound&gt;***](EzsignformfieldResponseCompound.md) |  | 
-**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementResponseCompound&gt;***](CustomDropdownElementResponse.md) |  | [optional] 
-**aObjEzsignformfieldgroupsigner** | [**NSArray&lt;EzsignformfieldgroupsignerResponseCompound&gt;***](EzsignformfieldgroupsignerResponse.md) |  | 
+**aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementResponseCompound&gt;***](CustomDropdownElementResponseCompound.md) |  | [optional] 
+**aObjEzsignformfieldgroupsigner** | [**NSArray&lt;EzsignformfieldgroupsignerResponseCompound&gt;***](EzsignformfieldgroupsignerResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

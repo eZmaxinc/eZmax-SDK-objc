@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **ezsigntemplatedocumentpagerecognitionDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsigntemplatedocumentpagerecognition
@@ -93,7 +93,7 @@ ObjectEzsigntemplatedocumentpagerecognitionApi*apiInstance = [[ObjectEzsigntempl
 
 // Delete an existing Ezsigntemplatedocumentpagerecognition
 [apiInstance ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID:pkiEzsigntemplatedocumentpagerecognitionID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response***](EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionEditObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
     ezsigntemplatedocumentpagerecognitionEditObjectV1Request: (EzsigntemplatedocumentpagerecognitionEditObjectV1Request*) ezsigntemplatedocumentpagerecognitionEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatedocumentpagerecognitionEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatedocumentpagerecognition
@@ -153,7 +153,7 @@ ObjectEzsigntemplatedocumentpagerecognitionApi*apiInstance = [[ObjectEzsigntempl
 // Edit an existing Ezsigntemplatedocumentpagerecognition
 [apiInstance ezsigntemplatedocumentpagerecognitionEditObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID:pkiEzsigntemplatedocumentpagerecognitionID
               ezsigntemplatedocumentpagerecognitionEditObjectV1Request:ezsigntemplatedocumentpagerecognitionEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatedocumentpagerecognitionEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionEditObjectV1Response***](EzsigntemplatedocumentpagerecognitionEditObjectV1Response.md)
 
 ### Authorization
 

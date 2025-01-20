@@ -1,11 +1,11 @@
 #import "ObjectEzsignsigningreasonApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsigningreasonCreateObjectV1Request.h"
 #import "EzsignsigningreasonCreateObjectV1Response.h"
 #import "EzsignsigningreasonEditObjectV1Request.h"
+#import "EzsignsigningreasonEditObjectV1Response.h"
 #import "EzsignsigningreasonGetAutocompleteV2Response.h"
 #import "EzsignsigningreasonGetListV1Response.h"
 #import "EzsignsigningreasonGetObjectV2Response.h"
@@ -130,11 +130,11 @@ NSInteger kObjectEzsignsigningreasonApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignsigningreasonEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignsigningreasonEditObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignsigningreasonEditObjectV1WithPkiEzsignsigningreasonID: (NSNumber*) pkiEzsignsigningreasonID
     ezsignsigningreasonEditObjectV1Request: (EzsignsigningreasonEditObjectV1Request*) ezsignsigningreasonEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignsigningreasonEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsigningreasonID' is set
     if (pkiEzsignsigningreasonID == nil) {
         NSParameterAssert(pkiEzsignsigningreasonID);
@@ -198,10 +198,10 @@ NSInteger kObjectEzsignsigningreasonApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignsigningreasonEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignsigningreasonEditObjectV1Response*)data, error);
                                 }
                             }];
 }

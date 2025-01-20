@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigntemplatedocumentCreateObjectV1Request.h"
@@ -14,6 +13,7 @@
 #import "EzsigntemplatedocumentEditObjectV1Response.h"
 #import "EzsigntemplatedocumentExtractTextV1Request.h"
 #import "EzsigntemplatedocumentExtractTextV1Response.h"
+#import "EzsigntemplatedocumentFlattenV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
@@ -22,6 +22,7 @@
 #import "EzsigntemplatedocumentGetWordsPositionsV1Request.h"
 #import "EzsigntemplatedocumentGetWordsPositionsV1Response.h"
 #import "EzsigntemplatedocumentPatchObjectV1Request.h"
+#import "EzsigntemplatedocumentPatchObjectV1Response.h"
 #import "Api.h"
 
 /**
@@ -149,10 +150,10 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigntemplatedocumentFlattenV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions
@@ -247,10 +248,10 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigntemplatedocumentPatchObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentPatchObjectV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     ezsigntemplatedocumentPatchObjectV1Request: (EzsigntemplatedocumentPatchObjectV1Request*) ezsigntemplatedocumentPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigntemplatedocumentPatchObjectV1Response* output, NSError* error)) handler;
 
 
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **bDomainValidmailfrom** | **NSNumber*** | Whether the mail from is valid or not | 
 **bDomainValidcustomer** | **NSNumber*** | Whether the customer has access to it or not | 
 **objAudit** | [**CommonAudit***](CommonAudit.md) |  | 
-**aObjDnsrecord** | **NSArray&lt;CustomDnsrecordResponse&gt;*** |  | 
+**aObjDnsrecord** | [**NSArray&lt;CustomDnsrecordResponse&gt;***](CustomDnsrecordResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

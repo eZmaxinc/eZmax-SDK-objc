@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) apikeyEditObjectV1WithPkiApikeyID: (NSNumber*) pkiApikeyID
     apikeyEditObjectV1Request: (ApikeyEditObjectV1Request*) apikeyEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(ApikeyEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Apikey
@@ -102,7 +102,7 @@ ObjectApikeyApi*apiInstance = [[ObjectApikeyApi alloc] init];
 // Edit an existing Apikey
 [apiInstance apikeyEditObjectV1WithPkiApikeyID:pkiApikeyID
               apikeyEditObjectV1Request:apikeyEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(ApikeyEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**ApikeyEditObjectV1Response***](ApikeyEditObjectV1Response.md)
 
 ### Authorization
 

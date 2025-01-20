@@ -15,8 +15,8 @@
 
 
 #import "EnumTextvalidation.h"
-#import "EzsigntemplateelementdependencyResponse.h"
-#import "EzsigntemplatesignaturecustomdateResponse.h"
+#import "EzsigntemplateelementdependencyResponseCompound.h"
+#import "EzsigntemplatesignaturecustomdateResponseCompound.h"
 #import "FieldEEzsigntemplatesignatureAttachmentnamesource.h"
 #import "FieldEEzsigntemplatesignatureConsultationtrigger.h"
 #import "FieldEEzsigntemplatesignatureDependencyrequirement.h"
@@ -27,10 +27,10 @@
 #import "FieldEEzsigntemplatesignatureType.h"
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
-@protocol EzsigntemplateelementdependencyResponse;
-@class EzsigntemplateelementdependencyResponse;
-@protocol EzsigntemplatesignaturecustomdateResponse;
-@class EzsigntemplatesignaturecustomdateResponse;
+@protocol EzsigntemplateelementdependencyResponseCompound;
+@class EzsigntemplateelementdependencyResponseCompound;
+@protocol EzsigntemplatesignaturecustomdateResponseCompound;
+@class EzsigntemplatesignaturecustomdateResponseCompound;
 @protocol FieldEEzsigntemplatesignatureAttachmentnamesource;
 @class FieldEEzsigntemplatesignatureAttachmentnamesource;
 @protocol FieldEEzsigntemplatesignatureConsultationtrigger;

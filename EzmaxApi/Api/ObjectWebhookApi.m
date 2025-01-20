@@ -1,22 +1,22 @@
 #import "ObjectWebhookApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorTooManyRequests.h"
-#import "CustomEWebhookEzsignevent.h"
-#import "FieldEWebhookManagementevent.h"
-#import "FieldEWebhookModule.h"
 #import "HeaderAcceptLanguage.h"
 #import "WebhookCreateObjectV2Request.h"
 #import "WebhookCreateObjectV2Response.h"
+#import "WebhookDeleteObjectV1Response.h"
 #import "WebhookEditObjectV1Request.h"
+#import "WebhookEditObjectV1Response.h"
 #import "WebhookGetHistoryV1Response.h"
 #import "WebhookGetListV1Response.h"
 #import "WebhookGetObjectV2Response.h"
 #import "WebhookRegenerateApikeyV1Request.h"
 #import "WebhookRegenerateApikeyV1Response.h"
 #import "WebhookSendWebhookV1Request.h"
+#import "WebhookSendWebhookV1Response.h"
+#import "WebhookTestV1Response.h"
 
 
 @interface ObjectWebhookApi ()
@@ -135,10 +135,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiWebhookID  
 ///
-///  @returns CommonResponse*
+///  @returns WebhookDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) webhookDeleteObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(WebhookDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == nil) {
         NSParameterAssert(pkiWebhookID);
@@ -190,10 +190,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"WebhookDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((WebhookDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -205,11 +205,11 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
 ///
 ///  @param webhookEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns WebhookEditObjectV1Response*
 ///
 -(NSURLSessionTask*) webhookEditObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     webhookEditObjectV1Request: (WebhookEditObjectV1Request*) webhookEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(WebhookEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == nil) {
         NSParameterAssert(pkiWebhookID);
@@ -273,10 +273,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"WebhookEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((WebhookEditObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -603,10 +603,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
 /// 
 ///  @param webhookSendWebhookV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns WebhookSendWebhookV1Response*
 ///
 -(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(WebhookSendWebhookV1Response* output, NSError* error)) handler {
     // verify the required parameter 'webhookSendWebhookV1Request' is set
     if (webhookSendWebhookV1Request == nil) {
         NSParameterAssert(webhookSendWebhookV1Request);
@@ -656,10 +656,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"WebhookSendWebhookV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((WebhookSendWebhookV1Response*)data, error);
                                 }
                             }];
 }
@@ -671,11 +671,11 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
 ///
 ///  @param body  
 ///
-///  @returns CommonResponse*
+///  @returns WebhookTestV1Response*
 ///
 -(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(WebhookTestV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiWebhookID' is set
     if (pkiWebhookID == nil) {
         NSParameterAssert(pkiWebhookID);
@@ -739,10 +739,10 @@ NSInteger kObjectWebhookApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"WebhookTestV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((WebhookTestV1Response*)data, error);
                                 }
                             }];
 }

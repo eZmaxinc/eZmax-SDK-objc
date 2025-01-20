@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepublicEditObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
     ezsigntemplatepublicEditObjectV1Request: (EzsigntemplatepublicEditObjectV1Request*) ezsigntemplatepublicEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatepublicEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatepublic
@@ -158,7 +158,7 @@ ObjectEzsigntemplatepublicApi*apiInstance = [[ObjectEzsigntemplatepublicApi allo
 // Edit an existing Ezsigntemplatepublic
 [apiInstance ezsigntemplatepublicEditObjectV1WithPkiEzsigntemplatepublicID:pkiEzsigntemplatepublicID
               ezsigntemplatepublicEditObjectV1Request:ezsigntemplatepublicEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatepublicEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatepublicEditObjectV1Response***](EzsigntemplatepublicEditObjectV1Response.md)
 
 ### Authorization
 

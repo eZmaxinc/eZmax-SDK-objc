@@ -1,12 +1,13 @@
 #import "ObjectUsergroupexternalApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UsergroupexternalCreateObjectV1Request.h"
 #import "UsergroupexternalCreateObjectV1Response.h"
+#import "UsergroupexternalDeleteObjectV1Response.h"
 #import "UsergroupexternalEditObjectV1Request.h"
+#import "UsergroupexternalEditObjectV1Response.h"
 #import "UsergroupexternalGetAutocompleteV2Response.h"
 #import "UsergroupexternalGetListV1Response.h"
 #import "UsergroupexternalGetObjectV2Response.h"
@@ -130,10 +131,10 @@ NSInteger kObjectUsergroupexternalApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiUsergroupexternalID The unique ID of the Usergroupexternal 
 ///
-///  @returns CommonResponse*
+///  @returns UsergroupexternalDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) usergroupexternalDeleteObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(UsergroupexternalDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupexternalID' is set
     if (pkiUsergroupexternalID == nil) {
         NSParameterAssert(pkiUsergroupexternalID);
@@ -185,10 +186,10 @@ NSInteger kObjectUsergroupexternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"UsergroupexternalDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((UsergroupexternalDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -200,11 +201,11 @@ NSInteger kObjectUsergroupexternalApiMissingParamErrorCode = 234513;
 ///
 ///  @param usergroupexternalEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns UsergroupexternalEditObjectV1Response*
 ///
 -(NSURLSessionTask*) usergroupexternalEditObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
     usergroupexternalEditObjectV1Request: (UsergroupexternalEditObjectV1Request*) usergroupexternalEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(UsergroupexternalEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiUsergroupexternalID' is set
     if (pkiUsergroupexternalID == nil) {
         NSParameterAssert(pkiUsergroupexternalID);
@@ -268,10 +269,10 @@ NSInteger kObjectUsergroupexternalApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"UsergroupexternalEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((UsergroupexternalEditObjectV1Response*)data, error);
                                 }
                             }];
 }

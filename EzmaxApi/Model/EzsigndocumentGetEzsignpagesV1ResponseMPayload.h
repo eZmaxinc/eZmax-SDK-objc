@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsignpageResponse.h"
-@protocol EzsignpageResponse;
-@class EzsignpageResponse;
+#import "EzsignpageResponseCompound.h"
+@protocol EzsignpageResponseCompound;
+@class EzsignpageResponseCompound;
 
 
 

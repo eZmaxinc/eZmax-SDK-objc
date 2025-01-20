@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) userEditObjectV1WithPkiUserID: (NSNumber*) pkiUserID
     userEditObjectV1Request: (UserEditObjectV1Request*) userEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(UserEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing User
@@ -226,7 +226,7 @@ ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
 // Edit an existing User
 [apiInstance userEditObjectV1WithPkiUserID:pkiUserID
               userEditObjectV1Request:userEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(UserEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**UserEditObjectV1Response***](UserEditObjectV1Response.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID
     body: (NSObject*) body
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(UserSendPasswordResetV1Response* output, NSError* error)) handler;
 ```
 
 Send password reset
@@ -934,7 +934,7 @@ ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
 // Send password reset
 [apiInstance userSendPasswordResetV1WithPkiUserID:pkiUserID
               body:body
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(UserSendPasswordResetV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -953,7 +953,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**UserSendPasswordResetV1Response***](UserSendPasswordResetV1Response.md)
 
 ### Authorization
 

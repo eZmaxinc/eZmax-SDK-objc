@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **eEzsignformfieldDependencyrequirement** | [**FieldEEzsignformfieldDependencyrequirement***](FieldEEzsignformfieldDependencyrequirement.md) |  | [optional] 
 **eEzsignformfieldHorizontalalignment** | [**EnumHorizontalalignment***](EnumHorizontalalignment.md) |  | [optional] 
 **objTextstylestatic** | [**TextstylestaticRequestCompound***](TextstylestaticRequestCompound.md) |  | [optional] 
-**aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyRequestCompound&gt;***](EzsignelementdependencyRequest.md) |  | [optional] 
+**aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyRequestCompound&gt;***](EzsignelementdependencyRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
