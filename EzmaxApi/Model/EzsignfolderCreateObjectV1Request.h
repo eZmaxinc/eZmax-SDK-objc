@@ -15,8 +15,11 @@
 
 
 #import "EzsignfolderRequest.h"
+#import "EzsignfolderRequestCompound.h"
 @protocol EzsignfolderRequest;
 @class EzsignfolderRequest;
+@protocol EzsignfolderRequestCompound;
+@class EzsignfolderRequestCompound;
 
 
 
@@ -27,8 +30,7 @@
 
 
 @property(nonatomic) EzsignfolderRequest* objEzsignfolder;
-/* An Ezsignfolder Object and children to create a complete structure [optional]
- */
-@property(nonatomic) EzsignfolderRequest* objEzsignfolderCompound;
+
+@property(nonatomic) EzsignfolderRequestCompound* objEzsignfolderCompound;
 
 @end

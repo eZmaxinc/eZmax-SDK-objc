@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "UsergroupdelegationCreateObjectV1Request.h"
 #import "UsergroupdelegationCreateObjectV1Response.h"
+#import "UsergroupdelegationDeleteObjectV1Response.h"
 #import "UsergroupdelegationEditObjectV1Request.h"
+#import "UsergroupdelegationEditObjectV1Response.h"
 #import "UsergroupdelegationGetObjectV2Response.h"
 #import "Api.h"
 
@@ -48,9 +49,9 @@ extern NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupdelegationDeleteObjectV1Response*
 -(NSURLSessionTask*) usergroupdelegationDeleteObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupdelegationDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Usergroupdelegation
@@ -63,10 +64,10 @@ extern NSInteger kObjectUsergroupdelegationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupdelegationEditObjectV1Response*
 -(NSURLSessionTask*) usergroupdelegationEditObjectV1WithPkiUsergroupdelegationID: (NSNumber*) pkiUsergroupdelegationID
     usergroupdelegationEditObjectV1Request: (UsergroupdelegationEditObjectV1Request*) usergroupdelegationEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupdelegationEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Usergroupdelegation

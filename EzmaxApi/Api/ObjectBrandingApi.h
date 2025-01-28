@@ -2,10 +2,10 @@
 #import "BrandingCreateObjectV2Request.h"
 #import "BrandingCreateObjectV2Response.h"
 #import "BrandingEditObjectV2Request.h"
+#import "BrandingEditObjectV2Response.h"
 #import "BrandingGetAutocompleteV2Response.h"
 #import "BrandingGetListV1Response.h"
 #import "BrandingGetObjectV3Response.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
@@ -52,10 +52,10 @@ extern NSInteger kObjectBrandingApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return BrandingEditObjectV2Response*
 -(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
     brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve Brandings and IDs

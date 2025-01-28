@@ -1,11 +1,12 @@
 #import "ObjectSignatureApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "SignatureCreateObjectV1Request.h"
 #import "SignatureCreateObjectV1Response.h"
+#import "SignatureDeleteObjectV1Response.h"
 #import "SignatureEditObjectV1Request.h"
+#import "SignatureEditObjectV1Response.h"
 #import "SignatureGetObjectV2Response.h"
 #import "SignatureGetObjectV3Response.h"
 
@@ -126,10 +127,10 @@ NSInteger kObjectSignatureApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiSignatureID The unique ID of the Signature 
 ///
-///  @returns CommonResponse*
+///  @returns SignatureDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) signatureDeleteObjectV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(SignatureDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSignatureID' is set
     if (pkiSignatureID == nil) {
         NSParameterAssert(pkiSignatureID);
@@ -181,10 +182,10 @@ NSInteger kObjectSignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"SignatureDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((SignatureDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -196,11 +197,11 @@ NSInteger kObjectSignatureApiMissingParamErrorCode = 234513;
 ///
 ///  @param signatureEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns SignatureEditObjectV1Response*
 ///
 -(NSURLSessionTask*) signatureEditObjectV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
     signatureEditObjectV1Request: (SignatureEditObjectV1Request*) signatureEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(SignatureEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSignatureID' is set
     if (pkiSignatureID == nil) {
         NSParameterAssert(pkiSignatureID);
@@ -264,10 +265,10 @@ NSInteger kObjectSignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"SignatureEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((SignatureEditObjectV1Response*)data, error);
                                 }
                             }];
 }

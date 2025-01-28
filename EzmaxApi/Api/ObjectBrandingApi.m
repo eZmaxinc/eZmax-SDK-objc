@@ -4,10 +4,10 @@
 #import "BrandingCreateObjectV2Request.h"
 #import "BrandingCreateObjectV2Response.h"
 #import "BrandingEditObjectV2Request.h"
+#import "BrandingEditObjectV2Response.h"
 #import "BrandingGetAutocompleteV2Response.h"
 #import "BrandingGetListV1Response.h"
 #import "BrandingGetObjectV3Response.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 
@@ -130,11 +130,11 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
 ///
 ///  @param brandingEditObjectV2Request  
 ///
-///  @returns CommonResponse*
+///  @returns BrandingEditObjectV2Response*
 ///
 -(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
     brandingEditObjectV2Request: (BrandingEditObjectV2Request*) brandingEditObjectV2Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(BrandingEditObjectV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiBrandingID' is set
     if (pkiBrandingID == nil) {
         NSParameterAssert(pkiBrandingID);
@@ -198,10 +198,10 @@ NSInteger kObjectBrandingApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"BrandingEditObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((BrandingEditObjectV2Response*)data, error);
                                 }
                             }];
 }

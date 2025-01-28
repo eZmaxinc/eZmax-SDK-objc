@@ -1,10 +1,11 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UsergroupexternalCreateObjectV1Request.h"
 #import "UsergroupexternalCreateObjectV1Response.h"
+#import "UsergroupexternalDeleteObjectV1Response.h"
 #import "UsergroupexternalEditObjectV1Request.h"
+#import "UsergroupexternalEditObjectV1Response.h"
 #import "UsergroupexternalGetAutocompleteV2Response.h"
 #import "UsergroupexternalGetListV1Response.h"
 #import "UsergroupexternalGetObjectV2Response.h"
@@ -54,9 +55,9 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupexternalDeleteObjectV1Response*
 -(NSURLSessionTask*) usergroupexternalDeleteObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupexternalDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Usergroupexternal
@@ -69,10 +70,10 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UsergroupexternalEditObjectV1Response*
 -(NSURLSessionTask*) usergroupexternalEditObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
     usergroupexternalEditObjectV1Request: (UsergroupexternalEditObjectV1Request*) usergroupexternalEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UsergroupexternalEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Usergroupexternals and IDs

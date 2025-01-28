@@ -14,9 +14,9 @@
 */
 
 
-#import "ApikeyResponse.h"
-@protocol ApikeyResponse;
-@class ApikeyResponse;
+#import "ApikeyResponseCompound.h"
+@protocol ApikeyResponseCompound;
+@class ApikeyResponseCompound;
 
 
 

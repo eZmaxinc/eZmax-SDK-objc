@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.h"
@@ -7,12 +6,17 @@
 #import "EzsignfoldersignerassociationCreateObjectV1Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Request.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Response.h"
+#import "EzsignfoldersignerassociationDeleteObjectV1Response.h"
 #import "EzsignfoldersignerassociationEditObjectV1Request.h"
+#import "EzsignfoldersignerassociationEditObjectV1Response.h"
+#import "EzsignfoldersignerassociationForceDisconnectV1Response.h"
 #import "EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV2Response.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Request.h"
+#import "EzsignfoldersignerassociationPatchObjectV1Response.h"
 #import "EzsignfoldersignerassociationReassignV1Request.h"
+#import "EzsignfoldersignerassociationReassignV1Response.h"
 #import "Api.h"
 
 /**
@@ -85,9 +89,9 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldersignerassociationDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationDeleteObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldersignerassociationDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignfoldersignerassociation
@@ -100,10 +104,10 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldersignerassociationEditObjectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationEditObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationEditObjectV1Request: (EzsignfoldersignerassociationEditObjectV1Request*) ezsignfoldersignerassociationEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldersignerassociationEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Disconnects the Ezsignfoldersignerassociation
@@ -116,10 +120,10 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldersignerassociationForceDisconnectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationForceDisconnectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldersignerassociationForceDisconnectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve a Login Url to allow In-Person signing
@@ -172,10 +176,10 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldersignerassociationPatchObjectV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationPatchObjectV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationPatchObjectV1Request: (EzsignfoldersignerassociationPatchObjectV1Request*) ezsignfoldersignerassociationPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldersignerassociationPatchObjectV1Response* output, NSError* error)) handler;
 
 
 /// Reassign remaining unsigned signatures and forms
@@ -188,10 +192,10 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldersignerassociationReassignV1Response*
 -(NSURLSessionTask*) ezsignfoldersignerassociationReassignV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
     ezsignfoldersignerassociationReassignV1Request: (EzsignfoldersignerassociationReassignV1Request*) ezsignfoldersignerassociationReassignV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldersignerassociationReassignV1Response* output, NSError* error)) handler;
 
 
 

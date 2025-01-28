@@ -14,11 +14,11 @@
 */
 
 
-#import "AttemptResponse.h"
+#import "AttemptResponseCompound.h"
 #import "CustomWebhookResponse.h"
 #import "EzsignfolderResponse.h"
-@protocol AttemptResponse;
-@class AttemptResponse;
+@protocol AttemptResponseCompound;
+@class AttemptResponseCompound;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
 @protocol EzsignfolderResponse;

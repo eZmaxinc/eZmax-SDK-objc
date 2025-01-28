@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **webhookDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) webhookDeleteObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(WebhookDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Webhook
@@ -98,7 +98,7 @@ ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
 
 // Delete an existing Webhook
 [apiInstance webhookDeleteObjectV1WithPkiWebhookID:pkiWebhookID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(WebhookDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**WebhookDeleteObjectV1Response***](WebhookDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) webhookEditObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     webhookEditObjectV1Request: (WebhookEditObjectV1Request*) webhookEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(WebhookEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Webhook
@@ -158,7 +158,7 @@ ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
 // Edit an existing Webhook
 [apiInstance webhookEditObjectV1WithPkiWebhookID:pkiWebhookID
               webhookEditObjectV1Request:webhookEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(WebhookEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**WebhookEditObjectV1Response***](WebhookEditObjectV1Response.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 # **webhookSendWebhookV1**
 ```objc
 -(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(WebhookSendWebhookV1Response* output, NSError* error)) handler;
 ```
 
 Emit a Webhook event
@@ -466,7 +466,7 @@ ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
 
 // Emit a Webhook event
 [apiInstance webhookSendWebhookV1WithWebhookSendWebhookV1Request:webhookSendWebhookV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(WebhookSendWebhookV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**WebhookSendWebhookV1Response***](WebhookSendWebhookV1Response.md)
 
 ### Authorization
 
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
     body: (NSObject*) body
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(WebhookTestV1Response* output, NSError* error)) handler;
 ```
 
 Test the Webhook by calling the Url
@@ -526,7 +526,7 @@ ObjectWebhookApi*apiInstance = [[ObjectWebhookApi alloc] init];
 // Test the Webhook by calling the Url
 [apiInstance webhookTestV1WithPkiWebhookID:pkiWebhookID
               body:body
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(WebhookTestV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**WebhookTestV1Response***](WebhookTestV1Response.md)
 
 ### Authorization
 

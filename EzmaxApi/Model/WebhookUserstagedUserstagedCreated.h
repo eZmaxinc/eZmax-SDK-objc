@@ -14,15 +14,15 @@
 */
 
 
-#import "AttemptResponse.h"
+#import "AttemptResponseCompound.h"
 #import "CustomWebhookResponse.h"
-#import "UserstagedResponse.h"
-@protocol AttemptResponse;
-@class AttemptResponse;
+#import "UserstagedResponseCompound.h"
+@protocol AttemptResponseCompound;
+@class AttemptResponseCompound;
 @protocol CustomWebhookResponse;
 @class CustomWebhookResponse;
-@protocol UserstagedResponse;
-@class UserstagedResponse;
+@protocol UserstagedResponseCompound;
+@class UserstagedResponseCompound;
 
 
 
@@ -36,8 +36,7 @@
 /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. 
  */
 @property(nonatomic) NSArray<AttemptResponseCompound>* aObjAttempt;
-/* A Userstaged Object 
- */
-@property(nonatomic) UserstagedResponse* objUserstaged;
+
+@property(nonatomic) UserstagedResponseCompound* objUserstaged;
 
 @end

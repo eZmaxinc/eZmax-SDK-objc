@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsignfolderRequestV3.h"
-@protocol EzsignfolderRequestV3;
-@class EzsignfolderRequestV3;
+#import "EzsignfolderRequestCompoundV3.h"
+@protocol EzsignfolderRequestCompoundV3;
+@class EzsignfolderRequestCompoundV3;
 
 
 

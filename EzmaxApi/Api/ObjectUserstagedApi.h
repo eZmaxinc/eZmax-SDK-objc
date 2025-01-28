@@ -1,11 +1,12 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "UserstagedCreateUserV1Response.h"
+#import "UserstagedDeleteObjectV1Response.h"
 #import "UserstagedGetListV1Response.h"
 #import "UserstagedGetObjectV2Response.h"
 #import "UserstagedMapV1Request.h"
+#import "UserstagedMapV1Response.h"
 #import "Api.h"
 
 /**
@@ -52,9 +53,9 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UserstagedDeleteObjectV1Response*
 -(NSURLSessionTask*) userstagedDeleteObjectV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UserstagedDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Userstaged list
@@ -101,10 +102,10 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return UserstagedMapV1Response*
 -(NSURLSessionTask*) userstagedMapV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
     userstagedMapV1Request: (UserstagedMapV1Request*) userstagedMapV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(UserstagedMapV1Response* output, NSError* error)) handler;
 
 
 

@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **ezsignformfieldgroupDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) ezsignformfieldgroupDeleteObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignformfieldgroupDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Ezsignformfieldgroup
@@ -93,7 +93,7 @@ ObjectEzsignformfieldgroupApi*apiInstance = [[ObjectEzsignformfieldgroupApi allo
 
 // Delete an existing Ezsignformfieldgroup
 [apiInstance ezsignformfieldgroupDeleteObjectV1WithPkiEzsignformfieldgroupID:pkiEzsignformfieldgroupID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignformfieldgroupDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignformfieldgroupDeleteObjectV1Response***](EzsignformfieldgroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignformfieldgroupEditObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
     ezsignformfieldgroupEditObjectV1Request: (EzsignformfieldgroupEditObjectV1Request*) ezsignformfieldgroupEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignformfieldgroupEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignformfieldgroup
@@ -153,7 +153,7 @@ ObjectEzsignformfieldgroupApi*apiInstance = [[ObjectEzsignformfieldgroupApi allo
 // Edit an existing Ezsignformfieldgroup
 [apiInstance ezsignformfieldgroupEditObjectV1WithPkiEzsignformfieldgroupID:pkiEzsignformfieldgroupID
               ezsignformfieldgroupEditObjectV1Request:ezsignformfieldgroupEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignformfieldgroupEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignformfieldgroupEditObjectV1Response***](EzsignformfieldgroupEditObjectV1Response.md)
 
 ### Authorization
 

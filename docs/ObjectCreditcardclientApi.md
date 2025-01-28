@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **creditcardclientDeleteObjectV1**
 ```objc
 -(NSURLSessionTask*) creditcardclientDeleteObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(CreditcardclientDeleteObjectV1Response* output, NSError* error)) handler;
 ```
 
 Delete an existing Creditcardclient
@@ -96,7 +96,7 @@ ObjectCreditcardclientApi*apiInstance = [[ObjectCreditcardclientApi alloc] init]
 
 // Delete an existing Creditcardclient
 [apiInstance creditcardclientDeleteObjectV1WithPkiCreditcardclientID:pkiCreditcardclientID
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(CreditcardclientDeleteObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**CreditcardclientDeleteObjectV1Response***](CreditcardclientDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) creditcardclientEditObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientEditObjectV1Request: (CreditcardclientEditObjectV1Request*) creditcardclientEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(CreditcardclientEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Creditcardclient
@@ -156,7 +156,7 @@ ObjectCreditcardclientApi*apiInstance = [[ObjectCreditcardclientApi alloc] init]
 // Edit an existing Creditcardclient
 [apiInstance creditcardclientEditObjectV1WithPkiCreditcardclientID:pkiCreditcardclientID
               creditcardclientEditObjectV1Request:creditcardclientEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(CreditcardclientEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**CreditcardclientEditObjectV1Response***](CreditcardclientEditObjectV1Response.md)
 
 ### Authorization
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) creditcardclientPatchObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
     creditcardclientPatchObjectV1Request: (CreditcardclientPatchObjectV1Request*) creditcardclientPatchObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(CreditcardclientPatchObjectV1Response* output, NSError* error)) handler;
 ```
 
 Patch an existing Creditcardclient
@@ -416,7 +416,7 @@ ObjectCreditcardclientApi*apiInstance = [[ObjectCreditcardclientApi alloc] init]
 // Patch an existing Creditcardclient
 [apiInstance creditcardclientPatchObjectV1WithPkiCreditcardclientID:pkiCreditcardclientID
               creditcardclientPatchObjectV1Request:creditcardclientPatchObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(CreditcardclientPatchObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**CreditcardclientPatchObjectV1Response***](CreditcardclientPatchObjectV1Response.md)
 
 ### Authorization
 

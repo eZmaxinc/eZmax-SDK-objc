@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignsigningreasonEditObjectV1WithPkiEzsignsigningreasonID: (NSNumber*) pkiEzsignsigningreasonID
     ezsignsigningreasonEditObjectV1Request: (EzsignsigningreasonEditObjectV1Request*) ezsignsigningreasonEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsignsigningreasonEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsignsigningreason
@@ -97,7 +97,7 @@ ObjectEzsignsigningreasonApi*apiInstance = [[ObjectEzsignsigningreasonApi alloc]
 // Edit an existing Ezsignsigningreason
 [apiInstance ezsignsigningreasonEditObjectV1WithPkiEzsignsigningreasonID:pkiEzsignsigningreasonID
               ezsignsigningreasonEditObjectV1Request:ezsignsigningreasonEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsignsigningreasonEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsignsigningreasonEditObjectV1Response***](EzsignsigningreasonEditObjectV1Response.md)
 
 ### Authorization
 

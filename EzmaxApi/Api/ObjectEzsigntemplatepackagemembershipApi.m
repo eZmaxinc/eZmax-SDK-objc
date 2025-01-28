@@ -1,10 +1,10 @@
 #import "ObjectEzsigntemplatepackagemembershipApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsigntemplatepackagemembershipCreateObjectV1Request.h"
 #import "EzsigntemplatepackagemembershipCreateObjectV1Response.h"
+#import "EzsigntemplatepackagemembershipDeleteObjectV1Response.h"
 #import "EzsigntemplatepackagemembershipGetObjectV2Response.h"
 
 
@@ -124,10 +124,10 @@ NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode = 23451
 /// 
 ///  @param pkiEzsigntemplatepackagemembershipID  
 ///
-///  @returns CommonResponse*
+///  @returns EzsigntemplatepackagemembershipDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipDeleteObjectV1WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsigntemplatepackagemembershipDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsigntemplatepackagemembershipID' is set
     if (pkiEzsigntemplatepackagemembershipID == nil) {
         NSParameterAssert(pkiEzsigntemplatepackagemembershipID);
@@ -179,10 +179,10 @@ NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode = 23451
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsigntemplatepackagemembershipDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsigntemplatepackagemembershipDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }

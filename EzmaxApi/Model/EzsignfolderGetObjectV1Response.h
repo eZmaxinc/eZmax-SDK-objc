@@ -16,13 +16,13 @@
 
 #import "CommonResponseObjDebug.h"
 #import "CommonResponseObjDebugPayload.h"
-#import "EzsignfolderResponseCompound.h"
+#import "EzsignfolderGetObjectV1ResponseMPayload.h"
 @protocol CommonResponseObjDebug;
 @class CommonResponseObjDebug;
 @protocol CommonResponseObjDebugPayload;
 @class CommonResponseObjDebugPayload;
-@protocol EzsignfolderResponseCompound;
-@class EzsignfolderResponseCompound;
+@protocol EzsignfolderGetObjectV1ResponseMPayload;
+@class EzsignfolderGetObjectV1ResponseMPayload;
 
 
 
@@ -35,8 +35,7 @@
 @property(nonatomic) CommonResponseObjDebugPayload* objDebugPayload;
 
 @property(nonatomic) CommonResponseObjDebug* objDebug;
-/* Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID} 
- */
-@property(nonatomic) EzsignfolderResponseCompound* mPayload;
+
+@property(nonatomic) EzsignfolderGetObjectV1ResponseMPayload* mPayload;
 
 @end

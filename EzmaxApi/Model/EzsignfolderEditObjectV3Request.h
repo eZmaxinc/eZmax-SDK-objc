@@ -14,9 +14,9 @@
 */
 
 
-#import "EzsignfolderRequestV3.h"
-@protocol EzsignfolderRequestV3;
-@class EzsignfolderRequestV3;
+#import "EzsignfolderRequestCompoundV3.h"
+@protocol EzsignfolderRequestCompoundV3;
+@class EzsignfolderRequestCompoundV3;
 
 
 
@@ -25,8 +25,7 @@
 
 @interface EzsignfolderEditObjectV3Request : Object
 
-/* An Ezsignfolder Object and children to create a complete structure 
- */
-@property(nonatomic) EzsignfolderRequestV3* objEzsignfolder;
+
+@property(nonatomic) EzsignfolderRequestCompoundV3* objEzsignfolder;
 
 @end

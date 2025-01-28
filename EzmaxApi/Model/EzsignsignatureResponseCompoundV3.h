@@ -17,8 +17,8 @@
 #import "CustomContactNameResponse.h"
 #import "CustomCreditcardtransactionResponse.h"
 #import "EnumTextvalidation.h"
-#import "EzsignelementdependencyResponse.h"
-#import "EzsignsignaturecustomdateResponseV2.h"
+#import "EzsignelementdependencyResponseCompound.h"
+#import "EzsignsignaturecustomdateResponseCompoundV2.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
 #import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
@@ -32,10 +32,10 @@
 @class CustomCreditcardtransactionResponse;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
-@protocol EzsignelementdependencyResponse;
-@class EzsignelementdependencyResponse;
-@protocol EzsignsignaturecustomdateResponseV2;
-@class EzsignsignaturecustomdateResponseV2;
+@protocol EzsignelementdependencyResponseCompound;
+@class EzsignelementdependencyResponseCompound;
+@protocol EzsignsignaturecustomdateResponseCompoundV2;
+@class EzsignsignaturecustomdateResponseCompoundV2;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
 @protocol FieldEEzsignsignatureConsultationtrigger;

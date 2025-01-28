@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignformfieldgroupCreateObjectV1Request.h"
 #import "EzsignformfieldgroupCreateObjectV1Response.h"
+#import "EzsignformfieldgroupDeleteObjectV1Response.h"
 #import "EzsignformfieldgroupEditObjectV1Request.h"
+#import "EzsignformfieldgroupEditObjectV1Response.h"
 #import "EzsignformfieldgroupGetObjectV2Response.h"
 #import "Api.h"
 
@@ -49,9 +50,9 @@ extern NSInteger kObjectEzsignformfieldgroupApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignformfieldgroupDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignformfieldgroupDeleteObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignformfieldgroupDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignformfieldgroup
@@ -64,10 +65,10 @@ extern NSInteger kObjectEzsignformfieldgroupApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignformfieldgroupEditObjectV1Response*
 -(NSURLSessionTask*) ezsignformfieldgroupEditObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
     ezsignformfieldgroupEditObjectV1Request: (EzsignformfieldgroupEditObjectV1Request*) ezsignformfieldgroupEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignformfieldgroupEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignformfieldgroup

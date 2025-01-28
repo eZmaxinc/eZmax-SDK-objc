@@ -16,8 +16,8 @@
 
 #import "CustomCreateEzsignelementsPositionedByWordRequest.h"
 #import "EnumTextvalidation.h"
-#import "EzsignelementdependencyRequest.h"
-#import "EzsignsignaturecustomdateRequest.h"
+#import "EzsignelementdependencyRequestCompound.h"
+#import "EzsignsignaturecustomdateRequestCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
 #import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
@@ -28,10 +28,10 @@
 @class CustomCreateEzsignelementsPositionedByWordRequest;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
-@protocol EzsignelementdependencyRequest;
-@class EzsignelementdependencyRequest;
-@protocol EzsignsignaturecustomdateRequest;
-@class EzsignsignaturecustomdateRequest;
+@protocol EzsignelementdependencyRequestCompound;
+@class EzsignelementdependencyRequestCompound;
+@protocol EzsignsignaturecustomdateRequestCompound;
+@class EzsignsignaturecustomdateRequestCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
 @protocol FieldEEzsignsignatureConsultationtrigger;

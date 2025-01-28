@@ -14,21 +14,21 @@
 */
 
 
-#import "CustomDropdownElementResponse.h"
+#import "CustomDropdownElementResponseCompound.h"
 #import "EnumTextvalidation.h"
 #import "EzsignformfieldResponseCompound.h"
-#import "EzsignformfieldgroupsignerResponse.h"
+#import "EzsignformfieldgroupsignerResponseCompound.h"
 #import "FieldEEzsignformfieldgroupSignerrequirement.h"
 #import "FieldEEzsignformfieldgroupTooltipposition.h"
 #import "FieldEEzsignformfieldgroupType.h"
-@protocol CustomDropdownElementResponse;
-@class CustomDropdownElementResponse;
+@protocol CustomDropdownElementResponseCompound;
+@class CustomDropdownElementResponseCompound;
 @protocol EnumTextvalidation;
 @class EnumTextvalidation;
 @protocol EzsignformfieldResponseCompound;
 @class EzsignformfieldResponseCompound;
-@protocol EzsignformfieldgroupsignerResponse;
-@class EzsignformfieldgroupsignerResponse;
+@protocol EzsignformfieldgroupsignerResponseCompound;
+@class EzsignformfieldgroupsignerResponseCompound;
 @protocol FieldEEzsignformfieldgroupSignerrequirement;
 @class FieldEEzsignformfieldgroupSignerrequirement;
 @protocol FieldEEzsignformfieldgroupTooltipposition;

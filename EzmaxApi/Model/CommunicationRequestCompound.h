@@ -16,7 +16,7 @@
 
 #import "CommunicationexternalrecipientRequestCompound.h"
 #import "CommunicationrecipientRequestCompound.h"
-#import "CommunicationreferenceRequest.h"
+#import "CommunicationreferenceRequestCompound.h"
 #import "CustomCommunicationattachmentRequest.h"
 #import "CustomCommunicationsenderRequest.h"
 #import "FieldECommunicationImportance.h"
@@ -25,8 +25,8 @@
 @class CommunicationexternalrecipientRequestCompound;
 @protocol CommunicationrecipientRequestCompound;
 @class CommunicationrecipientRequestCompound;
-@protocol CommunicationreferenceRequest;
-@class CommunicationreferenceRequest;
+@protocol CommunicationreferenceRequestCompound;
+@class CommunicationreferenceRequestCompound;
 @protocol CustomCommunicationattachmentRequest;
 @class CustomCommunicationattachmentRequest;
 @protocol CustomCommunicationsenderRequest;

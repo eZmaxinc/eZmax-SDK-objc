@@ -41,9 +41,9 @@ Name | Type | Description | Notes
 **objContactNameDelegation** | [**CustomContactNameResponse***](CustomContactNameResponse.md) |  | [optional] 
 **objSignature** | [**SignatureResponseCompound***](SignatureResponseCompound.md) |  | [optional] 
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
-**aObjEzsignsignaturecustomdate** | [**NSArray&lt;EzsignsignaturecustomdateResponseCompoundV2&gt;***](EzsignsignaturecustomdateResponseV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
+**aObjEzsignsignaturecustomdate** | [**NSArray&lt;EzsignsignaturecustomdateResponseCompoundV2&gt;***](EzsignsignaturecustomdateResponseCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
 **objCreditcardtransaction** | [**CustomCreditcardtransactionResponse***](CustomCreditcardtransactionResponse.md) |  | [optional] 
-**aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyResponseCompound&gt;***](EzsignelementdependencyResponse.md) |  | [optional] 
+**aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyResponseCompound&gt;***](EzsignelementdependencyResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

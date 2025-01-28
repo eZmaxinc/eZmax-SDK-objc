@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsigntemplatepackagesignerEditObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
     ezsigntemplatepackagesignerEditObjectV1Request: (EzsigntemplatepackagesignerEditObjectV1Request*) ezsigntemplatepackagesignerEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzsigntemplatepackagesignerEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezsigntemplatepackagesigner
@@ -153,7 +153,7 @@ ObjectEzsigntemplatepackagesignerApi*apiInstance = [[ObjectEzsigntemplatepackage
 // Edit an existing Ezsigntemplatepackagesigner
 [apiInstance ezsigntemplatepackagesignerEditObjectV1WithPkiEzsigntemplatepackagesignerID:pkiEzsigntemplatepackagesignerID
               ezsigntemplatepackagesignerEditObjectV1Request:ezsigntemplatepackagesignerEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzsigntemplatepackagesignerEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzsigntemplatepackagesignerEditObjectV1Response***](EzsigntemplatepackagesignerEditObjectV1Response.md)
 
 ### Authorization
 

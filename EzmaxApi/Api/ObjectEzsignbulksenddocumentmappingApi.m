@@ -1,10 +1,10 @@
 #import "ObjectEzsignbulksenddocumentmappingApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignbulksenddocumentmappingCreateObjectV1Request.h"
 #import "EzsignbulksenddocumentmappingCreateObjectV1Response.h"
+#import "EzsignbulksenddocumentmappingDeleteObjectV1Response.h"
 #import "EzsignbulksenddocumentmappingGetObjectV2Response.h"
 
 
@@ -124,10 +124,10 @@ NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignbulksenddocumentmappingID  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignbulksenddocumentmappingDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingDeleteObjectV1WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignbulksenddocumentmappingDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignbulksenddocumentmappingID' is set
     if (pkiEzsignbulksenddocumentmappingID == nil) {
         NSParameterAssert(pkiEzsignbulksenddocumentmappingID);
@@ -179,10 +179,10 @@ NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignbulksenddocumentmappingDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignbulksenddocumentmappingDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }

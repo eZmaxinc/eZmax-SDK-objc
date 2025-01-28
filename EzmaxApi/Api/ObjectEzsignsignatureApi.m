@@ -1,7 +1,6 @@
 #import "ObjectEzsignsignatureApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignsignatureCreateObjectV1Request.h"
 #import "EzsignsignatureCreateObjectV1Response.h"
@@ -9,7 +8,9 @@
 #import "EzsignsignatureCreateObjectV2Response.h"
 #import "EzsignsignatureCreateObjectV3Request.h"
 #import "EzsignsignatureCreateObjectV3Response.h"
+#import "EzsignsignatureDeleteObjectV1Response.h"
 #import "EzsignsignatureEditObjectV2Request.h"
+#import "EzsignsignatureEditObjectV2Response.h"
 #import "EzsignsignatureGetEzsignsignatureattachmentV1Response.h"
 #import "EzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
 #import "EzsignsignatureGetObjectV3Response.h"
@@ -265,10 +266,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiEzsignsignatureID  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignsignatureDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) ezsignsignatureDeleteObjectV1WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignsignatureDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == nil) {
         NSParameterAssert(pkiEzsignsignatureID);
@@ -320,10 +321,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignsignatureDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignsignatureDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -335,11 +336,11 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignsignatureEditObjectV2Request  
 ///
-///  @returns CommonResponse*
+///  @returns EzsignsignatureEditObjectV2Response*
 ///
 -(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
     ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignsignatureID' is set
     if (pkiEzsignsignatureID == nil) {
         NSParameterAssert(pkiEzsignsignatureID);
@@ -403,10 +404,10 @@ NSInteger kObjectEzsignsignatureApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"EzsignsignatureEditObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((EzsignsignatureEditObjectV2Response*)data, error);
                                 }
                             }];
 }

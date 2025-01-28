@@ -1,13 +1,15 @@
 #import "ObjectDiscussionApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "DiscussionCreateObjectV1Request.h"
 #import "DiscussionCreateObjectV1Response.h"
+#import "DiscussionDeleteObjectV1Response.h"
 #import "DiscussionGetObjectV2Response.h"
 #import "DiscussionPatchObjectV1Request.h"
+#import "DiscussionPatchObjectV1Response.h"
 #import "DiscussionUpdateDiscussionreadstatusV1Request.h"
+#import "DiscussionUpdateDiscussionreadstatusV1Response.h"
 
 
 @interface ObjectDiscussionApi ()
@@ -126,10 +128,10 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiDiscussionID The unique ID of the Discussion 
 ///
-///  @returns CommonResponse*
+///  @returns DiscussionDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) discussionDeleteObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(DiscussionDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == nil) {
         NSParameterAssert(pkiDiscussionID);
@@ -181,10 +183,10 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"DiscussionDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((DiscussionDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -264,11 +266,11 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
 ///
 ///  @param discussionPatchObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns DiscussionPatchObjectV1Response*
 ///
 -(NSURLSessionTask*) discussionPatchObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionPatchObjectV1Request: (DiscussionPatchObjectV1Request*) discussionPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(DiscussionPatchObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == nil) {
         NSParameterAssert(pkiDiscussionID);
@@ -332,10 +334,10 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"DiscussionPatchObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((DiscussionPatchObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -347,11 +349,11 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
 ///
 ///  @param discussionUpdateDiscussionreadstatusV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns DiscussionUpdateDiscussionreadstatusV1Response*
 ///
 -(NSURLSessionTask*) discussionUpdateDiscussionreadstatusV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
     discussionUpdateDiscussionreadstatusV1Request: (DiscussionUpdateDiscussionreadstatusV1Request*) discussionUpdateDiscussionreadstatusV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(DiscussionUpdateDiscussionreadstatusV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiDiscussionID' is set
     if (pkiDiscussionID == nil) {
         NSParameterAssert(pkiDiscussionID);
@@ -415,10 +417,10 @@ NSInteger kObjectDiscussionApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"DiscussionUpdateDiscussionreadstatusV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((DiscussionUpdateDiscussionreadstatusV1Response*)data, error);
                                 }
                             }];
 }

@@ -1,11 +1,12 @@
 #import "ObjectCorsApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CorsCreateObjectV1Request.h"
 #import "CorsCreateObjectV1Response.h"
+#import "CorsDeleteObjectV1Response.h"
 #import "CorsEditObjectV1Request.h"
+#import "CorsEditObjectV1Response.h"
 #import "CorsGetObjectV2Response.h"
 
 
@@ -125,10 +126,10 @@ NSInteger kObjectCorsApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiCorsID The unique ID of the Cors 
 ///
-///  @returns CommonResponse*
+///  @returns CorsDeleteObjectV1Response*
 ///
 -(NSURLSessionTask*) corsDeleteObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(CorsDeleteObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiCorsID' is set
     if (pkiCorsID == nil) {
         NSParameterAssert(pkiCorsID);
@@ -180,10 +181,10 @@ NSInteger kObjectCorsApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"CorsDeleteObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((CorsDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
@@ -195,11 +196,11 @@ NSInteger kObjectCorsApiMissingParamErrorCode = 234513;
 ///
 ///  @param corsEditObjectV1Request  
 ///
-///  @returns CommonResponse*
+///  @returns CorsEditObjectV1Response*
 ///
 -(NSURLSessionTask*) corsEditObjectV1WithPkiCorsID: (NSNumber*) pkiCorsID
     corsEditObjectV1Request: (CorsEditObjectV1Request*) corsEditObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler {
+    completionHandler: (void (^)(CorsEditObjectV1Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiCorsID' is set
     if (pkiCorsID == nil) {
         NSParameterAssert(pkiCorsID);
@@ -263,10 +264,10 @@ NSInteger kObjectCorsApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"CommonResponse*"
+                              responseType: @"CorsEditObjectV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((CommonResponse*)data, error);
+                                    handler((CorsEditObjectV1Response*)data, error);
                                 }
                             }];
 }

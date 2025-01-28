@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "CommonResponseErrorEzsignformValidation.h"
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigndocumentApplyEzsigntemplateV1Request.h"
+#import "EzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Request.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Response.h"
 #import "EzsigndocumentApplyEzsigntemplateglobalV1Request.h"
@@ -17,6 +17,8 @@
 #import "EzsigndocumentCreateObjectV3Request.h"
 #import "EzsigndocumentCreateObjectV3Response.h"
 #import "EzsigndocumentDeclineToSignV1Request.h"
+#import "EzsigndocumentDeclineToSignV1Response.h"
+#import "EzsigndocumentDeleteObjectV1Response.h"
 #import "EzsigndocumentEditEzsignannotationsV1Request.h"
 #import "EzsigndocumentEditEzsignannotationsV1Response.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Request.h"
@@ -25,8 +27,10 @@
 #import "EzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EzsigndocumentEditObjectV1Request.h"
 #import "EzsigndocumentEditObjectV1Response.h"
+#import "EzsigndocumentEndPrematurelyV1Response.h"
 #import "EzsigndocumentExtractTextV1Request.h"
 #import "EzsigndocumentExtractTextV1Response.h"
+#import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
 #import "EzsigndocumentGetAttachmentsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
@@ -44,7 +48,10 @@
 #import "EzsigndocumentGetWordsPositionsV1Request.h"
 #import "EzsigndocumentGetWordsPositionsV1Response.h"
 #import "EzsigndocumentPatchObjectV1Request.h"
+#import "EzsigndocumentPatchObjectV1Response.h"
 #import "EzsigndocumentSubmitEzsignformV1Request.h"
+#import "EzsigndocumentSubmitEzsignformV1Response.h"
+#import "EzsigndocumentUnsendV1Response.h"
 #import "Api.h"
 
 /**
@@ -78,10 +85,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentApplyEzsigntemplateV1Response*
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentApplyEzsigntemplateV1Request: (EzsigndocumentApplyEzsigntemplateV1Request*) ezsigndocumentApplyEzsigntemplateV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV1Response* output, NSError* error)) handler;
 
 
 /// Apply an Ezsigntemplate to the Ezsigndocument.
@@ -182,10 +189,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentDeclineToSignV1Response*
 -(NSURLSessionTask*) ezsigndocumentDeclineToSignV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentDeclineToSignV1Request: (EzsigndocumentDeclineToSignV1Request*) ezsigndocumentDeclineToSignV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentDeclineToSignV1Response* output, NSError* error)) handler;
 
 
 /// Delete an existing Ezsigndocument
@@ -197,9 +204,9 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentDeleteObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsignannotations
@@ -276,10 +283,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentEndPrematurelyV1Response*
 -(NSURLSessionTask*) ezsigndocumentEndPrematurelyV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentEndPrematurelyV1Response* output, NSError* error)) handler;
 
 
 /// Extract text from Ezsigndocument area
@@ -308,10 +315,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentFlattenV1Response*
 -(NSURLSessionTask*) ezsigndocumentFlattenV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentFlattenV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve actionable elements for the Ezsigndocument
@@ -535,10 +542,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentPatchObjectV1Response*
 -(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentPatchObjectV1Request: (EzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
 
 
 /// Submit the Ezsignform
@@ -551,10 +558,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentSubmitEzsignformV1Response*
 -(NSURLSessionTask*) ezsigndocumentSubmitEzsignformV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentSubmitEzsignformV1Request: (EzsigndocumentSubmitEzsignformV1Request*) ezsigndocumentSubmitEzsignformV1Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentSubmitEzsignformV1Response* output, NSError* error)) handler;
 
 
 /// Unsend the Ezsigndocument
@@ -567,10 +574,10 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsigndocumentUnsendV1Response*
 -(NSURLSessionTask*) ezsigndocumentUnsendV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsigndocumentUnsendV1Response* output, NSError* error)) handler;
 
 
 

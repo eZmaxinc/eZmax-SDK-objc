@@ -133,7 +133,7 @@ void (empty response body)
 ```objc
 -(NSURLSessionTask*) ezdoctemplatedocumentEditObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentEditObjectV1Request: (EzdoctemplatedocumentEditObjectV1Request*) ezdoctemplatedocumentEditObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzdoctemplatedocumentEditObjectV1Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Ezdoctemplatedocument
@@ -158,7 +158,7 @@ ObjectEzdoctemplatedocumentApi*apiInstance = [[ObjectEzdoctemplatedocumentApi al
 // Edit an existing Ezdoctemplatedocument
 [apiInstance ezdoctemplatedocumentEditObjectV1WithPkiEzdoctemplatedocumentID:pkiEzdoctemplatedocumentID
               ezdoctemplatedocumentEditObjectV1Request:ezdoctemplatedocumentEditObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzdoctemplatedocumentEditObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzdoctemplatedocumentEditObjectV1Response***](EzdoctemplatedocumentEditObjectV1Response.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezdoctemplatedocumentPatchObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
     ezdoctemplatedocumentPatchObjectV1Request: (EzdoctemplatedocumentPatchObjectV1Request*) ezdoctemplatedocumentPatchObjectV1Request
-        completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+        completionHandler: (void (^)(EzdoctemplatedocumentPatchObjectV1Response* output, NSError* error)) handler;
 ```
 
 Patch an existing Ezdoctemplatedocument
@@ -426,7 +426,7 @@ ObjectEzdoctemplatedocumentApi*apiInstance = [[ObjectEzdoctemplatedocumentApi al
 // Patch an existing Ezdoctemplatedocument
 [apiInstance ezdoctemplatedocumentPatchObjectV1WithPkiEzdoctemplatedocumentID:pkiEzdoctemplatedocumentID
               ezdoctemplatedocumentPatchObjectV1Request:ezdoctemplatedocumentPatchObjectV1Request
-          completionHandler: ^(CommonResponse* output, NSError* error) {
+          completionHandler: ^(EzdoctemplatedocumentPatchObjectV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse***](CommonResponse.md)
+[**EzdoctemplatedocumentPatchObjectV1Response***](EzdoctemplatedocumentPatchObjectV1Response.md)
 
 ### Authorization
 

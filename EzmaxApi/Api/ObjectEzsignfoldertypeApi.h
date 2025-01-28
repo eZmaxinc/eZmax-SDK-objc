@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "CommonResponse.h"
 #import "CommonResponseError.h"
 #import "EzsignfoldertypeCreateObjectV3Request.h"
 #import "EzsignfoldertypeCreateObjectV3Response.h"
 #import "EzsignfoldertypeEditObjectV3Request.h"
+#import "EzsignfoldertypeEditObjectV3Response.h"
 #import "EzsignfoldertypeGetAutocompleteV2Response.h"
 #import "EzsignfoldertypeGetListV1Response.h"
 #import "EzsignfoldertypeGetObjectV2Response.h"
@@ -54,10 +54,10 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
 ///
-/// @return CommonResponse*
+/// @return EzsignfoldertypeEditObjectV3Response*
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
     ezsignfoldertypeEditObjectV3Request: (EzsignfoldertypeEditObjectV3Request*) ezsignfoldertypeEditObjectV3Request
-    completionHandler: (void (^)(CommonResponse* output, NSError* error)) handler;
+    completionHandler: (void (^)(EzsignfoldertypeEditObjectV3Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsignfoldertypes and IDs
