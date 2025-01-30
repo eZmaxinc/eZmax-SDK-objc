@@ -4,6 +4,7 @@
 #import "EzsigntemplatepublicCreateEzsignfolderV1Response.h"
 #import "EzsigntemplatepublicCreateObjectV1Request.h"
 #import "EzsigntemplatepublicCreateObjectV1Response.h"
+#import "EzsigntemplatepublicDeleteObjectV1Response.h"
 #import "EzsigntemplatepublicEditObjectV1Request.h"
 #import "EzsigntemplatepublicEditObjectV1Response.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.h"
@@ -60,6 +61,20 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @return EzsigntemplatepublicCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicCreateObjectV1WithEzsigntemplatepublicCreateObjectV1Request: (EzsigntemplatepublicCreateObjectV1Request*) ezsigntemplatepublicCreateObjectV1Request
     completionHandler: (void (^)(EzsigntemplatepublicCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Delete an existing Ezsigntemplatepublic
+/// 
+///
+/// @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatepublicDeleteObjectV1Response*
+-(NSURLSessionTask*) ezsigntemplatepublicDeleteObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
+    completionHandler: (void (^)(EzsigntemplatepublicDeleteObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsigntemplatepublic

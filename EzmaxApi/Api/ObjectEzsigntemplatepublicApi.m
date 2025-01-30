@@ -6,6 +6,7 @@
 #import "EzsigntemplatepublicCreateEzsignfolderV1Response.h"
 #import "EzsigntemplatepublicCreateObjectV1Request.h"
 #import "EzsigntemplatepublicCreateObjectV1Response.h"
+#import "EzsigntemplatepublicDeleteObjectV1Response.h"
 #import "EzsigntemplatepublicEditObjectV1Request.h"
 #import "EzsigntemplatepublicEditObjectV1Response.h"
 #import "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.h"
@@ -191,6 +192,74 @@ NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsigntemplatepublicCreateObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Delete an existing Ezsigntemplatepublic
+/// 
+///  @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic 
+///
+///  @returns EzsigntemplatepublicDeleteObjectV1Response*
+///
+-(NSURLSessionTask*) ezsigntemplatepublicDeleteObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
+    completionHandler: (void (^)(EzsigntemplatepublicDeleteObjectV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplatepublicID' is set
+    if (pkiEzsigntemplatepublicID == nil) {
+        NSParameterAssert(pkiEzsigntemplatepublicID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatepublicID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatepublicApiErrorDomain code:kObjectEzsigntemplatepublicApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplatepublicID != nil) {
+        pathParams[@"pkiEzsigntemplatepublicID"] = pkiEzsigntemplatepublicID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"DELETE"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsigntemplatepublicDeleteObjectV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsigntemplatepublicDeleteObjectV1Response*)data, error);
                                 }
                             }];
 }
