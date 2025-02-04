@@ -128,6 +128,9 @@
 /* Whether we send the proof in the email to Ezsignsigner [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendproofezsignsigner;
+/* Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy = 1 [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSendattachmentreceivecopy;
 /* Whether we send the Ezsigndocument in the email to User [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendattachmentuser;
