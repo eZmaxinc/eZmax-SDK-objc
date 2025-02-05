@@ -47,6 +47,8 @@ EzmaxApi/Api/ObjectCreditcardmerchantApi.h
 EzmaxApi/Api/ObjectCreditcardmerchantApi.m
 EzmaxApi/Api/ObjectCreditcardtypeApi.h
 EzmaxApi/Api/ObjectCreditcardtypeApi.m
+EzmaxApi/Api/ObjectCurrencyApi.h
+EzmaxApi/Api/ObjectCurrencyApi.m
 EzmaxApi/Api/ObjectCustomerApi.h
 EzmaxApi/Api/ObjectCustomerApi.m
 EzmaxApi/Api/ObjectDepartmentApi.h
@@ -767,6 +769,12 @@ EzmaxApi/Model/CreditcardtypeGetAutocompleteV2Response.h
 EzmaxApi/Model/CreditcardtypeGetAutocompleteV2Response.m
 EzmaxApi/Model/CreditcardtypeGetAutocompleteV2ResponseMPayload.h
 EzmaxApi/Model/CreditcardtypeGetAutocompleteV2ResponseMPayload.m
+EzmaxApi/Model/CurrencyAutocompleteElementResponse.h
+EzmaxApi/Model/CurrencyAutocompleteElementResponse.m
+EzmaxApi/Model/CurrencyGetAutocompleteV2Response.h
+EzmaxApi/Model/CurrencyGetAutocompleteV2Response.m
+EzmaxApi/Model/CurrencyGetAutocompleteV2ResponseMPayload.h
+EzmaxApi/Model/CurrencyGetAutocompleteV2ResponseMPayload.m
 EzmaxApi/Model/CustomApikey.h
 EzmaxApi/Model/CustomApikey.m
 EzmaxApi/Model/CustomApikeyfederation.h
@@ -3825,6 +3833,9 @@ docs/CreditcardmerchantResponseCompound.md
 docs/CreditcardtypeAutocompleteElementResponse.md
 docs/CreditcardtypeGetAutocompleteV2Response.md
 docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md
+docs/CurrencyAutocompleteElementResponse.md
+docs/CurrencyGetAutocompleteV2Response.md
+docs/CurrencyGetAutocompleteV2ResponseMPayload.md
 docs/CustomApikey.md
 docs/CustomApikeyfederation.md
 docs/CustomAttachmentResponse.md
@@ -4879,6 +4890,7 @@ docs/ObjectCountryApi.md
 docs/ObjectCreditcardclientApi.md
 docs/ObjectCreditcardmerchantApi.md
 docs/ObjectCreditcardtypeApi.md
+docs/ObjectCurrencyApi.md
 docs/ObjectCustomerApi.md
 docs/ObjectDepartmentApi.md
 docs/ObjectDiscussionApi.md

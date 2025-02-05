@@ -304,6 +304,9 @@ Import the following:
 #import <EzmaxApi/CreditcardtypeAutocompleteElementResponse.h>
 #import <EzmaxApi/CreditcardtypeGetAutocompleteV2Response.h>
 #import <EzmaxApi/CreditcardtypeGetAutocompleteV2ResponseMPayload.h>
+#import <EzmaxApi/CurrencyAutocompleteElementResponse.h>
+#import <EzmaxApi/CurrencyGetAutocompleteV2Response.h>
+#import <EzmaxApi/CurrencyGetAutocompleteV2ResponseMPayload.h>
 #import <EzmaxApi/CustomApikey.h>
 #import <EzmaxApi/CustomApikeyfederation.h>
 #import <EzmaxApi/CustomAttachmentResponse.h>
@@ -1726,6 +1729,7 @@ Import the following:
 #import <EzmaxApi/ObjectCreditcardclientApi.h>
 #import <EzmaxApi/ObjectCreditcardmerchantApi.h>
 #import <EzmaxApi/ObjectCreditcardtypeApi.h>
+#import <EzmaxApi/ObjectCurrencyApi.h>
 #import <EzmaxApi/ObjectCustomerApi.h>
 #import <EzmaxApi/ObjectDepartmentApi.h>
 #import <EzmaxApi/ObjectDiscussionApi.h>
@@ -1922,6 +1926,7 @@ Class | Method | HTTP request | Description
 *ObjectCreditcardmerchantApi* | [**creditcardmerchantGetListV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantgetlistv1) | **GET** /1/object/creditcardmerchant/getList | Retrieve Creditcardmerchant list
 *ObjectCreditcardmerchantApi* | [**creditcardmerchantGetObjectV2**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantgetobjectv2) | **GET** /2/object/creditcardmerchant/{pkiCreditcardmerchantID} | Retrieve an existing Creditcardmerchant
 *ObjectCreditcardtypeApi* | [**creditcardtypeGetAutocompleteV2**](docs/ObjectCreditcardtypeApi.md#creditcardtypegetautocompletev2) | **GET** /2/object/creditcardtype/getAutocomplete/{sSelector} | Retrieve Creditcardtypes and IDs
+*ObjectCurrencyApi* | [**currencyGetAutocompleteV2**](docs/ObjectCurrencyApi.md#currencygetautocompletev2) | **GET** /2/object/currency/getAutocomplete/{sSelector} | Retrieve Currencies and IDs
 *ObjectCustomerApi* | [**customerCreateObjectV1**](docs/ObjectCustomerApi.md#customercreateobjectv1) | **POST** /1/object/customer | Create a new Customer
 *ObjectCustomerApi* | [**customerGetObjectV2**](docs/ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
@@ -2582,6 +2587,9 @@ Class | Method | HTTP request | Description
  - [CreditcardtypeAutocompleteElementResponse](docs/CreditcardtypeAutocompleteElementResponse.md)
  - [CreditcardtypeGetAutocompleteV2Response](docs/CreditcardtypeGetAutocompleteV2Response.md)
  - [CreditcardtypeGetAutocompleteV2ResponseMPayload](docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md)
+ - [CurrencyAutocompleteElementResponse](docs/CurrencyAutocompleteElementResponse.md)
+ - [CurrencyGetAutocompleteV2Response](docs/CurrencyGetAutocompleteV2Response.md)
+ - [CurrencyGetAutocompleteV2ResponseMPayload](docs/CurrencyGetAutocompleteV2ResponseMPayload.md)
  - [CustomApikey](docs/CustomApikey.md)
  - [CustomApikeyfederation](docs/CustomApikeyfederation.md)
  - [CustomAttachmentResponse](docs/CustomAttachmentResponse.md)
