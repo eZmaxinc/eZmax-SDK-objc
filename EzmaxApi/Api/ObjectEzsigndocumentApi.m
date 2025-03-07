@@ -51,6 +51,8 @@
 #import "EzsigndocumentGetWordsPositionsV1Response.h"
 #import "EzsigndocumentPatchObjectV1Request.h"
 #import "EzsigndocumentPatchObjectV1Response.h"
+#import "EzsigndocumentPrefillEzsignformV1Request.h"
+#import "EzsigndocumentPrefillEzsignformV1Response.h"
 #import "EzsigndocumentSubmitEzsignformV1Request.h"
 #import "EzsigndocumentSubmitEzsignformV1Response.h"
 #import "EzsigndocumentUnsendV1Response.h"
@@ -2494,6 +2496,89 @@ NSInteger kObjectEzsigndocumentApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsigndocumentPatchObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Prefill an Ezsignform
+/// Using this endpoint, you can prefill an Ezsignform.
+///  @param pkiEzsigndocumentID  
+///
+///  @param ezsigndocumentPrefillEzsignformV1Request  
+///
+///  @returns EzsigndocumentPrefillEzsignformV1Response*
+///
+-(NSURLSessionTask*) ezsigndocumentPrefillEzsignformV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentPrefillEzsignformV1Request: (EzsigndocumentPrefillEzsignformV1Request*) ezsigndocumentPrefillEzsignformV1Request
+    completionHandler: (void (^)(EzsigndocumentPrefillEzsignformV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigndocumentID' is set
+    if (pkiEzsigndocumentID == nil) {
+        NSParameterAssert(pkiEzsigndocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigndocumentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigndocumentApiErrorDomain code:kObjectEzsigndocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsigndocumentPrefillEzsignformV1Request' is set
+    if (ezsigndocumentPrefillEzsignformV1Request == nil) {
+        NSParameterAssert(ezsigndocumentPrefillEzsignformV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigndocumentPrefillEzsignformV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigndocumentApiErrorDomain code:kObjectEzsigndocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigndocumentID != nil) {
+        pathParams[@"pkiEzsigndocumentID"] = pkiEzsigndocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsigndocumentPrefillEzsignformV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsigndocumentPrefillEzsignformV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsigndocumentPrefillEzsignformV1Response*)data, error);
                                 }
                             }];
 }

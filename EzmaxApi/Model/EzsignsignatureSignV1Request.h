@@ -15,8 +15,11 @@
 
 
 #import "CommonFile.h"
+#import "CustomCreditcardRequest.h"
 @protocol CommonFile;
 @class CommonFile;
+@protocol CustomCreditcardRequest;
+@class CustomCreditcardRequest;
 
 
 
@@ -45,6 +48,8 @@
 @property(nonatomic) NSString* sSvg;
 
 @property(nonatomic) NSArray<CommonFile>* aObjFile;
+
+@property(nonatomic) CustomCreditcardRequest* objCreditcard;
 /* Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  
  */
 @property(nonatomic) NSNumber* bIsAutomatic;

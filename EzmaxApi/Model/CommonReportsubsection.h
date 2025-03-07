@@ -31,5 +31,8 @@
 @property(nonatomic) CommonReportsubsectionpart* objReportsubsectionpartBody;
 
 @property(nonatomic) CommonReportsubsectionpart* objReportsubsectionpartFooter;
+/* The title of this Reportsubsection [optional]
+ */
+@property(nonatomic) NSString* sReportsubsectionTitle;
 
 @end

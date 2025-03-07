@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignsignatureID** | **NSNumber*** | The unique ID of the Ezsignsignature | [optional] 
 **fkiEzsignfoldersignerassociationID** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | 
+**fkiPaymentgatewayID** | **NSNumber*** | The unique ID of the Paymentgateway | [optional] 
 **iEzsignpagePagenumber** | **NSNumber*** | The page number in the Ezsigndocument | 
 **iEzsignsignatureX** | **NSNumber*** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. | 
 **iEzsignsignatureY** | **NSNumber*** | The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. | 
@@ -33,6 +34,7 @@ Name | Type | Description | Notes
 **bEzsignsignatureCustomdate** | **NSNumber*** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **aObjEzsignsignaturecustomdate** | [**NSArray&lt;EzsignsignaturecustomdateRequestCompoundV2&gt;***](EzsignsignaturecustomdateRequestCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
 **aObjEzsignelementdependency** | [**NSArray&lt;EzsignelementdependencyRequestCompound&gt;***](EzsignelementdependencyRequestCompound.md) |  | [optional] 
+**aObjEzsignsignaturepaymentdetail** | [**NSArray&lt;EzsignsignaturepaymentdetailRequestCompound&gt;***](EzsignsignaturepaymentdetailRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

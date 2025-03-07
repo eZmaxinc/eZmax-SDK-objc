@@ -34,6 +34,9 @@
 /* The unique ID of the Ezsignfoldersignerassociation [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;
+/* The unique ID of the Ezsignimportdocument [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignimportdocumentID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;

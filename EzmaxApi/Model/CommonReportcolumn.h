@@ -15,8 +15,11 @@
 
 
 #import "CommonReportcellstyle.h"
+#import "EnumReportdataType.h"
 @protocol CommonReportcellstyle;
 @class CommonReportcellstyle;
+@protocol EnumReportdataType;
+@class EnumReportdataType;
 
 
 
@@ -30,5 +33,7 @@
 /* The Reportcolumn width in pixels 
  */
 @property(nonatomic) NSNumber* iReportcolumnWidth;
+
+@property(nonatomic) EnumReportdataType* eReportcolumnType;
 
 @end

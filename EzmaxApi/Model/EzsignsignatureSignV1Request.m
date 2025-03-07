@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignsigningreasonID": @"fkiEzsignsigningreasonID", @"fkiFontID": @"fkiFontID", @"sValue": @"sValue", @"eAttachmentsConfirmationDecision": @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason": @"sAttachmentsRefusalReason", @"sSvg": @"sSvg", @"aObjFile": @"a_objFile", @"bIsAutomatic": @"bIsAutomatic" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiEzsignsigningreasonID": @"fkiEzsignsigningreasonID", @"fkiFontID": @"fkiFontID", @"sValue": @"sValue", @"eAttachmentsConfirmationDecision": @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason": @"sAttachmentsRefusalReason", @"sSvg": @"sSvg", @"aObjFile": @"a_objFile", @"objCreditcard": @"objCreditcard", @"bIsAutomatic": @"bIsAutomatic" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEzsignsigningreasonID", @"fkiFontID", @"sValue", @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason", @"sSvg", @"aObjFile", ];
+  NSArray *optionalProperties = @[@"fkiEzsignsigningreasonID", @"fkiFontID", @"sValue", @"eAttachmentsConfirmationDecision", @"sAttachmentsRefusalReason", @"sSvg", @"aObjFile", @"objCreditcard", ];
   return [optionalProperties containsObject:propertyName];
 }
 

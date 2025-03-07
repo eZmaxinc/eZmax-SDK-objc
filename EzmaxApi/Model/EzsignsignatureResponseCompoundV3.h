@@ -19,6 +19,7 @@
 #import "EnumTextvalidation.h"
 #import "EzsignelementdependencyResponseCompound.h"
 #import "EzsignsignaturecustomdateResponseCompoundV2.h"
+#import "EzsignsignaturepaymentdetailResponseCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
 #import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
@@ -36,6 +37,8 @@
 @class EzsignelementdependencyResponseCompound;
 @protocol EzsignsignaturecustomdateResponseCompoundV2;
 @class EzsignsignaturecustomdateResponseCompoundV2;
+@protocol EzsignsignaturepaymentdetailResponseCompound;
+@class EzsignsignaturepaymentdetailResponseCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
 @protocol FieldEEzsignsignatureConsultationtrigger;
@@ -73,6 +76,9 @@
 /* The unique ID of the Font [optional]
  */
 @property(nonatomic) NSNumber* fkiFontID;
+/* The description of the Currency in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sCurrencyDescriptionX;
 /* The description of the Ezsignsigningreason in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignsigningreasonDescriptionX;
@@ -172,5 +178,7 @@
 @property(nonatomic) CustomCreditcardtransactionResponse* objCreditcardtransaction;
 
 @property(nonatomic) NSArray<EzsignelementdependencyResponseCompound>* aObjEzsignelementdependency;
+
+@property(nonatomic) NSArray<EzsignsignaturepaymentdetailResponseCompound>* aObjEzsignsignaturepaymentdetail;
 
 @end

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eReportsubsectionpartType": @"eReportsubsectionpartType", @"aObjReportrow": @"a_objReportrow" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eReportsubsectionpartType": @"eReportsubsectionpartType", @"aObjReportrow": @"a_objReportrow", @"aSVariableobjectProperty": @"a_sVariableobjectProperty" }];
 }
 
 /**

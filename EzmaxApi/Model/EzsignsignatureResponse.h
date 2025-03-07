@@ -64,6 +64,9 @@
 /* The unique ID of the Font [optional]
  */
 @property(nonatomic) NSNumber* fkiFontID;
+/* The description of the Currency in the language of the requester [optional]
+ */
+@property(nonatomic) NSString* sCurrencyDescriptionX;
 /* The description of the Ezsignsigningreason in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignsigningreasonDescriptionX;

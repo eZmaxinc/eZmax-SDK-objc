@@ -43,5 +43,8 @@
 /* The combined width of all the Reportcolumns in the Reportsection 
  */
 @property(nonatomic) NSNumber* iReportsectionWidth;
+/* The title of this Reportsection [optional]
+ */
+@property(nonatomic) NSString* sReportsectionTitle;
 
 @end

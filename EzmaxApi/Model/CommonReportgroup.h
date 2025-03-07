@@ -16,10 +16,13 @@
 
 #import "CommonReport.h"
 #import "CommonReportcellstyle.h"
+#import "CommonReportgroupParameter.h"
 @protocol CommonReport;
 @class CommonReport;
 @protocol CommonReportcellstyle;
 @class CommonReportcellstyle;
+@protocol CommonReportgroupParameter;
+@class CommonReportgroupParameter;
 
 
 
@@ -32,5 +35,10 @@
 @property(nonatomic) NSArray<CommonReport>* aObjReport;
 
 @property(nonatomic) NSArray<CommonReportcellstyle>* aObjReportcellstyleCustom;
+
+@property(nonatomic) NSArray<CommonReportgroupParameter>* aObjReportgroupParameter;
+/* The name of the file 
+ */
+@property(nonatomic) NSString* sReportgroupFilename;
 
 @end

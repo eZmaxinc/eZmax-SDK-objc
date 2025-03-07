@@ -31,4 +31,6 @@
 
 @property(nonatomic) NSArray<CommonReportrow>* aObjReportrow;
 
+@property(nonatomic) NSArray<NSString*>* aSVariableobjectProperty;
+
 @end

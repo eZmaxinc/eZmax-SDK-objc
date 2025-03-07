@@ -17,6 +17,7 @@
 #import "EnumTextvalidation.h"
 #import "EzsignelementdependencyRequestCompound.h"
 #import "EzsignsignaturecustomdateRequestCompoundV2.h"
+#import "EzsignsignaturepaymentdetailRequestCompound.h"
 #import "FieldEEzsignsignatureAttachmentnamesource.h"
 #import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
@@ -29,6 +30,8 @@
 @class EzsignelementdependencyRequestCompound;
 @protocol EzsignsignaturecustomdateRequestCompoundV2;
 @class EzsignsignaturecustomdateRequestCompoundV2;
+@protocol EzsignsignaturepaymentdetailRequestCompound;
+@class EzsignsignaturepaymentdetailRequestCompound;
 @protocol FieldEEzsignsignatureAttachmentnamesource;
 @class FieldEEzsignsignatureAttachmentnamesource;
 @protocol FieldEEzsignsignatureConsultationtrigger;
@@ -55,6 +58,9 @@
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;
+/* The unique ID of the Paymentgateway [optional]
+ */
+@property(nonatomic) NSNumber* fkiPaymentgatewayID;
 /* The page number in the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* iEzsignpagePagenumber;
@@ -131,5 +137,7 @@
 @property(nonatomic) NSArray<EzsignsignaturecustomdateRequestCompoundV2>* aObjEzsignsignaturecustomdate;
 
 @property(nonatomic) NSArray<EzsignelementdependencyRequestCompound>* aObjEzsignelementdependency;
+
+@property(nonatomic) NSArray<EzsignsignaturepaymentdetailRequestCompound>* aObjEzsignsignaturepaymentdetail;
 
 @end

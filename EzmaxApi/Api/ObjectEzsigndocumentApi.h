@@ -49,6 +49,8 @@
 #import "EzsigndocumentGetWordsPositionsV1Response.h"
 #import "EzsigndocumentPatchObjectV1Request.h"
 #import "EzsigndocumentPatchObjectV1Response.h"
+#import "EzsigndocumentPrefillEzsignformV1Request.h"
+#import "EzsigndocumentPrefillEzsignformV1Response.h"
 #import "EzsigndocumentSubmitEzsignformV1Request.h"
 #import "EzsigndocumentSubmitEzsignformV1Response.h"
 #import "EzsigndocumentUnsendV1Response.h"
@@ -546,6 +548,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentPatchObjectV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentPatchObjectV1Request: (EzsigndocumentPatchObjectV1Request*) ezsigndocumentPatchObjectV1Request
     completionHandler: (void (^)(EzsigndocumentPatchObjectV1Response* output, NSError* error)) handler;
+
+
+/// Prefill an Ezsignform
+/// Using this endpoint, you can prefill an Ezsignform.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentPrefillEzsignformV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentPrefillEzsignformV1Response*
+-(NSURLSessionTask*) ezsigndocumentPrefillEzsignformV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentPrefillEzsignformV1Request: (EzsigndocumentPrefillEzsignformV1Request*) ezsigndocumentPrefillEzsignformV1Request
+    completionHandler: (void (^)(EzsigndocumentPrefillEzsignformV1Response* output, NSError* error)) handler;
 
 
 /// Submit the Ezsignform

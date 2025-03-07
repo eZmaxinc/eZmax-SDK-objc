@@ -15,12 +15,15 @@
 
 
 #import "CommonAudit.h"
+#import "CustomEzsignfoldertypeTemplateResponse.h"
 #import "EzsigntemplatedocumentResponse.h"
 #import "EzsigntemplatesignerResponseCompound.h"
 #import "FieldEEzsigntemplateRecognition.h"
 #import "FieldEEzsigntemplateType.h"
 @protocol CommonAudit;
 @class CommonAudit;
+@protocol CustomEzsignfoldertypeTemplateResponse;
+@class CustomEzsignfoldertypeTemplateResponse;
 @protocol EzsigntemplatedocumentResponse;
 @class EzsigntemplatedocumentResponse;
 @protocol EzsigntemplatesignerResponseCompound;
@@ -46,6 +49,8 @@
 /* The unique ID of the Ezsignfoldertype. [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+
+@property(nonatomic) CustomEzsignfoldertypeTemplateResponse* objEzsignfoldertype;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| 
  */
 @property(nonatomic) NSNumber* fkiLanguageID;

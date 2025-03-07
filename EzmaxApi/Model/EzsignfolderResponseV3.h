@@ -104,6 +104,12 @@
 /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderClose;
+/* The date and time at which the Ezsignfolder was archived. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderArchive;
+/* The date and time at which the Ezsignfolder was disposed. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderDispose;
 /* A custom text message that will be added to the email sent. [optional]
  */
 @property(nonatomic) NSString* tEzsignfolderMessage;

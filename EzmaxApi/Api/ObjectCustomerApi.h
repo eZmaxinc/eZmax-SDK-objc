@@ -2,7 +2,9 @@
 #import "CommonResponseError.h"
 #import "CustomerCreateObjectV1Request.h"
 #import "CustomerCreateObjectV1Response.h"
+#import "CustomerGetAutocompleteV2Response.h"
 #import "CustomerGetObjectV2Response.h"
+#import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
 /**
@@ -36,6 +38,24 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
 /// @return CustomerCreateObjectV1Response*
 -(NSURLSessionTask*) customerCreateObjectV1WithCustomerCreateObjectV1Request: (CustomerCreateObjectV1Request*) customerCreateObjectV1Request
     completionHandler: (void (^)(CustomerCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Customers and IDs
+/// Get the list of Customer to be used in a dropdown or autocomplete control.
+///
+/// @param sSelector The type of Customers to return
+/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
+/// @param sQuery Allow to filter the returned results (optional)
+/// @param acceptLanguage  (optional)
+/// 
+///  code:200 message:"Successful response"
+///
+/// @return CustomerGetAutocompleteV2Response*
+-(NSURLSessionTask*) customerGetAutocompleteV2WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
+    sQuery: (NSString*) sQuery
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    completionHandler: (void (^)(CustomerGetAutocompleteV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Customer

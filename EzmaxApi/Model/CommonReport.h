@@ -27,5 +27,11 @@
 
 
 @property(nonatomic) NSArray<CommonReportsection>* aObjReportsection;
+/* Whether we display pagination in the report [optional]
+ */
+@property(nonatomic) NSNumber* bReportPaginate;
+/* The title of this Report [optional]
+ */
+@property(nonatomic) NSString* sReportTitle;
 
 @end

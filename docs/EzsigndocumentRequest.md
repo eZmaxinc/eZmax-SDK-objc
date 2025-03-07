@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **fkiEzsigntemplateID** | **NSNumber*** | The unique ID of the Ezsigntemplate | [optional] 
 **fkiEzsignfoldersignerassociationID** | **NSNumber*** | The unique ID of the Ezsignfoldersignerassociation | [optional] 
+**fkiEzsignimportdocumentID** | **NSNumber*** | The unique ID of the Ezsignimportdocument | [optional] 
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **eEzsigndocumentSource** | **NSString*** | Indicates where to look for the document binary content. | 
 **eEzsigndocumentFormat** | **NSString*** | Indicates the format of the document. | [optional] 

@@ -49,6 +49,9 @@
 /* The unique ID of the Ezsignfoldersignerassociation 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldersignerassociationID;
+/* The unique ID of the Paymentgateway [optional]
+ */
+@property(nonatomic) NSNumber* fkiPaymentgatewayID;
 /* The page number in the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* iEzsignpagePagenumber;

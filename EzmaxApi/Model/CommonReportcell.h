@@ -28,5 +28,11 @@
 /* The number of Reportrows the Reportcell spans 
  */
 @property(nonatomic) NSNumber* iReportcellRowspan;
+/* The content of this Reportcell 
+ */
+@property(nonatomic) NSString* sReportcellContent;
+/* Position of the column where it is placed 
+ */
+@property(nonatomic) NSNumber* iReportcellColumn;
 
 @end

@@ -1,10 +1,5 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "CreditcardmerchantCreateObjectV1Request.h"
-#import "CreditcardmerchantCreateObjectV1Response.h"
-#import "CreditcardmerchantDeleteObjectV1Response.h"
-#import "CreditcardmerchantEditObjectV1Request.h"
-#import "CreditcardmerchantEditObjectV1Response.h"
 #import "CreditcardmerchantGetAutocompleteV2Response.h"
 #import "CreditcardmerchantGetListV1Response.h"
 #import "CreditcardmerchantGetObjectV2Response.h"
@@ -31,47 +26,6 @@ extern NSString* kObjectCreditcardmerchantApiErrorDomain;
 extern NSInteger kObjectCreditcardmerchantApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Create a new Creditcardmerchant
-/// The endpoint allows to create one or many elements at once.
-///
-/// @param creditcardmerchantCreateObjectV1Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return CreditcardmerchantCreateObjectV1Response*
--(NSURLSessionTask*) creditcardmerchantCreateObjectV1WithCreditcardmerchantCreateObjectV1Request: (CreditcardmerchantCreateObjectV1Request*) creditcardmerchantCreateObjectV1Request
-    completionHandler: (void (^)(CreditcardmerchantCreateObjectV1Response* output, NSError* error)) handler;
-
-
-/// Delete an existing Creditcardmerchant
-/// 
-///
-/// @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return CreditcardmerchantDeleteObjectV1Response*
--(NSURLSessionTask*) creditcardmerchantDeleteObjectV1WithPkiCreditcardmerchantID: (NSNumber*) pkiCreditcardmerchantID
-    completionHandler: (void (^)(CreditcardmerchantDeleteObjectV1Response* output, NSError* error)) handler;
-
-
-/// Edit an existing Creditcardmerchant
-/// 
-///
-/// @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-/// @param creditcardmerchantEditObjectV1Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return CreditcardmerchantEditObjectV1Response*
--(NSURLSessionTask*) creditcardmerchantEditObjectV1WithPkiCreditcardmerchantID: (NSNumber*) pkiCreditcardmerchantID
-    creditcardmerchantEditObjectV1Request: (CreditcardmerchantEditObjectV1Request*) creditcardmerchantEditObjectV1Request
-    completionHandler: (void (^)(CreditcardmerchantEditObjectV1Response* output, NSError* error)) handler;
-
 
 /// Retrieve Creditcardmerchants and IDs
 /// Get the list of Creditcardmerchant to be used in a dropdown or autocomplete control.

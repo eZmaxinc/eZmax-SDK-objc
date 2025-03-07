@@ -14,7 +14,10 @@
 */
 
 
+#import "AnyType.h"
 #import "CommonReportcell.h"
+@protocol AnyType;
+@class AnyType;
 @protocol CommonReportcell;
 @class CommonReportcell;
 
@@ -27,6 +30,9 @@
 
 
 @property(nonatomic) NSArray<CommonReportcell>* aObjReportcell;
+/* A Variable object without predefined property names 
+ */
+@property(nonatomic) NSDictionary<AnyType>* objVariableobject;
 /* The reportrow height in pixels 
  */
 @property(nonatomic) NSNumber* iReportrowHeight;

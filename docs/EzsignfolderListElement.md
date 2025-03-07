@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 **dEzsignfolderCompletedpercentage** | **NSString*** | Percentage of Ezsignform/Ezsignsignatures has completed | 
 **dEzsignfolderFormcompletedpercentage** | **NSString*** | Percentage of Ezsignform has completed | 
 **dEzsignfolderSignaturecompletedpercentage** | **NSString*** | Percentage of Ezsignsignatures has signed | 
+**dtEzsignfolderClose** | **NSString*** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
+**dtEzsignfolderArchive** | **NSString*** | The date and time at which the Ezsignfolder was archived. | [optional] 
+**dtEzsignfolderDispose** | **NSString*** | The date and time at which the Ezsignfolder was disposed. | [optional] 
 **bEzsignfolderSigner** | **NSNumber*** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

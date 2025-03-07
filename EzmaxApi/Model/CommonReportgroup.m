@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjReport": @"a_objReport", @"aObjReportcellstyleCustom": @"a_objReportcellstyleCustom" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjReport": @"a_objReport", @"aObjReportcellstyleCustom": @"a_objReportcellstyleCustom", @"aObjReportgroupParameter": @"a_objReportgroupParameter", @"sReportgroupFilename": @"sReportgroupFilename" }];
 }
 
 /**

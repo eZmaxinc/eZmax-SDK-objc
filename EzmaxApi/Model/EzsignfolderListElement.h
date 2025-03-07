@@ -86,6 +86,15 @@
 /* Percentage of Ezsignsignatures has signed 
  */
 @property(nonatomic) NSString* dEzsignfolderSignaturecompletedpercentage;
+/* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderClose;
+/* The date and time at which the Ezsignfolder was archived. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderArchive;
+/* The date and time at which the Ezsignfolder was disposed. [optional]
+ */
+@property(nonatomic) NSString* dtEzsignfolderDispose;
 /* Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfolderSigner;
