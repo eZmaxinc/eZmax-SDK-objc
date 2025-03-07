@@ -473,9 +473,6 @@ Import the following:
 #import <EzmaxApi/EzdoctemplatetypeAutocompleteElementResponse.h>
 #import <EzmaxApi/EzdoctemplatetypeGetAutocompleteV2Response.h>
 #import <EzmaxApi/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.h>
-#import <EzmaxApi/EzmaxcasePatchObjectV1Request.h>
-#import <EzmaxApi/EzmaxcasePatchObjectV1Response.h>
-#import <EzmaxApi/EzmaxcaseRequestPatch.h>
 #import <EzmaxApi/EzmaxinvoicingAutocompleteElementResponse.h>
 #import <EzmaxApi/EzmaxinvoicingGetAutocompleteV2Response.h>
 #import <EzmaxApi/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.h>
@@ -1783,7 +1780,6 @@ Import the following:
 #import <EzmaxApi/ObjectEzdoctemplatedocumentApi.h>
 #import <EzmaxApi/ObjectEzdoctemplatefieldtypecategoryApi.h>
 #import <EzmaxApi/ObjectEzdoctemplatetypeApi.h>
-#import <EzmaxApi/ObjectEzmaxcaseApi.h>
 #import <EzmaxApi/ObjectEzmaxinvoicingApi.h>
 #import <EzmaxApi/ObjectEzmaxproductApi.h>
 #import <EzmaxApi/ObjectEzsignannotationApi.h>
@@ -2002,7 +1998,6 @@ Class | Method | HTTP request | Description
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentPatchObjectV1**](docs/ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentpatchobjectv1) | **PATCH** /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID} | Patch an existing Ezdoctemplatedocument
 *ObjectEzdoctemplatefieldtypecategoryApi* | [**ezdoctemplatefieldtypecategoryGetAutocompleteV2**](docs/ObjectEzdoctemplatefieldtypecategoryApi.md#ezdoctemplatefieldtypecategorygetautocompletev2) | **GET** /2/object/ezdoctemplatefieldtypecategory/getAutocomplete/{sSelector} | Retrieve Ezdoctemplatefieldtypecategorys and IDs
 *ObjectEzdoctemplatetypeApi* | [**ezdoctemplatetypeGetAutocompleteV2**](docs/ObjectEzdoctemplatetypeApi.md#ezdoctemplatetypegetautocompletev2) | **GET** /2/object/ezdoctemplatetype/getAutocomplete/{sSelector} | Retrieve Ezdoctemplatetypes and IDs
-*ObjectEzmaxcaseApi* | [**ezmaxcasePatchObjectV1**](docs/ObjectEzmaxcaseApi.md#ezmaxcasepatchobjectv1) | **PATCH** /1/object/ezmaxcase/{pkiEzmaxcaseID} | Patch an existing Ezmaxcase
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetProvisionalV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetprovisionalv1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
@@ -2811,9 +2806,6 @@ Class | Method | HTTP request | Description
  - [EzdoctemplatetypeAutocompleteElementResponse](docs/EzdoctemplatetypeAutocompleteElementResponse.md)
  - [EzdoctemplatetypeGetAutocompleteV2Response](docs/EzdoctemplatetypeGetAutocompleteV2Response.md)
  - [EzdoctemplatetypeGetAutocompleteV2ResponseMPayload](docs/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md)
- - [EzmaxcasePatchObjectV1Request](docs/EzmaxcasePatchObjectV1Request.md)
- - [EzmaxcasePatchObjectV1Response](docs/EzmaxcasePatchObjectV1Response.md)
- - [EzmaxcaseRequestPatch](docs/EzmaxcaseRequestPatch.md)
  - [EzmaxinvoicingAutocompleteElementResponse](docs/EzmaxinvoicingAutocompleteElementResponse.md)
  - [EzmaxinvoicingGetAutocompleteV2Response](docs/EzmaxinvoicingGetAutocompleteV2Response.md)
  - [EzmaxinvoicingGetAutocompleteV2ResponseMPayload](docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md)
