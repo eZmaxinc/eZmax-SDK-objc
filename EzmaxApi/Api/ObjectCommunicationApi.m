@@ -52,7 +52,7 @@ NSInteger kObjectCommunicationApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
-/// Retrieve the communication body.
+/// Retrieve the communication body
 /// This endpoint returns the communication body.
 ///  @param pkiCommunicationID  
 ///

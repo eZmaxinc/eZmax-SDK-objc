@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignimportdocumentID** | **NSNumber*** | The unique ID of the Ezsignimportdocument | 
 **sEzsignimportdocumentName** | **NSString*** | The name of the Ezsignimportdocument | 
+**fkiEzsigntemplateglobalID** | **NSNumber*** | The unique ID of the Ezsigntemplateglobal | [optional] 
+**sEzsigntemplateglobalDescription** | **NSString*** | The description of the Ezsigntemplate | [optional] 
 **fkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | [optional] 
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | [optional] 
 

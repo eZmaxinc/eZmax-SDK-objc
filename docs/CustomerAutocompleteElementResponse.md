@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCustomerID** | **NSNumber*** | The unique ID of the Customer. | 
+**fkiDepartmentID** | **NSNumber*** | The unique ID of the Department | 
 **sCustomerName** | **NSString*** | The name of the Customer | 
 **bCustomerIsactive** | **NSNumber*** | Whether the customer is active or not | 
 

@@ -6,14 +6,18 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
+[**ezsignbulksendCreateObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv2) | **POST** /2/object/ezsignbulksend | Create a new Ezsignbulksend
 [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksenddeleteobjectv1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendEditObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv2) | **PUT** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendGetBatchFileV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetbatchfilev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile | Retrieve file to download documents in batch
 [**ezsignbulksendGetCsvTemplateV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetcsvtemplatev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend&#39;s empty Csv template
 [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetezsignbulksendtransmissionsv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
 [**ezsignbulksendGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
 [**ezsignbulksendGetFormsDataV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetformsdatav1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -121,6 +125,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendCreateObjectV1Response***](EzsignbulksendCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendCreateObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignbulksendCreateObjectV2WithEzsignbulksendCreateObjectV2Request: (EzsignbulksendCreateObjectV2Request*) ezsignbulksendCreateObjectV2Request
+        completionHandler: (void (^)(EzsignbulksendCreateObjectV2Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsignbulksend
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsignbulksendCreateObjectV2Request* ezsignbulksendCreateObjectV2Request = [[EzsignbulksendCreateObjectV2Request alloc] init]; // 
+
+ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
+
+// Create a new Ezsignbulksend
+[apiInstance ezsignbulksendCreateObjectV2WithEzsignbulksendCreateObjectV2Request:ezsignbulksendCreateObjectV2Request
+          completionHandler: ^(EzsignbulksendCreateObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendCreateObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignbulksendCreateObjectV2Request** | [**EzsignbulksendCreateObjectV2Request***](EzsignbulksendCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignbulksendCreateObjectV2Response***](EzsignbulksendCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -248,6 +309,138 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendEditObjectV2**
+```objc
+-(NSURLSessionTask*) ezsignbulksendEditObjectV2WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    ezsignbulksendEditObjectV2Request: (EzsignbulksendEditObjectV2Request*) ezsignbulksendEditObjectV2Request
+        completionHandler: (void (^)(EzsignbulksendEditObjectV2Response* output, NSError* error)) handler;
+```
+
+Edit an existing Ezsignbulksend
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksendID = @56; // 
+EzsignbulksendEditObjectV2Request* ezsignbulksendEditObjectV2Request = [[EzsignbulksendEditObjectV2Request alloc] init]; // 
+
+ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
+
+// Edit an existing Ezsignbulksend
+[apiInstance ezsignbulksendEditObjectV2WithPkiEzsignbulksendID:pkiEzsignbulksendID
+              ezsignbulksendEditObjectV2Request:ezsignbulksendEditObjectV2Request
+          completionHandler: ^(EzsignbulksendEditObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendEditObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **NSNumber***|  | 
+ **ezsignbulksendEditObjectV2Request** | [**EzsignbulksendEditObjectV2Request***](EzsignbulksendEditObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignbulksendEditObjectV2Response***](EzsignbulksendEditObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendGetBatchFileV1**
+```objc
+-(NSURLSessionTask*) ezsignbulksendGetBatchFileV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+    bIncludeSigned: (NSNumber*) bIncludeSigned
+    bIncludeAttachment: (NSNumber*) bIncludeAttachment
+    bIncludeProofdocument: (NSNumber*) bIncludeProofdocument
+    bIncludeProof: (NSNumber*) bIncludeProof
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Retrieve file to download documents in batch
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksendID = @56; // 
+NSNumber* bIncludeSigned = @56; // Include final document once all signatures were applied (optional)
+NSNumber* bIncludeAttachment = @56; // Include attached files in signatures (optional)
+NSNumber* bIncludeProofdocument = @56; // Include the evidence report (optional)
+NSNumber* bIncludeProof = @56; // include the complete evidence archive including all of the above and more (optional)
+
+ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
+
+// Retrieve file to download documents in batch
+[apiInstance ezsignbulksendGetBatchFileV1WithPkiEzsignbulksendID:pkiEzsignbulksendID
+              bIncludeSigned:bIncludeSigned
+              bIncludeAttachment:bIncludeAttachment
+              bIncludeProofdocument:bIncludeProofdocument
+              bIncludeProof:bIncludeProof
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendGetBatchFileV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **NSNumber***|  | 
+ **bIncludeSigned** | **NSNumber***| Include final document once all signatures were applied | [optional] 
+ **bIncludeAttachment** | **NSNumber***| Include attached files in signatures | [optional] 
+ **bIncludeProofdocument** | **NSNumber***| Include the evidence report | [optional] 
+ **bIncludeProof** | **NSNumber***| include the complete evidence archive including all of the above and more | [optional] 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/xml, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -601,6 +794,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendGetObjectV2Response***](EzsignbulksendGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendGetObjectV3**
+```objc
+-(NSURLSessionTask*) ezsignbulksendGetObjectV3WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+        completionHandler: (void (^)(EzsignbulksendGetObjectV3Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksendID = @56; // 
+
+ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
+
+// Retrieve an existing Ezsignbulksend
+[apiInstance ezsignbulksendGetObjectV3WithPkiEzsignbulksendID:pkiEzsignbulksendID
+          completionHandler: ^(EzsignbulksendGetObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendGetObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignbulksendGetObjectV3Response***](EzsignbulksendGetObjectV3Response.md)
 
 ### Authorization
 

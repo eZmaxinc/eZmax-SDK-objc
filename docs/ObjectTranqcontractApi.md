@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationlistv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list
 [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationrecipientsv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract&#39;s Communicationrecipient
 [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationsendersv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract&#39;s Communicationsender
+[**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractimportintoedmv1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract
 
 
 # **tranqcontractGetCommunicationCountV1**
@@ -234,6 +235,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **tranqcontractImportIntoEDMV1**
+```objc
+-(NSURLSessionTask*) tranqcontractImportIntoEDMV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
+    tranqcontractImportIntoEDMV1Request: (TranqcontractImportIntoEDMV1Request*) tranqcontractImportIntoEDMV1Request
+        completionHandler: (void (^)(TranqcontractImportIntoEDMV1Response* output, NSError* error)) handler;
+```
+
+Import attachments into the Tranqcontract
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiTranqcontractID = @56; // 
+TranqcontractImportIntoEDMV1Request* tranqcontractImportIntoEDMV1Request = [[TranqcontractImportIntoEDMV1Request alloc] init]; // 
+
+ObjectTranqcontractApi*apiInstance = [[ObjectTranqcontractApi alloc] init];
+
+// Import attachments into the Tranqcontract
+[apiInstance tranqcontractImportIntoEDMV1WithPkiTranqcontractID:pkiTranqcontractID
+              tranqcontractImportIntoEDMV1Request:tranqcontractImportIntoEDMV1Request
+          completionHandler: ^(TranqcontractImportIntoEDMV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectTranqcontractApi->tranqcontractImportIntoEDMV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiTranqcontractID** | **NSNumber***|  | 
+ **tranqcontractImportIntoEDMV1Request** | [**TranqcontractImportIntoEDMV1Request***](TranqcontractImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**TranqcontractImportIntoEDMV1Response***](TranqcontractImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

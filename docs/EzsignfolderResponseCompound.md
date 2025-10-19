@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **dtEzsignfolderScheduledarchive** | **NSString*** | The scheduled date and time at which the Ezsignfolder should be archived. | [optional] 
 **dtEzsignfolderScheduleddispose** | **NSString*** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep***](FieldEEzsignfolderStep.md) |  | [optional] 
+**eEzsignfolderMessageorder** | [**FieldEEzsignfolderMessageorder***](FieldEEzsignfolderMessageorder.md) |  | [optional] 
 **dtEzsignfolderClose** | **NSString*** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
 **tEzsignfolderMessage** | **NSString*** | A custom text message that will be added to the email sent. | [optional] 
 **objAudit** | [**CommonAudit***](CommonAudit.md) |  | [optional] 

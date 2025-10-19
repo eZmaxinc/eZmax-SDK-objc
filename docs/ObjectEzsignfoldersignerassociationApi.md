@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfoldersignerassociationCreateEmbeddedUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateembeddedurlv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
+[**ezsignfoldersignerassociationCreateEmbeddedUrlV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateembeddedurlv2) | **POST** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
 [**ezsignfoldersignerassociationCreateObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationCreateObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationDeleteObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationdeleteobjectv1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
@@ -66,6 +67,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationCreateEmbeddedUrlV1Response***](EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldersignerassociationCreateEmbeddedUrlV2**
+```objc
+-(NSURLSessionTask*) ezsignfoldersignerassociationCreateEmbeddedUrlV2WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationCreateEmbeddedUrlV2Request: (EzsignfoldersignerassociationCreateEmbeddedUrlV2Request*) ezsignfoldersignerassociationCreateEmbeddedUrlV2Request
+        completionHandler: (void (^)(EzsignfoldersignerassociationCreateEmbeddedUrlV2Response* output, NSError* error)) handler;
+```
+
+Creates an Url to allow embedded signing
+
+This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfoldersignerassociationID = @56; // 
+EzsignfoldersignerassociationCreateEmbeddedUrlV2Request* ezsignfoldersignerassociationCreateEmbeddedUrlV2Request = [[EzsignfoldersignerassociationCreateEmbeddedUrlV2Request alloc] init]; // 
+
+ObjectEzsignfoldersignerassociationApi*apiInstance = [[ObjectEzsignfoldersignerassociationApi alloc] init];
+
+// Creates an Url to allow embedded signing
+[apiInstance ezsignfoldersignerassociationCreateEmbeddedUrlV2WithPkiEzsignfoldersignerassociationID:pkiEzsignfoldersignerassociationID
+              ezsignfoldersignerassociationCreateEmbeddedUrlV2Request:ezsignfoldersignerassociationCreateEmbeddedUrlV2Request
+          completionHandler: ^(EzsignfoldersignerassociationCreateEmbeddedUrlV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationCreateEmbeddedUrlV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **NSNumber***|  | 
+ **ezsignfoldersignerassociationCreateEmbeddedUrlV2Request** | [**EzsignfoldersignerassociationCreateEmbeddedUrlV2Request***](EzsignfoldersignerassociationCreateEmbeddedUrlV2Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldersignerassociationCreateEmbeddedUrlV2Response***](EzsignfoldersignerassociationCreateEmbeddedUrlV2Response.md)
 
 ### Authorization
 

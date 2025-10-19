@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**otherincomeGetCommunicationListV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationlistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 [**otherincomeGetCommunicationrecipientsV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationrecipientsv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome&#39;s Communicationrecipient
 [**otherincomeGetCommunicationsendersV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationsendersv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders | Retrieve Otherincome&#39;s Communicationsender
+[**otherincomeGetListV1**](ObjectOtherincomeApi.md#otherincomegetlistv1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list
+[**otherincomeImportIntoEDMV1**](ObjectOtherincomeApi.md#otherincomeimportintoedmv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome
 
 
 # **otherincomeGetCommunicationCountV1**
@@ -234,6 +236,140 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **otherincomeGetListV1**
+```objc
+-(NSURLSessionTask*) otherincomeGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+        completionHandler: (void (^)(OtherincomeGetListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Otherincome list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars<br>DollarsTaxesIncluded |
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
+NSNumber* iRowMax = @56; //  (optional)
+NSNumber* iRowOffset = @0; //  (optional) (default to @0)
+HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
+NSString* sFilter = @"sFilter_example"; //  (optional)
+
+ObjectOtherincomeApi*apiInstance = [[ObjectOtherincomeApi alloc] init];
+
+// Retrieve Otherincome list
+[apiInstance otherincomeGetListV1WithEOrderBy:eOrderBy
+              iRowMax:iRowMax
+              iRowOffset:iRowOffset
+              acceptLanguage:acceptLanguage
+              sFilter:sFilter
+          completionHandler: ^(OtherincomeGetListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectOtherincomeApi->otherincomeGetListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **NSNumber***|  | [optional] 
+ **iRowOffset** | **NSNumber***|  | [optional] [default to @0]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **sFilter** | **NSString***|  | [optional] 
+
+### Return type
+
+[**OtherincomeGetListV1Response***](OtherincomeGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **otherincomeImportIntoEDMV1**
+```objc
+-(NSURLSessionTask*) otherincomeImportIntoEDMV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    otherincomeImportIntoEDMV1Request: (OtherincomeImportIntoEDMV1Request*) otherincomeImportIntoEDMV1Request
+        completionHandler: (void (^)(OtherincomeImportIntoEDMV1Response* output, NSError* error)) handler;
+```
+
+Import attachments into the Otherincome
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiOtherincomeID = @56; // 
+OtherincomeImportIntoEDMV1Request* otherincomeImportIntoEDMV1Request = [[OtherincomeImportIntoEDMV1Request alloc] init]; // 
+
+ObjectOtherincomeApi*apiInstance = [[ObjectOtherincomeApi alloc] init];
+
+// Import attachments into the Otherincome
+[apiInstance otherincomeImportIntoEDMV1WithPkiOtherincomeID:pkiOtherincomeID
+              otherincomeImportIntoEDMV1Request:otherincomeImportIntoEDMV1Request
+          completionHandler: ^(OtherincomeImportIntoEDMV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectOtherincomeApi->otherincomeImportIntoEDMV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiOtherincomeID** | **NSNumber***|  | 
+ **otherincomeImportIntoEDMV1Request** | [**OtherincomeImportIntoEDMV1Request***](OtherincomeImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**OtherincomeImportIntoEDMV1Response***](OtherincomeImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -4,10 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCreditcardmerchantID** | **NSNumber*** | The unique ID of the Creditcardmerchant | 
-**fkiBankaccountID** | **NSNumber*** | The unique ID of the Bankaccount | 
+**fkiBankaccountID** | **NSNumber*** | The unique ID of the Bankaccount | [optional] 
+**fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
+**sLanguageNameX** | **NSString*** | The Name of the Language in the language of the requester | 
+**fkiCurrencyID** | **NSNumber*** | The unique ID of the Currency. | 
+**sCurrencyDescriptionX** | **NSString*** | The description of the Currency in the language of the requester | 
 **sBankaccountBankname** | **NSString*** | The name of the bank | [optional] 
-**fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | [optional] 
-**sLanguageNameX** | **NSString*** | The Name of the Language in the language of the requester | [optional] 
 **bCreditcardmerchantDenyvisa** | **NSNumber*** | Whether if visa are denied | 
 **bCreditcardmerchantDenymastercard** | **NSNumber*** | Whether if mastercard are denied | 
 **bCreditcardmerchantDenyamex** | **NSNumber*** | Whether if amex are denied | 

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **fkiCompanyID** | **NSNumber*** | The unique ID of the Company | 
 **fkiCustomergroupID** | **NSNumber*** | The unique ID of the Customergroup | 
 **sCustomerName** | **NSString*** | The name of the Customer | 
+**sCustomerNote** | **NSString*** | A note for the Customer | [optional] 
 **fkiContactinformationsID** | **NSNumber*** | The unique ID of the Contactinformations | 
 **fkiContactcontainerID** | **NSNumber*** | The unique ID of the Contactcontainer | 
 **fkiImageID** | **NSNumber*** | The unique ID of the Image | 

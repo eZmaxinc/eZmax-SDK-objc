@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBrandingID": @"pkiBrandingID", @"fkiEmailID": @"fkiEmailID", @"objBrandingDescription": @"objBrandingDescription", @"sBrandingDescriptionX": @"sBrandingDescriptionX", @"sBrandingName": @"sBrandingName", @"sEmailAddress": @"sEmailAddress", @"eBrandingLogo": @"eBrandingLogo", @"eBrandingAlignlogo": @"eBrandingAlignlogo", @"iBrandingColor": @"iBrandingColor", @"bBrandingIsactive": @"bBrandingIsactive" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBrandingID": @"pkiBrandingID", @"fkiDomainID": @"fkiDomainID", @"sDomainName": @"sDomainName", @"fkiEmailID": @"fkiEmailID", @"objBrandingDescription": @"objBrandingDescription", @"sBrandingDescriptionX": @"sBrandingDescriptionX", @"sBrandingName": @"sBrandingName", @"sEmailAddress": @"sEmailAddress", @"eBrandingLogo": @"eBrandingLogo", @"eBrandingAlignlogo": @"eBrandingAlignlogo", @"iBrandingColor": @"iBrandingColor", @"bBrandingIsactive": @"bBrandingIsactive" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEmailID", @"sBrandingName", @"sEmailAddress", ];
+  NSArray *optionalProperties = @[@"fkiDomainID", @"sDomainName", @"fkiEmailID", @"sBrandingName", @"sEmailAddress", ];
   return [optionalProperties containsObject:propertyName];
 }
 

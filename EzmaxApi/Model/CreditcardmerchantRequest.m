@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardmerchantID": @"pkiCreditcardmerchantID", @"fkiBankaccountID": @"fkiBankaccountID", @"fkiLanguageID": @"fkiLanguageID", @"bCreditcardmerchantDenyvisa": @"bCreditcardmerchantDenyvisa", @"bCreditcardmerchantDenymastercard": @"bCreditcardmerchantDenymastercard", @"bCreditcardmerchantDenyamex": @"bCreditcardmerchantDenyamex", @"bCreditcardmerchantIsactive": @"bCreditcardmerchantIsactive", @"sCreditcardmerchantApitoken": @"sCreditcardmerchantApitoken", @"sCreditcardmerchantDescription": @"sCreditcardmerchantDescription", @"sCreditcardmerchantStoreid": @"sCreditcardmerchantStoreid" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardmerchantID": @"pkiCreditcardmerchantID", @"fkiBankaccountID": @"fkiBankaccountID", @"fkiLanguageID": @"fkiLanguageID", @"fkiCurrencyID": @"fkiCurrencyID", @"bCreditcardmerchantDenyvisa": @"bCreditcardmerchantDenyvisa", @"bCreditcardmerchantDenymastercard": @"bCreditcardmerchantDenymastercard", @"bCreditcardmerchantDenyamex": @"bCreditcardmerchantDenyamex", @"bCreditcardmerchantIsactive": @"bCreditcardmerchantIsactive", @"sCreditcardmerchantApitoken": @"sCreditcardmerchantApitoken", @"sCreditcardmerchantDescription": @"sCreditcardmerchantDescription", @"sCreditcardmerchantStoreid": @"sCreditcardmerchantStoreid" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiCreditcardmerchantID", @"fkiLanguageID", @"sCreditcardmerchantApitoken", ];
+  NSArray *optionalProperties = @[@"pkiCreditcardmerchantID", @"fkiBankaccountID", @"sCreditcardmerchantApitoken", ];
   return [optionalProperties containsObject:propertyName];
 }
 

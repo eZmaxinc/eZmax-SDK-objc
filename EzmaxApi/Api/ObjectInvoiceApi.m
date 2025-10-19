@@ -7,6 +7,8 @@
 #import "InvoiceGetCommunicationListV1Response.h"
 #import "InvoiceGetCommunicationrecipientsV1Response.h"
 #import "InvoiceGetCommunicationsendersV1Response.h"
+#import "InvoiceImportIntoEDMV1Request.h"
+#import "InvoiceImportIntoEDMV1Response.h"
 
 
 @interface ObjectInvoiceApi ()
@@ -390,6 +392,89 @@ NSInteger kObjectInvoiceApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((InvoiceGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Import attachments into the Invoice
+/// 
+///  @param pkiInvoiceID  
+///
+///  @param invoiceImportIntoEDMV1Request  
+///
+///  @returns InvoiceImportIntoEDMV1Response*
+///
+-(NSURLSessionTask*) invoiceImportIntoEDMV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    invoiceImportIntoEDMV1Request: (InvoiceImportIntoEDMV1Request*) invoiceImportIntoEDMV1Request
+    completionHandler: (void (^)(InvoiceImportIntoEDMV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInvoiceID' is set
+    if (pkiInvoiceID == nil) {
+        NSParameterAssert(pkiInvoiceID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInvoiceID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInvoiceApiErrorDomain code:kObjectInvoiceApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'invoiceImportIntoEDMV1Request' is set
+    if (invoiceImportIntoEDMV1Request == nil) {
+        NSParameterAssert(invoiceImportIntoEDMV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"invoiceImportIntoEDMV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectInvoiceApiErrorDomain code:kObjectInvoiceApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/invoice/{pkiInvoiceID}/importIntoEDM"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInvoiceID != nil) {
+        pathParams[@"pkiInvoiceID"] = pkiInvoiceID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = invoiceImportIntoEDMV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InvoiceImportIntoEDMV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InvoiceImportIntoEDMV1Response*)data, error);
                                 }
                             }];
 }

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**domainCreateObjectV1**](ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain
 [**domainDeleteObjectV1**](ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain
+[**domainGetAutocompleteV2**](ObjectDomainApi.md#domaingetautocompletev2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs
 [**domainGetListV1**](ObjectDomainApi.md#domaingetlistv1) | **GET** /1/object/domain/getList | Retrieve Domain list
 [**domainGetObjectV2**](ObjectDomainApi.md#domaingetobjectv2) | **GET** /2/object/domain/{pkiDomainID} | Retrieve an existing Domain
 
@@ -112,6 +113,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainDeleteObjectV1Response***](DomainDeleteObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **domainGetAutocompleteV2**
+```objc
+-(NSURLSessionTask*) domainGetAutocompleteV2WithSSelector: (NSString*) sSelector
+    eFilterActive: (NSString*) eFilterActive
+    sQuery: (NSString*) sQuery
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+        completionHandler: (void (^)(DomainGetAutocompleteV2Response* output, NSError* error)) handler;
+```
+
+Retrieve Domain and IDs
+
+Get the list of Domains to be used in a dropdown or autocomplete control.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* sSelector = @"sSelector_example"; // The type of Domain to return
+NSString* eFilterActive = @"Active"; // Specify which results we want to display. (optional) (default to @"Active")
+NSString* sQuery = @"sQuery_example"; // Allow to filter the returned results (optional)
+HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
+
+ObjectDomainApi*apiInstance = [[ObjectDomainApi alloc] init];
+
+// Retrieve Domain and IDs
+[apiInstance domainGetAutocompleteV2WithSSelector:sSelector
+              eFilterActive:eFilterActive
+              sQuery:sQuery
+              acceptLanguage:acceptLanguage
+          completionHandler: ^(DomainGetAutocompleteV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDomainApi->domainGetAutocompleteV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **NSString***| The type of Domain to return | 
+ **eFilterActive** | **NSString***| Specify which results we want to display. | [optional] [default to @&quot;Active&quot;]
+ **sQuery** | **NSString***| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+
+### Return type
+
+[**DomainGetAutocompleteV2Response***](DomainGetAutocompleteV2Response.md)
 
 ### Authorization
 

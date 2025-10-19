@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**invoiceGetCommunicationListV1**](ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
 [**invoiceGetCommunicationrecipientsV1**](ObjectInvoiceApi.md#invoicegetcommunicationrecipientsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice&#39;s Communicationrecipient
 [**invoiceGetCommunicationsendersV1**](ObjectInvoiceApi.md#invoicegetcommunicationsendersv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice&#39;s Communicationsender
+[**invoiceImportIntoEDMV1**](ObjectInvoiceApi.md#invoiceimportintoedmv1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
 
 
 # **invoiceGetAttachmentsV1**
@@ -292,6 +293,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invoiceImportIntoEDMV1**
+```objc
+-(NSURLSessionTask*) invoiceImportIntoEDMV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    invoiceImportIntoEDMV1Request: (InvoiceImportIntoEDMV1Request*) invoiceImportIntoEDMV1Request
+        completionHandler: (void (^)(InvoiceImportIntoEDMV1Response* output, NSError* error)) handler;
+```
+
+Import attachments into the Invoice
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInvoiceID = @56; // 
+InvoiceImportIntoEDMV1Request* invoiceImportIntoEDMV1Request = [[InvoiceImportIntoEDMV1Request alloc] init]; // 
+
+ObjectInvoiceApi*apiInstance = [[ObjectInvoiceApi alloc] init];
+
+// Import attachments into the Invoice
+[apiInstance invoiceImportIntoEDMV1WithPkiInvoiceID:pkiInvoiceID
+              invoiceImportIntoEDMV1Request:invoiceImportIntoEDMV1Request
+          completionHandler: ^(InvoiceImportIntoEDMV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInvoiceApi->invoiceImportIntoEDMV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInvoiceID** | **NSNumber***|  | 
+ **invoiceImportIntoEDMV1Request** | [**InvoiceImportIntoEDMV1Request***](InvoiceImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**InvoiceImportIntoEDMV1Response***](InvoiceImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

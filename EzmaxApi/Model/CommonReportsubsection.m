@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objReportsubsectionpartHeader": @"objReportsubsectionpartHeader", @"objReportsubsectionpartBody": @"objReportsubsectionpartBody", @"objReportsubsectionpartFooter": @"objReportsubsectionpartFooter", @"sReportsubsectionTitle": @"sReportsubsectionTitle" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjReportcolumn": @"a_objReportcolumn", @"iReportsubsectionColumncount": @"iReportsubsectionColumncount", @"iReportsubsectionWidth": @"iReportsubsectionWidth", @"objReportsubsectionpartHeader": @"objReportsubsectionpartHeader", @"objReportsubsectionpartBody": @"objReportsubsectionpartBody", @"objReportsubsectionpartFooter": @"objReportsubsectionpartFooter", @"sReportsubsectionTitle": @"sReportsubsectionTitle" }];
 }
 
 /**

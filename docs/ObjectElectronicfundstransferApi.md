@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 [**electronicfundstransferGetCommunicationrecipientsV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationrecipientsv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer&#39;s Communicationrecipient
 [**electronicfundstransferGetCommunicationsendersV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationsendersv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer&#39;s Communicationsender
+[**electronicfundstransferImportIntoEDMV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferimportintoedmv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer
 
 
 # **electronicfundstransferGetCommunicationCountV1**
@@ -234,6 +235,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **electronicfundstransferImportIntoEDMV1**
+```objc
+-(NSURLSessionTask*) electronicfundstransferImportIntoEDMV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    electronicfundstransferImportIntoEDMV1Request: (ElectronicfundstransferImportIntoEDMV1Request*) electronicfundstransferImportIntoEDMV1Request
+        completionHandler: (void (^)(ElectronicfundstransferImportIntoEDMV1Response* output, NSError* error)) handler;
+```
+
+Import attachments into the Electronicfundstransfer
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiElectronicfundstransferID = @56; // 
+ElectronicfundstransferImportIntoEDMV1Request* electronicfundstransferImportIntoEDMV1Request = [[ElectronicfundstransferImportIntoEDMV1Request alloc] init]; // 
+
+ObjectElectronicfundstransferApi*apiInstance = [[ObjectElectronicfundstransferApi alloc] init];
+
+// Import attachments into the Electronicfundstransfer
+[apiInstance electronicfundstransferImportIntoEDMV1WithPkiElectronicfundstransferID:pkiElectronicfundstransferID
+              electronicfundstransferImportIntoEDMV1Request:electronicfundstransferImportIntoEDMV1Request
+          completionHandler: ^(ElectronicfundstransferImportIntoEDMV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectElectronicfundstransferApi->electronicfundstransferImportIntoEDMV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiElectronicfundstransferID** | **NSNumber***|  | 
+ **electronicfundstransferImportIntoEDMV1Request** | [**ElectronicfundstransferImportIntoEDMV1Request***](ElectronicfundstransferImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**ElectronicfundstransferImportIntoEDMV1Response***](ElectronicfundstransferImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

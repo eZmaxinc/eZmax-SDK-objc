@@ -6,6 +6,8 @@
 #import "TranqcontractGetCommunicationListV1Response.h"
 #import "TranqcontractGetCommunicationrecipientsV1Response.h"
 #import "TranqcontractGetCommunicationsendersV1Response.h"
+#import "TranqcontractImportIntoEDMV1Request.h"
+#import "TranqcontractImportIntoEDMV1Response.h"
 
 
 @interface ObjectTranqcontractApi ()
@@ -321,6 +323,89 @@ NSInteger kObjectTranqcontractApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((TranqcontractGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Import attachments into the Tranqcontract
+/// 
+///  @param pkiTranqcontractID  
+///
+///  @param tranqcontractImportIntoEDMV1Request  
+///
+///  @returns TranqcontractImportIntoEDMV1Response*
+///
+-(NSURLSessionTask*) tranqcontractImportIntoEDMV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
+    tranqcontractImportIntoEDMV1Request: (TranqcontractImportIntoEDMV1Request*) tranqcontractImportIntoEDMV1Request
+    completionHandler: (void (^)(TranqcontractImportIntoEDMV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiTranqcontractID' is set
+    if (pkiTranqcontractID == nil) {
+        NSParameterAssert(pkiTranqcontractID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiTranqcontractID"] };
+            NSError* error = [NSError errorWithDomain:kObjectTranqcontractApiErrorDomain code:kObjectTranqcontractApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'tranqcontractImportIntoEDMV1Request' is set
+    if (tranqcontractImportIntoEDMV1Request == nil) {
+        NSParameterAssert(tranqcontractImportIntoEDMV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"tranqcontractImportIntoEDMV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectTranqcontractApiErrorDomain code:kObjectTranqcontractApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiTranqcontractID != nil) {
+        pathParams[@"pkiTranqcontractID"] = pkiTranqcontractID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = tranqcontractImportIntoEDMV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"TranqcontractImportIntoEDMV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((TranqcontractImportIntoEDMV1Response*)data, error);
                                 }
                             }];
 }

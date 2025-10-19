@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**inscriptionnotauthenticatedGetCommunicationListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationlistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list
 [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationrecipientsv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
 [**inscriptionnotauthenticatedGetCommunicationsendersV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationsendersv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders | Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+[**inscriptionnotauthenticatedGetListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetlistv1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list
+[**inscriptionnotauthenticatedImportIntoEDMV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedimportintoedmv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated
 
 
 # **inscriptionnotauthenticatedGetCommunicationCountV1**
@@ -234,6 +236,140 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptionnotauthenticatedGetListV1**
+```objc
+-(NSURLSessionTask*) inscriptionnotauthenticatedGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+        completionHandler: (void (^)(InscriptionnotauthenticatedGetListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Inscriptionnotauthenticated list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInscriptionStep | TemporaryNotAuthenticated<br>ImportedInscription<br>Inscription<br>ModifiedInscription<br>ContractEnded<br>ExpiredInscription<br>Out-market<br>ImportedNotauthenticated<br>NotAuthenticated<br>ModifiedNotauthenticated<br>Authenticated |
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSString* eOrderBy = @"eOrderBy_example"; // Specify how you want the results to be sorted (optional)
+NSNumber* iRowMax = @56; //  (optional)
+NSNumber* iRowOffset = @0; //  (optional) (default to @0)
+HeaderAcceptLanguage acceptLanguage = [[HeaderAcceptLanguage alloc] init]; //  (optional)
+NSString* sFilter = @"sFilter_example"; //  (optional)
+
+ObjectInscriptionnotauthenticatedApi*apiInstance = [[ObjectInscriptionnotauthenticatedApi alloc] init];
+
+// Retrieve Inscriptionnotauthenticated list
+[apiInstance inscriptionnotauthenticatedGetListV1WithEOrderBy:eOrderBy
+              iRowMax:iRowMax
+              iRowOffset:iRowOffset
+              acceptLanguage:acceptLanguage
+              sFilter:sFilter
+          completionHandler: ^(InscriptionnotauthenticatedGetListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptionnotauthenticatedApi->inscriptionnotauthenticatedGetListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **NSString***| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **NSNumber***|  | [optional] 
+ **iRowOffset** | **NSNumber***|  | [optional] [default to @0]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **sFilter** | **NSString***|  | [optional] 
+
+### Return type
+
+[**InscriptionnotauthenticatedGetListV1Response***](InscriptionnotauthenticatedGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptionnotauthenticatedImportIntoEDMV1**
+```objc
+-(NSURLSessionTask*) inscriptionnotauthenticatedImportIntoEDMV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    inscriptionnotauthenticatedImportIntoEDMV1Request: (InscriptionnotauthenticatedImportIntoEDMV1Request*) inscriptionnotauthenticatedImportIntoEDMV1Request
+        completionHandler: (void (^)(InscriptionnotauthenticatedImportIntoEDMV1Response* output, NSError* error)) handler;
+```
+
+Import attachments into the Inscriptionnotauthenticated
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInscriptionnotauthenticatedID = @56; // 
+InscriptionnotauthenticatedImportIntoEDMV1Request* inscriptionnotauthenticatedImportIntoEDMV1Request = [[InscriptionnotauthenticatedImportIntoEDMV1Request alloc] init]; // 
+
+ObjectInscriptionnotauthenticatedApi*apiInstance = [[ObjectInscriptionnotauthenticatedApi alloc] init];
+
+// Import attachments into the Inscriptionnotauthenticated
+[apiInstance inscriptionnotauthenticatedImportIntoEDMV1WithPkiInscriptionnotauthenticatedID:pkiInscriptionnotauthenticatedID
+              inscriptionnotauthenticatedImportIntoEDMV1Request:inscriptionnotauthenticatedImportIntoEDMV1Request
+          completionHandler: ^(InscriptionnotauthenticatedImportIntoEDMV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptionnotauthenticatedApi->inscriptionnotauthenticatedImportIntoEDMV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionnotauthenticatedID** | **NSNumber***|  | 
+ **inscriptionnotauthenticatedImportIntoEDMV1Request** | [**InscriptionnotauthenticatedImportIntoEDMV1Request***](InscriptionnotauthenticatedImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**InscriptionnotauthenticatedImportIntoEDMV1Response***](InscriptionnotauthenticatedImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

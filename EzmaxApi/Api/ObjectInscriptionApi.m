@@ -2,11 +2,17 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
+#import "HeaderAcceptLanguage.h"
 #import "InscriptionGetAttachmentsV1Response.h"
 #import "InscriptionGetCommunicationCountV1Response.h"
 #import "InscriptionGetCommunicationListV1Response.h"
 #import "InscriptionGetCommunicationrecipientsV1Response.h"
 #import "InscriptionGetCommunicationsendersV1Response.h"
+#import "InscriptionGetListV1Response.h"
+#import "InscriptionImportIntoEDMV1Request.h"
+#import "InscriptionImportIntoEDMV1Response.h"
+#import "InscriptionPrepareFilesTransferV1Request.h"
+#import "InscriptionPrepareFilesTransferV1Response.h"
 
 
 @interface ObjectInscriptionApi ()
@@ -390,6 +396,253 @@ NSInteger kObjectInscriptionApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((InscriptionGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Inscription list
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInscriptionStep | TemporaryNotAuthenticated<br>ImportedInscription<br>Inscription<br>ModifiedInscription<br>ContractEnded<br>ExpiredInscription<br>Out-market<br>ImportedNotauthenticated<br>NotAuthenticated<br>ModifiedNotauthenticated<br>Authenticated |
+///  @param eOrderBy Specify how you want the results to be sorted (optional)
+///
+///  @param iRowMax  (optional)
+///
+///  @param iRowOffset  (optional, default to @0)
+///
+///  @param acceptLanguage  (optional)
+///
+///  @param sFilter  (optional)
+///
+///  @returns InscriptionGetListV1Response*
+///
+-(NSURLSessionTask*) inscriptionGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(InscriptionGetListV1Response* output, NSError* error)) handler {
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscription/getList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eOrderBy != nil) {
+        queryParams[@"eOrderBy"] = eOrderBy;
+    }
+    if (iRowMax != nil) {
+        queryParams[@"iRowMax"] = iRowMax;
+    }
+    if (iRowOffset != nil) {
+        queryParams[@"iRowOffset"] = iRowOffset;
+    }
+    if (sFilter != nil) {
+        queryParams[@"sFilter"] = sFilter;
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (acceptLanguage != nil) {
+        headerParams[@"Accept-Language"] = acceptLanguage;
+    }
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionGetListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionGetListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Import attachments into the Inscription
+/// 
+///  @param pkiInscriptionID  
+///
+///  @param inscriptionImportIntoEDMV1Request  
+///
+///  @returns InscriptionImportIntoEDMV1Response*
+///
+-(NSURLSessionTask*) inscriptionImportIntoEDMV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    inscriptionImportIntoEDMV1Request: (InscriptionImportIntoEDMV1Request*) inscriptionImportIntoEDMV1Request
+    completionHandler: (void (^)(InscriptionImportIntoEDMV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptionID' is set
+    if (pkiInscriptionID == nil) {
+        NSParameterAssert(pkiInscriptionID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptionID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionApiErrorDomain code:kObjectInscriptionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'inscriptionImportIntoEDMV1Request' is set
+    if (inscriptionImportIntoEDMV1Request == nil) {
+        NSParameterAssert(inscriptionImportIntoEDMV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"inscriptionImportIntoEDMV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionApiErrorDomain code:kObjectInscriptionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscription/{pkiInscriptionID}/importIntoEDM"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptionID != nil) {
+        pathParams[@"pkiInscriptionID"] = pkiInscriptionID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = inscriptionImportIntoEDMV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionImportIntoEDMV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionImportIntoEDMV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Prepares file transfer into EDM
+/// 
+///  @param pkiInscriptionID  
+///
+///  @param inscriptionPrepareFilesTransferV1Request  
+///
+///  @returns InscriptionPrepareFilesTransferV1Response*
+///
+-(NSURLSessionTask*) inscriptionPrepareFilesTransferV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    inscriptionPrepareFilesTransferV1Request: (InscriptionPrepareFilesTransferV1Request*) inscriptionPrepareFilesTransferV1Request
+    completionHandler: (void (^)(InscriptionPrepareFilesTransferV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptionID' is set
+    if (pkiInscriptionID == nil) {
+        NSParameterAssert(pkiInscriptionID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptionID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionApiErrorDomain code:kObjectInscriptionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'inscriptionPrepareFilesTransferV1Request' is set
+    if (inscriptionPrepareFilesTransferV1Request == nil) {
+        NSParameterAssert(inscriptionPrepareFilesTransferV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"inscriptionPrepareFilesTransferV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionApiErrorDomain code:kObjectInscriptionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptionID != nil) {
+        pathParams[@"pkiInscriptionID"] = pkiInscriptionID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = inscriptionPrepareFilesTransferV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionPrepareFilesTransferV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionPrepareFilesTransferV1Response*)data, error);
                                 }
                             }];
 }

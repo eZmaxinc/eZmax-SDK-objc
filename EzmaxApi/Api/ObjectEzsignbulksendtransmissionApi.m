@@ -53,6 +53,98 @@ NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
+/// Retrieve file to download documents in batch
+/// 
+///  @param pkiEzsignbulksendtransmissionID  
+///
+///  @param bIncludeSigned Include final document once all signatures were applied (optional)
+///
+///  @param bIncludeAttachment Include attached files in signatures (optional)
+///
+///  @param bIncludeProofdocument Include the evidence report (optional)
+///
+///  @param bIncludeProof include the complete evidence archive including all of the above and more (optional)
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) ezsignbulksendtransmissionGetBatchFileV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
+    bIncludeSigned: (NSNumber*) bIncludeSigned
+    bIncludeAttachment: (NSNumber*) bIncludeAttachment
+    bIncludeProofdocument: (NSNumber*) bIncludeProofdocument
+    bIncludeProof: (NSNumber*) bIncludeProof
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
+    if (pkiEzsignbulksendtransmissionID == nil) {
+        NSParameterAssert(pkiEzsignbulksendtransmissionID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignbulksendtransmissionID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignbulksendtransmissionApiErrorDomain code:kObjectEzsignbulksendtransmissionApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignbulksendtransmissionID != nil) {
+        pathParams[@"pkiEzsignbulksendtransmissionID"] = pkiEzsignbulksendtransmissionID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (bIncludeSigned != nil) {
+        queryParams[@"bIncludeSigned"] = [bIncludeSigned isEqual:@(YES)] ? @"true" : @"false";
+    }
+    if (bIncludeAttachment != nil) {
+        queryParams[@"bIncludeAttachment"] = [bIncludeAttachment isEqual:@(YES)] ? @"true" : @"false";
+    }
+    if (bIncludeProofdocument != nil) {
+        queryParams[@"bIncludeProofdocument"] = [bIncludeProofdocument isEqual:@(YES)] ? @"true" : @"false";
+    }
+    if (bIncludeProof != nil) {
+        queryParams[@"bIncludeProof"] = [bIncludeProof isEqual:@(YES)] ? @"true" : @"false";
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
 /// 
 ///  @param pkiEzsignbulksendtransmissionID  

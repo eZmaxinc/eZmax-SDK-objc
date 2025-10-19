@@ -4,7 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationgetcommunicationbodyv1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body.
+[**communicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationgetcommunicationbodyv1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body
 [**communicationSendV1**](ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
         completionHandler: (void (^)(NSError* error)) handler;
 ```
 
-Retrieve the communication body.
+Retrieve the communication body
 
 This endpoint returns the communication body.
 
@@ -32,7 +32,7 @@ NSNumber* pkiCommunicationID = @56; //
 
 ObjectCommunicationApi*apiInstance = [[ObjectCommunicationApi alloc] init];
 
-// Retrieve the communication body.
+// Retrieve the communication body
 [apiInstance communicationGetCommunicationBodyV1WithPkiCommunicationID:pkiCommunicationID
           completionHandler: ^(NSError* error) {
                         if (error) {

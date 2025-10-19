@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 **eAttachmentType** | [**FieldEAttachmentType***](FieldEAttachmentType.md) |  | 
 **iAttachmentSize** | **NSNumber*** | The size of the Attachment | 
 **iAttachmentEDMmoduleflag** | **NSNumber*** | The edmmoduleflag of the Attachment | [optional] 
-**sAttachmentMD5** | **NSString*** | The md5 of the Attachment | 
+**sAttachmentMD5** | **NSString*** | The MD5 of the Attachment | 
 **bAttachmentDeleted** | **NSNumber*** | Whether if it&#39;s deleted | 
 **bAttachmentValid** | **NSNumber*** | Whether if it&#39;s valid | 
 **eAttachmentVerified** | [**FieldEAttachmentVerified***](FieldEAttachmentVerified.md) |  | 

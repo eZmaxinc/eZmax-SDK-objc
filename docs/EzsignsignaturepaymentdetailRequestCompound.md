@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignsignaturepaymentdetailID** | **NSNumber*** | The unique ID of the Ezsignsignaturepaymentdetail | [optional] 
-**fkiGlaccountcontainerID** | **NSNumber*** | The unique ID of the Glaccountcontainer | [optional] 
+**fkiGlaccountcontainerID** | **NSNumber*** | The unique ID of the Glaccountcontainer | 
 **tEzsignsignaturepaymentdetailDescription** | **NSString*** | A description for the Ezsignsignaturepaymentdetail. | 
 **dEzsignsignaturepaymentdetailAmount** | **NSString*** | The amount of the for the Ezsignsignaturepaymentdetail | 
 **eEzsignsignaturepaymentdetailTaxable** | [**FieldEEzsignsignaturepaymentdetailTaxable***](FieldEEzsignsignaturepaymentdetailTaxable.md) |  | 

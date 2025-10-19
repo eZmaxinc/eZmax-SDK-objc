@@ -6,6 +6,8 @@
 #import "ElectronicfundstransferGetCommunicationListV1Response.h"
 #import "ElectronicfundstransferGetCommunicationrecipientsV1Response.h"
 #import "ElectronicfundstransferGetCommunicationsendersV1Response.h"
+#import "ElectronicfundstransferImportIntoEDMV1Request.h"
+#import "ElectronicfundstransferImportIntoEDMV1Response.h"
 
 
 @interface ObjectElectronicfundstransferApi ()
@@ -321,6 +323,89 @@ NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((ElectronicfundstransferGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Import attachments into the Electronicfundstransfer
+/// 
+///  @param pkiElectronicfundstransferID  
+///
+///  @param electronicfundstransferImportIntoEDMV1Request  
+///
+///  @returns ElectronicfundstransferImportIntoEDMV1Response*
+///
+-(NSURLSessionTask*) electronicfundstransferImportIntoEDMV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    electronicfundstransferImportIntoEDMV1Request: (ElectronicfundstransferImportIntoEDMV1Request*) electronicfundstransferImportIntoEDMV1Request
+    completionHandler: (void (^)(ElectronicfundstransferImportIntoEDMV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == nil) {
+        NSParameterAssert(pkiElectronicfundstransferID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiElectronicfundstransferID"] };
+            NSError* error = [NSError errorWithDomain:kObjectElectronicfundstransferApiErrorDomain code:kObjectElectronicfundstransferApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'electronicfundstransferImportIntoEDMV1Request' is set
+    if (electronicfundstransferImportIntoEDMV1Request == nil) {
+        NSParameterAssert(electronicfundstransferImportIntoEDMV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"electronicfundstransferImportIntoEDMV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectElectronicfundstransferApiErrorDomain code:kObjectElectronicfundstransferApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiElectronicfundstransferID != nil) {
+        pathParams[@"pkiElectronicfundstransferID"] = pkiElectronicfundstransferID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = electronicfundstransferImportIntoEDMV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ElectronicfundstransferImportIntoEDMV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ElectronicfundstransferImportIntoEDMV1Response*)data, error);
                                 }
                             }];
 }

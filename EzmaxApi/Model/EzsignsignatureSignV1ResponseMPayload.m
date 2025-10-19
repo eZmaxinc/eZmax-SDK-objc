@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"dtEzsignsignatureDateInFolderTimezone": @"dtEzsignsignatureDateInFolderTimezone", @"objTimezone": @"objTimezone" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"dtEzsignsignatureDateInFolderTimezone": @"dtEzsignsignatureDateInFolderTimezone", @"objTimezone": @"objTimezone", @"objCreditcardtransaction": @"objCreditcardtransaction" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"objTimezone"];
+  NSArray *optionalProperties = @[@"objTimezone", @"objCreditcardtransaction"];
   return [optionalProperties containsObject:propertyName];
 }
 

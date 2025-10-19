@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep***](FieldEEzsignfolderStep.md) |  | 
+**eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion***](FieldEEzsignfolderCompletion.md) |  | 
 **dtCreatedDate** | **NSString*** | The date and time at which the object was created | 
 **dtEzsignfolderDelayedsenddate** | **NSString*** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **dtEzsignfolderSentdate** | **NSString*** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 

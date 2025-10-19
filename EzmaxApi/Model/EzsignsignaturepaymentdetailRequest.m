@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsignsignaturepaymentdetailID", @"fkiGlaccountcontainerID", ];
+  NSArray *optionalProperties = @[@"pkiEzsignsignaturepaymentdetailID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

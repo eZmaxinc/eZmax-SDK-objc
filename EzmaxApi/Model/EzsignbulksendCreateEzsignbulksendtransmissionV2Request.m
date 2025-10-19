@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiUserlogintypeID": @"fkiUserlogintypeID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignbulksendtransmissionDescription": @"sEzsignbulksendtransmissionDescription", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"iEzsignfolderSendreminderfirstdays": @"iEzsignfolderSendreminderfirstdays", @"iEzsignfolderSendreminderotherdays": @"iEzsignfolderSendreminderotherdays", @"tExtraMessage": @"tExtraMessage", @"sCsvBase64": @"sCsvBase64" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"fkiUserlogintypeID": @"fkiUserlogintypeID", @"fkiSecretquestionID": @"fkiSecretquestionID", @"fkiEzsigntsarequirementID": @"fkiEzsigntsarequirementID", @"sEzsignbulksendtransmissionDescription": @"sEzsignbulksendtransmissionDescription", @"dtEzsigndocumentDuedate": @"dtEzsigndocumentDuedate", @"iEzsignfolderSendreminderfirstdays": @"iEzsignfolderSendreminderfirstdays", @"iEzsignfolderSendreminderotherdays": @"iEzsignfolderSendreminderotherdays", @"tExtraMessage": @"tExtraMessage", @"sCsvBase64": @"sCsvBase64" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEzsigntsarequirementID", ];
+  NSArray *optionalProperties = @[@"fkiSecretquestionID", @"fkiEzsigntsarequirementID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

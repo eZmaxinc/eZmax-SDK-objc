@@ -2,10 +2,14 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
+#import "HeaderAcceptLanguage.h"
 #import "OtherincomeGetCommunicationCountV1Response.h"
 #import "OtherincomeGetCommunicationListV1Response.h"
 #import "OtherincomeGetCommunicationrecipientsV1Response.h"
 #import "OtherincomeGetCommunicationsendersV1Response.h"
+#import "OtherincomeGetListV1Response.h"
+#import "OtherincomeImportIntoEDMV1Request.h"
+#import "OtherincomeImportIntoEDMV1Response.h"
 
 
 @interface ObjectOtherincomeApi ()
@@ -321,6 +325,170 @@ NSInteger kObjectOtherincomeApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((OtherincomeGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Otherincome list
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars<br>DollarsTaxesIncluded |
+///  @param eOrderBy Specify how you want the results to be sorted (optional)
+///
+///  @param iRowMax  (optional)
+///
+///  @param iRowOffset  (optional, default to @0)
+///
+///  @param acceptLanguage  (optional)
+///
+///  @param sFilter  (optional)
+///
+///  @returns OtherincomeGetListV1Response*
+///
+-(NSURLSessionTask*) otherincomeGetListV1WithEOrderBy: (NSString*) eOrderBy
+    iRowMax: (NSNumber*) iRowMax
+    iRowOffset: (NSNumber*) iRowOffset
+    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
+    sFilter: (NSString*) sFilter
+    completionHandler: (void (^)(OtherincomeGetListV1Response* output, NSError* error)) handler {
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/otherincome/getList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eOrderBy != nil) {
+        queryParams[@"eOrderBy"] = eOrderBy;
+    }
+    if (iRowMax != nil) {
+        queryParams[@"iRowMax"] = iRowMax;
+    }
+    if (iRowOffset != nil) {
+        queryParams[@"iRowOffset"] = iRowOffset;
+    }
+    if (sFilter != nil) {
+        queryParams[@"sFilter"] = sFilter;
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (acceptLanguage != nil) {
+        headerParams[@"Accept-Language"] = acceptLanguage;
+    }
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"OtherincomeGetListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((OtherincomeGetListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Import attachments into the Otherincome
+/// 
+///  @param pkiOtherincomeID  
+///
+///  @param otherincomeImportIntoEDMV1Request  
+///
+///  @returns OtherincomeImportIntoEDMV1Response*
+///
+-(NSURLSessionTask*) otherincomeImportIntoEDMV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    otherincomeImportIntoEDMV1Request: (OtherincomeImportIntoEDMV1Request*) otherincomeImportIntoEDMV1Request
+    completionHandler: (void (^)(OtherincomeImportIntoEDMV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == nil) {
+        NSParameterAssert(pkiOtherincomeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiOtherincomeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectOtherincomeApiErrorDomain code:kObjectOtherincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'otherincomeImportIntoEDMV1Request' is set
+    if (otherincomeImportIntoEDMV1Request == nil) {
+        NSParameterAssert(otherincomeImportIntoEDMV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"otherincomeImportIntoEDMV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectOtherincomeApiErrorDomain code:kObjectOtherincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/otherincome/{pkiOtherincomeID}/importIntoEDM"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiOtherincomeID != nil) {
+        pathParams[@"pkiOtherincomeID"] = pkiOtherincomeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = otherincomeImportIntoEDMV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"OtherincomeImportIntoEDMV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((OtherincomeImportIntoEDMV1Response*)data, error);
                                 }
                             }];
 }
