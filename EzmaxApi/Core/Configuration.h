@@ -15,7 +15,7 @@
 */
 
 
-static NSString * const kAPIVersion = @"1.2.3";
+static NSString * const kAPIVersion = @"1.3.0";
 
 @protocol Configuration <NSObject>
 

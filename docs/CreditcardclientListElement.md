@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **fkiCreditcarddetailID** | **NSNumber*** | The unique ID of the Creditcarddetail | 
 **fkiCreditcardtypeID** | **NSNumber*** | The unique ID of the Creditcardtype | 
 **bCreditcardclientrelationIsdefault** | **NSNumber*** | Whether if it&#39;s the creditcardclient is the default one | 
+**bCreditcardclientLegacy** | **NSNumber*** | Whether the Creditcardclient is legacy or not | 
 **sCreditcardclientDescription** | **NSString*** | The description of the Creditcardclient | 
 **bCreditcardclientAllowedcompanypayment** | **NSNumber*** | Whether if it&#39;s an allowedagencypayment | 
 **bCreditcardclientAllowedtranquillit** | **NSNumber*** | Whether if it&#39;s an allowedtranquillit | 

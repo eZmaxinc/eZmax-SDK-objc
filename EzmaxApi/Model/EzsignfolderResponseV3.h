@@ -19,6 +19,7 @@
 #import "CustomEzsignfoldertypeResponse.h"
 #import "FieldEEzsignfolderCompletion.h"
 #import "FieldEEzsignfolderDocumentdependency.h"
+#import "FieldEEzsignfolderMessageorder.h"
 #import "FieldEEzsignfolderStep.h"
 @protocol CommonAudit;
 @class CommonAudit;
@@ -30,6 +31,8 @@
 @class FieldEEzsignfolderCompletion;
 @protocol FieldEEzsignfolderDocumentdependency;
 @class FieldEEzsignfolderDocumentdependency;
+@protocol FieldEEzsignfolderMessageorder;
+@class FieldEEzsignfolderMessageorder;
 @protocol FieldEEzsignfolderStep;
 @class FieldEEzsignfolderStep;
 
@@ -113,6 +116,8 @@
 /* A custom text message that will be added to the email sent. [optional]
  */
 @property(nonatomic) NSString* tEzsignfolderMessage;
+
+@property(nonatomic) FieldEEzsignfolderMessageorder* eEzsignfolderMessageorder;
 
 @property(nonatomic) CommonAudit* objAudit;
 /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  [optional]

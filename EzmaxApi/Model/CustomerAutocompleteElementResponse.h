@@ -31,6 +31,9 @@
 /* The name of the Customer 
  */
 @property(nonatomic) NSString* sCustomerName;
+/* The code of the Customer 
+ */
+@property(nonatomic) NSString* sCustomerCode;
 /* Whether the customer is active or not 
  */
 @property(nonatomic) NSNumber* bCustomerIsactive;

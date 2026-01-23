@@ -43,6 +43,9 @@
 /* The email address. [optional]
  */
 @property(nonatomic) NSString* sEmailAddress;
+/* Whether the User is active or not 
+ */
+@property(nonatomic) NSNumber* bUserIsactive;
 /* The Name of the Usergroup in the language of the requester 
  */
 @property(nonatomic) NSString* sUsergroupNameX;

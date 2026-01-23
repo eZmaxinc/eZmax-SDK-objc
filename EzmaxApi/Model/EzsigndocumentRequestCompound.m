@@ -28,7 +28,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiEzsigndocumentID", @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID", @"fkiEzsignimportdocumentID", @"eEzsigndocumentFormat", @"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", @"eEzsigndocumentForm", @"sEzsigndocumentExternalid"];
+  NSArray *optionalProperties = @[@"pkiEzsigndocumentID", @"fkiEzsigntemplateID", @"fkiEzsignfoldersignerassociationID", @"fkiEzsignimportdocumentID", @"eEzsigndocumentFormat", @"sEzsigndocumentBase64", @"sEzsigndocumentUrl", @"bEzsigndocumentForcerepair", @"sEzsigndocumentPassword", @"eEzsigndocumentForm", @"dtEzsigndocumentDuedate", @"sEzsigndocumentExternalid"];
   return [optionalProperties containsObject:propertyName];
 }
 

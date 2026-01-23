@@ -49,6 +49,9 @@
 /* The Name of the Usergroup in the language of the requester 
  */
 @property(nonatomic) NSString* sUsergroupNameX;
+/* Whether the User is active or not [optional]
+ */
+@property(nonatomic) NSNumber* bUserIsactive;
 /* The name of the Usergroupexternal [optional]
  */
 @property(nonatomic) NSString* sUsergroupexternalName;

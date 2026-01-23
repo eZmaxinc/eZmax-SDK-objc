@@ -5,7 +5,6 @@
 #import "SignatureDeleteObjectV1Response.h"
 #import "SignatureEditObjectV1Request.h"
 #import "SignatureEditObjectV1Response.h"
-#import "SignatureGetObjectV2Response.h"
 #import "SignatureGetObjectV3Response.h"
 #import "Api.h"
 
@@ -69,19 +68,6 @@ extern NSInteger kObjectSignatureApiMissingParamErrorCode;
 -(NSURLSessionTask*) signatureEditObjectV1WithPkiSignatureID: (NSNumber*) pkiSignatureID
     signatureEditObjectV1Request: (SignatureEditObjectV1Request*) signatureEditObjectV1Request
     completionHandler: (void (^)(SignatureEditObjectV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Signature
-/// 
-///
-/// @param pkiSignatureID The unique ID of the Signature
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return SignatureGetObjectV2Response*
--(NSURLSessionTask*) signatureGetObjectV2WithPkiSignatureID: (NSNumber*) pkiSignatureID
-    completionHandler: (void (^)(SignatureGetObjectV2Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Signature

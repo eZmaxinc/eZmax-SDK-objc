@@ -7,11 +7,8 @@
 #import "EzsigntemplatesignatureCreateObjectV3Request.h"
 #import "EzsigntemplatesignatureCreateObjectV3Response.h"
 #import "EzsigntemplatesignatureDeleteObjectV1Response.h"
-#import "EzsigntemplatesignatureEditObjectV2Request.h"
-#import "EzsigntemplatesignatureEditObjectV2Response.h"
 #import "EzsigntemplatesignatureEditObjectV3Request.h"
 #import "EzsigntemplatesignatureEditObjectV3Response.h"
-#import "EzsigntemplatesignatureGetObjectV3Response.h"
 #import "EzsigntemplatesignatureGetObjectV4Response.h"
 
 
@@ -262,89 +259,6 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
 
 ///
 /// Edit an existing Ezsigntemplatesignature
-/// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-///  @param pkiEzsigntemplatesignatureID  
-///
-///  @param ezsigntemplatesignatureEditObjectV2Request  
-///
-///  @returns EzsigntemplatesignatureEditObjectV2Response*
-///
--(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV2WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    ezsigntemplatesignatureEditObjectV2Request: (EzsigntemplatesignatureEditObjectV2Request*) ezsigntemplatesignatureEditObjectV2Request
-    completionHandler: (void (^)(EzsigntemplatesignatureEditObjectV2Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
-    if (pkiEzsigntemplatesignatureID == nil) {
-        NSParameterAssert(pkiEzsigntemplatesignatureID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatesignatureID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatesignatureApiErrorDomain code:kObjectEzsigntemplatesignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    // verify the required parameter 'ezsigntemplatesignatureEditObjectV2Request' is set
-    if (ezsigntemplatesignatureEditObjectV2Request == nil) {
-        NSParameterAssert(ezsigntemplatesignatureEditObjectV2Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplatesignatureEditObjectV2Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatesignatureApiErrorDomain code:kObjectEzsigntemplatesignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsigntemplatesignatureID != nil) {
-        pathParams[@"pkiEzsigntemplatesignatureID"] = pkiEzsigntemplatesignatureID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsigntemplatesignatureEditObjectV2Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"PUT"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsigntemplatesignatureEditObjectV2Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsigntemplatesignatureEditObjectV2Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Edit an existing Ezsigntemplatesignature
 /// 
 ///  @param pkiEzsigntemplatesignatureID  
 ///
@@ -422,74 +336,6 @@ NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsigntemplatesignatureEditObjectV3Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Retrieve an existing Ezsigntemplatesignature
-/// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-///  @param pkiEzsigntemplatesignatureID  
-///
-///  @returns EzsigntemplatesignatureGetObjectV3Response*
-///
--(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV3WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
-    completionHandler: (void (^)(EzsigntemplatesignatureGetObjectV3Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
-    if (pkiEzsigntemplatesignatureID == nil) {
-        NSParameterAssert(pkiEzsigntemplatesignatureID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatesignatureID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatesignatureApiErrorDomain code:kObjectEzsigntemplatesignatureApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsigntemplatesignatureID != nil) {
-        pathParams[@"pkiEzsigntemplatesignatureID"] = pkiEzsigntemplatesignatureID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"GET"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsigntemplatesignatureGetObjectV3Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsigntemplatesignatureGetObjectV3Response*)data, error);
                                 }
                             }];
 }

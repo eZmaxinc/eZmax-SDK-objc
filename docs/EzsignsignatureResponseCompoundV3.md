@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **sCurrencyDescriptionX** | **NSString*** | The description of the Currency in the language of the requester | [optional] 
 **dEzsignsignatureCreditcardamount** | **NSString*** | The amount of the Creditcard signature | [optional] 
 **sEzsignsignatureCreditcardamountdescription** | **NSString*** | The description of the Creditcard signature | [optional] 
+**bEzsignsignatureCreditcardcustomamount** | **NSNumber*** | Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not | [optional] 
 **sEzsignsigningreasonDescriptionX** | **NSString*** | The description of the Ezsignsigningreason in the language of the requester | [optional] 
 **iEzsignpagePagenumber** | **NSNumber*** | The page number in the Ezsigndocument | 
 **iEzsignsignatureX** | **NSNumber*** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. | 
@@ -21,6 +22,8 @@ Name | Type | Description | Notes
 **iEzsignsignatureStep** | **NSNumber*** | The step when the Ezsignsigner will be invited to sign | 
 **iEzsignsignatureStepadjusted** | **NSNumber*** | The step when the Ezsignsigner will be invited to sign | [optional] 
 **eEzsignsignatureType** | [**FieldEEzsignsignatureType***](FieldEEzsignsignatureType.md) |  | 
+**eEzsignsignatureSignaturepad** | [**FieldEEzsignsignatureSignaturepad***](FieldEEzsignsignatureSignaturepad.md) |  | [optional] 
+**eEzsignsignatureSignaturepadrequired** | [**FieldEEzsignsignatureSignaturepadrequired***](FieldEEzsignsignatureSignaturepadrequired.md) |  | [optional] 
 **tEzsignsignatureTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature | [optional] 
 **eEzsignsignatureTooltipposition** | [**FieldEEzsignsignatureTooltipposition***](FieldEEzsignsignatureTooltipposition.md) |  | [optional] 
 **eEzsignsignatureFont** | [**FieldEEzsignsignatureFont***](FieldEEzsignsignatureFont.md) |  | [optional] 

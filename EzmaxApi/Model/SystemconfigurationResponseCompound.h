@@ -49,6 +49,12 @@
 /* The unique ID of the Branding [optional]
  */
 @property(nonatomic) NSNumber* fkiBrandingID;
+/* The unique ID of the Timezone 
+ */
+@property(nonatomic) NSNumber* fkiTimezoneIDDefault;
+/* The description of the Timezone 
+ */
+@property(nonatomic) NSString* sTimezoneNameDefault;
 /* The description of the Systemconfigurationtype in the language of the requester 
  */
 @property(nonatomic) NSString* sSystemconfigurationtypeDescriptionX;
@@ -85,5 +91,8 @@
 @property(nonatomic) NSString* dtSystemconfigurationReadonlyexpirationend;
 
 @property(nonatomic) CustomBrandingResponse* objBranding;
+/* The hour we will send the eZsign reminders [optional]
+ */
+@property(nonatomic) NSNumber* iSystemconfigurationEzsignreminderhoursend;
 
 @end

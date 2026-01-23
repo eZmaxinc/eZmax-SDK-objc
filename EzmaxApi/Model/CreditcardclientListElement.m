@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"fkiCreditcarddetailID": @"fkiCreditcarddetailID", @"fkiCreditcardtypeID": @"fkiCreditcardtypeID", @"bCreditcardclientrelationIsdefault": @"bCreditcardclientrelationIsdefault", @"sCreditcardclientDescription": @"sCreditcardclientDescription", @"bCreditcardclientAllowedcompanypayment": @"bCreditcardclientAllowedcompanypayment", @"bCreditcardclientAllowedtranquillit": @"bCreditcardclientAllowedtranquillit", @"iCreditcarddetailExpirationmonth": @"iCreditcarddetailExpirationmonth", @"iCreditcarddetailExpirationyear": @"iCreditcarddetailExpirationyear", @"iCreditcarddetailLastdigits": @"iCreditcarddetailLastdigits" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiCreditcardclientID": @"pkiCreditcardclientID", @"fkiCreditcarddetailID": @"fkiCreditcarddetailID", @"fkiCreditcardtypeID": @"fkiCreditcardtypeID", @"bCreditcardclientrelationIsdefault": @"bCreditcardclientrelationIsdefault", @"bCreditcardclientLegacy": @"bCreditcardclientLegacy", @"sCreditcardclientDescription": @"sCreditcardclientDescription", @"bCreditcardclientAllowedcompanypayment": @"bCreditcardclientAllowedcompanypayment", @"bCreditcardclientAllowedtranquillit": @"bCreditcardclientAllowedtranquillit", @"iCreditcarddetailExpirationmonth": @"iCreditcarddetailExpirationmonth", @"iCreditcarddetailExpirationyear": @"iCreditcarddetailExpirationyear", @"iCreditcarddetailLastdigits": @"iCreditcarddetailLastdigits" }];
 }
 
 /**

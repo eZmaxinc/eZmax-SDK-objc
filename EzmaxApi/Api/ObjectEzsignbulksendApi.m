@@ -9,8 +9,6 @@
 #import "EzsignbulksendCreateObjectV2Request.h"
 #import "EzsignbulksendCreateObjectV2Response.h"
 #import "EzsignbulksendDeleteObjectV1Response.h"
-#import "EzsignbulksendEditObjectV1Request.h"
-#import "EzsignbulksendEditObjectV1Response.h"
 #import "EzsignbulksendEditObjectV2Request.h"
 #import "EzsignbulksendEditObjectV2Response.h"
 #import "EzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
@@ -348,89 +346,6 @@ NSInteger kObjectEzsignbulksendApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignbulksendDeleteObjectV1Response*)data, error);
-                                }
-                            }];
-}
-
-///
-/// Edit an existing Ezsignbulksend
-/// 
-///  @param pkiEzsignbulksendID  
-///
-///  @param ezsignbulksendEditObjectV1Request  
-///
-///  @returns EzsignbulksendEditObjectV1Response*
-///
--(NSURLSessionTask*) ezsignbulksendEditObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    ezsignbulksendEditObjectV1Request: (EzsignbulksendEditObjectV1Request*) ezsignbulksendEditObjectV1Request
-    completionHandler: (void (^)(EzsignbulksendEditObjectV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'pkiEzsignbulksendID' is set
-    if (pkiEzsignbulksendID == nil) {
-        NSParameterAssert(pkiEzsignbulksendID);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignbulksendID"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsignbulksendApiErrorDomain code:kObjectEzsignbulksendApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    // verify the required parameter 'ezsignbulksendEditObjectV1Request' is set
-    if (ezsignbulksendEditObjectV1Request == nil) {
-        NSParameterAssert(ezsignbulksendEditObjectV1Request);
-        if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignbulksendEditObjectV1Request"] };
-            NSError* error = [NSError errorWithDomain:kObjectEzsignbulksendApiErrorDomain code:kObjectEzsignbulksendApiMissingParamErrorCode userInfo:userInfo];
-            handler(nil, error);
-        }
-        return nil;
-    }
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignbulksend/{pkiEzsignbulksendID}"];
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    if (pkiEzsignbulksendID != nil) {
-        pathParams[@"pkiEzsignbulksendID"] = pkiEzsignbulksendID;
-    }
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
-    [headerParams addEntriesFromDictionary:self.defaultHeaders];
-    // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
-    if(acceptHeader.length > 0) {
-        headerParams[@"Accept"] = acceptHeader;
-    }
-
-    // response content type
-    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
-
-    // request content type
-    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = ezsignbulksendEditObjectV1Request;
-
-    return [self.apiClient requestWithPath: resourcePath
-                                    method: @"PUT"
-                                pathParams: pathParams
-                               queryParams: queryParams
-                                formParams: formParams
-                                     files: localVarFiles
-                                      body: bodyParam
-                              headerParams: headerParams
-                              authSettings: authSettings
-                        requestContentType: requestContentType
-                       responseContentType: responseContentType
-                              responseType: @"EzsignbulksendEditObjectV1Response*"
-                           completionBlock: ^(id data, NSError *error) {
-                                if(handler) {
-                                    handler((EzsignbulksendEditObjectV1Response*)data, error);
                                 }
                             }];
 }

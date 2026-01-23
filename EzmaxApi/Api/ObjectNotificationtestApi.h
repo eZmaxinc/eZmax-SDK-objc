@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "NotificationtestGetElementsV1Response.h"
 #import "NotificationtestGetElementsV2Response.h"
 #import "Api.h"
 
@@ -24,19 +23,6 @@ extern NSString* kObjectNotificationtestApiErrorDomain;
 extern NSInteger kObjectNotificationtestApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Retrieve an existing Notificationtest's Elements
-/// 
-///
-/// @param pkiNotificationtestID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return NotificationtestGetElementsV1Response*
--(NSURLSessionTask*) notificationtestGetElementsV1WithPkiNotificationtestID: (NSNumber*) pkiNotificationtestID
-    completionHandler: (void (^)(NotificationtestGetElementsV1Response* output, NSError* error)) handler;
-
 
 /// Retrieve an existing Notificationtest's Elements
 /// 

@@ -19,7 +19,6 @@
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
-#import "EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response.h"
 #import "EzsigntemplatedocumentGetObjectV2Response.h"
 #import "EzsigntemplatedocumentGetWordsPositionsV1Request.h"
@@ -61,6 +60,19 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @return EzsigntemplatedocumentCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentCreateObjectV1WithEzsigntemplatedocumentCreateObjectV1Request: (EzsigntemplatedocumentCreateObjectV1Request*) ezsigntemplatedocumentCreateObjectV1Request
     completionHandler: (void (^)(EzsigntemplatedocumentCreateObjectV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigntemplatedocument's original file
+/// 
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// 
+///  code:302 message:"The user has been redirected",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return void
+-(NSURLSessionTask*) ezsigntemplatedocumentDownloadV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    completionHandler: (void (^)(NSError* error)) handler;
 
 
 /// Edit multiple Ezsigntemplatedocumentpagerecognitions
@@ -214,20 +226,6 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @return EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     completionHandler: (void (^)(EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
-/// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-///
-/// @param pkiEzsigntemplatedocumentID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response*
--(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplatesignaturesV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
-    completionHandler: (void (^)(EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures

@@ -19,6 +19,8 @@
 #import "FieldEEzsignsignatureConsultationtrigger.h"
 #import "FieldEEzsignsignatureDependencyrequirement.h"
 #import "FieldEEzsignsignatureFont.h"
+#import "FieldEEzsignsignatureSignaturepad.h"
+#import "FieldEEzsignsignatureSignaturepadrequired.h"
 #import "FieldEEzsignsignatureTooltipposition.h"
 #import "FieldEEzsignsignatureType.h"
 @protocol EnumTextvalidation;
@@ -31,6 +33,10 @@
 @class FieldEEzsignsignatureDependencyrequirement;
 @protocol FieldEEzsignsignatureFont;
 @class FieldEEzsignsignatureFont;
+@protocol FieldEEzsignsignatureSignaturepad;
+@class FieldEEzsignsignatureSignaturepad;
+@protocol FieldEEzsignsignatureSignaturepadrequired;
+@class FieldEEzsignsignatureSignaturepadrequired;
 @protocol FieldEEzsignsignatureTooltipposition;
 @class FieldEEzsignsignatureTooltipposition;
 @protocol FieldEEzsignsignatureType;
@@ -72,6 +78,10 @@
 @property(nonatomic) NSNumber* iEzsignsignatureStep;
 
 @property(nonatomic) FieldEEzsignsignatureType* eEzsignsignatureType;
+
+@property(nonatomic) FieldEEzsignsignatureSignaturepad* eEzsignsignatureSignaturepad;
+
+@property(nonatomic) FieldEEzsignsignatureSignaturepadrequired* eEzsignsignatureSignaturepadrequired;
 /* The unique ID of the Ezsigndocument 
  */
 @property(nonatomic) NSNumber* fkiEzsigndocumentID;
@@ -126,5 +136,8 @@
 /* The amount of the Creditcard signature [optional]
  */
 @property(nonatomic) NSString* dEzsignsignatureCreditcardamount;
+/* Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignsignatureCreditcardcustomamount;
 
 @end

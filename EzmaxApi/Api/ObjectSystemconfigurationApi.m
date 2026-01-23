@@ -2,8 +2,8 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
-#import "SystemconfigurationEditObjectV1Request.h"
-#import "SystemconfigurationEditObjectV1Response.h"
+#import "SystemconfigurationEditObjectV2Request.h"
+#import "SystemconfigurationEditObjectV2Response.h"
 #import "SystemconfigurationGetObjectV2Response.h"
 
 
@@ -57,13 +57,13 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
 /// 
 ///  @param pkiSystemconfigurationID The unique ID of the Systemconfiguration 
 ///
-///  @param systemconfigurationEditObjectV1Request  
+///  @param systemconfigurationEditObjectV2Request  
 ///
-///  @returns SystemconfigurationEditObjectV1Response*
+///  @returns SystemconfigurationEditObjectV2Response*
 ///
--(NSURLSessionTask*) systemconfigurationEditObjectV1WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
-    systemconfigurationEditObjectV1Request: (SystemconfigurationEditObjectV1Request*) systemconfigurationEditObjectV1Request
-    completionHandler: (void (^)(SystemconfigurationEditObjectV1Response* output, NSError* error)) handler {
+-(NSURLSessionTask*) systemconfigurationEditObjectV2WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
+    systemconfigurationEditObjectV2Request: (SystemconfigurationEditObjectV2Request*) systemconfigurationEditObjectV2Request
+    completionHandler: (void (^)(SystemconfigurationEditObjectV2Response* output, NSError* error)) handler {
     // verify the required parameter 'pkiSystemconfigurationID' is set
     if (pkiSystemconfigurationID == nil) {
         NSParameterAssert(pkiSystemconfigurationID);
@@ -75,18 +75,18 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
         return nil;
     }
 
-    // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-    if (systemconfigurationEditObjectV1Request == nil) {
-        NSParameterAssert(systemconfigurationEditObjectV1Request);
+    // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+    if (systemconfigurationEditObjectV2Request == nil) {
+        NSParameterAssert(systemconfigurationEditObjectV2Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"systemconfigurationEditObjectV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"systemconfigurationEditObjectV2Request"] };
             NSError* error = [NSError errorWithDomain:kObjectSystemconfigurationApiErrorDomain code:kObjectSystemconfigurationApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/systemconfiguration/{pkiSystemconfigurationID}"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/systemconfiguration/{pkiSystemconfigurationID}"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
     if (pkiSystemconfigurationID != nil) {
@@ -114,7 +114,7 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = systemconfigurationEditObjectV1Request;
+    bodyParam = systemconfigurationEditObjectV2Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"PUT"
@@ -127,10 +127,10 @@ NSInteger kObjectSystemconfigurationApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"SystemconfigurationEditObjectV1Response*"
+                              responseType: @"SystemconfigurationEditObjectV2Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((SystemconfigurationEditObjectV1Response*)data, error);
+                                    handler((SystemconfigurationEditObjectV2Response*)data, error);
                                 }
                             }];
 }

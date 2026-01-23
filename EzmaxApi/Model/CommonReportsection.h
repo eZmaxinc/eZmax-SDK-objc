@@ -35,5 +35,8 @@
 /* The title of this Reportsection [optional]
  */
 @property(nonatomic) NSString* sReportsectionTitle;
+/* The name of tab in excel version [optional]
+ */
+@property(nonatomic) NSString* sReportsectionTabname;
 
 @end

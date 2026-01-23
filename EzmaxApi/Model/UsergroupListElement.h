@@ -31,5 +31,8 @@
 /* Number of users in group 
  */
 @property(nonatomic) NSNumber* iCountUser;
+/* Number of inactive users in group 
+ */
+@property(nonatomic) NSNumber* iCountInactiveuser;
 
 @end

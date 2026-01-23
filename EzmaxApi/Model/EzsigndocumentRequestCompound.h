@@ -61,7 +61,7 @@
 /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document. [optional]
  */
 @property(nonatomic) NSString* eEzsigndocumentForm;
-/* The maximum date and time at which the Ezsigndocument can be signed. 
+/* The maximum date and time at which the Ezsigndocument can be signed. [optional]
  */
 @property(nonatomic) NSString* dtEzsigndocumentDuedate;
 /* The name of the document that will be presented to Ezsignfoldersignerassociations 

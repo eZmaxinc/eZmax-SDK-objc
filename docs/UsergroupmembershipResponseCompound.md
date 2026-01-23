@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **sUserLoginname** | **NSString*** | The login name of the User. | [optional] 
 **sEmailAddress** | **NSString*** | The email address. | [optional] 
 **sUsergroupNameX** | **NSString*** | The Name of the Usergroup in the language of the requester | 
+**bUserIsactive** | **NSNumber*** | Whether the User is active or not | [optional] 
 **sUsergroupexternalName** | **NSString*** | The name of the Usergroupexternal | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

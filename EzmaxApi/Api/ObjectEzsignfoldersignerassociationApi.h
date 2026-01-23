@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.h"
-#import "EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV2Request.h"
 #import "EzsignfoldersignerassociationCreateEmbeddedUrlV2Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV1Request.h"
@@ -43,23 +41,7 @@ extern NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode;
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
 /// Creates an Url to allow embedded signing
-/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
-///
-/// @param pkiEzsignfoldersignerassociationID 
-/// @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response*
--(NSURLSessionTask*) ezsignfoldersignerassociationCreateEmbeddedUrlV1WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
-    ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: (EzsignfoldersignerassociationCreateEmbeddedUrlV1Request*) ezsignfoldersignerassociationCreateEmbeddedUrlV1Request
-    completionHandler: (void (^)(EzsignfoldersignerassociationCreateEmbeddedUrlV1Response* output, NSError* error)) handler;
-
-
-/// Creates an Url to allow embedded signing
-/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+/// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  ### Iframe Communication (postMessage)  If the signing page is embedded in an `iframe`, the application sends events to the parent window via `window.postMessage`.  The message structure is defined as follows:  ```json {   \"source\": \"ezsign\",   \"type\": \"eEzsignEvent\",   \"payload\": \"CompletedEzsignfolder\" } ```  * **source**: Always `'ezsign'`. * **type**: Always `'eEzsignEvent'`. * **payload**: Corresponds to the **eEzsignEvent** values listed in the table above (e.g., `SessionTimeout`, `CompletedStep`, etc.).  #### Example listener  ```javascript window.addEventListener('message', (event) => {     const { source, type, payload } = event.data;         if (source === 'ezsign' && type === 'eEzsignEvent') {         console.log('Event received:', payload);     } }); ``` 
 ///
 /// @param pkiEzsignfoldersignerassociationID 
 /// @param ezsignfoldersignerassociationCreateEmbeddedUrlV2Request 

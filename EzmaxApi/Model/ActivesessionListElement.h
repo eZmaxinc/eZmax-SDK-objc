@@ -28,7 +28,7 @@
 /* The unique ID of the User 
  */
 @property(nonatomic) NSNumber* fkiUserID;
-/* The unique ID of the Computer 
+/* The unique ID of the Computer [optional]
  */
 @property(nonatomic) NSNumber* fkiComputerID;
 /* The unique ID of the Company 
@@ -46,7 +46,7 @@
 /* The loginname of the Activesession 
  */
 @property(nonatomic) NSString* sActivesessionLoginname;
-/* The description of the Computer 
+/* The description of the Computer [optional]
  */
 @property(nonatomic) NSString* sComputerDescription;
 /* The first hit of the Activesession 

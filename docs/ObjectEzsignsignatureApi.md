@@ -9,11 +9,9 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureCreateObjectV4**](ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv4) | **POST** /4/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureEditObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv3) | **PUT** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignatureattachmentv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
-[**ezsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureGetObjectV4**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv4) | **GET** /4/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
@@ -303,67 +301,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureEditObjectV2**
-```objc
--(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
-        completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
-```
-
-Edit an existing Ezsignsignature
-
-Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-
-### Example
-```objc
-DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsignsignatureID = @56; // 
-EzsignsignatureEditObjectV2Request* ezsignsignatureEditObjectV2Request = [[EzsignsignatureEditObjectV2Request alloc] init]; // 
-
-ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
-
-// Edit an existing Ezsignsignature
-[apiInstance ezsignsignatureEditObjectV2WithPkiEzsignsignatureID:pkiEzsignsignatureID
-              ezsignsignatureEditObjectV2Request:ezsignsignatureEditObjectV2Request
-          completionHandler: ^(EzsignsignatureEditObjectV2Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureEditObjectV2: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***|  | 
- **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request***](EzsignsignatureEditObjectV2Request.md)|  | 
-
-### Return type
-
-[**EzsignsignatureEditObjectV2Response***](EzsignsignatureEditObjectV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **ezsignsignatureEditObjectV3**
 ```objc
 -(NSURLSessionTask*) ezsignsignatureEditObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
@@ -521,63 +458,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**EzsignsignatureGetEzsignsignaturesAutomaticV1Response***](EzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsignsignatureGetObjectV3**
-```objc
--(NSURLSessionTask*) ezsignsignatureGetObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-        completionHandler: (void (^)(EzsignsignatureGetObjectV3Response* output, NSError* error)) handler;
-```
-
-Retrieve an existing Ezsignsignature
-
-Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-
-### Example
-```objc
-DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: Authorization)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
-
-
-NSNumber* pkiEzsignsignatureID = @56; // 
-
-ObjectEzsignsignatureApi*apiInstance = [[ObjectEzsignsignatureApi alloc] init];
-
-// Retrieve an existing Ezsignsignature
-[apiInstance ezsignsignatureGetObjectV3WithPkiEzsignsignatureID:pkiEzsignsignatureID
-          completionHandler: ^(EzsignsignatureGetObjectV3Response* output, NSError* error) {
-                        if (output) {
-                            NSLog(@"%@", output);
-                        }
-                        if (error) {
-                            NSLog(@"Error calling ObjectEzsignsignatureApi->ezsignsignatureGetObjectV3: %@", error);
-                        }
-                    }];
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **NSNumber***|  | 
-
-### Return type
-
-[**EzsignsignatureGetObjectV3Response***](EzsignsignatureGetObjectV3Response.md)
 
 ### Authorization
 

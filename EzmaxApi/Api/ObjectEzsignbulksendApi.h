@@ -7,8 +7,6 @@
 #import "EzsignbulksendCreateObjectV2Request.h"
 #import "EzsignbulksendCreateObjectV2Response.h"
 #import "EzsignbulksendDeleteObjectV1Response.h"
-#import "EzsignbulksendEditObjectV1Request.h"
-#import "EzsignbulksendEditObjectV1Response.h"
 #import "EzsignbulksendEditObjectV2Request.h"
 #import "EzsignbulksendEditObjectV2Response.h"
 #import "EzsignbulksendGetEzsignbulksendtransmissionsV1Response.h"
@@ -95,22 +93,6 @@ extern NSInteger kObjectEzsignbulksendApiMissingParamErrorCode;
 /// @return EzsignbulksendDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksendDeleteObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
     completionHandler: (void (^)(EzsignbulksendDeleteObjectV1Response* output, NSError* error)) handler;
-
-
-/// Edit an existing Ezsignbulksend
-/// 
-///
-/// @param pkiEzsignbulksendID 
-/// @param ezsignbulksendEditObjectV1Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsignbulksendEditObjectV1Response*
--(NSURLSessionTask*) ezsignbulksendEditObjectV1WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
-    ezsignbulksendEditObjectV1Request: (EzsignbulksendEditObjectV1Request*) ezsignbulksendEditObjectV1Request
-    completionHandler: (void (^)(EzsignbulksendEditObjectV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignbulksend

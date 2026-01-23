@@ -34,6 +34,9 @@
 /* Whether if it's the creditcardclient is the default one 
  */
 @property(nonatomic) NSNumber* bCreditcardclientrelationIsdefault;
+/* Whether the Creditcardclient is legacy or not 
+ */
+@property(nonatomic) NSNumber* bCreditcardclientLegacy;
 /* The description of the Creditcardclient 
  */
 @property(nonatomic) NSString* sCreditcardclientDescription;

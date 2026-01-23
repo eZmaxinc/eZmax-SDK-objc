@@ -34,6 +34,9 @@
 /* The unique ID of the Font [optional]
  */
 @property(nonatomic) NSNumber* fkiFontID;
+/* The amount of the Creditcard signature [optional]
+ */
+@property(nonatomic) NSString* dEzsignsignatureCreditcardamount;
 /* The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** [optional]
  */
 @property(nonatomic) NSString* sValue;

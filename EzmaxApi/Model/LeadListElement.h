@@ -45,5 +45,8 @@
 /* The code of the Lead 
  */
 @property(nonatomic) NSString* sLeadCode;
+/* The contacts' name of the Lead [optional]
+ */
+@property(nonatomic) NSString* sLeadContacts;
 
 @end

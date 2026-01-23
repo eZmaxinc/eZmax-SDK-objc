@@ -1,9 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
-#import "CustomerCreateObjectV1Request.h"
-#import "CustomerCreateObjectV1Response.h"
 #import "CustomerGetAutocompleteV2Response.h"
-#import "CustomerGetListV1Response.h"
 #import "CustomerGetObjectV2Response.h"
 #import "CustomerImportIntoEDMV1Request.h"
 #import "CustomerImportIntoEDMV1Response.h"
@@ -31,18 +28,6 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Create a new Customer
-/// The endpoint allows to create one or many elements at once.
-///
-/// @param customerCreateObjectV1Request 
-/// 
-///  code:201 message:"Successful response"
-///
-/// @return CustomerCreateObjectV1Response*
--(NSURLSessionTask*) customerCreateObjectV1WithCustomerCreateObjectV1Request: (CustomerCreateObjectV1Request*) customerCreateObjectV1Request
-    completionHandler: (void (^)(CustomerCreateObjectV1Response* output, NSError* error)) handler;
-
-
 /// Retrieve Customers and IDs
 /// Get the list of Customer to be used in a dropdown or autocomplete control.
 ///
@@ -61,27 +46,6 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
     completionHandler: (void (^)(CustomerGetAutocompleteV2Response* output, NSError* error)) handler;
 
 
-/// Retrieve Customer list
-/// 
-///
-/// @param eOrderBy Specify how you want the results to be sorted (optional)
-/// @param iRowMax  (optional)
-/// @param iRowOffset  (optional) (default to @0)
-/// @param acceptLanguage  (optional)
-/// @param sFilter  (optional)
-/// 
-///  code:200 message:"Successful response",
-///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\""
-///
-/// @return CustomerGetListV1Response*
--(NSURLSessionTask*) customerGetListV1WithEOrderBy: (NSString*) eOrderBy
-    iRowMax: (NSNumber*) iRowMax
-    iRowOffset: (NSNumber*) iRowOffset
-    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
-    sFilter: (NSString*) sFilter
-    completionHandler: (void (^)(CustomerGetListV1Response* output, NSError* error)) handler;
-
-
 /// Retrieve an existing Customer
 /// 
 ///
@@ -95,7 +59,7 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
     completionHandler: (void (^)(CustomerGetObjectV2Response* output, NSError* error)) handler;
 
 
-/// Import attachments into the Buyercontract
+/// Import attachments into the Customer
 /// 
 ///
 /// @param pkiCustomerID 

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **iEzsignsignatureHeight** | **NSNumber*** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. | [optional] 
 **iEzsignsignatureStep** | **NSNumber*** | The step when the Ezsignsigner will be invited to sign | 
 **eEzsignsignatureType** | [**FieldEEzsignsignatureType***](FieldEEzsignsignatureType.md) |  | 
+**eEzsignsignatureSignaturepad** | [**FieldEEzsignsignatureSignaturepad***](FieldEEzsignsignatureSignaturepad.md) |  | [optional] 
+**eEzsignsignatureSignaturepadrequired** | [**FieldEEzsignsignatureSignaturepadrequired***](FieldEEzsignsignatureSignaturepadrequired.md) |  | [optional] 
 **fkiEzsigndocumentID** | **NSNumber*** | The unique ID of the Ezsigndocument | 
 **tEzsignsignatureTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature | [optional] 
 **eEzsignsignatureTooltipposition** | [**FieldEEzsignsignatureTooltipposition***](FieldEEzsignsignatureTooltipposition.md) |  | [optional] 
@@ -33,6 +35,7 @@ Name | Type | Description | Notes
 **eEzsignsignatureDependencyrequirement** | [**FieldEEzsignsignatureDependencyrequirement***](FieldEEzsignsignatureDependencyrequirement.md) |  | [optional] 
 **sEzsignsignatureCreditcardamountdescription** | **NSString*** | The description of the Creditcard signature | [optional] 
 **dEzsignsignatureCreditcardamount** | **NSString*** | The amount of the Creditcard signature | [optional] 
+**bEzsignsignatureCreditcardcustomamount** | **NSNumber*** | Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

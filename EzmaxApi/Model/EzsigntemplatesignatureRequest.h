@@ -21,6 +21,8 @@
 #import "FieldEEzsigntemplatesignatureFont.h"
 #import "FieldEEzsigntemplatesignaturePositioning.h"
 #import "FieldEEzsigntemplatesignaturePositioningoccurence.h"
+#import "FieldEEzsigntemplatesignatureSignaturepad.h"
+#import "FieldEEzsigntemplatesignatureSignaturepadrequired.h"
 #import "FieldEEzsigntemplatesignatureTooltipposition.h"
 #import "FieldEEzsigntemplatesignatureType.h"
 @protocol EnumTextvalidation;
@@ -37,6 +39,10 @@
 @class FieldEEzsigntemplatesignaturePositioning;
 @protocol FieldEEzsigntemplatesignaturePositioningoccurence;
 @class FieldEEzsigntemplatesignaturePositioningoccurence;
+@protocol FieldEEzsigntemplatesignatureSignaturepad;
+@class FieldEEzsigntemplatesignatureSignaturepad;
+@protocol FieldEEzsigntemplatesignatureSignaturepadrequired;
+@class FieldEEzsigntemplatesignatureSignaturepadrequired;
 @protocol FieldEEzsigntemplatesignatureTooltipposition;
 @class FieldEEzsigntemplatesignatureTooltipposition;
 @protocol FieldEEzsigntemplatesignatureType;
@@ -92,6 +98,10 @@
 @property(nonatomic) NSNumber* iEzsigntemplatesignatureStep;
 
 @property(nonatomic) FieldEEzsigntemplatesignatureType* eEzsigntemplatesignatureType;
+
+@property(nonatomic) FieldEEzsigntemplatesignatureSignaturepad* eEzsigntemplatesignatureSignaturepad;
+
+@property(nonatomic) FieldEEzsigntemplatesignatureSignaturepadrequired* eEzsigntemplatesignatureSignaturepadrequired;
 
 @property(nonatomic) FieldEEzsigntemplatesignatureConsultationtrigger* eEzsigntemplatesignatureConsultationtrigger;
 /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature [optional]

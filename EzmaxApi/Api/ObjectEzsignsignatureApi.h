@@ -9,13 +9,10 @@
 #import "EzsignsignatureCreateObjectV4Request.h"
 #import "EzsignsignatureCreateObjectV4Response.h"
 #import "EzsignsignatureDeleteObjectV1Response.h"
-#import "EzsignsignatureEditObjectV2Request.h"
-#import "EzsignsignatureEditObjectV2Response.h"
 #import "EzsignsignatureEditObjectV3Request.h"
 #import "EzsignsignatureEditObjectV3Response.h"
 #import "EzsignsignatureGetEzsignsignatureattachmentV1Response.h"
 #import "EzsignsignatureGetEzsignsignaturesAutomaticV1Response.h"
-#import "EzsignsignatureGetObjectV3Response.h"
 #import "EzsignsignatureGetObjectV4Response.h"
 #import "EzsignsignatureSignV1Request.h"
 #import "EzsignsignatureSignV1Response.h"
@@ -105,22 +102,6 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 
 
 /// Edit an existing Ezsignsignature
-/// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-///
-/// @param pkiEzsignsignatureID 
-/// @param ezsignsignatureEditObjectV2Request 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
-///
-/// @return EzsignsignatureEditObjectV2Response*
--(NSURLSessionTask*) ezsignsignatureEditObjectV2WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    ezsignsignatureEditObjectV2Request: (EzsignsignatureEditObjectV2Request*) ezsignsignatureEditObjectV2Request
-    completionHandler: (void (^)(EzsignsignatureEditObjectV2Response* output, NSError* error)) handler;
-
-
-/// Edit an existing Ezsignsignature
 /// 
 ///
 /// @param pkiEzsignsignatureID 
@@ -159,19 +140,6 @@ extern NSInteger kObjectEzsignsignatureApiMissingParamErrorCode;
 /// @return EzsignsignatureGetEzsignsignaturesAutomaticV1Response*
 -(NSURLSessionTask*) ezsignsignatureGetEzsignsignaturesAutomaticV1WithCompletionHandler: 
     (void (^)(EzsignsignatureGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
-
-
-/// Retrieve an existing Ezsignsignature
-/// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-///
-/// @param pkiEzsignsignatureID 
-/// 
-///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
-///
-/// @return EzsignsignatureGetObjectV3Response*
--(NSURLSessionTask*) ezsignsignatureGetObjectV3WithPkiEzsignsignatureID: (NSNumber*) pkiEzsignsignatureID
-    completionHandler: (void (^)(EzsignsignatureGetObjectV3Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignsignature

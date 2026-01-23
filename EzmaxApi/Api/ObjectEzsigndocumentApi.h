@@ -25,6 +25,8 @@
 #import "EzsigndocumentEditEzsignannotationsV1Response.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Request.h"
 #import "EzsigndocumentEditEzsignformfieldgroupsV1Response.h"
+#import "EzsigndocumentEditEzsignformfieldgroupsV2Request.h"
+#import "EzsigndocumentEditEzsignformfieldgroupsV2Response.h"
 #import "EzsigndocumentEditEzsignsignaturesV1Request.h"
 #import "EzsigndocumentEditEzsignsignaturesV1Response.h"
 #import "EzsigndocumentEditEzsignsignaturesV2Request.h"
@@ -37,6 +39,7 @@
 #import "EzsigndocumentFlattenV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
 #import "EzsigndocumentGetActionableElementsV2Response.h"
+#import "EzsigndocumentGetActionableElementsV3Response.h"
 #import "EzsigndocumentGetAttachmentsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV1Response.h"
 #import "EzsigndocumentGetCompletedElementsV2Response.h"
@@ -267,6 +270,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigndocumentEditEzsignformfieldgroupsV1Response* output, NSError* error)) handler;
 
 
+/// Edit multiple Ezsignformfieldgroups
+/// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentEditEzsignformfieldgroupsV2Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentEditEzsignformfieldgroupsV2Response*
+-(NSURLSessionTask*) ezsigndocumentEditEzsignformfieldgroupsV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentEditEzsignformfieldgroupsV2Request: (EzsigndocumentEditEzsignformfieldgroupsV2Request*) ezsigndocumentEditEzsignformfieldgroupsV2Request
+    completionHandler: (void (^)(EzsigndocumentEditEzsignformfieldgroupsV2Response* output, NSError* error)) handler;
+
+
 /// Edit multiple Ezsignsignatures
 /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 ///
@@ -389,6 +408,20 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 /// @return EzsigndocumentGetActionableElementsV2Response*
 -(NSURLSessionTask*) ezsigndocumentGetActionableElementsV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     completionHandler: (void (^)(EzsigndocumentGetActionableElementsV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve actionable elements for the Ezsigndocument
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+///
+/// @param pkiEzsigndocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentGetActionableElementsV3Response*
+-(NSURLSessionTask*) ezsigndocumentGetActionableElementsV3WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    completionHandler: (void (^)(EzsigndocumentGetActionableElementsV3Response* output, NSError* error)) handler;
 
 
 /// Retrieve Ezsigndocument's Attachments

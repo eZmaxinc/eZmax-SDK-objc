@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 #import "HeaderAcceptLanguage.h"
-#import "InscriptionchecklistGetAutocompleteV2Response.h"
 #import "InscriptionchecklistGetAutocompleteV3Response.h"
 #import "Api.h"
 
@@ -24,28 +23,6 @@ extern NSString* kObjectInscriptionchecklistApiErrorDomain;
 extern NSInteger kObjectInscriptionchecklistApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
-
-/// Retrieve Inscriptionchecklists and IDs
-/// Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.
-///
-/// @param sSelector The type of Inscriptionchecklist to return
-/// @param fkiID Specify which fkiID we want to display. (optional)
-/// @param eType The type of Inscriptionchecklist (optional)
-/// @param eFilterActive Specify which results we want to display. (optional) (default to @"Active")
-/// @param sQuery Allow to filter the returned results (optional)
-/// @param acceptLanguage  (optional)
-/// 
-///  code:200 message:"Successful response"
-///
-/// @return InscriptionchecklistGetAutocompleteV2Response*
--(NSURLSessionTask*) inscriptionchecklistGetAutocompleteV2WithSSelector: (NSString*) sSelector
-    fkiID: (NSString*) fkiID
-    eType: (NSString*) eType
-    eFilterActive: (NSString*) eFilterActive
-    sQuery: (NSString*) sQuery
-    acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
-    completionHandler: (void (^)(InscriptionchecklistGetAutocompleteV2Response* output, NSError* error)) handler;
-
 
 /// Retrieve Inscriptionchecklists and IDs
 /// Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.

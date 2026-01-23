@@ -4,15 +4,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systemconfigurationEditObjectV1**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
+[**systemconfigurationEditObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv2) | **PUT** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
 [**systemconfigurationGetObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationgetobjectv2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration
 
 
-# **systemconfigurationEditObjectV1**
+# **systemconfigurationEditObjectV2**
 ```objc
--(NSURLSessionTask*) systemconfigurationEditObjectV1WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
-    systemconfigurationEditObjectV1Request: (SystemconfigurationEditObjectV1Request*) systemconfigurationEditObjectV1Request
-        completionHandler: (void (^)(SystemconfigurationEditObjectV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) systemconfigurationEditObjectV2WithPkiSystemconfigurationID: (NSNumber*) pkiSystemconfigurationID
+    systemconfigurationEditObjectV2Request: (SystemconfigurationEditObjectV2Request*) systemconfigurationEditObjectV2Request
+        completionHandler: (void (^)(SystemconfigurationEditObjectV2Response* output, NSError* error)) handler;
 ```
 
 Edit an existing Systemconfiguration
@@ -30,19 +30,19 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 
 NSNumber* pkiSystemconfigurationID = @56; // The unique ID of the Systemconfiguration
-SystemconfigurationEditObjectV1Request* systemconfigurationEditObjectV1Request = [[SystemconfigurationEditObjectV1Request alloc] init]; // 
+SystemconfigurationEditObjectV2Request* systemconfigurationEditObjectV2Request = [[SystemconfigurationEditObjectV2Request alloc] init]; // 
 
 ObjectSystemconfigurationApi*apiInstance = [[ObjectSystemconfigurationApi alloc] init];
 
 // Edit an existing Systemconfiguration
-[apiInstance systemconfigurationEditObjectV1WithPkiSystemconfigurationID:pkiSystemconfigurationID
-              systemconfigurationEditObjectV1Request:systemconfigurationEditObjectV1Request
-          completionHandler: ^(SystemconfigurationEditObjectV1Response* output, NSError* error) {
+[apiInstance systemconfigurationEditObjectV2WithPkiSystemconfigurationID:pkiSystemconfigurationID
+              systemconfigurationEditObjectV2Request:systemconfigurationEditObjectV2Request
+          completionHandler: ^(SystemconfigurationEditObjectV2Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ObjectSystemconfigurationApi->systemconfigurationEditObjectV1: %@", error);
+                            NSLog(@"Error calling ObjectSystemconfigurationApi->systemconfigurationEditObjectV2: %@", error);
                         }
                     }];
 ```
@@ -52,11 +52,11 @@ ObjectSystemconfigurationApi*apiInstance = [[ObjectSystemconfigurationApi alloc]
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiSystemconfigurationID** | **NSNumber***| The unique ID of the Systemconfiguration | 
- **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request***](SystemconfigurationEditObjectV1Request.md)|  | 
+ **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request***](SystemconfigurationEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response***](SystemconfigurationEditObjectV1Response.md)
+[**SystemconfigurationEditObjectV2Response***](SystemconfigurationEditObjectV2Response.md)
 
 ### Authorization
 
