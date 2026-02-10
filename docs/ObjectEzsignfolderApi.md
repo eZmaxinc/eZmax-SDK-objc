@@ -106,6 +106,7 @@ Name | Type | Description  | Notes
 ```objc
 -(NSURLSessionTask*) ezsignfolderBatchDownloadV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderBatchDownloadV1Request: (EzsignfolderBatchDownloadV1Request*) ezsignfolderBatchDownloadV1Request
+    accept: (NSString*) accept
         completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
 ```
 
@@ -123,12 +124,14 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 NSNumber* pkiEzsignfolderID = @56; // 
 EzsignfolderBatchDownloadV1Request* ezsignfolderBatchDownloadV1Request = [[EzsignfolderBatchDownloadV1Request alloc] init]; // 
+NSString* accept = @"accept_example"; // Test csharp (optional)
 
 ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
 
 // Download multiples files from an Ezsignfolder
 [apiInstance ezsignfolderBatchDownloadV1WithPkiEzsignfolderID:pkiEzsignfolderID
               ezsignfolderBatchDownloadV1Request:ezsignfolderBatchDownloadV1Request
+              accept:accept
           completionHandler: ^(NSURL* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
@@ -145,6 +148,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **NSNumber***|  | 
  **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request***](EzsignfolderBatchDownloadV1Request.md)|  | 
+ **accept** | **NSString***| Test csharp | [optional] 
 
 ### Return type
 

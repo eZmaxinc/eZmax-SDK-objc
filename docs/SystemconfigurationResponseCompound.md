@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bSystemconfigurationEzsignpersonnal** | **NSNumber*** | Whether if we allow the creation of personal files in eZsign | 
 **bSystemconfigurationHascreditcardmerchant** | **NSNumber*** | Whether there is a creditcard merchant configured or not | [optional] 
 **bSystemconfigurationIsdisposalactive** | **NSNumber*** | Whether is Disposal processus is active or not | [optional] 
+**bSystemconfigurationAllowcomplexcreditcardsignature** | **NSNumber*** | Whether is the system allows to have a complex creditcard signature | [optional] 
 **bSystemconfigurationSspr** | **NSNumber*** | Whether if we allow SSPR | 
 **dtSystemconfigurationReadonlyexpirationstart** | **NSString*** | The start date where the system will be in read only | [optional] 
 **dtSystemconfigurationReadonlyexpirationend** | **NSString*** | The end date where the system will be in read only | [optional] 

@@ -186,10 +186,13 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
 ///
 ///  @param ezsignfolderBatchDownloadV1Request  
 ///
+///  @param accept Test csharp (optional)
+///
 ///  @returns NSURL*
 ///
 -(NSURLSessionTask*) ezsignfolderBatchDownloadV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderBatchDownloadV1Request: (EzsignfolderBatchDownloadV1Request*) ezsignfolderBatchDownloadV1Request
+    accept: (NSString*) accept
     completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
     // verify the required parameter 'pkiEzsignfolderID' is set
     if (pkiEzsignfolderID == nil) {
@@ -223,6 +226,9 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    if (accept != nil) {
+        headerParams[@"Accept"] = accept;
+    }
     // HTTP header `Accept`
     NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"application/pdf", @"application/json"]];
     if(acceptHeader.length > 0) {
