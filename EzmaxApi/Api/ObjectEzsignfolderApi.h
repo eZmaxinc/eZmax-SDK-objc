@@ -91,7 +91,6 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 ///
 /// @param pkiEzsignfolderID 
 /// @param ezsignfolderBatchDownloadV1Request 
-/// @param accept Test csharp (optional)
 /// 
 ///  code:200 message:"Successful response",
 ///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
@@ -101,7 +100,6 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 /// @return NSURL*
 -(NSURLSessionTask*) ezsignfolderBatchDownloadV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderBatchDownloadV1Request: (EzsignfolderBatchDownloadV1Request*) ezsignfolderBatchDownloadV1Request
-    accept: (NSString*) accept
     completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
 
 
