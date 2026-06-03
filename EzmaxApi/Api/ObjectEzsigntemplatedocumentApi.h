@@ -3,6 +3,8 @@
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigntemplatedocumentCreateObjectV1Request.h"
 #import "EzsigntemplatedocumentCreateObjectV1Response.h"
+#import "EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request.h"
+#import "EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request.h"
@@ -16,6 +18,7 @@
 #import "EzsigntemplatedocumentExtractTextV1Request.h"
 #import "EzsigntemplatedocumentExtractTextV1Response.h"
 #import "EzsigntemplatedocumentFlattenV1Response.h"
+#import "EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
@@ -73,6 +76,22 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 /// @return void
 -(NSURLSessionTask*) ezsigntemplatedocumentDownloadV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     completionHandler: (void (^)(NSError* error)) handler;
+
+
+/// Edit multiple Ezsigntemplateannotations
+/// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// @param ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request: (EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request*) ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request
+    completionHandler: (void (^)(EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response* output, NSError* error)) handler;
 
 
 /// Edit multiple Ezsigntemplatedocumentpagerecognitions
@@ -185,6 +204,20 @@ extern NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigntemplatedocumentFlattenV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsigntemplatedocumentFlattenV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateannotations
+/// 
+///
+/// @param pkiEzsigntemplatedocumentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response*
+-(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    completionHandler: (void (^)(EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions

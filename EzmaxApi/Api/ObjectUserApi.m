@@ -17,12 +17,15 @@
 #import "UserGetAutocompleteV2Response.h"
 #import "UserGetColleaguesV2Response.h"
 #import "UserGetEffectivePermissionsV1Response.h"
+#import "UserGetEzmaxcustomeruserV1Response.h"
 #import "UserGetListV1Response.h"
 #import "UserGetObjectV2Response.h"
 #import "UserGetPermissionsV1Response.h"
 #import "UserGetSubnetsV1Response.h"
 #import "UserGetUsergroupexternalsV1Response.h"
 #import "UserGetUsergroupsV1Response.h"
+#import "UserImpersonateV1Request.h"
+#import "UserImpersonateV1Response.h"
 #import "UserSendPasswordResetV1Response.h"
 
 
@@ -743,6 +746,74 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Returns the Ezmaxcustomeruser for the User
+/// Returns the Ezmaxcustomeruser for the User
+///  @param pkiUserID  
+///
+///  @returns UserGetEzmaxcustomeruserV1Response*
+///
+-(NSURLSessionTask*) userGetEzmaxcustomeruserV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetEzmaxcustomeruserV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/user/{pkiUserID}/getEzmaxcustomeruser"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"UserGetEzmaxcustomeruserV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((UserGetEzmaxcustomeruserV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Retrieve User list
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker<br>Assistant<br>Employee<br>EzsignUser<br>Normal | | eUserOrigin | BuiltIn<br>External | | eUserEzsignaccess | No<br>PaidByOffice<br>PerDocument<br>Prepaid |
 ///  @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -1159,6 +1230,89 @@ NSInteger kObjectUserApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((UserGetUsergroupsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Impersonate the user
+/// Using this endpoint, you can impersonate the user.
+///  @param pkiUserID  
+///
+///  @param userImpersonateV1Request  
+///
+///  @returns UserImpersonateV1Response*
+///
+-(NSURLSessionTask*) userImpersonateV1WithPkiUserID: (NSNumber*) pkiUserID
+    userImpersonateV1Request: (UserImpersonateV1Request*) userImpersonateV1Request
+    completionHandler: (void (^)(UserImpersonateV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiUserID' is set
+    if (pkiUserID == nil) {
+        NSParameterAssert(pkiUserID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiUserID"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'userImpersonateV1Request' is set
+    if (userImpersonateV1Request == nil) {
+        NSParameterAssert(userImpersonateV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"userImpersonateV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectUserApiErrorDomain code:kObjectUserApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/user/{pkiUserID}/impersonate"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiUserID != nil) {
+        pathParams[@"pkiUserID"] = pkiUserID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = userImpersonateV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"UserImpersonateV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((UserImpersonateV1Response*)data, error);
                                 }
                             }];
 }

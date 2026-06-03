@@ -47,6 +47,9 @@
 @property(nonatomic) NSString* dBuyercontractMaximumprice;
 
 @property(nonatomic) FieldEBuyercontractType* eBuyercontractType;
+/* The number of the Buyercontract [optional]
+ */
+@property(nonatomic) NSString* sBuyercontractContract;
 /* The date of the Buyercontract 
  */
 @property(nonatomic) NSString* dtBuyercontractDate;

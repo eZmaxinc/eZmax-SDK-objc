@@ -22,6 +22,7 @@
 #import "FieldEEzsignfoldertypePdfanoncompliantaction.h"
 #import "FieldEEzsignfoldertypePdfarequirement.h"
 #import "FieldEEzsignfoldertypePrivacylevel.h"
+#import "FieldEEzsignfoldertypeSignaturedatedisplay.h"
 #import "FieldEEzsignfoldertypeSigneraccess.h"
 #import "MultilingualEzsignfoldertypeName.h"
 #import "UsergroupResponse.h"
@@ -42,6 +43,8 @@
 @class FieldEEzsignfoldertypePdfarequirement;
 @protocol FieldEEzsignfoldertypePrivacylevel;
 @class FieldEEzsignfoldertypePrivacylevel;
+@protocol FieldEEzsignfoldertypeSignaturedatedisplay;
+@class FieldEEzsignfoldertypeSignaturedatedisplay;
 @protocol FieldEEzsignfoldertypeSigneraccess;
 @class FieldEEzsignfoldertypeSigneraccess;
 @protocol MultilingualEzsignfoldertypeName;
@@ -85,6 +88,11 @@
  */
 @property(nonatomic) NSNumber* fkiPdfalevelIDConvert;
 
+@property(nonatomic) FieldEEzsignfoldertypeSignaturedatedisplay* eEzsignfoldertypeSignaturedatedisplay;
+/* The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST |  [optional]
+ */
+@property(nonatomic) NSString* sEzsignfoldertypeSignaturedatecustomformat;
+
 @property(nonatomic) FieldEEzsignfoldertypeDocumentdependency* eEzsignfoldertypeDocumentdependency;
 /* The Description of the Branding in the language of the requester 
  */
@@ -115,7 +123,7 @@
 /* Font size for form fields [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeFontsizeformfield;
-/* The number of days before the the first reminder sending [optional]
+/* The number of days before the first reminder sending [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeSendreminderfirstdays;
 /* The number of days after the first reminder sending [optional]
@@ -161,6 +169,18 @@
 /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassigngroup;
+/* Whether we send the merged documents in the email to external recipient [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoemail;
+/* Whether we send the merged documents in the email to Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+/* Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+/* Whether we send the merged documents in the email to User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetouser;
 /* Whether we send an email to Ezsignsigner  when document is completed [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtoezsignsigner;

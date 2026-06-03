@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pkiWebhookID** | **NSNumber*** | The unique ID of the Webhook | 
+**pkiWebhookID** | **NSNumber*** | The unique ID of the Webhook | [optional] 
 **fkiAuthenticationexternalID** | **NSNumber*** | The unique ID of the Authenticationexternal | [optional] 
 **sWebhookDescription** | **NSString*** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
@@ -19,13 +19,14 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **NSNumber*** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **NSNumber*** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
 **sAuthenticationexternalDescription** | **NSString*** | The description of the Authenticationexternal | [optional] 
-**objAudit** | [**CommonAudit***](CommonAudit.md) |  | 
+**objAudit** | [**CommonAudit***](CommonAudit.md) |  | [optional] 
 **sWebhookEvent** | **NSString*** | The concatenated string to describe the Webhook event | [optional] 
 **sWebhookAuthentificationexternalerror** | **NSString*** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. | [optional] 
 **aObjWebhookheader** | [**NSArray&lt;WebhookheaderResponseCompound&gt;***](WebhookheaderResponseCompound.md) |  | [optional] 
 **pksCustomerCode** | **NSString*** | The customer code assigned to your account | 
 **bWebhookTest** | **NSNumber*** | Wheter the webhook received is a manual test or a real event | 
 **eWebhookEmittype** | **NSString*** | Wheter the webhook received is a manual test or a real event | [optional] 
+**fkiEzmaxpartnerproductstagewebhookID** | **NSNumber*** | The unique ID of the Ezmaxpartnerproductstagewebhook | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

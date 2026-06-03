@@ -40,7 +40,7 @@
 /* The unique ID of the Ezdoctemplatetype 
  */
 @property(nonatomic) NSNumber* fkiEzdoctemplatetypeID;
-/* The unique ID of the Ezdoctemplatefieldtypecategory 
+/* The unique ID of the Ezdoctemplatefieldtypecategory [optional]
  */
 @property(nonatomic) NSNumber* fkiEzdoctemplatefieldtypecategoryID;
 

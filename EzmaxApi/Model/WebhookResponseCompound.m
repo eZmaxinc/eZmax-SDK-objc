@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiAuthenticationexternalID", @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX", @"eWebhookEzsignevent", @"eWebhookManagementevent", @"sWebhookApikey", @"sWebhookSecret", @"sAuthenticationexternalDescription", @"sWebhookEvent", @"sWebhookAuthentificationexternalerror", @"aObjWebhookheader"];
+  NSArray *optionalProperties = @[@"pkiWebhookID", @"fkiAuthenticationexternalID", @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX", @"eWebhookEzsignevent", @"eWebhookManagementevent", @"sWebhookApikey", @"sWebhookSecret", @"sAuthenticationexternalDescription", @"objAudit", @"sWebhookEvent", @"sWebhookAuthentificationexternalerror", @"aObjWebhookheader"];
   return [optionalProperties containsObject:propertyName];
 }
 

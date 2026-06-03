@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **sUserLastname** | **NSString*** | The last name of the user | 
 **sUserLoginname** | **NSString*** | The login name of the User. | 
 **bUserIsactive** | **NSNumber*** | Whether the User is active or not | 
+**bUserSuspended** | **NSNumber*** | Whether the User is suspended or not | [optional] 
 **eUserType** | [**FieldEUserType***](FieldEUserType.md) |  | 
 **eUserOrigin** | [**FieldEUserOrigin***](FieldEUserOrigin.md) |  | 
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess***](FieldEUserEzsignaccess.md) |  | 

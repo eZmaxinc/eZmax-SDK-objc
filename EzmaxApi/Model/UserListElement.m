@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiUserID": @"pkiUserID", @"sUserFirstname": @"sUserFirstname", @"sUserLastname": @"sUserLastname", @"sUserLoginname": @"sUserLoginname", @"bUserIsactive": @"bUserIsactive", @"eUserType": @"eUserType", @"eUserOrigin": @"eUserOrigin", @"eUserEzsignaccess": @"eUserEzsignaccess", @"dtUserEzsignprepaidexpiration": @"dtUserEzsignprepaidexpiration", @"sEmailAddress": @"sEmailAddress", @"sUserJobtitle": @"sUserJobtitle" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiUserID": @"pkiUserID", @"sUserFirstname": @"sUserFirstname", @"sUserLastname": @"sUserLastname", @"sUserLoginname": @"sUserLoginname", @"bUserIsactive": @"bUserIsactive", @"bUserSuspended": @"bUserSuspended", @"eUserType": @"eUserType", @"eUserOrigin": @"eUserOrigin", @"eUserEzsignaccess": @"eUserEzsignaccess", @"dtUserEzsignprepaidexpiration": @"dtUserEzsignprepaidexpiration", @"sEmailAddress": @"sEmailAddress", @"sUserJobtitle": @"sUserJobtitle" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtUserEzsignprepaidexpiration", @"sUserJobtitle"];
+  NSArray *optionalProperties = @[@"bUserSuspended", @"dtUserEzsignprepaidexpiration", @"sUserJobtitle"];
   return [optionalProperties containsObject:propertyName];
 }
 

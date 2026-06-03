@@ -13,12 +13,14 @@ Method | HTTP request | Description
 [**userGetAutocompleteV2**](ObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 [**userGetColleaguesV2**](ObjectUserApi.md#usergetcolleaguesv2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues
 [**userGetEffectivePermissionsV1**](ObjectUserApi.md#usergeteffectivepermissionsv1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
+[**userGetEzmaxcustomeruserV1**](ObjectUserApi.md#usergetezmaxcustomeruserv1) | **GET** /1/object/user/{pkiUserID}/getEzmaxcustomeruser | Returns the Ezmaxcustomeruser for the User
 [**userGetListV1**](ObjectUserApi.md#usergetlistv1) | **GET** /1/object/user/getList | Retrieve User list
 [**userGetObjectV2**](ObjectUserApi.md#usergetobjectv2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
 [**userGetPermissionsV1**](ObjectUserApi.md#usergetpermissionsv1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
 [**userGetSubnetsV1**](ObjectUserApi.md#usergetsubnetsv1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
 [**userGetUsergroupexternalsV1**](ObjectUserApi.md#usergetusergroupexternalsv1) | **GET** /1/object/user/{pkiUserID}/getUsergroupexternals | Get User&#39;s Usergroupexternals
 [**userGetUsergroupsV1**](ObjectUserApi.md#usergetusergroupsv1) | **GET** /1/object/user/{pkiUserID}/getUsergroups | Get User&#39;s Usergroups
+[**userImpersonateV1**](ObjectUserApi.md#userimpersonatev1) | **POST** /1/object/user/{pkiUserID}/impersonate | Impersonate the user
 [**userSendPasswordResetV1**](ObjectUserApi.md#usersendpasswordresetv1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset
 
 
@@ -555,6 +557,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **userGetEzmaxcustomeruserV1**
+```objc
+-(NSURLSessionTask*) userGetEzmaxcustomeruserV1WithPkiUserID: (NSNumber*) pkiUserID
+        completionHandler: (void (^)(UserGetEzmaxcustomeruserV1Response* output, NSError* error)) handler;
+```
+
+Returns the Ezmaxcustomeruser for the User
+
+Returns the Ezmaxcustomeruser for the User
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+
+ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
+
+// Returns the Ezmaxcustomeruser for the User
+[apiInstance userGetEzmaxcustomeruserV1WithPkiUserID:pkiUserID
+          completionHandler: ^(UserGetEzmaxcustomeruserV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectUserApi->userGetEzmaxcustomeruserV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+
+### Return type
+
+[**UserGetEzmaxcustomeruserV1Response***](UserGetEzmaxcustomeruserV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **userGetListV1**
 ```objc
 -(NSURLSessionTask*) userGetListV1WithEOrderBy: (NSString*) eOrderBy
@@ -901,6 +960,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userImpersonateV1**
+```objc
+-(NSURLSessionTask*) userImpersonateV1WithPkiUserID: (NSNumber*) pkiUserID
+    userImpersonateV1Request: (UserImpersonateV1Request*) userImpersonateV1Request
+        completionHandler: (void (^)(UserImpersonateV1Response* output, NSError* error)) handler;
+```
+
+Impersonate the user
+
+Using this endpoint, you can impersonate the user.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiUserID = @56; // 
+UserImpersonateV1Request* userImpersonateV1Request = [[UserImpersonateV1Request alloc] init]; // 
+
+ObjectUserApi*apiInstance = [[ObjectUserApi alloc] init];
+
+// Impersonate the user
+[apiInstance userImpersonateV1WithPkiUserID:pkiUserID
+              userImpersonateV1Request:userImpersonateV1Request
+          completionHandler: ^(UserImpersonateV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectUserApi->userImpersonateV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **NSNumber***|  | 
+ **userImpersonateV1Request** | [**UserImpersonateV1Request***](UserImpersonateV1Request.md)|  | 
+
+### Return type
+
+[**UserImpersonateV1Response***](UserImpersonateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

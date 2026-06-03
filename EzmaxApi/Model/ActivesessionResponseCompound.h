@@ -123,6 +123,9 @@
 /* Whether the User's eZsign subscription is a trial [optional]
  */
 @property(nonatomic) NSNumber* bUserEzsigntrial;
+/* Whether we group or not the Ezsigntemplate roles [optional]
+ */
+@property(nonatomic) NSNumber* bUserEzsigntemplaterolegrouping;
 /* The eZsign prepaid expiration date [optional]
  */
 @property(nonatomic) NSString* dtUserEzsignprepaidexpiration;
@@ -141,5 +144,8 @@
 /* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. 
  */
 @property(nonatomic) NSArray<NSString*>* aEModuleInternalname;
+/* If you need to ask which mailing lists this user wants to subscribe to [optional]
+ */
+@property(nonatomic) NSNumber* bActivesessionMaillinglistrequest;
 
 @end

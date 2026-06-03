@@ -3,10 +3,13 @@
 #import "ApiClient.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.h"
+#import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationCountV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationListV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationrecipientsV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationsendersV1Response.h"
+#import "InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.h"
 #import "InscriptionnotauthenticatedGetListV1Response.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Request.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Response.h"
@@ -56,6 +59,89 @@ NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+/// 
+///  @param pkiInscriptionnotauthenticatedID  
+///
+///  @param inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request  
+///
+///  @returns InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response*
+///
+-(NSURLSessionTask*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request: (InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request
+    completionHandler: (void (^)(InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == nil) {
+        NSParameterAssert(pkiInscriptionnotauthenticatedID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptionnotauthenticatedID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionnotauthenticatedApiErrorDomain code:kObjectInscriptionnotauthenticatedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request' is set
+    if (inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request == nil) {
+        NSParameterAssert(inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionnotauthenticatedApiErrorDomain code:kObjectInscriptionnotauthenticatedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptionnotauthenticatedID != nil) {
+        pathParams[@"pkiInscriptionnotauthenticatedID"] = pkiInscriptionnotauthenticatedID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Communication count
@@ -325,6 +411,74 @@ NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((InscriptionnotauthenticatedGetCommunicationsendersV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Inscriptionnotauthenticated conditions
+/// 
+///  @param pkiInscriptionnotauthenticatedID  
+///
+///  @returns InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response*
+///
+-(NSURLSessionTask*) inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    completionHandler: (void (^)(InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == nil) {
+        NSParameterAssert(pkiInscriptionnotauthenticatedID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptionnotauthenticatedID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionnotauthenticatedApiErrorDomain code:kObjectInscriptionnotauthenticatedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptionnotauthenticatedID != nil) {
+        pathParams[@"pkiInscriptionnotauthenticatedID"] = pkiInscriptionnotauthenticatedID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response*)data, error);
                                 }
                             }];
 }

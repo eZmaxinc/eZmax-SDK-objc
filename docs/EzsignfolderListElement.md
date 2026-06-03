@@ -5,6 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **NSNumber*** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | 
+**fkiEzsignbulksendID** | **NSNumber*** | The unique ID of the Ezsignbulksend | [optional] 
+**sEzsignbulksendDescription** | **NSString*** | The description of the Ezsignbulksend | [optional] 
+**fkiEzsignbulksendtransmissionID** | **NSNumber*** | The unique ID of the Ezsignbulksendtransmission | [optional] 
+**sEzsignbulksendtransmissionDescription** | **NSString*** | The description of the Ezsignbulksendtransmission | [optional] 
+**fkiEzsigntemplatepublicID** | **NSNumber*** | The unique ID of the Ezsigntemplatepublic | [optional] 
+**sEzsigntemplatepublicDescription** | **NSString*** | The description of the Ezsigntemplatepublic | [optional] 
+**eEzsignfolderSource** | [**FieldEEzsignfolderSource***](FieldEEzsignfolderSource.md) |  | 
 **eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel***](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | 
 **sEzsignfolderDescription** | **NSString*** | The description of the Ezsignfolder | 
@@ -28,6 +35,7 @@ Name | Type | Description | Notes
 **dtEzsignfolderArchive** | **NSString*** | The date and time at which the Ezsignfolder was archived. | [optional] 
 **dtEzsignfolderDispose** | **NSString*** | The date and time at which the Ezsignfolder was disposed. | [optional] 
 **bEzsignfolderSigner** | **NSNumber*** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user | [optional] 
+**bEzsignfolderIsmyown** | **NSNumber*** | Whether the Ezsignfolder is my own or not | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

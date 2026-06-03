@@ -14,10 +14,13 @@
 */
 
 
+#import "EzsigntemplateglobalannotationResponseCompound.h"
 #import "EzsigntemplateglobaldocumentResponse.h"
 #import "EzsigntemplateglobalsignerResponseCompound.h"
 #import "FieldEEzsigntemplateglobalModule.h"
 #import "FieldEEzsigntemplateglobalSupplier.h"
+@protocol EzsigntemplateglobalannotationResponseCompound;
+@class EzsigntemplateglobalannotationResponseCompound;
 @protocol EzsigntemplateglobaldocumentResponse;
 @class EzsigntemplateglobaldocumentResponse;
 @protocol EzsigntemplateglobalsignerResponseCompound;
@@ -66,5 +69,7 @@
 @property(nonatomic) EzsigntemplateglobaldocumentResponse* objEzsigntemplateglobaldocument;
 
 @property(nonatomic) NSArray<EzsigntemplateglobalsignerResponseCompound>* aObjEzsigntemplateglobalsigner;
+
+@property(nonatomic) NSArray<EzsigntemplateglobalannotationResponseCompound>* aObjEzsigntemplateglobalannotation;
 
 @end

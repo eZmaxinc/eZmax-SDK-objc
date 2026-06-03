@@ -40,7 +40,7 @@
 /* The unique ID of the Ezdoctemplatetype 
  */
 @property(nonatomic) NSNumber* fkiEzdoctemplatetypeID;
-/* The unique ID of the Ezdoctemplatefieldtypecategory 
+/* The unique ID of the Ezdoctemplatefieldtypecategory [optional]
  */
 @property(nonatomic) NSNumber* fkiEzdoctemplatefieldtypecategoryID;
 
@@ -56,7 +56,7 @@
 /* The name of the Ezsignfoldertype in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzsignfoldertypeNameX;
-/* The description of the Ezdoctemplatefieldtypecategory in the language of the requester 
+/* The description of the Ezdoctemplatefieldtypecategory in the language of the requester [optional]
  */
 @property(nonatomic) NSString* sEzdoctemplatefieldtypecategoryDescriptionX;
 /* The description of the Ezdoctemplatetype in the language of the requester 

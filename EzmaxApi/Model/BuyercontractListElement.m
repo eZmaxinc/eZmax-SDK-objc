@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBuyercontractID": @"pkiBuyercontractID", @"fkiInscriptiontypeID": @"fkiInscriptiontypeID", @"sInscriptiontypeNameX": @"sInscriptiontypeNameX", @"eBuyercontractStep": @"eBuyercontractStep", @"dBuyercontractMinimumprice": @"dBuyercontractMinimumprice", @"dBuyercontractMaximumprice": @"dBuyercontractMaximumprice", @"eBuyercontractType": @"eBuyercontractType", @"dtBuyercontractDate": @"dtBuyercontractDate", @"dtBuyercontractExpirationdate": @"dtBuyercontractExpirationdate", @"bBuyercontractIsactive": @"bBuyercontractIsactive", @"sBuyercontractBrokers": @"sBuyercontractBrokers", @"sBuyercontractBuyers": @"sBuyercontractBuyers" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiBuyercontractID": @"pkiBuyercontractID", @"fkiInscriptiontypeID": @"fkiInscriptiontypeID", @"sInscriptiontypeNameX": @"sInscriptiontypeNameX", @"eBuyercontractStep": @"eBuyercontractStep", @"dBuyercontractMinimumprice": @"dBuyercontractMinimumprice", @"dBuyercontractMaximumprice": @"dBuyercontractMaximumprice", @"eBuyercontractType": @"eBuyercontractType", @"sBuyercontractContract": @"sBuyercontractContract", @"dtBuyercontractDate": @"dtBuyercontractDate", @"dtBuyercontractExpirationdate": @"dtBuyercontractExpirationdate", @"bBuyercontractIsactive": @"bBuyercontractIsactive", @"sBuyercontractBrokers": @"sBuyercontractBrokers", @"sBuyercontractBuyers": @"sBuyercontractBuyers" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtBuyercontractExpirationdate", ];
+  NSArray *optionalProperties = @[@"sBuyercontractContract", @"dtBuyercontractExpirationdate", ];
   return [optionalProperties containsObject:propertyName];
 }
 

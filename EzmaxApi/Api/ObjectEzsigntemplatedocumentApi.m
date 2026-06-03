@@ -5,6 +5,8 @@
 #import "CommonResponseErrorSTemporaryFileUrl.h"
 #import "EzsigntemplatedocumentCreateObjectV1Request.h"
 #import "EzsigntemplatedocumentCreateObjectV1Response.h"
+#import "EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request.h"
+#import "EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request.h"
 #import "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request.h"
@@ -18,6 +20,7 @@
 #import "EzsigntemplatedocumentExtractTextV1Request.h"
 #import "EzsigntemplatedocumentExtractTextV1Response.h"
 #import "EzsigntemplatedocumentFlattenV1Response.h"
+#import "EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.h"
 #import "EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.h"
@@ -204,6 +207,89 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler(error);
+                                }
+                            }];
+}
+
+///
+/// Edit multiple Ezsigntemplateannotations
+/// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+///  @param pkiEzsigntemplatedocumentID  
+///
+///  @param ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request  
+///
+///  @returns EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response*
+///
+-(NSURLSessionTask*) ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request: (EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request*) ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request
+    completionHandler: (void (^)(EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+    if (pkiEzsigntemplatedocumentID == nil) {
+        NSParameterAssert(pkiEzsigntemplatedocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatedocumentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatedocumentApiErrorDomain code:kObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request' is set
+    if (ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request == nil) {
+        NSParameterAssert(ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatedocumentApiErrorDomain code:kObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplatedocumentID != nil) {
+        pathParams[@"pkiEzsigntemplatedocumentID"] = pkiEzsigntemplatedocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"PUT"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response*)data, error);
                                 }
                             }];
 }
@@ -785,6 +871,74 @@ NSInteger kObjectEzsigntemplatedocumentApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsigntemplatedocumentFlattenV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateannotations
+/// 
+///  @param pkiEzsigntemplatedocumentID  
+///
+///  @returns EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response*
+///
+-(NSURLSessionTask*) ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithPkiEzsigntemplatedocumentID: (NSNumber*) pkiEzsigntemplatedocumentID
+    completionHandler: (void (^)(EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsigntemplatedocumentID' is set
+    if (pkiEzsigntemplatedocumentID == nil) {
+        NSParameterAssert(pkiEzsigntemplatedocumentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsigntemplatedocumentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsigntemplatedocumentApiErrorDomain code:kObjectEzsigntemplatedocumentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsigntemplatedocumentID != nil) {
+        pathParams[@"pkiEzsigntemplatedocumentID"] = pkiEzsigntemplatedocumentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response*)data, error);
                                 }
                             }];
 }

@@ -84,7 +84,7 @@
 /* If the Ezsigndocument can be disposed [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfolderIsdisposable;
-/* The number of days before the the first reminder sending [optional]
+/* The number of days before the first reminder sending [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfolderSendreminderfirstdays;
 /* The number of days after the first reminder sending [optional]
@@ -107,6 +107,9 @@
 @property(nonatomic) NSString* dtEzsignfolderScheduleddispose;
 
 @property(nonatomic) FieldEEzsignfolderStep* eEzsignfolderStep;
+/* The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync' [optional]
+ */
+@property(nonatomic) NSNumber* iEzsignfolderStepcurrent;
 /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. [optional]
  */
 @property(nonatomic) NSString* dtEzsignfolderClose;

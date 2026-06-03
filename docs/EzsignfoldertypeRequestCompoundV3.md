@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel***](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **iEzsignfoldertypeFontsizeannotation** | **NSNumber*** | Font size for annotations | [optional] 
 **iEzsignfoldertypeFontsizeformfield** | **NSNumber*** | Font size for form fields | [optional] 
-**iEzsignfoldertypeSendreminderfirstdays** | **NSNumber*** | The number of days before the the first reminder sending | [optional] 
+**iEzsignfoldertypeSendreminderfirstdays** | **NSNumber*** | The number of days before the first reminder sending | [optional] 
 **iEzsignfoldertypeSendreminderotherdays** | **NSNumber*** | The number of days after the first reminder sending | [optional] 
 **iEzsignfoldertypeArchivaldays** | **NSNumber*** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
 **eEzsignfoldertypeDisposal** | [**FieldEEzsignfoldertypeDisposal***](FieldEEzsignfoldertypeDisposal.md) |  | 
@@ -42,6 +42,10 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeReassignezsignsigner** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **bEzsignfoldertypeReassignuser** | **NSNumber*** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
 **bEzsignfoldertypeReassigngroup** | **NSNumber*** | Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself | [optional] 
+**bEzsignfoldertypeSenddocumentmergetoemail** | **NSNumber*** | Whether we send the merged documents in the email to external recipient | [optional] 
+**bEzsignfoldertypeSenddocumentmergetoezsignsigner** | **NSNumber*** | Whether we send the merged documents in the email to Ezsignsigner | [optional] 
+**bEzsignfoldertypeSenddocumentmergetoreceivealldocument** | **NSNumber*** | Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. | [optional] 
+**bEzsignfoldertypeSenddocumentmergetouser** | **NSNumber*** | Whether we send the merged documents in the email to User | [optional] 
 **bEzsignfoldertypeSendsignedtoezsignsigner** | **NSNumber*** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **bEzsignfoldertypeSendsignedtouser** | **NSNumber*** | Whether we send an email to User who signed when document is completed | [optional] 
 **bEzsignfoldertypeSendattachmentezsignsigner** | **NSNumber*** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 

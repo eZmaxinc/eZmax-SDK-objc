@@ -78,7 +78,7 @@
 @property(nonatomic) NSNumber* bEzsignfolderIsdisposable;
 
 @property(nonatomic) FieldEEzsignfolderSendreminderfrequency* eEzsignfolderSendreminderfrequency;
-/* The number of days before the the first reminder sending [optional]
+/* The number of days before the first reminder sending [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfolderSendreminderfirstdays;
 /* The number of days after the first reminder sending [optional]

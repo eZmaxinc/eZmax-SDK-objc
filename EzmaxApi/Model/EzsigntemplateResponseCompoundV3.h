@@ -16,6 +16,7 @@
 
 #import "CommonAudit.h"
 #import "CustomEzsignfoldertypeTemplateResponse.h"
+#import "EzsigntemplateannotationResponseCompound.h"
 #import "EzsigntemplatedocumentResponse.h"
 #import "EzsigntemplatesignerResponseCompound.h"
 #import "FieldEEzsigntemplateRecognition.h"
@@ -24,6 +25,8 @@
 @class CommonAudit;
 @protocol CustomEzsignfoldertypeTemplateResponse;
 @class CustomEzsignfoldertypeTemplateResponse;
+@protocol EzsigntemplateannotationResponseCompound;
+@class EzsigntemplateannotationResponseCompound;
 @protocol EzsigntemplatedocumentResponse;
 @class EzsigntemplatedocumentResponse;
 @protocol EzsigntemplatesignerResponseCompound;
@@ -94,5 +97,7 @@
 @property(nonatomic) EzsigntemplatedocumentResponse* objEzsigntemplatedocument;
 
 @property(nonatomic) NSArray<EzsigntemplatesignerResponseCompound>* aObjEzsigntemplatesigner;
+
+@property(nonatomic) NSArray<EzsigntemplateannotationResponseCompound>* aObjEzsigntemplateannotation;
 
 @end

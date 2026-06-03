@@ -1,10 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.h"
+#import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationCountV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationListV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationrecipientsV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationsendersV1Response.h"
+#import "InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.h"
 #import "InscriptionnotauthenticatedGetListV1Response.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Request.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Response.h"
@@ -30,6 +33,21 @@ extern NSString* kObjectInscriptionnotauthenticatedApiErrorDomain;
 extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+/// 
+///
+/// @param pkiInscriptionnotauthenticatedID 
+/// @param inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response*
+-(NSURLSessionTask*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request: (InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request
+    completionHandler: (void (^)(InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Communication count
 /// 
@@ -81,6 +99,19 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @return InscriptionnotauthenticatedGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetCommunicationsendersV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
     completionHandler: (void (^)(InscriptionnotauthenticatedGetCommunicationsendersV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscriptionnotauthenticated conditions
+/// 
+///
+/// @param pkiInscriptionnotauthenticatedID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///
+/// @return InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response*
+-(NSURLSessionTask*) inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    completionHandler: (void (^)(InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Inscriptionnotauthenticated list

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **tEzsignfolderNote** | **NSString*** | Note about the Ezsignfolder | [optional] 
 **bEzsignfolderIsdisposable** | **NSNumber*** | If the Ezsigndocument can be disposed | [optional] 
 **eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency***](FieldEEzsignfolderSendreminderfrequency.md) |  | [optional] 
-**iEzsignfolderSendreminderfirstdays** | **NSNumber*** | The number of days before the the first reminder sending | [optional] 
+**iEzsignfolderSendreminderfirstdays** | **NSNumber*** | The number of days before the first reminder sending | [optional] 
 **iEzsignfolderSendreminderotherdays** | **NSNumber*** | The number of days after the first reminder sending | [optional] 
 **dtEzsignfolderDelayedsenddate** | **NSString*** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **dtEzsignfolderDuedate** | **NSString*** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 

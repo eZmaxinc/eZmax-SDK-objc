@@ -34,7 +34,7 @@
 
 @interface WebhookResponse : Object
 
-/* The unique ID of the Webhook 
+/* The unique ID of the Webhook [optional]
  */
 @property(nonatomic) NSNumber* pkiWebhookID;
 /* The unique ID of the Authenticationexternal [optional]

@@ -107,7 +107,7 @@
 /* Font size for form fields [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeFontsizeformfield;
-/* The number of days before the the first reminder sending [optional]
+/* The number of days before the first reminder sending [optional]
  */
 @property(nonatomic) NSNumber* iEzsignfoldertypeSendreminderfirstdays;
 /* The number of days after the first reminder sending [optional]
@@ -153,6 +153,18 @@
 /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeReassigngroup;
+/* Whether we send the merged documents in the email to external recipient [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoemail;
+/* Whether we send the merged documents in the email to Ezsignsigner [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+/* Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+/* Whether we send the merged documents in the email to User [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfoldertypeSenddocumentmergetouser;
 /* Whether we send an email to Ezsignsigner  when document is completed [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfoldertypeSendsignedtoezsignsigner;

@@ -48,7 +48,7 @@
 /* A custom text message that will be added to the email sent. [optional]
  */
 @property(nonatomic) NSString* tEzsignfolderMessage;
-/* The number of days before the the first reminder sending 
+/* The number of days before the first reminder sending 
  */
 @property(nonatomic) NSNumber* iEzsignfolderSendreminderfirstdays;
 /* The number of days after the first reminder sending 

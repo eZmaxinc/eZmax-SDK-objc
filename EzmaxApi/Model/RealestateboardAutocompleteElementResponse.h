@@ -22,7 +22,7 @@
 
 @interface RealestateboardAutocompleteElementResponse : Object
 
-/* The unique ID of the Activesession 
+/* The unique ID of the Realestateboard 
  */
 @property(nonatomic) NSNumber* pkiRealestateboardID;
 /* The name of the Province in the language of the requester 

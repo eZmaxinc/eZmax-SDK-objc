@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **dBuyercontractMinimumprice** | **NSString*** | The minimumprice of the Buyercontract | 
 **dBuyercontractMaximumprice** | **NSString*** | The maximumprice of the Buyercontract | 
 **eBuyercontractType** | [**FieldEBuyercontractType***](FieldEBuyercontractType.md) |  | 
+**sBuyercontractContract** | **NSString*** | The number of the Buyercontract | [optional] 
 **dtBuyercontractDate** | **NSString*** | The date of the Buyercontract | 
 **dtBuyercontractExpirationdate** | **NSString*** | The expirationdate of the Buyercontract | [optional] 
 **bBuyercontractIsactive** | **NSNumber*** | Whether the buyercontract is active or not | 

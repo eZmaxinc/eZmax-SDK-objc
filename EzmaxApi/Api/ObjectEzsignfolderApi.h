@@ -12,6 +12,8 @@
 #import "EzsignfolderDisposeEzsignfoldersV1Request.h"
 #import "EzsignfolderDisposeEzsignfoldersV1Response.h"
 #import "EzsignfolderDisposeV1Response.h"
+#import "EzsignfolderDuplicateV1Request.h"
+#import "EzsignfolderDuplicateV1Response.h"
 #import "EzsignfolderEditObjectV3Request.h"
 #import "EzsignfolderEditObjectV3Response.h"
 #import "EzsignfolderEndPrematurelyV1Response.h"
@@ -24,10 +26,13 @@
 #import "EzsignfolderGetCommunicationListV1Response.h"
 #import "EzsignfolderGetCommunicationrecipientsV1Response.h"
 #import "EzsignfolderGetCommunicationsendersV1Response.h"
+#import "EzsignfolderGetEzsignannotationsV1Response.h"
 #import "EzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EzsignfolderGetEzsigndocumentsV2Response.h"
 #import "EzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
+#import "EzsignfolderGetEzsignformfieldgroupsV1Response.h"
 #import "EzsignfolderGetEzsignsignaturesAutomaticV1Response.h"
+#import "EzsignfolderGetEzsignsignaturesV1Response.h"
 #import "EzsignfolderGetFormsDataV1Response.h"
 #import "EzsignfolderGetListV1Response.h"
 #import "EzsignfolderGetObjectV1Response.h"
@@ -39,6 +44,8 @@
 #import "EzsignfolderImportEzsigntemplatepackageV1Response.h"
 #import "EzsignfolderImportEzsigntemplatepackageV2Request.h"
 #import "EzsignfolderImportEzsigntemplatepackageV2Response.h"
+#import "EzsignfolderImportEzsigntemplatepackageV3Request.h"
+#import "EzsignfolderImportEzsigntemplatepackageV3Response.h"
 #import "EzsignfolderReorderV2Request.h"
 #import "EzsignfolderReorderV2Response.h"
 #import "EzsignfolderSendV1Request.h"
@@ -181,6 +188,22 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderDisposeV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsignfolderDisposeV1Response* output, NSError* error)) handler;
+
+
+/// Duplicate the Ezsignfolder
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderDuplicateV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderDuplicateV1Response*
+-(NSURLSessionTask*) ezsignfolderDuplicateV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderDuplicateV1Request: (EzsignfolderDuplicateV1Request*) ezsignfolderDuplicateV1Request
+    completionHandler: (void (^)(EzsignfolderDuplicateV1Response* output, NSError* error)) handler;
 
 
 /// Edit an existing Ezsignfolder
@@ -335,6 +358,20 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsignfolderGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsignfolder's Ezsignannotations
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetEzsignannotationsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetEzsignannotationsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetEzsignannotationsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignfolder's Ezsigndocuments
 /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 ///
@@ -374,6 +411,20 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsignfolderGetEzsignfoldersignerassociationsV1Response* output, NSError* error)) handler;
 
 
+/// Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetEzsignformfieldgroupsV1Response*
+-(NSURLSessionTask*) ezsignfolderGetEzsignformfieldgroupsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetEzsignformfieldgroupsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
 /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
 ///
@@ -385,6 +436,20 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 /// @return EzsignfolderGetEzsignsignaturesAutomaticV1Response*
 -(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesAutomaticV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     completionHandler: (void (^)(EzsignfolderGetEzsignsignaturesAutomaticV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve an existing Ezsignfolder's Ezsignsignatures
+/// 
+///
+/// @param pkiEzsignfolderID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetEzsignsignaturesV1Response*
+-(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetEzsignsignaturesV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Ezsignfolder's forms data
@@ -403,7 +468,7 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 
 
 /// Retrieve Ezsignfolder list
-/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
+/// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup | | eEzsignfolderSource | Normal<br>Ezsignbulksend<br>Ezsigntemplatepublic |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 ///
 /// @param eOrderBy Specify how you want the results to be sorted (optional)
 /// @param iRowMax  (optional)
@@ -509,6 +574,22 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderImportEzsigntemplatepackageV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     ezsignfolderImportEzsigntemplatepackageV2Request: (EzsignfolderImportEzsigntemplatepackageV2Request*) ezsignfolderImportEzsigntemplatepackageV2Request
     completionHandler: (void (^)(EzsignfolderImportEzsigntemplatepackageV2Response* output, NSError* error)) handler;
+
+
+/// Import an Ezsigntemplatepackage in the Ezsignfolder
+/// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+///
+/// @param pkiEzsignfolderID 
+/// @param ezsignfolderImportEzsigntemplatepackageV3Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderImportEzsigntemplatepackageV3Response*
+-(NSURLSessionTask*) ezsignfolderImportEzsigntemplatepackageV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderImportEzsigntemplatepackageV3Request: (EzsignfolderImportEzsigntemplatepackageV3Request*) ezsignfolderImportEzsigntemplatepackageV3Request
+    completionHandler: (void (^)(EzsignfolderImportEzsigntemplatepackageV3Response* output, NSError* error)) handler;
 
 
 /// Reorder Ezsigndocuments in the Ezsignfolder

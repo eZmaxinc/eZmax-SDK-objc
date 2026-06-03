@@ -46,6 +46,9 @@
 /* Whether the User is active or not 
  */
 @property(nonatomic) NSNumber* bUserIsactive;
+/* Whether the User is suspended or not [optional]
+ */
+@property(nonatomic) NSNumber* bUserSuspended;
 
 @property(nonatomic) FieldEUserType* eUserType;
 

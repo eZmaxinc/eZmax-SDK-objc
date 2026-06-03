@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsigntemplateglobalannotationID** | **NSNumber*** | The unique ID of the Ezsigntemplateglobalannotation | 
-**fkiEzsigntemplateglobaldocumentpageID** | **NSNumber*** | The unique ID of the Ezsigntemplateglobaldocumentpage | 
-**fkiTextstylestaticID** | **NSNumber*** | The unique ID of the Textstylestatic | 
+**fkiTextstylestaticID** | **NSNumber*** | The unique ID of the Textstylestatic | [optional] 
+**objTextstylestatic** | [**TextstylestaticRequestCompound***](TextstylestaticRequestCompound.md) |  | [optional] 
 **eEzsigntemplateglobalannotationHorizontalalignment** | [**FieldEEzsigntemplateglobalannotationHorizontalalignment***](FieldEEzsigntemplateglobalannotationHorizontalalignment.md) |  | 
 **eEzsigntemplateglobalannotationVerticalalignment** | [**FieldEEzsigntemplateglobalannotationVerticalalignment***](FieldEEzsigntemplateglobalannotationVerticalalignment.md) |  | 
 **eEzsigntemplateglobalannotationType** | [**FieldEEzsigntemplateglobalannotationType***](FieldEEzsigntemplateglobalannotationType.md) |  | 
@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **iEzsigntemplateglobalannotationY** | **NSNumber*** | The y of the Ezsigntemplateglobalannotation | 
 **iEzsigntemplateglobalannotationWidth** | **NSNumber*** | The width of the Ezsigntemplateglobalannotation | 
 **iEzsigntemplateglobalannotationHeight** | **NSNumber*** | The height of the Ezsigntemplateglobalannotation | 
+**iEzsigntemplateglobaldocumentpagePagenumber** | **NSNumber*** | The page number in the Ezsigntemplateglobaldocument | 
 **sEzsigntemplateglobalannotationDescription** | **NSString*** | The description of the Ezsigntemplateglobalannotation | 
 **sEzsigntemplateglobalannotationDefaulttext** | **NSString*** | The defaulttext of the Ezsigntemplateglobalannotation | 
 **sEzsigntemplateglobalannotationDropdownvalues** | **NSString*** | The dropdownvalues of the Ezsigntemplateglobalannotation | 

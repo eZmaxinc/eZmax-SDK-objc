@@ -37,7 +37,7 @@
 
 @interface CustomWebhookResponse : Object
 
-/* The unique ID of the Webhook 
+/* The unique ID of the Webhook [optional]
  */
 @property(nonatomic) NSNumber* pkiWebhookID;
 /* The unique ID of the Authenticationexternal [optional]
@@ -101,5 +101,8 @@
 /* Wheter the webhook received is a manual test or a real event [optional]
  */
 @property(nonatomic) NSString* eWebhookEmittype;
+/* The unique ID of the Ezmaxpartnerproductstagewebhook [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxpartnerproductstagewebhookID;
 
 @end

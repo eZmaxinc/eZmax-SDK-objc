@@ -17,12 +17,15 @@
 #import "FieldEEzsigntemplateglobalannotationHorizontalalignment.h"
 #import "FieldEEzsigntemplateglobalannotationType.h"
 #import "FieldEEzsigntemplateglobalannotationVerticalalignment.h"
+#import "TextstylestaticRequestCompound.h"
 @protocol FieldEEzsigntemplateglobalannotationHorizontalalignment;
 @class FieldEEzsigntemplateglobalannotationHorizontalalignment;
 @protocol FieldEEzsigntemplateglobalannotationType;
 @class FieldEEzsigntemplateglobalannotationType;
 @protocol FieldEEzsigntemplateglobalannotationVerticalalignment;
 @class FieldEEzsigntemplateglobalannotationVerticalalignment;
+@protocol TextstylestaticRequestCompound;
+@class TextstylestaticRequestCompound;
 
 
 
@@ -34,12 +37,11 @@
 /* The unique ID of the Ezsigntemplateglobalannotation 
  */
 @property(nonatomic) NSNumber* pkiEzsigntemplateglobalannotationID;
-/* The unique ID of the Ezsigntemplateglobaldocumentpage 
- */
-@property(nonatomic) NSNumber* fkiEzsigntemplateglobaldocumentpageID;
-/* The unique ID of the Textstylestatic 
+/* The unique ID of the Textstylestatic [optional]
  */
 @property(nonatomic) NSNumber* fkiTextstylestaticID;
+
+@property(nonatomic) TextstylestaticRequestCompound* objTextstylestatic;
 
 @property(nonatomic) FieldEEzsigntemplateglobalannotationHorizontalalignment* eEzsigntemplateglobalannotationHorizontalalignment;
 
@@ -58,6 +60,9 @@
 /* The height of the Ezsigntemplateglobalannotation 
  */
 @property(nonatomic) NSNumber* iEzsigntemplateglobalannotationHeight;
+/* The page number in the Ezsigntemplateglobaldocument 
+ */
+@property(nonatomic) NSNumber* iEzsigntemplateglobaldocumentpagePagenumber;
 /* The description of the Ezsigntemplateglobalannotation 
  */
 @property(nonatomic) NSString* sEzsigntemplateglobalannotationDescription;

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEmployeeID": @"pkiEmployeeID", @"fkiDepartmentID": @"fkiDepartmentID", @"sEmployeeCode": @"sEmployeeCode", @"sEmployeeInternalcode": @"sEmployeeInternalcode", @"bEmployeeIsactive": @"bEmployeeIsactive", @"dtEmployeeHiredate": @"dtEmployeeHiredate", @"dtEmployeeLeavedate": @"dtEmployeeLeavedate", @"sDepartmentNameX": @"sDepartmentNameX", @"sContactFirstname": @"sContactFirstname", @"sContactLastname": @"sContactLastname", @"sPhoneE164": @"sPhoneE164", @"sEmailAddress": @"sEmailAddress", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"sAddressZip": @"sAddressZip", @"sProvinceNameX": @"sProvinceNameX", @"sCountryNameX": @"sCountryNameX" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEmployeeID": @"pkiEmployeeID", @"fkiDepartmentID": @"fkiDepartmentID", @"sEmployeeCode": @"sEmployeeCode", @"sEmployeeInternalcode": @"sEmployeeInternalcode", @"bEmployeeIsactive": @"bEmployeeIsactive", @"dtEmployeeHiredate": @"dtEmployeeHiredate", @"dtEmployeeLeavedate": @"dtEmployeeLeavedate", @"sDepartmentNameX": @"sDepartmentNameX", @"sContactFirstname": @"sContactFirstname", @"sContactLastname": @"sContactLastname", @"sPhoneE164": @"sPhoneE164", @"sEmailAddress": @"sEmailAddress", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"sAddressZip": @"sAddressZip", @"fkiProvinceID": @"fkiProvinceID", @"sProvinceNameX": @"sProvinceNameX", @"fkiCountryID": @"fkiCountryID", @"sCountryNameX": @"sCountryNameX" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"dtEmployeeHiredate", @"dtEmployeeLeavedate", @"sDepartmentNameX", @"sContactFirstname", @"sContactLastname", @"sPhoneE164", @"sEmailAddress", @"sAddressCivic", @"sAddressStreet", @"sAddressSuite", @"sAddressCity", @"sAddressZip", @"sProvinceNameX", @"sCountryNameX"];
+  NSArray *optionalProperties = @[@"dtEmployeeHiredate", @"dtEmployeeLeavedate", @"sDepartmentNameX", @"sContactFirstname", @"sContactLastname", @"sPhoneE164", @"sEmailAddress", @"sAddressCivic", @"sAddressStreet", @"sAddressSuite", @"sAddressCity", @"sAddressZip", @"fkiProvinceID", @"sProvinceNameX", @"fkiCountryID", @"sCountryNameX"];
   return [optionalProperties containsObject:propertyName];
 }
 

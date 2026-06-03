@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiRejectedoffertopurchaseID": @"pkiRejectedoffertopurchaseID", @"sRejectedoffertopurchaseNumber": @"sRejectedoffertopurchaseNumber", @"dtRejectedoffertopurchaseDate": @"dtRejectedoffertopurchaseDate", @"bRejectedoffertopurchaseIsactive": @"bRejectedoffertopurchaseIsactive", @"dtCreatedDate": @"dtCreatedDate", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"sAddressZip": @"sAddressZip", @"sProvinceNameX": @"sProvinceNameX", @"sCountryNameX": @"sCountryNameX", @"bRejectedoffertopurchaseLinkedtoinscription": @"bRejectedoffertopurchaseLinkedtoinscription" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiRejectedoffertopurchaseID": @"pkiRejectedoffertopurchaseID", @"sRejectedoffertopurchaseNumber": @"sRejectedoffertopurchaseNumber", @"dtRejectedoffertopurchaseDate": @"dtRejectedoffertopurchaseDate", @"bRejectedoffertopurchaseIsactive": @"bRejectedoffertopurchaseIsactive", @"dtCreatedDate": @"dtCreatedDate", @"sAddressCivic": @"sAddressCivic", @"sAddressStreet": @"sAddressStreet", @"sAddressSuite": @"sAddressSuite", @"sAddressCity": @"sAddressCity", @"sAddressZip": @"sAddressZip", @"fkiProvinceID": @"fkiProvinceID", @"sProvinceNameX": @"sProvinceNameX", @"fkiCountryID": @"fkiCountryID", @"sCountryNameX": @"sCountryNameX", @"bRejectedoffertopurchaseLinkedtoinscription": @"bRejectedoffertopurchaseLinkedtoinscription" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sAddressCivic", @"sAddressStreet", @"sAddressSuite", @"sAddressCity", @"sAddressZip", @"sProvinceNameX", @"sCountryNameX", ];
+  NSArray *optionalProperties = @[@"sAddressCivic", @"sAddressStreet", @"sAddressSuite", @"sAddressCity", @"sAddressZip", @"fkiProvinceID", @"sProvinceNameX", @"fkiCountryID", @"sCountryNameX", ];
   return [optionalProperties containsObject:propertyName];
 }
 

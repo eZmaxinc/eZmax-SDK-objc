@@ -5,7 +5,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfoldertypeCreateObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv3) | **POST** /3/object/ezsignfoldertype | Create a new Ezsignfoldertype
+[**ezsignfoldertypeCreateObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv4) | **POST** /4/object/ezsignfoldertype | Create a new Ezsignfoldertype
 [**ezsignfoldertypeEditObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv3) | **PUT** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
+[**ezsignfoldertypeEditObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv4) | **PUT** /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 [**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
@@ -69,6 +71,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfoldertypeCreateObjectV4**
+```objc
+-(NSURLSessionTask*) ezsignfoldertypeCreateObjectV4WithEzsignfoldertypeCreateObjectV4Request: (EzsignfoldertypeCreateObjectV4Request*) ezsignfoldertypeCreateObjectV4Request
+        completionHandler: (void (^)(EzsignfoldertypeCreateObjectV4Response* output, NSError* error)) handler;
+```
+
+Create a new Ezsignfoldertype
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+EzsignfoldertypeCreateObjectV4Request* ezsignfoldertypeCreateObjectV4Request = [[EzsignfoldertypeCreateObjectV4Request alloc] init]; // 
+
+ObjectEzsignfoldertypeApi*apiInstance = [[ObjectEzsignfoldertypeApi alloc] init];
+
+// Create a new Ezsignfoldertype
+[apiInstance ezsignfoldertypeCreateObjectV4WithEzsignfoldertypeCreateObjectV4Request:ezsignfoldertypeCreateObjectV4Request
+          completionHandler: ^(EzsignfoldertypeCreateObjectV4Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfoldertypeApi->ezsignfoldertypeCreateObjectV4: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfoldertypeCreateObjectV4Request** | [**EzsignfoldertypeCreateObjectV4Request***](EzsignfoldertypeCreateObjectV4Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldertypeCreateObjectV4Response***](EzsignfoldertypeCreateObjectV4Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfoldertypeEditObjectV3**
 ```objc
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
@@ -118,6 +177,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldertypeEditObjectV3Response***](EzsignfoldertypeEditObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldertypeEditObjectV4**
+```objc
+-(NSURLSessionTask*) ezsignfoldertypeEditObjectV4WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
+    ezsignfoldertypeEditObjectV4Request: (EzsignfoldertypeEditObjectV4Request*) ezsignfoldertypeEditObjectV4Request
+        completionHandler: (void (^)(EzsignfoldertypeEditObjectV4Response* output, NSError* error)) handler;
+```
+
+Edit an existing Ezsignfoldertype
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfoldertypeID = @56; // 
+EzsignfoldertypeEditObjectV4Request* ezsignfoldertypeEditObjectV4Request = [[EzsignfoldertypeEditObjectV4Request alloc] init]; // 
+
+ObjectEzsignfoldertypeApi*apiInstance = [[ObjectEzsignfoldertypeApi alloc] init];
+
+// Edit an existing Ezsignfoldertype
+[apiInstance ezsignfoldertypeEditObjectV4WithPkiEzsignfoldertypeID:pkiEzsignfoldertypeID
+              ezsignfoldertypeEditObjectV4Request:ezsignfoldertypeEditObjectV4Request
+          completionHandler: ^(EzsignfoldertypeEditObjectV4Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfoldertypeApi->ezsignfoldertypeEditObjectV4: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldertypeID** | **NSNumber***|  | 
+ **ezsignfoldertypeEditObjectV4Request** | [**EzsignfoldertypeEditObjectV4Request***](EzsignfoldertypeEditObjectV4Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldertypeEditObjectV4Response***](EzsignfoldertypeEditObjectV4Response.md)
 
 ### Authorization
 

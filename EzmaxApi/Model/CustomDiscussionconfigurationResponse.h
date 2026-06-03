@@ -25,16 +25,16 @@
 /* If the added Discussionmembership will have access to the entire history or not 
  */
 @property(nonatomic) NSNumber* bDiscussionconfigurationCompletehistorywhenadded;
-/* If the the creation of the Discussion is allowed or not 
+/* If the creation of the Discussion is allowed or not 
  */
 @property(nonatomic) NSNumber* bDiscussionconfigurationCreateallowed;
-/* If the the destruction of the Discussion is allowed or not 
+/* If the destruction of the Discussion is allowed or not 
  */
 @property(nonatomic) NSNumber* bDiscussionconfigurationDeleteallowed;
-/* If the the destruction of the Discussionmessage is allowed or not 
+/* If the destruction of the Discussionmessage is allowed or not 
  */
 @property(nonatomic) NSNumber* bDiscussionconfigurationDeletediscussionmessageallowed;
-/* If the the creation of the Discussionmessage is allowed or not 
+/* If the creation of the Discussionmessage is allowed or not 
  */
 @property(nonatomic) NSNumber* bDiscussionconfigurationEditdiscussionmessageallowed;
 

@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiLanguageID", ];
+  NSArray *optionalProperties = @[@"fkiBankaccountID", @"fkiLanguageID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

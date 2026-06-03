@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **fkiLanguageID** | **NSNumber*** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
 **fkiEzdoctemplatetypeID** | **NSNumber*** | The unique ID of the Ezdoctemplatetype | 
-**fkiEzdoctemplatefieldtypecategoryID** | **NSNumber*** | The unique ID of the Ezdoctemplatefieldtypecategory | 
+**fkiEzdoctemplatefieldtypecategoryID** | **NSNumber*** | The unique ID of the Ezdoctemplatefieldtypecategory | [optional] 
 **eEzdoctemplatedocumentPrivacylevel** | [**FieldEEzdoctemplatedocumentPrivacylevel***](FieldEEzdoctemplatedocumentPrivacylevel.md) |  | [optional] 
 **bEzdoctemplatedocumentIsactive** | **NSNumber*** | Whether the ezdoctemplatedocument is active or not | 
 **objEzdoctemplatedocumentName** | [**MultilingualEzdoctemplatedocumentName***](MultilingualEzdoctemplatedocumentName.md) |  | 

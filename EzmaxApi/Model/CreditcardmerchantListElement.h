@@ -25,7 +25,7 @@
 /* The unique ID of the Creditcardmerchant 
  */
 @property(nonatomic) NSNumber* pkiCreditcardmerchantID;
-/* The unique ID of the Bankaccount 
+/* The unique ID of the Bankaccount [optional]
  */
 @property(nonatomic) NSNumber* fkiBankaccountID;
 /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| [optional]

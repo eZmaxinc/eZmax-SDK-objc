@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"fkiEzsignfoldertypeID", @"eEzdoctemplatedocumentPrivacylevel", @"sEzdoctemplatedocumentNameX", @"sEzsignfoldertypeNameX", ];
+  NSArray *optionalProperties = @[@"fkiEzsignfoldertypeID", @"fkiEzdoctemplatefieldtypecategoryID", @"eEzdoctemplatedocumentPrivacylevel", @"sEzdoctemplatedocumentNameX", @"sEzsignfoldertypeNameX", @"sEzdoctemplatefieldtypecategoryDescriptionX", ];
   return [optionalProperties containsObject:propertyName];
 }
 

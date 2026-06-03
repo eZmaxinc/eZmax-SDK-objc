@@ -17,12 +17,15 @@
 #import "FieldEEzsigntemplateannotationHorizontalalignment.h"
 #import "FieldEEzsigntemplateannotationType.h"
 #import "FieldEEzsigntemplateannotationVerticalalignment.h"
+#import "TextstylestaticRequestCompound.h"
 @protocol FieldEEzsigntemplateannotationHorizontalalignment;
 @class FieldEEzsigntemplateannotationHorizontalalignment;
 @protocol FieldEEzsigntemplateannotationType;
 @class FieldEEzsigntemplateannotationType;
 @protocol FieldEEzsigntemplateannotationVerticalalignment;
 @class FieldEEzsigntemplateannotationVerticalalignment;
+@protocol TextstylestaticRequestCompound;
+@class TextstylestaticRequestCompound;
 
 
 
@@ -34,12 +37,9 @@
 /* The unique ID of the Ezsigntemplateannotation [optional]
  */
 @property(nonatomic) NSNumber* pkiEzsigntemplateannotationID;
-/* The unique ID of the Ezsigntemplatedocumentpage 
+/* The unique ID of the Ezsigntemplatedocument 
  */
-@property(nonatomic) NSNumber* fkiEzsigntemplatedocumentpageID;
-/* The unique ID of the Textstylestatic 
- */
-@property(nonatomic) NSNumber* fkiTextstylestaticID;
+@property(nonatomic) NSNumber* fkiEzsigntemplatedocumentID;
 
 @property(nonatomic) FieldEEzsigntemplateannotationHorizontalalignment* eEzsigntemplateannotationHorizontalalignment;
 
@@ -58,6 +58,9 @@
 /* The height of the Ezsigntemplateannotation 
  */
 @property(nonatomic) NSNumber* iEzsigntemplateannotationHeight;
+/* The page number in the Ezsigntemplatedocument 
+ */
+@property(nonatomic) NSNumber* iEzsigntemplatedocumentpagePagenumber;
 /* The description of the Ezsigntemplateannotation 
  */
 @property(nonatomic) NSString* sEzsigntemplateannotationDescription;
@@ -66,6 +69,8 @@
 @property(nonatomic) NSString* sEzsigntemplateannotationDefaulttext;
 /* The ndropdownvalues of the Ezsigntemplateannotation 
  */
-@property(nonatomic) NSString* sEzsigntemplateannotationnDropdownvalues;
+@property(nonatomic) NSString* sEzsigntemplateannotationDropdownvalues;
+
+@property(nonatomic) TextstylestaticRequestCompound* objTextstylestatic;
 
 @end

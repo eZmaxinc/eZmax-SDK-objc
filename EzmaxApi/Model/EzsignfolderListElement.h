@@ -15,10 +15,13 @@
 
 
 #import "FieldEEzsignfolderCompletion.h"
+#import "FieldEEzsignfolderSource.h"
 #import "FieldEEzsignfolderStep.h"
 #import "FieldEEzsignfoldertypePrivacylevel.h"
 @protocol FieldEEzsignfolderCompletion;
 @class FieldEEzsignfolderCompletion;
+@protocol FieldEEzsignfolderSource;
+@class FieldEEzsignfolderSource;
 @protocol FieldEEzsignfolderStep;
 @class FieldEEzsignfolderStep;
 @protocol FieldEEzsignfoldertypePrivacylevel;
@@ -37,6 +40,26 @@
 /* The unique ID of the Ezsignfoldertype. 
  */
 @property(nonatomic) NSNumber* fkiEzsignfoldertypeID;
+/* The unique ID of the Ezsignbulksend [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignbulksendID;
+/* The description of the Ezsignbulksend [optional]
+ */
+@property(nonatomic) NSString* sEzsignbulksendDescription;
+/* The unique ID of the Ezsignbulksendtransmission [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsignbulksendtransmissionID;
+/* The description of the Ezsignbulksendtransmission [optional]
+ */
+@property(nonatomic) NSString* sEzsignbulksendtransmissionDescription;
+/* The unique ID of the Ezsigntemplatepublic [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzsigntemplatepublicID;
+/* The description of the Ezsigntemplatepublic [optional]
+ */
+@property(nonatomic) NSString* sEzsigntemplatepublicDescription;
+
+@property(nonatomic) FieldEEzsignfolderSource* eEzsignfolderSource;
 
 @property(nonatomic) FieldEEzsignfoldertypePrivacylevel* eEzsignfoldertypePrivacylevel;
 /* The name of the Ezsignfoldertype in the language of the requester 
@@ -103,5 +126,8 @@
 /* Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user [optional]
  */
 @property(nonatomic) NSNumber* bEzsignfolderSigner;
+/* Whether the Ezsignfolder is my own or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsignfolderIsmyown;
 
 @end

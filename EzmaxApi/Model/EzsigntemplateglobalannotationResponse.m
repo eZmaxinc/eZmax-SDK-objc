@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateglobalannotationID": @"pkiEzsigntemplateglobalannotationID", @"fkiEzsigntemplateglobaldocumentpageID": @"fkiEzsigntemplateglobaldocumentpageID", @"fkiTextstylestaticID": @"fkiTextstylestaticID", @"eEzsigntemplateglobalannotationHorizontalalignment": @"eEzsigntemplateglobalannotationHorizontalalignment", @"eEzsigntemplateglobalannotationVerticalalignment": @"eEzsigntemplateglobalannotationVerticalalignment", @"eEzsigntemplateglobalannotationType": @"eEzsigntemplateglobalannotationType", @"iEzsigntemplateglobalannotationX": @"iEzsigntemplateglobalannotationX", @"iEzsigntemplateglobalannotationY": @"iEzsigntemplateglobalannotationY", @"iEzsigntemplateglobalannotationWidth": @"iEzsigntemplateglobalannotationWidth", @"iEzsigntemplateglobalannotationHeight": @"iEzsigntemplateglobalannotationHeight", @"sEzsigntemplateglobalannotationDescription": @"sEzsigntemplateglobalannotationDescription", @"sEzsigntemplateglobalannotationDefaulttext": @"sEzsigntemplateglobalannotationDefaulttext", @"sEzsigntemplateglobalannotationDropdownvalues": @"sEzsigntemplateglobalannotationDropdownvalues" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzsigntemplateglobalannotationID": @"pkiEzsigntemplateglobalannotationID", @"fkiTextstylestaticID": @"fkiTextstylestaticID", @"objTextstylestatic": @"objTextstylestatic", @"eEzsigntemplateglobalannotationHorizontalalignment": @"eEzsigntemplateglobalannotationHorizontalalignment", @"eEzsigntemplateglobalannotationVerticalalignment": @"eEzsigntemplateglobalannotationVerticalalignment", @"eEzsigntemplateglobalannotationType": @"eEzsigntemplateglobalannotationType", @"iEzsigntemplateglobalannotationX": @"iEzsigntemplateglobalannotationX", @"iEzsigntemplateglobalannotationY": @"iEzsigntemplateglobalannotationY", @"iEzsigntemplateglobalannotationWidth": @"iEzsigntemplateglobalannotationWidth", @"iEzsigntemplateglobalannotationHeight": @"iEzsigntemplateglobalannotationHeight", @"iEzsigntemplateglobaldocumentpagePagenumber": @"iEzsigntemplateglobaldocumentpagePagenumber", @"sEzsigntemplateglobalannotationDescription": @"sEzsigntemplateglobalannotationDescription", @"sEzsigntemplateglobalannotationDefaulttext": @"sEzsigntemplateglobalannotationDefaulttext", @"sEzsigntemplateglobalannotationDropdownvalues": @"sEzsigntemplateglobalannotationDropdownvalues" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"fkiTextstylestaticID", @"objTextstylestatic", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
 [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
+[**ezsigndocumentApplyEzsigntemplateV3**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev3) | **POST** /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument
 [**ezsigndocumentApplyEzsigntemplateglobalV1**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplateglobalv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument
+[**ezsigndocumentApplyEzsigntemplateglobalV2**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplateglobalv2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateEzsignelementsPositionedByWordV2**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
@@ -171,6 +173,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsigndocumentApplyEzsigntemplateV3**
+```objc
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV3WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateV3Request: (EzsigndocumentApplyEzsigntemplateV3Request*) ezsigndocumentApplyEzsigntemplateV3Request
+        completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV3Response* output, NSError* error)) handler;
+```
+
+Apply an Ezsigntemplate to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EzsigndocumentApplyEzsigntemplateV3Request* ezsigndocumentApplyEzsigntemplateV3Request = [[EzsigndocumentApplyEzsigntemplateV3Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Apply an Ezsigntemplate to the Ezsigndocument
+[apiInstance ezsigndocumentApplyEzsigntemplateV3WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentApplyEzsigntemplateV3Request:ezsigndocumentApplyEzsigntemplateV3Request
+          completionHandler: ^(EzsigndocumentApplyEzsigntemplateV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentApplyEzsigntemplateV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentApplyEzsigntemplateV3Request** | [**EzsigndocumentApplyEzsigntemplateV3Request***](EzsigndocumentApplyEzsigntemplateV3Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateV3Response***](EzsigndocumentApplyEzsigntemplateV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsigndocumentApplyEzsigntemplateglobalV1**
 ```objc
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateglobalV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
@@ -220,6 +283,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentApplyEzsigntemplateglobalV1Response***](EzsigndocumentApplyEzsigntemplateglobalV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentApplyEzsigntemplateglobalV2**
+```objc
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateglobalV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateglobalV2Request: (EzsigndocumentApplyEzsigntemplateglobalV2Request*) ezsigndocumentApplyEzsigntemplateglobalV2Request
+        completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateglobalV2Response* output, NSError* error)) handler;
+```
+
+Apply an Ezsigntemplateglobal to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+EzsigndocumentApplyEzsigntemplateglobalV2Request* ezsigndocumentApplyEzsigntemplateglobalV2Request = [[EzsigndocumentApplyEzsigntemplateglobalV2Request alloc] init]; // 
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Apply an Ezsigntemplateglobal to the Ezsigndocument
+[apiInstance ezsigndocumentApplyEzsigntemplateglobalV2WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              ezsigndocumentApplyEzsigntemplateglobalV2Request:ezsigndocumentApplyEzsigntemplateglobalV2Request
+          completionHandler: ^(EzsigndocumentApplyEzsigntemplateglobalV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentApplyEzsigntemplateglobalV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **ezsigndocumentApplyEzsigntemplateglobalV2Request** | [**EzsigndocumentApplyEzsigntemplateglobalV2Request***](EzsigndocumentApplyEzsigntemplateglobalV2Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateglobalV2Response***](EzsigndocumentApplyEzsigntemplateglobalV2Response.md)
 
 ### Authorization
 

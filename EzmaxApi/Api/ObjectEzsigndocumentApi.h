@@ -6,8 +6,12 @@
 #import "EzsigndocumentApplyEzsigntemplateV1Response.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Request.h"
 #import "EzsigndocumentApplyEzsigntemplateV2Response.h"
+#import "EzsigndocumentApplyEzsigntemplateV3Request.h"
+#import "EzsigndocumentApplyEzsigntemplateV3Response.h"
 #import "EzsigndocumentApplyEzsigntemplateglobalV1Request.h"
 #import "EzsigndocumentApplyEzsigntemplateglobalV1Response.h"
+#import "EzsigndocumentApplyEzsigntemplateglobalV2Request.h"
+#import "EzsigndocumentApplyEzsigntemplateglobalV2Response.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV1Response.h"
 #import "EzsigndocumentCreateEzsignelementsPositionedByWordV2Request.h"
@@ -120,6 +124,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
     completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV2Response* output, NSError* error)) handler;
 
 
+/// Apply an Ezsigntemplate to the Ezsigndocument
+/// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentApplyEzsigntemplateV3Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentApplyEzsigntemplateV3Response*
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateV3WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateV3Request: (EzsigndocumentApplyEzsigntemplateV3Request*) ezsigndocumentApplyEzsigntemplateV3Request
+    completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateV3Response* output, NSError* error)) handler;
+
+
 /// Apply an Ezsigntemplateglobal to the Ezsigndocument
 /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 ///
@@ -134,6 +154,22 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateglobalV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     ezsigndocumentApplyEzsigntemplateglobalV1Request: (EzsigndocumentApplyEzsigntemplateglobalV1Request*) ezsigndocumentApplyEzsigntemplateglobalV1Request
     completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateglobalV1Response* output, NSError* error)) handler;
+
+
+/// Apply an Ezsigntemplateglobal to the Ezsigndocument
+/// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+///
+/// @param pkiEzsigndocumentID 
+/// @param ezsigndocumentApplyEzsigntemplateglobalV2Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentApplyEzsigntemplateglobalV2Response*
+-(NSURLSessionTask*) ezsigndocumentApplyEzsigntemplateglobalV2WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    ezsigndocumentApplyEzsigntemplateglobalV2Request: (EzsigndocumentApplyEzsigntemplateglobalV2Request*) ezsigndocumentApplyEzsigntemplateglobalV2Request
+    completionHandler: (void (^)(EzsigndocumentApplyEzsigntemplateglobalV2Response* output, NSError* error)) handler;
 
 
 /// Create multiple Ezsignsignatures/Ezsignformfieldgroups

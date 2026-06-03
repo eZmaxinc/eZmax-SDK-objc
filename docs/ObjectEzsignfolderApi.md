@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderDisposeEzsignfoldersV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposeezsignfoldersv1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
 [**ezsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
+[**ezsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderduplicatev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder
 [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
@@ -23,10 +24,13 @@ Method | HTTP request | Description
 [**ezsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 [**ezsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationrecipientsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder&#39;s Communicationrecipient
 [**ezsignfolderGetCommunicationsendersV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationsendersv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder&#39;s Communicationsender
+[**ezsignfolderGetEzsignannotationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignannotationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations | Retrieve an existing Ezsignfolder&#39;s Ezsignannotations
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+[**ezsignfolderGetEzsignformfieldgroupsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignformfieldgroupsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups | Retrieve an existing Ezsignfolder&#39;s Ezsignformfieldgroups
 [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
+[**ezsignfolderGetEzsignsignaturesV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures | Retrieve an existing Ezsignfolder&#39;s Ezsignsignatures
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -35,6 +39,7 @@ Method | HTTP request | Description
 [**ezsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsignfoldersignerassociationsv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV2**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder
+[**ezsignfolderImportEzsigntemplatepackageV3**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder
 [**ezsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderreorderv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
@@ -493,6 +498,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderDisposeV1Response***](EzsignfolderDisposeV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderDuplicateV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderDuplicateV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderDuplicateV1Request: (EzsignfolderDuplicateV1Request*) ezsignfolderDuplicateV1Request
+        completionHandler: (void (^)(EzsignfolderDuplicateV1Response* output, NSError* error)) handler;
+```
+
+Duplicate the Ezsignfolder
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+EzsignfolderDuplicateV1Request* ezsignfolderDuplicateV1Request = [[EzsignfolderDuplicateV1Request alloc] init]; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Duplicate the Ezsignfolder
+[apiInstance ezsignfolderDuplicateV1WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderDuplicateV1Request:ezsignfolderDuplicateV1Request
+          completionHandler: ^(EzsignfolderDuplicateV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderDuplicateV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **ezsignfolderDuplicateV1Request** | [**EzsignfolderDuplicateV1Request***](EzsignfolderDuplicateV1Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderDuplicateV1Response***](EzsignfolderDuplicateV1Response.md)
 
 ### Authorization
 
@@ -1140,6 +1206,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderGetEzsignannotationsV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetEzsignannotationsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EzsignfolderGetEzsignannotationsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's Ezsignannotations
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's Ezsignannotations
+[apiInstance ezsignfolderGetEzsignannotationsV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EzsignfolderGetEzsignannotationsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetEzsignannotationsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignfolderGetEzsignannotationsV1Response***](EzsignfolderGetEzsignannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderGetEzsigndocumentsV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderGetEzsigndocumentsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -1311,6 +1434,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderGetEzsignformfieldgroupsV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetEzsignformfieldgroupsV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EzsignfolderGetEzsignformfieldgroupsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+[apiInstance ezsignfolderGetEzsignformfieldgroupsV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EzsignfolderGetEzsignformfieldgroupsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetEzsignformfieldgroupsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignfolderGetEzsignformfieldgroupsV1Response***](EzsignfolderGetEzsignformfieldgroupsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderGetEzsignsignaturesAutomaticV1**
 ```objc
 -(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesAutomaticV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
@@ -1356,6 +1536,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetEzsignsignaturesAutomaticV1Response***](EzsignfolderGetEzsignsignaturesAutomaticV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetEzsignsignaturesV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetEzsignsignaturesV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EzsignfolderGetEzsignsignaturesV1Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's Ezsignsignatures
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's Ezsignsignatures
+[apiInstance ezsignfolderGetEzsignsignaturesV1WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EzsignfolderGetEzsignsignaturesV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetEzsignsignaturesV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignfolderGetEzsignsignaturesV1Response***](EzsignfolderGetEzsignsignaturesV1Response.md)
 
 ### Authorization
 
@@ -1437,7 +1674,7 @@ Name | Type | Description  | Notes
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup | | eEzsignfolderSource | Normal<br>Ezsignbulksend<br>Ezsigntemplatepublic |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 
 ### Example
 ```objc
@@ -1838,6 +2075,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderImportEzsigntemplatepackageV2Response***](EzsignfolderImportEzsigntemplatepackageV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderImportEzsigntemplatepackageV3**
+```objc
+-(NSURLSessionTask*) ezsignfolderImportEzsigntemplatepackageV3WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    ezsignfolderImportEzsigntemplatepackageV3Request: (EzsignfolderImportEzsigntemplatepackageV3Request*) ezsignfolderImportEzsigntemplatepackageV3Request
+        completionHandler: (void (^)(EzsignfolderImportEzsigntemplatepackageV3Response* output, NSError* error)) handler;
+```
+
+Import an Ezsigntemplatepackage in the Ezsignfolder
+
+This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+EzsignfolderImportEzsigntemplatepackageV3Request* ezsignfolderImportEzsigntemplatepackageV3Request = [[EzsignfolderImportEzsigntemplatepackageV3Request alloc] init]; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Import an Ezsigntemplatepackage in the Ezsignfolder
+[apiInstance ezsignfolderImportEzsigntemplatepackageV3WithPkiEzsignfolderID:pkiEzsignfolderID
+              ezsignfolderImportEzsigntemplatepackageV3Request:ezsignfolderImportEzsigntemplatepackageV3Request
+          completionHandler: ^(EzsignfolderImportEzsigntemplatepackageV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderImportEzsigntemplatepackageV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **ezsignfolderImportEzsigntemplatepackageV3Request** | [**EzsignfolderImportEzsigntemplatepackageV3Request***](EzsignfolderImportEzsigntemplatepackageV3Request.md)|  | 
+
+### Return type
+
+[**EzsignfolderImportEzsigntemplatepackageV3Response***](EzsignfolderImportEzsigntemplatepackageV3Response.md)
 
 ### Authorization
 

@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldEEzsigntemplateglobaldocumentAcceptationtype.h"
+@protocol FieldEEzsigntemplateglobaldocumentAcceptationtype;
+@class FieldEEzsigntemplateglobaldocumentAcceptationtype;
 
 
 
@@ -28,6 +31,8 @@
 /* The name of the Ezsigntemplateglobaldocument. 
  */
 @property(nonatomic) NSString* sEzsigntemplateglobaldocumentName;
+
+@property(nonatomic) FieldEEzsigntemplateglobaldocumentAcceptationtype* eEzsigntemplateglobaldocumentAcceptationtype;
 /* The number of pages in the Ezsigntemplateglobaldocument. 
  */
 @property(nonatomic) NSNumber* iEzsigntemplateglobaldocumentPagetotal;

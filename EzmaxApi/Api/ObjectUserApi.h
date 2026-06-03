@@ -15,12 +15,15 @@
 #import "UserGetAutocompleteV2Response.h"
 #import "UserGetColleaguesV2Response.h"
 #import "UserGetEffectivePermissionsV1Response.h"
+#import "UserGetEzmaxcustomeruserV1Response.h"
 #import "UserGetListV1Response.h"
 #import "UserGetObjectV2Response.h"
 #import "UserGetPermissionsV1Response.h"
 #import "UserGetSubnetsV1Response.h"
 #import "UserGetUsergroupexternalsV1Response.h"
 #import "UserGetUsergroupsV1Response.h"
+#import "UserImpersonateV1Request.h"
+#import "UserImpersonateV1Response.h"
 #import "UserSendPasswordResetV1Response.h"
 #import "Api.h"
 
@@ -174,6 +177,20 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
     completionHandler: (void (^)(UserGetEffectivePermissionsV1Response* output, NSError* error)) handler;
 
 
+/// Returns the Ezmaxcustomeruser for the User
+/// Returns the Ezmaxcustomeruser for the User
+///
+/// @param pkiUserID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return UserGetEzmaxcustomeruserV1Response*
+-(NSURLSessionTask*) userGetEzmaxcustomeruserV1WithPkiUserID: (NSNumber*) pkiUserID
+    completionHandler: (void (^)(UserGetEzmaxcustomeruserV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve User list
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker<br>Assistant<br>Employee<br>EzsignUser<br>Normal | | eUserOrigin | BuiltIn<br>External | | eUserEzsignaccess | No<br>PaidByOffice<br>PerDocument<br>Prepaid |
 ///
@@ -258,6 +275,22 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @return UserGetUsergroupsV1Response*
 -(NSURLSessionTask*) userGetUsergroupsV1WithPkiUserID: (NSNumber*) pkiUserID
     completionHandler: (void (^)(UserGetUsergroupsV1Response* output, NSError* error)) handler;
+
+
+/// Impersonate the user
+/// Using this endpoint, you can impersonate the user.
+///
+/// @param pkiUserID 
+/// @param userImpersonateV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return UserImpersonateV1Response*
+-(NSURLSessionTask*) userImpersonateV1WithPkiUserID: (NSNumber*) pkiUserID
+    userImpersonateV1Request: (UserImpersonateV1Request*) userImpersonateV1Request
+    completionHandler: (void (^)(UserImpersonateV1Response* output, NSError* error)) handler;
 
 
 /// Send password reset
