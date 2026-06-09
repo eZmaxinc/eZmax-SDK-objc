@@ -37,6 +37,9 @@
 /* The unique ID of the User 
  */
 @property(nonatomic) NSNumber* fkiUserID;
+/* The unique ID of the Ezmaxpartnerproductstage [optional]
+ */
+@property(nonatomic) NSNumber* fkiEzmaxpartnerproductstageID;
 
 @property(nonatomic) MultilingualApikeyDescription* objApikeyDescription;
 

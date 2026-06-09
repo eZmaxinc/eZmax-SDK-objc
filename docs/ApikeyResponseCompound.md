@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiApikeyID** | **NSNumber*** | The unique ID of the Apikey | 
 **fkiUserID** | **NSNumber*** | The unique ID of the User | 
+**fkiEzmaxpartnerproductstageID** | **NSNumber*** | The unique ID of the Ezmaxpartnerproductstage | [optional] 
 **objApikeyDescription** | [**MultilingualApikeyDescription***](MultilingualApikeyDescription.md) |  | 
 **objContactName** | [**CustomContactNameResponse***](CustomContactNameResponse.md) |  | 
 **sApikeyApikey** | **NSString*** | The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 

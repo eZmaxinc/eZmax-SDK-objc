@@ -3667,14 +3667,8 @@ EzmaxApi/Model/ScimServiceProviderConfigBulk.h
 EzmaxApi/Model/ScimServiceProviderConfigBulk.m
 EzmaxApi/Model/ScimServiceProviderConfigChangePassword.h
 EzmaxApi/Model/ScimServiceProviderConfigChangePassword.m
-EzmaxApi/Model/ScimServiceProviderConfigEtag.h
-EzmaxApi/Model/ScimServiceProviderConfigEtag.m
 EzmaxApi/Model/ScimServiceProviderConfigFilter.h
 EzmaxApi/Model/ScimServiceProviderConfigFilter.m
-EzmaxApi/Model/ScimServiceProviderConfigPatch.h
-EzmaxApi/Model/ScimServiceProviderConfigPatch.m
-EzmaxApi/Model/ScimServiceProviderConfigSort.h
-EzmaxApi/Model/ScimServiceProviderConfigSort.m
 EzmaxApi/Model/ScimUser.h
 EzmaxApi/Model/ScimUser.m
 EzmaxApi/Model/ScimUserList.h
@@ -6113,10 +6107,7 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
-docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
-docs/ScimServiceProviderConfigPatch.md
-docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md

@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiApikeyID": @"pkiApikeyID", @"fkiUserID": @"fkiUserID", @"objApikeyDescription": @"objApikeyDescription", @"objContactName": @"objContactName", @"sApikeyApikey": @"sApikeyApikey", @"sApikeySecret": @"sApikeySecret", @"bApikeyIsactive": @"bApikeyIsactive", @"bApikeyIssigned": @"bApikeyIssigned", @"objAudit": @"objAudit" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiApikeyID": @"pkiApikeyID", @"fkiUserID": @"fkiUserID", @"fkiEzmaxpartnerproductstageID": @"fkiEzmaxpartnerproductstageID", @"objApikeyDescription": @"objApikeyDescription", @"objContactName": @"objContactName", @"sApikeyApikey": @"sApikeyApikey", @"sApikeySecret": @"sApikeySecret", @"bApikeyIsactive": @"bApikeyIsactive", @"bApikeyIssigned": @"bApikeyIssigned", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sApikeyApikey", @"sApikeySecret", @"bApikeyIssigned", ];
+  NSArray *optionalProperties = @[@"fkiEzmaxpartnerproductstageID", @"sApikeyApikey", @"sApikeySecret", @"bApikeyIssigned", ];
   return [optionalProperties containsObject:propertyName];
 }
 
