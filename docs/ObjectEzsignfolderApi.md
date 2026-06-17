@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**ezsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderduplicatev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder
 [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
+[**ezsignfolderGetActionableElementsForSignerV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsforsignerv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetActionableElementsV3**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
@@ -689,6 +690,75 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetActionableElementsForSignerV1**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetActionableElementsForSignerV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    eSignerType: (NSString*) eSignerType
+    fkiEzsignsignerID: (NSNumber*) fkiEzsignsignerID
+    fkiUserID: (NSNumber*) fkiUserID
+        completionHandler: (void (^)(EzsignfolderGetActionableElementsForSignerV1Response* output, NSError* error)) handler;
+```
+
+Retrieve actionable elements of a user for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+NSString* eSignerType = @"eSignerType_example"; // 
+NSNumber* fkiEzsignsignerID = @56; //  (optional)
+NSNumber* fkiUserID = @56; //  (optional)
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve actionable elements of a user for the Ezsignfolder
+[apiInstance ezsignfolderGetActionableElementsForSignerV1WithPkiEzsignfolderID:pkiEzsignfolderID
+              eSignerType:eSignerType
+              fkiEzsignsignerID:fkiEzsignsignerID
+              fkiUserID:fkiUserID
+          completionHandler: ^(EzsignfolderGetActionableElementsForSignerV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetActionableElementsForSignerV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+ **eSignerType** | **NSString***|  | 
+ **fkiEzsignsignerID** | **NSNumber***|  | [optional] 
+ **fkiUserID** | **NSNumber***|  | [optional] 
+
+### Return type
+
+[**EzsignfolderGetActionableElementsForSignerV1Response***](EzsignfolderGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

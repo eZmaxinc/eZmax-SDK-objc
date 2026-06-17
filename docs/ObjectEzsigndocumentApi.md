@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 [**ezsigndocumentExtractTextV1**](ObjectEzsigndocumentApi.md#ezsigndocumentextracttextv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area
 [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
+[**ezsigndocumentGetActionableElementsForSignerV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsforsignerv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsigndocument
 [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 [**ezsigndocumentGetActionableElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 [**ezsigndocumentGetActionableElementsV3**](ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
@@ -1312,6 +1313,75 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentGetActionableElementsForSignerV1**
+```objc
+-(NSURLSessionTask*) ezsigndocumentGetActionableElementsForSignerV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    eSignerType: (NSString*) eSignerType
+    fkiEzsignsignerID: (NSNumber*) fkiEzsignsignerID
+    fkiUserID: (NSNumber*) fkiUserID
+        completionHandler: (void (^)(EzsigndocumentGetActionableElementsForSignerV1Response* output, NSError* error)) handler;
+```
+
+Retrieve actionable elements of a user for the Ezsigndocument
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigndocumentID = @56; // 
+NSString* eSignerType = @"eSignerType_example"; // 
+NSNumber* fkiEzsignsignerID = @56; //  (optional)
+NSNumber* fkiUserID = @56; //  (optional)
+
+ObjectEzsigndocumentApi*apiInstance = [[ObjectEzsigndocumentApi alloc] init];
+
+// Retrieve actionable elements of a user for the Ezsigndocument
+[apiInstance ezsigndocumentGetActionableElementsForSignerV1WithPkiEzsigndocumentID:pkiEzsigndocumentID
+              eSignerType:eSignerType
+              fkiEzsignsignerID:fkiEzsignsignerID
+              fkiUserID:fkiUserID
+          completionHandler: ^(EzsigndocumentGetActionableElementsForSignerV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigndocumentApi->ezsigndocumentGetActionableElementsForSignerV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **NSNumber***|  | 
+ **eSignerType** | **NSString***|  | 
+ **fkiEzsignsignerID** | **NSNumber***|  | [optional] 
+ **fkiUserID** | **NSNumber***|  | [optional] 
+
+### Return type
+
+[**EzsigndocumentGetActionableElementsForSignerV1Response***](EzsigndocumentGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

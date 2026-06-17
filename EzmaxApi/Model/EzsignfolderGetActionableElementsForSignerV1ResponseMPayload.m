@@ -1,6 +1,6 @@
-#import "UserImpersonateV1Request.h"
+#import "EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.h"
 
-@implementation UserImpersonateV1Request
+@implementation EzsignfolderGetActionableElementsForSignerV1ResponseMPayload
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iExpirationMinutes": @"iExpirationMinutes" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"aObjEzsignsignature": @"a_objEzsignsignature", @"aObjEzsignformfieldgroup": @"a_objEzsignformfieldgroup" }];
 }
 
 /**

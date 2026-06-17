@@ -1,6 +1,6 @@
-#import "UserImpersonateV1Request.h"
+#import "DocumentationSubscribeV1Response.h"
 
-@implementation UserImpersonateV1Request
+@implementation DocumentationSubscribeV1Response
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iExpirationMinutes": @"iExpirationMinutes" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sExternalID": @"sExternalID" }];
 }
 
 /**

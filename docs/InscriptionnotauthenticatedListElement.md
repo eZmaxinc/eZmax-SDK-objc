@@ -6,10 +6,13 @@ Name | Type | Description | Notes
 **pkiInscriptionID** | **NSNumber*** | The unique ID of the Inscription. | 
 **pkiInscriptionnotauthenticatedID** | **NSNumber*** | The unique ID of the Inscriptionnotauthenticated. | [optional] 
 **fkiInscriptiontypeID** | **NSNumber*** | The unique ID of the Inscriptiontype | 
+**fkiBuyercontractID** | **NSNumber*** | The unique ID of the Buyercontract | [optional] 
+**sBuyercontractContract** | **NSString*** | The number of the Buyercontract | [optional] 
 **sInscriptiontypeNameX** | **NSString*** | The name of the Inscriptiontype in the language of the requester | 
 **eInscriptionStep** | [**FieldEInscriptionStep***](FieldEInscriptionStep.md) |  | 
 **sInscriptionCivicend** | **NSString*** | The civicend of the Inscription | 
 **sInscriptionMLS** | **NSString*** | The mls of the Inscription | [optional] 
+**sInscriptionContract** | **NSString*** | The sale contract number | [optional] 
 **dInscriptionSaleprice** | **NSString*** | The saleprice of the Inscription | 
 **dInscriptionRentprice** | **NSString*** | The rentprice of the Inscription | 
 **dtInscriptionDate** | **NSString*** | The date of the Inscription | [optional] 

@@ -17,13 +17,13 @@
 
 
 
-@protocol UserImpersonateV1Request
+@protocol DocumentationSubscribeV1Response
 @end
 
-@interface UserImpersonateV1Request : Object
+@interface DocumentationSubscribeV1Response : Object
 
-/* The number of minute before key is no longer active 
+/*  
  */
-@property(nonatomic) NSNumber* iExpirationMinutes;
+@property(nonatomic) NSString* sExternalID;
 
 @end

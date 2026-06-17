@@ -17,6 +17,7 @@
 #import "EzsignfolderEditObjectV3Request.h"
 #import "EzsignfolderEditObjectV3Response.h"
 #import "EzsignfolderEndPrematurelyV1Response.h"
+#import "EzsignfolderGetActionableElementsForSignerV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetActionableElementsV2Response.h"
 #import "EzsignfolderGetActionableElementsV3Response.h"
@@ -236,6 +237,26 @@ extern NSInteger kObjectEzsignfolderApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsignfolderEndPrematurelyV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsignfolderEndPrematurelyV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve actionable elements of a user for the Ezsignfolder
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+///
+/// @param pkiEzsignfolderID 
+/// @param eSignerType 
+/// @param fkiEzsignsignerID  (optional)
+/// @param fkiUserID  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsignfolderGetActionableElementsForSignerV1Response*
+-(NSURLSessionTask*) ezsignfolderGetActionableElementsForSignerV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    eSignerType: (NSString*) eSignerType
+    fkiEzsignsignerID: (NSNumber*) fkiEzsignsignerID
+    fkiUserID: (NSNumber*) fkiUserID
+    completionHandler: (void (^)(EzsignfolderGetActionableElementsForSignerV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve actionable elements for the Ezsignfolder

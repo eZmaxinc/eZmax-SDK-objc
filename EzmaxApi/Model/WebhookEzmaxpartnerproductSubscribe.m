@@ -1,6 +1,6 @@
-#import "UserImpersonateV1Request.h"
+#import "WebhookEzmaxpartnerproductSubscribe.h"
 
-@implementation UserImpersonateV1Request
+@implementation WebhookEzmaxpartnerproductSubscribe
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iExpirationMinutes": @"iExpirationMinutes" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objWebhook": @"objWebhook", @"aObjAttempt": @"a_objAttempt", @"objEzmaxpartnerproduct": @"objEzmaxpartnerproduct", @"sExternalID": @"sExternalID", @"sApikeyApikey": @"sApikeyApikey", @"sApikeySecret": @"sApikeySecret" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"sExternalID", @"sApikeyApikey", @"sApikeySecret"];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -19,6 +19,7 @@
 #import "EzsignfolderEditObjectV3Request.h"
 #import "EzsignfolderEditObjectV3Response.h"
 #import "EzsignfolderEndPrematurelyV1Response.h"
+#import "EzsignfolderGetActionableElementsForSignerV1Response.h"
 #import "EzsignfolderGetActionableElementsV1Response.h"
 #import "EzsignfolderGetActionableElementsV2Response.h"
 #import "EzsignfolderGetActionableElementsV3Response.h"
@@ -929,6 +930,103 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignfolderEndPrematurelyV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve actionable elements of a user for the Ezsignfolder
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+///  @param pkiEzsignfolderID  
+///
+///  @param eSignerType  
+///
+///  @param fkiEzsignsignerID  (optional)
+///
+///  @param fkiUserID  (optional)
+///
+///  @returns EzsignfolderGetActionableElementsForSignerV1Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetActionableElementsForSignerV1WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    eSignerType: (NSString*) eSignerType
+    fkiEzsignsignerID: (NSNumber*) fkiEzsignsignerID
+    fkiUserID: (NSNumber*) fkiUserID
+    completionHandler: (void (^)(EzsignfolderGetActionableElementsForSignerV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfolderApiErrorDomain code:kObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'eSignerType' is set
+    if (eSignerType == nil) {
+        NSParameterAssert(eSignerType);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"eSignerType"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfolderApiErrorDomain code:kObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if (eSignerType != nil) {
+        queryParams[@"eSignerType"] = eSignerType;
+    }
+    if (fkiEzsignsignerID != nil) {
+        queryParams[@"fkiEzsignsignerID"] = fkiEzsignsignerID;
+    }
+    if (fkiUserID != nil) {
+        queryParams[@"fkiUserID"] = fkiUserID;
+    }
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfolderGetActionableElementsForSignerV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfolderGetActionableElementsForSignerV1Response*)data, error);
                                 }
                             }];
 }

@@ -41,6 +41,7 @@
 #import "EzsigndocumentExtractTextV1Request.h"
 #import "EzsigndocumentExtractTextV1Response.h"
 #import "EzsigndocumentFlattenV1Response.h"
+#import "EzsigndocumentGetActionableElementsForSignerV1Response.h"
 #import "EzsigndocumentGetActionableElementsV1Response.h"
 #import "EzsigndocumentGetActionableElementsV2Response.h"
 #import "EzsigndocumentGetActionableElementsV3Response.h"
@@ -416,6 +417,26 @@ extern NSInteger kObjectEzsigndocumentApiMissingParamErrorCode;
 -(NSURLSessionTask*) ezsigndocumentFlattenV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
     body: (NSObject*) body
     completionHandler: (void (^)(EzsigndocumentFlattenV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve actionable elements of a user for the Ezsigndocument
+/// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+///
+/// @param pkiEzsigndocumentID 
+/// @param eSignerType 
+/// @param fkiEzsignsignerID  (optional)
+/// @param fkiUserID  (optional)
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///
+/// @return EzsigndocumentGetActionableElementsForSignerV1Response*
+-(NSURLSessionTask*) ezsigndocumentGetActionableElementsForSignerV1WithPkiEzsigndocumentID: (NSNumber*) pkiEzsigndocumentID
+    eSignerType: (NSString*) eSignerType
+    fkiEzsignsignerID: (NSNumber*) fkiEzsignsignerID
+    fkiUserID: (NSNumber*) fkiUserID
+    completionHandler: (void (^)(EzsigndocumentGetActionableElementsForSignerV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve actionable elements for the Ezsigndocument

@@ -1,6 +1,6 @@
-#import "UserImpersonateV1Request.h"
+#import "EzsignfolderGetActionableElementsForSignerV1Response.h"
 
-@implementation UserImpersonateV1Request
+@implementation EzsignfolderGetActionableElementsForSignerV1Response
 
 - (instancetype)init {
   self = [super init];
@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"iExpirationMinutes": @"iExpirationMinutes" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"objDebugPayload": @"objDebugPayload", @"objDebug": @"objDebug", @"mPayload": @"mPayload" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[];
+  NSArray *optionalProperties = @[@"objDebug", ];
   return [optionalProperties containsObject:propertyName];
 }
 

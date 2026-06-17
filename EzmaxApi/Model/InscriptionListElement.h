@@ -34,6 +34,12 @@
 /* The unique ID of the Inscriptiontype 
  */
 @property(nonatomic) NSNumber* fkiInscriptiontypeID;
+/* The unique ID of the Buyercontract [optional]
+ */
+@property(nonatomic) NSNumber* fkiBuyercontractID;
+/* The number of the Buyercontract [optional]
+ */
+@property(nonatomic) NSString* sBuyercontractContract;
 /* The name of the Inscriptiontype in the language of the requester 
  */
 @property(nonatomic) NSString* sInscriptiontypeNameX;
@@ -45,6 +51,9 @@
 /* The mls of the Inscription [optional]
  */
 @property(nonatomic) NSString* sInscriptionMLS;
+/* The sale contract number [optional]
+ */
+@property(nonatomic) NSString* sInscriptionContract;
 /* The saleprice of the Inscription 
  */
 @property(nonatomic) NSString* dInscriptionSaleprice;
