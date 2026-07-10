@@ -9,7 +9,9 @@ Method | HTTP request | Description
 [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationlistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
 [**inscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationrecipientsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient
 [**inscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationsendersv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender
+[**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list
 [**inscriptionGetListV1**](ObjectInscriptionApi.md#inscriptiongetlistv1) | **GET** /1/object/inscription/getList | Retrieve Inscription list
+[**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
 
@@ -299,6 +301,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **inscriptionGetInscriptionnotauthenticatedsV1**
+```objc
+-(NSURLSessionTask*) inscriptionGetInscriptionnotauthenticatedsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+        completionHandler: (void (^)(InscriptionGetInscriptionnotauthenticatedsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Inscriptionnotauthenticated list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInscriptionID = @56; // 
+
+ObjectInscriptionApi*apiInstance = [[ObjectInscriptionApi alloc] init];
+
+// Retrieve Inscriptionnotauthenticated list
+[apiInstance inscriptionGetInscriptionnotauthenticatedsV1WithPkiInscriptionID:pkiInscriptionID
+          completionHandler: ^(InscriptionGetInscriptionnotauthenticatedsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptionApi->inscriptionGetInscriptionnotauthenticatedsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **NSNumber***|  | 
+
+### Return type
+
+[**InscriptionGetInscriptionnotauthenticatedsV1Response***](InscriptionGetInscriptionnotauthenticatedsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **inscriptionGetListV1**
 ```objc
 -(NSURLSessionTask*) inscriptionGetListV1WithEOrderBy: (NSString*) eOrderBy
@@ -369,6 +426,63 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptionGetObjectV2**
+```objc
+-(NSURLSessionTask*) inscriptionGetObjectV2WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+        completionHandler: (void (^)(InscriptionGetObjectV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Inscription
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInscriptionID = @56; // The unique ID of the Inscription
+
+ObjectInscriptionApi*apiInstance = [[ObjectInscriptionApi alloc] init];
+
+// Retrieve an existing Inscription
+[apiInstance inscriptionGetObjectV2WithPkiInscriptionID:pkiInscriptionID
+          completionHandler: ^(InscriptionGetObjectV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptionApi->inscriptionGetObjectV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **NSNumber***| The unique ID of the Inscription | 
+
+### Return type
+
+[**InscriptionGetObjectV2Response***](InscriptionGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

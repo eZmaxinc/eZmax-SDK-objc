@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **dtInscriptionnotauthenticatedTransactiondateReal** | **NSString*** | The transactiondatereal of the Inscriptionnotauthenticated | [optional] 
 **bInscriptionnotauthenticatedConditional** | **NSNumber*** | Whether the inscriptionnotauthenticated is conditional | [optional] 
 **bInscriptionnotauthenticatedIsactive** | **NSNumber*** | Whether the inscriptionnotauthenticated is active or not | [optional] 
+**bInscriptionnotauthenticatedDraft** | **NSNumber*** | Whether the inscriptionnotauthenticated is a draft or not | [optional] 
 **sAddressCivic** | **NSString*** | The Civic number. | [optional] 
 **sAddressStreet** | **NSString*** | The Street Name | [optional] 
 **sAddressSuite** | **NSString*** | The Suite or appartment number | [optional] 

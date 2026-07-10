@@ -33,6 +33,7 @@
 #import "EzsignfolderGetEzsigndocumentsV1Response.h"
 #import "EzsignfolderGetEzsigndocumentsV2Response.h"
 #import "EzsignfolderGetEzsignfoldersignerassociationsV1Response.h"
+#import "EzsignfolderGetEzsignfoldersignerassociationsV2Response.h"
 #import "EzsignfolderGetEzsignformfieldgroupsV1Response.h"
 #import "EzsignfolderGetEzsignsignaturesAutomaticV1Response.h"
 #import "EzsignfolderGetEzsignsignaturesV1Response.h"
@@ -1911,6 +1912,74 @@ NSInteger kObjectEzsignfolderApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignfolderGetEzsignfoldersignerassociationsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+/// 
+///  @param pkiEzsignfolderID  
+///
+///  @returns EzsignfolderGetEzsignfoldersignerassociationsV2Response*
+///
+-(NSURLSessionTask*) ezsignfolderGetEzsignfoldersignerassociationsV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+    completionHandler: (void (^)(EzsignfolderGetEzsignfoldersignerassociationsV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfolderID' is set
+    if (pkiEzsignfolderID == nil) {
+        NSParameterAssert(pkiEzsignfolderID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfolderID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfolderApiErrorDomain code:kObjectEzsignfolderApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfolderID != nil) {
+        pathParams[@"pkiEzsignfolderID"] = pkiEzsignfolderID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfolderGetEzsignfoldersignerassociationsV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfolderGetEzsignfoldersignerassociationsV2Response*)data, error);
                                 }
                             }];
 }

@@ -10,13 +10,18 @@
 #import "EzsignfoldersignerassociationCreateObjectV1Response.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Request.h"
 #import "EzsignfoldersignerassociationCreateObjectV2Response.h"
+#import "EzsignfoldersignerassociationCreateObjectV3Request.h"
+#import "EzsignfoldersignerassociationCreateObjectV3Response.h"
 #import "EzsignfoldersignerassociationDeleteObjectV1Response.h"
 #import "EzsignfoldersignerassociationEditObjectV1Request.h"
 #import "EzsignfoldersignerassociationEditObjectV1Response.h"
+#import "EzsignfoldersignerassociationEditObjectV2Request.h"
+#import "EzsignfoldersignerassociationEditObjectV2Response.h"
 #import "EzsignfoldersignerassociationForceDisconnectV1Response.h"
 #import "EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV1Response.h"
 #import "EzsignfoldersignerassociationGetObjectV2Response.h"
+#import "EzsignfoldersignerassociationGetObjectV3Response.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Request.h"
 #import "EzsignfoldersignerassociationPatchObjectV1Response.h"
 #import "EzsignfoldersignerassociationReassignV1Request.h"
@@ -367,6 +372,72 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
 }
 
 ///
+/// Create a new Ezsignfoldersignerassociation
+/// The endpoint allows to create one or many elements at once.
+///  @param ezsignfoldersignerassociationCreateObjectV3Request  
+///
+///  @returns EzsignfoldersignerassociationCreateObjectV3Response*
+///
+-(NSURLSessionTask*) ezsignfoldersignerassociationCreateObjectV3WithEzsignfoldersignerassociationCreateObjectV3Request: (EzsignfoldersignerassociationCreateObjectV3Request*) ezsignfoldersignerassociationCreateObjectV3Request
+    completionHandler: (void (^)(EzsignfoldersignerassociationCreateObjectV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV3Request' is set
+    if (ezsignfoldersignerassociationCreateObjectV3Request == nil) {
+        NSParameterAssert(ezsignfoldersignerassociationCreateObjectV3Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldersignerassociationCreateObjectV3Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfoldersignerassociation"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignfoldersignerassociationCreateObjectV3Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfoldersignerassociationCreateObjectV3Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfoldersignerassociationCreateObjectV3Response*)data, error);
+                                }
+                            }];
+}
+
+///
 /// Delete an existing Ezsignfoldersignerassociation
 /// 
 ///  @param pkiEzsignfoldersignerassociationID  
@@ -513,6 +584,89 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignfoldersignerassociationEditObjectV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Edit an existing Ezsignfoldersignerassociation
+/// 
+///  @param pkiEzsignfoldersignerassociationID  
+///
+///  @param ezsignfoldersignerassociationEditObjectV2Request  
+///
+///  @returns EzsignfoldersignerassociationEditObjectV2Response*
+///
+-(NSURLSessionTask*) ezsignfoldersignerassociationEditObjectV2WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    ezsignfoldersignerassociationEditObjectV2Request: (EzsignfoldersignerassociationEditObjectV2Request*) ezsignfoldersignerassociationEditObjectV2Request
+    completionHandler: (void (^)(EzsignfoldersignerassociationEditObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == nil) {
+        NSParameterAssert(pkiEzsignfoldersignerassociationID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfoldersignerassociationID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'ezsignfoldersignerassociationEditObjectV2Request' is set
+    if (ezsignfoldersignerassociationEditObjectV2Request == nil) {
+        NSParameterAssert(ezsignfoldersignerassociationEditObjectV2Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezsignfoldersignerassociationEditObjectV2Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfoldersignerassociationID != nil) {
+        pathParams[@"pkiEzsignfoldersignerassociationID"] = pkiEzsignfoldersignerassociationID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = ezsignfoldersignerassociationEditObjectV2Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"PUT"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfoldersignerassociationEditObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfoldersignerassociationEditObjectV2Response*)data, error);
                                 }
                             }];
 }
@@ -800,6 +954,74 @@ NSInteger kObjectEzsignfoldersignerassociationApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((EzsignfoldersignerassociationGetObjectV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Ezsignfoldersignerassociation
+/// 
+///  @param pkiEzsignfoldersignerassociationID  
+///
+///  @returns EzsignfoldersignerassociationGetObjectV3Response*
+///
+-(NSURLSessionTask*) ezsignfoldersignerassociationGetObjectV3WithPkiEzsignfoldersignerassociationID: (NSNumber*) pkiEzsignfoldersignerassociationID
+    completionHandler: (void (^)(EzsignfoldersignerassociationGetObjectV3Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+    if (pkiEzsignfoldersignerassociationID == nil) {
+        NSParameterAssert(pkiEzsignfoldersignerassociationID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiEzsignfoldersignerassociationID"] };
+            NSError* error = [NSError errorWithDomain:kObjectEzsignfoldersignerassociationApiErrorDomain code:kObjectEzsignfoldersignerassociationApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiEzsignfoldersignerassociationID != nil) {
+        pathParams[@"pkiEzsignfoldersignerassociationID"] = pkiEzsignfoldersignerassociationID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"EzsignfoldersignerassociationGetObjectV3Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((EzsignfoldersignerassociationGetObjectV3Response*)data, error);
                                 }
                             }];
 }

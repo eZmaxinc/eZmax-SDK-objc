@@ -29,6 +29,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+[**ezsignfolderGetEzsignfoldersignerassociationsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 [**ezsignfolderGetEzsignformfieldgroupsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignformfieldgroupsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups | Retrieve an existing Ezsignfolder&#39;s Ezsignformfieldgroups
 [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
 [**ezsignfolderGetEzsignsignaturesV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures | Retrieve an existing Ezsignfolder&#39;s Ezsignsignatures
@@ -1492,6 +1493,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetEzsignfoldersignerassociationsV1Response***](EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetEzsignfoldersignerassociationsV2**
+```objc
+-(NSURLSessionTask*) ezsignfolderGetEzsignfoldersignerassociationsV2WithPkiEzsignfolderID: (NSNumber*) pkiEzsignfolderID
+        completionHandler: (void (^)(EzsignfolderGetEzsignfoldersignerassociationsV2Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignfolderID = @56; // 
+
+ObjectEzsignfolderApi*apiInstance = [[ObjectEzsignfolderApi alloc] init];
+
+// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+[apiInstance ezsignfolderGetEzsignfoldersignerassociationsV2WithPkiEzsignfolderID:pkiEzsignfolderID
+          completionHandler: ^(EzsignfolderGetEzsignfoldersignerassociationsV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignfolderApi->ezsignfolderGetEzsignfoldersignerassociationsV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignfolderGetEzsignfoldersignerassociationsV2Response***](EzsignfolderGetEzsignfoldersignerassociationsV2Response.md)
 
 ### Authorization
 

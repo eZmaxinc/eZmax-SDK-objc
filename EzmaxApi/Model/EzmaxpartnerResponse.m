@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzmaxpartnerCustomdevelopment": @"eEzmaxpartnerCustomdevelopment", @"objEzmaxpartnerAddress": @"objEzmaxpartnerAddress", @"objEzmaxpartnerDescription": @"objEzmaxpartnerDescription", @"objEzmaxpartnerEmailaddress": @"objEzmaxpartnerEmailaddress", @"objEzmaxpartnerName": @"objEzmaxpartnerName", @"objEzmaxpartnerPhoneE164": @"objEzmaxpartnerPhoneE164", @"objEzmaxpartnerShortdescription": @"objEzmaxpartnerShortdescription", @"objEzmaxpartnerUrl": @"objEzmaxpartnerUrl", @"bEzmaxpartnerIsactive": @"bEzmaxpartnerIsactive" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eEzmaxpartnerCustomdevelopment": @"eEzmaxpartnerCustomdevelopment", @"objEzmaxpartnerAddress": @"objEzmaxpartnerAddress", @"objEzmaxpartnerDescription": @"objEzmaxpartnerDescription", @"objEzmaxpartnerEmailaddress": @"objEzmaxpartnerEmailaddress", @"objEzmaxpartnerName": @"objEzmaxpartnerName", @"objEzmaxpartnerPhoneE164": @"objEzmaxpartnerPhoneE164", @"objEzmaxpartnerShortdescription": @"objEzmaxpartnerShortdescription", @"objEzmaxpartnerUrl": @"objEzmaxpartnerUrl", @"bEzmaxpartnerIsactive": @"bEzmaxpartnerIsactive", @"objEzmaxpartnerLogourl": @"objEzmaxpartnerLogourl" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"bEzmaxpartnerIsactive"];
+  NSArray *optionalProperties = @[@"bEzmaxpartnerIsactive", ];
   return [optionalProperties containsObject:propertyName];
 }
 

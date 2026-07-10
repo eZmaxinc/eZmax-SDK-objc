@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiWebhookID": @"pkiWebhookID", @"fkiAuthenticationexternalID": @"fkiAuthenticationexternalID", @"sWebhookDescription": @"sWebhookDescription", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"eWebhookModule": @"eWebhookModule", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"eWebhookManagementevent": @"eWebhookManagementevent", @"sWebhookUrl": @"sWebhookUrl", @"sWebhookEmailfailed": @"sWebhookEmailfailed", @"sWebhookApikey": @"sWebhookApikey", @"sWebhookSecret": @"sWebhookSecret", @"bWebhookIsactive": @"bWebhookIsactive", @"bWebhookIssigned": @"bWebhookIssigned", @"bWebhookSkipsslvalidation": @"bWebhookSkipsslvalidation", @"sAuthenticationexternalDescription": @"sAuthenticationexternalDescription", @"objAudit": @"objAudit" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiWebhookID": @"pkiWebhookID", @"fkiAuthenticationexternalID": @"fkiAuthenticationexternalID", @"sWebhookDescription": @"sWebhookDescription", @"fkiEzsignfoldertypeID": @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX": @"sEzsignfoldertypeNameX", @"eWebhookModule": @"eWebhookModule", @"eWebhookEzmaxpartnerevent": @"eWebhookEzmaxpartnerevent", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"eWebhookManagementevent": @"eWebhookManagementevent", @"sWebhookUrl": @"sWebhookUrl", @"sWebhookEmailfailed": @"sWebhookEmailfailed", @"sWebhookApikey": @"sWebhookApikey", @"sWebhookSecret": @"sWebhookSecret", @"bWebhookIsactive": @"bWebhookIsactive", @"bWebhookIssigned": @"bWebhookIssigned", @"bWebhookSkipsslvalidation": @"bWebhookSkipsslvalidation", @"sAuthenticationexternalDescription": @"sAuthenticationexternalDescription", @"objAudit": @"objAudit" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pkiWebhookID", @"fkiAuthenticationexternalID", @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX", @"eWebhookEzsignevent", @"eWebhookManagementevent", @"sWebhookApikey", @"sWebhookSecret", @"sAuthenticationexternalDescription", @"objAudit"];
+  NSArray *optionalProperties = @[@"pkiWebhookID", @"fkiAuthenticationexternalID", @"fkiEzsignfoldertypeID", @"sEzsignfoldertypeNameX", @"eWebhookEzmaxpartnerevent", @"eWebhookEzsignevent", @"eWebhookManagementevent", @"sWebhookApikey", @"sWebhookSecret", @"sAuthenticationexternalDescription", @"objAudit"];
   return [optionalProperties containsObject:propertyName];
 }
 

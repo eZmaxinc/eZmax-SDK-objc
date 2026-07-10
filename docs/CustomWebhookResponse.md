@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **NSNumber*** | The unique ID of the Ezsignfoldertype. | [optional] 
 **sEzsignfoldertypeNameX** | **NSString*** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
 **eWebhookModule** | [**FieldEWebhookModule***](FieldEWebhookModule.md) |  | 
+**eWebhookEzmaxpartnerevent** | [**FieldEWebhookEzmaxpartnerevent***](FieldEWebhookEzmaxpartnerevent.md) |  | [optional] 
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent***](FieldEWebhookEzsignevent.md) |  | [optional] 
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent***](FieldEWebhookManagementevent.md) |  | [optional] 
 **sWebhookUrl** | **NSString*** | The URL of the Webhook callback | 

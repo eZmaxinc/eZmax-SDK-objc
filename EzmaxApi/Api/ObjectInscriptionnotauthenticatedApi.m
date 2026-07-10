@@ -11,6 +11,7 @@
 #import "InscriptionnotauthenticatedGetCommunicationsendersV1Response.h"
 #import "InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.h"
 #import "InscriptionnotauthenticatedGetListV1Response.h"
+#import "InscriptionnotauthenticatedGetObjectV2Response.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Request.h"
 #import "InscriptionnotauthenticatedImportIntoEDMV1Response.h"
 
@@ -560,6 +561,74 @@ NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((InscriptionnotauthenticatedGetListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve an existing Inscriptionnotauthenticated
+/// 
+///  @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated 
+///
+///  @returns InscriptionnotauthenticatedGetObjectV2Response*
+///
+-(NSURLSessionTask*) inscriptionnotauthenticatedGetObjectV2WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    completionHandler: (void (^)(InscriptionnotauthenticatedGetObjectV2Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+    if (pkiInscriptionnotauthenticatedID == nil) {
+        NSParameterAssert(pkiInscriptionnotauthenticatedID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptionnotauthenticatedID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptionnotauthenticatedApiErrorDomain code:kObjectInscriptionnotauthenticatedApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptionnotauthenticatedID != nil) {
+        pathParams[@"pkiInscriptionnotauthenticatedID"] = pkiInscriptionnotauthenticatedID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptionnotauthenticatedGetObjectV2Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptionnotauthenticatedGetObjectV2Response*)data, error);
                                 }
                             }];
 }
