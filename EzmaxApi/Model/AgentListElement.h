@@ -14,6 +14,9 @@
 */
 
 
+#import "FieldEAgentSchedule.h"
+@protocol FieldEAgentSchedule;
+@class FieldEAgentSchedule;
 
 
 
@@ -88,6 +91,8 @@
 /* The sick leave end date of the Agent [optional]
  */
 @property(nonatomic) NSString* dtAgentSickleaveend;
+
+@property(nonatomic) FieldEAgentSchedule* eAgentSchedule;
 /* Whether if it's an tranquillit 
  */
 @property(nonatomic) NSNumber* bAgentTranquillit;

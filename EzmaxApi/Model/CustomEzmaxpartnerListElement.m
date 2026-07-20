@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxpartnerID": @"pkiEzmaxpartnerID", @"sEzmaxpartnerAddressX": @"sEzmaxpartnerAddressX", @"sEzmaxpartnerEmailaddressX": @"sEzmaxpartnerEmailaddressX", @"sEzmaxpartnerShortdescriptionX": @"sEzmaxpartnerShortdescriptionX", @"sEzmaxpartnerNameX": @"sEzmaxpartnerNameX", @"sEzmaxpartnerPhoneE164X": @"sEzmaxpartnerPhoneE164X", @"sEzmaxpartnerUrlX": @"sEzmaxpartnerUrlX" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"pkiEzmaxpartnerID": @"pkiEzmaxpartnerID", @"sEzmaxpartnerAddressX": @"sEzmaxpartnerAddressX", @"sEzmaxpartnerEmailaddressX": @"sEzmaxpartnerEmailaddressX", @"sEzmaxpartnerShortdescriptionX": @"sEzmaxpartnerShortdescriptionX", @"sEzmaxpartnerNameX": @"sEzmaxpartnerNameX", @"sEzmaxpartnerPhoneE164X": @"sEzmaxpartnerPhoneE164X", @"sEzmaxpartnerUrlX": @"sEzmaxpartnerUrlX", @"objEzmaxpartnerLogourl": @"objEzmaxpartnerLogourl" }];
 }
 
 /**

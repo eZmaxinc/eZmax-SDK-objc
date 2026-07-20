@@ -1,15 +1,15 @@
-# DocumentationEzmaxpartnerApi
+# ExternalEzmaxpartnerApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**documentationSubscribeV1**](DocumentationEzmaxpartnerApi.md#documentationsubscribev1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage
+[**externalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 
 
-# **documentationSubscribeV1**
+# **externalpartnerSubscribeV1**
 ```objc
--(NSURLSessionTask*) documentationSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
+-(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
         completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler;
 ```
 
@@ -29,16 +29,16 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 
 DocumentationSubscribeV1Request* documentationSubscribeV1Request = [[DocumentationSubscribeV1Request alloc] init]; // 
 
-DocumentationEzmaxpartnerApi*apiInstance = [[DocumentationEzmaxpartnerApi alloc] init];
+ExternalEzmaxpartnerApi*apiInstance = [[ExternalEzmaxpartnerApi alloc] init];
 
 // Subscribe to an Ezmaxparnerproductstage
-[apiInstance documentationSubscribeV1WithDocumentationSubscribeV1Request:documentationSubscribeV1Request
+[apiInstance externalpartnerSubscribeV1WithDocumentationSubscribeV1Request:documentationSubscribeV1Request
           completionHandler: ^(DocumentationSubscribeV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling DocumentationEzmaxpartnerApi->documentationSubscribeV1: %@", error);
+                            NSLog(@"Error calling ExternalEzmaxpartnerApi->externalpartnerSubscribeV1: %@", error);
                         }
                     }];
 ```

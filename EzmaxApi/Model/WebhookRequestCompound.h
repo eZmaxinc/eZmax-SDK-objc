@@ -17,6 +17,7 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "FieldEWebhookRealestateevent.h"
 #import "WebhookheaderRequestCompound.h"
 @protocol FieldEWebhookEzsignevent;
 @class FieldEWebhookEzsignevent;
@@ -24,6 +25,8 @@
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol FieldEWebhookRealestateevent;
+@class FieldEWebhookRealestateevent;
 @protocol WebhookheaderRequestCompound;
 @class WebhookheaderRequestCompound;
 
@@ -52,6 +55,8 @@
 @property(nonatomic) FieldEWebhookEzsignevent* eWebhookEzsignevent;
 
 @property(nonatomic) FieldEWebhookManagementevent* eWebhookManagementevent;
+
+@property(nonatomic) FieldEWebhookRealestateevent* eWebhookRealestateevent;
 /* The URL of the Webhook callback 
  */
 @property(nonatomic) NSString* sWebhookUrl;

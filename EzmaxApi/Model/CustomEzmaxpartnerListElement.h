@@ -14,6 +14,9 @@
 */
 
 
+#import "MultilingualEzmaxpartnerLogourl.h"
+@protocol MultilingualEzmaxpartnerLogourl;
+@class MultilingualEzmaxpartnerLogourl;
 
 
 
@@ -43,5 +46,7 @@
 /* The url of the Ezmaxpartner website in the language of the requester 
  */
 @property(nonatomic) NSString* sEzmaxpartnerUrlX;
+
+@property(nonatomic) MultilingualEzmaxpartnerLogourl* objEzmaxpartnerLogourl;
 
 @end

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **eWebhookEzmaxpartnerevent** | [**FieldEWebhookEzmaxpartnerevent***](FieldEWebhookEzmaxpartnerevent.md) |  | [optional] 
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent***](FieldEWebhookEzsignevent.md) |  | [optional] 
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent***](FieldEWebhookManagementevent.md) |  | [optional] 
+**eWebhookRealestateevent** | [**FieldEWebhookRealestateevent***](FieldEWebhookRealestateevent.md) |  | [optional] 
 **sWebhookUrl** | **NSString*** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **NSString*** | The email that will receive the Webhook in case all attempts fail | 
 **sWebhookApikey** | **NSString*** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 

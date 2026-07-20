@@ -6,10 +6,15 @@ Name | Type | Description | Notes
 **pkiInscriptionID** | **NSNumber*** | The unique ID of the Inscription. | 
 **pkiInscriptionnotauthenticatedID** | **NSNumber*** | The unique ID of the Inscriptionnotauthenticated. | [optional] 
 **fkiInscriptiontypeID** | **NSNumber*** | The unique ID of the Inscriptiontype | 
+**sInscriptiontypeNameX** | **NSString*** | The name of the Inscriptiontype in the language of the requester | 
+**fkiInscriptionbuildingtypeID** | **NSNumber*** | The unique ID of the Inscriptionbuildingtype | 
+**sInscriptionbuildingtypeNameX** | **NSString*** | The name of the Inscriptionbuildingtype in the language of the requester | 
+**fkiInscriptioncategoryID** | **NSNumber*** | The unique ID of the Inscriptioncategory | 
+**sInscriptioncategoryNameX** | **NSString*** | The name of the Inscriptioncategory in the language of the requester | 
 **fkiBuyercontractID** | **NSNumber*** | The unique ID of the Buyercontract | [optional] 
 **sBuyercontractContract** | **NSString*** | The number of the Buyercontract | [optional] 
-**sInscriptiontypeNameX** | **NSString*** | The name of the Inscriptiontype in the language of the requester | 
 **eInscriptionStep** | [**FieldEInscriptionStep***](FieldEInscriptionStep.md) |  | 
+**eInscriptionType** | [**FieldEInscriptionType***](FieldEInscriptionType.md) |  | 
 **sInscriptionCivicend** | **NSString*** | The civicend of the Inscription | 
 **sInscriptionMLS** | **NSString*** | The mls of the Inscription | [optional] 
 **sInscriptionContract** | **NSString*** | The sale contract number | [optional] 
@@ -36,6 +41,7 @@ Name | Type | Description | Notes
 **fkiCountryID** | **NSNumber*** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | [optional] 
 **sCountryNameX** | **NSString*** | The name of the Country in the language of the requester | [optional] 
 **iInscriptionnotauthenticatedCanceled** | **NSNumber*** | The numbre of inscriptionnotauthenticated was canceled in this Inscription | 
+**iInscriptionUnit** | **NSNumber*** | The unit of the Inscription | 
 **bAllowedCopyintoinscriptionedm** | **NSNumber*** | Whether we are allowed to copy into the Inscription EDM | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

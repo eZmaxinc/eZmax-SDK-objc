@@ -1,8 +1,8 @@
 .gitignore
 .openapi-generator-ignore
 EzmaxApi.podspec
-EzmaxApi/Api/DocumentationEzmaxpartnerApi.h
-EzmaxApi/Api/DocumentationEzmaxpartnerApi.m
+EzmaxApi/Api/ExternalEzmaxpartnerApi.h
+EzmaxApi/Api/ExternalEzmaxpartnerApi.m
 EzmaxApi/Api/GlobalCustomerApi.h
 EzmaxApi/Api/GlobalCustomerApi.m
 EzmaxApi/Api/GlobalEzmaxclientApi.h
@@ -2915,6 +2915,8 @@ EzmaxApi/Model/FieldEActivesessionUsertype.h
 EzmaxApi/Model/FieldEActivesessionUsertype.m
 EzmaxApi/Model/FieldEActivesessionWeekdaystart.h
 EzmaxApi/Model/FieldEActivesessionWeekdaystart.m
+EzmaxApi/Model/FieldEAgentSchedule.h
+EzmaxApi/Model/FieldEAgentSchedule.m
 EzmaxApi/Model/FieldEAttachmentDocumenttype.h
 EzmaxApi/Model/FieldEAttachmentDocumenttype.m
 EzmaxApi/Model/FieldEAttachmentPrivacy.h
@@ -3197,6 +3199,8 @@ EzmaxApi/Model/FieldEWebhookManagementevent.h
 EzmaxApi/Model/FieldEWebhookManagementevent.m
 EzmaxApi/Model/FieldEWebhookModule.h
 EzmaxApi/Model/FieldEWebhookModule.m
+EzmaxApi/Model/FieldEWebhookRealestateevent.h
+EzmaxApi/Model/FieldEWebhookRealestateevent.m
 EzmaxApi/Model/FieldEtInscriptionnotauthenticatedMortgagetype.h
 EzmaxApi/Model/FieldEtInscriptionnotauthenticatedMortgagetype.m
 EzmaxApi/Model/FieldPksEzmaxclientOs.h
@@ -3755,8 +3759,14 @@ EzmaxApi/Model/ScimServiceProviderConfigBulk.h
 EzmaxApi/Model/ScimServiceProviderConfigBulk.m
 EzmaxApi/Model/ScimServiceProviderConfigChangePassword.h
 EzmaxApi/Model/ScimServiceProviderConfigChangePassword.m
+EzmaxApi/Model/ScimServiceProviderConfigEtag.h
+EzmaxApi/Model/ScimServiceProviderConfigEtag.m
 EzmaxApi/Model/ScimServiceProviderConfigFilter.h
 EzmaxApi/Model/ScimServiceProviderConfigFilter.m
+EzmaxApi/Model/ScimServiceProviderConfigPatch.h
+EzmaxApi/Model/ScimServiceProviderConfigPatch.m
+EzmaxApi/Model/ScimServiceProviderConfigSort.h
+EzmaxApi/Model/ScimServiceProviderConfigSort.m
 EzmaxApi/Model/ScimUser.h
 EzmaxApi/Model/ScimUser.m
 EzmaxApi/Model/ScimUserList.h
@@ -4323,6 +4333,14 @@ EzmaxApi/Model/WebhookGetObjectV2ResponseMPayload.h
 EzmaxApi/Model/WebhookGetObjectV2ResponseMPayload.m
 EzmaxApi/Model/WebhookListElement.h
 EzmaxApi/Model/WebhookListElement.m
+EzmaxApi/Model/WebhookRealestateInscriptionCreated.h
+EzmaxApi/Model/WebhookRealestateInscriptionCreated.m
+EzmaxApi/Model/WebhookRealestateInscriptionModified.h
+EzmaxApi/Model/WebhookRealestateInscriptionModified.m
+EzmaxApi/Model/WebhookRealestateInscriptionnotauthenticatedCreated.h
+EzmaxApi/Model/WebhookRealestateInscriptionnotauthenticatedCreated.m
+EzmaxApi/Model/WebhookRealestateInscriptionnotauthenticatedModified.h
+EzmaxApi/Model/WebhookRealestateInscriptionnotauthenticatedModified.m
 EzmaxApi/Model/WebhookRegenerateApikeyV1Request.h
 EzmaxApi/Model/WebhookRegenerateApikeyV1Request.m
 EzmaxApi/Model/WebhookRegenerateApikeyV1Response.h
@@ -4795,7 +4813,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationEzmaxpartnerApi.md
 docs/DocumentationSubscribeV1Request.md
 docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
@@ -4844,6 +4861,7 @@ docs/EnumHorizontalalignment.md
 docs/EnumReportdataType.md
 docs/EnumTextvalidation.md
 docs/EnumVerticalalignment.md
+docs/ExternalEzmaxpartnerApi.md
 docs/ExternalbrokerImportIntoEDMV1Request.md
 docs/ExternalbrokerImportIntoEDMV1Response.md
 docs/ExternalbrokerImportIntoEDMV1ResponseMPayload.md
@@ -5685,6 +5703,7 @@ docs/FieldEActivesessionOrigin.md
 docs/FieldEActivesessionRealestateinprogress.md
 docs/FieldEActivesessionUsertype.md
 docs/FieldEActivesessionWeekdaystart.md
+docs/FieldEAgentSchedule.md
 docs/FieldEAttachmentDocumenttype.md
 docs/FieldEAttachmentPrivacy.md
 docs/FieldEAttachmentType.md
@@ -5826,6 +5845,7 @@ docs/FieldEWebhookEzmaxpartnerevent.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
+docs/FieldEWebhookRealestateevent.md
 docs/FieldEtInscriptionnotauthenticatedMortgagetype.md
 docs/FieldPksEzmaxclientOs.md
 docs/FontAutocompleteElementResponse.md
@@ -6243,7 +6263,10 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
+docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
+docs/ScimServiceProviderConfigPatch.md
+docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -6528,6 +6551,10 @@ docs/WebhookGetListV1ResponseMPayload.md
 docs/WebhookGetObjectV2Response.md
 docs/WebhookGetObjectV2ResponseMPayload.md
 docs/WebhookListElement.md
+docs/WebhookRealestateInscriptionCreated.md
+docs/WebhookRealestateInscriptionModified.md
+docs/WebhookRealestateInscriptionnotauthenticatedCreated.md
+docs/WebhookRealestateInscriptionnotauthenticatedModified.md
 docs/WebhookRegenerateApikeyV1Request.md
 docs/WebhookRegenerateApikeyV1Response.md
 docs/WebhookRegenerateApikeyV1ResponseMPayload.md

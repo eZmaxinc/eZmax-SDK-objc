@@ -17,10 +17,10 @@
 
 
 
-@interface DocumentationEzmaxpartnerApi: NSObject <Api>
+@interface ExternalEzmaxpartnerApi: NSObject <Api>
 
-extern NSString* kDocumentationEzmaxpartnerApiErrorDomain;
-extern NSInteger kDocumentationEzmaxpartnerApiMissingParamErrorCode;
+extern NSString* kExternalEzmaxpartnerApiErrorDomain;
+extern NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
@@ -32,7 +32,7 @@ extern NSInteger kDocumentationEzmaxpartnerApiMissingParamErrorCode;
 ///  code:200 message:"Successful response"
 ///
 /// @return DocumentationSubscribeV1Response*
--(NSURLSessionTask*) documentationSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
+-(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
     completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler;
 
 

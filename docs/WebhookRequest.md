@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **eWebhookModule** | [**FieldEWebhookModule***](FieldEWebhookModule.md) |  | 
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent***](FieldEWebhookEzsignevent.md) |  | [optional] 
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent***](FieldEWebhookManagementevent.md) |  | [optional] 
+**eWebhookRealestateevent** | [**FieldEWebhookRealestateevent***](FieldEWebhookRealestateevent.md) |  | [optional] 
 **sWebhookUrl** | **NSString*** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **NSString*** | The email that will receive the Webhook in case all attempts fail | 
 **bWebhookIsactive** | **NSNumber*** | Whether the Webhook is active or not | 

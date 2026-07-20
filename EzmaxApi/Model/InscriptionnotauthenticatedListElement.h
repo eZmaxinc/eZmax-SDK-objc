@@ -15,8 +15,11 @@
 
 
 #import "FieldEInscriptionStep.h"
+#import "FieldEInscriptionType.h"
 @protocol FieldEInscriptionStep;
 @class FieldEInscriptionStep;
+@protocol FieldEInscriptionType;
+@class FieldEInscriptionType;
 
 
 
@@ -34,17 +37,31 @@
 /* The unique ID of the Inscriptiontype 
  */
 @property(nonatomic) NSNumber* fkiInscriptiontypeID;
+/* The name of the Inscriptiontype in the language of the requester 
+ */
+@property(nonatomic) NSString* sInscriptiontypeNameX;
+/* The unique ID of the Inscriptionbuildingtype 
+ */
+@property(nonatomic) NSNumber* fkiInscriptionbuildingtypeID;
+/* The name of the Inscriptionbuildingtype in the language of the requester 
+ */
+@property(nonatomic) NSString* sInscriptionbuildingtypeNameX;
+/* The unique ID of the Inscriptioncategory 
+ */
+@property(nonatomic) NSNumber* fkiInscriptioncategoryID;
+/* The name of the Inscriptioncategory in the language of the requester 
+ */
+@property(nonatomic) NSString* sInscriptioncategoryNameX;
 /* The unique ID of the Buyercontract [optional]
  */
 @property(nonatomic) NSNumber* fkiBuyercontractID;
 /* The number of the Buyercontract [optional]
  */
 @property(nonatomic) NSString* sBuyercontractContract;
-/* The name of the Inscriptiontype in the language of the requester 
- */
-@property(nonatomic) NSString* sInscriptiontypeNameX;
 
 @property(nonatomic) FieldEInscriptionStep* eInscriptionStep;
+
+@property(nonatomic) FieldEInscriptionType* eInscriptionType;
 /* The civicend of the Inscription 
  */
 @property(nonatomic) NSString* sInscriptionCivicend;
@@ -126,5 +143,8 @@
 /* The Offer to purchase number 
  */
 @property(nonatomic) NSString* sInscriptionnotauthenticatedOffertopurchasenumber;
+/* The unit of the Inscription 
+ */
+@property(nonatomic) NSNumber* iInscriptionUnit;
 
 @end

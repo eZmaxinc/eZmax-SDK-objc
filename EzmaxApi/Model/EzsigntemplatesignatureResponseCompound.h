@@ -85,6 +85,9 @@
 /* Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature. [optional]
  */
 @property(nonatomic) NSNumber* bEzsigntemplatesignatureReason;
+/* Whether we can enter a custom amount while signing an Ezsigntemplatesignature 'Creditcard' or not [optional]
+ */
+@property(nonatomic) NSNumber* bEzsigntemplatesignatureCreditcardcustomamount;
 
 @property(nonatomic) FieldEEzsigntemplatesignaturePositioning* eEzsigntemplatesignaturePositioning;
 /* The page number in the Ezsigntemplatedocument 

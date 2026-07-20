@@ -19,6 +19,7 @@
 #import "FieldEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "FieldEWebhookRealestateevent.h"
 #import "WebhookheaderResponseCompound.h"
 @protocol CommonAudit;
 @class CommonAudit;
@@ -30,6 +31,8 @@
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol FieldEWebhookRealestateevent;
+@class FieldEWebhookRealestateevent;
 @protocol WebhookheaderResponseCompound;
 @class WebhookheaderResponseCompound;
 
@@ -63,6 +66,8 @@
 @property(nonatomic) FieldEWebhookEzsignevent* eWebhookEzsignevent;
 
 @property(nonatomic) FieldEWebhookManagementevent* eWebhookManagementevent;
+
+@property(nonatomic) FieldEWebhookRealestateevent* eWebhookRealestateevent;
 /* The URL of the Webhook callback 
  */
 @property(nonatomic) NSString* sWebhookUrl;

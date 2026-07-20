@@ -17,12 +17,15 @@
 #import "CustomEWebhookEzsignevent.h"
 #import "FieldEWebhookManagementevent.h"
 #import "FieldEWebhookModule.h"
+#import "FieldEWebhookRealestateevent.h"
 @protocol CustomEWebhookEzsignevent;
 @class CustomEWebhookEzsignevent;
 @protocol FieldEWebhookManagementevent;
 @class FieldEWebhookManagementevent;
 @protocol FieldEWebhookModule;
 @class FieldEWebhookModule;
+@protocol FieldEWebhookRealestateevent;
+@class FieldEWebhookRealestateevent;
 
 
 
@@ -37,6 +40,8 @@
 @property(nonatomic) CustomEWebhookEzsignevent* eWebhookEzsignevent;
 
 @property(nonatomic) FieldEWebhookManagementevent* eWebhookManagementevent;
+
+@property(nonatomic) FieldEWebhookRealestateevent* eWebhookRealestateevent;
 /* The unique ID of the Ezsignfolder [optional]
  */
 @property(nonatomic) NSNumber* fkiEzsignfolderID;

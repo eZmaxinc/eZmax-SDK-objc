@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **dtAgentSenioritydate** | **NSString*** | The seniority date of the Agent | [optional] 
 **dtAgentSickleavestart** | **NSString*** | The sick leave start date of the Agent | [optional] 
 **dtAgentSickleaveend** | **NSString*** | The sick leave end date of the Agent | [optional] 
+**eAgentSchedule** | [**FieldEAgentSchedule***](FieldEAgentSchedule.md) |  | 
 **bAgentTranquillit** | **NSNumber*** | Whether if it&#39;s an tranquillit | 
 **bAgentResidentiallicense** | **NSNumber*** | Whether if it&#39;s an residentiallicense | 
 **bAgentCommerciallicense** | **NSNumber*** | Whether if it&#39;s an commerciallicense | 

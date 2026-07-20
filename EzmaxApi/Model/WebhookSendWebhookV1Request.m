@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eWebhookModule": @"eWebhookModule", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"eWebhookManagementevent": @"eWebhookManagementevent", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"fkiEzsignsignerID": @"fkiEzsignsignerID", @"fkiUserID": @"fkiUserID", @"fkiUserstagedID": @"fkiUserstagedID" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"eWebhookModule": @"eWebhookModule", @"eWebhookEzsignevent": @"eWebhookEzsignevent", @"eWebhookManagementevent": @"eWebhookManagementevent", @"eWebhookRealestateevent": @"eWebhookRealestateevent", @"fkiEzsignfolderID": @"fkiEzsignfolderID", @"fkiEzsigndocumentID": @"fkiEzsigndocumentID", @"fkiEzsignsignerID": @"fkiEzsignsignerID", @"fkiUserID": @"fkiUserID", @"fkiUserstagedID": @"fkiUserstagedID" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"eWebhookEzsignevent", @"eWebhookManagementevent", @"fkiEzsignfolderID", @"fkiEzsigndocumentID", @"fkiEzsignsignerID", @"fkiUserID", @"fkiUserstagedID"];
+  NSArray *optionalProperties = @[@"eWebhookEzsignevent", @"eWebhookManagementevent", @"eWebhookRealestateevent", @"fkiEzsignfolderID", @"fkiEzsigndocumentID", @"fkiEzsignsignerID", @"fkiUserID", @"fkiUserstagedID"];
   return [optionalProperties containsObject:propertyName];
 }
 

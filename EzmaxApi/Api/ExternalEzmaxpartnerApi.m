@@ -1,20 +1,20 @@
-#import "DocumentationEzmaxpartnerApi.h"
+#import "ExternalEzmaxpartnerApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "DocumentationSubscribeV1Request.h"
 #import "DocumentationSubscribeV1Response.h"
 
 
-@interface DocumentationEzmaxpartnerApi ()
+@interface ExternalEzmaxpartnerApi ()
 
 @property (nonatomic, strong, readwrite) NSMutableDictionary *mutableDefaultHeaders;
 
 @end
 
-@implementation DocumentationEzmaxpartnerApi
+@implementation ExternalEzmaxpartnerApi
 
-NSString* kDocumentationEzmaxpartnerApiErrorDomain = @"DocumentationEzmaxpartnerApiErrorDomain";
-NSInteger kDocumentationEzmaxpartnerApiMissingParamErrorCode = 234513;
+NSString* kExternalEzmaxpartnerApiErrorDomain = @"ExternalEzmaxpartnerApiErrorDomain";
+NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode = 234513;
 
 @synthesize apiClient = _apiClient;
 
@@ -57,20 +57,20 @@ NSInteger kDocumentationEzmaxpartnerApiMissingParamErrorCode = 234513;
 ///
 ///  @returns DocumentationSubscribeV1Response*
 ///
--(NSURLSessionTask*) documentationSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
+-(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
     completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler {
     // verify the required parameter 'documentationSubscribeV1Request' is set
     if (documentationSubscribeV1Request == nil) {
         NSParameterAssert(documentationSubscribeV1Request);
         if(handler) {
             NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"documentationSubscribeV1Request"] };
-            NSError* error = [NSError errorWithDomain:kDocumentationEzmaxpartnerApiErrorDomain code:kDocumentationEzmaxpartnerApiMissingParamErrorCode userInfo:userInfo];
+            NSError* error = [NSError errorWithDomain:kExternalEzmaxpartnerApiErrorDomain code:kExternalEzmaxpartnerApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
         return nil;
     }
 
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/documentation/subscribe"];
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/external/ezmaxpartner/subscribe"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
 

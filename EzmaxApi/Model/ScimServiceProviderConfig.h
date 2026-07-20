@@ -17,15 +17,24 @@
 #import "ScimAuthenticationScheme.h"
 #import "ScimServiceProviderConfigBulk.h"
 #import "ScimServiceProviderConfigChangePassword.h"
+#import "ScimServiceProviderConfigEtag.h"
 #import "ScimServiceProviderConfigFilter.h"
+#import "ScimServiceProviderConfigPatch.h"
+#import "ScimServiceProviderConfigSort.h"
 @protocol ScimAuthenticationScheme;
 @class ScimAuthenticationScheme;
 @protocol ScimServiceProviderConfigBulk;
 @class ScimServiceProviderConfigBulk;
 @protocol ScimServiceProviderConfigChangePassword;
 @class ScimServiceProviderConfigChangePassword;
+@protocol ScimServiceProviderConfigEtag;
+@class ScimServiceProviderConfigEtag;
 @protocol ScimServiceProviderConfigFilter;
 @class ScimServiceProviderConfigFilter;
+@protocol ScimServiceProviderConfigPatch;
+@class ScimServiceProviderConfigPatch;
+@protocol ScimServiceProviderConfigSort;
+@class ScimServiceProviderConfigSort;
 
 
 
@@ -45,12 +54,12 @@
  */
 @property(nonatomic) NSString* documentationUri;
 
-@property(nonatomic) ScimServiceProviderConfigChangePassword* etag;
+@property(nonatomic) ScimServiceProviderConfigEtag* etag;
 
 @property(nonatomic) ScimServiceProviderConfigFilter* filter;
 
-@property(nonatomic) ScimServiceProviderConfigChangePassword* patch;
+@property(nonatomic) ScimServiceProviderConfigPatch* patch;
 
-@property(nonatomic) ScimServiceProviderConfigChangePassword* sort;
+@property(nonatomic) ScimServiceProviderConfigSort* sort;
 
 @end
