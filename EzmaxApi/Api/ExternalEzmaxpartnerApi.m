@@ -1,8 +1,8 @@
 #import "ExternalEzmaxpartnerApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
-#import "DocumentationSubscribeV1Request.h"
-#import "DocumentationSubscribeV1Response.h"
+#import "EzmaxpartnerSubscribeV1Request.h"
+#import "EzmaxpartnerSubscribeV1Response.h"
 
 
 @interface ExternalEzmaxpartnerApi ()
@@ -53,17 +53,17 @@ NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode = 234513;
 ///
 /// Subscribe to an Ezmaxparnerproductstage
 /// Subscribe to an Ezmaxparnerproductstage
-///  @param documentationSubscribeV1Request  
+///  @param ezmaxpartnerSubscribeV1Request  
 ///
-///  @returns DocumentationSubscribeV1Response*
+///  @returns EzmaxpartnerSubscribeV1Response*
 ///
--(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
-    completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler {
-    // verify the required parameter 'documentationSubscribeV1Request' is set
-    if (documentationSubscribeV1Request == nil) {
-        NSParameterAssert(documentationSubscribeV1Request);
+-(NSURLSessionTask*) ezmaxpartnerSubscribeV1WithEzmaxpartnerSubscribeV1Request: (EzmaxpartnerSubscribeV1Request*) ezmaxpartnerSubscribeV1Request
+    completionHandler: (void (^)(EzmaxpartnerSubscribeV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'ezmaxpartnerSubscribeV1Request' is set
+    if (ezmaxpartnerSubscribeV1Request == nil) {
+        NSParameterAssert(ezmaxpartnerSubscribeV1Request);
         if(handler) {
-            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"documentationSubscribeV1Request"] };
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"ezmaxpartnerSubscribeV1Request"] };
             NSError* error = [NSError errorWithDomain:kExternalEzmaxpartnerApiErrorDomain code:kExternalEzmaxpartnerApiMissingParamErrorCode userInfo:userInfo];
             handler(nil, error);
         }
@@ -95,7 +95,7 @@ NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode = 234513;
     id bodyParam = nil;
     NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
-    bodyParam = documentationSubscribeV1Request;
+    bodyParam = ezmaxpartnerSubscribeV1Request;
 
     return [self.apiClient requestWithPath: resourcePath
                                     method: @"POST"
@@ -108,10 +108,10 @@ NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"DocumentationSubscribeV1Response*"
+                              responseType: @"EzmaxpartnerSubscribeV1Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((DocumentationSubscribeV1Response*)data, error);
+                                    handler((EzmaxpartnerSubscribeV1Response*)data, error);
                                 }
                             }];
 }

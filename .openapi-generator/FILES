@@ -1137,10 +1137,6 @@ EzmaxApi/Model/DiscussionmessageResponse.h
 EzmaxApi/Model/DiscussionmessageResponse.m
 EzmaxApi/Model/DiscussionmessageResponseCompound.h
 EzmaxApi/Model/DiscussionmessageResponseCompound.m
-EzmaxApi/Model/DocumentationSubscribeV1Request.h
-EzmaxApi/Model/DocumentationSubscribeV1Request.m
-EzmaxApi/Model/DocumentationSubscribeV1Response.h
-EzmaxApi/Model/DocumentationSubscribeV1Response.m
 EzmaxApi/Model/DomainAutocompleteElementResponse.h
 EzmaxApi/Model/DomainAutocompleteElementResponse.m
 EzmaxApi/Model/DomainCreateObjectV1Request.h
@@ -1379,6 +1375,10 @@ EzmaxApi/Model/EzmaxpartnerResponse.h
 EzmaxApi/Model/EzmaxpartnerResponse.m
 EzmaxApi/Model/EzmaxpartnerResponseCompound.h
 EzmaxApi/Model/EzmaxpartnerResponseCompound.m
+EzmaxApi/Model/EzmaxpartnerSubscribeV1Request.h
+EzmaxApi/Model/EzmaxpartnerSubscribeV1Request.m
+EzmaxApi/Model/EzmaxpartnerSubscribeV1Response.h
+EzmaxApi/Model/EzmaxpartnerSubscribeV1Response.m
 EzmaxApi/Model/EzmaxproductAutocompleteElementResponse.h
 EzmaxApi/Model/EzmaxproductAutocompleteElementResponse.m
 EzmaxApi/Model/EzmaxproductGetAutocompleteV2Response.h
@@ -4813,8 +4813,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationSubscribeV1Request.md
-docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -4935,6 +4933,8 @@ docs/EzmaxpartnerGetObjectV2Response.md
 docs/EzmaxpartnerGetObjectV2ResponseMPayload.md
 docs/EzmaxpartnerResponse.md
 docs/EzmaxpartnerResponseCompound.md
+docs/EzmaxpartnerSubscribeV1Request.md
+docs/EzmaxpartnerSubscribeV1Response.md
 docs/EzmaxproductAutocompleteElementResponse.md
 docs/EzmaxproductGetAutocompleteV2Response.md
 docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md

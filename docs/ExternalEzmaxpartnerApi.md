@@ -4,13 +4,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**externalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+[**ezmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 
 
-# **externalpartnerSubscribeV1**
+# **ezmaxpartnerSubscribeV1**
 ```objc
--(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
-        completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler;
+-(NSURLSessionTask*) ezmaxpartnerSubscribeV1WithEzmaxpartnerSubscribeV1Request: (EzmaxpartnerSubscribeV1Request*) ezmaxpartnerSubscribeV1Request
+        completionHandler: (void (^)(EzmaxpartnerSubscribeV1Response* output, NSError* error)) handler;
 ```
 
 Subscribe to an Ezmaxparnerproductstage
@@ -27,18 +27,18 @@ DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
 
 
-DocumentationSubscribeV1Request* documentationSubscribeV1Request = [[DocumentationSubscribeV1Request alloc] init]; // 
+EzmaxpartnerSubscribeV1Request* ezmaxpartnerSubscribeV1Request = [[EzmaxpartnerSubscribeV1Request alloc] init]; // 
 
 ExternalEzmaxpartnerApi*apiInstance = [[ExternalEzmaxpartnerApi alloc] init];
 
 // Subscribe to an Ezmaxparnerproductstage
-[apiInstance externalpartnerSubscribeV1WithDocumentationSubscribeV1Request:documentationSubscribeV1Request
-          completionHandler: ^(DocumentationSubscribeV1Response* output, NSError* error) {
+[apiInstance ezmaxpartnerSubscribeV1WithEzmaxpartnerSubscribeV1Request:ezmaxpartnerSubscribeV1Request
+          completionHandler: ^(EzmaxpartnerSubscribeV1Response* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling ExternalEzmaxpartnerApi->externalpartnerSubscribeV1: %@", error);
+                            NSLog(@"Error calling ExternalEzmaxpartnerApi->ezmaxpartnerSubscribeV1: %@", error);
                         }
                     }];
 ```
@@ -47,11 +47,11 @@ ExternalEzmaxpartnerApi*apiInstance = [[ExternalEzmaxpartnerApi alloc] init];
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentationSubscribeV1Request** | [**DocumentationSubscribeV1Request***](DocumentationSubscribeV1Request.md)|  | 
+ **ezmaxpartnerSubscribeV1Request** | [**EzmaxpartnerSubscribeV1Request***](EzmaxpartnerSubscribeV1Request.md)|  | 
 
 ### Return type
 
-[**DocumentationSubscribeV1Response***](DocumentationSubscribeV1Response.md)
+[**EzmaxpartnerSubscribeV1Response***](EzmaxpartnerSubscribeV1Response.md)
 
 ### Authorization
 

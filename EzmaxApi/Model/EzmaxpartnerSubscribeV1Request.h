@@ -26,10 +26,10 @@
 
 
 
-@protocol DocumentationSubscribeV1Request
+@protocol EzmaxpartnerSubscribeV1Request
 @end
 
-@interface DocumentationSubscribeV1Request : Object
+@interface EzmaxpartnerSubscribeV1Request : Object
 
 /* The Ezmaxcustomer code [optional]
  */

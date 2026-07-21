@@ -39,4 +39,6 @@
 
 @property(nonatomic) CustomEzmaxpartnerproductSubscribe* objEzmaxpartnerproduct;
 
+@property(nonatomic) NSString* sExternalID;
+
 @end

@@ -1,6 +1,6 @@
-#import "DocumentationSubscribeV1Response.h"
+#import "EzmaxpartnerSubscribeV1Response.h"
 
-@implementation DocumentationSubscribeV1Response
+@implementation EzmaxpartnerSubscribeV1Response
 
 - (instancetype)init {
   self = [super init];

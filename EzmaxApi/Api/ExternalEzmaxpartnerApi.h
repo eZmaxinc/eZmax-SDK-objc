@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "DocumentationSubscribeV1Request.h"
-#import "DocumentationSubscribeV1Response.h"
+#import "EzmaxpartnerSubscribeV1Request.h"
+#import "EzmaxpartnerSubscribeV1Response.h"
 #import "Api.h"
 
 /**
@@ -27,13 +27,13 @@ extern NSInteger kExternalEzmaxpartnerApiMissingParamErrorCode;
 /// Subscribe to an Ezmaxparnerproductstage
 /// Subscribe to an Ezmaxparnerproductstage
 ///
-/// @param documentationSubscribeV1Request 
+/// @param ezmaxpartnerSubscribeV1Request 
 /// 
 ///  code:200 message:"Successful response"
 ///
-/// @return DocumentationSubscribeV1Response*
--(NSURLSessionTask*) externalpartnerSubscribeV1WithDocumentationSubscribeV1Request: (DocumentationSubscribeV1Request*) documentationSubscribeV1Request
-    completionHandler: (void (^)(DocumentationSubscribeV1Response* output, NSError* error)) handler;
+/// @return EzmaxpartnerSubscribeV1Response*
+-(NSURLSessionTask*) ezmaxpartnerSubscribeV1WithEzmaxpartnerSubscribeV1Request: (EzmaxpartnerSubscribeV1Request*) ezmaxpartnerSubscribeV1Request
+    completionHandler: (void (^)(EzmaxpartnerSubscribeV1Response* output, NSError* error)) handler;
 
 
 

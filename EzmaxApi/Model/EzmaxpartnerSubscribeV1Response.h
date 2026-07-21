@@ -17,10 +17,10 @@
 
 
 
-@protocol DocumentationSubscribeV1Response
+@protocol EzmaxpartnerSubscribeV1Response
 @end
 
-@interface DocumentationSubscribeV1Response : Object
+@interface EzmaxpartnerSubscribeV1Response : Object
 
 /*  
  */
