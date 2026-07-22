@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationlistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
 [**inscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationrecipientsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient
 [**inscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationsendersv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender
-[**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list
+[**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscription&#39;s Inscriptionnotauthenticated
 [**inscriptionGetListV1**](ObjectInscriptionApi.md#inscriptiongetlistv1) | **GET** /1/object/inscription/getList | Retrieve Inscription list
 [**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
         completionHandler: (void (^)(InscriptionGetInscriptionnotauthenticatedsV1Response* output, NSError* error)) handler;
 ```
 
-Retrieve Inscriptionnotauthenticated list
+Retrieve Inscription's Inscriptionnotauthenticated
 
 ### Example
 ```objc
@@ -323,7 +323,7 @@ NSNumber* pkiInscriptionID = @56; //
 
 ObjectInscriptionApi*apiInstance = [[ObjectInscriptionApi alloc] init];
 
-// Retrieve Inscriptionnotauthenticated list
+// Retrieve Inscription's Inscriptionnotauthenticated
 [apiInstance inscriptionGetInscriptionnotauthenticatedsV1WithPkiInscriptionID:pkiInscriptionID
           completionHandler: ^(InscriptionGetInscriptionnotauthenticatedsV1Response* output, NSError* error) {
                         if (output) {

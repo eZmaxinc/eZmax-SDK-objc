@@ -15,23 +15,23 @@ Name | Type | Description | Notes
 **sBuyercontractContract** | **NSString*** | The number of the Buyercontract | [optional] 
 **eInscriptionStep** | [**FieldEInscriptionStep***](FieldEInscriptionStep.md) |  | 
 **eInscriptionType** | [**FieldEInscriptionType***](FieldEInscriptionType.md) |  | 
-**sInscriptionCivicend** | **NSString*** | The civicend of the Inscription | 
+**sInscriptionCivicend** | **NSString*** | The address civic end of the Inscription | 
 **sInscriptionMLS** | **NSString*** | The mls of the Inscription | [optional] 
 **sInscriptionContract** | **NSString*** | The sale contract number | [optional] 
 **dInscriptionSaleprice** | **NSString*** | The saleprice of the Inscription | 
-**dInscriptionRentprice** | **NSString*** | The rentprice of the Inscription | 
+**dInscriptionRentprice** | **NSString*** | The rent price of the Inscription | 
 **dtInscriptionDate** | **NSString*** | The date of the Inscription | [optional] 
-**dtInscriptionExpirationdate** | **NSString*** | The expirationdate of the Inscription | [optional] 
-**dtInscriptionNotarydate** | **NSString*** | The notarydate of the Inscription | [optional] 
+**dtInscriptionExpirationdate** | **NSString*** | The expiration date of the Inscription | [optional] 
+**dtInscriptionNotarydate** | **NSString*** | The notary date of the Inscription | [optional] 
 **bInscriptionInspection** | **NSNumber*** | Whether the inscription can be acces by an inspector | [optional] 
 **bInscriptionIsactive** | **NSNumber*** | Whether the inscription is active or not | 
 **bInscriptionArchived** | **NSNumber*** | Whether the inscription is archived or not | 
-**dtInscriptionnotauthenticatedNotaryscheduledate** | **NSString*** | The notaryscheduledate of the Inscriptionnotauthenticated | [optional] 
-**dtInscriptionnotauthenticatedTransactiondate** | **NSString*** | The transactiondate of the Inscriptionnotauthenticated | [optional] 
-**dtInscriptionnotauthenticatedTransactiondateReal** | **NSString*** | The transactiondatereal of the Inscriptionnotauthenticated | [optional] 
+**dtInscriptionnotauthenticatedNotaryscheduledate** | **NSString*** | The notary schedule date of the Inscriptionnotauthenticated | [optional] 
+**dtInscriptionnotauthenticatedTransactiondate** | **NSString*** | The transaction date of the Inscriptionnotauthenticated | [optional] 
+**dtInscriptionnotauthenticatedTransactiondateReal** | **NSString*** | The real transactiondate of the Inscriptionnotauthenticated | [optional] 
 **bInscriptionnotauthenticatedConditional** | **NSNumber*** | Whether the inscriptionnotauthenticated is conditional | [optional] 
 **bInscriptionnotauthenticatedIsactive** | **NSNumber*** | Whether the inscriptionnotauthenticated is active or not | [optional] 
-**bInscriptionnotauthenticatedDraft** | **NSNumber*** | Whether the inscriptionnotauthenticated is a draft or not | [optional] 
+**bInscriptionnotauthenticatedDraft** | **NSNumber*** | Whether the Inscriptionnotauthenticated is a draft or not | [optional] 
 **sAddressCivic** | **NSString*** | The Civic number. | [optional] 
 **sAddressStreet** | **NSString*** | The Street Name | [optional] 
 **sAddressSuite** | **NSString*** | The Suite or appartment number | [optional] 
@@ -41,8 +41,8 @@ Name | Type | Description | Notes
 **sProvinceNameX** | **NSString*** | The name of the Province in the language of the requester | [optional] 
 **fkiCountryID** | **NSNumber*** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | [optional] 
 **sCountryNameX** | **NSString*** | The name of the Country in the language of the requester | [optional] 
-**sInscriptionnotauthenticatedOffertopurchasenumber** | **NSString*** | The Offer to purchase number | 
-**iInscriptionUnit** | **NSNumber*** | The unit of the Inscription | 
+**sInscriptionnotauthenticatedOffertopurchasenumber** | **NSString*** | The offer to purchase number of the Inscriptionnotauthenticated | 
+**iInscriptionUnit** | **NSNumber*** | The number of unit for the Inscription | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

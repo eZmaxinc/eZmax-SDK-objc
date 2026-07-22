@@ -403,7 +403,7 @@ NSInteger kObjectInscriptionApiMissingParamErrorCode = 234513;
 }
 
 ///
-/// Retrieve Inscriptionnotauthenticated list
+/// Retrieve Inscription's Inscriptionnotauthenticated
 /// 
 ///  @param pkiInscriptionID  
 ///
