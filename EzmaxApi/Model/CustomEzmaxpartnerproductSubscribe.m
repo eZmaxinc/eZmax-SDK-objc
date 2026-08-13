@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"pksEzmaxcustomerCode", @"sInfrastructureenvironmenttypeDescription", @"sCompanyName1", @"sCompanyName2", @"fkiSystemconfigurationtypeID", @"sSystemconfigurationtypeDescription1", @"sSystemconfigurationtypeDescription2", @"fkiEzmaxpartnerID", @"sEzmaxpartnerName1", @"sEzmaxpartnerName2", @"fkiEzmaxpartnerproductID", @"sEzmaxpartnerproductName1", @"sEzmaxpartnerproductName2", @"fkiEzmaxpartnerproductstageID", @"sEzmaxpartnerproductstageCode", @"sUserLoginName", @"sUserFirstName", @"sUserLastName", @"fkiUserID", @"fkiLanguageID", @"objAddress", @"objphone", @"objEmail"];
+  NSArray *optionalProperties = @[@"objAddress", @"objphone", @"objEmail"];
   return [optionalProperties containsObject:propertyName];
 }
 

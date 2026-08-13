@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"sExternalID", @"sApikeyApikey", @"sApikeySecret"];
+  NSArray *optionalProperties = @[@"sExternalID", ];
   return [optionalProperties containsObject:propertyName];
 }
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV4**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv4) | **GET** /4/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 # **ezsigntemplateCopyV1**
@@ -440,6 +441,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateGetObjectV3Response***](EzsigntemplateGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplateGetObjectV4**
+```objc
+-(NSURLSessionTask*) ezsigntemplateGetObjectV4WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
+        completionHandler: (void (^)(EzsigntemplateGetObjectV4Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplateID = @56; // 
+
+ObjectEzsigntemplateApi*apiInstance = [[ObjectEzsigntemplateApi alloc] init];
+
+// Retrieve an existing Ezsigntemplate
+[apiInstance ezsigntemplateGetObjectV4WithPkiEzsigntemplateID:pkiEzsigntemplateID
+          completionHandler: ^(EzsigntemplateGetObjectV4Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigntemplateApi->ezsigntemplateGetObjectV4: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsigntemplateGetObjectV4Response***](EzsigntemplateGetObjectV4Response.md)
 
 ### Authorization
 

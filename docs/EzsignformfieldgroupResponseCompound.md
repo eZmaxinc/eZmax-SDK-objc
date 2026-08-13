@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **sEzsignformfieldgroupTextvalidationcustommessage** | **NSString*** | Description of validation rule. Show by signatory. | [optional] 
 **tEzsignformfieldgroupTooltip** | **NSString*** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup | [optional] 
 **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition***](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
+**dtEzsignformfieldgroupCompleted** | **NSString*** | The date the Ezsignformfieldgroup was completed. | [optional] 
 **aObjEzsignformfield** | [**NSArray&lt;EzsignformfieldResponseCompound&gt;***](EzsignformfieldResponseCompound.md) |  | 
 **aObjDropdownElement** | [**NSArray&lt;CustomDropdownElementResponseCompound&gt;***](CustomDropdownElementResponseCompound.md) |  | [optional] 
 **aObjEzsignformfieldgroupsigner** | [**NSArray&lt;EzsignformfieldgroupsignerResponseCompound&gt;***](EzsignformfieldgroupsignerResponseCompound.md) |  | 

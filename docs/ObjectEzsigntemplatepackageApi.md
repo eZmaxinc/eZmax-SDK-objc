@@ -7,10 +7,12 @@ Method | HTTP request | Description
 [**ezsigntemplatepackageCreateObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagecreateobjectv1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage
 [**ezsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
+[**ezsigntemplatepackageEditEzsigntemplatepackagesignersV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv2) | **PUT** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 [**ezsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**ezsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 [**ezsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
+[**ezsigntemplatepackageGetObjectV3**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv3) | **GET** /3/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
 
 # **ezsigntemplatepackageCreateObjectV1**
@@ -176,6 +178,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response***](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatepackageEditEzsigntemplatepackagesignersV2**
+```objc
+-(NSURLSessionTask*) ezsigntemplatepackageEditEzsigntemplatepackagesignersV2WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
+    ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request: (EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request*) ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request
+        completionHandler: (void (^)(EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response* output, NSError* error)) handler;
+```
+
+Edit multiple Ezsigntemplatepackagesigners
+
+Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplatepackageID = @56; // 
+EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request* ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request = [[EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request alloc] init]; // 
+
+ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi alloc] init];
+
+// Edit multiple Ezsigntemplatepackagesigners
+[apiInstance ezsigntemplatepackageEditEzsigntemplatepackagesignersV2WithPkiEzsigntemplatepackageID:pkiEzsigntemplatepackageID
+              ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request:ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request
+          completionHandler: ^(EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigntemplatepackageApi->ezsigntemplatepackageEditEzsigntemplatepackagesignersV2: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatepackageID** | **NSNumber***|  | 
+ **ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request** | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request***](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request.md)|  | 
+
+### Return type
+
+[**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response***](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response.md)
 
 ### Authorization
 
@@ -440,6 +503,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackageGetObjectV2Response***](EzsigntemplatepackageGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatepackageGetObjectV3**
+```objc
+-(NSURLSessionTask*) ezsigntemplatepackageGetObjectV3WithPkiEzsigntemplatepackageID: (NSNumber*) pkiEzsigntemplatepackageID
+        completionHandler: (void (^)(EzsigntemplatepackageGetObjectV3Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsigntemplatepackage
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsigntemplatepackageID = @56; // 
+
+ObjectEzsigntemplatepackageApi*apiInstance = [[ObjectEzsigntemplatepackageApi alloc] init];
+
+// Retrieve an existing Ezsigntemplatepackage
+[apiInstance ezsigntemplatepackageGetObjectV3WithPkiEzsigntemplatepackageID:pkiEzsigntemplatepackageID
+          completionHandler: ^(EzsigntemplatepackageGetObjectV3Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsigntemplatepackageApi->ezsigntemplatepackageGetObjectV3: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatepackageID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsigntemplatepackageGetObjectV3Response***](EzsigntemplatepackageGetObjectV3Response.md)
 
 ### Authorization
 

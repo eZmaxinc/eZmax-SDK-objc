@@ -6,6 +6,7 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
+    self.bKeepenteredvalues = @(YES);
     
   }
   return self;
@@ -17,7 +18,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"aFkiEzsignfoldersignerassociationID": @"a_fkiEzsignfoldersignerassociationID", @"aObjEzsigndocument": @"a_objEzsigndocument", @"tEzsignfolderNote": @"tEzsignfolderNote" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"sEzsignfolderDescription": @"sEzsignfolderDescription", @"aFkiEzsignfoldersignerassociationID": @"a_fkiEzsignfoldersignerassociationID", @"aObjEzsigndocument": @"a_objEzsigndocument", @"tEzsignfolderNote": @"tEzsignfolderNote", @"bKeepenteredvalues": @"bKeepenteredvalues" }];
 }
 
 /**
@@ -27,7 +28,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"tEzsignfolderNote"];
+  NSArray *optionalProperties = @[@"tEzsignfolderNote", @"bKeepenteredvalues"];
   return [optionalProperties containsObject:propertyName];
 }
 

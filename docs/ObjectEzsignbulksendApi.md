@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV4**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv4) | **GET** /4/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -789,6 +790,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendGetObjectV3Response***](EzsignbulksendGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendGetObjectV4**
+```objc
+-(NSURLSessionTask*) ezsignbulksendGetObjectV4WithPkiEzsignbulksendID: (NSNumber*) pkiEzsignbulksendID
+        completionHandler: (void (^)(EzsignbulksendGetObjectV4Response* output, NSError* error)) handler;
+```
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEzsignbulksendID = @56; // 
+
+ObjectEzsignbulksendApi*apiInstance = [[ObjectEzsignbulksendApi alloc] init];
+
+// Retrieve an existing Ezsignbulksend
+[apiInstance ezsignbulksendGetObjectV4WithPkiEzsignbulksendID:pkiEzsignbulksendID
+          completionHandler: ^(EzsignbulksendGetObjectV4Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEzsignbulksendApi->ezsignbulksendGetObjectV4: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **NSNumber***|  | 
+
+### Return type
+
+[**EzsignbulksendGetObjectV4Response***](EzsignbulksendGetObjectV4Response.md)
 
 ### Authorization
 
