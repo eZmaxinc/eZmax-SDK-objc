@@ -3,6 +3,8 @@
 #import "ApiClient.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "OtherincomeBatchDownloadV1Request.h"
+#import "OtherincomeGetAttachmentsV1Response.h"
 #import "OtherincomeGetCommunicationCountV1Response.h"
 #import "OtherincomeGetCommunicationListV1Response.h"
 #import "OtherincomeGetCommunicationrecipientsV1Response.h"
@@ -56,6 +58,157 @@ NSInteger kObjectOtherincomeApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from a Otherincome
+/// 
+///  @param pkiOtherincomeID  
+///
+///  @param otherincomeBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) otherincomeBatchDownloadV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    otherincomeBatchDownloadV1Request: (OtherincomeBatchDownloadV1Request*) otherincomeBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == nil) {
+        NSParameterAssert(pkiOtherincomeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiOtherincomeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectOtherincomeApiErrorDomain code:kObjectOtherincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'otherincomeBatchDownloadV1Request' is set
+    if (otherincomeBatchDownloadV1Request == nil) {
+        NSParameterAssert(otherincomeBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"otherincomeBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectOtherincomeApiErrorDomain code:kObjectOtherincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/otherincome/{pkiOtherincomeID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiOtherincomeID != nil) {
+        pathParams[@"pkiOtherincomeID"] = pkiOtherincomeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = otherincomeBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Otherincome's attachments
+/// 
+///  @param pkiOtherincomeID  
+///
+///  @returns OtherincomeGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) otherincomeGetAttachmentsV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    completionHandler: (void (^)(OtherincomeGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiOtherincomeID' is set
+    if (pkiOtherincomeID == nil) {
+        NSParameterAssert(pkiOtherincomeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiOtherincomeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectOtherincomeApiErrorDomain code:kObjectOtherincomeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/otherincome/{pkiOtherincomeID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiOtherincomeID != nil) {
+        pathParams[@"pkiOtherincomeID"] = pkiOtherincomeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"OtherincomeGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((OtherincomeGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Communication count

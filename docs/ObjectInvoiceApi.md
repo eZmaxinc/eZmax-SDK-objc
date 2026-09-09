@@ -4,6 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**invoiceBatchDownloadV1**](ObjectInvoiceApi.md#invoicebatchdownloadv1) | **POST** /1/object/invoice/{pkiInvoiceID}/batchDownload | Download multiples attachments from an Invoice
 [**invoiceGetAttachmentsV1**](ObjectInvoiceApi.md#invoicegetattachmentsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getAttachments | Retrieve Invoice&#39;s Attachments
 [**invoiceGetCommunicationCountV1**](ObjectInvoiceApi.md#invoicegetcommunicationcountv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationCount | Retrieve Communication count
 [**invoiceGetCommunicationListV1**](ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
@@ -11,6 +12,65 @@ Method | HTTP request | Description
 [**invoiceGetCommunicationsendersV1**](ObjectInvoiceApi.md#invoicegetcommunicationsendersv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice&#39;s Communicationsender
 [**invoiceImportIntoEDMV1**](ObjectInvoiceApi.md#invoiceimportintoedmv1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
 
+
+# **invoiceBatchDownloadV1**
+```objc
+-(NSURLSessionTask*) invoiceBatchDownloadV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    invoiceBatchDownloadV1Request: (InvoiceBatchDownloadV1Request*) invoiceBatchDownloadV1Request
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Download multiples attachments from an Invoice
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInvoiceID = @56; // 
+InvoiceBatchDownloadV1Request* invoiceBatchDownloadV1Request = [[InvoiceBatchDownloadV1Request alloc] init]; // 
+
+ObjectInvoiceApi*apiInstance = [[ObjectInvoiceApi alloc] init];
+
+// Download multiples attachments from an Invoice
+[apiInstance invoiceBatchDownloadV1WithPkiInvoiceID:pkiInvoiceID
+              invoiceBatchDownloadV1Request:invoiceBatchDownloadV1Request
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInvoiceApi->invoiceBatchDownloadV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInvoiceID** | **NSNumber***|  | 
+ **invoiceBatchDownloadV1Request** | [**InvoiceBatchDownloadV1Request***](InvoiceBatchDownloadV1Request.md)|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **invoiceGetAttachmentsV1**
 ```objc

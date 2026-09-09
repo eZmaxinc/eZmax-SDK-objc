@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "CustomerBatchDownloadV1Request.h"
+#import "CustomerGetAttachmentsV1Response.h"
 #import "CustomerGetAutocompleteV2Response.h"
 #import "CustomerGetObjectV2Response.h"
 #import "CustomerImportIntoEDMV1Request.h"
@@ -28,6 +30,34 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Customer
+/// 
+///
+/// @param pkiCustomerID 
+/// @param customerBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) customerBatchDownloadV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    customerBatchDownloadV1Request: (CustomerBatchDownloadV1Request*) customerBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Customer's attachments
+/// 
+///
+/// @param pkiCustomerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CustomerGetAttachmentsV1Response*
+-(NSURLSessionTask*) customerGetAttachmentsV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Customers and IDs
 /// Get the list of Customer to be used in a dropdown or autocomplete control.
 ///
@@ -52,7 +82,7 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
 /// @param pkiCustomerID The unique ID of the Customer
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return CustomerGetObjectV2Response*
 -(NSURLSessionTask*) customerGetObjectV2WithPkiCustomerID: (NSNumber*) pkiCustomerID
@@ -66,7 +96,7 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
 /// @param customerImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return CustomerImportIntoEDMV1Response*
 -(NSURLSessionTask*) customerImportIntoEDMV1WithPkiCustomerID: (NSNumber*) pkiCustomerID

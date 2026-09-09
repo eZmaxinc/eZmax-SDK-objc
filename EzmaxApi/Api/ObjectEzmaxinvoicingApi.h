@@ -51,7 +51,7 @@ extern NSInteger kObjectEzmaxinvoicingApiMissingParamErrorCode;
 /// @param pkiEzmaxinvoicingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzmaxinvoicingGetObjectV2Response*
 -(NSURLSessionTask*) ezmaxinvoicingGetObjectV2WithPkiEzmaxinvoicingID: (NSNumber*) pkiEzmaxinvoicingID
@@ -63,7 +63,7 @@ extern NSInteger kObjectEzmaxinvoicingApiMissingParamErrorCode;
 ///
 /// 
 ///  code:200 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzmaxinvoicingGetProvisionalV1Response*
 -(NSURLSessionTask*) ezmaxinvoicingGetProvisionalV1WithCompletionHandler: 

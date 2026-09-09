@@ -37,7 +37,7 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 /// @param body 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserstagedCreateUserV1Response*
 -(NSURLSessionTask*) userstagedCreateUserV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
@@ -51,7 +51,7 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 /// @param pkiUserstagedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserstagedDeleteObjectV1Response*
 -(NSURLSessionTask*) userstagedDeleteObjectV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
@@ -85,7 +85,7 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 /// @param pkiUserstagedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserstagedGetObjectV2Response*
 -(NSURLSessionTask*) userstagedGetObjectV2WithPkiUserstagedID: (NSNumber*) pkiUserstagedID
@@ -99,8 +99,8 @@ extern NSInteger kObjectUserstagedApiMissingParamErrorCode;
 /// @param userstagedMapV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserstagedMapV1Response*
 -(NSURLSessionTask*) userstagedMapV1WithPkiUserstagedID: (NSNumber*) pkiUserstagedID

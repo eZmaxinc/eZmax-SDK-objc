@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiUserID** | **NSNumber*** | The unique ID of the User | 
+**fkiAgentID** | **NSNumber*** | The unique ID of the Agent. | [optional] 
+**fkiBrokerID** | **NSNumber*** | The unique ID of the Broker. | [optional] 
 **sUserFirstname** | **NSString*** | The first name of the user | 
 **sUserLastname** | **NSString*** | The last name of the user | 
 **sUserLoginname** | **NSString*** | The login name of the User. | 

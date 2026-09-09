@@ -1,4 +1,6 @@
 #import <Foundation/Foundation.h>
+#import "BuyercontractBatchDownloadV1Request.h"
+#import "BuyercontractGetAttachmentsV1Response.h"
 #import "BuyercontractGetCommunicationCountV1Response.h"
 #import "BuyercontractGetCommunicationListV1Response.h"
 #import "BuyercontractGetCommunicationrecipientsV1Response.h"
@@ -31,13 +33,41 @@ extern NSInteger kObjectBuyercontractApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Buyercontract
+/// 
+///
+/// @param pkiBuyercontractID 
+/// @param buyercontractBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) buyercontractBatchDownloadV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+    buyercontractBatchDownloadV1Request: (BuyercontractBatchDownloadV1Request*) buyercontractBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Buyercontract's attachments
+/// 
+///
+/// @param pkiBuyercontractID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BuyercontractGetAttachmentsV1Response*
+-(NSURLSessionTask*) buyercontractGetAttachmentsV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+    completionHandler: (void (^)(BuyercontractGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication count
 /// 
 ///
 /// @param pkiBuyercontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BuyercontractGetCommunicationCountV1Response*
 -(NSURLSessionTask*) buyercontractGetCommunicationCountV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
@@ -50,7 +80,7 @@ extern NSInteger kObjectBuyercontractApiMissingParamErrorCode;
 /// @param pkiBuyercontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BuyercontractGetCommunicationListV1Response*
 -(NSURLSessionTask*) buyercontractGetCommunicationListV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
@@ -63,7 +93,7 @@ extern NSInteger kObjectBuyercontractApiMissingParamErrorCode;
 /// @param pkiBuyercontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BuyercontractGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) buyercontractGetCommunicationrecipientsV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
@@ -76,7 +106,7 @@ extern NSInteger kObjectBuyercontractApiMissingParamErrorCode;
 /// @param pkiBuyercontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BuyercontractGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) buyercontractGetCommunicationsendersV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
@@ -111,7 +141,7 @@ extern NSInteger kObjectBuyercontractApiMissingParamErrorCode;
 /// @param buyercontractImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BuyercontractImportIntoEDMV1Response*
 -(NSURLSessionTask*) buyercontractImportIntoEDMV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID

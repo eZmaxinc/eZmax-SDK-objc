@@ -67,8 +67,8 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// @param ezsignfoldertypeEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignfoldertypeEditObjectV3Response*
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV3WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
@@ -83,8 +83,8 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// @param ezsignfoldertypeEditObjectV4Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignfoldertypeEditObjectV4Response*
 -(NSURLSessionTask*) ezsignfoldertypeEditObjectV4WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
@@ -137,7 +137,7 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// @param pkiEzsignfoldertypeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignfoldertypeGetObjectV2Response*
 -(NSURLSessionTask*) ezsignfoldertypeGetObjectV2WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID
@@ -150,7 +150,7 @@ extern NSInteger kObjectEzsignfoldertypeApiMissingParamErrorCode;
 /// @param pkiEzsignfoldertypeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignfoldertypeGetObjectV4Response*
 -(NSURLSessionTask*) ezsignfoldertypeGetObjectV4WithPkiEzsignfoldertypeID: (NSNumber*) pkiEzsignfoldertypeID

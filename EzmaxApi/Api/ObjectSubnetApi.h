@@ -35,7 +35,7 @@ extern NSInteger kObjectSubnetApiMissingParamErrorCode;
 /// @param subnetCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return SubnetCreateObjectV1Response*
 -(NSURLSessionTask*) subnetCreateObjectV1WithSubnetCreateObjectV1Request: (SubnetCreateObjectV1Request*) subnetCreateObjectV1Request
@@ -48,8 +48,8 @@ extern NSInteger kObjectSubnetApiMissingParamErrorCode;
 /// @param pkiSubnetID The unique ID of the Subnet
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return SubnetDeleteObjectV1Response*
 -(NSURLSessionTask*) subnetDeleteObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
@@ -63,8 +63,8 @@ extern NSInteger kObjectSubnetApiMissingParamErrorCode;
 /// @param subnetEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return SubnetEditObjectV1Response*
 -(NSURLSessionTask*) subnetEditObjectV1WithPkiSubnetID: (NSNumber*) pkiSubnetID
@@ -78,7 +78,7 @@ extern NSInteger kObjectSubnetApiMissingParamErrorCode;
 /// @param pkiSubnetID The unique ID of the Subnet
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return SubnetGetObjectV2Response*
 -(NSURLSessionTask*) subnetGetObjectV2WithPkiSubnetID: (NSNumber*) pkiSubnetID

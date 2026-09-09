@@ -36,9 +36,9 @@ extern NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @param bIncludeProof include the complete evidence archive including all of the above and more (optional)
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return NSURL*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetBatchFileV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
@@ -55,9 +55,9 @@ extern NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendtransmissionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return NSString*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetCsvErrorsV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
@@ -70,7 +70,7 @@ extern NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendtransmissionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
@@ -83,9 +83,9 @@ extern NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendtransmissionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendtransmissionGetFormsDataV1Response*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetFormsDataV1WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID
@@ -98,7 +98,7 @@ extern NSInteger kObjectEzsignbulksendtransmissionApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendtransmissionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendtransmissionGetObjectV2Response*
 -(NSURLSessionTask*) ezsignbulksendtransmissionGetObjectV2WithPkiEzsignbulksendtransmissionID: (NSNumber*) pkiEzsignbulksendtransmissionID

@@ -47,7 +47,7 @@ extern NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErro
 /// @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
@@ -61,8 +61,8 @@ extern NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErro
 /// @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatedocumentpagerecognitionEditObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionEditObjectV1WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID
@@ -76,7 +76,7 @@ extern NSInteger kObjectEzsigntemplatedocumentpagerecognitionApiMissingParamErro
 /// @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatedocumentpagerecognitionGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatedocumentpagerecognitionGetObjectV2WithPkiEzsigntemplatedocumentpagerecognitionID: (NSNumber*) pkiEzsigntemplatedocumentpagerecognitionID

@@ -46,8 +46,8 @@ extern NSInteger kObjectDiscussionmessageApiMissingParamErrorCode;
 /// @param pkiDiscussionmessageID The unique ID of the Discussionmessage
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return DiscussionmessageDeleteObjectV1Response*
 -(NSURLSessionTask*) discussionmessageDeleteObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID
@@ -61,8 +61,8 @@ extern NSInteger kObjectDiscussionmessageApiMissingParamErrorCode;
 /// @param discussionmessagePatchObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return DiscussionmessagePatchObjectV1Response*
 -(NSURLSessionTask*) discussionmessagePatchObjectV1WithPkiDiscussionmessageID: (NSNumber*) pkiDiscussionmessageID

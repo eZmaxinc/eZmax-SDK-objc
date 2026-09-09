@@ -30,7 +30,7 @@ extern NSInteger kObjectNotificationtestApiMissingParamErrorCode;
 /// @param pkiNotificationtestID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return NotificationtestGetElementsV2Response*
 -(NSURLSessionTask*) notificationtestGetElementsV2WithPkiNotificationtestID: (NSNumber*) pkiNotificationtestID

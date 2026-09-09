@@ -61,7 +61,7 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatesignatureID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatesignatureDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatesignatureDeleteObjectV1WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
@@ -75,8 +75,8 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 /// @param ezsigntemplatesignatureEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatesignatureEditObjectV3Response*
 -(NSURLSessionTask*) ezsigntemplatesignatureEditObjectV3WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID
@@ -90,7 +90,7 @@ extern NSInteger kObjectEzsigntemplatesignatureApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatesignatureID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatesignatureGetObjectV4Response*
 -(NSURLSessionTask*) ezsigntemplatesignatureGetObjectV4WithPkiEzsigntemplatesignatureID: (NSNumber*) pkiEzsigntemplatesignatureID

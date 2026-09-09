@@ -34,6 +34,12 @@
 /* The unique ID of the User 
  */
 @property(nonatomic) NSNumber* pkiUserID;
+/* The unique ID of the Agent. [optional]
+ */
+@property(nonatomic) NSNumber* fkiAgentID;
+/* The unique ID of the Broker. [optional]
+ */
+@property(nonatomic) NSNumber* fkiBrokerID;
 /* The first name of the user 
  */
 @property(nonatomic) NSString* sUserFirstname;

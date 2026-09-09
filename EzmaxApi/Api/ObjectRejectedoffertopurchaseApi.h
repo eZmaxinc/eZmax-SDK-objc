@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "RejectedoffertopurchaseBatchDownloadV1Request.h"
+#import "RejectedoffertopurchaseGetAttachmentsV1Response.h"
 #import "RejectedoffertopurchaseGetCommunicationCountV1Response.h"
 #import "RejectedoffertopurchaseGetCommunicationListV1Response.h"
 #import "RejectedoffertopurchaseGetCommunicationrecipientsV1Response.h"
@@ -31,13 +33,41 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Rejectedoffertopurchase
+/// 
+///
+/// @param pkiRejectedoffertopurchaseID 
+/// @param rejectedoffertopurchaseBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) rejectedoffertopurchaseBatchDownloadV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    rejectedoffertopurchaseBatchDownloadV1Request: (RejectedoffertopurchaseBatchDownloadV1Request*) rejectedoffertopurchaseBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Rejectedoffertopurchase's attachments
+/// 
+///
+/// @param pkiRejectedoffertopurchaseID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return RejectedoffertopurchaseGetAttachmentsV1Response*
+-(NSURLSessionTask*) rejectedoffertopurchaseGetAttachmentsV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    completionHandler: (void (^)(RejectedoffertopurchaseGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication count
 /// 
 ///
 /// @param pkiRejectedoffertopurchaseID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return RejectedoffertopurchaseGetCommunicationCountV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationCountV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
@@ -50,7 +80,7 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 /// @param pkiRejectedoffertopurchaseID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return RejectedoffertopurchaseGetCommunicationListV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationListV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
@@ -63,7 +93,7 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 /// @param pkiRejectedoffertopurchaseID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return RejectedoffertopurchaseGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationrecipientsV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
@@ -76,7 +106,7 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 /// @param pkiRejectedoffertopurchaseID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return RejectedoffertopurchaseGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseGetCommunicationsendersV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
@@ -111,7 +141,7 @@ extern NSInteger kObjectRejectedoffertopurchaseApiMissingParamErrorCode;
 /// @param rejectedoffertopurchaseImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return RejectedoffertopurchaseImportIntoEDMV1Response*
 -(NSURLSessionTask*) rejectedoffertopurchaseImportIntoEDMV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID

@@ -54,7 +54,7 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 /// @param pkiCreditcardclientID The unique ID of the Creditcardclient
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return CreditcardclientDeleteObjectV1Response*
 -(NSURLSessionTask*) creditcardclientDeleteObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
@@ -68,7 +68,7 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 /// @param creditcardclientEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return CreditcardclientEditObjectV1Response*
@@ -122,7 +122,7 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 /// @param pkiCreditcardclientID The unique ID of the Creditcardclient
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return CreditcardclientGetObjectV2Response*
 -(NSURLSessionTask*) creditcardclientGetObjectV2WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID
@@ -136,8 +136,8 @@ extern NSInteger kObjectCreditcardclientApiMissingParamErrorCode;
 /// @param creditcardclientPatchObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return CreditcardclientPatchObjectV1Response*
 -(NSURLSessionTask*) creditcardclientPatchObjectV1WithPkiCreditcardclientID: (NSNumber*) pkiCreditcardclientID

@@ -4,10 +4,126 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**agentBatchDownloadV1**](ObjectAgentApi.md#agentbatchdownloadv1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
+[**agentGetAttachmentsV1**](ObjectAgentApi.md#agentgetattachmentsv1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments
 [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentgetautocompletev2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs
 [**agentGetListV1**](ObjectAgentApi.md#agentgetlistv1) | **GET** /1/object/agent/getList | Retrieve Agent list
 [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentimportintoedmv1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
 
+
+# **agentBatchDownloadV1**
+```objc
+-(NSURLSessionTask*) agentBatchDownloadV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    agentBatchDownloadV1Request: (AgentBatchDownloadV1Request*) agentBatchDownloadV1Request
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Download multiples attachments from a Agent
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+AgentBatchDownloadV1Request* agentBatchDownloadV1Request = [[AgentBatchDownloadV1Request alloc] init]; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Download multiples attachments from a Agent
+[apiInstance agentBatchDownloadV1WithPkiAgentID:pkiAgentID
+              agentBatchDownloadV1Request:agentBatchDownloadV1Request
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentBatchDownloadV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+ **agentBatchDownloadV1Request** | [**AgentBatchDownloadV1Request***](AgentBatchDownloadV1Request.md)|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetAttachmentsV1**
+```objc
+-(NSURLSessionTask*) agentGetAttachmentsV1WithPkiAgentID: (NSNumber*) pkiAgentID
+        completionHandler: (void (^)(AgentGetAttachmentsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Agent's attachments
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Retrieve Agent's attachments
+[apiInstance agentGetAttachmentsV1WithPkiAgentID:pkiAgentID
+          completionHandler: ^(AgentGetAttachmentsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentGetAttachmentsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+
+### Return type
+
+[**AgentGetAttachmentsV1Response***](AgentGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **agentGetAutocompleteV2**
 ```objc

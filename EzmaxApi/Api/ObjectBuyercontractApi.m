@@ -1,6 +1,8 @@
 #import "ObjectBuyercontractApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "BuyercontractBatchDownloadV1Request.h"
+#import "BuyercontractGetAttachmentsV1Response.h"
 #import "BuyercontractGetCommunicationCountV1Response.h"
 #import "BuyercontractGetCommunicationListV1Response.h"
 #import "BuyercontractGetCommunicationrecipientsV1Response.h"
@@ -56,6 +58,157 @@ NSInteger kObjectBuyercontractApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from a Buyercontract
+/// 
+///  @param pkiBuyercontractID  
+///
+///  @param buyercontractBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) buyercontractBatchDownloadV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+    buyercontractBatchDownloadV1Request: (BuyercontractBatchDownloadV1Request*) buyercontractBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiBuyercontractID' is set
+    if (pkiBuyercontractID == nil) {
+        NSParameterAssert(pkiBuyercontractID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiBuyercontractID"] };
+            NSError* error = [NSError errorWithDomain:kObjectBuyercontractApiErrorDomain code:kObjectBuyercontractApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'buyercontractBatchDownloadV1Request' is set
+    if (buyercontractBatchDownloadV1Request == nil) {
+        NSParameterAssert(buyercontractBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"buyercontractBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectBuyercontractApiErrorDomain code:kObjectBuyercontractApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/buyercontract/{pkiBuyercontractID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiBuyercontractID != nil) {
+        pathParams[@"pkiBuyercontractID"] = pkiBuyercontractID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = buyercontractBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Buyercontract's attachments
+/// 
+///  @param pkiBuyercontractID  
+///
+///  @returns BuyercontractGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) buyercontractGetAttachmentsV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+    completionHandler: (void (^)(BuyercontractGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiBuyercontractID' is set
+    if (pkiBuyercontractID == nil) {
+        NSParameterAssert(pkiBuyercontractID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiBuyercontractID"] };
+            NSError* error = [NSError errorWithDomain:kObjectBuyercontractApiErrorDomain code:kObjectBuyercontractApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/buyercontract/{pkiBuyercontractID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiBuyercontractID != nil) {
+        pathParams[@"pkiBuyercontractID"] = pkiBuyercontractID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"BuyercontractGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((BuyercontractGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Communication count

@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "LeadBatchDownloadV1Request.h"
+#import "LeadGetAttachmentsV1Response.h"
 #import "LeadGetListV1Response.h"
 #import "LeadImportIntoEDMV1Request.h"
 #import "LeadImportIntoEDMV1Response.h"
@@ -26,6 +28,34 @@ extern NSString* kObjectLeadApiErrorDomain;
 extern NSInteger kObjectLeadApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Download multiples attachments from a Lead
+/// 
+///
+/// @param pkiLeadID 
+/// @param leadBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) leadBatchDownloadV1WithPkiLeadID: (NSNumber*) pkiLeadID
+    leadBatchDownloadV1Request: (LeadBatchDownloadV1Request*) leadBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Lead's attachments
+/// 
+///
+/// @param pkiLeadID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return LeadGetAttachmentsV1Response*
+-(NSURLSessionTask*) leadGetAttachmentsV1WithPkiLeadID: (NSNumber*) pkiLeadID
+    completionHandler: (void (^)(LeadGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Lead list
 /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eLeadStatus | New<br>Dispatching<br>Assigned<br>Lost<br>Won |
@@ -55,7 +85,7 @@ extern NSInteger kObjectLeadApiMissingParamErrorCode;
 /// @param leadImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return LeadImportIntoEDMV1Response*
 -(NSURLSessionTask*) leadImportIntoEDMV1WithPkiLeadID: (NSNumber*) pkiLeadID

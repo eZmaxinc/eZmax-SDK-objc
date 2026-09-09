@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "OtherincomeBatchDownloadV1Request.h"
+#import "OtherincomeGetAttachmentsV1Response.h"
 #import "OtherincomeGetCommunicationCountV1Response.h"
 #import "OtherincomeGetCommunicationListV1Response.h"
 #import "OtherincomeGetCommunicationrecipientsV1Response.h"
@@ -31,13 +33,41 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Otherincome
+/// 
+///
+/// @param pkiOtherincomeID 
+/// @param otherincomeBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) otherincomeBatchDownloadV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    otherincomeBatchDownloadV1Request: (OtherincomeBatchDownloadV1Request*) otherincomeBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Otherincome's attachments
+/// 
+///
+/// @param pkiOtherincomeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return OtherincomeGetAttachmentsV1Response*
+-(NSURLSessionTask*) otherincomeGetAttachmentsV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
+    completionHandler: (void (^)(OtherincomeGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication count
 /// 
 ///
 /// @param pkiOtherincomeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return OtherincomeGetCommunicationCountV1Response*
 -(NSURLSessionTask*) otherincomeGetCommunicationCountV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
@@ -50,7 +80,7 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 /// @param pkiOtherincomeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return OtherincomeGetCommunicationListV1Response*
 -(NSURLSessionTask*) otherincomeGetCommunicationListV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
@@ -63,7 +93,7 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 /// @param pkiOtherincomeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return OtherincomeGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) otherincomeGetCommunicationrecipientsV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
@@ -76,7 +106,7 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 /// @param pkiOtherincomeID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return OtherincomeGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) otherincomeGetCommunicationsendersV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID
@@ -111,7 +141,7 @@ extern NSInteger kObjectOtherincomeApiMissingParamErrorCode;
 /// @param otherincomeImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return OtherincomeImportIntoEDMV1Response*
 -(NSURLSessionTask*) otherincomeImportIntoEDMV1WithPkiOtherincomeID: (NSNumber*) pkiOtherincomeID

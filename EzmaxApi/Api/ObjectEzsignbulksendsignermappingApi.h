@@ -60,7 +60,7 @@ extern NSInteger kObjectEzsignbulksendsignermappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendsignermappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendsignermappingDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksendsignermappingDeleteObjectV1WithPkiEzsignbulksendsignermappingID: (NSNumber*) pkiEzsignbulksendsignermappingID
@@ -73,7 +73,7 @@ extern NSInteger kObjectEzsignbulksendsignermappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendsignermappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendsignermappingGetObjectV2Response*
 -(NSURLSessionTask*) ezsignbulksendsignermappingGetObjectV2WithPkiEzsignbulksendsignermappingID: (NSNumber*) pkiEzsignbulksendsignermappingID
@@ -86,7 +86,7 @@ extern NSInteger kObjectEzsignbulksendsignermappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksendsignermappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksendsignermappingGetObjectV3Response*
 -(NSURLSessionTask*) ezsignbulksendsignermappingGetObjectV3WithPkiEzsignbulksendsignermappingID: (NSNumber*) pkiEzsignbulksendsignermappingID

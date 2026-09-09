@@ -59,8 +59,8 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param usergroupEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupEditObjectV1Response*
 -(NSURLSessionTask*) usergroupEditObjectV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -75,8 +75,8 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param usergroupEditPermissionsV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupEditPermissionsV1Response*
 -(NSURLSessionTask*) usergroupEditPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -91,8 +91,8 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param usergroupEditUsergroupdelegationsV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupEditUsergroupdelegationsV1Response*
 -(NSURLSessionTask*) usergroupEditUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -107,8 +107,8 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param usergroupEditUsergroupmembershipsV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupEditUsergroupmembershipsV1Response*
 -(NSURLSessionTask*) usergroupEditUsergroupmembershipsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -161,7 +161,7 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param pkiUsergroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupGetObjectV2Response*
 -(NSURLSessionTask*) usergroupGetObjectV2WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -174,7 +174,7 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param pkiUsergroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupGetPermissionsV1Response*
 -(NSURLSessionTask*) usergroupGetPermissionsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -187,7 +187,7 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param pkiUsergroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupGetUsergroupdelegationsV1Response*
 -(NSURLSessionTask*) usergroupGetUsergroupdelegationsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID
@@ -200,7 +200,7 @@ extern NSInteger kObjectUsergroupApiMissingParamErrorCode;
 /// @param pkiUsergroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupGetUsergroupmembershipsV1Response*
 -(NSURLSessionTask*) usergroupGetUsergroupmembershipsV1WithPkiUsergroupID: (NSNumber*) pkiUsergroupID

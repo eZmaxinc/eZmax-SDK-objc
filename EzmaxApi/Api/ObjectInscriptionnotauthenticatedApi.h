@@ -1,8 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "InscriptionnotauthenticatedBatchDownloadV1Request.h"
 #import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.h"
 #import "InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.h"
+#import "InscriptionnotauthenticatedGetAttachmentsV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationCountV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationListV1Response.h"
 #import "InscriptionnotauthenticatedGetCommunicationrecipientsV1Response.h"
@@ -35,6 +37,21 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Inscriptionnotauthenticated
+/// 
+///
+/// @param pkiInscriptionnotauthenticatedID 
+/// @param inscriptionnotauthenticatedBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) inscriptionnotauthenticatedBatchDownloadV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    inscriptionnotauthenticatedBatchDownloadV1Request: (InscriptionnotauthenticatedBatchDownloadV1Request*) inscriptionnotauthenticatedBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
 /// Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
 /// 
 ///
@@ -42,12 +59,25 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
     inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request: (InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request*) inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request
     completionHandler: (void (^)(InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Inscriptionnotauthenticated's attachments
+/// 
+///
+/// @param pkiInscriptionnotauthenticatedID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return InscriptionnotauthenticatedGetAttachmentsV1Response*
+-(NSURLSessionTask*) inscriptionnotauthenticatedGetAttachmentsV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
+    completionHandler: (void (^)(InscriptionnotauthenticatedGetAttachmentsV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Communication count
@@ -56,7 +86,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetCommunicationCountV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetCommunicationCountV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -69,7 +99,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetCommunicationListV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetCommunicationListV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -82,7 +112,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetCommunicationrecipientsV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -95,7 +125,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetCommunicationsendersV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -108,7 +138,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -142,7 +172,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedGetObjectV2Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedGetObjectV2WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID
@@ -156,7 +186,7 @@ extern NSInteger kObjectInscriptionnotauthenticatedApiMissingParamErrorCode;
 /// @param inscriptionnotauthenticatedImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionnotauthenticatedImportIntoEDMV1Response*
 -(NSURLSessionTask*) inscriptionnotauthenticatedImportIntoEDMV1WithPkiInscriptionnotauthenticatedID: (NSNumber*) pkiInscriptionnotauthenticatedID

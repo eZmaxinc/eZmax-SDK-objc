@@ -1,6 +1,8 @@
 #import "ObjectBrokerApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "BrokerBatchDownloadV1Request.h"
+#import "BrokerGetAttachmentsV1Response.h"
 #import "BrokerGetAutocompleteV2Response.h"
 #import "BrokerGetListV1Response.h"
 #import "BrokerImportIntoEDMV1Request.h"
@@ -53,6 +55,157 @@ NSInteger kObjectBrokerApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from a Broker
+/// 
+///  @param pkiBrokerID  
+///
+///  @param brokerBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) brokerBatchDownloadV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    brokerBatchDownloadV1Request: (BrokerBatchDownloadV1Request*) brokerBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == nil) {
+        NSParameterAssert(pkiBrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiBrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectBrokerApiErrorDomain code:kObjectBrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'brokerBatchDownloadV1Request' is set
+    if (brokerBatchDownloadV1Request == nil) {
+        NSParameterAssert(brokerBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"brokerBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectBrokerApiErrorDomain code:kObjectBrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/broker/{pkiBrokerID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiBrokerID != nil) {
+        pathParams[@"pkiBrokerID"] = pkiBrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = brokerBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Broker's attachments
+/// 
+///  @param pkiBrokerID  
+///
+///  @returns BrokerGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) brokerGetAttachmentsV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiBrokerID' is set
+    if (pkiBrokerID == nil) {
+        NSParameterAssert(pkiBrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiBrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectBrokerApiErrorDomain code:kObjectBrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/broker/{pkiBrokerID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiBrokerID != nil) {
+        pathParams[@"pkiBrokerID"] = pkiBrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"BrokerGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((BrokerGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Brokers and IDs

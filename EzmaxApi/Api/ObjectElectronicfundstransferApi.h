@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "ElectronicfundstransferBatchDownloadV1Request.h"
+#import "ElectronicfundstransferGetAttachmentsV1Response.h"
 #import "ElectronicfundstransferGetCommunicationCountV1Response.h"
 #import "ElectronicfundstransferGetCommunicationListV1Response.h"
 #import "ElectronicfundstransferGetCommunicationrecipientsV1Response.h"
@@ -29,13 +31,43 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from an Electronicfundstransfer
+/// 
+///
+/// @param pkiElectronicfundstransferID 
+/// @param electronicfundstransferBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) electronicfundstransferBatchDownloadV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    electronicfundstransferBatchDownloadV1Request: (ElectronicfundstransferBatchDownloadV1Request*) electronicfundstransferBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Electronicfundstransfer's attachments
+/// 
+///
+/// @param pkiElectronicfundstransferID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ElectronicfundstransferGetAttachmentsV1Response*
+-(NSURLSessionTask*) electronicfundstransferGetAttachmentsV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    completionHandler: (void (^)(ElectronicfundstransferGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Communication count
 /// 
 ///
 /// @param pkiElectronicfundstransferID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ElectronicfundstransferGetCommunicationCountV1Response*
 -(NSURLSessionTask*) electronicfundstransferGetCommunicationCountV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
@@ -48,7 +80,7 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 /// @param pkiElectronicfundstransferID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ElectronicfundstransferGetCommunicationListV1Response*
 -(NSURLSessionTask*) electronicfundstransferGetCommunicationListV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
@@ -61,7 +93,7 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 /// @param pkiElectronicfundstransferID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ElectronicfundstransferGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) electronicfundstransferGetCommunicationrecipientsV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
@@ -74,7 +106,7 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 /// @param pkiElectronicfundstransferID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ElectronicfundstransferGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) electronicfundstransferGetCommunicationsendersV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
@@ -88,7 +120,7 @@ extern NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode;
 /// @param electronicfundstransferImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ElectronicfundstransferImportIntoEDMV1Response*
 -(NSURLSessionTask*) electronicfundstransferImportIntoEDMV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID

@@ -18,8 +18,9 @@ Name | Type | Description | Notes
 **iAgentLongdistancecode** | **NSNumber*** | The longdistancecode of the Agent | 
 **iAgentBannernumber** | **NSNumber*** | The bannernumber of the Agent | 
 **sAgentRealestateassociationlicense** | **NSString*** | The realestateassociationlicense of the Agent | 
-**dtAgentHiredate** | **NSString*** | The hiredate of the Agent | [optional] 
-**dtAgentLeavedate** | **NSString*** | The leavedate of the Agent | [optional] 
+**dtAgentPermitexpiration** | **NSString*** | The expiration date of permit of the Agent | [optional] 
+**dtAgentHiredate** | **NSString*** | The hire date of the Agent | [optional] 
+**dtAgentLeavedate** | **NSString*** | The leave date of the Agent | [optional] 
 **dtAgentContractdate** | **NSString*** | The contract date of the Agent | [optional] 
 **dtAgentTransferdate** | **NSString*** | The transfer date of the Agent | [optional] 
 **dtAgentSenioritydate** | **NSString*** | The seniority date of the Agent | [optional] 

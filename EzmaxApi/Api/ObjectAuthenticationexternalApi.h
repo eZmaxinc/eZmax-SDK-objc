@@ -51,7 +51,7 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 /// @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return AuthenticationexternalDeleteObjectV1Response*
 -(NSURLSessionTask*) authenticationexternalDeleteObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
@@ -65,8 +65,8 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 /// @param authenticationexternalEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return AuthenticationexternalEditObjectV1Response*
 -(NSURLSessionTask*) authenticationexternalEditObjectV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
@@ -119,7 +119,7 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 /// @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return AuthenticationexternalGetObjectV2Response*
 -(NSURLSessionTask*) authenticationexternalGetObjectV2WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID
@@ -133,7 +133,7 @@ extern NSInteger kObjectAuthenticationexternalApiMissingParamErrorCode;
 /// @param body 
 /// 
 ///  code:200 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return AuthenticationexternalResetAuthorizationV1Response*
 -(NSURLSessionTask*) authenticationexternalResetAuthorizationV1WithPkiAuthenticationexternalID: (NSNumber*) pkiAuthenticationexternalID

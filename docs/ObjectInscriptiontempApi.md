@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**inscriptiontempBatchDownloadV1**](ObjectInscriptiontempApi.md#inscriptiontempbatchdownloadv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload | Download multiples attachments from a Inscriptiontemp
+[**inscriptiontempGetAttachmentsV1**](ObjectInscriptiontempApi.md#inscriptiontempgetattachmentsv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments | Retrieve Inscriptiontemp&#39;s attachments
 [**inscriptiontempGetCommunicationCountV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationcountv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount | Retrieve Communication count
 [**inscriptiontempGetCommunicationListV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationlistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
 [**inscriptiontempGetCommunicationrecipientsV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationrecipientsv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp&#39;s Communicationrecipient
@@ -11,6 +13,120 @@ Method | HTTP request | Description
 [**inscriptiontempGetListV1**](ObjectInscriptiontempApi.md#inscriptiontempgetlistv1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list
 [**inscriptiontempImportIntoEDMV1**](ObjectInscriptiontempApi.md#inscriptiontempimportintoedmv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp
 
+
+# **inscriptiontempBatchDownloadV1**
+```objc
+-(NSURLSessionTask*) inscriptiontempBatchDownloadV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    inscriptiontempBatchDownloadV1Request: (InscriptiontempBatchDownloadV1Request*) inscriptiontempBatchDownloadV1Request
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Download multiples attachments from a Inscriptiontemp
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInscriptiontempID = @56; // 
+InscriptiontempBatchDownloadV1Request* inscriptiontempBatchDownloadV1Request = [[InscriptiontempBatchDownloadV1Request alloc] init]; // 
+
+ObjectInscriptiontempApi*apiInstance = [[ObjectInscriptiontempApi alloc] init];
+
+// Download multiples attachments from a Inscriptiontemp
+[apiInstance inscriptiontempBatchDownloadV1WithPkiInscriptiontempID:pkiInscriptiontempID
+              inscriptiontempBatchDownloadV1Request:inscriptiontempBatchDownloadV1Request
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptiontempApi->inscriptiontempBatchDownloadV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptiontempID** | **NSNumber***|  | 
+ **inscriptiontempBatchDownloadV1Request** | [**InscriptiontempBatchDownloadV1Request***](InscriptiontempBatchDownloadV1Request.md)|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptiontempGetAttachmentsV1**
+```objc
+-(NSURLSessionTask*) inscriptiontempGetAttachmentsV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+        completionHandler: (void (^)(InscriptiontempGetAttachmentsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Inscriptiontemp's attachments
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiInscriptiontempID = @56; // 
+
+ObjectInscriptiontempApi*apiInstance = [[ObjectInscriptiontempApi alloc] init];
+
+// Retrieve Inscriptiontemp's attachments
+[apiInstance inscriptiontempGetAttachmentsV1WithPkiInscriptiontempID:pkiInscriptiontempID
+          completionHandler: ^(InscriptiontempGetAttachmentsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectInscriptiontempApi->inscriptiontempGetAttachmentsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptiontempID** | **NSNumber***|  | 
+
+### Return type
+
+[**InscriptiontempGetAttachmentsV1Response***](InscriptiontempGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **inscriptiontempGetCommunicationCountV1**
 ```objc

@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "SupplierBatchDownloadV1Request.h"
+#import "SupplierGetAttachmentsV1Response.h"
 #import "SupplierGetListV1Response.h"
 #import "SupplierImportIntoEDMV1Request.h"
 #import "SupplierImportIntoEDMV1Response.h"
@@ -26,6 +28,34 @@ extern NSString* kObjectSupplierApiErrorDomain;
 extern NSInteger kObjectSupplierApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Download multiples attachments from a Supplier
+/// 
+///
+/// @param pkiSupplierID 
+/// @param supplierBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) supplierBatchDownloadV1WithPkiSupplierID: (NSNumber*) pkiSupplierID
+    supplierBatchDownloadV1Request: (SupplierBatchDownloadV1Request*) supplierBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Supplier's attachments
+/// 
+///
+/// @param pkiSupplierID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return SupplierGetAttachmentsV1Response*
+-(NSURLSessionTask*) supplierGetAttachmentsV1WithPkiSupplierID: (NSNumber*) pkiSupplierID
+    completionHandler: (void (^)(SupplierGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Supplier list
 /// 
@@ -55,7 +85,7 @@ extern NSInteger kObjectSupplierApiMissingParamErrorCode;
 /// @param supplierImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return SupplierImportIntoEDMV1Response*
 -(NSURLSessionTask*) supplierImportIntoEDMV1WithPkiSupplierID: (NSNumber*) pkiSupplierID

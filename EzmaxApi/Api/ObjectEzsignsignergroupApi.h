@@ -50,7 +50,7 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 /// @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignsignergroupDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignsignergroupDeleteObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
@@ -64,8 +64,8 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 /// @param ezsignsignergroupEditEzsignsignergroupmembershipsV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignsignergroupEditEzsignsignergroupmembershipsV1Response*
 -(NSURLSessionTask*) ezsignsignergroupEditEzsignsignergroupmembershipsV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
@@ -80,7 +80,7 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 /// @param ezsignsignergroupEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignsignergroupEditObjectV1Response*
 -(NSURLSessionTask*) ezsignsignergroupEditObjectV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
@@ -94,7 +94,7 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 /// @param pkiEzsignsignergroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignsignergroupGetEzsignsignergroupmembershipsV1Response*
 -(NSURLSessionTask*) ezsignsignergroupGetEzsignsignergroupmembershipsV1WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID
@@ -107,7 +107,7 @@ extern NSInteger kObjectEzsignsignergroupApiMissingParamErrorCode;
 /// @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignsignergroupGetObjectV2Response*
 -(NSURLSessionTask*) ezsignsignergroupGetObjectV2WithPkiEzsignsignergroupID: (NSNumber*) pkiEzsignsignergroupID

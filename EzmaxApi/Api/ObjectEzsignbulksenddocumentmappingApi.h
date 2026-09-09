@@ -34,7 +34,7 @@ extern NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 /// @param ezsignbulksenddocumentmappingCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksenddocumentmappingCreateObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingCreateObjectV1WithEzsignbulksenddocumentmappingCreateObjectV1Request: (EzsignbulksenddocumentmappingCreateObjectV1Request*) ezsignbulksenddocumentmappingCreateObjectV1Request
@@ -47,7 +47,7 @@ extern NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksenddocumentmappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksenddocumentmappingDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingDeleteObjectV1WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
@@ -60,7 +60,7 @@ extern NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksenddocumentmappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksenddocumentmappingGetObjectV2Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingGetObjectV2WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID
@@ -73,7 +73,7 @@ extern NSInteger kObjectEzsignbulksenddocumentmappingApiMissingParamErrorCode;
 /// @param pkiEzsignbulksenddocumentmappingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignbulksenddocumentmappingGetObjectV3Response*
 -(NSURLSessionTask*) ezsignbulksenddocumentmappingGetObjectV3WithPkiEzsignbulksenddocumentmappingID: (NSNumber*) pkiEzsignbulksenddocumentmappingID

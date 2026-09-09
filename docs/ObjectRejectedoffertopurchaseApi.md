@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**rejectedoffertopurchaseBatchDownloadV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasebatchdownloadv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase
+[**rejectedoffertopurchaseGetAttachmentsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetattachmentsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase&#39;s attachments
 [**rejectedoffertopurchaseGetCommunicationCountV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationcountv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count
 [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationlistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationrecipientsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
@@ -11,6 +13,120 @@ Method | HTTP request | Description
 [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetlistv1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list
 [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseimportintoedmv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase
 
+
+# **rejectedoffertopurchaseBatchDownloadV1**
+```objc
+-(NSURLSessionTask*) rejectedoffertopurchaseBatchDownloadV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+    rejectedoffertopurchaseBatchDownloadV1Request: (RejectedoffertopurchaseBatchDownloadV1Request*) rejectedoffertopurchaseBatchDownloadV1Request
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Download multiples attachments from a Rejectedoffertopurchase
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiRejectedoffertopurchaseID = @56; // 
+RejectedoffertopurchaseBatchDownloadV1Request* rejectedoffertopurchaseBatchDownloadV1Request = [[RejectedoffertopurchaseBatchDownloadV1Request alloc] init]; // 
+
+ObjectRejectedoffertopurchaseApi*apiInstance = [[ObjectRejectedoffertopurchaseApi alloc] init];
+
+// Download multiples attachments from a Rejectedoffertopurchase
+[apiInstance rejectedoffertopurchaseBatchDownloadV1WithPkiRejectedoffertopurchaseID:pkiRejectedoffertopurchaseID
+              rejectedoffertopurchaseBatchDownloadV1Request:rejectedoffertopurchaseBatchDownloadV1Request
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectRejectedoffertopurchaseApi->rejectedoffertopurchaseBatchDownloadV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiRejectedoffertopurchaseID** | **NSNumber***|  | 
+ **rejectedoffertopurchaseBatchDownloadV1Request** | [**RejectedoffertopurchaseBatchDownloadV1Request***](RejectedoffertopurchaseBatchDownloadV1Request.md)|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **rejectedoffertopurchaseGetAttachmentsV1**
+```objc
+-(NSURLSessionTask*) rejectedoffertopurchaseGetAttachmentsV1WithPkiRejectedoffertopurchaseID: (NSNumber*) pkiRejectedoffertopurchaseID
+        completionHandler: (void (^)(RejectedoffertopurchaseGetAttachmentsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Rejectedoffertopurchase's attachments
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiRejectedoffertopurchaseID = @56; // 
+
+ObjectRejectedoffertopurchaseApi*apiInstance = [[ObjectRejectedoffertopurchaseApi alloc] init];
+
+// Retrieve Rejectedoffertopurchase's attachments
+[apiInstance rejectedoffertopurchaseGetAttachmentsV1WithPkiRejectedoffertopurchaseID:pkiRejectedoffertopurchaseID
+          completionHandler: ^(RejectedoffertopurchaseGetAttachmentsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectRejectedoffertopurchaseApi->rejectedoffertopurchaseGetAttachmentsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiRejectedoffertopurchaseID** | **NSNumber***|  | 
+
+### Return type
+
+[**RejectedoffertopurchaseGetAttachmentsV1Response***](RejectedoffertopurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **rejectedoffertopurchaseGetCommunicationCountV1**
 ```objc

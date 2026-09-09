@@ -63,7 +63,7 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 /// @param pkiDiscussionID The unique ID of the Discussion
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return DiscussionDeleteObjectV1Response*
 -(NSURLSessionTask*) discussionDeleteObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
@@ -76,7 +76,7 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 /// @param pkiDiscussionID The unique ID of the Discussion
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return DiscussionGetObjectV2Response*
 -(NSURLSessionTask*) discussionGetObjectV2WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
@@ -90,8 +90,8 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 /// @param discussionPatchObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return DiscussionPatchObjectV1Response*
 -(NSURLSessionTask*) discussionPatchObjectV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID
@@ -106,8 +106,8 @@ extern NSInteger kObjectDiscussionApiMissingParamErrorCode;
 /// @param discussionUpdateDiscussionreadstatusV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return DiscussionUpdateDiscussionreadstatusV1Response*
 -(NSURLSessionTask*) discussionUpdateDiscussionreadstatusV1WithPkiDiscussionID: (NSNumber*) pkiDiscussionID

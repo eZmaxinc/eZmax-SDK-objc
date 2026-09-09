@@ -34,7 +34,7 @@ extern NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode;
 /// @param ezsigntemplatepackagemembershipCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagemembershipCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipCreateObjectV1WithEzsigntemplatepackagemembershipCreateObjectV1Request: (EzsigntemplatepackagemembershipCreateObjectV1Request*) ezsigntemplatepackagemembershipCreateObjectV1Request
@@ -47,7 +47,7 @@ extern NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagemembershipID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagemembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipDeleteObjectV1WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID
@@ -60,7 +60,7 @@ extern NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagemembershipID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagemembershipGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipGetObjectV2WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID
@@ -73,7 +73,7 @@ extern NSInteger kObjectEzsigntemplatepackagemembershipApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagemembershipID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagemembershipGetObjectV3Response*
 -(NSURLSessionTask*) ezsigntemplatepackagemembershipGetObjectV3WithPkiEzsigntemplatepackagemembershipID: (NSNumber*) pkiEzsigntemplatepackagemembershipID

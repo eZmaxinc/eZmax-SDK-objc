@@ -47,7 +47,7 @@ extern NSInteger kObjectEzsigntemplateannotationApiMissingParamErrorCode;
 /// @param pkiEzsigntemplateannotationID The unique ID of the Ezsigntemplateannotation
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateannotationDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplateannotationDeleteObjectV1WithPkiEzsigntemplateannotationID: (NSNumber*) pkiEzsigntemplateannotationID
@@ -61,8 +61,8 @@ extern NSInteger kObjectEzsigntemplateannotationApiMissingParamErrorCode;
 /// @param ezsigntemplateannotationEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateannotationEditObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplateannotationEditObjectV1WithPkiEzsigntemplateannotationID: (NSNumber*) pkiEzsigntemplateannotationID
@@ -76,7 +76,7 @@ extern NSInteger kObjectEzsigntemplateannotationApiMissingParamErrorCode;
 /// @param pkiEzsigntemplateannotationID The unique ID of the Ezsigntemplateannotation
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateannotationGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplateannotationGetObjectV2WithPkiEzsigntemplateannotationID: (NSNumber*) pkiEzsigntemplateannotationID

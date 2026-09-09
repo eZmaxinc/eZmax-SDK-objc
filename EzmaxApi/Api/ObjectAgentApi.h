@@ -1,4 +1,6 @@
 #import <Foundation/Foundation.h>
+#import "AgentBatchDownloadV1Request.h"
+#import "AgentGetAttachmentsV1Response.h"
 #import "AgentGetAutocompleteV2Response.h"
 #import "AgentGetListV1Response.h"
 #import "AgentImportIntoEDMV1Request.h"
@@ -27,6 +29,34 @@ extern NSString* kObjectAgentApiErrorDomain;
 extern NSInteger kObjectAgentApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Download multiples attachments from a Agent
+/// 
+///
+/// @param pkiAgentID 
+/// @param agentBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) agentBatchDownloadV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    agentBatchDownloadV1Request: (AgentBatchDownloadV1Request*) agentBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Agent's attachments
+/// 
+///
+/// @param pkiAgentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return AgentGetAttachmentsV1Response*
+-(NSURLSessionTask*) agentGetAttachmentsV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Agents and IDs
 /// Get the list of Agent to be used in a dropdown or autocomplete control.
@@ -74,7 +104,7 @@ extern NSInteger kObjectAgentApiMissingParamErrorCode;
 /// @param agentImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return AgentImportIntoEDMV1Response*
 -(NSURLSessionTask*) agentImportIntoEDMV1WithPkiAgentID: (NSNumber*) pkiAgentID

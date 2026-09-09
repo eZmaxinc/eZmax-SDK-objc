@@ -56,7 +56,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param pkiWebhookID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return WebhookDeleteObjectV1Response*
 -(NSURLSessionTask*) webhookDeleteObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
@@ -70,7 +70,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param webhookEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return WebhookEditObjectV1Response*
 -(NSURLSessionTask*) webhookEditObjectV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
@@ -85,7 +85,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param eWebhookHistoryinterval The number of days to return
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:429 message:"Too Many Requests"
 ///
 /// @return WebhookGetHistoryV1Response*
@@ -121,7 +121,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param pkiWebhookID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return WebhookGetObjectV2Response*
 -(NSURLSessionTask*) webhookGetObjectV2WithPkiWebhookID: (NSNumber*) pkiWebhookID
@@ -135,7 +135,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param webhookRegenerateApikeyV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return WebhookRegenerateApikeyV1Response*
 -(NSURLSessionTask*) webhookRegenerateApikeyV1WithPkiWebhookID: (NSNumber*) pkiWebhookID
@@ -149,7 +149,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param webhookSendWebhookV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return WebhookSendWebhookV1Response*
 -(NSURLSessionTask*) webhookSendWebhookV1WithWebhookSendWebhookV1Request: (WebhookSendWebhookV1Request*) webhookSendWebhookV1Request
@@ -163,7 +163,7 @@ extern NSInteger kObjectWebhookApiMissingParamErrorCode;
 /// @param body 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return WebhookTestV1Response*
 -(NSURLSessionTask*) webhookTestV1WithPkiWebhookID: (NSNumber*) pkiWebhookID

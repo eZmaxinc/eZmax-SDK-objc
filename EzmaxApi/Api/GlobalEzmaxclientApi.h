@@ -31,7 +31,7 @@ extern NSInteger kGlobalEzmaxclientApiMissingParamErrorCode;
 /// @param pksEzmaxclientOs 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return GlobalEzmaxclientVersionV1Response*
 -(NSURLSessionTask*) globalEzmaxclientVersionV1WithPksEzmaxclientOs: (FieldPksEzmaxclientOs) pksEzmaxclientOs

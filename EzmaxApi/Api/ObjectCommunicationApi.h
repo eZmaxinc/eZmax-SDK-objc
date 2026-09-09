@@ -31,7 +31,7 @@ extern NSInteger kObjectCommunicationApiMissingParamErrorCode;
 /// @param pkiCommunicationID 
 /// 
 ///  code:302 message:"The user has been redirected",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return void
 -(NSURLSessionTask*) communicationGetCommunicationBodyV1WithPkiCommunicationID: (NSNumber*) pkiCommunicationID

@@ -1,6 +1,8 @@
 #import "ObjectAgentApi.h"
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
+#import "AgentBatchDownloadV1Request.h"
+#import "AgentGetAttachmentsV1Response.h"
 #import "AgentGetAutocompleteV2Response.h"
 #import "AgentGetListV1Response.h"
 #import "AgentImportIntoEDMV1Request.h"
@@ -53,6 +55,157 @@ NSInteger kObjectAgentApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from a Agent
+/// 
+///  @param pkiAgentID  
+///
+///  @param agentBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) agentBatchDownloadV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    agentBatchDownloadV1Request: (AgentBatchDownloadV1Request*) agentBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == nil) {
+        NSParameterAssert(pkiAgentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiAgentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectAgentApiErrorDomain code:kObjectAgentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'agentBatchDownloadV1Request' is set
+    if (agentBatchDownloadV1Request == nil) {
+        NSParameterAssert(agentBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"agentBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectAgentApiErrorDomain code:kObjectAgentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/agent/{pkiAgentID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiAgentID != nil) {
+        pathParams[@"pkiAgentID"] = pkiAgentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = agentBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Agent's attachments
+/// 
+///  @param pkiAgentID  
+///
+///  @returns AgentGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) agentGetAttachmentsV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiAgentID' is set
+    if (pkiAgentID == nil) {
+        NSParameterAssert(pkiAgentID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiAgentID"] };
+            NSError* error = [NSError errorWithDomain:kObjectAgentApiErrorDomain code:kObjectAgentApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/agent/{pkiAgentID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiAgentID != nil) {
+        pathParams[@"pkiAgentID"] = pkiAgentID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"AgentGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((AgentGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Agents and IDs

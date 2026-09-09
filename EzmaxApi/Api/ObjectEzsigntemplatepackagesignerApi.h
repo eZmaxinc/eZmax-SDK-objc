@@ -64,7 +64,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagesignerID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignerDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignerDeleteObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
@@ -78,8 +78,8 @@ extern NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 /// @param ezsigntemplatepackagesignerEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignerEditObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignerEditObjectV1WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
@@ -94,8 +94,8 @@ extern NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 /// @param ezsigntemplatepackagesignerEditObjectV2Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignerEditObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignerEditObjectV2WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
@@ -109,7 +109,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagesignerID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignerGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignerGetObjectV2WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID
@@ -122,7 +122,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignerApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepackagesignerID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignerGetObjectV3Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignerGetObjectV3WithPkiEzsigntemplatepackagesignerID: (NSNumber*) pkiEzsigntemplatepackagesignerID

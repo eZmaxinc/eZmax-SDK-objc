@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "EmployeeBatchDownloadV1Request.h"
+#import "EmployeeGetAttachmentsV1Response.h"
 #import "EmployeeGetListV1Response.h"
 #import "EmployeeImportIntoEDMV1Request.h"
 #import "EmployeeImportIntoEDMV1Response.h"
@@ -26,6 +28,34 @@ extern NSString* kObjectEmployeeApiErrorDomain;
 extern NSInteger kObjectEmployeeApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Download multiples attachments from a Employee
+/// 
+///
+/// @param pkiEmployeeID 
+/// @param employeeBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) employeeBatchDownloadV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    employeeBatchDownloadV1Request: (EmployeeBatchDownloadV1Request*) employeeBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Employee's attachments
+/// 
+///
+/// @param pkiEmployeeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return EmployeeGetAttachmentsV1Response*
+-(NSURLSessionTask*) employeeGetAttachmentsV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    completionHandler: (void (^)(EmployeeGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Employee list
 /// 
@@ -55,7 +85,7 @@ extern NSInteger kObjectEmployeeApiMissingParamErrorCode;
 /// @param employeeImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EmployeeImportIntoEDMV1Response*
 -(NSURLSessionTask*) employeeImportIntoEDMV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID

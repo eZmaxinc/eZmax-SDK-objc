@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**buyercontractBatchDownloadV1**](ObjectBuyercontractApi.md#buyercontractbatchdownloadv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/batchDownload | Download multiples attachments from a Buyercontract
+[**buyercontractGetAttachmentsV1**](ObjectBuyercontractApi.md#buyercontractgetattachmentsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getAttachments | Retrieve Buyercontract&#39;s attachments
 [**buyercontractGetCommunicationCountV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationcountv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount | Retrieve Communication count
 [**buyercontractGetCommunicationListV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationlistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 [**buyercontractGetCommunicationrecipientsV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationrecipientsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract&#39;s Communicationrecipient
@@ -11,6 +13,120 @@ Method | HTTP request | Description
 [**buyercontractGetListV1**](ObjectBuyercontractApi.md#buyercontractgetlistv1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list
 [**buyercontractImportIntoEDMV1**](ObjectBuyercontractApi.md#buyercontractimportintoedmv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract
 
+
+# **buyercontractBatchDownloadV1**
+```objc
+-(NSURLSessionTask*) buyercontractBatchDownloadV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+    buyercontractBatchDownloadV1Request: (BuyercontractBatchDownloadV1Request*) buyercontractBatchDownloadV1Request
+        completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+```
+
+Download multiples attachments from a Buyercontract
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBuyercontractID = @56; // 
+BuyercontractBatchDownloadV1Request* buyercontractBatchDownloadV1Request = [[BuyercontractBatchDownloadV1Request alloc] init]; // 
+
+ObjectBuyercontractApi*apiInstance = [[ObjectBuyercontractApi alloc] init];
+
+// Download multiples attachments from a Buyercontract
+[apiInstance buyercontractBatchDownloadV1WithPkiBuyercontractID:pkiBuyercontractID
+              buyercontractBatchDownloadV1Request:buyercontractBatchDownloadV1Request
+          completionHandler: ^(NSURL* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBuyercontractApi->buyercontractBatchDownloadV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBuyercontractID** | **NSNumber***|  | 
+ **buyercontractBatchDownloadV1Request** | [**BuyercontractBatchDownloadV1Request***](BuyercontractBatchDownloadV1Request.md)|  | 
+
+### Return type
+
+**NSURL***
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **buyercontractGetAttachmentsV1**
+```objc
+-(NSURLSessionTask*) buyercontractGetAttachmentsV1WithPkiBuyercontractID: (NSNumber*) pkiBuyercontractID
+        completionHandler: (void (^)(BuyercontractGetAttachmentsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Buyercontract's attachments
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBuyercontractID = @56; // 
+
+ObjectBuyercontractApi*apiInstance = [[ObjectBuyercontractApi alloc] init];
+
+// Retrieve Buyercontract's attachments
+[apiInstance buyercontractGetAttachmentsV1WithPkiBuyercontractID:pkiBuyercontractID
+          completionHandler: ^(BuyercontractGetAttachmentsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBuyercontractApi->buyercontractGetAttachmentsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBuyercontractID** | **NSNumber***|  | 
+
+### Return type
+
+[**BuyercontractGetAttachmentsV1Response***](BuyercontractGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **buyercontractGetCommunicationCountV1**
 ```objc

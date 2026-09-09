@@ -45,7 +45,7 @@ extern NSInteger kObjectEzsigndiscussionApiMissingParamErrorCode;
 /// @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigndiscussionDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigndiscussionDeleteObjectV1WithPkiEzsigndiscussionID: (NSNumber*) pkiEzsigndiscussionID
@@ -58,7 +58,7 @@ extern NSInteger kObjectEzsigndiscussionApiMissingParamErrorCode;
 /// @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigndiscussionGetObjectV2Response*
 -(NSURLSessionTask*) ezsigndiscussionGetObjectV2WithPkiEzsigndiscussionID: (NSNumber*) pkiEzsigndiscussionID

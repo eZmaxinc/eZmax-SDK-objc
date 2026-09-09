@@ -37,7 +37,7 @@ extern NSInteger kObjectPaymenttermApiMissingParamErrorCode;
 /// @param paymenttermCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return PaymenttermCreateObjectV1Response*
 -(NSURLSessionTask*) paymenttermCreateObjectV1WithPaymenttermCreateObjectV1Request: (PaymenttermCreateObjectV1Request*) paymenttermCreateObjectV1Request
@@ -51,8 +51,8 @@ extern NSInteger kObjectPaymenttermApiMissingParamErrorCode;
 /// @param paymenttermEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return PaymenttermEditObjectV1Response*
 -(NSURLSessionTask*) paymenttermEditObjectV1WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID
@@ -105,7 +105,7 @@ extern NSInteger kObjectPaymenttermApiMissingParamErrorCode;
 /// @param pkiPaymenttermID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return PaymenttermGetObjectV2Response*
 -(NSURLSessionTask*) paymenttermGetObjectV2WithPkiPaymenttermID: (NSNumber*) pkiPaymenttermID

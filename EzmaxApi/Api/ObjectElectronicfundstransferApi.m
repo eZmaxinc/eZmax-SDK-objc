@@ -2,6 +2,8 @@
 #import "QueryParamCollection.h"
 #import "ApiClient.h"
 #import "CommonResponseError.h"
+#import "ElectronicfundstransferBatchDownloadV1Request.h"
+#import "ElectronicfundstransferGetAttachmentsV1Response.h"
 #import "ElectronicfundstransferGetCommunicationCountV1Response.h"
 #import "ElectronicfundstransferGetCommunicationListV1Response.h"
 #import "ElectronicfundstransferGetCommunicationrecipientsV1Response.h"
@@ -54,6 +56,157 @@ NSInteger kObjectElectronicfundstransferApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from an Electronicfundstransfer
+/// 
+///  @param pkiElectronicfundstransferID  
+///
+///  @param electronicfundstransferBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) electronicfundstransferBatchDownloadV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    electronicfundstransferBatchDownloadV1Request: (ElectronicfundstransferBatchDownloadV1Request*) electronicfundstransferBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == nil) {
+        NSParameterAssert(pkiElectronicfundstransferID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiElectronicfundstransferID"] };
+            NSError* error = [NSError errorWithDomain:kObjectElectronicfundstransferApiErrorDomain code:kObjectElectronicfundstransferApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'electronicfundstransferBatchDownloadV1Request' is set
+    if (electronicfundstransferBatchDownloadV1Request == nil) {
+        NSParameterAssert(electronicfundstransferBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"electronicfundstransferBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectElectronicfundstransferApiErrorDomain code:kObjectElectronicfundstransferApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiElectronicfundstransferID != nil) {
+        pathParams[@"pkiElectronicfundstransferID"] = pkiElectronicfundstransferID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = electronicfundstransferBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Electronicfundstransfer's attachments
+/// 
+///  @param pkiElectronicfundstransferID  
+///
+///  @returns ElectronicfundstransferGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) electronicfundstransferGetAttachmentsV1WithPkiElectronicfundstransferID: (NSNumber*) pkiElectronicfundstransferID
+    completionHandler: (void (^)(ElectronicfundstransferGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiElectronicfundstransferID' is set
+    if (pkiElectronicfundstransferID == nil) {
+        NSParameterAssert(pkiElectronicfundstransferID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiElectronicfundstransferID"] };
+            NSError* error = [NSError errorWithDomain:kObjectElectronicfundstransferApiErrorDomain code:kObjectElectronicfundstransferApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiElectronicfundstransferID != nil) {
+        pathParams[@"pkiElectronicfundstransferID"] = pkiElectronicfundstransferID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ElectronicfundstransferGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ElectronicfundstransferGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Communication count

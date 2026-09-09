@@ -33,8 +33,8 @@ extern NSInteger kObjectEzsignuserApiMissingParamErrorCode;
 /// @param ezsignuserEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignuserEditObjectV1Response*
 -(NSURLSessionTask*) ezsignuserEditObjectV1WithPkiEzsignuserID: (NSNumber*) pkiEzsignuserID
@@ -48,7 +48,7 @@ extern NSInteger kObjectEzsignuserApiMissingParamErrorCode;
 /// @param pkiEzsignuserID The unique ID of the Ezsignuser
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignuserGetObjectV2Response*
 -(NSURLSessionTask*) ezsignuserGetObjectV2WithPkiEzsignuserID: (NSNumber*) pkiEzsignuserID

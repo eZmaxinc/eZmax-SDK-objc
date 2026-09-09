@@ -3,6 +3,8 @@
 #import "ApiClient.h"
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "InscriptiontempBatchDownloadV1Request.h"
+#import "InscriptiontempGetAttachmentsV1Response.h"
 #import "InscriptiontempGetCommunicationCountV1Response.h"
 #import "InscriptiontempGetCommunicationListV1Response.h"
 #import "InscriptiontempGetCommunicationrecipientsV1Response.h"
@@ -56,6 +58,157 @@ NSInteger kObjectInscriptiontempApiMissingParamErrorCode = 234513;
 }
 
 #pragma mark - Api Methods
+
+///
+/// Download multiples attachments from a Inscriptiontemp
+/// 
+///  @param pkiInscriptiontempID  
+///
+///  @param inscriptiontempBatchDownloadV1Request  
+///
+///  @returns NSURL*
+///
+-(NSURLSessionTask*) inscriptiontempBatchDownloadV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    inscriptiontempBatchDownloadV1Request: (InscriptiontempBatchDownloadV1Request*) inscriptiontempBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == nil) {
+        NSParameterAssert(pkiInscriptiontempID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptiontempID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptiontempApiErrorDomain code:kObjectInscriptiontempApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    // verify the required parameter 'inscriptiontempBatchDownloadV1Request' is set
+    if (inscriptiontempBatchDownloadV1Request == nil) {
+        NSParameterAssert(inscriptiontempBatchDownloadV1Request);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"inscriptiontempBatchDownloadV1Request"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptiontempApiErrorDomain code:kObjectInscriptiontempApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptiontempID != nil) {
+        pathParams[@"pkiInscriptiontempID"] = pkiInscriptiontempID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/zip", @"text/xml", @"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[@"application/json"]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+    bodyParam = inscriptiontempBatchDownloadV1Request;
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"POST"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"NSURL*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((NSURL*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Inscriptiontemp's attachments
+/// 
+///  @param pkiInscriptiontempID  
+///
+///  @returns InscriptiontempGetAttachmentsV1Response*
+///
+-(NSURLSessionTask*) inscriptiontempGetAttachmentsV1WithPkiInscriptiontempID: (NSNumber*) pkiInscriptiontempID
+    completionHandler: (void (^)(InscriptiontempGetAttachmentsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiInscriptiontempID' is set
+    if (pkiInscriptiontempID == nil) {
+        NSParameterAssert(pkiInscriptiontempID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiInscriptiontempID"] };
+            NSError* error = [NSError errorWithDomain:kObjectInscriptiontempApiErrorDomain code:kObjectInscriptiontempApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiInscriptiontempID != nil) {
+        pathParams[@"pkiInscriptiontempID"] = pkiInscriptiontempID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"InscriptiontempGetAttachmentsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((InscriptiontempGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
 
 ///
 /// Retrieve Communication count

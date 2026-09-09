@@ -79,8 +79,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param userEditColleaguesV2Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserEditColleaguesV2Response*
 -(NSURLSessionTask*) userEditColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
@@ -95,8 +95,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param userEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserEditObjectV1Response*
 -(NSURLSessionTask*) userEditObjectV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -111,8 +111,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param userEditPermissionsV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserEditPermissionsV1Response*
 -(NSURLSessionTask*) userEditPermissionsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -126,7 +126,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetApikeysV1Response*
 -(NSURLSessionTask*) userGetApikeysV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -157,7 +157,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetColleaguesV2Response*
 -(NSURLSessionTask*) userGetColleaguesV2WithPkiUserID: (NSNumber*) pkiUserID
@@ -170,7 +170,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetEffectivePermissionsV1Response*
 -(NSURLSessionTask*) userGetEffectivePermissionsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -183,8 +183,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserGetEzmaxcustomeruserV1Response*
 -(NSURLSessionTask*) userGetEzmaxcustomeruserV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -218,7 +218,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID The unique ID of the User
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetObjectV2Response*
 -(NSURLSessionTask*) userGetObjectV2WithPkiUserID: (NSNumber*) pkiUserID
@@ -231,7 +231,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetPermissionsV1Response*
 -(NSURLSessionTask*) userGetPermissionsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -244,7 +244,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetSubnetsV1Response*
 -(NSURLSessionTask*) userGetSubnetsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -257,7 +257,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetUsergroupexternalsV1Response*
 -(NSURLSessionTask*) userGetUsergroupexternalsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -270,7 +270,7 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param pkiUserID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UserGetUsergroupsV1Response*
 -(NSURLSessionTask*) userGetUsergroupsV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -284,8 +284,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param userImpersonateV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserImpersonateV1Response*
 -(NSURLSessionTask*) userImpersonateV1WithPkiUserID: (NSNumber*) pkiUserID
@@ -300,8 +300,8 @@ extern NSInteger kObjectUserApiMissingParamErrorCode;
 /// @param body 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UserSendPasswordResetV1Response*
 -(NSURLSessionTask*) userSendPasswordResetV1WithPkiUserID: (NSNumber*) pkiUserID

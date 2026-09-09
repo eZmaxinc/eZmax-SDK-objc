@@ -50,7 +50,7 @@ extern NSInteger kObjectSupplyApiMissingParamErrorCode;
 /// @param pkiSupplyID The unique ID of the Supply
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return SupplyDeleteObjectV1Response*
 -(NSURLSessionTask*) supplyDeleteObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
@@ -64,8 +64,8 @@ extern NSInteger kObjectSupplyApiMissingParamErrorCode;
 /// @param supplyEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return SupplyEditObjectV1Response*
 -(NSURLSessionTask*) supplyEditObjectV1WithPkiSupplyID: (NSNumber*) pkiSupplyID
@@ -118,7 +118,7 @@ extern NSInteger kObjectSupplyApiMissingParamErrorCode;
 /// @param pkiSupplyID The unique ID of the Supply
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return SupplyGetObjectV2Response*
 -(NSURLSessionTask*) supplyGetObjectV2WithPkiSupplyID: (NSNumber*) pkiSupplyID

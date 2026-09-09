@@ -35,7 +35,7 @@ extern NSInteger kObjectTranqcontractApiMissingParamErrorCode;
 /// @param pkiTranqcontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return TranqcontractGetCommunicationCountV1Response*
 -(NSURLSessionTask*) tranqcontractGetCommunicationCountV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
@@ -48,7 +48,7 @@ extern NSInteger kObjectTranqcontractApiMissingParamErrorCode;
 /// @param pkiTranqcontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return TranqcontractGetCommunicationListV1Response*
 -(NSURLSessionTask*) tranqcontractGetCommunicationListV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
@@ -61,7 +61,7 @@ extern NSInteger kObjectTranqcontractApiMissingParamErrorCode;
 /// @param pkiTranqcontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return TranqcontractGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) tranqcontractGetCommunicationrecipientsV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
@@ -74,7 +74,7 @@ extern NSInteger kObjectTranqcontractApiMissingParamErrorCode;
 /// @param pkiTranqcontractID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return TranqcontractGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) tranqcontractGetCommunicationsendersV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID
@@ -88,7 +88,7 @@ extern NSInteger kObjectTranqcontractApiMissingParamErrorCode;
 /// @param tranqcontractImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return TranqcontractImportIntoEDMV1Response*
 -(NSURLSessionTask*) tranqcontractImportIntoEDMV1WithPkiTranqcontractID: (NSNumber*) pkiTranqcontractID

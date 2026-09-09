@@ -50,8 +50,8 @@ extern NSInteger kObjectEzsignsigningreasonApiMissingParamErrorCode;
 /// @param ezsignsigningreasonEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignsigningreasonEditObjectV1Response*
 -(NSURLSessionTask*) ezsignsigningreasonEditObjectV1WithPkiEzsignsigningreasonID: (NSNumber*) pkiEzsignsigningreasonID
@@ -104,7 +104,7 @@ extern NSInteger kObjectEzsignsigningreasonApiMissingParamErrorCode;
 /// @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignsigningreasonGetObjectV2Response*
 -(NSURLSessionTask*) ezsignsigningreasonGetObjectV2WithPkiEzsignsigningreasonID: (NSNumber*) pkiEzsignsigningreasonID

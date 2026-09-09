@@ -39,10 +39,10 @@
 @property(nonatomic) NSString* sInscriptiontypeNameX;
 
 @property(nonatomic) FieldEBuyercontractStep* eBuyercontractStep;
-/* The minimumprice of the Buyercontract 
+/* The minimum price of the Buyercontract 
  */
 @property(nonatomic) NSString* dBuyercontractMinimumprice;
-/* The maximumprice of the Buyercontract 
+/* The maximum price of the Buyercontract 
  */
 @property(nonatomic) NSString* dBuyercontractMaximumprice;
 
@@ -53,7 +53,7 @@
 /* The date of the Buyercontract 
  */
 @property(nonatomic) NSString* dtBuyercontractDate;
-/* The expirationdate of the Buyercontract [optional]
+/* The expiration date of the Buyercontract [optional]
  */
 @property(nonatomic) NSString* dtBuyercontractExpirationdate;
 /* Whether the buyercontract is active or not 

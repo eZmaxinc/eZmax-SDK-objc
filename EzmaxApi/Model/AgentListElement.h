@@ -70,10 +70,13 @@
 /* The realestateassociationlicense of the Agent 
  */
 @property(nonatomic) NSString* sAgentRealestateassociationlicense;
-/* The hiredate of the Agent [optional]
+/* The expiration date of permit of the Agent [optional]
+ */
+@property(nonatomic) NSString* dtAgentPermitexpiration;
+/* The hire date of the Agent [optional]
  */
 @property(nonatomic) NSString* dtAgentHiredate;
-/* The leavedate of the Agent [optional]
+/* The leave date of the Agent [optional]
  */
 @property(nonatomic) NSString* dtAgentLeavedate;
 /* The contract date of the Agent [optional]

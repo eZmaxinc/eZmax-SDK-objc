@@ -48,7 +48,7 @@ extern NSInteger kObjectDomainApiMissingParamErrorCode;
 /// @param pkiDomainID The unique ID of the Domain
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return DomainDeleteObjectV1Response*
 -(NSURLSessionTask*) domainDeleteObjectV1WithPkiDomainID: (NSNumber*) pkiDomainID
@@ -100,7 +100,7 @@ extern NSInteger kObjectDomainApiMissingParamErrorCode;
 /// @param pkiDomainID The unique ID of the Domain
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return DomainGetObjectV2Response*
 -(NSURLSessionTask*) domainGetObjectV2WithPkiDomainID: (NSNumber*) pkiDomainID

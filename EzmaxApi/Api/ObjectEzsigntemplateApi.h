@@ -42,7 +42,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param ezsigntemplateCopyV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateCopyV1Response*
 -(NSURLSessionTask*) ezsigntemplateCopyV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
@@ -68,7 +68,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param pkiEzsigntemplateID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplateDeleteObjectV1WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
@@ -82,8 +82,8 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param ezsigntemplateEditObjectV3Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateEditObjectV3Response*
 -(NSURLSessionTask*) ezsigntemplateEditObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
@@ -138,7 +138,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param pkiEzsigntemplateID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateGetObjectV3Response*
 -(NSURLSessionTask*) ezsigntemplateGetObjectV3WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID
@@ -151,7 +151,7 @@ extern NSInteger kObjectEzsigntemplateApiMissingParamErrorCode;
 /// @param pkiEzsigntemplateID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplateGetObjectV4Response*
 -(NSURLSessionTask*) ezsigntemplateGetObjectV4WithPkiEzsigntemplateID: (NSNumber*) pkiEzsigntemplateID

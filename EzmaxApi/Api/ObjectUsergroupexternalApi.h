@@ -52,8 +52,8 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 /// @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupexternalDeleteObjectV1Response*
 -(NSURLSessionTask*) usergroupexternalDeleteObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
@@ -67,8 +67,8 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 /// @param usergroupexternalEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return UsergroupexternalEditObjectV1Response*
 -(NSURLSessionTask*) usergroupexternalEditObjectV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
@@ -121,7 +121,7 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 /// @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupexternalGetObjectV2Response*
 -(NSURLSessionTask*) usergroupexternalGetObjectV2WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
@@ -134,7 +134,7 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 /// @param pkiUsergroupexternalID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupexternalGetUsergroupexternalmembershipsV1Response*
 -(NSURLSessionTask*) usergroupexternalGetUsergroupexternalmembershipsV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID
@@ -147,7 +147,7 @@ extern NSInteger kObjectUsergroupexternalApiMissingParamErrorCode;
 /// @param pkiUsergroupexternalID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return UsergroupexternalGetUsergroupsV1Response*
 -(NSURLSessionTask*) usergroupexternalGetUsergroupsV1WithPkiUsergroupexternalID: (NSNumber*) pkiUsergroupexternalID

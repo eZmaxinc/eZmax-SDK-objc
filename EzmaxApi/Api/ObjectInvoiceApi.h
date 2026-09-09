@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "InvoiceBatchDownloadV1Request.h"
 #import "InvoiceGetAttachmentsV1Response.h"
 #import "InvoiceGetCommunicationCountV1Response.h"
 #import "InvoiceGetCommunicationListV1Response.h"
@@ -30,13 +31,30 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from an Invoice
+/// 
+///
+/// @param pkiInvoiceID 
+/// @param invoiceBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) invoiceBatchDownloadV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
+    invoiceBatchDownloadV1Request: (InvoiceBatchDownloadV1Request*) invoiceBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
 /// Retrieve Invoice's Attachments
 /// 
 ///
 /// @param pkiInvoiceID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceGetAttachmentsV1Response*
 -(NSURLSessionTask*) invoiceGetAttachmentsV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
@@ -49,7 +67,7 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @param pkiInvoiceID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceGetCommunicationCountV1Response*
 -(NSURLSessionTask*) invoiceGetCommunicationCountV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
@@ -62,7 +80,7 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @param pkiInvoiceID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceGetCommunicationListV1Response*
 -(NSURLSessionTask*) invoiceGetCommunicationListV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
@@ -75,7 +93,7 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @param pkiInvoiceID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) invoiceGetCommunicationrecipientsV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
@@ -88,7 +106,7 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @param pkiInvoiceID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) invoiceGetCommunicationsendersV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID
@@ -102,7 +120,7 @@ extern NSInteger kObjectInvoiceApiMissingParamErrorCode;
 /// @param invoiceImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InvoiceImportIntoEDMV1Response*
 -(NSURLSessionTask*) invoiceImportIntoEDMV1WithPkiInvoiceID: (NSNumber*) pkiInvoiceID

@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
+#import "ExternalbrokerBatchDownloadV1Request.h"
+#import "ExternalbrokerGetAttachmentsV1Response.h"
 #import "ExternalbrokerImportIntoEDMV1Request.h"
 #import "ExternalbrokerImportIntoEDMV1Response.h"
 #import "Api.h"
@@ -25,6 +27,36 @@ extern NSInteger kObjectExternalbrokerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from an Externalbroker
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// @param externalbrokerBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) externalbrokerBatchDownloadV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    externalbrokerBatchDownloadV1Request: (ExternalbrokerBatchDownloadV1Request*) externalbrokerBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Externalbroker's attachments
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ExternalbrokerGetAttachmentsV1Response*
+-(NSURLSessionTask*) externalbrokerGetAttachmentsV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Import attachments into the Externalbroker
 /// 
 ///
@@ -32,7 +64,7 @@ extern NSInteger kObjectExternalbrokerApiMissingParamErrorCode;
 /// @param externalbrokerImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return ExternalbrokerImportIntoEDMV1Response*
 -(NSURLSessionTask*) externalbrokerImportIntoEDMV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID

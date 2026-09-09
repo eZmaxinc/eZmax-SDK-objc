@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
+#import "InscriptionBatchDownloadV1Request.h"
 #import "InscriptionGetAttachmentsV1Response.h"
 #import "InscriptionGetCommunicationCountV1Response.h"
 #import "InscriptionGetCommunicationListV1Response.h"
@@ -36,13 +37,30 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from an Inscription
+/// 
+///
+/// @param pkiInscriptionID 
+/// @param inscriptionBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) inscriptionBatchDownloadV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
+    inscriptionBatchDownloadV1Request: (InscriptionBatchDownloadV1Request*) inscriptionBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
 /// Retrieve Inscription's Attachments
 /// 
 ///
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetAttachmentsV1Response*
 -(NSURLSessionTask*) inscriptionGetAttachmentsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -55,7 +73,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetCommunicationCountV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationCountV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -68,7 +86,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetCommunicationListV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationListV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -81,7 +99,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetCommunicationrecipientsV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationrecipientsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -94,7 +112,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetCommunicationsendersV1Response*
 -(NSURLSessionTask*) inscriptionGetCommunicationsendersV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -107,7 +125,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetInscriptionnotauthenticatedsV1Response*
 -(NSURLSessionTask*) inscriptionGetInscriptionnotauthenticatedsV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -141,7 +159,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param pkiInscriptionID The unique ID of the Inscription
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionGetObjectV2Response*
 -(NSURLSessionTask*) inscriptionGetObjectV2WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -155,7 +173,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param inscriptionImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionImportIntoEDMV1Response*
 -(NSURLSessionTask*) inscriptionImportIntoEDMV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID
@@ -170,7 +188,7 @@ extern NSInteger kObjectInscriptionApiMissingParamErrorCode;
 /// @param inscriptionPrepareFilesTransferV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return InscriptionPrepareFilesTransferV1Response*
 -(NSURLSessionTask*) inscriptionPrepareFilesTransferV1WithPkiInscriptionID: (NSNumber*) pkiInscriptionID

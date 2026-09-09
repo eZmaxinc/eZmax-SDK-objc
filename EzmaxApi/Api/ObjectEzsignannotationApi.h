@@ -47,7 +47,7 @@ extern NSInteger kObjectEzsignannotationApiMissingParamErrorCode;
 /// @param pkiEzsignannotationID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignannotationDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignannotationDeleteObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
@@ -61,8 +61,8 @@ extern NSInteger kObjectEzsignannotationApiMissingParamErrorCode;
 /// @param ezsignannotationEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignannotationEditObjectV1Response*
 -(NSURLSessionTask*) ezsignannotationEditObjectV1WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID
@@ -76,7 +76,7 @@ extern NSInteger kObjectEzsignannotationApiMissingParamErrorCode;
 /// @param pkiEzsignannotationID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignannotationGetObjectV2Response*
 -(NSURLSessionTask*) ezsignannotationGetObjectV2WithPkiEzsignannotationID: (NSNumber*) pkiEzsignannotationID

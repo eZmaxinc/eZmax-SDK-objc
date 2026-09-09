@@ -35,7 +35,7 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 /// @param permissionCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return PermissionCreateObjectV1Response*
 -(NSURLSessionTask*) permissionCreateObjectV1WithPermissionCreateObjectV1Request: (PermissionCreateObjectV1Request*) permissionCreateObjectV1Request
@@ -48,7 +48,7 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 /// @param pkiPermissionID The unique ID of the Permission
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return PermissionDeleteObjectV1Response*
 -(NSURLSessionTask*) permissionDeleteObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
@@ -62,8 +62,8 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 /// @param permissionEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return PermissionEditObjectV1Response*
 -(NSURLSessionTask*) permissionEditObjectV1WithPkiPermissionID: (NSNumber*) pkiPermissionID
@@ -77,7 +77,7 @@ extern NSInteger kObjectPermissionApiMissingParamErrorCode;
 /// @param pkiPermissionID The unique ID of the Permission
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return PermissionGetObjectV2Response*
 -(NSURLSessionTask*) permissionGetObjectV2WithPkiPermissionID: (NSNumber*) pkiPermissionID

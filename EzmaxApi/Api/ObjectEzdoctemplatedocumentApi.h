@@ -51,7 +51,7 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 /// @param pkiEzdoctemplatedocumentID 
 /// 
 ///  code:302 message:"The user has been redirected",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return void
 -(NSURLSessionTask*) ezdoctemplatedocumentDownloadV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
@@ -65,8 +65,8 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 /// @param ezdoctemplatedocumentEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzdoctemplatedocumentEditObjectV1Response*
 -(NSURLSessionTask*) ezdoctemplatedocumentEditObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
@@ -123,7 +123,7 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 /// @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzdoctemplatedocumentGetObjectV2Response*
 -(NSURLSessionTask*) ezdoctemplatedocumentGetObjectV2WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID
@@ -137,7 +137,7 @@ extern NSInteger kObjectEzdoctemplatedocumentApiMissingParamErrorCode;
 /// @param ezdoctemplatedocumentPatchObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzdoctemplatedocumentPatchObjectV1Response*
 -(NSURLSessionTask*) ezdoctemplatedocumentPatchObjectV1WithPkiEzdoctemplatedocumentID: (NSNumber*) pkiEzdoctemplatedocumentID

@@ -50,7 +50,7 @@ extern NSInteger kObjectBrandingApiMissingParamErrorCode;
 /// @param brandingEditObjectV2Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BrandingEditObjectV2Response*
 -(NSURLSessionTask*) brandingEditObjectV2WithPkiBrandingID: (NSNumber*) pkiBrandingID
@@ -103,7 +103,7 @@ extern NSInteger kObjectBrandingApiMissingParamErrorCode;
 /// @param pkiBrandingID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BrandingGetObjectV3Response*
 -(NSURLSessionTask*) brandingGetObjectV3WithPkiBrandingID: (NSNumber*) pkiBrandingID

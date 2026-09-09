@@ -33,7 +33,7 @@ extern NSInteger kObjectEzsignimportfolderApiMissingParamErrorCode;
 /// @param pkiEzsignimportfolderID The unique ID of the Ezsignimportfolder
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignimportfolderDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignimportfolderDeleteObjectV1WithPkiEzsignimportfolderID: (NSNumber*) pkiEzsignimportfolderID
@@ -67,7 +67,7 @@ extern NSInteger kObjectEzsignimportfolderApiMissingParamErrorCode;
 /// @param pkiEzsignimportfolderID The unique ID of the Ezsignimportfolder
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignimportfolderGetObjectV2Response*
 -(NSURLSessionTask*) ezsignimportfolderGetObjectV2WithPkiEzsignimportfolderID: (NSNumber*) pkiEzsignimportfolderID

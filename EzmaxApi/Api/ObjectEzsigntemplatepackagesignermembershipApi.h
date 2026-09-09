@@ -33,7 +33,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignermembershipApiMissingParamErro
 /// @param ezsigntemplatepackagesignermembershipCreateObjectV1Request 
 /// 
 ///  code:201 message:"Successful response",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignermembershipCreateObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignermembershipCreateObjectV1WithEzsigntemplatepackagesignermembershipCreateObjectV1Request: (EzsigntemplatepackagesignermembershipCreateObjectV1Request*) ezsigntemplatepackagesignermembershipCreateObjectV1Request
@@ -46,7 +46,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignermembershipApiMissingParamErro
 /// @param pkiEzsigntemplatepackagesignermembershipID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignermembershipDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignermembershipDeleteObjectV1WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID
@@ -59,7 +59,7 @@ extern NSInteger kObjectEzsigntemplatepackagesignermembershipApiMissingParamErro
 /// @param pkiEzsigntemplatepackagesignermembershipID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepackagesignermembershipGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatepackagesignermembershipGetObjectV2WithPkiEzsigntemplatepackagesignermembershipID: (NSNumber*) pkiEzsigntemplatepackagesignermembershipID

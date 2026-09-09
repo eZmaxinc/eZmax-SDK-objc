@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "AttachmentGetAttachmentlogsV1Response.h"
+#import "AttachmentRenameV1Request.h"
+#import "AttachmentRenameV1Response.h"
 #import "CommonResponseError.h"
 #import "Api.h"
 
@@ -30,7 +32,7 @@ extern NSInteger kObjectAttachmentApiMissingParamErrorCode;
 /// @param pkiAttachmentID 
 /// 
 ///  code:302 message:"The user has been redirected",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return void
 -(NSURLSessionTask*) attachmentDownloadV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
@@ -43,11 +45,29 @@ extern NSInteger kObjectAttachmentApiMissingParamErrorCode;
 /// @param pkiAttachmentID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return AttachmentGetAttachmentlogsV1Response*
 -(NSURLSessionTask*) attachmentGetAttachmentlogsV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
     completionHandler: (void (^)(AttachmentGetAttachmentlogsV1Response* output, NSError* error)) handler;
+
+
+/// Rename an Attachment
+/// The endpoint allows to change the attachment's file name and category.
+///
+/// @param pkiAttachmentID 
+/// @param attachmentRenameV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:403 message:"The request is not allowed to be executed. Look for detail about the error in the body.",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:409 message:"The request failed due to a conflict with the resource state. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return AttachmentRenameV1Response*
+-(NSURLSessionTask*) attachmentRenameV1WithPkiAttachmentID: (NSNumber*) pkiAttachmentID
+    attachmentRenameV1Request: (AttachmentRenameV1Request*) attachmentRenameV1Request
+    completionHandler: (void (^)(AttachmentRenameV1Response* output, NSError* error)) handler;
 
 
 

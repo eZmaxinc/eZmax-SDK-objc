@@ -47,8 +47,8 @@ extern NSInteger kObjectEzsignformfieldgroupApiMissingParamErrorCode;
 /// @param pkiEzsignformfieldgroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignformfieldgroupDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsignformfieldgroupDeleteObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
@@ -62,8 +62,8 @@ extern NSInteger kObjectEzsignformfieldgroupApiMissingParamErrorCode;
 /// @param ezsignformfieldgroupEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsignformfieldgroupEditObjectV1Response*
 -(NSURLSessionTask*) ezsignformfieldgroupEditObjectV1WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID
@@ -77,7 +77,7 @@ extern NSInteger kObjectEzsignformfieldgroupApiMissingParamErrorCode;
 /// @param pkiEzsignformfieldgroupID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsignformfieldgroupGetObjectV2Response*
 -(NSURLSessionTask*) ezsignformfieldgroupGetObjectV2WithPkiEzsignformfieldgroupID: (NSNumber*) pkiEzsignformfieldgroupID

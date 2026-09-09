@@ -1,5 +1,10 @@
 #import <Foundation/Foundation.h>
+#import "BankaccountBatchDownloadV1Request.h"
+#import "BankaccountGetAttachmentsV1Response.h"
 #import "BankaccountGetAutocompleteV2Response.h"
+#import "BankaccountImportIntoEDMV1Request.h"
+#import "BankaccountImportIntoEDMV1Response.h"
+#import "CommonResponseError.h"
 #import "HeaderAcceptLanguage.h"
 #import "Api.h"
 
@@ -24,6 +29,36 @@ extern NSInteger kObjectBankaccountApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
+/// Download multiples attachments from a Bankaccount
+/// 
+///
+/// @param pkiBankaccountID 
+/// @param bankaccountBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) bankaccountBatchDownloadV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    bankaccountBatchDownloadV1Request: (BankaccountBatchDownloadV1Request*) bankaccountBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Bankaccount's attachments
+/// 
+///
+/// @param pkiBankaccountID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountGetAttachmentsV1Response*
+-(NSURLSessionTask*) bankaccountGetAttachmentsV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    completionHandler: (void (^)(BankaccountGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
 /// Retrieve Bankaccounts and IDs
 /// Get the list of Bankaccount to be used in a dropdown or autocomplete control.
 ///
@@ -40,6 +75,21 @@ extern NSInteger kObjectBankaccountApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(BankaccountGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Import attachments into the Bankaccount
+/// 
+///
+/// @param pkiBankaccountID 
+/// @param bankaccountImportIntoEDMV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountImportIntoEDMV1Response*
+-(NSURLSessionTask*) bankaccountImportIntoEDMV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    bankaccountImportIntoEDMV1Request: (BankaccountImportIntoEDMV1Request*) bankaccountImportIntoEDMV1Request
+    completionHandler: (void (^)(BankaccountImportIntoEDMV1Response* output, NSError* error)) handler;
 
 
 

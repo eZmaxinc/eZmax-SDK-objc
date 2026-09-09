@@ -44,7 +44,7 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param ezsigntemplatepublicCreateEzsignfolderV1Request 
 /// 
 ///  code:200 message:"OK",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicCreateEzsignfolderV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicCreateEzsignfolderV1WithEzsigntemplatepublicCreateEzsignfolderV1Request: (EzsigntemplatepublicCreateEzsignfolderV1Request*) ezsigntemplatepublicCreateEzsignfolderV1Request
@@ -69,8 +69,8 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicDeleteObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicDeleteObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
@@ -84,8 +84,8 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param ezsigntemplatepublicEditObjectV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicEditObjectV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicEditObjectV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
@@ -99,7 +99,7 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request 
 /// 
 ///  code:200 message:"OK",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithEzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request: (EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request*) ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request
@@ -112,9 +112,9 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepublicID 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body.",
 ///  code:406 message:"The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \"Accept: application/json\" but the function can only return \"Content-type: image/png\"",
-///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body"
+///  code:422 message:"The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicGetFormsDataV1Response*
 -(NSURLSessionTask*) ezsigntemplatepublicGetFormsDataV1WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID
@@ -148,7 +148,7 @@ extern NSInteger kObjectEzsigntemplatepublicApiMissingParamErrorCode;
 /// @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return EzsigntemplatepublicGetObjectV2Response*
 -(NSURLSessionTask*) ezsigntemplatepublicGetObjectV2WithPkiEzsigntemplatepublicID: (NSNumber*) pkiEzsigntemplatepublicID

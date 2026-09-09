@@ -1,4 +1,6 @@
 #import <Foundation/Foundation.h>
+#import "BrokerBatchDownloadV1Request.h"
+#import "BrokerGetAttachmentsV1Response.h"
 #import "BrokerGetAutocompleteV2Response.h"
 #import "BrokerGetListV1Response.h"
 #import "BrokerImportIntoEDMV1Request.h"
@@ -27,6 +29,34 @@ extern NSString* kObjectBrokerApiErrorDomain;
 extern NSInteger kObjectBrokerApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(ApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
+
+/// Download multiples attachments from a Broker
+/// 
+///
+/// @param pkiBrokerID 
+/// @param brokerBatchDownloadV1Request 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return NSURL*
+-(NSURLSessionTask*) brokerBatchDownloadV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    brokerBatchDownloadV1Request: (BrokerBatchDownloadV1Request*) brokerBatchDownloadV1Request
+    completionHandler: (void (^)(NSURL* output, NSError* error)) handler;
+
+
+/// Retrieve Broker's attachments
+/// 
+///
+/// @param pkiBrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BrokerGetAttachmentsV1Response*
+-(NSURLSessionTask*) brokerGetAttachmentsV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetAttachmentsV1Response* output, NSError* error)) handler;
+
 
 /// Retrieve Brokers and IDs
 /// Get the list of Broker to be used in a dropdown or autocomplete control.
@@ -74,7 +104,7 @@ extern NSInteger kObjectBrokerApiMissingParamErrorCode;
 /// @param brokerImportIntoEDMV1Request 
 /// 
 ///  code:200 message:"Successful response",
-///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body"
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
 ///
 /// @return BrokerImportIntoEDMV1Response*
 -(NSURLSessionTask*) brokerImportIntoEDMV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
