@@ -2,6 +2,10 @@
 #import "CommonResponseError.h"
 #import "ExternalbrokerBatchDownloadV1Request.h"
 #import "ExternalbrokerGetAttachmentsV1Response.h"
+#import "ExternalbrokerGetCommunicationCountV1Response.h"
+#import "ExternalbrokerGetCommunicationListV1Response.h"
+#import "ExternalbrokerGetCommunicationrecipientsV1Response.h"
+#import "ExternalbrokerGetCommunicationsendersV1Response.h"
 #import "ExternalbrokerImportIntoEDMV1Request.h"
 #import "ExternalbrokerImportIntoEDMV1Response.h"
 #import "Api.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectExternalbrokerApiMissingParamErrorCode;
 /// @return ExternalbrokerGetAttachmentsV1Response*
 -(NSURLSessionTask*) externalbrokerGetAttachmentsV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
     completionHandler: (void (^)(ExternalbrokerGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ExternalbrokerGetCommunicationCountV1Response*
+-(NSURLSessionTask*) externalbrokerGetCommunicationCountV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ExternalbrokerGetCommunicationListV1Response*
+-(NSURLSessionTask*) externalbrokerGetCommunicationListV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ExternalbrokerGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) externalbrokerGetCommunicationrecipientsV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiExternalbrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return ExternalbrokerGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) externalbrokerGetCommunicationsendersV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Externalbroker

@@ -4,6 +4,10 @@
 #import "CommonResponseError.h"
 #import "DeposittransitchequeBatchDownloadV1Request.h"
 #import "DeposittransitchequeGetAttachmentsV1Response.h"
+#import "DeposittransitchequeGetCommunicationCountV1Response.h"
+#import "DeposittransitchequeGetCommunicationListV1Response.h"
+#import "DeposittransitchequeGetCommunicationrecipientsV1Response.h"
+#import "DeposittransitchequeGetCommunicationsendersV1Response.h"
 #import "DeposittransitchequeImportIntoEDMV1Request.h"
 #import "DeposittransitchequeImportIntoEDMV1Response.h"
 
@@ -200,6 +204,278 @@ NSInteger kObjectDeposittransitchequeApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((DeposittransitchequeGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication count
+/// 
+///  @param pkiDeposittransitchequeID  
+///
+///  @returns DeposittransitchequeGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationCountV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == nil) {
+        NSParameterAssert(pkiDeposittransitchequeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDeposittransitchequeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDeposittransitchequeApiErrorDomain code:kObjectDeposittransitchequeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDeposittransitchequeID != nil) {
+        pathParams[@"pkiDeposittransitchequeID"] = pkiDeposittransitchequeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DeposittransitchequeGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DeposittransitchequeGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication list
+/// 
+///  @param pkiDeposittransitchequeID  
+///
+///  @returns DeposittransitchequeGetCommunicationListV1Response*
+///
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationListV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationListV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == nil) {
+        NSParameterAssert(pkiDeposittransitchequeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDeposittransitchequeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDeposittransitchequeApiErrorDomain code:kObjectDeposittransitchequeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDeposittransitchequeID != nil) {
+        pathParams[@"pkiDeposittransitchequeID"] = pkiDeposittransitchequeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DeposittransitchequeGetCommunicationListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DeposittransitchequeGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication recipients
+/// 
+///  @param pkiDeposittransitchequeID  
+///
+///  @returns DeposittransitchequeGetCommunicationrecipientsV1Response*
+///
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationrecipientsV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationrecipientsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == nil) {
+        NSParameterAssert(pkiDeposittransitchequeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDeposittransitchequeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDeposittransitchequeApiErrorDomain code:kObjectDeposittransitchequeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDeposittransitchequeID != nil) {
+        pathParams[@"pkiDeposittransitchequeID"] = pkiDeposittransitchequeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DeposittransitchequeGetCommunicationrecipientsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DeposittransitchequeGetCommunicationrecipientsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication senders
+/// 
+///  @param pkiDeposittransitchequeID  
+///
+///  @returns DeposittransitchequeGetCommunicationsendersV1Response*
+///
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationsendersV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationsendersV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDeposittransitchequeID' is set
+    if (pkiDeposittransitchequeID == nil) {
+        NSParameterAssert(pkiDeposittransitchequeID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDeposittransitchequeID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDeposittransitchequeApiErrorDomain code:kObjectDeposittransitchequeApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDeposittransitchequeID != nil) {
+        pathParams[@"pkiDeposittransitchequeID"] = pkiDeposittransitchequeID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DeposittransitchequeGetCommunicationsendersV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DeposittransitchequeGetCommunicationsendersV1Response*)data, error);
                                 }
                             }];
 }

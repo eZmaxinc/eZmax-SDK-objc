@@ -4,6 +4,10 @@
 #import "CommonResponseError.h"
 #import "DisclosureBatchDownloadV1Request.h"
 #import "DisclosureGetAttachmentsV1Response.h"
+#import "DisclosureGetCommunicationCountV1Response.h"
+#import "DisclosureGetCommunicationListV1Response.h"
+#import "DisclosureGetCommunicationrecipientsV1Response.h"
+#import "DisclosureGetCommunicationsendersV1Response.h"
 #import "DisclosureImportIntoEDMV1Request.h"
 #import "DisclosureImportIntoEDMV1Response.h"
 
@@ -200,6 +204,278 @@ NSInteger kObjectDisclosureApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((DisclosureGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication count
+/// 
+///  @param pkiDisclosureID  
+///
+///  @returns DisclosureGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) disclosureGetCommunicationCountV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == nil) {
+        NSParameterAssert(pkiDisclosureID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDisclosureID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDisclosureApiErrorDomain code:kObjectDisclosureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDisclosureID != nil) {
+        pathParams[@"pkiDisclosureID"] = pkiDisclosureID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DisclosureGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DisclosureGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication list
+/// 
+///  @param pkiDisclosureID  
+///
+///  @returns DisclosureGetCommunicationListV1Response*
+///
+-(NSURLSessionTask*) disclosureGetCommunicationListV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationListV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == nil) {
+        NSParameterAssert(pkiDisclosureID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDisclosureID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDisclosureApiErrorDomain code:kObjectDisclosureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/disclosure/{pkiDisclosureID}/getCommunicationList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDisclosureID != nil) {
+        pathParams[@"pkiDisclosureID"] = pkiDisclosureID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DisclosureGetCommunicationListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DisclosureGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication recipients
+/// 
+///  @param pkiDisclosureID  
+///
+///  @returns DisclosureGetCommunicationrecipientsV1Response*
+///
+-(NSURLSessionTask*) disclosureGetCommunicationrecipientsV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationrecipientsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == nil) {
+        NSParameterAssert(pkiDisclosureID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDisclosureID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDisclosureApiErrorDomain code:kObjectDisclosureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDisclosureID != nil) {
+        pathParams[@"pkiDisclosureID"] = pkiDisclosureID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DisclosureGetCommunicationrecipientsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DisclosureGetCommunicationrecipientsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication senders
+/// 
+///  @param pkiDisclosureID  
+///
+///  @returns DisclosureGetCommunicationsendersV1Response*
+///
+-(NSURLSessionTask*) disclosureGetCommunicationsendersV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationsendersV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiDisclosureID' is set
+    if (pkiDisclosureID == nil) {
+        NSParameterAssert(pkiDisclosureID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiDisclosureID"] };
+            NSError* error = [NSError errorWithDomain:kObjectDisclosureApiErrorDomain code:kObjectDisclosureApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiDisclosureID != nil) {
+        pathParams[@"pkiDisclosureID"] = pkiDisclosureID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"DisclosureGetCommunicationsendersV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((DisclosureGetCommunicationsendersV1Response*)data, error);
                                 }
                             }];
 }

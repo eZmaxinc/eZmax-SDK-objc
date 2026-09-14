@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deposittransitchequeBatchDownloadV1**](ObjectDeposittransitchequeApi.md#deposittransitchequebatchdownloadv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/batchDownload | Download multiples attachments from a Deposittransitcheque
 [**deposittransitchequeGetAttachmentsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetattachmentsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getAttachments | Retrieve Deposittransitcheque&#39;s attachments
+[**deposittransitchequeGetCommunicationCountV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationcountv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount | Retrieve Communication count
+[**deposittransitchequeGetCommunicationListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationlistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list
+[**deposittransitchequeGetCommunicationrecipientsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationrecipientsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients
+[**deposittransitchequeGetCommunicationsendersV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationsendersv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders
 [**deposittransitchequeImportIntoEDMV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeimportintoedmv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque
 
 
@@ -111,6 +115,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeposittransitchequeGetAttachmentsV1Response***](DeposittransitchequeGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deposittransitchequeGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationCountV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+        completionHandler: (void (^)(DeposittransitchequeGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDeposittransitchequeID = @56; // 
+
+ObjectDeposittransitchequeApi*apiInstance = [[ObjectDeposittransitchequeApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance deposittransitchequeGetCommunicationCountV1WithPkiDeposittransitchequeID:pkiDeposittransitchequeID
+          completionHandler: ^(DeposittransitchequeGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDeposittransitchequeApi->deposittransitchequeGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDeposittransitchequeID** | **NSNumber***|  | 
+
+### Return type
+
+[**DeposittransitchequeGetCommunicationCountV1Response***](DeposittransitchequeGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deposittransitchequeGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationListV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+        completionHandler: (void (^)(DeposittransitchequeGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDeposittransitchequeID = @56; // 
+
+ObjectDeposittransitchequeApi*apiInstance = [[ObjectDeposittransitchequeApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance deposittransitchequeGetCommunicationListV1WithPkiDeposittransitchequeID:pkiDeposittransitchequeID
+          completionHandler: ^(DeposittransitchequeGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDeposittransitchequeApi->deposittransitchequeGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDeposittransitchequeID** | **NSNumber***|  | 
+
+### Return type
+
+[**DeposittransitchequeGetCommunicationListV1Response***](DeposittransitchequeGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deposittransitchequeGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationrecipientsV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+        completionHandler: (void (^)(DeposittransitchequeGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDeposittransitchequeID = @56; // 
+
+ObjectDeposittransitchequeApi*apiInstance = [[ObjectDeposittransitchequeApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance deposittransitchequeGetCommunicationrecipientsV1WithPkiDeposittransitchequeID:pkiDeposittransitchequeID
+          completionHandler: ^(DeposittransitchequeGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDeposittransitchequeApi->deposittransitchequeGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDeposittransitchequeID** | **NSNumber***|  | 
+
+### Return type
+
+[**DeposittransitchequeGetCommunicationrecipientsV1Response***](DeposittransitchequeGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deposittransitchequeGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationsendersV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+        completionHandler: (void (^)(DeposittransitchequeGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDeposittransitchequeID = @56; // 
+
+ObjectDeposittransitchequeApi*apiInstance = [[ObjectDeposittransitchequeApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance deposittransitchequeGetCommunicationsendersV1WithPkiDeposittransitchequeID:pkiDeposittransitchequeID
+          completionHandler: ^(DeposittransitchequeGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDeposittransitchequeApi->deposittransitchequeGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDeposittransitchequeID** | **NSNumber***|  | 
+
+### Return type
+
+[**DeposittransitchequeGetCommunicationsendersV1Response***](DeposittransitchequeGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**commissionadvanceBatchDownloadV1**](ObjectCommissionadvanceApi.md#commissionadvancebatchdownloadv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/batchDownload | Download multiples attachments from a Commission advance
 [**commissionadvanceGetAttachmentsV1**](ObjectCommissionadvanceApi.md#commissionadvancegetattachmentsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getAttachments | Retrieve Commissionadvance&#39;s attachments
+[**commissionadvanceGetCommunicationCountV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationcountv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount | Retrieve Communication count
+[**commissionadvanceGetCommunicationListV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationlistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList | Retrieve Communication list
+[**commissionadvanceGetCommunicationrecipientsV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationrecipientsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients | Retrieve Communication recipients
+[**commissionadvanceGetCommunicationsendersV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationsendersv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders | Retrieve Communication senders
 [**commissionadvanceImportIntoEDMV1**](ObjectCommissionadvanceApi.md#commissionadvanceimportintoedmv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance
 
 
@@ -111,6 +115,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommissionadvanceGetAttachmentsV1Response***](CommissionadvanceGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) commissionadvanceGetCommunicationCountV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+        completionHandler: (void (^)(CommissionadvanceGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCommissionadvanceID = @56; // 
+
+ObjectCommissionadvanceApi*apiInstance = [[ObjectCommissionadvanceApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance commissionadvanceGetCommunicationCountV1WithPkiCommissionadvanceID:pkiCommissionadvanceID
+          completionHandler: ^(CommissionadvanceGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **NSNumber***|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationCountV1Response***](CommissionadvanceGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) commissionadvanceGetCommunicationListV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+        completionHandler: (void (^)(CommissionadvanceGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCommissionadvanceID = @56; // 
+
+ObjectCommissionadvanceApi*apiInstance = [[ObjectCommissionadvanceApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance commissionadvanceGetCommunicationListV1WithPkiCommissionadvanceID:pkiCommissionadvanceID
+          completionHandler: ^(CommissionadvanceGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **NSNumber***|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationListV1Response***](CommissionadvanceGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) commissionadvanceGetCommunicationrecipientsV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+        completionHandler: (void (^)(CommissionadvanceGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCommissionadvanceID = @56; // 
+
+ObjectCommissionadvanceApi*apiInstance = [[ObjectCommissionadvanceApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance commissionadvanceGetCommunicationrecipientsV1WithPkiCommissionadvanceID:pkiCommissionadvanceID
+          completionHandler: ^(CommissionadvanceGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **NSNumber***|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationrecipientsV1Response***](CommissionadvanceGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) commissionadvanceGetCommunicationsendersV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+        completionHandler: (void (^)(CommissionadvanceGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCommissionadvanceID = @56; // 
+
+ObjectCommissionadvanceApi*apiInstance = [[ObjectCommissionadvanceApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance commissionadvanceGetCommunicationsendersV1WithPkiCommissionadvanceID:pkiCommissionadvanceID
+          completionHandler: ^(CommissionadvanceGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **NSNumber***|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationsendersV1Response***](CommissionadvanceGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

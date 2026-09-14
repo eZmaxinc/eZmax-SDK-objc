@@ -186,6 +186,9 @@
 /* The name of the Attachment 
  */
 @property(nonatomic) NSString* sAttachmentName;
+/* The attachment category 
+ */
+@property(nonatomic) NSString* sAttachmentCategory;
 
 @property(nonatomic) FieldEAttachmentPrivacy* eAttachmentPrivacy;
 /* The unique ID of the User [optional]

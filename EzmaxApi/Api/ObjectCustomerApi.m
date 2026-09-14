@@ -5,6 +5,10 @@
 #import "CustomerBatchDownloadV1Request.h"
 #import "CustomerGetAttachmentsV1Response.h"
 #import "CustomerGetAutocompleteV2Response.h"
+#import "CustomerGetCommunicationCountV1Response.h"
+#import "CustomerGetCommunicationListV1Response.h"
+#import "CustomerGetCommunicationrecipientsV1Response.h"
+#import "CustomerGetCommunicationsendersV1Response.h"
 #import "CustomerGetObjectV2Response.h"
 #import "CustomerImportIntoEDMV1Request.h"
 #import "CustomerImportIntoEDMV1Response.h"
@@ -289,6 +293,278 @@ NSInteger kObjectCustomerApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((CustomerGetAutocompleteV2Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication count
+/// 
+///  @param pkiCustomerID  
+///
+///  @returns CustomerGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) customerGetCommunicationCountV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiCustomerID' is set
+    if (pkiCustomerID == nil) {
+        NSParameterAssert(pkiCustomerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiCustomerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectCustomerApiErrorDomain code:kObjectCustomerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/customer/{pkiCustomerID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiCustomerID != nil) {
+        pathParams[@"pkiCustomerID"] = pkiCustomerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"CustomerGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((CustomerGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication list
+/// 
+///  @param pkiCustomerID  
+///
+///  @returns CustomerGetCommunicationListV1Response*
+///
+-(NSURLSessionTask*) customerGetCommunicationListV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationListV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiCustomerID' is set
+    if (pkiCustomerID == nil) {
+        NSParameterAssert(pkiCustomerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiCustomerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectCustomerApiErrorDomain code:kObjectCustomerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/customer/{pkiCustomerID}/getCommunicationList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiCustomerID != nil) {
+        pathParams[@"pkiCustomerID"] = pkiCustomerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"CustomerGetCommunicationListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((CustomerGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication recipients
+/// 
+///  @param pkiCustomerID  
+///
+///  @returns CustomerGetCommunicationrecipientsV1Response*
+///
+-(NSURLSessionTask*) customerGetCommunicationrecipientsV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationrecipientsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiCustomerID' is set
+    if (pkiCustomerID == nil) {
+        NSParameterAssert(pkiCustomerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiCustomerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectCustomerApiErrorDomain code:kObjectCustomerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/customer/{pkiCustomerID}/getCommunicationrecipients"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiCustomerID != nil) {
+        pathParams[@"pkiCustomerID"] = pkiCustomerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"CustomerGetCommunicationrecipientsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((CustomerGetCommunicationrecipientsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication senders
+/// 
+///  @param pkiCustomerID  
+///
+///  @returns CustomerGetCommunicationsendersV1Response*
+///
+-(NSURLSessionTask*) customerGetCommunicationsendersV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationsendersV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiCustomerID' is set
+    if (pkiCustomerID == nil) {
+        NSParameterAssert(pkiCustomerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiCustomerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectCustomerApiErrorDomain code:kObjectCustomerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/customer/{pkiCustomerID}/getCommunicationsenders"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiCustomerID != nil) {
+        pathParams[@"pkiCustomerID"] = pkiCustomerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"CustomerGetCommunicationsendersV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((CustomerGetCommunicationsendersV1Response*)data, error);
                                 }
                             }];
 }

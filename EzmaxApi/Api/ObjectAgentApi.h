@@ -2,6 +2,10 @@
 #import "AgentBatchDownloadV1Request.h"
 #import "AgentGetAttachmentsV1Response.h"
 #import "AgentGetAutocompleteV2Response.h"
+#import "AgentGetCommunicationCountV1Response.h"
+#import "AgentGetCommunicationListV1Response.h"
+#import "AgentGetCommunicationrecipientsV1Response.h"
+#import "AgentGetCommunicationsendersV1Response.h"
 #import "AgentGetListV1Response.h"
 #import "AgentImportIntoEDMV1Request.h"
 #import "AgentImportIntoEDMV1Response.h"
@@ -74,6 +78,58 @@ extern NSInteger kObjectAgentApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(AgentGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiAgentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return AgentGetCommunicationCountV1Response*
+-(NSURLSessionTask*) agentGetCommunicationCountV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiAgentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return AgentGetCommunicationListV1Response*
+-(NSURLSessionTask*) agentGetCommunicationListV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiAgentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return AgentGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) agentGetCommunicationrecipientsV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiAgentID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return AgentGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) agentGetCommunicationsendersV1WithPkiAgentID: (NSNumber*) pkiAgentID
+    completionHandler: (void (^)(AgentGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Agent list

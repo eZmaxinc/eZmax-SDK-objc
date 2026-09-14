@@ -4,6 +4,10 @@
 #import "CommonResponseError.h"
 #import "ExternalbrokerBatchDownloadV1Request.h"
 #import "ExternalbrokerGetAttachmentsV1Response.h"
+#import "ExternalbrokerGetCommunicationCountV1Response.h"
+#import "ExternalbrokerGetCommunicationListV1Response.h"
+#import "ExternalbrokerGetCommunicationrecipientsV1Response.h"
+#import "ExternalbrokerGetCommunicationsendersV1Response.h"
 #import "ExternalbrokerImportIntoEDMV1Request.h"
 #import "ExternalbrokerImportIntoEDMV1Response.h"
 
@@ -200,6 +204,278 @@ NSInteger kObjectExternalbrokerApiMissingParamErrorCode = 234513;
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
                                     handler((ExternalbrokerGetAttachmentsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication count
+/// 
+///  @param pkiExternalbrokerID  
+///
+///  @returns ExternalbrokerGetCommunicationCountV1Response*
+///
+-(NSURLSessionTask*) externalbrokerGetCommunicationCountV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationCountV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiExternalbrokerID' is set
+    if (pkiExternalbrokerID == nil) {
+        NSParameterAssert(pkiExternalbrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiExternalbrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectExternalbrokerApiErrorDomain code:kObjectExternalbrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiExternalbrokerID != nil) {
+        pathParams[@"pkiExternalbrokerID"] = pkiExternalbrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ExternalbrokerGetCommunicationCountV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ExternalbrokerGetCommunicationCountV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication list
+/// 
+///  @param pkiExternalbrokerID  
+///
+///  @returns ExternalbrokerGetCommunicationListV1Response*
+///
+-(NSURLSessionTask*) externalbrokerGetCommunicationListV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationListV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiExternalbrokerID' is set
+    if (pkiExternalbrokerID == nil) {
+        NSParameterAssert(pkiExternalbrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiExternalbrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectExternalbrokerApiErrorDomain code:kObjectExternalbrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiExternalbrokerID != nil) {
+        pathParams[@"pkiExternalbrokerID"] = pkiExternalbrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ExternalbrokerGetCommunicationListV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ExternalbrokerGetCommunicationListV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication recipients
+/// 
+///  @param pkiExternalbrokerID  
+///
+///  @returns ExternalbrokerGetCommunicationrecipientsV1Response*
+///
+-(NSURLSessionTask*) externalbrokerGetCommunicationrecipientsV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationrecipientsV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiExternalbrokerID' is set
+    if (pkiExternalbrokerID == nil) {
+        NSParameterAssert(pkiExternalbrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiExternalbrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectExternalbrokerApiErrorDomain code:kObjectExternalbrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiExternalbrokerID != nil) {
+        pathParams[@"pkiExternalbrokerID"] = pkiExternalbrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ExternalbrokerGetCommunicationrecipientsV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ExternalbrokerGetCommunicationrecipientsV1Response*)data, error);
+                                }
+                            }];
+}
+
+///
+/// Retrieve Communication senders
+/// 
+///  @param pkiExternalbrokerID  
+///
+///  @returns ExternalbrokerGetCommunicationsendersV1Response*
+///
+-(NSURLSessionTask*) externalbrokerGetCommunicationsendersV1WithPkiExternalbrokerID: (NSNumber*) pkiExternalbrokerID
+    completionHandler: (void (^)(ExternalbrokerGetCommunicationsendersV1Response* output, NSError* error)) handler {
+    // verify the required parameter 'pkiExternalbrokerID' is set
+    if (pkiExternalbrokerID == nil) {
+        NSParameterAssert(pkiExternalbrokerID);
+        if(handler) {
+            NSDictionary * userInfo = @{NSLocalizedDescriptionKey : [NSString stringWithFormat:NSLocalizedString(@"Missing required parameter '%@'", nil),@"pkiExternalbrokerID"] };
+            NSError* error = [NSError errorWithDomain:kObjectExternalbrokerApiErrorDomain code:kObjectExternalbrokerApiMissingParamErrorCode userInfo:userInfo];
+            handler(nil, error);
+        }
+        return nil;
+    }
+
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders"];
+
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (pkiExternalbrokerID != nil) {
+        pathParams[@"pkiExternalbrokerID"] = pkiExternalbrokerID;
+    }
+
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
+    [headerParams addEntriesFromDictionary:self.defaultHeaders];
+    // HTTP header `Accept`
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    if(acceptHeader.length > 0) {
+        headerParams[@"Accept"] = acceptHeader;
+    }
+
+    // response content type
+    NSString *responseContentType = [[acceptHeader componentsSeparatedByString:@", "] firstObject] ?: @"";
+
+    // request content type
+    NSString *requestContentType = [self.apiClient.sanitizer selectHeaderContentType:@[]];
+
+    // Authentication setting
+    NSArray *authSettings = @[@"Authorization"];
+
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *localVarFiles = [[NSMutableDictionary alloc] init];
+
+    return [self.apiClient requestWithPath: resourcePath
+                                    method: @"GET"
+                                pathParams: pathParams
+                               queryParams: queryParams
+                                formParams: formParams
+                                     files: localVarFiles
+                                      body: bodyParam
+                              headerParams: headerParams
+                              authSettings: authSettings
+                        requestContentType: requestContentType
+                       responseContentType: responseContentType
+                              responseType: @"ExternalbrokerGetCommunicationsendersV1Response*"
+                           completionBlock: ^(id data, NSError *error) {
+                                if(handler) {
+                                    handler((ExternalbrokerGetCommunicationsendersV1Response*)data, error);
                                 }
                             }];
 }

@@ -2,6 +2,10 @@
 #import "CommonResponseError.h"
 #import "DisclosureBatchDownloadV1Request.h"
 #import "DisclosureGetAttachmentsV1Response.h"
+#import "DisclosureGetCommunicationCountV1Response.h"
+#import "DisclosureGetCommunicationListV1Response.h"
+#import "DisclosureGetCommunicationrecipientsV1Response.h"
+#import "DisclosureGetCommunicationsendersV1Response.h"
 #import "DisclosureImportIntoEDMV1Request.h"
 #import "DisclosureImportIntoEDMV1Response.h"
 #import "Api.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectDisclosureApiMissingParamErrorCode;
 /// @return DisclosureGetAttachmentsV1Response*
 -(NSURLSessionTask*) disclosureGetAttachmentsV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
     completionHandler: (void (^)(DisclosureGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiDisclosureID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DisclosureGetCommunicationCountV1Response*
+-(NSURLSessionTask*) disclosureGetCommunicationCountV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiDisclosureID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DisclosureGetCommunicationListV1Response*
+-(NSURLSessionTask*) disclosureGetCommunicationListV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiDisclosureID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DisclosureGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) disclosureGetCommunicationrecipientsV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiDisclosureID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DisclosureGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) disclosureGetCommunicationsendersV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+    completionHandler: (void (^)(DisclosureGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Disclosure

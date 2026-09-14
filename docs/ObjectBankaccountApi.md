@@ -7,6 +7,10 @@ Method | HTTP request | Description
 [**bankaccountBatchDownloadV1**](ObjectBankaccountApi.md#bankaccountbatchdownloadv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/batchDownload | Download multiples attachments from a Bankaccount
 [**bankaccountGetAttachmentsV1**](ObjectBankaccountApi.md#bankaccountgetattachmentsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getAttachments | Retrieve Bankaccount&#39;s attachments
 [**bankaccountGetAutocompleteV2**](ObjectBankaccountApi.md#bankaccountgetautocompletev2) | **GET** /2/object/bankaccount/getAutocomplete/{sSelector} | Retrieve Bankaccounts and IDs
+[**bankaccountGetCommunicationCountV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationcountv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount | Retrieve Communication count
+[**bankaccountGetCommunicationListV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationlistv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list
+[**bankaccountGetCommunicationrecipientsV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationrecipientsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients
+[**bankaccountGetCommunicationsendersV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationsendersv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders
 [**bankaccountImportIntoEDMV1**](ObjectBankaccountApi.md#bankaccountimportintoedmv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount
 
 
@@ -181,6 +185,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BankaccountGetAutocompleteV2Response***](BankaccountGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) bankaccountGetCommunicationCountV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+        completionHandler: (void (^)(BankaccountGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBankaccountID = @56; // 
+
+ObjectBankaccountApi*apiInstance = [[ObjectBankaccountApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance bankaccountGetCommunicationCountV1WithPkiBankaccountID:pkiBankaccountID
+          completionHandler: ^(BankaccountGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBankaccountApi->bankaccountGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **NSNumber***|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationCountV1Response***](BankaccountGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) bankaccountGetCommunicationListV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+        completionHandler: (void (^)(BankaccountGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBankaccountID = @56; // 
+
+ObjectBankaccountApi*apiInstance = [[ObjectBankaccountApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance bankaccountGetCommunicationListV1WithPkiBankaccountID:pkiBankaccountID
+          completionHandler: ^(BankaccountGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBankaccountApi->bankaccountGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **NSNumber***|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationListV1Response***](BankaccountGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) bankaccountGetCommunicationrecipientsV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+        completionHandler: (void (^)(BankaccountGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBankaccountID = @56; // 
+
+ObjectBankaccountApi*apiInstance = [[ObjectBankaccountApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance bankaccountGetCommunicationrecipientsV1WithPkiBankaccountID:pkiBankaccountID
+          completionHandler: ^(BankaccountGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBankaccountApi->bankaccountGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **NSNumber***|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationrecipientsV1Response***](BankaccountGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) bankaccountGetCommunicationsendersV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+        completionHandler: (void (^)(BankaccountGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiBankaccountID = @56; // 
+
+ObjectBankaccountApi*apiInstance = [[ObjectBankaccountApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance bankaccountGetCommunicationsendersV1WithPkiBankaccountID:pkiBankaccountID
+          completionHandler: ^(BankaccountGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectBankaccountApi->bankaccountGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **NSNumber***|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationsendersV1Response***](BankaccountGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

@@ -2,6 +2,10 @@
 #import "CommonResponseError.h"
 #import "DeposittransitchequeBatchDownloadV1Request.h"
 #import "DeposittransitchequeGetAttachmentsV1Response.h"
+#import "DeposittransitchequeGetCommunicationCountV1Response.h"
+#import "DeposittransitchequeGetCommunicationListV1Response.h"
+#import "DeposittransitchequeGetCommunicationrecipientsV1Response.h"
+#import "DeposittransitchequeGetCommunicationsendersV1Response.h"
 #import "DeposittransitchequeImportIntoEDMV1Request.h"
 #import "DeposittransitchequeImportIntoEDMV1Response.h"
 #import "Api.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectDeposittransitchequeApiMissingParamErrorCode;
 /// @return DeposittransitchequeGetAttachmentsV1Response*
 -(NSURLSessionTask*) deposittransitchequeGetAttachmentsV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
     completionHandler: (void (^)(DeposittransitchequeGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiDeposittransitchequeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DeposittransitchequeGetCommunicationCountV1Response*
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationCountV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiDeposittransitchequeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DeposittransitchequeGetCommunicationListV1Response*
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationListV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiDeposittransitchequeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DeposittransitchequeGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationrecipientsV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiDeposittransitchequeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DeposittransitchequeGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) deposittransitchequeGetCommunicationsendersV1WithPkiDeposittransitchequeID: (NSNumber*) pkiDeposittransitchequeID
+    completionHandler: (void (^)(DeposittransitchequeGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Deposittransitcheque

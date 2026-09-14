@@ -7,6 +7,10 @@ Method | HTTP request | Description
 [**agentBatchDownloadV1**](ObjectAgentApi.md#agentbatchdownloadv1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
 [**agentGetAttachmentsV1**](ObjectAgentApi.md#agentgetattachmentsv1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments
 [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentgetautocompletev2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs
+[**agentGetCommunicationCountV1**](ObjectAgentApi.md#agentgetcommunicationcountv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationCount | Retrieve Communication count
+[**agentGetCommunicationListV1**](ObjectAgentApi.md#agentgetcommunicationlistv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list
+[**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentgetcommunicationrecipientsv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients
+[**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentgetcommunicationsendersv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders
 [**agentGetListV1**](ObjectAgentApi.md#agentgetlistv1) | **GET** /1/object/agent/getList | Retrieve Agent list
 [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentimportintoedmv1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
 
@@ -182,6 +186,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AgentGetAutocompleteV2Response***](AgentGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) agentGetCommunicationCountV1WithPkiAgentID: (NSNumber*) pkiAgentID
+        completionHandler: (void (^)(AgentGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance agentGetCommunicationCountV1WithPkiAgentID:pkiAgentID
+          completionHandler: ^(AgentGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+
+### Return type
+
+[**AgentGetCommunicationCountV1Response***](AgentGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) agentGetCommunicationListV1WithPkiAgentID: (NSNumber*) pkiAgentID
+        completionHandler: (void (^)(AgentGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance agentGetCommunicationListV1WithPkiAgentID:pkiAgentID
+          completionHandler: ^(AgentGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+
+### Return type
+
+[**AgentGetCommunicationListV1Response***](AgentGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) agentGetCommunicationrecipientsV1WithPkiAgentID: (NSNumber*) pkiAgentID
+        completionHandler: (void (^)(AgentGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance agentGetCommunicationrecipientsV1WithPkiAgentID:pkiAgentID
+          completionHandler: ^(AgentGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+
+### Return type
+
+[**AgentGetCommunicationrecipientsV1Response***](AgentGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) agentGetCommunicationsendersV1WithPkiAgentID: (NSNumber*) pkiAgentID
+        completionHandler: (void (^)(AgentGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiAgentID = @56; // 
+
+ObjectAgentApi*apiInstance = [[ObjectAgentApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance agentGetCommunicationsendersV1WithPkiAgentID:pkiAgentID
+          completionHandler: ^(AgentGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectAgentApi->agentGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **NSNumber***|  | 
+
+### Return type
+
+[**AgentGetCommunicationsendersV1Response***](AgentGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

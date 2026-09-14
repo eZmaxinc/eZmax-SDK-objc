@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**depositBatchDownloadV1**](ObjectDepositApi.md#depositbatchdownloadv1) | **POST** /1/object/deposit/{pkiDepositID}/batchDownload | Download multiples attachments from a Deposit
 [**depositGetAttachmentsV1**](ObjectDepositApi.md#depositgetattachmentsv1) | **GET** /1/object/deposit/{pkiDepositID}/getAttachments | Retrieve Deposit&#39;s attachments
+[**depositGetCommunicationCountV1**](ObjectDepositApi.md#depositgetcommunicationcountv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationCount | Retrieve Communication count
+[**depositGetCommunicationListV1**](ObjectDepositApi.md#depositgetcommunicationlistv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list
+[**depositGetCommunicationrecipientsV1**](ObjectDepositApi.md#depositgetcommunicationrecipientsv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients
+[**depositGetCommunicationsendersV1**](ObjectDepositApi.md#depositgetcommunicationsendersv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders
 [**depositImportIntoEDMV1**](ObjectDepositApi.md#depositimportintoedmv1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit
 
 
@@ -111,6 +115,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DepositGetAttachmentsV1Response***](DepositGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **depositGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) depositGetCommunicationCountV1WithPkiDepositID: (NSNumber*) pkiDepositID
+        completionHandler: (void (^)(DepositGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDepositID = @56; // 
+
+ObjectDepositApi*apiInstance = [[ObjectDepositApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance depositGetCommunicationCountV1WithPkiDepositID:pkiDepositID
+          completionHandler: ^(DepositGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDepositApi->depositGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **NSNumber***|  | 
+
+### Return type
+
+[**DepositGetCommunicationCountV1Response***](DepositGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **depositGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) depositGetCommunicationListV1WithPkiDepositID: (NSNumber*) pkiDepositID
+        completionHandler: (void (^)(DepositGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDepositID = @56; // 
+
+ObjectDepositApi*apiInstance = [[ObjectDepositApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance depositGetCommunicationListV1WithPkiDepositID:pkiDepositID
+          completionHandler: ^(DepositGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDepositApi->depositGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **NSNumber***|  | 
+
+### Return type
+
+[**DepositGetCommunicationListV1Response***](DepositGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **depositGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) depositGetCommunicationrecipientsV1WithPkiDepositID: (NSNumber*) pkiDepositID
+        completionHandler: (void (^)(DepositGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDepositID = @56; // 
+
+ObjectDepositApi*apiInstance = [[ObjectDepositApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance depositGetCommunicationrecipientsV1WithPkiDepositID:pkiDepositID
+          completionHandler: ^(DepositGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDepositApi->depositGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **NSNumber***|  | 
+
+### Return type
+
+[**DepositGetCommunicationrecipientsV1Response***](DepositGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **depositGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) depositGetCommunicationsendersV1WithPkiDepositID: (NSNumber*) pkiDepositID
+        completionHandler: (void (^)(DepositGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDepositID = @56; // 
+
+ObjectDepositApi*apiInstance = [[ObjectDepositApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance depositGetCommunicationsendersV1WithPkiDepositID:pkiDepositID
+          completionHandler: ^(DepositGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDepositApi->depositGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **NSNumber***|  | 
+
+### Return type
+
+[**DepositGetCommunicationsendersV1Response***](DepositGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

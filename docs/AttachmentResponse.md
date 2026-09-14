@@ -52,6 +52,7 @@ Name | Type | Description | Notes
 **fkiEzsigndocumentIDReference** | **NSNumber*** | The unique ID of the Ezsigndocument | [optional] 
 **eAttachmentDocumenttype** | [**FieldEAttachmentDocumenttype***](FieldEAttachmentDocumenttype.md) |  | 
 **sAttachmentName** | **NSString*** | The name of the Attachment | 
+**sAttachmentCategory** | **NSString*** | The attachment category | 
 **eAttachmentPrivacy** | [**FieldEAttachmentPrivacy***](FieldEAttachmentPrivacy.md) |  | 
 **fkiUserIDSpecific** | **NSNumber*** | The unique ID of the User | [optional] 
 **eAttachmentType** | [**FieldEAttachmentType***](FieldEAttachmentType.md) |  | 

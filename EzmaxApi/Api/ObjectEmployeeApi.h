@@ -2,6 +2,10 @@
 #import "CommonResponseError.h"
 #import "EmployeeBatchDownloadV1Request.h"
 #import "EmployeeGetAttachmentsV1Response.h"
+#import "EmployeeGetCommunicationCountV1Response.h"
+#import "EmployeeGetCommunicationListV1Response.h"
+#import "EmployeeGetCommunicationrecipientsV1Response.h"
+#import "EmployeeGetCommunicationsendersV1Response.h"
 #import "EmployeeGetListV1Response.h"
 #import "EmployeeImportIntoEDMV1Request.h"
 #import "EmployeeImportIntoEDMV1Response.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectEmployeeApiMissingParamErrorCode;
 /// @return EmployeeGetAttachmentsV1Response*
 -(NSURLSessionTask*) employeeGetAttachmentsV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
     completionHandler: (void (^)(EmployeeGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiEmployeeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return EmployeeGetCommunicationCountV1Response*
+-(NSURLSessionTask*) employeeGetCommunicationCountV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    completionHandler: (void (^)(EmployeeGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiEmployeeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return EmployeeGetCommunicationListV1Response*
+-(NSURLSessionTask*) employeeGetCommunicationListV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    completionHandler: (void (^)(EmployeeGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiEmployeeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return EmployeeGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) employeeGetCommunicationrecipientsV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    completionHandler: (void (^)(EmployeeGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiEmployeeID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return EmployeeGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) employeeGetCommunicationsendersV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+    completionHandler: (void (^)(EmployeeGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Employee list

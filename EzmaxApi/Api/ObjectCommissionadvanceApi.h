@@ -1,6 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "CommissionadvanceBatchDownloadV1Request.h"
 #import "CommissionadvanceGetAttachmentsV1Response.h"
+#import "CommissionadvanceGetCommunicationCountV1Response.h"
+#import "CommissionadvanceGetCommunicationListV1Response.h"
+#import "CommissionadvanceGetCommunicationrecipientsV1Response.h"
+#import "CommissionadvanceGetCommunicationsendersV1Response.h"
 #import "CommissionadvanceImportIntoEDMV1Request.h"
 #import "CommissionadvanceImportIntoEDMV1Response.h"
 #import "CommonResponseError.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectCommissionadvanceApiMissingParamErrorCode;
 /// @return CommissionadvanceGetAttachmentsV1Response*
 -(NSURLSessionTask*) commissionadvanceGetAttachmentsV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
     completionHandler: (void (^)(CommissionadvanceGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiCommissionadvanceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CommissionadvanceGetCommunicationCountV1Response*
+-(NSURLSessionTask*) commissionadvanceGetCommunicationCountV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+    completionHandler: (void (^)(CommissionadvanceGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiCommissionadvanceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CommissionadvanceGetCommunicationListV1Response*
+-(NSURLSessionTask*) commissionadvanceGetCommunicationListV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+    completionHandler: (void (^)(CommissionadvanceGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiCommissionadvanceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CommissionadvanceGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) commissionadvanceGetCommunicationrecipientsV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+    completionHandler: (void (^)(CommissionadvanceGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiCommissionadvanceID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CommissionadvanceGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) commissionadvanceGetCommunicationsendersV1WithPkiCommissionadvanceID: (NSNumber*) pkiCommissionadvanceID
+    completionHandler: (void (^)(CommissionadvanceGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Commissionadvance

@@ -2,6 +2,10 @@
 #import "CommonResponseError.h"
 #import "DepositBatchDownloadV1Request.h"
 #import "DepositGetAttachmentsV1Response.h"
+#import "DepositGetCommunicationCountV1Response.h"
+#import "DepositGetCommunicationListV1Response.h"
+#import "DepositGetCommunicationrecipientsV1Response.h"
+#import "DepositGetCommunicationsendersV1Response.h"
 #import "DepositImportIntoEDMV1Request.h"
 #import "DepositImportIntoEDMV1Response.h"
 #import "Api.h"
@@ -55,6 +59,58 @@ extern NSInteger kObjectDepositApiMissingParamErrorCode;
 /// @return DepositGetAttachmentsV1Response*
 -(NSURLSessionTask*) depositGetAttachmentsV1WithPkiDepositID: (NSNumber*) pkiDepositID
     completionHandler: (void (^)(DepositGetAttachmentsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiDepositID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DepositGetCommunicationCountV1Response*
+-(NSURLSessionTask*) depositGetCommunicationCountV1WithPkiDepositID: (NSNumber*) pkiDepositID
+    completionHandler: (void (^)(DepositGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiDepositID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DepositGetCommunicationListV1Response*
+-(NSURLSessionTask*) depositGetCommunicationListV1WithPkiDepositID: (NSNumber*) pkiDepositID
+    completionHandler: (void (^)(DepositGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiDepositID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DepositGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) depositGetCommunicationrecipientsV1WithPkiDepositID: (NSNumber*) pkiDepositID
+    completionHandler: (void (^)(DepositGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiDepositID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return DepositGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) depositGetCommunicationsendersV1WithPkiDepositID: (NSNumber*) pkiDepositID
+    completionHandler: (void (^)(DepositGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Deposit

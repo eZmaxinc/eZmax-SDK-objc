@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**disclosureBatchDownloadV1**](ObjectDisclosureApi.md#disclosurebatchdownloadv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/batchDownload | Download multiples attachments from a Disclosure
 [**disclosureGetAttachmentsV1**](ObjectDisclosureApi.md#disclosuregetattachmentsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getAttachments | Retrieve Disclosure&#39;s attachments
+[**disclosureGetCommunicationCountV1**](ObjectDisclosureApi.md#disclosuregetcommunicationcountv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationCount | Retrieve Communication count
+[**disclosureGetCommunicationListV1**](ObjectDisclosureApi.md#disclosuregetcommunicationlistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list
+[**disclosureGetCommunicationrecipientsV1**](ObjectDisclosureApi.md#disclosuregetcommunicationrecipientsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients
+[**disclosureGetCommunicationsendersV1**](ObjectDisclosureApi.md#disclosuregetcommunicationsendersv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders
 [**disclosureImportIntoEDMV1**](ObjectDisclosureApi.md#disclosureimportintoedmv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure
 
 
@@ -111,6 +115,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DisclosureGetAttachmentsV1Response***](DisclosureGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **disclosureGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) disclosureGetCommunicationCountV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+        completionHandler: (void (^)(DisclosureGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDisclosureID = @56; // 
+
+ObjectDisclosureApi*apiInstance = [[ObjectDisclosureApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance disclosureGetCommunicationCountV1WithPkiDisclosureID:pkiDisclosureID
+          completionHandler: ^(DisclosureGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDisclosureApi->disclosureGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDisclosureID** | **NSNumber***|  | 
+
+### Return type
+
+[**DisclosureGetCommunicationCountV1Response***](DisclosureGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **disclosureGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) disclosureGetCommunicationListV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+        completionHandler: (void (^)(DisclosureGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDisclosureID = @56; // 
+
+ObjectDisclosureApi*apiInstance = [[ObjectDisclosureApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance disclosureGetCommunicationListV1WithPkiDisclosureID:pkiDisclosureID
+          completionHandler: ^(DisclosureGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDisclosureApi->disclosureGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDisclosureID** | **NSNumber***|  | 
+
+### Return type
+
+[**DisclosureGetCommunicationListV1Response***](DisclosureGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **disclosureGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) disclosureGetCommunicationrecipientsV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+        completionHandler: (void (^)(DisclosureGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDisclosureID = @56; // 
+
+ObjectDisclosureApi*apiInstance = [[ObjectDisclosureApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance disclosureGetCommunicationrecipientsV1WithPkiDisclosureID:pkiDisclosureID
+          completionHandler: ^(DisclosureGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDisclosureApi->disclosureGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDisclosureID** | **NSNumber***|  | 
+
+### Return type
+
+[**DisclosureGetCommunicationrecipientsV1Response***](DisclosureGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **disclosureGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) disclosureGetCommunicationsendersV1WithPkiDisclosureID: (NSNumber*) pkiDisclosureID
+        completionHandler: (void (^)(DisclosureGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiDisclosureID = @56; // 
+
+ObjectDisclosureApi*apiInstance = [[ObjectDisclosureApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance disclosureGetCommunicationsendersV1WithPkiDisclosureID:pkiDisclosureID
+          completionHandler: ^(DisclosureGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectDisclosureApi->disclosureGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDisclosureID** | **NSNumber***|  | 
+
+### Return type
+
+[**DisclosureGetCommunicationsendersV1Response***](DisclosureGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

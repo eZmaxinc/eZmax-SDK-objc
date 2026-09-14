@@ -2,6 +2,10 @@
 #import "BrokerBatchDownloadV1Request.h"
 #import "BrokerGetAttachmentsV1Response.h"
 #import "BrokerGetAutocompleteV2Response.h"
+#import "BrokerGetCommunicationCountV1Response.h"
+#import "BrokerGetCommunicationListV1Response.h"
+#import "BrokerGetCommunicationrecipientsV1Response.h"
+#import "BrokerGetCommunicationsendersV1Response.h"
 #import "BrokerGetListV1Response.h"
 #import "BrokerImportIntoEDMV1Request.h"
 #import "BrokerImportIntoEDMV1Response.h"
@@ -74,6 +78,58 @@ extern NSInteger kObjectBrokerApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(BrokerGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiBrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BrokerGetCommunicationCountV1Response*
+-(NSURLSessionTask*) brokerGetCommunicationCountV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiBrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BrokerGetCommunicationListV1Response*
+-(NSURLSessionTask*) brokerGetCommunicationListV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiBrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BrokerGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) brokerGetCommunicationrecipientsV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiBrokerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BrokerGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) brokerGetCommunicationsendersV1WithPkiBrokerID: (NSNumber*) pkiBrokerID
+    completionHandler: (void (^)(BrokerGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve Broker list

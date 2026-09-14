@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**employeeBatchDownloadV1**](ObjectEmployeeApi.md#employeebatchdownloadv1) | **POST** /1/object/employee/{pkiEmployeeID}/batchDownload | Download multiples attachments from a Employee
 [**employeeGetAttachmentsV1**](ObjectEmployeeApi.md#employeegetattachmentsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getAttachments | Retrieve Employee&#39;s attachments
+[**employeeGetCommunicationCountV1**](ObjectEmployeeApi.md#employeegetcommunicationcountv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationCount | Retrieve Communication count
+[**employeeGetCommunicationListV1**](ObjectEmployeeApi.md#employeegetcommunicationlistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list
+[**employeeGetCommunicationrecipientsV1**](ObjectEmployeeApi.md#employeegetcommunicationrecipientsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients
+[**employeeGetCommunicationsendersV1**](ObjectEmployeeApi.md#employeegetcommunicationsendersv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders
 [**employeeGetListV1**](ObjectEmployeeApi.md#employeegetlistv1) | **GET** /1/object/employee/getList | Retrieve Employee list
 [**employeeImportIntoEDMV1**](ObjectEmployeeApi.md#employeeimportintoedmv1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee
 
@@ -112,6 +116,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmployeeGetAttachmentsV1Response***](EmployeeGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) employeeGetCommunicationCountV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+        completionHandler: (void (^)(EmployeeGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEmployeeID = @56; // 
+
+ObjectEmployeeApi*apiInstance = [[ObjectEmployeeApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance employeeGetCommunicationCountV1WithPkiEmployeeID:pkiEmployeeID
+          completionHandler: ^(EmployeeGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEmployeeApi->employeeGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **NSNumber***|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationCountV1Response***](EmployeeGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) employeeGetCommunicationListV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+        completionHandler: (void (^)(EmployeeGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEmployeeID = @56; // 
+
+ObjectEmployeeApi*apiInstance = [[ObjectEmployeeApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance employeeGetCommunicationListV1WithPkiEmployeeID:pkiEmployeeID
+          completionHandler: ^(EmployeeGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEmployeeApi->employeeGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **NSNumber***|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationListV1Response***](EmployeeGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) employeeGetCommunicationrecipientsV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+        completionHandler: (void (^)(EmployeeGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEmployeeID = @56; // 
+
+ObjectEmployeeApi*apiInstance = [[ObjectEmployeeApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance employeeGetCommunicationrecipientsV1WithPkiEmployeeID:pkiEmployeeID
+          completionHandler: ^(EmployeeGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEmployeeApi->employeeGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **NSNumber***|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationrecipientsV1Response***](EmployeeGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) employeeGetCommunicationsendersV1WithPkiEmployeeID: (NSNumber*) pkiEmployeeID
+        completionHandler: (void (^)(EmployeeGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiEmployeeID = @56; // 
+
+ObjectEmployeeApi*apiInstance = [[ObjectEmployeeApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance employeeGetCommunicationsendersV1WithPkiEmployeeID:pkiEmployeeID
+          completionHandler: ^(EmployeeGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectEmployeeApi->employeeGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **NSNumber***|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationsendersV1Response***](EmployeeGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

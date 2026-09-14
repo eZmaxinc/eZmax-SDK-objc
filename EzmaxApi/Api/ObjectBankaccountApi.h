@@ -2,6 +2,10 @@
 #import "BankaccountBatchDownloadV1Request.h"
 #import "BankaccountGetAttachmentsV1Response.h"
 #import "BankaccountGetAutocompleteV2Response.h"
+#import "BankaccountGetCommunicationCountV1Response.h"
+#import "BankaccountGetCommunicationListV1Response.h"
+#import "BankaccountGetCommunicationrecipientsV1Response.h"
+#import "BankaccountGetCommunicationsendersV1Response.h"
 #import "BankaccountImportIntoEDMV1Request.h"
 #import "BankaccountImportIntoEDMV1Response.h"
 #import "CommonResponseError.h"
@@ -75,6 +79,58 @@ extern NSInteger kObjectBankaccountApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(BankaccountGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiBankaccountID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountGetCommunicationCountV1Response*
+-(NSURLSessionTask*) bankaccountGetCommunicationCountV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    completionHandler: (void (^)(BankaccountGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiBankaccountID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountGetCommunicationListV1Response*
+-(NSURLSessionTask*) bankaccountGetCommunicationListV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    completionHandler: (void (^)(BankaccountGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiBankaccountID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) bankaccountGetCommunicationrecipientsV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    completionHandler: (void (^)(BankaccountGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiBankaccountID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return BankaccountGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) bankaccountGetCommunicationsendersV1WithPkiBankaccountID: (NSNumber*) pkiBankaccountID
+    completionHandler: (void (^)(BankaccountGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Import attachments into the Bankaccount

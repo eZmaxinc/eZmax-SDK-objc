@@ -7,6 +7,10 @@ Method | HTTP request | Description
 [**customerBatchDownloadV1**](ObjectCustomerApi.md#customerbatchdownloadv1) | **POST** /1/object/customer/{pkiCustomerID}/batchDownload | Download multiples attachments from a Customer
 [**customerGetAttachmentsV1**](ObjectCustomerApi.md#customergetattachmentsv1) | **GET** /1/object/customer/{pkiCustomerID}/getAttachments | Retrieve Customer&#39;s attachments
 [**customerGetAutocompleteV2**](ObjectCustomerApi.md#customergetautocompletev2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs
+[**customerGetCommunicationCountV1**](ObjectCustomerApi.md#customergetcommunicationcountv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationCount | Retrieve Communication count
+[**customerGetCommunicationListV1**](ObjectCustomerApi.md#customergetcommunicationlistv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list
+[**customerGetCommunicationrecipientsV1**](ObjectCustomerApi.md#customergetcommunicationrecipientsv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients
+[**customerGetCommunicationsendersV1**](ObjectCustomerApi.md#customergetcommunicationsendersv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders
 [**customerGetObjectV2**](ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 [**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
 
@@ -182,6 +186,226 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerGetAutocompleteV2Response***](CustomerGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationCountV1**
+```objc
+-(NSURLSessionTask*) customerGetCommunicationCountV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+        completionHandler: (void (^)(CustomerGetCommunicationCountV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication count
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCustomerID = @56; // 
+
+ObjectCustomerApi*apiInstance = [[ObjectCustomerApi alloc] init];
+
+// Retrieve Communication count
+[apiInstance customerGetCommunicationCountV1WithPkiCustomerID:pkiCustomerID
+          completionHandler: ^(CustomerGetCommunicationCountV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCustomerApi->customerGetCommunicationCountV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **NSNumber***|  | 
+
+### Return type
+
+[**CustomerGetCommunicationCountV1Response***](CustomerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationListV1**
+```objc
+-(NSURLSessionTask*) customerGetCommunicationListV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+        completionHandler: (void (^)(CustomerGetCommunicationListV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication list
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCustomerID = @56; // 
+
+ObjectCustomerApi*apiInstance = [[ObjectCustomerApi alloc] init];
+
+// Retrieve Communication list
+[apiInstance customerGetCommunicationListV1WithPkiCustomerID:pkiCustomerID
+          completionHandler: ^(CustomerGetCommunicationListV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCustomerApi->customerGetCommunicationListV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **NSNumber***|  | 
+
+### Return type
+
+[**CustomerGetCommunicationListV1Response***](CustomerGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationrecipientsV1**
+```objc
+-(NSURLSessionTask*) customerGetCommunicationrecipientsV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+        completionHandler: (void (^)(CustomerGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication recipients
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCustomerID = @56; // 
+
+ObjectCustomerApi*apiInstance = [[ObjectCustomerApi alloc] init];
+
+// Retrieve Communication recipients
+[apiInstance customerGetCommunicationrecipientsV1WithPkiCustomerID:pkiCustomerID
+          completionHandler: ^(CustomerGetCommunicationrecipientsV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCustomerApi->customerGetCommunicationrecipientsV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **NSNumber***|  | 
+
+### Return type
+
+[**CustomerGetCommunicationrecipientsV1Response***](CustomerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationsendersV1**
+```objc
+-(NSURLSessionTask*) customerGetCommunicationsendersV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+        completionHandler: (void (^)(CustomerGetCommunicationsendersV1Response* output, NSError* error)) handler;
+```
+
+Retrieve Communication senders
+
+### Example
+```objc
+DefaultConfiguration *apiConfig = [DefaultConfiguration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: Authorization)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"Authorization"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"Authorization"];
+
+
+NSNumber* pkiCustomerID = @56; // 
+
+ObjectCustomerApi*apiInstance = [[ObjectCustomerApi alloc] init];
+
+// Retrieve Communication senders
+[apiInstance customerGetCommunicationsendersV1WithPkiCustomerID:pkiCustomerID
+          completionHandler: ^(CustomerGetCommunicationsendersV1Response* output, NSError* error) {
+                        if (output) {
+                            NSLog(@"%@", output);
+                        }
+                        if (error) {
+                            NSLog(@"Error calling ObjectCustomerApi->customerGetCommunicationsendersV1: %@", error);
+                        }
+                    }];
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **NSNumber***|  | 
+
+### Return type
+
+[**CustomerGetCommunicationsendersV1Response***](CustomerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

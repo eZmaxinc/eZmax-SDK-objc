@@ -3,6 +3,10 @@
 #import "CustomerBatchDownloadV1Request.h"
 #import "CustomerGetAttachmentsV1Response.h"
 #import "CustomerGetAutocompleteV2Response.h"
+#import "CustomerGetCommunicationCountV1Response.h"
+#import "CustomerGetCommunicationListV1Response.h"
+#import "CustomerGetCommunicationrecipientsV1Response.h"
+#import "CustomerGetCommunicationsendersV1Response.h"
 #import "CustomerGetObjectV2Response.h"
 #import "CustomerImportIntoEDMV1Request.h"
 #import "CustomerImportIntoEDMV1Response.h"
@@ -74,6 +78,58 @@ extern NSInteger kObjectCustomerApiMissingParamErrorCode;
     sQuery: (NSString*) sQuery
     acceptLanguage: (HeaderAcceptLanguage) acceptLanguage
     completionHandler: (void (^)(CustomerGetAutocompleteV2Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication count
+/// 
+///
+/// @param pkiCustomerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CustomerGetCommunicationCountV1Response*
+-(NSURLSessionTask*) customerGetCommunicationCountV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationCountV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication list
+/// 
+///
+/// @param pkiCustomerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CustomerGetCommunicationListV1Response*
+-(NSURLSessionTask*) customerGetCommunicationListV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationListV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication recipients
+/// 
+///
+/// @param pkiCustomerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CustomerGetCommunicationrecipientsV1Response*
+-(NSURLSessionTask*) customerGetCommunicationrecipientsV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationrecipientsV1Response* output, NSError* error)) handler;
+
+
+/// Retrieve Communication senders
+/// 
+///
+/// @param pkiCustomerID 
+/// 
+///  code:200 message:"Successful response",
+///  code:404 message:"The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body."
+///
+/// @return CustomerGetCommunicationsendersV1Response*
+-(NSURLSessionTask*) customerGetCommunicationsendersV1WithPkiCustomerID: (NSNumber*) pkiCustomerID
+    completionHandler: (void (^)(CustomerGetCommunicationsendersV1Response* output, NSError* error)) handler;
 
 
 /// Retrieve an existing Customer
